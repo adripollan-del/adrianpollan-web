@@ -1,0 +1,107 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { blogPosts } from "@/data/blog";
+import { ArrowRight } from "lucide-react";
+
+const categories = ["Todos", "Rentabilidad", "Equipos", "Aperturas", "El Método"] as const;
+type Category = (typeof categories)[number];
+
+const categoryColors: Record<string, string> = {
+  Rentabilidad: "bg-amber/10 text-amber border-amber/30",
+  Equipos: "bg-navy/8 text-navy border-navy/20",
+  Aperturas: "bg-amber/10 text-amber border-amber/30",
+  "El Método": "bg-navy/8 text-navy border-navy/20",
+};
+
+export default function BlogGrid() {
+  const [active, setActive] = useState<Category>("Todos");
+
+  const filtered =
+    active === "Todos"
+      ? blogPosts
+      : blogPosts.filter((p) => p.category === active);
+
+  return (
+    <section className="bg-white py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Filtros */}
+        <div className="flex flex-wrap gap-3 mb-14">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`px-5 py-2 text-sm font-body font-medium tracking-wide transition-all duration-200 ${
+                active === cat
+                  ? "bg-amber text-navy"
+                  : "border border-navy/20 text-navy/60 hover:border-amber/60 hover:text-navy"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          {filtered.map((post, i) => (
+            <article
+              key={post.slug}
+              className="group flex flex-col bg-white border border-navy/10 hover:border-amber/50 hover:shadow-md transition-all duration-300 overflow-hidden"
+            >
+              {/* Imagen de portada */}
+              <Link href={`/blog/${post.slug}`} className="block relative aspect-[16/9] overflow-hidden bg-cream">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority={i < 2}
+                />
+                {/* Category badge */}
+                <div className="absolute top-4 left-4">
+                  <span className={`font-body text-xs font-medium tracking-widest uppercase px-3 py-1.5 border backdrop-blur-sm ${categoryColors[post.category]}`}>
+                    {post.category}
+                  </span>
+                </div>
+              </Link>
+
+              {/* Contenido */}
+              <div className="flex flex-col flex-1 p-8 lg:p-9">
+                <div className="flex items-center gap-3 mb-4 text-xs font-body text-ink/40">
+                  <span>{post.readTime} de lectura</span>
+                  <span>·</span>
+                  <span>
+                    {new Date(post.date).toLocaleDateString("es-ES", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                </div>
+
+                <h2 className="font-display text-navy text-2xl lg:text-[1.6rem] font-semibold leading-tight mb-4 group-hover:text-amber transition-colors flex-1">
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                </h2>
+
+                <p className="font-body text-ink/55 text-sm leading-relaxed mb-6">
+                  {post.excerpt}
+                </p>
+
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-navy/20 pb-0.5 self-start group-hover:border-amber group-hover:text-amber transition-colors"
+                >
+                  Leer artículo <ArrowRight size={13} />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
