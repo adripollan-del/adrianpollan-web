@@ -1,26 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, Check, ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
-  number: string;
   title: string;
   subtitle: string;
   summary: string;
   includes: string[];
-  ideal?: string;
-  closing?: string;
-  icon?: React.ReactNode;
-  image?: string;
-  cta?: string;
-  ctaHref?: string;
-  variant?: "light" | "dark";
+  ideal: string;
+  closing: string;
+  icon: React.ReactNode;
 }
 
 export default function ServiceCard({
-  number,
   title,
   subtitle,
   summary,
@@ -28,132 +22,85 @@ export default function ServiceCard({
   ideal,
   closing,
   icon,
-  image,
-  cta = "Más información",
-  ctaHref = "/hablemos",
-  variant = "light",
 }: ServiceCardProps) {
   const [open, setOpen] = useState(false);
 
-  const isDark = variant === "dark";
-
   return (
-    <div
-      className={`border transition-all duration-300 ${
-        isDark
-          ? "border-cream/20 hover:border-amber/50"
-          : "border-navy/15 hover:border-amber"
-      }`}
-    >
-      {/* Card header — always visible */}
+    <div className="bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-2xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40">
+      {/* Cabecera siempre visible — clic toggle */}
       <button
+        type="button"
         onClick={() => setOpen(!open)}
-        className="w-full text-left p-8 lg:p-10 flex items-start justify-between gap-6 group"
+        className="text-left w-full p-8 lg:p-10 flex flex-col flex-1 group"
         aria-expanded={open}
       >
-        <div className="flex-1">
-          {icon && (
-            <div className={`mb-3 ${isDark ? "text-amber" : "text-amber"}`}>
-              {icon}
-            </div>
-          )}
-          <span
-            className={`font-display text-5xl font-light block mb-4 ${
-              isDark ? "text-amber/40" : "text-amber/30"
-            }`}
-          >
-            {number}
+        <div className="mb-6">{icon}</div>
+
+        <h3 className="font-display text-navy text-2xl lg:text-[1.7rem] font-bold leading-tight mb-3 lg:min-h-[4rem]">
+          {title}
+        </h3>
+
+        <p className="font-body text-ink/55 text-sm leading-relaxed mb-6 lg:min-h-[3.75rem]">
+          {subtitle}
+        </p>
+
+        <div className="flex items-center justify-between mt-auto pt-2">
+          <span className="font-body text-amber text-xs tracking-widest uppercase">
+            {open ? "Ver menos" : "Ver más"}
           </span>
-          <h3
-            className={`font-display text-2xl lg:text-3xl font-semibold leading-tight mb-2 ${
-              isDark ? "text-cream" : "text-navy"
-            }`}
-          >
-            {title}
-          </h3>
-          <p
-            className={`font-body text-sm tracking-wide uppercase ${
-              isDark ? "text-amber/70" : "text-amber"
-            }`}
-          >
-            {subtitle}
-          </p>
-        </div>
-        <div
-          className={`flex-shrink-0 mt-2 w-9 h-9 rounded-full border flex items-center justify-center transition-colors ${
-            open
-              ? "bg-amber border-amber text-navy"
-              : isDark
-              ? "border-cream/30 text-cream/60 group-hover:border-amber group-hover:text-amber"
-              : "border-navy/30 text-navy/60 group-hover:border-amber group-hover:text-amber"
-          }`}
-        >
-          {open ? <Minus size={16} /> : <Plus size={16} />}
+          <ChevronDown
+            size={20}
+            className={`text-amber transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          />
         </div>
       </button>
 
-      {/* Expandable body */}
+      {/* Cuerpo expandible */}
       <div className={`service-body ${open ? "open" : ""}`}>
         <div>
           <div className="px-8 lg:px-10 pb-8 lg:pb-10">
-            {image && (
-              <div className="relative aspect-[16/9] overflow-hidden mb-8 -mx-8 lg:-mx-10 lg:mb-10">
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 800px"
-                  className="object-cover"
-                />
-              </div>
-            )}
-            <div
-              className={`w-12 h-px mb-6 ${isDark ? "bg-amber/40" : "bg-amber/50"}`}
-            />
-            <p
-              className={`font-body text-base leading-relaxed mb-6 ${
-                isDark ? "text-cream/75" : "text-ink/75"
-              }`}
-            >
-              {summary}
-            </p>
-            <ul className="space-y-2.5 mb-8">
-              {includes.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-amber mt-1 flex-shrink-0">—</span>
-                  <span
-                    className={`font-body text-sm ${
-                      isDark ? "text-cream/70" : "text-ink/70"
-                    }`}
-                  >
-                    {item}
-                  </span>
+            <div className="w-10 h-px bg-amber mb-6" />
+
+            {/* Descripción */}
+            <div className="space-y-4 font-body text-ink/70 text-sm leading-relaxed mb-7">
+              {summary.split("\n\n").map((para, j) => (
+                <p key={j}>{para}</p>
+              ))}
+            </div>
+
+            {/* Lista de incluidos */}
+            <ul className="space-y-2.5 mb-7">
+              {includes.map((item, j) => (
+                <li key={j} className="flex items-start gap-3">
+                  <Check size={16} className="text-amber mt-0.5 flex-shrink-0" />
+                  <span className="font-body text-ink/70 text-sm leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-            {ideal && (
-              <div className={`mb-6 pt-5 border-t ${isDark ? "border-cream/10" : "border-navy/10"}`}>
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">Ideal para</p>
-                <p className={`font-body text-sm leading-relaxed ${isDark ? "text-cream/65" : "text-ink/65"}`}>
-                  {ideal}
-                </p>
-              </div>
-            )}
-            {closing && (
-              <p className={`font-display italic text-base leading-relaxed mb-8 ${isDark ? "text-cream/45" : "text-ink/45"}`}>
-                &ldquo;{closing}&rdquo;
+
+            {/* Ideal para */}
+            <div className="mb-6 pt-5 border-t border-navy/10">
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
+                Ideal para:
               </p>
-            )}
-            <a
-              href={ctaHref}
-              className={`inline-block px-6 py-3 text-sm font-medium tracking-wide transition-colors ${
-                isDark
-                  ? "btn-amber text-navy"
-                  : "border border-navy text-navy hover:bg-navy hover:text-cream"
-              }`}
+              <p className="font-body text-ink/65 text-sm leading-relaxed">
+                {ideal}
+              </p>
+            </div>
+
+            {/* Frase de cierre */}
+            <p className="font-display italic text-ink/50 text-sm leading-relaxed mb-8">
+              &ldquo;{closing}&rdquo;
+            </p>
+
+            {/* Botón al final */}
+            <Link
+              href="/hablemos"
+              className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
             >
-              {cta}
-            </a>
+              Reserva una sesión gratuita
+              <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </div>

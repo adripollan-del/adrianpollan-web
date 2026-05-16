@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     category: "Rentabilidad",
     date: "2025-04-10",
     readTime: "6 min",
-    coverImage: "/categoria-rentabilidad.png",
+    coverImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
     body: `<p>He trabajado con docenas de restaurantes que llenan todos los fines de semana y aun así terminan el mes en rojo. ¿Cómo es posible?</p>
 
 <p>La respuesta casi siempre tiene tres partes: un coste de producto demasiado alto, una estructura de personal sobredimensionada y una carta mal diseñada que vende lo que menos margen deja.</p>
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
     category: "Equipos",
     date: "2025-03-22",
     readTime: "8 min",
-    coverImage: "/categoria-equipos.png",
+    coverImage: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80",
     body: `<p>Uno de los patrones más comunes que veo en mis auditorías: el restaurante funciona solo cuando el dueño está presente. En cuanto se va, la calidad baja, los errores aumentan y la experiencia del cliente se deteriora.</p>
 
 <p>Esto no es un problema de equipo. Es un problema de sistema.</p>
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     category: "Aperturas",
     date: "2025-03-05",
     readTime: "10 min",
-    coverImage: "/categoria-aperturas.png",
+    coverImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80",
     body: `<p>La estadística dice que el 60% de los restaurantes cierran en su primer año. En mi experiencia, ese número podría reducirse drásticamente si los operadores supieran dónde se esconden los riesgos reales.</p>
 
 <h2>Error 1: El business plan optimista</h2>
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     category: "El Método",
     date: "2025-02-18",
     readTime: "7 min",
-    coverImage: "/categoria-metodo.png",
+    coverImage: "https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=800&q=80",
     body: `<p>El Método ADRIÁN no es una fórmula mágica. Es un sistema de trabajo que pone en el centro lo que realmente importa: los números, las personas y la consistencia.</p>
 
 <h2>A — Análisis antes de acción</h2>

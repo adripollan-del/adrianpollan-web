@@ -41,14 +41,14 @@ export default function HablemosPage() {
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
-          src="/hablemos.png"
-          alt="Hablemos — consultoría en hostelería"
+          src="https://images.unsplash.com/photo-1756564800880-7a24d6c6cc15?auto=format&fit=crop&w=1920&q=80"
+          alt="Interior de bar con botellas iluminadas tenuemente"
           fill
           priority
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60" />
+        <div className="absolute inset-0 bg-navy/50" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl">

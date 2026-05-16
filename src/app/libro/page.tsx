@@ -30,8 +30,18 @@ export default function LibroPage() {
   return (
     <>
       {/* ── HERO — navy con portada ────────────────────────────── */}
-      <section className="hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1750943082452-c714763f73b2?auto=format&fit=crop&w=1920&q=80"
+          alt="Plato gourmet presentado por un chef"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-navy/50" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
             {/* Portada libro mockup */}

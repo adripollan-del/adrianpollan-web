@@ -15,7 +15,12 @@
       "Bash(cp \"Servicio 3.png\" /Users/adrianpollan/adrianpollan-web/public/servicio-3.png)",
       "Bash(cp \"MI LIBRO.png\" /Users/adrianpollan/adrianpollan-web/public/libro.png)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(textutil -convert txt -output /tmp/aviso-legal.txt \"AVISO LEGAL.docx\")",
+      "Bash(textutil -convert txt -output /tmp/cookies.txt \"POLÍTICA DE COOKIES.docx\")",
+      "Bash(textutil -convert txt -output /tmp/privacidad.txt \"POLÍTICA DE PRIVACIDAD.docx\")",
+      "Bash(textutil -convert txt -output /tmp/terminos.txt \"TÉRMINOS Y CONDICIONES.docx\")",
+      "Read(//tmp/**)"
     ]
   }
 }

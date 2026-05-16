@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/services";
@@ -35,14 +36,23 @@ const steps = [
 
 export default function ServiciosPage() {
   const serviceIcons = [
-    <Search key="s1" size={26} className="text-amber" />,
-    <LineChart key="s2" size={26} className="text-amber" />,
-    <Rocket key="s3" size={26} className="text-amber" />,
+    <Search key="s1" size={40} className="text-amber" />,
+    <LineChart key="s2" size={40} className="text-amber" />,
+    <Rocket key="s3" size={40} className="text-amber" />,
   ];
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1753078944130-2fad814a01d2?auto=format&fit=crop&w=1920&q=80"
+          alt="Cocina profesional con chefs en pleno servicio"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-navy/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -62,19 +72,13 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── SERVICIOS — 3 secciones con alternancia ──────────────── */}
-      {services.map((service, i) => {
-        const bgs = ["bg-white", "bg-cream", "bg-white"];
-        return (
-          <section key={i} className={`${bgs[i]} py-16 lg:py-20`}>
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              {i === 0 && (
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-12">
-                  Los tres servicios
-                </p>
-              )}
+      {/* ── SERVICIOS — fondo crema con grid de 3 tarjetas ───────── */}
+      <section className="bg-cream py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+            {services.map((service, i) => (
               <ServiceCard
-                number={service.number}
+                key={i}
                 title={service.title}
                 subtitle={service.subtitle}
                 summary={service.summary}
@@ -82,18 +86,14 @@ export default function ServiciosPage() {
                 ideal={service.ideal}
                 closing={service.closing}
                 icon={serviceIcons[i]}
-                image={service.image}
-                variant="light"
-                cta="Hablemos de tu proyecto"
-                ctaHref="/hablemos"
               />
-            </div>
-          </section>
-        );
-      })}
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* ── PROCESO — fondo crema ────────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── PROCESO — fondo blanco ───────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -123,8 +123,8 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── ¿NO SABES CUÁL? — fondo blanco ───────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      {/* ── ¿NO SABES CUÁL? — fondo crema oscuro ─────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -156,7 +156,7 @@ export default function ServiciosPage() {
             </div>
 
             {/* Checklist visual */}
-            <div className="bg-cream border border-navy/10 p-8 lg:p-10">
+            <div className="bg-white border border-navy/10 p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 El diagnóstico analiza
               </p>
@@ -180,34 +180,6 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — fondo amber suave ─────────────────────────── */}
-      <section className="bg-[#fbf3e3] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-light mb-5">
-            El primer paso es gratis
-          </h2>
-          <p className="font-body text-ink/65 text-lg mb-10 max-w-lg mx-auto">
-            Empieza con el diagnóstico IA o con una sesión de exploración de
-            20 minutos. Sin compromiso, sin ventas.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://diagnostico.adrianpollan.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
-            >
-              Diagnóstico gratuito <ExternalLink size={15} />
-            </a>
-            <Link
-              href="/hablemos"
-              className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
-            >
-              O reserva una sesión →
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

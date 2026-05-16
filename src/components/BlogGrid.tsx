@@ -1,13 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
 import { ArrowRight } from "lucide-react";
-
-const categories = ["Todos", "Rentabilidad", "Equipos", "Aperturas", "El Método"] as const;
-type Category = (typeof categories)[number];
 
 const categoryColors: Record<string, string> = {
   Rentabilidad: "bg-amber/10 text-amber border-amber/30",
@@ -17,50 +11,20 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function BlogGrid() {
-  const [active, setActive] = useState<Category>("Todos");
-
-  const filtered =
-    active === "Todos"
-      ? blogPosts
-      : blogPosts.filter((p) => p.category === active);
-
   return (
-    <>
-      {/* ── PRESENTACIÓN Y CATEGORÍAS — fondo blanco ─────────────── */}
-      <section className="bg-white py-14 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
-            Filtrar por categoría
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={`px-5 py-2 text-sm font-body font-medium tracking-wide transition-all duration-200 ${
-                  active === cat
-                    ? "bg-amber text-navy"
-                    : "border border-navy/20 text-navy/60 hover:border-amber/60 hover:text-navy"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── GRID DE ARTÍCULOS — fondo crema ──────────────────────── */}
-      <section className="bg-cream py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {filtered.map((post, i) => (
+    <section className="bg-cream py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          {blogPosts.map((post, i) => (
             <article
               key={post.slug}
               className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
             >
               {/* Imagen de portada */}
-              <Link href={`/blog/${post.slug}`} className="block relative aspect-[16/9] overflow-hidden bg-cream">
+              <Link
+                href={`/blog/${post.slug}`}
+                className="block relative aspect-[16/9] overflow-hidden bg-cream"
+              >
                 <Image
                   src={post.coverImage}
                   alt={post.title}
@@ -71,7 +35,9 @@ export default function BlogGrid() {
                 />
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
-                  <span className={`font-body text-xs font-medium tracking-widest uppercase px-3 py-1.5 border backdrop-blur-sm ${categoryColors[post.category]}`}>
+                  <span
+                    className={`font-body text-xs font-medium tracking-widest uppercase px-3 py-1.5 border backdrop-blur-sm ${categoryColors[post.category]}`}
+                  >
                     {post.category}
                   </span>
                 </div>
@@ -108,9 +74,8 @@ export default function BlogGrid() {
               </div>
             </article>
           ))}
-          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

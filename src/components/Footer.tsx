@@ -15,8 +15,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}
           <div>
-            <Link href="/" className="font-display text-cream text-2xl font-medium hover:text-amber transition-colors">
-              adrián pollán
+            <Link href="/" className="font-display text-amber text-2xl font-medium hover:text-amber/80 transition-colors">
+              Adrián Pollán
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-cream/60">
               Consultoría especializada en hostelería y restauración.<br />
@@ -46,33 +46,49 @@ export default function Footer() {
             <p className="text-sm text-cream/60 mb-5">
               ¿Quieres saber si puedo ayudarte? Empieza con una sesión gratuita de 20 minutos.
             </p>
-            <Link
-              href="/hablemos"
-              className="inline-block px-6 py-3 border border-amber/60 text-amber text-sm tracking-wide hover:bg-amber hover:text-cream transition-colors"
+            {/* Primary CTA: diagnóstico — botón amber sólido */}
+            <a
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-amber text-cream text-sm font-medium tracking-wide hover:bg-amber-hover transition-colors"
             >
-              Reserva sesión gratuita
-            </Link>
-            <div className="mt-8">
-              <a
-                href="https://diagnostico.adrianpollan.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              Haz el diagnóstico gratuito
+            </a>
+            {/* Secondary CTA: Calendly — texto simple */}
+            <div className="mt-5">
+              <Link
+                href="/hablemos"
                 className="text-sm text-cream/50 hover:text-amber transition-colors underline underline-offset-4"
               >
-                Herramienta de diagnóstico IA →
-              </a>
+                O reserva una sesión de 20 minutos →
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-cream/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-cream/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
           <p className="text-xs text-cream/40">
             © {new Date().getFullYear()} Adrián Pollán. Todos los derechos reservados.
           </p>
-          <p className="text-xs text-cream/40">
-            adrianpollan.com
-          </p>
+          <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-cream/40">
+            <Link href="/aviso-legal" className="hover:text-cream/70 transition-colors">
+              Aviso legal
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/politica-de-privacidad" className="hover:text-cream/70 transition-colors">
+              Política de privacidad
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/politica-de-cookies" className="hover:text-cream/70 transition-colors">
+              Política de cookies
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/terminos-y-condiciones" className="hover:text-cream/70 transition-colors">
+              Términos y condiciones
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

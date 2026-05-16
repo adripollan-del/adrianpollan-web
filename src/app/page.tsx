@@ -1,12 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-import Ticker from "@/components/Ticker";
+import Stats from "@/components/Stats";
 import WaitlistForm from "@/components/WaitlistForm";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote } from "lucide-react";
 
 const PHOTOS = {
   hero: "/hero.png",
 };
+
+const testimonials = [
+  {
+    text: "Llevábamos tres años con el restaurante lleno casi todos los fines de semana y sin entender por qué el margen no aparecía. En dos meses de trabajo con Adrián identificamos dónde se escapaba el dinero y lo corregimos. El cambio fue inmediato.",
+    name: "Carlos M.",
+    role: "Propietario, Restaurante en Madrid",
+  },
+  {
+    text: "Estaba a punto de firmar el local para mi primer restaurante cuando empecé a trabajar con Adrián. Me hizo las preguntas que nadie me había hecho y me ayudó a tomar decisiones mucho más sólidas antes de comprometer mi inversión.",
+    name: "Laura G.",
+    role: "Emprendedora, Barcelona",
+  },
+  {
+    text: "Lo que más me sorprendió fue que no llegó con soluciones preparadas. Primero entendió el negocio, luego propuso. Esa forma de trabajar marca la diferencia respecto a otros consultores que había contratado antes.",
+    name: "Javier R.",
+    role: "Director de F&B, Hotel en Sevilla",
+  },
+];
 
 const audienceCardData = [
   {
@@ -46,7 +64,7 @@ export default function Home() {
           className="object-cover opacity-25"
         />
         {/* Gradient overlay to keep text readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/50" />
+        <div className="absolute inset-0 bg-navy/50" />
 
         {/* Amber accent top line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
@@ -145,8 +163,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TICKER ──────────────────────────────────────────────────── */}
-      <Ticker />
+      {/* ── ESTADÍSTICAS — fondo amber ─────────────────────────────── */}
+      <Stats />
 
       {/* ── ¿PARA QUIÉN? — fondo amber suave ───────────────────────── */}
       <section className="bg-[#fbf3e3] py-24 lg:py-32">
@@ -362,6 +380,35 @@ export default function Home() {
                 Sin spam. Solo el aviso cuando esté disponible.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIOS — fondo blanco, compacto ───────────────────── */}
+      <section className="bg-white py-14 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-10 lg:mb-12">
+            <h2 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight">
+              Lo que dicen quienes han trabajado conmigo
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="bg-white shadow-sm border border-navy/10 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+              >
+                <Quote size={20} className="text-amber mb-3" strokeWidth={1.5} />
+                <p className="font-body text-ink/75 text-sm leading-relaxed mb-5 flex-1">
+                  {t.text}
+                </p>
+                <div className="pt-4 border-t border-navy/10">
+                  <p className="font-display text-navy text-xs font-semibold">{t.name}</p>
+                  <p className="font-body text-ink/55 text-xs mt-0.5">{t.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
@@ -12,7 +13,15 @@ export default function BlogPage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        {/* Sutil grano amber arriba */}
+        <Image
+          src="https://images.unsplash.com/photo-1709548145082-04d0cde481d4?auto=format&fit=crop&w=1920&q=80"
+          alt="Interior de restaurante con iluminación tenue"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-navy/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">

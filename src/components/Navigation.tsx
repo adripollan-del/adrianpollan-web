@@ -51,7 +51,7 @@ export default function Navigation() {
             {/* Logo */}
             <Link href="/" className="flex items-center opacity-100 hover:opacity-80 transition-opacity">
               <Image
-                src="/logo principal.png"
+                src="/logo-transparente.png"
                 alt="Adrián Pollán"
                 width={180}
                 height={44}
