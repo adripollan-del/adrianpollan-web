@@ -12,7 +12,7 @@ const categoryColors: Record<string, string> = {
 
 export default function BlogGrid() {
   return (
-    <section className="bg-cream py-16 lg:py-24">
+    <section className="bg-cream-dark py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {blogPosts.map((post, i) => (
@@ -23,7 +23,7 @@ export default function BlogGrid() {
               {/* Imagen de portada */}
               <Link
                 href={`/blog/${post.slug}`}
-                className="block relative aspect-[16/9] overflow-hidden bg-cream"
+                className="block relative aspect-[16/9] overflow-hidden bg-cream-dark"
               >
                 <Image
                   src={post.coverImage}

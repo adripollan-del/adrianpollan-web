@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── ARTÍCULOS RELACIONADOS — fondo crema ─────────────────── */}
       {related.length > 0 && (
-        <section className="bg-cream py-16 lg:py-20">
+        <section className="bg-cream-dark py-16 lg:py-20">
           <div className="max-w-3xl mx-auto px-6 lg:px-10">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-8">
               Artículos relacionados
@@ -143,16 +143,16 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
-      {/* ── CTA — navy ────────────────────────────────────────────── */}
-      <section className="bg-navy py-20 lg:py-24">
+      {/* ── CTA — fondo blanco ────────────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             ¿Quieres aplicar esto?
           </p>
-          <h2 className="font-display text-cream text-3xl lg:text-4xl font-semibold mb-4">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-4">
             Analiza primero cómo está tu restaurante
           </h2>
-          <p className="font-body text-cream/55 text-base mb-10 max-w-md mx-auto">
+          <p className="font-body text-ink/65 text-base mb-10 max-w-md mx-auto">
             El diagnóstico gratuito te dice exactamente qué áreas de tu negocio
             necesitan más atención. En 10 minutos.
           </p>
@@ -167,7 +167,7 @@ export default async function BlogPostPage({ params }: Props) {
             </a>
             <Link
               href="/hablemos"
-              className="font-body text-sm text-cream/60 hover:text-cream transition-colors"
+              className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
             >
               O reserva una sesión →
             </Link>

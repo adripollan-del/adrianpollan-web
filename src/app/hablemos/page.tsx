@@ -125,8 +125,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── CALENDLY — fondo crema ───────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── CALENDLY — fondo crema oscuro ─────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
             {/* Header a la izquierda */}
@@ -185,7 +185,7 @@ export default function HablemosPage() {
               </p>
 
               {/* Mini perfil */}
-              <div className="flex items-center gap-4 bg-cream border border-navy/10 p-5">
+              <div className="flex items-center gap-4 bg-cream-dark border border-navy/10 p-5">
                 <div className="w-12 h-12 bg-amber/20 border border-amber/30 flex items-center justify-center flex-shrink-0">
                   <span className="font-display text-amber font-bold text-lg">AP</span>
                 </div>
@@ -201,8 +201,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── FAQ — fondo crema ─────────────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── FAQ — fondo crema oscuro ──────────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24">
@@ -230,8 +230,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — fondo crema oscuro ────────────────────────── */}
-      <section className="bg-cream-dark py-20 lg:py-28">
+      {/* ── CTA FINAL — fondo blanco ──────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             El primer paso es siempre el más sencillo.

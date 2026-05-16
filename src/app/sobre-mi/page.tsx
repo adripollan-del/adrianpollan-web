@@ -63,7 +63,7 @@ export default function SobreMiPage() {
                   { num: "20+", label: "años en la industria" },
                   { num: "4", label: "países de experiencia" },
                 ].map((stat) => (
-                  <div key={stat.num} className="bg-cream border border-navy/10 p-4">
+                  <div key={stat.num} className="bg-cream-dark border border-navy/10 p-4">
                     <p className="font-display text-amber text-3xl font-semibold">{stat.num}</p>
                     <p className="font-body text-navy/60 text-xs mt-1">{stat.label}</p>
                   </div>
@@ -121,8 +121,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── POR QUÉ HAGO ESTO — fondo crema ─────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── POR QUÉ HAGO ESTO — fondo crema oscuro ──────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">02 — Por qué hago esto</p>
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">

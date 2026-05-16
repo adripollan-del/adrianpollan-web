@@ -147,8 +147,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── QUÉ ES — fondo crema ─────────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── QUÉ ES — fondo crema oscuro ──────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
@@ -286,8 +286,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── LISTA DE ESPERA — fondo amber suave ───────────────────── */}
-      <section className="bg-[#fbf3e3] py-20 lg:py-28" id="lista-espera">
+      {/* ── LISTA DE ESPERA — fondo blanco ────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28" id="lista-espera">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
