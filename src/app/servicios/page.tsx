@@ -42,7 +42,7 @@ export default function ServiciosPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative bg-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -141,7 +141,7 @@ export default function ServiciosPage() {
                   href="https://diagnostico.adrianpollan.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-navy text-sm font-semibold tracking-wide"
                 >
                   Hacer el diagnóstico
                   <ExternalLink size={15} />
@@ -195,7 +195,7 @@ export default function ServiciosPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-9 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+              className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             >
               Diagnóstico gratuito <ExternalLink size={15} />
             </a>

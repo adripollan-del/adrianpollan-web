@@ -40,7 +40,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative bg-navy pt-40 pb-0 lg:pt-48 overflow-hidden">
+      <section className="relative hero-navy pt-40 pb-0 lg:pt-48 overflow-hidden">
         <div className="relative max-w-3xl mx-auto px-6 lg:px-10 pb-12">
           <Link
             href="/blog"
@@ -161,7 +161,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold hover:bg-amber-hover transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold"
             >
               Hacer el diagnóstico gratuito <ExternalLink size={14} />
             </a>

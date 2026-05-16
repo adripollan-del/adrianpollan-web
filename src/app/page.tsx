@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>
       {/* ── HERO — navy + imagen de fondo ──────────────────────────── */}
-      <section className="relative min-h-screen bg-navy flex flex-col justify-end overflow-hidden">
+      <section className="relative min-h-screen hero-navy flex flex-col justify-end overflow-hidden">
         {/* Background photo */}
         <Image
           src={PHOTOS.hero}
@@ -75,7 +75,7 @@ export default function Home() {
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               >
                 Haz el diagnóstico gratuito
                 <ArrowRight size={16} />
@@ -252,8 +252,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HERRAMIENTA IA — fondo navy ─────────────────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── HERRAMIENTA IA — navy con gradiente del hero ──────────── */}
+      <section className="hero-navy py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Herramienta gratuita · IA
@@ -287,7 +287,7 @@ export default function Home() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
           >
             Hacer el diagnóstico gratuito
             <ArrowRight size={16} />
@@ -383,7 +383,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/hablemos"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+              className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             >
               Reserva tu sesión gratuita
               <ArrowRight size={16} />

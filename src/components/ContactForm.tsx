@@ -99,7 +99,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover disabled:opacity-60 transition-colors"
+        className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide disabled:opacity-60"
       >
         {status === "sending" ? "Enviando..." : "Enviar mensaje"}
         {status !== "sending" && <ArrowRight size={16} />}

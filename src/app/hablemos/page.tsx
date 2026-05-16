@@ -39,7 +39,7 @@ export default function HablemosPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative bg-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="/hablemos.png"
           alt="Hablemos — consultoría en hostelería"
@@ -117,7 +117,7 @@ export default function HablemosPage() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
           >
             Hacer el diagnóstico ahora
             <ExternalLink size={15} />
@@ -243,7 +243,7 @@ export default function HablemosPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/hablemos#calendly"
-              className="inline-flex items-center gap-2 px-9 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+              className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             >
               Reserva tu sesión gratuita <ArrowRight size={15} />
             </Link>

@@ -77,7 +77,7 @@ export default function Navigation() {
               ))}
               <Link
                 href="/hablemos"
-                className="ml-4 px-5 py-2.5 bg-amber text-cream text-sm font-medium tracking-wide rounded-sm hover:bg-amber-hover transition-colors"
+                className="btn-amber ml-4 px-5 py-2.5 text-cream text-sm font-medium tracking-wide rounded-sm"
               >
                 Reserva sesión
               </Link>
@@ -116,7 +116,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/hablemos"
-            className={`mt-4 px-8 py-3.5 bg-amber text-cream text-base font-medium tracking-wide rounded-sm transition-all duration-300 ${
+            className={`btn-amber mt-4 px-8 py-3.5 text-cream text-base font-medium tracking-wide rounded-sm ${
               isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
             style={{ transitionDelay: isOpen ? "360ms" : "0ms" }}

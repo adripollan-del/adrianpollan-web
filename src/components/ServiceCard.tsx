@@ -148,7 +148,7 @@ export default function ServiceCard({
               href={ctaHref}
               className={`inline-block px-6 py-3 text-sm font-medium tracking-wide transition-colors ${
                 isDark
-                  ? "bg-amber text-navy hover:bg-amber-hover"
+                  ? "btn-amber text-navy"
                   : "border border-navy text-navy hover:bg-navy hover:text-cream"
               }`}
             >

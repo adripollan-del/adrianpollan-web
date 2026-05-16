@@ -11,7 +11,7 @@ export default function BlogPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative bg-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         {/* Sutil grano amber arriba */}
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 

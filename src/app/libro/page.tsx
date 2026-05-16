@@ -30,7 +30,7 @@ export default function LibroPage() {
   return (
     <>
       {/* ── HERO — navy con portada ────────────────────────────── */}
-      <section className="bg-navy pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -78,7 +78,7 @@ export default function LibroPage() {
               </p>
               <a
                 href="#lista-espera"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               >
                 Apuntarme a la lista de espera →
               </a>
