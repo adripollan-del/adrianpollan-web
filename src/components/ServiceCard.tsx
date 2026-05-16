@@ -26,7 +26,7 @@ export default function ServiceCard({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-2xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40">
+    <div className="bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40">
       {/* Cabecera siempre visible — clic toggle */}
       <button
         type="button"

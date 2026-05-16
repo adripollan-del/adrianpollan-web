@@ -185,7 +185,7 @@ export default function HablemosPage() {
               </p>
 
               {/* Mini perfil */}
-              <div className="flex items-center gap-4 bg-cream-dark border border-navy/10 p-5">
+              <div className="flex items-center gap-4 bg-cream-dark border border-navy/10 rounded-xl p-5">
                 <div className="w-12 h-12 bg-amber/20 border border-amber/30 flex items-center justify-center flex-shrink-0">
                   <span className="font-display text-amber font-bold text-lg">AP</span>
                 </div>

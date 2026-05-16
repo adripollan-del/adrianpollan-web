@@ -156,7 +156,7 @@ export default function ServiciosPage() {
             </div>
 
             {/* Checklist visual */}
-            <div className="bg-white border border-navy/10 p-8 lg:p-10">
+            <div className="bg-white border border-navy/10 rounded-xl p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 El diagnóstico analiza
               </p>

@@ -18,7 +18,7 @@ export default function BlogGrid() {
           {blogPosts.map((post, i) => (
             <article
               key={post.slug}
-              className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
+              className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
             >
               {/* Imagen de portada */}
               <Link

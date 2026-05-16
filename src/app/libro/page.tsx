@@ -100,8 +100,8 @@ export default function LibroPage() {
       {/* ── MI HISTORIA — fondo blanco ───────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-3">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 Mi historia
               </p>
@@ -133,15 +133,14 @@ export default function LibroPage() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative h-[400px] rounded-xl overflow-hidden lg:col-span-2">
               <Image
-                src="/libro.png"
-                alt="El Método ADRIÁN — libro de gestión hostelera"
+                src="/perder-todo.png"
+                alt="Lo que me enseñó perderlo todo"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cream/40 to-transparent" />
             </div>
           </div>
         </div>
@@ -274,7 +273,7 @@ export default function LibroPage() {
                 body: "Que quieren tomar las mejores decisiones posibles antes y durante la apertura, con una guía práctica que cubre todo el proceso.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white border border-navy/8 p-8 hover:border-amber/40 transition-colors">
+              <div key={i} className="bg-white border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors">
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   0{i + 1}
                 </span>

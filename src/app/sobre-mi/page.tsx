@@ -63,7 +63,7 @@ export default function SobreMiPage() {
                   { num: "20+", label: "años en la industria" },
                   { num: "4", label: "países de experiencia" },
                 ].map((stat) => (
-                  <div key={stat.num} className="bg-cream-dark border border-navy/10 p-4">
+                  <div key={stat.num} className="bg-cream-dark border border-navy/10 rounded-xl p-4">
                     <p className="font-display text-amber text-3xl font-semibold">{stat.num}</p>
                     <p className="font-body text-navy/60 text-xs mt-1">{stat.label}</p>
                   </div>

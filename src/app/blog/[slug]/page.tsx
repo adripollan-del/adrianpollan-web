@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <Link
                   key={rel.slug}
                   href={`/blog/${rel.slug}`}
-                  className="group bg-white border border-navy/10 p-6 hover:border-amber/50 transition-colors"
+                  className="group bg-white border border-navy/10 rounded-xl p-6 hover:border-amber/50 transition-colors"
                 >
                   <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">{rel.category}</p>
                   <h3 className="font-display text-navy text-lg font-semibold leading-tight group-hover:text-amber transition-colors mb-2">

@@ -75,12 +75,6 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/hablemos"
-                className="btn-amber ml-4 px-5 py-2.5 text-cream text-sm font-medium tracking-wide rounded-sm"
-              >
-                Reserva sesión
-              </Link>
             </nav>
 
             {/* Mobile hamburger */}
@@ -114,15 +108,6 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/hablemos"
-            className={`btn-amber mt-4 px-8 py-3.5 text-cream text-base font-medium tracking-wide rounded-sm ${
-              isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-            style={{ transitionDelay: isOpen ? "360ms" : "0ms" }}
-          >
-            Reserva sesión gratuita
-          </Link>
         </nav>
       </div>
     </>
