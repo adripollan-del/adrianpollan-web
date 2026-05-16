@@ -39,7 +39,7 @@ export default function Navigation() {
 
   const navBg = isHome && !scrolled
     ? "bg-transparent"
-    : "bg-navy shadow-lg";
+    : "bg-navy/80 backdrop-blur-xl border-b border-amber/50 shadow-lg";
 
   return (
     <>

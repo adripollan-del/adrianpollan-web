@@ -165,7 +165,7 @@ export default function Home() {
             {audienceCardData.map((card, i) => (
               <div
                 key={card.num}
-                className="bg-white border border-navy/8 p-8 lg:p-10 hover:border-amber/50 hover:shadow-sm transition-all duration-300"
+                className="bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
               >
                 <div className="mb-4">{audienceIcons[i]}</div>
                 <span className="font-display text-4xl font-light text-amber/50 block mb-5">
@@ -220,7 +220,7 @@ export default function Home() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="bg-cream border border-navy/8 p-8 lg:p-10 flex flex-col hover:border-amber/50 hover:shadow-sm transition-all duration-300"
+                className="bg-cream shadow-md border border-navy/10 p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
               >
                 <div className="mb-5">{s.icon}</div>
                 <h3 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight mb-3">
