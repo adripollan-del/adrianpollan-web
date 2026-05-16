@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+imagenes web/
+logo anbar transparent.png
+logo fondo blanco*.png
+logo transparent*.png
+logo transparente.png
+testos legales/
