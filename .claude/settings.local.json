@@ -20,7 +20,9 @@
       "Bash(textutil -convert txt -output /tmp/cookies.txt \"POLÍTICA DE COOKIES.docx\")",
       "Bash(textutil -convert txt -output /tmp/privacidad.txt \"POLÍTICA DE PRIVACIDAD.docx\")",
       "Bash(textutil -convert txt -output /tmp/terminos.txt \"TÉRMINOS Y CONDICIONES.docx\")",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
