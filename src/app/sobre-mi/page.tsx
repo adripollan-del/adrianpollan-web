@@ -33,8 +33,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── INTRO + MI HISTORIA — fondo crema ───────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── MI HISTORIA — fondo blanco ──────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
@@ -54,7 +54,7 @@ export default function SobreMiPage() {
                   { num: "20+", label: "años en la industria" },
                   { num: "4", label: "países de experiencia" },
                 ].map((stat) => (
-                  <div key={stat.num} className="bg-white border border-navy/10 p-4">
+                  <div key={stat.num} className="bg-cream border border-navy/10 p-4">
                     <p className="font-display text-amber text-3xl font-semibold">{stat.num}</p>
                     <p className="font-body text-navy/60 text-xs mt-1">{stat.label}</p>
                   </div>
@@ -62,9 +62,8 @@ export default function SobreMiPage() {
               </div>
             </div>
 
-            {/* Contenido derecho */}
+            {/* Contenido derecho — intro + 01 Mi historia */}
             <div className="lg:col-span-8 space-y-14">
-
               {/* Intro */}
               <div>
                 <p className="font-body text-ink/70 text-lg leading-relaxed">
@@ -108,30 +107,32 @@ export default function SobreMiPage() {
                   </p>
                 </div>
               </div>
-
-              {/* 02 Por qué hago esto */}
-              <div>
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">02 — Por qué hago esto</p>
-                <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">
-                  Muchos negocios no fallan por falta de trabajo. Fallan por falta de método.
-                </h2>
-                <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
-                  <p>
-                    A lo largo de mi carrera he visto una y otra vez el mismo
-                    patrón: propietarios y gestores que trabajan muchísimo, que
-                    conocen su negocio mejor que nadie, y que aun así no consiguen
-                    los resultados que esperaban.
-                  </p>
-                  <p>
-                    No es falta de esfuerzo. Casi nunca lo es. Es falta de
-                    visibilidad sobre lo que está pasando realmente. Es operar sin
-                    los datos correctos, tomar decisiones sin la información
-                    suficiente, o estar tan dentro del día a día que es imposible
-                    ver el negocio con perspectiva.
-                  </p>
-                </div>
-              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── POR QUÉ HAGO ESTO — fondo crema ─────────────────────── */}
+      <section className="bg-cream py-24 lg:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">02 — Por qué hago esto</p>
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">
+            Muchos negocios no fallan por falta de trabajo. Fallan por falta de método.
+          </h2>
+          <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
+            <p>
+              A lo largo de mi carrera he visto una y otra vez el mismo
+              patrón: propietarios y gestores que trabajan muchísimo, que
+              conocen su negocio mejor que nadie, y que aun así no consiguen
+              los resultados que esperaban.
+            </p>
+            <p>
+              No es falta de esfuerzo. Casi nunca lo es. Es falta de
+              visibilidad sobre lo que está pasando realmente. Es operar sin
+              los datos correctos, tomar decisiones sin la información
+              suficiente, o estar tan dentro del día a día que es imposible
+              ver el negocio con perspectiva.
+            </p>
           </div>
         </div>
       </section>
@@ -165,8 +166,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── QUÉ ME DIFERENCIA — fondo crema ─────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── QUÉ ME DIFERENCIA — fondo crema oscuro ──────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             04 — Qué me diferencia
@@ -227,15 +228,15 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CIERRE CTA — navy ─────────────────────────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── CIERRE CTA — fondo crema oscuro ───────────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display text-cream text-4xl lg:text-5xl font-light leading-tight mb-5">
+              <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5">
                 Si algo de lo que has leído te resuena, el siguiente paso es sencillo.
               </h2>
-              <p className="font-body text-cream/55 text-lg leading-relaxed">
+              <p className="font-body text-ink/65 text-lg leading-relaxed">
                 No hace falta tener todo claro antes de contactar. Para eso está
                 la primera conversación: para que puedas explicarme dónde estás
                 y entre los dos veamos si tiene sentido trabajar juntos. Sin

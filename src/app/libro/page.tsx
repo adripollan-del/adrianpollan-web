@@ -87,8 +87,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── MI HISTORIA — fondo crema ────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── MI HISTORIA — fondo blanco ───────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -137,8 +137,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── QUÉ ES — fondo blanco ────────────────────────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── QUÉ ES — fondo crema ─────────────────────────────────── */}
+      <section className="bg-cream py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
@@ -160,45 +160,6 @@ export default function LibroPage() {
                 bien puestas.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PARA QUIÉN ES — fondo crema ─────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-2xl mb-16">
-            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-              Para quién es
-            </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
-              No es un libro para estudiantes.<br />Es para quien ya está en el negocio.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Propietarios de restaurante",
-                body: "Que llevan su negocio con intuición y esfuerzo, pero sienten que les falta un sistema. Que saben que pueden mejorar pero no saben exactamente cómo.",
-              },
-              {
-                title: "Directores de operaciones",
-                body: "Que gestionan varios locales y necesitan frameworks claros para estructurar su trabajo, formar a sus equipos y escalar con criterio.",
-              },
-              {
-                title: "Emprendedores que abren",
-                body: "Que quieren tomar las mejores decisiones posibles antes y durante la apertura, con una guía práctica que cubre todo el proceso.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="bg-cream border border-navy/8 p-8 hover:border-amber/40 transition-colors">
-                <span className="font-display text-amber/40 text-4xl font-light block mb-4">
-                  0{i + 1}
-                </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="font-body text-ink/65 text-sm leading-relaxed">{item.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -276,18 +237,57 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── LISTA DE ESPERA — amber ───────────────────────────────── */}
-      <section className="bg-amber py-20 lg:py-28" id="lista-espera">
+      {/* ── PARA QUIÉN ES — fondo crema oscuro ────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Para quién es
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              No es un libro para estudiantes.<br />Es para quien ya está en el negocio.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Propietarios de restaurante",
+                body: "Que llevan su negocio con intuición y esfuerzo, pero sienten que les falta un sistema. Que saben que pueden mejorar pero no saben exactamente cómo.",
+              },
+              {
+                title: "Directores de operaciones",
+                body: "Que gestionan varios locales y necesitan frameworks claros para estructurar su trabajo, formar a sus equipos y escalar con criterio.",
+              },
+              {
+                title: "Emprendedores que abren",
+                body: "Que quieren tomar las mejores decisiones posibles antes y durante la apertura, con una guía práctica que cubre todo el proceso.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white border border-navy/8 p-8 hover:border-amber/40 transition-colors">
+                <span className="font-display text-amber/40 text-4xl font-light block mb-4">
+                  0{i + 1}
+                </span>
+                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="font-body text-ink/65 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LISTA DE ESPERA — fondo amber suave ───────────────────── */}
+      <section className="bg-[#fbf3e3] py-20 lg:py-28" id="lista-espera">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <p className="font-body text-navy/50 text-xs tracking-widest uppercase mb-4">
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Próximamente
               </p>
               <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-4">
                 Sé el primero en saber cuándo sale.
               </h2>
-              <p className="font-body text-navy/70 text-lg leading-relaxed">
+              <p className="font-body text-ink/65 text-lg leading-relaxed">
                 El libro está en proceso de publicación. Si quieres recibir un
                 aviso en cuanto esté disponible, déjame tu email. Sin spam.
                 Solo lo que importa, cuando importa.

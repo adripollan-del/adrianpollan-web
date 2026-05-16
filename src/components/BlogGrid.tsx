@@ -25,27 +25,35 @@ export default function BlogGrid() {
       : blogPosts.filter((p) => p.category === active);
 
   return (
-    <section className="bg-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        {/* Filtros */}
-        <div className="flex flex-wrap gap-3 mb-14">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`px-5 py-2 text-sm font-body font-medium tracking-wide transition-all duration-200 ${
-                active === cat
-                  ? "bg-amber text-navy"
-                  : "border border-navy/20 text-navy/60 hover:border-amber/60 hover:text-navy"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+    <>
+      {/* ── PRESENTACIÓN Y CATEGORÍAS — fondo blanco ─────────────── */}
+      <section className="bg-white py-14 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
+            Filtrar por categoría
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className={`px-5 py-2 text-sm font-body font-medium tracking-wide transition-all duration-200 ${
+                  active === cat
+                    ? "bg-amber text-navy"
+                    : "border border-navy/20 text-navy/60 hover:border-amber/60 hover:text-navy"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      {/* ── GRID DE ARTÍCULOS — fondo crema ──────────────────────── */}
+      <section className="bg-cream py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {filtered.map((post, i) => (
             <article
               key={post.slug}
@@ -100,8 +108,9 @@ export default function BlogGrid() {
               </div>
             </article>
           ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

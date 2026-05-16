@@ -62,16 +62,18 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── SERVICIOS — fondo crema ──────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-12">
-            Los tres servicios
-          </p>
-          <div className="space-y-5">
-            {services.map((service, i) => (
+      {/* ── SERVICIOS — 3 secciones con alternancia ──────────────── */}
+      {services.map((service, i) => {
+        const bgs = ["bg-white", "bg-cream", "bg-white"];
+        return (
+          <section key={i} className={`${bgs[i]} py-16 lg:py-20`}>
+            <div className="max-w-7xl mx-auto px-6 lg:px-10">
+              {i === 0 && (
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-12">
+                  Los tres servicios
+                </p>
+              )}
               <ServiceCard
-                key={i}
                 number={service.number}
                 title={service.title}
                 subtitle={service.subtitle}
@@ -85,13 +87,13 @@ export default function ServiciosPage() {
                 cta="Hablemos de tu proyecto"
                 ctaHref="/hablemos"
               />
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        );
+      })}
 
-      {/* ── PROCESO — fondo blanco ───────────────────────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── PROCESO — fondo crema ────────────────────────────────── */}
+      <section className="bg-cream py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -121,8 +123,8 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── ¿NO SABES CUÁL? — fondo crema ───────────────────────── */}
-      <section className="bg-cream py-20 lg:py-28">
+      {/* ── ¿NO SABES CUÁL? — fondo blanco ───────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -154,7 +156,7 @@ export default function ServiciosPage() {
             </div>
 
             {/* Checklist visual */}
-            <div className="bg-white border border-navy/10 p-8 lg:p-10">
+            <div className="bg-cream border border-navy/10 p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 El diagnóstico analiza
               </p>
@@ -178,13 +180,13 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — navy ─────────────────────────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── CTA FINAL — fondo amber suave ─────────────────────────── */}
+      <section className="bg-[#fbf3e3] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-cream text-4xl lg:text-5xl font-light mb-5">
+          <h2 className="font-display text-navy text-4xl lg:text-5xl font-light mb-5">
             El primer paso es gratis
           </h2>
-          <p className="font-body text-cream/55 text-lg mb-10 max-w-lg mx-auto">
+          <p className="font-body text-ink/65 text-lg mb-10 max-w-lg mx-auto">
             Empieza con el diagnóstico IA o con una sesión de exploración de
             20 minutos. Sin compromiso, sin ventas.
           </p>
@@ -199,7 +201,7 @@ export default function ServiciosPage() {
             </a>
             <Link
               href="/hablemos"
-              className="font-body text-sm text-cream/60 hover:text-cream transition-colors"
+              className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
             >
               O reserva una sesión →
             </Link>

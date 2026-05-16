@@ -85,8 +85,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── DIAGNÓSTICO IA — fondo blanco con acento amber ──────── */}
-      <section className="bg-white border-t-4 border-amber py-20 lg:py-28">
+      {/* ── DIAGNÓSTICO IA — fondo blanco ─────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <div className="inline-flex items-center gap-2 bg-amber/10 border border-amber/30 px-3 py-1.5 mb-6">
             <Zap size={13} className="text-amber" />
@@ -201,18 +201,18 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── FAQ — navy ────────────────────────────────────────────── */}
-      <section className="bg-navy py-24 lg:py-32">
+      {/* ── FAQ — fondo crema ─────────────────────────────────────── */}
+      <section className="bg-cream py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Preguntas frecuentes
               </p>
-              <h2 className="font-display text-cream text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Lo que suelen preguntar
               </h2>
-              <p className="font-body text-cream/50 text-base leading-relaxed mb-8">
+              <p className="font-body text-ink/60 text-base leading-relaxed mb-8">
                 Si tienes alguna duda que no está aquí, escríbeme directamente.
               </p>
               <Link
@@ -230,20 +230,20 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── CIERRE — cream ───────────────────────────────────────── */}
-      <section className="bg-cream py-20 lg:py-28">
+      {/* ── CTA FINAL — fondo crema oscuro ────────────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             El primer paso es siempre el más sencillo.
           </h2>
-          <p className="font-body text-ink/55 text-lg leading-relaxed max-w-lg mx-auto mb-10">
+          <p className="font-body text-ink/65 text-lg leading-relaxed max-w-lg mx-auto mb-10">
             Reserva tu sesión gratuita de 20 minutos o escríbeme directamente.
             Sin presión, sin compromisos.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/hablemos#calendly"
-              className="inline-flex items-center gap-2 px-9 py-4 bg-navy text-cream text-sm font-semibold tracking-wide hover:bg-navy/85 transition-colors"
+              className="inline-flex items-center gap-2 px-9 py-4 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
             >
               Reserva tu sesión gratuita <ArrowRight size={15} />
             </Link>

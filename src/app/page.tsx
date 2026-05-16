@@ -295,8 +295,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo crema oscuro ──────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo amber suave ──────────── */}
+      <section className="bg-[#fbf3e3] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -366,16 +366,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — navy (único bloque oscuro del final) ────────── */}
-      <section className="bg-navy py-24 lg:py-32">
+      {/* ── CTA FINAL — fondo crema oscuro ──────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
             Empezar
           </p>
-          <h2 className="font-display text-cream text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6 max-w-3xl mx-auto">
+          <h2 className="font-display text-navy text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6 max-w-3xl mx-auto">
             El primer paso es siempre el más sencillo.
           </h2>
-          <p className="font-body text-cream/55 text-lg leading-relaxed max-w-xl mx-auto mb-12">
+          <p className="font-body text-ink/65 text-lg leading-relaxed max-w-xl mx-auto mb-12">
             Una sesión gratuita de 20 minutos para ver dónde está tu negocio
             y si tiene sentido trabajar juntos.
           </p>
@@ -392,7 +392,7 @@ export default function Home() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-cream/60 hover:text-cream transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
             >
               O haz el diagnóstico gratuito →
             </a>
