@@ -148,8 +148,8 @@ export default function Home() {
       {/* ── TICKER ──────────────────────────────────────────────────── */}
       <Ticker />
 
-      {/* ── ¿PARA QUIÉN? — fondo blanco ────────────────────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── ¿PARA QUIÉN? — fondo amber suave ───────────────────────── */}
+      <section className="bg-[#fbf3e3] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -165,7 +165,7 @@ export default function Home() {
             {audienceCardData.map((card, i) => (
               <div
                 key={card.num}
-                className="bg-cream border border-navy/8 p-8 lg:p-10 hover:border-amber/50 hover:shadow-sm transition-all duration-300"
+                className="bg-white border border-navy/8 p-8 lg:p-10 hover:border-amber/50 hover:shadow-sm transition-all duration-300"
               >
                 <div className="mb-4">{audienceIcons[i]}</div>
                 <span className="font-display text-4xl font-light text-amber/50 block mb-5">
@@ -183,8 +183,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICIOS — fondo crema ─────────────────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── SERVICIOS — fondo blanco ────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -220,7 +220,7 @@ export default function Home() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="bg-white border border-navy/8 p-8 lg:p-10 flex flex-col hover:border-amber/50 hover:shadow-sm transition-all duration-300"
+                className="bg-cream border border-navy/8 p-8 lg:p-10 flex flex-col hover:border-amber/50 hover:shadow-sm transition-all duration-300"
               >
                 <div className="mb-5">{s.icon}</div>
                 <h3 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight mb-3">
@@ -252,16 +252,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HERRAMIENTA IA — fondo blanco con acento amber ──────────── */}
-      <section className="bg-white border-t-4 border-amber py-20 lg:py-28">
+      {/* ── HERRAMIENTA IA — fondo navy ─────────────────────────────── */}
+      <section className="bg-navy py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Herramienta gratuita · IA
           </p>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+          <h2 className="font-display text-cream text-4xl lg:text-5xl font-semibold leading-tight mb-6">
             ¿No sabes por dónde empezar? Empieza aquí.
           </h2>
-          <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
+          <p className="font-body text-cream/70 text-lg leading-relaxed mb-8">
             He desarrollado una herramienta de diagnóstico gratuita con
             inteligencia artificial, diseñada específicamente para negocios
             de hostelería y restauración. En pocos minutos obtienes un
@@ -269,7 +269,7 @@ export default function Home() {
             para tu situación concreta. Gratuita. Sin registro. Sin compromiso.
           </p>
 
-          <div className="space-y-3 mb-10 pl-4 border-l-2 border-amber/40">
+          <div className="space-y-3 mb-10 pl-4 border-l-2 border-amber/50">
             {[
               "Rentabilidad y control de costes",
               "Gestión de equipo y liderazgo",
@@ -277,7 +277,7 @@ export default function Home() {
               "Carta, pricing y experiencia cliente",
               "Informe personalizado con plan de acción",
             ].map((area, i) => (
-              <p key={i} className="font-body text-ink/70 text-sm">
+              <p key={i} className="font-body text-cream/75 text-sm">
                 — {area}
               </p>
             ))}
@@ -295,8 +295,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo crema ─────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo crema oscuro ──────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 

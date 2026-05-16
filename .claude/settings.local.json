@@ -14,7 +14,8 @@
       "Bash(cp \"Servicio 2 .png\" /Users/adrianpollan/adrianpollan-web/public/servicio-2.png)",
       "Bash(cp \"Servicio 3.png\" /Users/adrianpollan/adrianpollan-web/public/servicio-3.png)",
       "Bash(cp \"MI LIBRO.png\" /Users/adrianpollan/adrianpollan-web/public/libro.png)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
