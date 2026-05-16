@@ -49,7 +49,7 @@ export default function SobreMiPage() {
 
             {/* Foto */}
             <div className="lg:col-span-4">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                 <Image
                   src="/Adrian Sobre Mi.png"
                   alt="Adrián Pollán — consultor en hostelería y restauración"

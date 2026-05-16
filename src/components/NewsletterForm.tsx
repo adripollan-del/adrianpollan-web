@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 type Status = "idle" | "sending" | "done" | "error";
 
-export default function WaitlistForm({ buttonText = "Apuntarme" }: { buttonText?: string }) {
+export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -16,7 +16,7 @@ export default function WaitlistForm({ buttonText = "Apuntarme" }: { buttonText?
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/libro", {
+      const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -38,21 +38,18 @@ export default function WaitlistForm({ buttonText = "Apuntarme" }: { buttonText?
 
   if (status === "done") {
     return (
-      <div className="flex flex-col items-center gap-3">
-        <CheckCircle size={32} className="text-navy" />
-        <p className="font-display text-navy text-xl font-semibold">
-          ¡Estás en la lista!
-        </p>
-        <p className="font-body text-navy/65 text-sm">
-          Te avisaré en cuanto el libro esté disponible.
+      <div className="flex items-center gap-3">
+        <CheckCircle size={20} className="text-amber flex-shrink-0" />
+        <p className="font-body text-cream text-sm">
+          ¡Gracias! Te he añadido al newsletter.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-md mx-auto">
-      <div className="flex flex-col sm:flex-row gap-3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
+      <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
           required
@@ -60,19 +57,20 @@ export default function WaitlistForm({ buttonText = "Apuntarme" }: { buttonText?
           onChange={(e) => setEmail(e.target.value)}
           placeholder="tu@email.com"
           disabled={status === "sending"}
-          className="flex-1 bg-navy/10 border border-navy/20 px-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy transition-colors disabled:opacity-60"
+          aria-label="Tu email"
+          className="flex-1 bg-cream/5 border border-cream/20 px-4 py-2.5 font-body text-sm text-cream placeholder:text-cream/40 focus:outline-none focus:border-amber transition-colors disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-navy text-cream text-sm font-semibold tracking-wide hover:bg-navy/85 disabled:opacity-60 transition-colors whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-amber text-cream text-sm font-medium tracking-wide hover:bg-amber-hover disabled:opacity-60 transition-colors whitespace-nowrap"
         >
-          {status === "sending" ? "..." : buttonText}
+          {status === "sending" ? "..." : "Suscribirme"}
           {status === "idle" && <ArrowRight size={14} />}
         </button>
       </div>
       {status === "error" && errorMsg && (
-        <p className="font-body text-sm text-red-700" role="alert">
+        <p className="font-body text-xs text-amber/90" role="alert">
           {errorMsg}
         </p>
       )}

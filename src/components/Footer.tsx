@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const footerLinks = [
   { href: "/servicios", label: "Servicios" },
@@ -12,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a1219] text-cream/70">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-12">
           {/* Brand */}
           <div>
             <Link href="/" className="font-display text-amber text-2xl font-medium hover:text-amber/80 transition-colors">
@@ -64,6 +65,16 @@ export default function Footer() {
                 O reserva una sesión de 20 minutos →
               </Link>
             </div>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-body text-xs uppercase tracking-widest text-amber mb-5">Newsletter</h3>
+            <p className="text-sm text-cream/60 mb-5">
+              Ideas prácticas sobre gestión hostelera, directamente a tu bandeja
+              de entrada. Sin spam.
+            </p>
+            <NewsletterForm />
           </div>
         </div>
 

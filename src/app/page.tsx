@@ -127,7 +127,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Foto real — archivo: /public/Adrian Sobre Mi.png */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/Adrian Sobre Mi.png"
                 alt="Adrián Pollán — consultor en hostelería y restauración"
