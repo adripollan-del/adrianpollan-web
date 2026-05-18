@@ -380,17 +380,17 @@ export default function SobreMiPage() {
               {
                 text: "Llevábamos tres años con el restaurante lleno casi todos los fines de semana y sin entender por qué el margen no aparecía. En dos meses de trabajo con Adrián identificamos dónde se escapaba el dinero y lo corregimos. El cambio fue inmediato.",
                 name: "Carlos M.",
-                role: "Propietario, Restaurante en Madrid",
+                role: "Propietario, Restaurante en Miami",
               },
               {
                 text: "Estaba a punto de firmar el local para mi primer restaurante cuando empecé a trabajar con Adrián. Me hizo las preguntas que nadie me había hecho y me ayudó a tomar decisiones mucho más sólidas antes de comprometer mi inversión.",
                 name: "Laura G.",
-                role: "Emprendedora, Barcelona",
+                role: "Emprendedora, Valencia",
               },
               {
                 text: "Lo que más me sorprendió fue que no llegó con soluciones preparadas. Primero entendió el negocio, luego propuso. Esa forma de trabajar marca la diferencia respecto a otros consultores que había contratado antes.",
                 name: "Javier R.",
-                role: "Director de F&B, Hotel en Sevilla",
+                role: "Director de F&B, Hotel en Ciudad de México",
               },
             ].map((t, i) => (
               <div

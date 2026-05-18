@@ -472,37 +472,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIOS — fondo blanco ──────────────────────────────── */}
-      <section className="bg-white py-14 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-2xl mb-10 lg:mb-12">
-            <h2 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight">
-              Lo que dicen quienes han trabajado conmigo
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white shadow-sm border border-navy/10 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
-              >
-                <Quote size={20} className="text-amber mb-3" strokeWidth={1.5} />
-                <p className="font-body text-ink/75 text-sm leading-relaxed mb-5 flex-1">
-                  {t.text}
-                </p>
-                <div className="pt-4 border-t border-navy/10">
-                  <p className="font-display text-navy text-xs font-semibold">{t.name}</p>
-                  <p className="font-body text-ink/55 text-xs mt-0.5">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA FINAL — fondo crema oscuro ──────────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── CTA FINAL — fondo blanco ────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
             Empezar
