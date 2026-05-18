@@ -108,6 +108,13 @@ export default function HablemosPage() {
             Hacer el diagnóstico ahora
             <ExternalLink size={15} />
           </TrackingLink>
+          <p className="font-body text-ink/40 text-sm text-center max-w-md mt-5">
+            Tus respuestas se usan únicamente para generar tu diagnóstico y, si decides contactar, entender mejor tu situación. No se venden, no se comparten y no recibirás spam.{" "}
+            <a href="/politica-de-privacidad" className="underline hover:text-cream/60 transition-colors">
+              Política de privacidad
+            </a>
+            .
+          </p>
         </div>
       </section>
 
