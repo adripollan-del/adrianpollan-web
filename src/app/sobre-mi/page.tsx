@@ -367,8 +367,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIOS — fondo crema claro ──────────────────────── */}
-      <section className="bg-cream py-24 lg:py-32">
+      {/* ── TESTIMONIOS — fondo blanco ───────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-12">
             <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
@@ -411,8 +411,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CIERRE CTA — fondo blanco ─────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      {/* ── CIERRE CTA — fondo crema oscuro ──────────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
