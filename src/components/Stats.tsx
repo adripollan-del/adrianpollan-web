@@ -12,9 +12,9 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { icon: Clock, value: 20, suffix: "+", label: "años de experiencia operativa" },
-  { icon: Globe, value: 4, suffix: "", label: "países: España, Francia, UK, Irlanda" },
-  { icon: Users, value: 100, suffix: "+", label: "negocios diagnosticados" },
+  { icon: Clock, value: 20, suffix: "+", label: "Años de experiencia operativa" },
+  { icon: Globe, value: 4, suffix: "", label: "Países: España, Francia, UK, Irlanda" },
+  { icon: Users, value: 100, suffix: "+", label: "Negocios ayudados" },
 ];
 
 function Counter({ target, animate }: { target: number; animate: boolean }) {
