@@ -30,8 +30,9 @@ export default function BlogGrid() {
                   alt={post.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   priority={i < 2}
+                  loading={i < 2 ? undefined : "lazy"}
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">

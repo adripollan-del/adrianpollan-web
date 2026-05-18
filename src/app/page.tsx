@@ -157,9 +157,9 @@ export default function Home() {
                 alt="Adrián Pollán, consultor de hostelería y restaurantes con 20 años de experiencia"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-top"
-                priority
+                loading="lazy"
                 quality={85}
+                className="object-cover object-top"
               />
             </div>
 

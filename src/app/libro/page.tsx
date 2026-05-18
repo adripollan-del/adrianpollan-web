@@ -148,6 +148,7 @@ export default function LibroPage() {
                 alt="Adrián Pollán comparte su experiencia en gestión y recuperación de negocios de hostelería"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
+                loading="lazy"
                 quality={85}
                 className="object-cover"
               />
