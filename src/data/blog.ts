@@ -218,6 +218,72 @@ export const blogPosts: BlogPost[] = [
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
+    slug: "como-mejorar-el-margen-de-un-restaurante-sin-subir-precios",
+    title: "Cómo mejorar el margen de un restaurante sin subir precios",
+    excerpt:
+      "Descubre las palancas reales para mejorar el margen de tu restaurante sin tocar los precios. Estrategias prácticas basadas en operativa real.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "8 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Cuando un restaurante tiene problemas de margen, la primera solución que aparece en la cabeza del propietario es subir precios. Es comprensible. Si el problema es que no queda suficiente dinero, parece lógico cobrar más por lo mismo. Pero subir precios sin entender por qué el margen es bajo puede ser un error caro.</p>
+
+<p>A veces el precio no es el problema. Y subirlo sin haber resuelto lo que sí lo es simplemente aplaza la crisis.</p>
+
+<p>He trabajado con restaurantes que tenían precios correctos para su mercado y aun así márgenes muy bajos. En todos los casos, el problema estaba en otro sitio. Y en casi todos, había palancas para mejorar el margen sin tocar la carta de precios.</p>
+
+<h2>Primero, entiende dónde se escapa el dinero</h2>
+
+<p>Antes de actuar, hay que saber exactamente dónde está el problema. Un margen bajo puede venir de un food cost alto, de un labour cost descontrolado, de unos gastos fijos que no corresponden al volumen de negocio, de una mezcla de ventas desfavorable o de una combinación de varios de estos factores.</p>
+
+<p>Sin ese diagnóstico, cualquier acción es un disparo a ciegas. El punto de partida siempre es la misma pregunta: ¿dónde se está yendo el dinero exactamente?</p>
+
+<h2>Palanca 1: Rediseña tu carta con criterio de margen</h2>
+
+<p>La carta es la herramienta de venta más importante de un restaurante y también una de las más descuidadas desde el punto de vista económico. Muchos restaurantes tienen cartas largas con platos que generan márgenes muy distintos, y no saben cuáles son cuáles.</p>
+
+<p>Cuando haces el escandallo de todos tus platos y los ordenas por margen, casi siempre aparece el mismo patrón: hay un grupo reducido de platos que generan la mayor parte del margen, y hay platos que se venden bien pero que contribuyen poco o nada a la rentabilidad.</p>
+
+<p>Una carta más corta, diseñada con criterio económico, casi siempre mejora el margen. Además reduce la complejidad operativa, baja las mermas y facilita la formación del equipo.</p>
+
+<h2>Palanca 2: Controla las mermas</h2>
+
+<p>Las mermas son uno de los grandes agujeros invisibles de la rentabilidad en hostelería. Son invisibles porque no aparecen en ninguna comanda, no generan ninguna queja y nadie las contabiliza de forma activa.</p>
+
+<p>Sin embargo, en muchos restaurantes las mermas representan entre el 3% y el 8% del coste de materia prima. En un restaurante que gasta 10.000 euros al mes en producto, eso son entre 300 y 800 euros mensuales que se van a la basura.</p>
+
+<p>Controlar las mermas requiere estandarizar porciones, mejorar la gestión del stock, rotar correctamente los productos y tener procesos claros de cocina. No es glamuroso, pero el impacto en el margen es inmediato y medible.</p>
+
+<h2>Palanca 3: Optimiza la mezcla de ventas</h2>
+
+<p>La mezcla de ventas es la proporción en la que tus clientes eligen cada plato o producto de tu carta. Y tiene un impacto enorme en el margen real, aunque el precio promedio no cambie.</p>
+
+<p>Se puede influir en la mezcla de ventas a través del diseño de la carta, la disposición visual de los platos, las recomendaciones del equipo de sala y las descripciones de los platos. Un equipo bien formado que sabe cuáles son los platos más rentables y cómo recomendarlos puede mejorar el margen de forma significativa.</p>
+
+<h2>Palanca 4: Revisa tus costes fijos</h2>
+
+<p>Los costes fijos son los que tienes independientemente de cuánto vendas: alquiler, suministros, seguros, software, servicios externos. Una revisión anual de todos los contratos y servicios recurrentes casi siempre encuentra margen de reducción.</p>
+
+<p>También hay que revisar si el volumen de negocio justifica los costes fijos que tienes. Si tu estructura de costes fijos está diseñada para un volumen de ventas que no estás alcanzando, el margen nunca va a ser suficiente independientemente de lo que hagas en la operativa.</p>
+
+<h2>Palanca 5: Mejora la productividad del equipo</h2>
+
+<p>Mejorar la productividad no significa necesariamente reducir personal. Significa asegurarse de que las horas trabajadas se utilizan de la forma más eficiente posible.</p>
+
+<p>Turnos mejor planificados, procesos más claros, formación adecuada y una buena organización de la cocina pueden mejorar significativamente la productividad sin tocar la plantilla. Y esa mejora se traduce directamente en margen.</p>
+
+<h2>El margen se construye en los detalles</h2>
+
+<p>No existe una sola palanca que resuelva un problema de margen. Casi siempre es la combinación de varias mejoras moderadas lo que genera un cambio real. Una reducción del food cost del 2%, una mejora de la mezcla de ventas, una reducción de mermas del 1% y una optimización de turnos pueden sumarse para transformar la rentabilidad de un negocio.</p>
+
+<p>Por eso el diagnóstico es tan importante. Antes de actuar, hay que saber exactamente dónde están las oportunidades de mejora más grandes para tu negocio concreto.</p>
+
+<p>Si quieres una primera foto de dónde está perdiendo margen tu restaurante, el diagnóstico gratuito puede ayudarte a verlo en menos de cinco minutos.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "por-que-tu-restaurante-no-es-rentable",
     title: "Por qué tu restaurante llena pero no es rentable",
     excerpt:
