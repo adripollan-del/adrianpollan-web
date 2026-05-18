@@ -496,37 +496,6 @@ export const blogPosts: BlogPost[] = [
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
-    slug: "por-que-tu-restaurante-no-es-rentable",
-    title: "Por qué tu restaurante llena pero no es rentable",
-    excerpt:
-      "Mucha gente cree que el problema es que no tienen suficientes clientes. Suelen estar equivocados. El problema casi siempre está en los márgenes, la estructura de costes y cómo gestionan lo que ya tienen.",
-    category: "Rentabilidad",
-    date: "2026-03-23",
-    readTime: "6 min",
-    coverImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
-    body: `<p>He trabajado con docenas de restaurantes que llenan todos los fines de semana y aun así terminan el mes en rojo. ¿Cómo es posible?</p>
-
-<p>La respuesta casi siempre tiene tres partes: un coste de producto demasiado alto, una estructura de personal sobredimensionada y una carta mal diseñada que vende lo que menos margen deja.</p>
-
-<h2>El error del volumen</h2>
-
-<p>Muchos operadores de hostelería piensan que más cubiertos equivale a más dinero. Y en teoría tienen razón. Pero en la práctica, llenar más mesas sin antes arreglar los márgenes solo significa perder dinero más rápido.</p>
-
-<p>Antes de buscar más volumen, tienes que asegurarte de que cada cubierto que sirves genera un margen real. Eso implica revisar tu escandallo, tu pricing y tu ingeniería de menú.</p>
-
-<h2>Los tres números que tienes que conocer de memoria</h2>
-
-<p>El coste de materia prima como porcentaje de ventas (idealmente entre el 28% y el 32% en un restaurante a la carta). El coste de personal (entre el 30% y el 38%). Y el EBITDA real, no el que te da el gestor en abril del año siguiente.</p>
-
-<p>Si no sabes estos tres números de memoria, ahí está el primer problema.</p>
-
-<h2>Dónde mirar primero</h2>
-
-<p>Mi metodología siempre empieza por los números: ¿Cuál es tu coste de materia prima real? ¿Y tu coste de personal como porcentaje de ventas? ¿Cuáles son los tres platos que más vendes y cuánto dejan realmente?</p>
-
-<p>Esas respuestas ya te dicen dónde está el problema. El resto es ejecución.</p>`,
-  },
-  {
     slug: "como-construir-un-equipo-que-no-dependa-de-ti",
     title: "Cómo construir un equipo de sala que no dependa de ti",
     excerpt:
