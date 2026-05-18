@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
-import FAQAccordion from "@/components/FAQAccordion";
 import { ExternalLink, ArrowRight, Calendar, Mail, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -11,29 +9,6 @@ export const metadata: Metadata = {
   description:
     "Tres formas de empezar: diagnóstico IA gratuito, sesión de 20 minutos o mensaje directo. Consultoría en hostelería y restauración.",
 };
-
-const faqs = [
-  {
-    question: "¿Trabajas solo con negocios de España?",
-    answer:
-      "No. Trabajo de forma completamente online, lo que me permite trabajar con negocios en cualquier país de habla hispana y también en inglés si el proyecto lo requiere.",
-  },
-  {
-    question: "¿Cuánto dura un proceso de consultoría?",
-    answer:
-      "Depende del servicio y de la situación de cada negocio. En la primera sesión lo vemos juntos.",
-  },
-  {
-    question: "¿Cómo sé qué servicio necesito?",
-    answer:
-      "No hace falta saberlo antes de contactar. En la sesión gratuita de 20 minutos te ayudo a identificar qué tipo de acompañamiento encaja mejor con tu situación.",
-  },
-  {
-    question: "¿Trabajas con negocios que acaban de abrir?",
-    answer:
-      "Sí. Cuanto antes se incorpora el acompañamiento en una apertura, más impacto tiene.",
-  },
-];
 
 export default function HablemosPage() {
   return (
@@ -197,35 +172,6 @@ export default function HablemosPage() {
             </div>
 
             <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ — fondo crema oscuro ──────────────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
-            <div className="lg:sticky lg:top-24">
-              <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-                Preguntas frecuentes
-              </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
-                Lo que suelen preguntar
-              </h2>
-              <p className="font-body text-ink/60 text-base leading-relaxed mb-8">
-                Si tienes alguna duda que no está aquí, escríbeme directamente.
-              </p>
-              <Link
-                href="#contacto"
-                className="inline-flex items-center gap-2 font-body text-sm text-amber border-b border-amber/40 pb-0.5 hover:border-amber transition-colors"
-              >
-                Hacer una pregunta <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="lg:col-span-2">
-              <FAQAccordion faqs={faqs} />
-            </div>
           </div>
         </div>
       </section>

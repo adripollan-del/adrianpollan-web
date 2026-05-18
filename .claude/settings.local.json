@@ -22,7 +22,8 @@
       "Bash(textutil -convert txt -output /tmp/terminos.txt \"TÉRMINOS Y CONDICIONES.docx\")",
       "Read(//tmp/**)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(npx next *)"
     ]
   }
 }
