@@ -11,6 +11,72 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "como-disenar-una-carta-de-restaurante-rentable",
+    title: "Cómo diseñar una carta de restaurante rentable",
+    excerpt:
+      "Aprende a diseñar una carta de restaurante que equilibre atractivo gastronómico y rentabilidad real. Claves prácticas basadas en operativa real.",
+    category: "Rentabilidad",
+    date: "2026-05-25",
+    readTime: "9 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>La carta es la herramienta de venta más importante de un restaurante. Es el primer contacto real del cliente con tu propuesta gastronómica, el documento que guía su decisión de compra y, al mismo tiempo, el instrumento que determina en gran medida la rentabilidad del negocio.</p>
+
+<p>Y sin embargo, en la mayoría de los restaurantes la carta se diseña pensando casi exclusivamente en lo gastronómico. En qué platos le gustan al chef, en qué encaja con el concepto, en qué pueden pedir los clientes. Muy pocas veces se diseña pensando en qué combinación de platos genera el margen que el negocio necesita para ser sostenible.</p>
+
+<p>Esa es la tensión que hay que resolver: una carta tiene que ser atractiva para el cliente y rentable para el negocio. Las dos cosas a la vez. Y se puede hacer si se tiene el criterio adecuado.</p>
+
+<h2>El primer error: cartas demasiado largas</h2>
+
+<p>Una carta larga parece una ventaja. Más opciones para el cliente, más posibilidades de que encuentre algo que le guste. Pero en la práctica, una carta larga es uno de los problemas más frecuentes en restauración.</p>
+
+<p>Una carta larga obliga a tener stock de muchos ingredientes, lo que aumenta las mermas. Complica la operativa de cocina, que tiene que preparar y mantener más elaboraciones. Dificulta la formación del equipo, que tiene que conocer muchos platos. Y paradójicamente, en muchos casos paraliza al cliente, que ante demasiadas opciones tarda más en decidir y con frecuencia elige de forma menos satisfactoria.</p>
+
+<p>He visto restaurantes que redujeron su carta a la mitad y mejoraron tanto la rentabilidad como la satisfacción del cliente. Menos platos, mejor ejecutados, con ingredientes que rotan más y mermas más bajas.</p>
+
+<h2>Cómo analizar la rentabilidad de tu carta actual</h2>
+
+<p>Antes de rediseñar la carta, hay que entender cómo está funcionando la actual. Para eso existe una herramienta clásica en gestión de restaurantes llamada ingeniería de menú, que clasifica cada plato en función de dos variables: su popularidad y su rentabilidad.</p>
+
+<p>Un plato popular y rentable es una estrella: hay que mantenerlo y potenciarlo. Un plato popular pero poco rentable es un caballo de batalla: se vende bien pero contribuye poco al margen, hay que reformularlo o subir su precio. Un plato rentable pero poco popular es un puzzle: tiene buen margen pero nadie lo pide, hay que mejorar cómo se presenta. Y un plato poco popular y poco rentable es un perro: ocupa espacio, genera complejidad y no aporta ni ventas ni margen, hay que eliminarlo.</p>
+
+<p>Este análisis requiere tener los escandallos de todos los platos actualizados y los datos de ventas por plato. Con esa información, las decisiones de carta dejan de ser intuitivas y se vuelven estratégicas.</p>
+
+<h2>El precio no es solo un número</h2>
+
+<p>Fijar precios en hostelería es una de las decisiones más importantes y más descuidadas. Muchos restaurantes fijan precios mirando lo que hace la competencia o aplicando un multiplicador fijo sobre el coste sin considerar el contexto completo.</p>
+
+<p>Un precio tiene que cubrir el coste de producción, contribuir a los costes fijos del negocio y generar un margen razonable. Pero también tiene que ser coherente con el posicionamiento del restaurante, con lo que el cliente percibe como valor y con lo que el mercado en esa zona está dispuesto a pagar.</p>
+
+<p>Un precio demasiado bajo en un restaurante de ticket medio-alto puede dañar la percepción de calidad. Un precio demasiado alto en un contexto de mucha competencia puede alejar clientes. El equilibrio no es matemático, es estratégico.</p>
+
+<h2>La mezcla de ventas como herramienta de gestión</h2>
+
+<p>Una carta bien diseñada no solo piensa en cada plato por separado, sino en cómo se comportan los platos juntos. La mezcla de ventas, es decir, la proporción en que los clientes eligen cada plato, determina el margen medio real del negocio.</p>
+
+<p>Si los platos más populares son los menos rentables, el margen global sufre aunque los precios sean correctos. Por eso parte del diseño de la carta consiste en trabajar activamente la mezcla de ventas: posicionar mejor los platos más rentables, formar al equipo para que los recomiende con naturalidad y diseñar la carta visualmente para que esos platos destaquen.</p>
+
+<p>Pequeñas mejoras en la mezcla de ventas pueden tener un impacto significativo en el margen sin que ningún precio haya cambiado.</p>
+
+<h2>La carta como reflejo del concepto</h2>
+
+<p>Una carta rentable no puede ser solo una lista de platos con buenos márgenes. Tiene que contar una historia coherente, reflejar el concepto del restaurante y generar confianza en el cliente.</p>
+
+<p>Un cliente que entiende claramente qué tipo de cocina hace el restaurante, qué ingredientes protagonizan la propuesta y qué experiencia puede esperar, decide con más facilidad y sale más satisfecho. Y un cliente satisfecho repite y recomienda, que es el mejor indicador de salud a largo plazo de cualquier negocio de hostelería.</p>
+
+<p>La coherencia entre concepto, carta y precio es lo que diferencia a un restaurante con identidad de uno que simplemente tiene platos.</p>
+
+<h2>Por dónde empezar si tu carta no está funcionando</h2>
+
+<p>Si tienes la sensación de que tu carta es demasiado larga, que hay platos que no se venden, que el margen no es el que debería ser o que el equipo tiene dificultades para venderla bien, el primer paso es hacer el análisis de rentabilidad que describíamos antes.</p>
+
+<p>Con los escandallos actualizados y los datos de ventas por plato, en pocas horas puedes tener una foto clara de qué está funcionando y qué no. Desde ahí, las decisiones son mucho más fáciles de tomar.</p>
+
+<p>Si quieres saber si la carta de tu restaurante está optimizada para la rentabilidad que necesitas, el diagnóstico gratuito puede darte una primera orientación.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "como-calcular-el-food-cost-de-tu-restaurante",
     title: "Cómo calcular el food cost de tu restaurante paso a paso",
     excerpt:
