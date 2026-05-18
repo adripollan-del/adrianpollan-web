@@ -4,7 +4,7 @@ import Link from "next/link";
 import Stats from "@/components/Stats";
 import WaitlistForm from "@/components/WaitlistForm";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Adrián Pollán | Consultor de Hostelería y Restauración",
@@ -431,6 +431,69 @@ export default function Home() {
                 <div className="pt-4 border-t border-navy/10">
                   <p className="font-display text-navy text-xs font-semibold">{t.name}</p>
                   <p className="font-body text-ink/55 text-xs mt-0.5">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CASOS REALES (compacto) — fondo blanco ───────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <div>
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+                Casos reales
+              </p>
+              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+                Situaciones reales, resultados concretos
+              </h2>
+            </div>
+            <Link
+              href="/sobre-mi"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-navy/55 hover:text-navy transition-colors whitespace-nowrap flex-shrink-0"
+            >
+              Ver todos los casos <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {[
+              {
+                label: "Rentabilidad",
+                title: "Restaurante con buena ocupación y margen insuficiente",
+                resultado:
+                  "En doce semanas el propietario tenía por primera vez una foto clara de dónde estaba yendo el dinero. El control de costes dejó de ser una intuición y pasó a ser un proceso medible.",
+              },
+              {
+                label: "Apertura",
+                title: "Emprendedor antes de firmar el local",
+                resultado:
+                  "No firmó ese local. Tres meses después abrió con un alquiler un 30% inferior, en una zona con menos competencia y con una propuesta más definida.",
+              },
+              {
+                label: "F&B Hotelero",
+                title: "Hotel con operación F&B poco rentable",
+                resultado:
+                  "El F&B pasó de ser percibido como un coste inevitable a convertirse en un elemento diferenciador. Por primera vez el propietario tenía datos reales sobre el rendimiento del departamento.",
+              },
+            ].map((caso, i) => (
+              <div
+                key={i}
+                className="bg-cream-dark border border-navy/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+              >
+                <span className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+                  {caso.label}
+                </span>
+                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4 flex-1">
+                  {caso.title}
+                </h3>
+                <div className="flex items-start gap-2.5 pt-4 border-t border-navy/10">
+                  <CheckCircle size={16} className="text-amber mt-0.5 flex-shrink-0" />
+                  <p className="font-body text-ink/65 text-sm leading-relaxed">
+                    {caso.resultado}
+                  </p>
                 </div>
               </div>
             ))}

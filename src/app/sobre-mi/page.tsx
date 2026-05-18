@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
@@ -242,6 +242,127 @@ export default function SobreMiPage() {
                 activo real.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CASOS REALES — fondo crema oscuro ────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Casos reales
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
+              Situaciones reales, resultados concretos
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed max-w-2xl mb-2">
+              Cada proyecto es distinto. Estos son tres ejemplos de lo que puede
+              cambiar cuando se trabaja con criterio y método.
+            </p>
+            <p className="font-body text-ink/40 text-xs">
+              Los casos se presentan de forma anónima para proteger la
+              confidencialidad de los negocios.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                label: "Rentabilidad",
+                title: "Restaurante con buena ocupación y margen insuficiente",
+                situacion:
+                  "Un restaurante independiente de 50 cubiertos con buena reputación local y ocupación alta los fines de semana. Facturaban bien, pero a fin de mes apenas quedaba margen.",
+                problema:
+                  "Carta demasiado amplia con merma constante, escandallos desactualizados y mezcla de ventas desfavorable donde los platos más populares eran los de menor margen.",
+                acciones:
+                  "Reducción de carta en un 35%, actualización de escandallos, reorganización del menú para potenciar platos rentables y formación del equipo de sala.",
+                resultado:
+                  "En doce semanas el propietario tenía por primera vez una foto clara de dónde estaba yendo el dinero. El control de costes dejó de ser una intuición y pasó a ser un proceso medible y repetible.",
+              },
+              {
+                label: "Apertura",
+                title: "Emprendedor antes de firmar el local",
+                situacion:
+                  "Un emprendedor con experiencia en sala estaba a punto de firmar un local. Tenía el concepto claro, ilusión y algunos ahorros. Contactó para pedir una segunda opinión antes de comprometerse.",
+                problema:
+                  "El alquiler representaba casi el 18% de las ventas proyectadas en el escenario optimista y el concepto era muy similar a dos negocios ya establecidos en la misma calle.",
+                acciones:
+                  "Validación del concepto, ajuste del posicionamiento, análisis de tres locales alternativos y revisión del plan de inversión inicial.",
+                resultado:
+                  "No firmó ese local. Tres meses después encontró una opción con un alquiler un 30% inferior y en una zona con menos competencia directa. Abrió con una propuesta más definida y una estructura financiera más sólida.",
+              },
+              {
+                label: "F&B Hotelero",
+                title: "Hotel con operación F&B poco rentable",
+                situacion:
+                  "Un hotel boutique con restaurante y bar trataba su F&B como un servicio complementario casi obligatorio. El departamento generaba más problemas que ingresos y el equipo tenía alta rotación.",
+                problema:
+                  "Sin identidad propia, carta genérica, precios no calibrados para el perfil del cliente y equipo sin sistema de venta activa. Coste de personal desproporcionado para el volumen generado.",
+                acciones:
+                  "Redefinición del concepto gastronómico, rediseño de carta, ajuste de precios, formación en venta contextual y creación de KPIs mensuales.",
+                resultado:
+                  "El F&B pasó de ser percibido como un coste inevitable a convertirse en un elemento diferenciador de la experiencia del hotel. El propietario empezó a tener datos reales sobre el rendimiento del departamento por primera vez.",
+              },
+            ].map((caso, i) => (
+              <div
+                key={i}
+                className="bg-white border border-navy/10 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+              >
+                <span className="inline-block font-body text-amber text-xs tracking-widest uppercase mb-4">
+                  {caso.label}
+                </span>
+                <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-5">
+                  {caso.title}
+                </h3>
+                <div className="space-y-4 flex-1">
+                  <div>
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
+                      Situación
+                    </p>
+                    <p className="font-body text-ink/65 text-sm leading-relaxed">
+                      {caso.situacion}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
+                      Problema
+                    </p>
+                    <p className="font-body text-ink/65 text-sm leading-relaxed">
+                      {caso.problema}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
+                      Acciones
+                    </p>
+                    <p className="font-body text-ink/65 text-sm leading-relaxed">
+                      {caso.acciones}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-5 pt-5 border-t border-navy/10 flex items-start gap-3">
+                  <CheckCircle size={18} className="text-amber mt-0.5 flex-shrink-0" />
+                  <p className="font-body text-ink/75 text-sm leading-relaxed">
+                    {caso.resultado}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <TrackingLink
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              eventName="diagnostico_click"
+              eventLabel="Sobre mí — casos reales"
+            >
+              ¿Tu situación se parece a alguna de estas? Haz el diagnóstico gratuito
+              <ArrowRight size={15} />
+            </TrackingLink>
           </div>
         </div>
       </section>
