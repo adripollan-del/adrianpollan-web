@@ -135,7 +135,7 @@ export default function LibroPage() {
 
             <div className="relative h-[400px] rounded-xl overflow-hidden lg:col-span-2">
               <Image
-                src="/perder-todo.png"
+                src="/libro-aprendizaje.png"
                 alt="Lo que me enseñó perderlo todo"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
