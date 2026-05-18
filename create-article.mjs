@@ -195,14 +195,22 @@ function buildUnsplashQueries(keyword, title) {
   return [...new Set(queries)];
 }
 
-/** Returns the set of Unsplash photo IDs already used in blog.ts */
-function getUsedPhotoIds() {
+/**
+ * Returns a Set of Unsplash CDN base paths already stored in blog.ts.
+ * Captures everything after "images.unsplash.com/" and before "?" so it works
+ * for both old numeric IDs (photo-1234567890) and new alphanumeric IDs.
+ */
+function getUsedImagePaths() {
   const content = readFileSync(BLOG_FILE, 'utf8');
-  // Matches URLs like: images.unsplash.com/photo-1234abc?
-  // Capture group 1 = photo ID only (e.g. "1234abc"), without the "photo-" prefix
   return new Set(
-    [...content.matchAll(/images\.unsplash\.com\/photo-([\w-]+)\?/g)].map(m => m[1])
+    [...content.matchAll(/https:\/\/images\.unsplash\.com\/([^?"]+)\?/g)].map(m => m[1])
   );
+}
+
+/** Extracts the CDN base path from a photo's urls.raw (works for all ID formats). */
+function cdnBasePath(photo) {
+  // urls.raw is always the authoritative CDN URL — strip Unsplash's own query params
+  return photo.urls.raw.split('?')[0].replace('https://images.unsplash.com/', '');
 }
 
 async function searchUnsplash(query, accessKey) {
@@ -220,20 +228,20 @@ async function findImage(keyword, title, accessKey) {
     return 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1792&q=80';
   }
 
-  const queries  = buildUnsplashQueries(keyword, title);
-  const usedIds  = getUsedPhotoIds(); // Set of bare IDs, e.g. "1414235077428-338989a2e8c0"
+  const queries   = buildUnsplashQueries(keyword, title);
+  const usedPaths = getUsedImagePaths(); // CDN base paths already in blog.ts
 
   for (const query of queries) {
     console.log(`🖼️  Unsplash query: "${query}"`);
     const results = await searchUnsplash(query, accessKey);
 
-    // photo.id from the API is the bare ID (no "photo-" prefix) — matches usedIds directly
-    const photo = results.find(p => !usedIds.has(p.id));
+    // Use urls.raw base path for dedup — works for any Unsplash photo format
+    const photo = results.find(p => !usedPaths.has(cdnBasePath(p)));
 
     if (photo) {
-      // Construct URL from photo.id — more reliable than parsing urls.raw
-      const url = `https://images.unsplash.com/photo-${photo.id}?auto=format&fit=crop&w=1792&q=80`;
-      console.log(`   ✔ Selected: photo-${photo.id}`);
+      const basePath = cdnBasePath(photo);
+      const url = `https://images.unsplash.com/${basePath}?auto=format&fit=crop&w=1792&q=80`;
+      console.log(`   ✔ Selected: ${basePath}`);
       return url;
     }
 
