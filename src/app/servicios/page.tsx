@@ -7,14 +7,24 @@ import { ArrowRight, ExternalLink, Search, LineChart, Rocket } from "lucide-reac
 
 const faqs = [
   {
-    question: "¿Trabajas solo con negocios de España?",
+    question: "¿Puedes trabajar con mi negocio aunque no estés en mi ciudad?",
     answer:
-      "No. Trabajo de forma completamente online, lo que me permite trabajar con negocios en cualquier país de habla hispana y también en inglés si el proyecto lo requiere.",
+      "Trabajo de forma completamente remota, lo que me permite acompañar negocios en cualquier país de habla hispana sin importar dónde estés. También trabajo en inglés si el proyecto lo requiere.",
   },
   {
-    question: "¿Cuánto dura un proceso de consultoría?",
+    question: "¿Cómo sé si mi negocio necesita consultoría?",
     answer:
-      "Depende del servicio y de la situación de cada negocio. En la primera sesión lo vemos juntos.",
+      "Si sientes que trabajas mucho pero los resultados no acompañan, si el negocio depende demasiado de ti, o si estás a punto de tomar una decisión importante como abrir o cambiar de concepto, probablemente sí. La sesión gratuita de 20 minutos existe exactamente para eso: para aclarar si tiene sentido trabajar juntos.",
+  },
+  {
+    question: "¿Cuánto cuesta una consultoría?",
+    answer:
+      "Depende del servicio y del alcance del proyecto. Lo vemos juntos en la primera sesión una vez que entiendo tu situación concreta.",
+  },
+  {
+    question: "¿Cuánto tiempo tarda en verse resultados?",
+    answer:
+      "Depende del punto de partida y del servicio contratado. Un diagnóstico da resultados accionables en días. Una consultoría operativa continuada genera cambios medibles en semanas.",
   },
   {
     question: "¿Cómo sé qué servicio necesito?",
@@ -22,9 +32,24 @@ const faqs = [
       "No hace falta saberlo antes de contactar. En la sesión gratuita de 20 minutos te ayudo a identificar qué tipo de acompañamiento encaja mejor con tu situación.",
   },
   {
+    question: "¿Cuánto dura un proceso de consultoría?",
+    answer:
+      "Depende del servicio y de la situación de cada negocio. En la primera sesión lo vemos juntos.",
+  },
+  {
+    question: "¿Trabajas con negocios pequeños o solo con grandes operaciones?",
+    answer:
+      "Trabajo con negocios de todos los tamaños, desde restaurantes familiares hasta grupos hoteleros. Lo que importa no es el tamaño, sino que haya voluntad real de mejorar.",
+  },
+  {
     question: "¿Trabajas con negocios que acaban de abrir?",
     answer:
       "Sí. Cuanto antes se incorpora el acompañamiento en una apertura, más impacto tiene.",
+  },
+  {
+    question: "¿Qué pasa si el diagnóstico revela que no puedo ayudarte?",
+    answer:
+      "Te lo digo en la primera sesión con honestidad. No acepto proyectos donde no creo que pueda aportar valor real.",
   },
 ];
 
