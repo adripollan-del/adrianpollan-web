@@ -195,12 +195,6 @@ export default function HablemosPage() {
             >
               Reserva tu sesión gratuita <ArrowRight size={15} />
             </a>
-            <a
-              href={`mailto:adripollan@gmail.com`}
-              className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
-            >
-              O escríbeme por email →
-            </a>
           </div>
         </div>
       </section>

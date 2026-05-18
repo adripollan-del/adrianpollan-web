@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import { services } from "@/data/services";
@@ -220,12 +219,6 @@ export default function ServiciosPage() {
               <p className="font-body text-ink/60 text-base leading-relaxed mb-8">
                 Si tienes alguna duda que no está aquí, escríbeme directamente.
               </p>
-              <Link
-                href="/hablemos#contacto"
-                className="inline-flex items-center gap-2 font-body text-sm text-amber border-b border-amber/40 pb-0.5 hover:border-amber transition-colors"
-              >
-                Hacer una pregunta <ArrowRight size={14} />
-              </Link>
             </div>
 
             <div className="lg:col-span-2">
