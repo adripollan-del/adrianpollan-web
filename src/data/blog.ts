@@ -11,6 +11,77 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "como-calcular-el-food-cost-de-tu-restaurante",
+    title: "Cómo calcular el food cost de tu restaurante paso a paso",
+    excerpt:
+      "Aprende a calcular el food cost de tu restaurante con una fórmula clara y ejemplos reales. Descubre por qué este indicador es clave para la rentabilidad de tu negocio.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "8 min",
+    coverImage: "/food-cost.png",
+    body: `<p>Hay una pregunta que me hacen casi siempre en la primera sesión con un propietario: "¿Por qué vendo bien y aun así no me queda dinero a fin de mes?" La respuesta, en la mayoría de los casos, está en el food cost. No porque sea el único problema, sino porque es el primero que hay que entender.</p>
+
+<p>El food cost es el porcentaje de tus ingresos que se va en materia prima. Si vendes 10.000 euros al mes y gastas 3.500 en comida, tu food cost es del 35%. Parece simple. Y lo es, si se calcula bien. El problema es que muy pocos restaurantes lo calculan bien.</p>
+
+<h2>Qué es exactamente el food cost</h2>
+
+<p>El food cost es la relación entre el coste de los ingredientes que usas y los ingresos que generan esos ingredientes. Se expresa en porcentaje y se calcula así:</p>
+
+<p><strong>Food cost (%) = (Coste de materia prima / Ventas) × 100</strong></p>
+
+<p>Si un plato cuesta 4 euros producirlo y lo vendes a 14 euros, su food cost es del 28,5%. Si tu restaurante en conjunto gasta 8.000 euros en materia prima y factura 25.000, tu food cost global es del 32%.</p>
+
+<p>Hasta aquí la teoría. El problema empieza cuando intentas aplicarlo en la práctica.</p>
+
+<h2>Por qué la mayoría de restaurantes no saben su food cost real</h2>
+
+<p>He trabajado con propietarios que creían tener un food cost del 28% y en realidad estaban en el 41%. La diferencia entre lo que creían y la realidad se explicaba por tres motivos muy frecuentes.</p>
+
+<p>El primero es que calculaban el food cost sobre lo que compraban, no sobre lo que realmente consumían. Las compras y el consumo no son lo mismo. Si compras 10 kilos de carne pero tiras 2 por caducidad o merma, tu coste real es sobre los 10 kilos, no sobre los 8 que cocinaste.</p>
+
+<p>El segundo motivo es que no contabilizaban las mermas, los errores de cocina, las invitaciones al equipo o las comidas de personal. Todo eso es coste de materia prima aunque no aparezca en ninguna comanda.</p>
+
+<p>El tercero, y el más habitual, es que simplemente no tenían un sistema para medirlo. Miraban la factura del proveedor a final de mes y hacían una estimación. Una estimación no es un dato.</p>
+
+<h2>La fórmula correcta</h2>
+
+<p>Para calcular el food cost real de tu restaurante necesitas este dato:</p>
+
+<p><strong>Consumo real = Inventario inicial + Compras del período − Inventario final</strong></p>
+
+<p>Y luego:</p>
+
+<p><strong>Food cost (%) = (Consumo real / Ventas del período) × 100</strong></p>
+
+<p>Por ejemplo: si empiezas el mes con 2.000 euros en stock, compras 6.000 euros durante el mes y terminas con 1.500 euros en stock, tu consumo real es de 6.500 euros. Si ese mes facturaste 20.000 euros, tu food cost es del 32,5%.</p>
+
+<p>Este cálculo requiere hacer inventario. No hay forma de saltárselo si quieres un dato fiable.</p>
+
+<h2>¿Cuál debería ser tu food cost?</h2>
+
+<p>No existe un número universalmente correcto. Depende del tipo de negocio, del ticket medio, del modelo de servicio y de los costes fijos. Pero hay rangos orientativos.</p>
+
+<p>En restauración a la carta con ticket medio-alto, un food cost entre el 28% y el 35% suele ser sostenible. En menús del día o cocina de volumen, puede bajar al 25%–30%. En negocios de alta gastronomía, puede subir al 38%–42% porque el margen se compensa con el precio.</p>
+
+<p>Lo que sí es universal es esto: si tu food cost supera el 40% de forma consistente y no tienes un ticket muy alto, tienes un problema que resolver.</p>
+
+<h2>Qué hacer cuando el food cost es demasiado alto</h2>
+
+<p>Antes de tomar decisiones, hay que entender dónde se escapa el dinero. Las causas más frecuentes son la carta demasiado larga con muchos ingredientes que rotan poco, las porciones sin estandarizar, la falta de escandallos, las mermas no controladas y los proveedores sin negociación.</p>
+
+<p>Subir precios es la palanca más obvia pero no siempre la más inteligente. A veces reducir la carta en un 30% mejora el food cost más que cualquier otra medida, porque concentras el volumen en menos referencias y reduces merma, complejidad y error.</p>
+
+<h2>El food cost es un síntoma, no la enfermedad</h2>
+
+<p>Un food cost alto casi nunca es el problema en sí. Es la señal de que algo más profundo no está funcionando: la carta, los procesos, los proveedores, el control de stock o la forma en que se diseñaron los precios.</p>
+
+<p>Por eso calcularlo bien es el primer paso, pero no el último. La rentabilidad de un restaurante se construye entendiendo todos los indicadores juntos, no cada uno por separado.</p>
+
+<p>Si quieres saber cómo está el food cost de tu negocio y qué lo está afectando, la herramienta de diagnóstico gratuito puede darte una primera foto en menos de cinco minutos.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "por-que-tu-restaurante-no-es-rentable",
     title: "Por qué tu restaurante llena pero no es rentable",
     excerpt:
