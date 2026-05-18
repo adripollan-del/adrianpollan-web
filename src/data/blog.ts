@@ -11,6 +11,70 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "como-reducir-desperdicio-alimentario-restaurante",
+    title: "Cómo reducir el desperdicio alimentario en un restaurante",
+    excerpt:
+      "Cómo reducir el desperdicio alimentario en un restaurante con un sistema operativo real: medición, escandallos vivos y producción ajustada.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "8 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Cuando entro en una cocina y pregunto cuánto desperdicio se genera al día, la respuesta casi siempre es la misma: "poco", "lo normal", "no llevamos cuenta". Y ahí está el primer problema. El desperdicio alimentario en un restaurante no es un tema de sostenibilidad para folletos, es una fuga directa de dinero que la mayoría de propietarios no ve porque nunca se ha medido. Y lo que no se mide, no se gestiona.</p>
+
+<p>En los proyectos que he llevado en España, Francia y Reino Unido, he visto restaurantes con un food cost del 38% que en realidad podrían estar en el 30% si controlaran lo que tiran. Hablamos de varios puntos porcentuales de margen que se van a la basura, literalmente. Y no porque el equipo trabaje mal, sino porque nadie le ha dado un sistema para hacerlo mejor.</p>
+
+<h2>Por qué el desperdicio alimentario en un restaurante no es un problema de cocina</h2>
+
+<p>El error más extendido es pensar que el desperdicio se resuelve en la cocina. Se resuelve mucho antes. El desperdicio empieza en la carta, sigue en las compras, se multiplica en la producción y termina en el plato o en el cubo. Cuando un cocinero tira producto, casi siempre es la consecuencia de decisiones que se tomaron días o semanas antes.</p>
+
+<p>Una carta con demasiadas referencias, ingredientes que solo se usan en un plato concreto, escandallos desactualizados, previsiones de venta inexistentes, pedidos hechos "a ojo" por el proveedor habitual. Todo eso genera desperdicio antes incluso de que el producto entre por la puerta. Por eso atacar solo la cocina es atacar el síntoma.</p>
+
+<h2>Medir antes de actuar: las tres categorías de merma</h2>
+
+<p>Antes de cambiar nada, hay que saber qué se está perdiendo y dónde. Yo trabajo con tres categorías de merma que conviene separar porque cada una se ataca de forma distinta.</p>
+
+<p><strong>Merma de almacén:</strong> producto que caduca, se estropea o se pierde antes de llegar a producción. Suele indicar problemas de rotación, pedidos sobredimensionados o mal control de stock.</p>
+
+<p><strong>Merma de producción:</strong> producto que se desperdicia durante la elaboración. Recortes, errores, sobreproducción de mise en place, platos mal ejecutados que vuelven. Aquí entran también los escandallos mal calculados.</p>
+
+<p><strong>Merma de servicio:</strong> lo que vuelve del comedor en el plato. Esta es la más reveladora porque te dice si las raciones están sobredimensionadas, si hay platos que no convencen o si la operativa de pase está fallando.</p>
+
+<p>Durante dos semanas, registrar estas tres categorías en una hoja simple, pesando lo que se tira y anotando el motivo, da una foto que cambia la conversación. De repente el propietario ve dónde está el dinero.</p>
+
+<h2>La carta como primera palanca para reducir el desperdicio</h2>
+
+<p>La forma más rápida de reducir desperdicio es revisar la carta. Una carta bien diseñada tiene ingredientes que se cruzan entre platos. Si un producto solo aparece en una elaboración y esa elaboración no se vende lo suficiente, ese producto es candidato seguro a la basura.</p>
+
+<p>Cuando audito una carta, miro cuántos platos comparten ingredientes principales y cuáles son "huérfanos". Reducir referencias y rediseñar platos para que el inventario se mueva entre varios destinos es una decisión de cocina que tiene impacto directo en el food cost. No se trata de empobrecer la oferta, se trata de pensarla con cabeza industrial sin perder identidad.</p>
+
+<p>También influye la ingeniería de carta. Los platos estrella deben llevar productos de buena rotación y margen. Los platos con ingredientes delicados, caros o de baja rotación deben estar bien posicionados o directamente fuera.</p>
+
+<h2>Producción ajustada: el sistema que mata la sobreproducción</h2>
+
+<p>La sobreproducción de mise en place es una de las causas silenciosas del desperdicio alimentario en restaurantes. Se prepara "por si acaso", se prepara "como siempre", se prepara sin mirar previsión de cubiertos ni histórico de ventas. Y al final del servicio, lo que no se ha usado o se reaprovecha mal o se tira.</p>
+
+<p>El sistema que funciona es sencillo pero exige disciplina. Cada elaboración tiene una ficha con cantidades estándar, un sistema de etiquetado por colores o fechas, y una previsión diaria basada en histórico de ventas y reservas confirmadas. El jefe de cocina ajusta la producción a esa previsión, no a la intuición.</p>
+
+<p>Implementar esto requiere dos cosas: fichas técnicas reales con escandallos vivos, y un responsable que revise diariamente. Sin esas dos piezas, cualquier intento se queda en buena intención.</p>
+
+<h2>Compras y proveedores: dejar de pedir a ojo</h2>
+
+<p>Otro foco habitual es el sistema de compras. En muchos restaurantes el pedido lo hace el cocinero o el propietario mirando la cámara y decidiendo sobre la marcha. Eso genera dos problemas: o se pide de menos y hay roturas que obligan a compras de urgencia más caras, o se pide de más y se acumula producto que termina caducando.</p>
+
+<p>El pedido debe hacerse a partir de un stock mínimo definido por referencia, una previsión de ventas y una rotación calculada. Los proveedores tienen que adaptarse a tus necesidades, no al revés. Negociar frecuencias de entrega más cortas, formatos más pequeños o pedidos bajo demanda en productos sensibles es perfectamente posible si se plantea bien.</p>
+
+<h2>El equipo como parte de la solución, no como problema</h2>
+
+<p>Ningún sistema funciona si el equipo no lo entiende y no lo asume. He visto implantar fichas técnicas perfectas que a las tres semanas estaban olvidadas porque nadie explicó el porqué ni revisó el cómo. Reducir desperdicio es un cambio cultural además de operativo.</p>
+
+<p>Compartir los datos con el equipo, mostrar cuánto dinero se está tirando cada semana, premiar las mejoras y convertir la merma en un indicador visible cambia la actitud. Cuando un cocinero entiende que cada kilo que tira tiene un coste concreto y que su trabajo bien hecho impacta en la rentabilidad del negocio, las decisiones que toma en el día a día son distintas.</p>
+
+<p>Reducir el desperdicio alimentario en un restaurante no es un proyecto de tres semanas, es una forma de operar. Pero los resultados llegan rápido: en los primeros dos meses suele verse una bajada de entre dos y cuatro puntos de food cost solo con medir, ajustar carta y disciplinar producción. Y eso, en un sector con márgenes estrechos, es la diferencia entre ganar dinero y no ganarlo.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "como-gestionar-un-equipo-de-hosteleria-que-funcione-sin-ti",
     title: "Cómo gestionar un equipo de hostelería que funcione sin ti",
     excerpt:
