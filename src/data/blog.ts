@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>La mayoría de propietarios de restaurante que conozco no negocia con sus proveedores. Compra. Que es muy distinto. Reciben un albarán, miran el total por encima, firman y siguen con el día. Cuando les pregunto cuándo fue la última vez que revisaron precios línea por línea con su comercial, la respuesta suele ser un silencio incómodo o un "hace tiempo". Y mientras tanto, los precios suben cada trimestre sin que nadie los discuta.</p><p>En los proyectos que he llevado en España, Francia, Reino Unido e Irlanda, la gestión de proveedores es de las áreas donde antes se ven resultados. No porque sea fácil, sino porque está tan abandonada que casi cualquier sistema mínimo genera ahorro. Hablo de entre un 4% y un 8% de food cost recuperado solo con auditar, comparar y profesionalizar la relación. Y eso, en un negocio con márgenes ajustados, es la diferencia entre cerrar el mes en positivo o en rojo.</p><h2>El error de base en la gestión de proveedores en un restaurante</h2><p>El problema no es que los proveedores sean caros. El problema es la asimetría de información. El comercial que entra por tu puerta sabe exactamente qué te vende, a qué precio, cuánto te ha subido este año y cuánto margen le saca a tu cuenta. Tú, en cambio, no sabes ni cuánto te costaba ese mismo producto hace seis meses. Esa asimetría es la que se traduce en subidas silenciosas, productos sustituidos por gamas inferiores y portes que aparecen de la nada.</p><p>La gestión de proveedores en un restaurante no va de pelearse ni de cambiar de proveedor cada tres meses. Va de tener la información que ellos tienen. En el momento que tú llegas a una reunión con datos, la conversación cambia. Deja de ser un monólogo comercial y se convierte en una negociación real.</p><h2>Auditar antes de negociar: lo que nadie hace</h2><p>Antes de pedir descuentos hay que saber qué estás comprando. Suena obvio, pero el 80% de los restaurantes que audito no tiene ni siquiera una lista consolidada de referencias por proveedor con precio histórico. Lo primero que hago siempre es montar una hoja sencilla con cuatro columnas: producto, proveedor, precio actual, precio hace seis y doce meses.</p><p>Cuando esa hoja existe, aparecen cosas que no te esperas. Aceite que ha subido un 22% en un año sin que nadie haya dicho nada. Pescado que te factura el mismo proveedor a dos precios distintos según el día. Referencias duplicadas (compras tomate triturado a dos proveedores diferentes y a precios distintos). Productos que pediste una vez por necesidad y que siguen viniendo cada semana porque entraron en el pedido recurrente.</p><p>Esta auditoría no la hace un software, la haces tú o tu jefe de cocina con paciencia, durante una mañana. Y es la base de toda la negociación posterior.</p><h2>Cómo negociar mejores precios sin romper la relación</h2><p>Negociar no es ir con la lista y pedir un 10% menos en todo. Eso no funciona y además quema la relación. Lo que funciona es entrar en la conversación con datos concretos y peticiones específicas.</p><p>Yo trabajo con tres palancas que casi siempre dan resultado. La <strong>primera es el volumen consolidado</strong>: si compras a cinco proveedores de fruta y verdura distintos, ningún comercial te va a dar su mejor precio porque no eres una cuenta prioritaria. Si reduces a dos y les dices claramente que el volumen va a crecer un 60% para quien acepte las condiciones, la respuesta es otra.</p><p>La <strong>segunda palanca es la transparencia de la competencia</strong>. No hace falta mentir ni inventar ofertas. Pide presupuestos reales a dos o tres alternativas y enséñalos. "Tu competidor me ofrece este aceite a este precio, ¿podemos igualarlo?" es una conversación legítima y ellos la entienden perfectamente.</p><p>La <strong>tercera es negociar condiciones, no solo precio</strong>. A veces el comercial no puede bajar el PVP porque tiene un límite, pero sí puede ofrecerte plazos de pago a 60 días, eliminar portes mínimos, garantizar precio fijo seis meses o regalarte producto en pedidos grandes. Todo eso es dinero, aunque no aparezca en la columna del descuento.</p><h2>El error de tener un único proveedor (y el de tener veinte)</h2><p>Aquí veo los dos extremos constantemente. Restaurantes que dependen al 100% de un único proveedor multiproducto porque "es más cómodo", y restaurantes que tienen veinte proveedores distintos porque "así cada uno me trae lo mejor de lo suyo". Los dos modelos son malos.</p><p>Con un solo proveedor pierdes capacidad de negociación, asumes su problema cuando él tiene un problema (huelga, rotura de stock, subida brusca) y aceptas sus precios porque no tienes con qué compararlos. Con veinte proveedores tienes una pesadilla operativa: veinte albaranes que revisar, veinte facturas que pagar, veinte ventanas de recepción que coordinar, y ningún volumen relevante en ninguno de ellos.</p><p>El equilibrio sano que recomiendo es entre cuatro y siete proveedores principales, con un suplente identificado en las categorías críticas. Lo suficiente para tener alternativa y comparación, lo suficientemente pocos para que cada uno sienta que tu cuenta le importa.</p><h2>Sistematizar la recepción: donde se pierde el dinero ganado</h2><p>Puedes negociar el mejor precio del mercado y perderlo todo en la recepción. Esto es algo que no se cuenta lo suficiente. Si en tu restaurante el repartidor deja las cajas en la puerta, alguien firma sin pesar ni contar, y el albarán se archiva sin contrastar contra el pedido, estás regalando dinero todas las semanas.</p><p>Los errores que más veo: kilos de menos en pescado y carne que nadie pesa, productos sustituidos por gamas inferiores facturados al mismo precio, portes o recargos que aparecen sin justificación, precios en albarán que no coinciden con los pactados. El proveedor no te está estafando necesariamente, pero su sistema comete errores y si tú no los detectas, los pagas.</p><p>La solución es un protocolo simple de recepción: pesar lo que se pesa, contar lo que se cuenta, comparar albarán contra pedido y contra escandallo de precios pactados. Diez minutos por entrega. Esos diez minutos pagan el sueldo de quien los hace varias veces.</p><h2>La revisión trimestral: el hábito que cambia todo</h2><p>La gestión de proveedores no es una negociación puntual, es un hábito. Una vez al trimestre, bloquea dos horas en tu agenda y revisa: evolución de precios por categoría, top 20 de referencias por gasto, comparativa con el trimestre anterior, reuniones cara a cara con los tres proveedores principales para revisar la cuenta.</p><p>Este hábito, mantenido durante un año, transforma la rentabilidad del restaurante sin tocar la carta, sin subir precios al cliente y sin reducir calidad. Solo profesionalizando una relación que la mayoría tiene en piloto automático. Y eso, en el sector hoy, es probablemente la palanca de margen más infravalorada que existe.</p><p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-11",
     readTime: "8 min",
     coverImage:
-      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Cuando entro en una cocina y pregunto cuánto desperdicio se genera al día, la respuesta casi siempre es la misma: "poco", "lo normal", "no llevamos cuenta". Y ahí está el primer problema. El desperdicio alimentario en un restaurante no es un tema de sostenibilidad para folletos, es una fuga directa de dinero que la mayoría de propietarios no ve porque nunca se ha medido. Y lo que no se mide, no se gestiona.</p>
 
 <p>En los proyectos que he llevado en España, Francia y Reino Unido, he visto restaurantes con un food cost del 38% que en realidad podrían estar en el 30% si controlaran lo que tiran. Hablamos de varios puntos porcentuales de margen que se van a la basura, literalmente. Y no porque el equipo trabaje mal, sino porque nadie le ha dado un sistema para hacerlo mejor.</p>
@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-04",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Hay una pregunta que aparece casi siempre cuando llevo un tiempo trabajando con un propietario como <a href="/consultor-restaurantes">consultor de restaurantes</a>: "¿Cómo hago para que esto funcione cuando yo no estoy?" Es una pregunta honesta y también una señal de madurez empresarial. Significa que el propietario ha entendido que un negocio que depende completamente de él no es un activo, es una trampa.</p>
 
 <p>En hostelería esta dependencia es especialmente frecuente. El propietario que abre y cierra, que resuelve cada problema, que toma cada decisión, que está presente en cada turno relevante. Es comprensible: nadie conoce el negocio como él, nadie tiene sus estándares, nadie toma las decisiones como él las tomaría. El problema es que esa lógica convierte al propietario en el cuello de botella de su propio negocio.</p>
@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-27",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>La carta es la herramienta de venta más importante de un restaurante. Es el primer contacto real del cliente con tu propuesta gastronómica, el documento que guía su decisión de compra y, al mismo tiempo, el instrumento que determina en gran medida la <a href="/rentabilidad-restaurantes">rentabilidad del negocio</a>.</p>
 
 <p>Y sin embargo, en la mayoría de los restaurantes la carta se diseña pensando casi exclusivamente en lo gastronómico. En qué platos le gustan al chef, en qué encaja con el concepto, en qué pueden pedir los clientes. Muy pocas veces se diseña pensando en qué combinación de platos genera el margen que el negocio necesita para ser sostenible.</p>
@@ -230,7 +230,7 @@ export const blogPosts: BlogPost[] = [
     category: "Rentabilidad",
     date: "2026-04-20",
     readTime: "8 min",
-    coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1792&q=80",
+    coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Hay una pregunta que me hacen casi siempre en la primera sesión con un propietario: "¿Por qué vendo bien y aun así no me queda dinero a fin de mes?" La respuesta, en la mayoría de los casos, está en el food cost. No porque sea el único problema, sino porque es el primero que hay que entender.</p>
 
 <p>El food cost es el porcentaje de tus ingresos que se va en materia prima. Si vendes 10.000 euros al mes y gastas 3.500 en comida, tu food cost es del 35%. Parece simple. Y lo es, si se calcula bien. El problema es que muy pocos restaurantes lo calculan bien.</p>
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-13",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Si hay una herramienta que separa a los restaurantes que controlan su negocio de los que simplemente trabajan y esperan que los números cuadren, esa es el escandallo. No es una palabra complicada ni una técnica reservada para grandes cadenas. Es una ficha de coste por plato. Y sin ella, estás fijando precios a ciegas.</p>
 
 <p>Lo he visto cientos de veces. Un propietario que lleva años en el sector, que conoce su cocina mejor que nadie, que ha desarrollado una carta con criterio gastronómico real, pero que no sabe exactamente cuánto le cuesta producir cada plato. Sabe aproximadamente. Y aproximadamente, en hostelería, es sinónimo de margen incontrolado.</p>
@@ -368,7 +368,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-06",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>El coste de personal es, en la mayoría de los restaurantes, el gasto más grande después de la materia prima. Y también el más difícil de gestionar, porque detrás de cada número hay personas, horarios, contratos y decisiones que tienen consecuencias reales.</p>
 
 <p>El labour cost, o coste laboral, es el porcentaje de tus ingresos que se destina a pagar al equipo. Incluye salarios, seguridad social, pagas extras y cualquier otro coste asociado a tener personas trabajando en tu negocio. Si no lo mides, no lo controlas. Y si no lo controlas, puede comerse tu margen sin que te des cuenta.</p>
@@ -438,7 +438,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-30",
     readTime: "8 min",
     coverImage:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Cuando un restaurante tiene problemas de margen, la primera solución que aparece en la cabeza del propietario es subir precios. Es comprensible. Si el problema es que no queda suficiente dinero, parece lógico cobrar más por lo mismo. Pero subir precios sin entender por qué el margen es bajo puede ser un error caro.</p>
 
 <p>A veces el precio no es el problema. Y subirlo sin haber resuelto lo que sí lo es simplemente aplaza la crisis.</p>
@@ -503,7 +503,7 @@ export const blogPosts: BlogPost[] = [
     category: "Equipos",
     date: "2026-03-16",
     readTime: "8 min",
-    coverImage: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80&fm=webp",
     body: `<p>Uno de los patrones más comunes que veo en mis auditorías: el restaurante funciona solo cuando el dueño está presente. En cuanto se va, la calidad baja, los errores aumentan y la experiencia del cliente se deteriora.</p>
 
 <p>Esto no es un problema de equipo. Es un problema de sistema.</p>
@@ -530,7 +530,7 @@ export const blogPosts: BlogPost[] = [
     category: "Aperturas",
     date: "2026-03-09",
     readTime: "10 min",
-    coverImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80&fm=webp",
     body: `<p>La estadística dice que el 60% de los restaurantes cierran en su primer año. En mi experiencia, ese número podría reducirse drásticamente si los operadores supieran dónde se esconden los riesgos reales.</p>
 
 <h2>Error 1: El business plan optimista</h2>
@@ -560,7 +560,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-02",
     readTime: "8 min",
     coverImage:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Es una de las situaciones más frustrantes que existen en hostelería. El restaurante tiene vida, los clientes vienen, la sala se llena los fines de semana y el equipo trabaja duro. Y sin embargo, a fin de mes los números no cuadran. O cuadran por muy poco. O directamente no cuadran.</p>
 
 <p>"No lo entiendo, estamos siempre llenos." Lo he escuchado más veces de las que puedo contar. Y siempre digo lo mismo: llenar el restaurante y ganar dinero con el restaurante son dos cosas distintas. Relacionadas, pero distintas.</p>
@@ -614,7 +614,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-23",
     readTime: "10 min",
     coverImage:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p><a href="/abrir-un-restaurante">Abrir un restaurante</a> es uno de los proyectos empresariales más exigentes que existen. Requiere inversión económica importante, mucho tiempo, energía y una capacidad de gestionar incertidumbre que no todo el mundo tiene. Y aun así, cada año miles de personas deciden hacerlo.</p>
 
 <p>El problema no es la falta de ilusión ni de esfuerzo. El problema, casi siempre, es que los errores más costosos se cometen antes de abrir. En la fase de planificación, cuando todavía hay margen para corregir, pero también cuando la urgencia y la emoción del proyecto hacen más difícil ver con claridad.</p>
@@ -682,7 +682,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-16",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1792&q=80&fm=webp",
     body: `<p>Si tuvieras que elegir un solo indicador para saber si tu restaurante está en buena forma económica, ese indicador sería el prime cost. No el food cost solo, no el labour cost solo, sino los dos juntos. Porque en hostelería, los dos grandes costes variables son la materia prima y el personal, y gestionarlos por separado sin ver cómo interactúan es perder la mitad de la información.</p>
 
 <p>El prime cost es la suma del coste de materia prima y el coste de personal, expresada como porcentaje de las ventas. Es el indicador que mejor refleja la eficiencia operativa de un restaurante y el que más impacto tiene en la <a href="/rentabilidad-restaurantes">rentabilidad</a> final.</p>

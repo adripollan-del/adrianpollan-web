@@ -60,10 +60,11 @@ export default function SobreMiPage() {
             <div className="lg:col-span-4">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                 <Image
-                  src="/Adrian Sobre Mi.png"
+                  src="/Adrian Sobre Mi.webp"
                   alt="Adrián Pollán, consultor de hostelería y restaurantes con 20 años de experiencia"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
+                  quality={85}
                   className="object-cover"
                 />
               </div>

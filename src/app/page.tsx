@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const PHOTOS = {
-  hero: "/hero.png",
+  hero: "/hero.webp",
 };
 
 const testimonials = [
@@ -78,6 +78,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
+          quality={85}
           className="object-cover opacity-25"
         />
         {/* Gradient overlay to keep text readable */}
@@ -152,12 +153,13 @@ export default function Home() {
             {/* Foto real — archivo: /public/Adrian Sobre Mi.png */}
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
-                src="/Adrian Sobre Mi.png"
+                src="/Adrian Sobre Mi.webp"
                 alt="Adrián Pollán, consultor de hostelería y restaurantes con 20 años de experiencia"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top"
                 priority
+                quality={85}
               />
             </div>
 

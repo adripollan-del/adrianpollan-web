@@ -144,10 +144,11 @@ export default function LibroPage() {
 
             <div className="relative h-[400px] lg:h-full rounded-xl overflow-hidden lg:col-span-2">
               <Image
-                src="/libro-aprendizaje.png"
+                src="/libro-aprendizaje.webp"
                 alt="Adrián Pollán comparte su experiencia en gestión y recuperación de negocios de hostelería"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
+                quality={85}
                 className="object-cover"
               />
             </div>
