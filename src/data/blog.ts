@@ -628,4 +628,74 @@ export const blogPosts: BlogPost[] = [
 
 <p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
+  {
+    slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+    title: "Qué es el prime cost y por qué es el indicador más importante de tu restaurante",
+    excerpt:
+      "Descubre qué es el prime cost, cómo calcularlo y por qué es el indicador más útil para medir la rentabilidad real de un restaurante o negocio de hostelería.",
+    category: "Rentabilidad",
+    date: "2026-03-02",
+    readTime: "9 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Si tuvieras que elegir un solo indicador para saber si tu restaurante está en buena forma económica, ese indicador sería el prime cost. No el food cost solo, no el labour cost solo, sino los dos juntos. Porque en hostelería, los dos grandes costes variables son la materia prima y el personal, y gestionarlos por separado sin ver cómo interactúan es perder la mitad de la información.</p>
+
+<p>El prime cost es la suma del coste de materia prima y el coste de personal, expresada como porcentaje de las ventas. Es el indicador que mejor refleja la eficiencia operativa de un restaurante y el que más impacto tiene en la rentabilidad final.</p>
+
+<h2>Cómo se calcula el prime cost</h2>
+
+<p>La fórmula es directa:</p>
+
+<p><strong>Prime cost (%) = (Coste de materia prima + Coste total de personal) / Ventas × 100</strong></p>
+
+<p>Si en un mes tu restaurante gasta 8.000 euros en materia prima y 12.000 euros en personal, y factura 40.000 euros, tu prime cost es del 50%.</p>
+
+<p>El coste de personal debe incluir salarios brutos más seguridad social a cargo de la empresa, que en España representa aproximadamente un 30% adicional sobre el salario bruto. Es un error frecuente calcular el labour cost solo con los salarios brutos y obtener un prime cost artificialmente bajo.</p>
+
+<h2>¿Cuál debería ser tu prime cost?</h2>
+
+<p>El rango saludable depende del tipo de negocio, pero como referencia general:</p>
+
+<p>En restauración a la carta con servicio completo, un prime cost entre el 55% y el 65% suele ser sostenible. Por debajo del 55% es excelente. Entre el 65% y el 70% empieza a ser preocupante. Por encima del 70% hay un problema estructural que resolver.</p>
+
+<p>En restaurantes de alto volumen con servicio más sencillo, el prime cost puede bajar al 50%-55%. En negocios de alta gastronomía con equipos muy cualificados y materia prima de alta calidad, puede acercarse al 70% si el ticket lo justifica.</p>
+
+<p>Lo que determina si un prime cost es sostenible no es solo el porcentaje, sino lo que queda después para cubrir el resto de gastos fijos y generar beneficio.</p>
+
+<h2>Por qué el prime cost es más útil que el food cost o el labour cost por separado</h2>
+
+<p>Mirar el food cost y el labour cost por separado puede llevar a decisiones equivocadas. Un restaurante puede tener un food cost bajo porque usa ingredientes baratos, pero un labour cost muy alto porque la cocina es lenta y necesita mucho personal. El resultado es un prime cost alto aunque el food cost parezca correcto.</p>
+
+<p>O al contrario: puede tener un food cost alto porque trabaja con producto de calidad, pero un labour cost muy ajustado porque los procesos son eficientes y el equipo es reducido. El prime cost puede ser perfectamente sostenible aunque el food cost parezca elevado.</p>
+
+<p>Ver los dos juntos obliga a pensar en el equilibrio entre materia prima y personal, que es exactamente donde se juega la rentabilidad operativa de un restaurante.</p>
+
+<h2>El prime cost como herramienta de gestión mensual</h2>
+
+<p>El prime cost es útil como diagnóstico puntual, pero su valor real aparece cuando se hace seguimiento mensual. Un prime cost que sube de forma sostenida durante varios meses es una señal de alerta, aunque cada mes parezca una variación pequeña.</p>
+
+<p>Las causas más frecuentes de un prime cost creciente son el aumento de precios de proveedores sin ajuste de precios de venta, la incorporación de personal sin aumento proporcional de ventas, las mermas crecientes no controladas, la caída de ventas con estructura de costes fija y la mezcla de ventas que se desplaza hacia productos menos rentables.</p>
+
+<p>Identificar cuál de estas causas está detrás del problema es el primer paso para actuar con criterio.</p>
+
+<h2>Prime cost y punto de equilibrio</h2>
+
+<p>El prime cost está directamente relacionado con el punto de equilibrio del negocio. Si tu prime cost es del 65% y tus gastos fijos representan el 25% de las ventas, tu margen antes de impuestos es del 10%. Si el prime cost sube al 70%, ese margen baja al 5%.</p>
+
+<p>Pequeñas variaciones en el prime cost tienen un impacto desproporcionado en el beneficio final, precisamente porque actúa sobre los costes más grandes del negocio.</p>
+
+<p>Por eso reducir el prime cost en dos o tres puntos porcentuales puede transformar la rentabilidad de un restaurante sin que nada visible haya cambiado para el cliente.</p>
+
+<h2>Por dónde empezar si tu prime cost es demasiado alto</h2>
+
+<p>El primer paso es siempre el diagnóstico. Entender si el problema está en el food cost, en el labour cost o en los dos. Y dentro de cada uno, identificar las causas concretas.</p>
+
+<p>Un food cost alto puede venir de escandallos desactualizados, mermas no controladas, carta demasiado larga o precios de venta por debajo del mercado. Un labour cost alto puede venir de sobredotación de turnos, falta de flexibilidad en la plantilla, procesos ineficientes o absentismo no gestionado.</p>
+
+<p>Sin ese diagnóstico, cualquier acción es una apuesta. Con él, las decisiones son mucho más claras y el impacto más predecible.</p>
+
+<p>Si quieres saber cuál es el prime cost de tu restaurante y qué lo está afectando, el diagnóstico gratuito puede darte una primera orientación en menos de cinco minutos.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
 ];
