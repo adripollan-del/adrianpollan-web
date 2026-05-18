@@ -59,6 +59,22 @@ export const metadata: Metadata = {
       "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real.",
     images: ["/Adrian%20Sobre%20Mi.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon/favicon-64x64.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon/favicon-128x128.png", sizes: "128x128", type: "image/png" },
+      { url: "/favicon/favicon-256x256.png", sizes: "256x256", type: "image/png" },
+    ],
+    apple: "/favicon/apple-touch-icon.png",
+    other: [
+      { rel: "android-chrome", url: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "android-chrome", url: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest",
   robots: {
     index: true,
     follow: true,
