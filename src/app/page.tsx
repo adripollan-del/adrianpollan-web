@@ -1,8 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Stats from "@/components/Stats";
 import WaitlistForm from "@/components/WaitlistForm";
 import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Adrián Pollán | Consultor de Hostelería y Restauración",
+  description:
+    "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real en España, Francia, UK e Irlanda. Diagnóstico gratuito.",
+  alternates: {
+    canonical: "https://adrianpollan.com",
+  },
+  openGraph: {
+    title: "Adrián Pollán | Consultor de Hostelería y Restauración",
+    description:
+      "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real.",
+    url: "https://adrianpollan.com",
+  },
+};
 
 const PHOTOS = {
   hero: "/hero.png",
@@ -57,7 +73,7 @@ export default function Home() {
         {/* Background photo */}
         <Image
           src={PHOTOS.hero}
-          alt="Restaurante elegante"
+          alt="Restaurante profesional — consultoría de hostelería Adrián Pollán"
           fill
           priority
           sizes="100vw"

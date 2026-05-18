@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de Cookies — Adrián Pollán",
   description: "Información sobre las cookies que utiliza adrianpollan.com y cómo gestionarlas.",
+  robots: { index: false, follow: false },
 };
 
 type CookieRow = { name: string; origin: string; purpose: string; duration: string };

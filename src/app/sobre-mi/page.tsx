@@ -3,9 +3,18 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sobre Mí — Adrián Pollán",
+  title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
   description:
-    "Veinte años dentro del negocio. Consultor en restauración y F&B para negocios que quieren ser más rentables, más organizados y más sostenibles.",
+    "Conoce a Adrián Pollán: consultor en restauración y F&B con más de 20 años de experiencia operativa en España, Francia, Reino Unido e Irlanda. Trabajo desde dentro del negocio, no desde un despacho.",
+  alternates: {
+    canonical: "https://adrianpollan.com/sobre-mi",
+  },
+  openGraph: {
+    title: "Adrián Pollán — Consultor de Hostelería | 20 Años de Experiencia Real",
+    description:
+      "Más de 20 años en operaciones reales de hostelería en cuatro países. Consultor especializado en rentabilidad, F&B y gestión operativa.",
+    url: "https://adrianpollan.com/sobre-mi",
+  },
 };
 
 export default function SobreMiPage() {

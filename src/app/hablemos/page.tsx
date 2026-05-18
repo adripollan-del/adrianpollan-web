@@ -5,9 +5,18 @@ import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { ExternalLink, ArrowRight, Calendar, Mail, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hablemos — Adrián Pollán",
+  title: "Habla con Adrián Pollán | Sesión Gratuita de Consultoría para Hostelería",
   description:
-    "Tres formas de empezar: diagnóstico IA gratuito, sesión de 20 minutos o mensaje directo. Consultoría en hostelería y restauración.",
+    "Reserva una sesión gratuita de 20 minutos, haz el diagnóstico IA gratuito o envíame un mensaje directo. Consultor de hostelería disponible online para España y cualquier país de habla hispana.",
+  alternates: {
+    canonical: "https://adrianpollan.com/hablemos",
+  },
+  openGraph: {
+    title: "Habla con Adrián Pollán | Sesión Gratuita de Consultoría",
+    description:
+      "Tres formas de empezar: diagnóstico gratuito, sesión de 20 minutos o mensaje directo. Sin compromiso.",
+    url: "https://adrianpollan.com/hablemos",
+  },
 };
 
 export default function HablemosPage() {

@@ -54,9 +54,18 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Servicios — Adrián Pollán",
+  title: "Consultoría para Restaurantes y Hostelería | Servicios",
   description:
-    "Diagnóstico y Auditoría F&B, Consultoría Operativa Continuada y Acompañamiento a Aperturas. Consultoría especializada en hostelería.",
+    "Diagnóstico y auditoría F&B, consultoría operativa continuada y acompañamiento a aperturas. Consultoría especializada en hostelería para restaurantes más rentables y mejor gestionados.",
+  alternates: {
+    canonical: "https://adrianpollan.com/servicios",
+  },
+  openGraph: {
+    title: "Consultoría para Restaurantes y Hostelería | Adrián Pollán",
+    description:
+      "Diagnóstico F&B, consultoría operativa y acompañamiento a aperturas. Especializado en rentabilidad, control de costes y gestión operativa.",
+    url: "https://adrianpollan.com/servicios",
+  },
 };
 
 const steps = [
@@ -82,6 +91,19 @@ const steps = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function ServiciosPage() {
   const serviceIcons = [
     <Search key="s1" size={40} className="text-amber" />,
@@ -90,6 +112,10 @@ export default function ServiciosPage() {
   ];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image

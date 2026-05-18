@@ -18,12 +18,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Adrián Pollán`,
+    title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://adrianpollan.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [{ url: post.coverImage }],
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Adrián Pollán"],
+      url: `https://adrianpollan.com/blog/${post.slug}`,
+      images: [{ url: post.coverImage, width: 800, height: 450, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
     },
   };
 }
@@ -37,8 +50,45 @@ export default async function BlogPostPage({ params }: Props) {
     (p) => p.slug !== post.slug && p.category === post.category
   ).slice(0, 2);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      "@id": "https://adrianpollan.com/#person",
+      name: "Adrián Pollán",
+      url: "https://adrianpollan.com",
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": "https://adrianpollan.com/#person",
+      name: "Adrián Pollán",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://adrianpollan.com/blog/${post.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://adrianpollan.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://adrianpollan.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://adrianpollan.com/blog/${post.slug}` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-0 lg:pt-48 overflow-hidden">
         <div className="relative max-w-3xl mx-auto px-6 lg:px-10 pb-12">
@@ -73,7 +123,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="relative aspect-[16/7] overflow-hidden">
             <Image
               src={post.coverImage}
-              alt={post.title}
+              alt={`${post.title} — Adrián Pollán`}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 900px"

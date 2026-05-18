@@ -4,9 +4,18 @@ import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw } from "l
 import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
-  title: "El Método ADRIÁN — Adrián Pollán",
+  title: "El Método ADRIÁN — Libro de Gestión para Restaurantes y Hostelería",
   description:
-    "El libro práctico para gestores de hostelería. Todo el sistema para transformar la rentabilidad y la operativa de un restaurante.",
+    "El sistema práctico para transformar la rentabilidad y la operativa de tu restaurante. Basado en 20 años de experiencia real. Próxima publicación — apúntate para ser el primero en saberlo.",
+  alternates: {
+    canonical: "https://adrianpollan.com/libro",
+  },
+  openGraph: {
+    title: "El Método ADRIÁN — Libro de Gestión para Restaurantes",
+    description:
+      "Sistema práctico de gestión para hostelería basado en 20 años de experiencia real. Rentabilidad, operaciones, equipos y aperturas.",
+    url: "https://adrianpollan.com/libro",
+  },
 };
 
 const phaseData = [

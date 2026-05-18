@@ -3,9 +3,18 @@ import Image from "next/image";
 import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
-  title: "Blog — Adrián Pollán",
+  title: "Blog sobre Rentabilidad y Gestión de Restaurantes",
   description:
-    "Artículos prácticos sobre rentabilidad en restaurantes, gestión de equipos, aperturas y El Método ADRIÁN.",
+    "Artículos prácticos sobre rentabilidad en restaurantes, control de costes, gestión de equipos, aperturas y el Método ADRIÁN. Contenido basado en más de 20 años de experiencia real en hostelería.",
+  alternates: {
+    canonical: "https://adrianpollan.com/blog",
+  },
+  openGraph: {
+    title: "Blog sobre Rentabilidad y Gestión de Restaurantes | Adrián Pollán",
+    description:
+      "Artículos prácticos sobre rentabilidad, costes, equipos y aperturas para restaurantes y negocios de hostelería.",
+    url: "https://adrianpollan.com/blog",
+  },
 };
 
 export default function BlogPage() {
@@ -30,7 +39,7 @@ export default function BlogPage() {
               Blog
             </p>
             <h1 className="font-display text-cream text-5xl lg:text-7xl font-light leading-[1.05] mb-6">
-              Blog
+              Rentabilidad, gestión<br />y operativa para restaurantes
             </h1>
             <p className="font-display text-cream/50 text-xl lg:text-2xl italic mb-5">
               Ideas que vienen del terreno, no de un manual.
