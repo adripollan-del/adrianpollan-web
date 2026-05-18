@@ -164,7 +164,7 @@ export default function HablemosPage() {
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
                 Si tienes una pregunta concreta o prefieres el email, puedes
-                escribirme directamente. Respondo en menos de 48 horas.
+                escribirme directamente. Respuesta personal en menos de 24 horas laborables.
               </p>
 
               {/* Mini perfil */}
@@ -174,7 +174,7 @@ export default function HablemosPage() {
                 </div>
                 <div>
                   <p className="font-display text-navy font-semibold">Adrián Pollán</p>
-                  <p className="font-body text-ink/50 text-sm">Respuesta personal · &lt; 24h</p>
+                  <p className="font-body text-ink/50 text-sm">Respuesta personal en menos de 24 horas laborables</p>
                 </div>
               </div>
             </div>
