@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
@@ -367,8 +367,52 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CIERRE CTA — fondo crema oscuro ───────────────────────── */}
-      <section className="bg-cream-dark py-20 lg:py-28">
+      {/* ── TESTIMONIOS — fondo crema claro ──────────────────────── */}
+      <section className="bg-cream py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-12">
+            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+              Lo que dicen quienes han trabajado conmigo
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {[
+              {
+                text: "Llevábamos tres años con el restaurante lleno casi todos los fines de semana y sin entender por qué el margen no aparecía. En dos meses de trabajo con Adrián identificamos dónde se escapaba el dinero y lo corregimos. El cambio fue inmediato.",
+                name: "Carlos M.",
+                role: "Propietario, Restaurante en Madrid",
+              },
+              {
+                text: "Estaba a punto de firmar el local para mi primer restaurante cuando empecé a trabajar con Adrián. Me hizo las preguntas que nadie me había hecho y me ayudó a tomar decisiones mucho más sólidas antes de comprometer mi inversión.",
+                name: "Laura G.",
+                role: "Emprendedora, Barcelona",
+              },
+              {
+                text: "Lo que más me sorprendió fue que no llegó con soluciones preparadas. Primero entendió el negocio, luego propuso. Esa forma de trabajar marca la diferencia respecto a otros consultores que había contratado antes.",
+                name: "Javier R.",
+                role: "Director de F&B, Hotel en Sevilla",
+              },
+            ].map((t, i) => (
+              <div
+                key={i}
+                className="bg-white shadow-sm border border-navy/10 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+              >
+                <Quote size={20} className="text-amber mb-3" strokeWidth={1.5} />
+                <p className="font-body text-ink/75 text-sm leading-relaxed mb-5 flex-1">
+                  {t.text}
+                </p>
+                <div className="pt-4 border-t border-navy/10">
+                  <p className="font-display text-navy text-xs font-semibold">{t.name}</p>
+                  <p className="font-body text-ink/55 text-xs mt-0.5">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CIERRE CTA — fondo blanco ─────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
