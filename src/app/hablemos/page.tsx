@@ -176,8 +176,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — fondo blanco ──────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      {/* ── CTA FINAL — fondo crema oscuro ───────────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             El primer paso es siempre el más sencillo.
