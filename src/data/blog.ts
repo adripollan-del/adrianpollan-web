@@ -82,6 +82,72 @@ export const blogPosts: BlogPost[] = [
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
+    slug: "que-es-un-escandallo-y-por-que-lo-necesitas",
+    title: "Qué es un escandallo y por qué sin él no controlas tu negocio",
+    excerpt:
+      "Descubre qué es un escandallo, cómo se hace y por qué es la herramienta más importante para controlar costes y rentabilidad en tu restaurante.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "9 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Si hay una herramienta que separa a los restaurantes que controlan su negocio de los que simplemente trabajan y esperan que los números cuadren, esa es el escandallo. No es una palabra complicada ni una técnica reservada para grandes cadenas. Es una ficha de coste por plato. Y sin ella, estás fijando precios a ciegas.</p>
+
+<p>Lo he visto cientos de veces. Un propietario que lleva años en el sector, que conoce su cocina mejor que nadie, que ha desarrollado una carta con criterio gastronómico real, pero que no sabe exactamente cuánto le cuesta producir cada plato. Sabe aproximadamente. Y aproximadamente, en hostelería, es sinónimo de margen incontrolado.</p>
+
+<h2>Qué es un escandallo exactamente</h2>
+
+<p>Un escandallo es un documento que recoge todos los ingredientes necesarios para elaborar un plato, con sus cantidades exactas y su coste por unidad. El resultado es el coste de producción de ese plato, que comparado con su precio de venta te da el food cost específico de ese plato y el margen que genera.</p>
+
+<p>Un escandallo básico incluye: nombre del plato, lista de ingredientes con cantidad exacta, precio de compra de cada ingrediente, coste de cada ingrediente en la cantidad usada, coste total de producción, precio de venta con y sin IVA, food cost del plato en porcentaje y margen bruto por plato.</p>
+
+<p>No es más complicado que eso. Una hoja de cálculo bien hecha es suficiente para empezar.</p>
+
+<h2>Por qué la mayoría de restaurantes no tienen escandallos</h2>
+
+<p>La respuesta más habitual es que no hay tiempo. Y es verdad que hacerlo bien requiere dedicación. Hay que pesar ingredientes, consultar facturas, calcular mermas y actualizar los datos cuando cambian los precios de los proveedores.</p>
+
+<p>Pero la razón más profunda es que muchos propietarios y cocineros tienen miedo de lo que van a encontrar. Porque cuando haces el escandallo de un plato que llevas años vendiendo, a veces descubres que tiene un food cost del 48% y que cada vez que lo vendes estás ganando mucho menos de lo que creías.</p>
+
+<p>Esa incomodidad es exactamente la razón por la que hay que hacerlo.</p>
+
+<h2>Cómo hacer un escandallo paso a paso</h2>
+
+<p>El proceso es más sencillo de lo que parece si se hace con orden.</p>
+
+<p>El primer paso es elegir un plato y listar todos sus ingredientes con las cantidades exactas que se usan en cada ración. No las que deberían usarse en teoría, sino las que realmente se usan en cocina. Para eso hay que pesar, no estimar.</p>
+
+<p>El segundo paso es calcular el coste de cada ingrediente. Si el lomo de cerdo cuesta 8 euros el kilo y usas 180 gramos por ración, el coste de ese ingrediente es 1,44 euros. Repite el proceso con cada ingrediente de la receta.</p>
+
+<p>El tercer paso es sumar todos los costes para obtener el coste total de producción del plato. A ese número hay que añadirle un porcentaje de merma, que varía según el ingrediente pero que suele estar entre el 5% y el 20% dependiendo del producto.</p>
+
+<p>El cuarto paso es comparar ese coste con el precio de venta del plato sin IVA y calcular el food cost: <strong>coste dividido entre precio de venta, multiplicado por cien.</strong></p>
+
+<p>El quinto paso, y el más importante, es decidir qué hacer con esa información. Si el food cost de un plato es del 45% y tu objetivo está en el 32%, tienes tres opciones: subir el precio, reformular la receta para reducir el coste, o eliminar el plato de la carta.</p>
+
+<h2>Qué pasa cuando los precios de los proveedores suben</h2>
+
+<p>Uno de los problemas más frecuentes con los escandallos es que se hacen una vez y no se actualizan. Si el aceite sube un 30%, el coste de todos los platos en los que aparece sube también. Sin un sistema de actualización, el escandallo queda obsoleto en semanas.</p>
+
+<p>La solución no es rehacerlo todo cada mes. Es identificar los ingredientes con mayor peso en el coste y actualizarlos cuando haya variaciones significativas de precio. En la práctica, con revisar el escandallo cada trimestre y cuando haya cambios de precio relevantes es suficiente para mantenerlo útil.</p>
+
+<h2>El escandallo no es solo para cocina</h2>
+
+<p>Una variante del escandallo que muchos restaurantes ignoran es la que aplica a las bebidas y a los cócteles. Un cóctel con cinco ingredientes puede tener un food cost muy alto si no está calculado con precisión. Lo mismo ocurre con las referencias de vino por copa o con los postres de producción propia.</p>
+
+<p>Cualquier producto que elaboras y vendes en tu restaurante debería tener su escandallo. No solo los platos principales.</p>
+
+<h2>Sin escandallo no hay carta inteligente</h2>
+
+<p>El escandallo no es una herramienta contable. Es una herramienta de diseño de negocio. Cuando tienes los costes de todos tus platos calculados, puedes diseñar una carta que equilibre rentabilidad y atractivo gastronómico. Puedes identificar qué platos te interesa potenciar, cuáles deberías reformular y cuáles simplemente no tienen sentido mantener.</p>
+
+<p>Un restaurante con escandallos actualizados toma decisiones de carta basadas en datos. Un restaurante sin escandallos toma decisiones basadas en intuición. Y en hostelería, la intuición sola es muy cara.</p>
+
+<p>Si quieres saber si el control de costes de tu restaurante está donde debería estar, empieza por el diagnóstico gratuito. En menos de cinco minutos obtienes una primera foto de las áreas donde tu negocio puede estar perdiendo margen.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "por-que-tu-restaurante-no-es-rentable",
     title: "Por qué tu restaurante llena pero no es rentable",
     excerpt:
