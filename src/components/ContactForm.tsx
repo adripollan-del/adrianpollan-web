@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -22,6 +23,7 @@ export default function ContactForm() {
       });
       if (!res.ok) throw new Error();
       setStatus("sent");
+      trackEvent("form_submit", { event_category: "conversion", event_label: "Formulario de contacto" });
     } catch {
       setStatus("error");
     }

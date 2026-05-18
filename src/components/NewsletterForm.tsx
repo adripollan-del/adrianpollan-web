@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -24,6 +25,7 @@ export default function NewsletterForm() {
 
       if (res.ok) {
         setStatus("done");
+        trackEvent("newsletter_signup", { event_category: "conversion", event_label: "Newsletter footer" });
         return;
       }
 

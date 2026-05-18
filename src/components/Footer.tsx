@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import TrackingLink from "@/components/TrackingLink";
 
 const footerLinks = [
   { href: "/servicios", label: "Servicios" },
@@ -48,24 +49,28 @@ export default function Footer() {
               ¿Quieres saber si puedo ayudarte? Empieza con una sesión gratuita de 20 minutos.
             </p>
             {/* Primary CTA: diagnóstico — botón amber sólido */}
-            <a
+            <TrackingLink
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-amber text-cream text-sm font-medium tracking-wide hover:bg-amber-hover transition-colors"
+              eventName="diagnostico_click"
+              eventLabel="Footer"
             >
               Haz el diagnóstico gratuito
-            </a>
+            </TrackingLink>
             {/* Secondary CTA: Calendly — texto simple */}
             <div className="mt-5">
-              <a
+              <TrackingLink
                 href="https://calendly.com/adrianpollan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-cream/50 hover:text-amber transition-colors underline underline-offset-4"
+                eventName="calendly_click"
+                eventLabel="Footer"
               >
                 O reserva una sesión de 20 minutos →
-              </a>
+              </TrackingLink>
             </div>
           </div>
 

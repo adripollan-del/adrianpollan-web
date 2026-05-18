@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, Check, ArrowRight } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 interface ServiceCardProps {
   title: string;
@@ -98,6 +99,7 @@ export default function ServiceCard({
               target="_blank"
               rel="noopener noreferrer"
               className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
+              onClick={() => trackEvent("calendly_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
               Reserva una sesión gratuita
               <ArrowRight size={14} />

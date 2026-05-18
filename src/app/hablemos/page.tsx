@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import TrackingLink from "@/components/TrackingLink";
 import { ExternalLink, ArrowRight, Calendar, Mail, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -96,15 +97,17 @@ export default function HablemosPage() {
               <p key={i} className="font-body text-ink/65 text-sm">— {area}</p>
             ))}
           </div>
-          <a
+          <TrackingLink
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            eventName="diagnostico_click"
+            eventLabel="Hablemos — diagnóstico"
           >
             Hacer el diagnóstico ahora
             <ExternalLink size={15} />
-          </a>
+          </TrackingLink>
         </div>
       </section>
 
@@ -195,14 +198,16 @@ export default function HablemosPage() {
             Sin presión, sin compromisos.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <TrackingLink
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              eventName="calendly_click"
+              eventLabel="Hablemos — CTA final"
             >
               Reserva tu sesión gratuita <ArrowRight size={15} />
-            </a>
+            </TrackingLink>
           </div>
         </div>
       </section>

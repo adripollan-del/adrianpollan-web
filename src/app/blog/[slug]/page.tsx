@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+import TrackingLink from "@/components/TrackingLink";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 interface Props {
@@ -207,22 +208,26 @@ export default async function BlogPostPage({ params }: Props) {
             necesitan más atención. En 10 minutos.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <TrackingLink
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold"
+              eventName="diagnostico_click"
+              eventLabel="Blog — CTA artículo"
             >
               Hacer el diagnóstico gratuito <ExternalLink size={14} />
-            </a>
-            <a
+            </TrackingLink>
+            <TrackingLink
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              eventName="calendly_click"
+              eventLabel="Blog — CTA artículo"
             >
               O reserva una sesión →
-            </a>
+            </TrackingLink>
           </div>
         </div>
       </section>

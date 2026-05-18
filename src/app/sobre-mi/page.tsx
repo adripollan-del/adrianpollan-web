@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -261,14 +262,16 @@ export default function SobreMiPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
-              <a
+              <TrackingLink
                 href="https://calendly.com/adrianpollan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+                eventName="calendly_click"
+                eventLabel="Sobre mí"
               >
                 Reserva una sesión gratuita de 20 minutos <ArrowRight size={15} />
-              </a>
+              </TrackingLink>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Stats from "@/components/Stats";
 import WaitlistForm from "@/components/WaitlistForm";
+import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -105,24 +106,28 @@ export default function Home() {
 
             {/* CTAs — diagnóstico primero (CTA principal), Calendly segundo */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              <TrackingLink
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+                eventName="diagnostico_click"
+                eventLabel="Hero home"
               >
                 Haz el diagnóstico gratuito
                 <ArrowRight size={16} />
-              </a>
-              <a
+              </TrackingLink>
+              <TrackingLink
                 href="https://calendly.com/adrianpollan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-cream/35 text-cream text-sm font-medium tracking-wide hover:bg-cream/10 transition-colors"
+                eventName="calendly_click"
+                eventLabel="Hero home"
               >
                 Reserva una sesión gratuita
                 <ArrowRight size={16} />
-              </a>
+              </TrackingLink>
             </div>
           </div>
         </div>
@@ -319,15 +324,17 @@ export default function Home() {
             ))}
           </div>
 
-          <a
+          <TrackingLink
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            eventName="diagnostico_click"
+            eventLabel="Sección problemas home"
           >
             Hacer el diagnóstico gratuito
             <ArrowRight size={16} />
-          </a>
+          </TrackingLink>
         </div>
       </section>
 
@@ -446,23 +453,27 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <TrackingLink
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              eventName="calendly_click"
+              eventLabel="CTA final home"
             >
               Reserva tu sesión gratuita
               <ArrowRight size={16} />
-            </a>
-            <a
+            </TrackingLink>
+            <TrackingLink
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              eventName="diagnostico_click"
+              eventLabel="CTA final home secundario"
             >
               O haz el diagnóstico gratuito →
-            </a>
+            </TrackingLink>
           </div>
         </div>
       </section>

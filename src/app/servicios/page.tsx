@@ -4,6 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import { services } from "@/data/services";
 import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X } from "lucide-react";
+import TrackingLink from "@/components/TrackingLink";
 
 const faqs = [
   {
@@ -211,23 +212,27 @@ export default function ServiciosPage() {
                 de tu negocio necesitan más atención y qué tipo de ayuda encaja mejor.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <TrackingLink
                   href="https://diagnostico.adrianpollan.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-navy text-sm font-semibold tracking-wide"
+                  eventName="diagnostico_click"
+                  eventLabel="Servicios — sección ¿no sabes cuál?"
                 >
                   Hacer el diagnóstico
                   <ExternalLink size={15} />
-                </a>
-                <a
+                </TrackingLink>
+                <TrackingLink
                   href="https://calendly.com/adrianpollan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors"
+                  eventName="calendly_click"
+                  eventLabel="Servicios — sección ¿no sabes cuál?"
                 >
                   O reserva 20 minutos <ArrowRight size={15} />
-                </a>
+                </TrackingLink>
               </div>
             </div>
 

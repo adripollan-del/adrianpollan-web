@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -24,6 +25,7 @@ export default function WaitlistForm({ buttonText = "Apuntarme" }: { buttonText?
 
       if (res.ok) {
         setStatus("done");
+        trackEvent("book_waitlist_signup", { event_category: "conversion", event_label: "Lista de espera libro" });
         return;
       }
 
