@@ -3,7 +3,7 @@ import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import { services } from "@/data/services";
-import { ArrowRight, ExternalLink, Search, LineChart, Rocket } from "lucide-react";
+import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X } from "lucide-react";
 
 const faqs = [
   {
@@ -253,6 +253,71 @@ export default function ServiciosPage() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── QUÉ PASA DESPUÉS — fondo blanco ──────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              El proceso
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+              Qué pasa después de la sesión gratuita
+            </h2>
+            <p className="font-body text-ink/60 text-lg leading-relaxed">
+              Sin presión, sin sorpresas. Así funciona el proceso.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 mb-14">
+            {[
+              {
+                icon: <MessageSquare size={24} className="text-amber" />,
+                title: "Me cuentas tu situación",
+                body: "Me explicas dónde está el negocio ahora mismo y qué te preocupa.",
+              },
+              {
+                icon: <Search size={24} className="text-amber" />,
+                title: "Te hago las preguntas correctas",
+                body: "Pregunto sobre ventas, costes, equipo y operación para entender el problema real.",
+              },
+              {
+                icon: <Lightbulb size={24} className="text-amber" />,
+                title: "Te digo con honestidad si puedo ayudarte",
+                body: "Si veo que puedo aportar valor real, te explico cómo. Si no, también te lo digo.",
+              },
+              {
+                icon: <FileText size={24} className="text-amber" />,
+                title: "Te propongo el siguiente paso",
+                body: "Si tiene sentido trabajar juntos, preparo una propuesta adaptada a tu situación concreta.",
+              },
+              {
+                icon: <X size={24} className="text-amber" />,
+                title: "Si no encajamos, te lo digo",
+                body: "No acepto proyectos donde no creo que pueda aportar valor real. Prefiero decirlo en la primera llamada.",
+              },
+            ].map((step, i) => (
+              <div key={i} className="flex flex-col gap-4">
+                <div className="w-10 h-10 bg-amber/10 border border-amber/20 flex items-center justify-center flex-shrink-0">
+                  {step.icon}
+                </div>
+                <div>
+                  <h3 className="font-display text-navy text-base font-semibold mb-2 leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="font-body text-ink/60 text-sm leading-relaxed">
+                    {step.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="font-body text-ink/50 text-base leading-relaxed border-t border-navy/10 pt-8 max-w-2xl">
+            No es una llamada de venta agresiva. Es una conversación breve para entender si puedo ayudarte.
+          </p>
         </div>
       </section>
 
