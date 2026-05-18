@@ -87,10 +87,10 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Descubre qué es un escandallo, cómo se hace y por qué es la herramienta más importante para controlar costes y rentabilidad en tu restaurante.",
     category: "Rentabilidad",
-    date: "2026-05-18",
+    date: "2026-05-11",
     readTime: "9 min",
     coverImage:
-      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1792&q=80",
+      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1792&q=80",
     body: `<p>Si hay una herramienta que separa a los restaurantes que controlan su negocio de los que simplemente trabajan y esperan que los números cuadren, esa es el escandallo. No es una palabra complicada ni una técnica reservada para grandes cadenas. Es una ficha de coste por plato. Y sin ella, estás fijando precios a ciegas.</p>
 
 <p>Lo he visto cientos de veces. Un propietario que lleva años en el sector, que conoce su cocina mejor que nadie, que ha desarrollado una carta con criterio gastronómico real, pero que no sabe exactamente cuánto le cuesta producir cada plato. Sabe aproximadamente. Y aproximadamente, en hostelería, es sinónimo de margen incontrolado.</p>
@@ -153,7 +153,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Aprende qué es el labour cost, cómo calcularlo y cuánto debería representar el coste de personal en un restaurante o negocio de hostelería rentable.",
     category: "Rentabilidad",
-    date: "2026-05-18",
+    date: "2026-05-04",
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1792&q=80",
@@ -223,7 +223,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Descubre las palancas reales para mejorar el margen de tu restaurante sin tocar los precios. Estrategias prácticas basadas en operativa real.",
     category: "Rentabilidad",
-    date: "2026-05-18",
+    date: "2026-04-27",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1792&q=80",
@@ -289,7 +289,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Mucha gente cree que el problema es que no tienen suficientes clientes. Suelen estar equivocados. El problema casi siempre está en los márgenes, la estructura de costes y cómo gestionan lo que ya tienen.",
     category: "Rentabilidad",
-    date: "2025-04-10",
+    date: "2026-04-20",
     readTime: "6 min",
     coverImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
     body: `<p>He trabajado con docenas de restaurantes que llenan todos los fines de semana y aun así terminan el mes en rojo. ¿Cómo es posible?</p>
@@ -320,7 +320,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "El síndrome del restaurador indispensable: el negocio solo funciona cuando el dueño está presente. Te cuento cómo salir de esa trampa construyendo un equipo autónomo y comprometido.",
     category: "Equipos",
-    date: "2025-03-22",
+    date: "2026-04-13",
     readTime: "8 min",
     coverImage: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80",
     body: `<p>Uno de los patrones más comunes que veo en mis auditorías: el restaurante funciona solo cuando el dueño está presente. En cuanto se va, la calidad baja, los errores aumentan y la experiencia del cliente se deteriora.</p>
@@ -347,7 +347,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Después de acompañar más de una docena de aperturas, estos son los errores que se repiten una y otra vez. La buena noticia: todos son evitables si sabes dónde mirar.",
     category: "Aperturas",
-    date: "2025-03-05",
+    date: "2026-04-06",
     readTime: "10 min",
     coverImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80",
     body: `<p>La estadística dice que el 60% de los restaurantes cierran en su primer año. En mi experiencia, ese número podría reducirse drásticamente si los operadores supieran dónde se esconden los riesgos reales.</p>
@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Muchos restaurantes tienen buena ocupación y aun así no generan el beneficio que deberían. Descubre por qué ocurre y qué palancas actuar primero.",
     category: "Rentabilidad",
-    date: "2026-05-18",
+    date: "2026-03-30",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1792&q=80",
