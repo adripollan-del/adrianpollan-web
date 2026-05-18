@@ -436,20 +436,23 @@ export default function Home() {
               {
                 label: "Rentabilidad",
                 title: "Restaurante con buena ocupación y margen insuficiente",
-                resultado:
-                  "En doce semanas el propietario tenía por primera vez una foto clara de dónde estaba yendo el dinero. El control de costes dejó de ser una intuición y pasó a ser un proceso medible.",
+                antes: ["48 referencias activas", "Merma no controlada", "Sin seguimiento de margen"],
+                despues: ["Carta reducida a 31 referencias", "Control semanal de merma", "Sistema real de seguimiento"],
+                resultado: "En 12 semanas: de gestionar por intuición a tomar decisiones con datos reales.",
               },
               {
                 label: "Apertura",
                 title: "Emprendedor antes de firmar el local",
-                resultado:
-                  "No firmó ese local. Tres meses después abrió con un alquiler un 30% inferior, en una zona con menos competencia y con una propuesta más definida.",
+                antes: ["Alquiler al 18% sobre ventas proyectadas", "Concepto sin diferenciación clara", "Inversión sobredimensionada"],
+                despues: ["Local alternativo un 30% más barato", "Concepto reposicionado", "Plan de inversión ajustado"],
+                resultado: "No firmó ese local. Abrió tres meses después con estructura financiera más sólida.",
               },
               {
                 label: "F&B Hotelero",
                 title: "Hotel con operación F&B poco rentable",
-                resultado:
-                  "El F&B pasó de ser percibido como un coste inevitable a convertirse en un elemento diferenciador. Por primera vez el propietario tenía datos reales sobre el rendimiento del departamento.",
+                antes: ["F&B sin KPIs ni seguimiento", "Alta rotación, sin procesos", "Clientes raramente usaban el restaurante"],
+                despues: ["Concepto alineado con el huésped", "KPIs implantados: food cost, labour cost", "Equipo formado en venta contextual"],
+                resultado: "El F&B dejó de ser un problema y se convirtió en un diferenciador real.",
               },
             ].map((caso, i) => (
               <div
@@ -459,12 +462,36 @@ export default function Home() {
                 <span className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                   {caso.label}
                 </span>
-                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4 flex-1">
+                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4">
                   {caso.title}
                 </h3>
+                <div className="grid grid-cols-2 gap-3 flex-1 mb-4">
+                  <div>
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1.5">Antes</p>
+                    <ul className="space-y-1">
+                      {caso.antes.map((item, j) => (
+                        <li key={j} className="flex items-start gap-1.5">
+                          <span className="text-ink/30 text-xs mt-0.5 flex-shrink-0">—</span>
+                          <p className="font-body text-ink/55 text-xs leading-snug">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-body text-amber text-xs uppercase tracking-wider mb-1.5">Después</p>
+                    <ul className="space-y-1">
+                      {caso.despues.map((item, j) => (
+                        <li key={j} className="flex items-start gap-1.5">
+                          <span className="text-amber text-xs mt-0.5 flex-shrink-0">✓</span>
+                          <p className="font-body text-ink/70 text-xs leading-snug">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
                 <div className="flex items-start gap-2.5 pt-4 border-t border-navy/10">
                   <CheckCircle size={16} className="text-amber mt-0.5 flex-shrink-0" />
-                  <p className="font-body text-ink/65 text-sm leading-relaxed">
+                  <p className="font-body text-ink/65 text-sm leading-relaxed italic">
                     {caso.resultado}
                   </p>
                 </div>

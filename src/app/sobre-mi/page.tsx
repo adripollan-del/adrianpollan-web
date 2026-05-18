@@ -273,38 +273,53 @@ export default function SobreMiPage() {
               {
                 label: "Rentabilidad",
                 title: "Restaurante con buena ocupación y margen insuficiente",
-                situacion:
-                  "Un restaurante independiente de 50 cubiertos con buena reputación local y ocupación alta los fines de semana. Facturaban bien, pero a fin de mes apenas quedaba margen.",
-                problema:
-                  "Carta demasiado amplia con merma constante, escandallos desactualizados y mezcla de ventas desfavorable donde los platos más populares eran los de menor margen.",
-                acciones:
-                  "Reducción de carta en un 35%, actualización de escandallos, reorganización del menú para potenciar platos rentables y formación del equipo de sala.",
+                antes: [
+                  "Food cost estimado sin escandallos actualizados",
+                  "Carta con 48 referencias activas",
+                  "Merma no controlada",
+                  "Sin sistema de seguimiento de margen",
+                ],
+                despues: [
+                  "Escandallos actualizados para el 100% de la carta",
+                  "Carta reducida a 31 referencias",
+                  "Control semanal de merma implantado",
+                  "Propietario con sistema real de seguimiento de margen",
+                ],
                 resultado:
-                  "En doce semanas el propietario tenía por primera vez una foto clara de dónde estaba yendo el dinero. El control de costes dejó de ser una intuición y pasó a ser un proceso medible y repetible.",
+                  "En 12 semanas el propietario pasó de gestionar por intuición a tomar decisiones con datos reales. El control de costes dejó de ser una estimación y se convirtió en un proceso medible y repetible.",
               },
               {
                 label: "Apertura",
                 title: "Emprendedor antes de firmar el local",
-                situacion:
-                  "Un emprendedor con experiencia en sala estaba a punto de firmar un local. Tenía el concepto claro, ilusión y algunos ahorros. Contactó para pedir una segunda opinión antes de comprometerse.",
-                problema:
-                  "El alquiler representaba casi el 18% de las ventas proyectadas en el escenario optimista y el concepto era muy similar a dos negocios ya establecidos en la misma calle.",
-                acciones:
-                  "Validación del concepto, ajuste del posicionamiento, análisis de tres locales alternativos y revisión del plan de inversión inicial.",
+                antes: [
+                  "Alquiler proyectado: 18% sobre ventas en escenario optimista",
+                  "Concepto sin diferenciación clara frente a 2 competidores directos en la misma calle",
+                  "Inversión inicial sobredimensionada en equipamiento",
+                ],
+                despues: [
+                  "Local alternativo con alquiler un 30% inferior",
+                  "Concepto reposicionado con propuesta de valor diferenciada",
+                  "Plan de inversión ajustado con partidas priorizadas",
+                ],
                 resultado:
-                  "No firmó ese local. Tres meses después encontró una opción con un alquiler un 30% inferior y en una zona con menos competencia directa. Abrió con una propuesta más definida y una estructura financiera más sólida.",
+                  "El emprendedor no firmó ese local. Tres meses después abrió con una estructura financiera más sólida y una propuesta más definida desde el primer día.",
               },
               {
                 label: "F&B Hotelero",
                 title: "Hotel con operación F&B poco rentable",
-                situacion:
-                  "Un hotel boutique con restaurante y bar trataba su F&B como un servicio complementario casi obligatorio. El departamento generaba más problemas que ingresos y el equipo tenía alta rotación.",
-                problema:
-                  "Sin identidad propia, carta genérica, precios no calibrados para el perfil del cliente y equipo sin sistema de venta activa. Coste de personal desproporcionado para el volumen generado.",
-                acciones:
-                  "Redefinición del concepto gastronómico, rediseño de carta, ajuste de precios, formación en venta contextual y creación de KPIs mensuales.",
+                antes: [
+                  "F&B sin KPIs propios ni seguimiento mensual",
+                  "Rotación de equipo alta, sin procesos documentados",
+                  "Clientes del hotel raramente usaban el restaurante",
+                ],
+                despues: [
+                  "Concepto gastronómico alineado con el perfil del huésped",
+                  "Carta rediseñada y precios recalibrados",
+                  "KPIs mensuales implantados: food cost, labour cost y ticket medio",
+                  "Equipo formado en venta contextual",
+                ],
                 resultado:
-                  "El F&B pasó de ser percibido como un coste inevitable a convertirse en un elemento diferenciador de la experiencia del hotel. El propietario empezó a tener datos reales sobre el rendimiento del departamento por primera vez.",
+                  "El F&B pasó de ser un departamento problemático a convertirse en un elemento diferenciador de la experiencia del hotel. El propietario tuvo datos reales sobre el rendimiento del área por primera vez.",
               },
             ].map((caso, i) => (
               <div
@@ -317,35 +332,33 @@ export default function SobreMiPage() {
                 <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-5">
                   {caso.title}
                 </h3>
-                <div className="space-y-4 flex-1">
+                <div className="grid grid-cols-2 gap-4 flex-1 mb-5">
                   <div>
-                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
-                      Situación
-                    </p>
-                    <p className="font-body text-ink/65 text-sm leading-relaxed">
-                      {caso.situacion}
-                    </p>
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-2">Antes</p>
+                    <ul className="space-y-1.5">
+                      {caso.antes.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2">
+                          <span className="text-ink/30 text-xs mt-0.5 flex-shrink-0">—</span>
+                          <p className="font-body text-ink/55 text-xs leading-relaxed">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   <div>
-                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
-                      Problema
-                    </p>
-                    <p className="font-body text-ink/65 text-sm leading-relaxed">
-                      {caso.problema}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1">
-                      Acciones
-                    </p>
-                    <p className="font-body text-ink/65 text-sm leading-relaxed">
-                      {caso.acciones}
-                    </p>
+                    <p className="font-body text-amber text-xs uppercase tracking-wider mb-2">Después</p>
+                    <ul className="space-y-1.5">
+                      {caso.despues.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2">
+                          <span className="text-amber text-xs mt-0.5 flex-shrink-0">✓</span>
+                          <p className="font-body text-ink/70 text-xs leading-relaxed">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div className="mt-5 pt-5 border-t border-navy/10 flex items-start gap-3">
+                <div className="pt-5 border-t border-navy/10 flex items-start gap-3">
                   <CheckCircle size={18} className="text-amber mt-0.5 flex-shrink-0" />
-                  <p className="font-body text-ink/75 text-sm leading-relaxed">
+                  <p className="font-body text-ink/75 text-sm leading-relaxed italic">
                     {caso.resultado}
                   </p>
                 </div>
