@@ -523,35 +523,6 @@ export const blogPosts: BlogPost[] = [
 <p>El primer paso en casi todos los restaurantes que acompaño: crear o fortalecer la figura del responsable de sala o jefe de operaciones. Una persona que asume la responsabilidad del servicio cuando tú no estás. Parece obvio. La mayoría de los restaurantes no lo tienen.</p>`,
   },
   {
-    slug: "los-10-errores-que-matan-una-apertura",
-    title: "Los 10 errores que matan una apertura antes de los 6 meses",
-    excerpt:
-      "Después de acompañar más de una docena de aperturas, estos son los errores que se repiten una y otra vez. La buena noticia: todos son evitables si sabes dónde mirar.",
-    category: "Aperturas",
-    date: "2026-03-09",
-    readTime: "10 min",
-    coverImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80&fm=webp",
-    body: `<p>La estadística dice que el 60% de los restaurantes cierran en su primer año. En mi experiencia, ese número podría reducirse drásticamente si los operadores supieran dónde se esconden los riesgos reales.</p>
-
-<h2>Error 1: El business plan optimista</h2>
-
-<p>Todo el mundo hace proyecciones. Casi nadie las hace bien. El error más común: estimar las ventas de los primeros meses basándose en la ocupación que esperan alcanzar en 6 meses, no en la que tendrán en la primera semana.</p>
-
-<p>Un business plan honesto asume que los primeros tres meses van a ser duros. Que la caja va a apretar. Que vas a tener que aguantar mientras construyes clientela.</p>
-
-<h2>Error 2: Abrir sin procesos</h2>
-
-<p>Muchos locales abren con el equipo, la carta y la decoración listos, pero sin ningún manual operativo. Los primeros días son caóticos por definición. Sin procesos establecidos, el caos se convierte en el estándar.</p>
-
-<h2>Error 3: Contratar tarde</h2>
-
-<p>Fichar a tu equipo dos semanas antes de abrir es demasiado tarde. Necesitas tiempo para formarlos, hacer simulacros de servicio y detectar quién no encaja antes del día D.</p>
-
-<h2>El patrón que se repite</h2>
-
-<p>Detrás de la mayoría de cierres prematuros hay una combinación de los mismos factores: proyecciones irreales, falta de liquidez para aguantar la curva de aprendizaje y ausencia de sistemas operativos que permitan mantener la calidad cuando el founder no está mirando.</p>`,
-  },
-  {
     slug: "por-que-tu-restaurante-no-es-rentable-aunque-este-lleno",
     title: "Por qué tu restaurante no es rentable aunque esté lleno",
     excerpt:
