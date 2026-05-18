@@ -371,32 +371,57 @@ export const blogPosts: BlogPost[] = [
 <p>Detrás de la mayoría de cierres prematuros hay una combinación de los mismos factores: proyecciones irreales, falta de liquidez para aguantar la curva de aprendizaje y ausencia de sistemas operativos que permitan mantener la calidad cuando el founder no está mirando.</p>`,
   },
   {
-    slug: "el-metodo-adrian-principios-fundamentales",
-    title: "El Método ADRIÁN: los 6 principios que cambian un restaurante",
+    slug: "por-que-tu-restaurante-no-es-rentable-aunque-este-lleno",
+    title: "Por qué tu restaurante no es rentable aunque esté lleno",
     excerpt:
-      "Después de años trabajando con restaurantes de todo tipo, he destilado los principios que siempre marcan la diferencia. No son secretos. Son disciplina aplicada de forma consistente.",
-    category: "El Método",
-    date: "2025-02-18",
-    readTime: "7 min",
-    coverImage: "https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=800&q=80",
-    body: `<p>El Método ADRIÁN no es una fórmula mágica. Es un sistema de trabajo que pone en el centro lo que realmente importa: los números, las personas y la consistencia.</p>
+      "Muchos restaurantes tienen buena ocupación y aun así no generan el beneficio que deberían. Descubre por qué ocurre y qué palancas actuar primero.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "8 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Es una de las situaciones más frustrantes que existen en hostelería. El restaurante tiene vida, los clientes vienen, la sala se llena los fines de semana y el equipo trabaja duro. Y sin embargo, a fin de mes los números no cuadran. O cuadran por muy poco. O directamente no cuadran.</p>
 
-<h2>A — Análisis antes de acción</h2>
+<p>"No lo entiendo, estamos siempre llenos." Lo he escuchado más veces de las que puedo contar. Y siempre digo lo mismo: llenar el restaurante y ganar dinero con el restaurante son dos cosas distintas. Relacionadas, pero distintas.</p>
 
-<p>Nunca tomes decisiones sin datos. Antes de cambiar la carta, de contratar a alguien o de invertir en reformas, analiza: ¿qué dicen los números? ¿Qué dice el cliente?</p>
+<p>La ocupación es una condición necesaria para la rentabilidad, pero no suficiente. Puedes tener el restaurante lleno y perder dinero. Y puedes tener el restaurante a media capacidad y ser rentable. La diferencia está en lo que pasa entre que el cliente entra por la puerta y que el dinero llega a tu cuenta.</p>
 
-<h2>D — Diseño de sistemas</h2>
+<h2>El error más común: confundir facturación con rentabilidad</h2>
 
-<p>Los negocios sostenibles no dependen de héroes. Dependen de sistemas bien diseñados que funcionen aunque el dueño no esté. Cada proceso, cada estándar, cada checklist es un ladrillo en esa construcción.</p>
+<p>Cuando un propietario dice "vendemos bien", casi siempre está hablando de facturación. De cuánto entra por caja. Pero la facturación no es beneficio. Es el punto de partida del cálculo, no el resultado.</p>
 
-<h2>R — Rentabilidad como norte</h2>
+<p>Lo que determina si un restaurante es rentable no es cuánto vende, sino cuánto le cuesta producir lo que vende y qué estructura de gastos tiene detrás. Un restaurante puede facturar 50.000 euros al mes y tener un beneficio de 1.000 euros. O puede facturar 25.000 y tener un beneficio de 4.000. La cifra de ventas no te dice nada sobre la salud económica del negocio.</p>
 
-<p>La rentabilidad no es opcional. Un negocio que no es rentable no puede cumplir su propósito: crear empleo, ofrecer experiencias, crecer. La rentabilidad es la condición que lo hace posible todo.</p>
+<h2>Dónde se escapa el dinero</h2>
 
-<h2>I, Á, N — Implementación, Aceleración y Norte</h2>
+<p>Hay cinco lugares donde el margen desaparece con más frecuencia en restaurantes con buena ocupación.</p>
 
-<p>Los tres últimos principios se centran en la ejecución real: cómo implementar cambios sin romper lo que funciona, cómo escalar cuando el modelo está probado, y cómo mantener el rumbo estratégico cuando el día a día te absorbe.</p>
+<p>El primero es el food cost descontrolado. Si no tienes escandallos actualizados, si las porciones no están estandarizadas o si las mermas no se controlan, puedes estar perdiendo entre el 5% y el 12% de tu facturación sin saberlo. En un restaurante que factura 30.000 euros al mes, eso son entre 1.500 y 3.600 euros que se van sin aparecer en ninguna comanda.</p>
 
-<p>Son los principios más difíciles de aplicar. Y los más determinantes para el resultado final.</p>`,
+<p>El segundo es el labour cost sobredimensionado. Tener más personal del necesario para el volumen real de trabajo es uno de los gastos más silenciosos en hostelería. No duele en el momento porque es un coste que parece inevitable, pero se acumula mes a mes y puede representar varios puntos de margen que nunca recuperas.</p>
+
+<p>El tercero es una carta con mala rentabilidad media. Si los platos que más salen son los que tienen menor margen, tu rentabilidad baja aunque el ticket medio parezca razonable. La mezcla de ventas importa tanto como el precio de cada plato.</p>
+
+<p>El cuarto es una estructura de costes fijos desproporcionada. El alquiler, los suministros, los servicios externos y los contratos recurrentes son gastos que se pagan independientemente de cuánto vendas. Si esa estructura fue diseñada para un volumen de negocio mayor al que tienes, el margen nunca va a ser suficiente.</p>
+
+<p>El quinto, y el menos visible, es la falta de control sobre los números. Muchos restaurantes no tienen un sistema real de seguimiento de indicadores. No saben su food cost real, no calculan el labour cost correctamente, no hacen inventario con regularidad. Toman decisiones basadas en la impresión general, no en datos. Y sin datos, los problemas se acumulan antes de que sean visibles.</p>
+
+<h2>Por qué la solución no siempre es vender más</h2>
+
+<p>Cuando el margen es bajo, la reacción natural es intentar aumentar las ventas. Más clientes, más turnos, más eventos, más marketing. A veces tiene sentido. Pero si los problemas están en los costes o en la estructura, vender más solo amplifica el problema.</p>
+
+<p>Si por cada euro que factura tu restaurante te quedan 3 céntimos de margen, vender el doble te va a dejar 6 céntimos. Seguirás trabajando el doble para ganar muy poco.</p>
+
+<p>La rentabilidad no se construye únicamente desde las ventas. Se construye desde el control de lo que cuesta producir, desde una estructura de costes razonable y desde decisiones de carta y operativa basadas en datos reales.</p>
+
+<h2>Qué hacer si reconoces esta situación</h2>
+
+<p>El primer paso es siempre el mismo: entender exactamente qué está pasando. No de forma aproximada, sino con datos concretos. Cuánto es tu food cost real, cuánto representa el personal sobre las ventas, qué platos tienen mejor y peor margen, qué costes fijos tienes y si son razonables para tu volumen.</p>
+
+<p>Con esa información, las decisiones son mucho más claras. Sin ella, cualquier cambio es una apuesta.</p>
+
+<p>Si llevas tiempo con la sensación de que algo no cuadra pero no consigues identificar exactamente qué es, el diagnóstico gratuito puede ser un buen punto de partida. En menos de cinco minutos obtienes una primera foto de las áreas donde tu negocio puede estar perdiendo rentabilidad.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
 ];
