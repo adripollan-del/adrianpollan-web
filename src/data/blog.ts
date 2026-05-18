@@ -560,4 +560,72 @@ export const blogPosts: BlogPost[] = [
 
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
+  {
+    slug: "errores-mas-comunes-al-abrir-un-restaurante",
+    title: "Los errores más comunes al abrir un restaurante y cómo evitarlos",
+    excerpt:
+      "Descubre los errores más frecuentes al abrir un restaurante y cómo evitarlos antes de comprometer tu inversión. Guía práctica basada en experiencia real.",
+    category: "Aperturas",
+    date: "2026-03-09",
+    readTime: "10 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>Abrir un restaurante es uno de los proyectos empresariales más exigentes que existen. Requiere inversión económica importante, mucho tiempo, energía y una capacidad de gestionar incertidumbre que no todo el mundo tiene. Y aun así, cada año miles de personas deciden hacerlo.</p>
+
+<p>El problema no es la falta de ilusión ni de esfuerzo. El problema, casi siempre, es que los errores más costosos se cometen antes de abrir. En la fase de planificación, cuando todavía hay margen para corregir, pero también cuando la urgencia y la emoción del proyecto hacen más difícil ver con claridad.</p>
+
+<p>He acompañado aperturas en distintos países y contextos. Y los errores se repiten con una regularidad que ya no me sorprende.</p>
+
+<h2>Error 1: firmar el local antes de validar el modelo</h2>
+
+<p>El local es siempre lo primero que enamora. El espacio, la ubicación, la luz, las posibilidades. Y es comprensible: el local es tangible, visible, emocionante. El modelo económico es abstracto y requiere trabajo.</p>
+
+<p>El problema es que muchos emprendedores firman el contrato de arrendamiento antes de haber comprobado si el modelo que tienen en mente puede sostenerse en ese local concreto. Si el alquiler representa más del 10-12% de las ventas proyectadas, hay un problema estructural desde el día uno. Si el tráfico real de la zona no corresponde al cliente objetivo, hay un problema de posicionamiento. Si la superficie no permite la operativa necesaria para el volumen de negocio previsto, hay un problema operativo.</p>
+
+<p>Antes de firmar cualquier contrato, hay que tener validado el modelo. No en teoría, sino con números reales.</p>
+
+<h2>Error 2: subestimar la inversión inicial</h2>
+
+<p>La inversión en una apertura casi siempre es mayor de lo previsto. Las obras se alargan, los equipos cuestan más de lo estimado, los permisos tardan, el stock inicial es mayor del esperado. Y entre tanto, el local ya tiene coste aunque todavía no genere ingresos.</p>
+
+<p>El fondo de maniobra es uno de los conceptos más ignorados en las aperturas. No basta con tener dinero para abrir. Hay que tener dinero para sobrevivir los primeros meses mientras el negocio se estabiliza, porque casi ningún restaurante llega al punto de equilibrio en el primer mes.</p>
+
+<p>Una regla práctica: calcula tu inversión inicial, auméntala un 20%, y asegúrate de tener además un fondo de maniobra para cubrir entre tres y seis meses de gastos fijos.</p>
+
+<h2>Error 3: no tener claro el concepto antes de empezar</h2>
+
+<p>El concepto es la respuesta a tres preguntas fundamentales: qué tipo de cocina haces, para quién lo haces y por qué alguien debería elegirte a ti en lugar de a la competencia.</p>
+
+<p>Muchas aperturas empiezan sin tener estas preguntas respondidas con claridad. El resultado es un restaurante que intenta ser muchas cosas a la vez, que no tiene una identidad clara y que no consigue comunicar de forma convincente qué lo hace diferente.</p>
+
+<p>Un concepto claro no limita, libera. Facilita las decisiones de carta, de decoración, de comunicación, de precios y de contratación. Todo encaja cuando sabes exactamente qué quieres ser.</p>
+
+<h2>Error 4: construir la carta antes de conocer al cliente</h2>
+
+<p>La carta es una de las primeras cosas que se diseña en una apertura y una de las que más se cambia después. Porque se diseña desde adentro, desde lo que el cocinero quiere hacer, sin contrastar suficientemente si eso es lo que el cliente del área va a querer y a poder pagar.</p>
+
+<p>Una carta bien diseñada para una apertura tiene que ser corta, ejecutable con el equipo inicial, coherente con el concepto y validada en términos de precio con el mercado real. No con el mercado ideal, sino con el que existe en la zona donde vas a abrir.</p>
+
+<h2>Error 5: contratar el equipo demasiado tarde o demasiado pronto</h2>
+
+<p>El timing de la contratación es uno de los aspectos más difíciles de gestionar en una apertura. Contratar demasiado pronto genera costes antes de que haya ingresos. Contratar demasiado tarde genera estrés, formación insuficiente y un equipo que empieza sin estar preparado.</p>
+
+<p>El equipo clave, especialmente el de cocina y los mandos intermedios, necesita tiempo para conocer los procesos, practicar la carta y entender el concepto antes del primer servicio. Ese tiempo tiene un coste, pero es una inversión imprescindible.</p>
+
+<h2>Error 6: abrir sin haber hecho servicios de prueba</h2>
+
+<p>Un restaurante que abre directamente al público sin haber hecho servicios de prueba internos está improvisando en el momento más crítico. El primer servicio real nunca sale perfecto, pero hay una diferencia enorme entre los problemas que se detectan en un servicio de prueba y los que se detectan delante de clientes reales.</p>
+
+<p>Los servicios de prueba permiten ajustar los tiempos de cocina, detectar cuellos de botella en el flujo de sala, practicar la comunicación entre cocina y sala y dar confianza al equipo antes de la presión real.</p>
+
+<h2>La apertura es una fase, no un destino</h2>
+
+<p>Abrir es el comienzo, no el objetivo. Los primeros meses de operación son una fase de ajuste continuo en la que hay que estar muy atento a los indicadores, muy cerca del equipo y muy dispuesto a cambiar lo que no está funcionando.</p>
+
+<p>Los restaurantes que sobreviven a sus primeros dos años casi siempre tienen en común que fueron capaces de aprender rápido y ajustar con criterio. No los que acertaron en todo desde el principio, sino los que supieron reconocer los errores a tiempo y corregirlos.</p>
+
+<p>Si estás pensando en abrir un restaurante y quieres asegurarte de que las decisiones importantes están bien fundadas, el diagnóstico gratuito puede ayudarte a identificar los puntos críticos antes de comprometer tu inversión.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
 ];
