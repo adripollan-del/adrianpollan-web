@@ -362,7 +362,7 @@ export default function SobreMiPage() {
               eventName="diagnostico_click"
               eventLabel="Sobre mí — casos reales"
             >
-              ¿Tu situación se parece a alguna de estas? Haz el diagnóstico gratuito
+              ¿Tu situación se parece a alguna de estas? Recibir Diagnóstico Gratuito
               <ArrowRight size={15} />
             </TrackingLink>
           </div>

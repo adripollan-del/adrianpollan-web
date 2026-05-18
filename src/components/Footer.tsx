@@ -57,7 +57,7 @@ export default function Footer() {
               eventName="diagnostico_click"
               eventLabel="Footer"
             >
-              Haz el diagnóstico gratuito
+              Recibir Diagnóstico Gratuito
             </TrackingLink>
             {/* Secondary CTA: Calendly — texto simple */}
             <div className="mt-5">

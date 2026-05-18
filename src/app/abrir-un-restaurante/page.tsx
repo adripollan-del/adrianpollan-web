@@ -233,7 +233,7 @@ export default function AbrirUnRestaurantePage() {
             eventName="diagnostico_click"
             eventLabel="Abrir un restaurante — CTA final"
           >
-            Hacer el diagnóstico gratuito <ArrowRight size={15} />
+            Recibir Diagnóstico Gratuito <ArrowRight size={15} />
           </TrackingLink>
           <p className="font-body text-ink/40 text-xs mt-8">
             ¿Prefieres hablar directamente?{" "}

@@ -233,7 +233,7 @@ export default function ConsultorRestaurantesPage() {
               eventName="diagnostico_click"
               eventLabel="Consultor restaurantes — CTA final"
             >
-              Hacer el diagnóstico gratuito <ArrowRight size={15} />
+              Recibir Diagnóstico Gratuito <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

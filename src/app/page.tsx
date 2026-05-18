@@ -115,7 +115,7 @@ export default function Home() {
                 eventName="diagnostico_click"
                 eventLabel="Hero home"
               >
-                Haz el diagnóstico gratuito
+                Recibir Diagnóstico Gratuito
                 <ArrowRight size={16} />
               </TrackingLink>
               <TrackingLink
@@ -334,7 +334,7 @@ export default function Home() {
             eventName="diagnostico_click"
             eventLabel="Sección problemas home"
           >
-            Hacer el diagnóstico gratuito
+            Recibir Diagnóstico Gratuito
             <ArrowRight size={16} />
           </TrackingLink>
         </div>

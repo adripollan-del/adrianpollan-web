@@ -216,7 +216,7 @@ export default async function BlogPostPage({ params }: Props) {
               eventName="diagnostico_click"
               eventLabel="Blog — CTA artículo"
             >
-              Hacer el diagnóstico gratuito <ExternalLink size={14} />
+              Recibir Diagnóstico Gratuito <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"
