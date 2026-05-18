@@ -279,8 +279,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CASOS REALES — fondo crema oscuro ────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── CASOS REALES — fondo blanco ──────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="mb-12">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
