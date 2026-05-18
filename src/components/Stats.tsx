@@ -18,11 +18,14 @@ const stats: Stat[] = [
 ];
 
 function Counter({ target, animate }: { target: number; animate: boolean }) {
-  const [n, setN] = useState(0);
+  // Start at the real value so SSR/crawlers/screen readers always see correct data.
+  // When JS fires and the section becomes visible, restart from 0 for the animation.
+  const [n, setN] = useState(target);
 
   useEffect(() => {
     if (!animate) return;
 
+    setN(0);
     const duration = 1500;
     const start = performance.now();
     let raf = 0;
@@ -30,7 +33,6 @@ function Counter({ target, animate }: { target: number; animate: boolean }) {
     const tick = (now: number) => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setN(Math.round(target * eased));
       if (progress < 1) raf = requestAnimationFrame(tick);
