@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1792&q=80",
-    body: `<p>Hay una pregunta que aparece casi siempre cuando llevo un tiempo trabajando con un propietario: "¿Cómo hago para que esto funcione cuando yo no estoy?" Es una pregunta honesta y también una señal de madurez empresarial. Significa que el propietario ha entendido que un negocio que depende completamente de él no es un activo, es una trampa.</p>
+    body: `<p>Hay una pregunta que aparece casi siempre cuando llevo un tiempo trabajando con un propietario como <a href="/consultor-restaurantes">consultor de restaurantes</a>: "¿Cómo hago para que esto funcione cuando yo no estoy?" Es una pregunta honesta y también una señal de madurez empresarial. Significa que el propietario ha entendido que un negocio que depende completamente de él no es un activo, es una trampa.</p>
 
 <p>En hostelería esta dependencia es especialmente frecuente. El propietario que abre y cierra, que resuelve cada problema, que toma cada decisión, que está presente en cada turno relevante. Es comprensible: nadie conoce el negocio como él, nadie tiene sus estándares, nadie toma las decisiones como él las tomaría. El problema es que esa lógica convierte al propietario en el cuello de botella de su propio negocio.</p>
 
@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1792&q=80",
-    body: `<p>La carta es la herramienta de venta más importante de un restaurante. Es el primer contacto real del cliente con tu propuesta gastronómica, el documento que guía su decisión de compra y, al mismo tiempo, el instrumento que determina en gran medida la rentabilidad del negocio.</p>
+    body: `<p>La carta es la herramienta de venta más importante de un restaurante. Es el primer contacto real del cliente con tu propuesta gastronómica, el documento que guía su decisión de compra y, al mismo tiempo, el instrumento que determina en gran medida la <a href="/rentabilidad-restaurantes">rentabilidad del negocio</a>.</p>
 
 <p>Y sin embargo, en la mayoría de los restaurantes la carta se diseña pensando casi exclusivamente en lo gastronómico. En qué platos le gustan al chef, en qué encaja con el concepto, en qué pueden pedir los clientes. Muy pocas veces se diseña pensando en qué combinación de platos genera el margen que el negocio necesita para ser sostenible.</p>
 
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Un food cost alto casi nunca es el problema en sí. Es la señal de que algo más profundo no está funcionando: la carta, los procesos, los proveedores, el control de stock o la forma en que se diseñaron los precios.</p>
 
-<p>Por eso calcularlo bien es el primer paso, pero no el último. La rentabilidad de un restaurante se construye entendiendo todos los indicadores juntos, no cada uno por separado.</p>
+<p>Por eso calcularlo bien es el primer paso, pero no el último. La <a href="/rentabilidad-restaurantes">rentabilidad de un restaurante</a> se construye entendiendo todos los indicadores juntos, no cada uno por separado.</p>
 
 <p>Si quieres saber cómo está el food cost de tu negocio y qué lo está afectando, la herramienta de diagnóstico gratuito puede darte una primera foto en menos de cinco minutos.</p>
 
@@ -351,7 +351,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Sin escandallo no hay carta inteligente</h2>
 
-<p>El escandallo no es una herramienta contable. Es una herramienta de diseño de negocio. Cuando tienes los costes de todos tus platos calculados, puedes diseñar una carta que equilibre rentabilidad y atractivo gastronómico. Puedes identificar qué platos te interesa potenciar, cuáles deberías reformular y cuáles simplemente no tienen sentido mantener.</p>
+<p>El escandallo no es una herramienta contable. Es una herramienta de diseño de negocio. Cuando tienes los costes de todos tus platos calculados, puedes diseñar una carta que equilibre <a href="/rentabilidad-restaurantes">rentabilidad</a> y atractivo gastronómico. Puedes identificar qué platos te interesa potenciar, cuáles deberías reformular y cuáles simplemente no tienen sentido mantener.</p>
 
 <p>Un restaurante con escandallos actualizados toma decisiones de carta basadas en datos. Un restaurante sin escandallos toma decisiones basadas en intuición. Y en hostelería, la intuición sola es muy cara.</p>
 
@@ -423,7 +423,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>En restauración hay un indicador combinado que me parece especialmente útil: el prime cost, que es la suma del food cost y el labour cost. Si tu prime cost supera el 65%–70% de las ventas, tienes muy poco margen para cubrir el resto de gastos fijos y generar beneficio.</p>
 
-<p>Gestionar el prime cost como un todo, en lugar de mirar food cost y labour cost por separado, te da una visión más completa de la salud económica de tu negocio.</p>
+<p>Gestionar el prime cost como un todo, en lugar de mirar food cost y labour cost por separado, te da una visión más completa de la <a href="/rentabilidad-restaurantes">rentabilidad de tu negocio</a>.</p>
 
 <p>Si quieres saber cómo está el coste de personal de tu restaurante y si hay margen de mejora, el diagnóstico gratuito puede darte una primera orientación en menos de cinco minutos.</p>
 
@@ -487,7 +487,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>El margen se construye en los detalles</h2>
 
-<p>No existe una sola palanca que resuelva un problema de margen. Casi siempre es la combinación de varias mejoras moderadas lo que genera un cambio real. Una reducción del food cost del 2%, una mejora de la mezcla de ventas, una reducción de mermas del 1% y una optimización de turnos pueden sumarse para transformar la rentabilidad de un negocio.</p>
+<p>No existe una sola palanca que resuelva un problema de margen. Casi siempre es la combinación de varias mejoras moderadas lo que genera un cambio real. Una reducción del food cost del 2%, una mejora de la mezcla de ventas, una reducción de mermas del 1% y una optimización de turnos pueden sumarse para transformar la <a href="/rentabilidad-restaurantes">rentabilidad de un negocio</a>.</p>
 
 <p>Por eso el diagnóstico es tan importante. Antes de actuar, hay que saber exactamente dónde están las oportunidades de mejora más grandes para tu negocio concreto.</p>
 
@@ -565,7 +565,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>"No lo entiendo, estamos siempre llenos." Lo he escuchado más veces de las que puedo contar. Y siempre digo lo mismo: llenar el restaurante y ganar dinero con el restaurante son dos cosas distintas. Relacionadas, pero distintas.</p>
 
-<p>La ocupación es una condición necesaria para la rentabilidad, pero no suficiente. Puedes tener el restaurante lleno y perder dinero. Y puedes tener el restaurante a media capacidad y ser rentable. La diferencia está en lo que pasa entre que el cliente entra por la puerta y que el dinero llega a tu cuenta.</p>
+<p>La ocupación es una condición necesaria para la <a href="/rentabilidad-restaurantes">rentabilidad</a>, pero no suficiente. Puedes tener el restaurante lleno y perder dinero. Y puedes tener el restaurante a media capacidad y ser rentable. La diferencia está en lo que pasa entre que el cliente entra por la puerta y que el dinero llega a tu cuenta.</p>
 
 <h2>El error más común: confundir facturación con rentabilidad</h2>
 
@@ -615,7 +615,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min",
     coverImage:
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1792&q=80",
-    body: `<p>Abrir un restaurante es uno de los proyectos empresariales más exigentes que existen. Requiere inversión económica importante, mucho tiempo, energía y una capacidad de gestionar incertidumbre que no todo el mundo tiene. Y aun así, cada año miles de personas deciden hacerlo.</p>
+    body: `<p><a href="/abrir-un-restaurante">Abrir un restaurante</a> es uno de los proyectos empresariales más exigentes que existen. Requiere inversión económica importante, mucho tiempo, energía y una capacidad de gestionar incertidumbre que no todo el mundo tiene. Y aun así, cada año miles de personas deciden hacerlo.</p>
 
 <p>El problema no es la falta de ilusión ni de esfuerzo. El problema, casi siempre, es que los errores más costosos se cometen antes de abrir. En la fase de planificación, cuando todavía hay margen para corregir, pero también cuando la urgencia y la emoción del proyecto hacen más difícil ver con claridad.</p>
 
@@ -685,7 +685,7 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1792&q=80",
     body: `<p>Si tuvieras que elegir un solo indicador para saber si tu restaurante está en buena forma económica, ese indicador sería el prime cost. No el food cost solo, no el labour cost solo, sino los dos juntos. Porque en hostelería, los dos grandes costes variables son la materia prima y el personal, y gestionarlos por separado sin ver cómo interactúan es perder la mitad de la información.</p>
 
-<p>El prime cost es la suma del coste de materia prima y el coste de personal, expresada como porcentaje de las ventas. Es el indicador que mejor refleja la eficiencia operativa de un restaurante y el que más impacto tiene en la rentabilidad final.</p>
+<p>El prime cost es la suma del coste de materia prima y el coste de personal, expresada como porcentaje de las ventas. Es el indicador que mejor refleja la eficiencia operativa de un restaurante y el que más impacto tiene en la <a href="/rentabilidad-restaurantes">rentabilidad</a> final.</p>
 
 <h2>Cómo se calcula el prime cost</h2>
 
