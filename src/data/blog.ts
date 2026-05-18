@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     category: "Rentabilidad",
     date: "2026-05-18",
     readTime: "8 min",
-    coverImage: "/food-cost.png",
+    coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1792&q=80",
     body: `<p>Hay una pregunta que me hacen casi siempre en la primera sesión con un propietario: "¿Por qué vendo bien y aun así no me queda dinero a fin de mes?" La respuesta, en la mayoría de los casos, está en el food cost. No porque sea el único problema, sino porque es el primero que hay que entender.</p>
 
 <p>El food cost es el porcentaje de tus ingresos que se va en materia prima. Si vendes 10.000 euros al mes y gastas 3.500 en comida, tu food cost es del 35%. Parece simple. Y lo es, si se calcula bien. El problema es que muy pocos restaurantes lo calculan bien.</p>
