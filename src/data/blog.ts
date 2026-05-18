@@ -148,6 +148,76 @@ export const blogPosts: BlogPost[] = [
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
+    slug: "labour-cost-en-hosteleria-cuanto-gastar-en-personal",
+    title: "Labour cost en hostelería: cuánto deberías gastar en personal",
+    excerpt:
+      "Aprende qué es el labour cost, cómo calcularlo y cuánto debería representar el coste de personal en un restaurante o negocio de hostelería rentable.",
+    category: "Rentabilidad",
+    date: "2026-05-18",
+    readTime: "9 min",
+    coverImage:
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1792&q=80",
+    body: `<p>El coste de personal es, en la mayoría de los restaurantes, el gasto más grande después de la materia prima. Y también el más difícil de gestionar, porque detrás de cada número hay personas, horarios, contratos y decisiones que tienen consecuencias reales.</p>
+
+<p>El labour cost, o coste laboral, es el porcentaje de tus ingresos que se destina a pagar al equipo. Incluye salarios, seguridad social, pagas extras y cualquier otro coste asociado a tener personas trabajando en tu negocio. Si no lo mides, no lo controlas. Y si no lo controlas, puede comerse tu margen sin que te des cuenta.</p>
+
+<h2>Cómo se calcula el labour cost</h2>
+
+<p>La fórmula es directa:</p>
+
+<p><strong>Labour cost (%) = (Coste total de personal / Ventas) × 100</strong></p>
+
+<p>Si en un mes pagas 12.000 euros en personal y facturas 40.000 euros, tu labour cost es del 30%. Parece sencillo, pero hay un error frecuente: incluir solo los salarios brutos y olvidar la seguridad social a cargo de la empresa, que en España supone aproximadamente un 30% adicional sobre el salario bruto.</p>
+
+<p>Si un camarero cobra 1.500 euros brutos al mes, el coste real para el negocio es de aproximadamente 1.950 euros contando la seguridad social. Ese es el número que tiene que entrar en el cálculo, no el salario bruto.</p>
+
+<h2>¿Cuál debería ser tu labour cost?</h2>
+
+<p>Como ocurre con el food cost, no existe un número único válido para todos los negocios. Depende del tipo de restaurante, del nivel de servicio, del ticket medio y del modelo operativo. Pero hay rangos de referencia útiles.</p>
+
+<p>En restauración a la carta con servicio completo, un labour cost entre el 28% y el 35% suele ser sostenible. En restaurantes de menú del día o de alto volumen con servicio más sencillo, puede bajar al 22%–28%. En negocios de alta gastronomía con equipos grandes y altamente cualificados, puede superar el 40% si el ticket lo permite.</p>
+
+<p>Lo que sí puedo decirte con certeza es que si tu labour cost supera el 40% de forma sostenida en un restaurante de ticket medio, tienes un problema estructural que no se resuelve solo trabajando más horas.</p>
+
+<h2>Por qué el labour cost se descontrola</h2>
+
+<p>He visto restaurantes con un labour cost del 48% que no entendían por qué sus números no cuadraban. Cuando analizábamos la situación, las causas siempre eran parecidas.</p>
+
+<p>La primera es la sobredotación de turnos. Tener más personal del necesario para el volumen de trabajo real. Esto ocurre especialmente cuando los horarios se planifican por costumbre y no por previsión de ventas.</p>
+
+<p>La segunda es la falta de flexibilidad en la plantilla. Una estructura muy rígida, con todo el equipo a jornada completa sin posibilidad de ajustar según la demanda, hace muy difícil controlar el coste cuando las ventas bajan.</p>
+
+<p>La tercera es no medir la productividad. ¿Cuántos euros de venta genera cada hora trabajada? Si no tienes ese dato, no sabes si tu equipo está dimensionado correctamente para el negocio que tienes.</p>
+
+<p>La cuarta, y menos evidente, es el absentismo no gestionado. Las bajas, las sustituciones de última hora y las horas extra no planificadas pueden disparar el coste laboral real muy por encima del presupuestado.</p>
+
+<h2>La métrica que más me gusta: ventas por hora trabajada</h2>
+
+<p>El labour cost en porcentaje es útil, pero tiene un límite: no te dice si el problema es de ventas o de personal. Si tus ventas bajan un mes, tu labour cost sube automáticamente aunque hayas mantenido exactamente el mismo equipo.</p>
+
+<p>Por eso me gusta complementarlo con las ventas por hora trabajada. Es simple: divide las ventas del período entre las horas totales trabajadas por el equipo. Si ese número baja de forma sostenida, tienes un problema de productividad o de dimensionamiento.</p>
+
+<h2>Reducir el labour cost sin destruir el equipo</h2>
+
+<p>Cuando el labour cost es demasiado alto, la reacción instintiva es recortar personal. A veces es necesario, pero casi nunca es la primera medida que hay que tomar.</p>
+
+<p>Antes de recortar, hay que revisar la planificación de turnos. ¿Están los turnos alineados con los picos de demanda reales? ¿Hay momentos del día o de la semana donde tienes personal de más y momentos donde tienes personal de menos?</p>
+
+<p>Hay que revisar también la estructura de contratos. En muchos restaurantes hay margen para introducir más flexibilidad sin perder calidad de servicio ni comprometer los derechos del equipo.</p>
+
+<p>Y hay que revisar los procesos. A veces el equipo es suficiente pero los procesos son tan ineficientes que se necesitan más personas para hacer el mismo trabajo. Mejorar los flujos de cocina o de sala puede reducir las horas necesarias sin tocar la plantilla.</p>
+
+<h2>El labour cost y el food cost juntos</h2>
+
+<p>En restauración hay un indicador combinado que me parece especialmente útil: el prime cost, que es la suma del food cost y el labour cost. Si tu prime cost supera el 65%–70% de las ventas, tienes muy poco margen para cubrir el resto de gastos fijos y generar beneficio.</p>
+
+<p>Gestionar el prime cost como un todo, en lugar de mirar food cost y labour cost por separado, te da una visión más completa de la salud económica de tu negocio.</p>
+
+<p>Si quieres saber cómo está el coste de personal de tu restaurante y si hay margen de mejora, el diagnóstico gratuito puede darte una primera orientación en menos de cinco minutos.</p>
+
+<p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
+  },
+  {
     slug: "por-que-tu-restaurante-no-es-rentable",
     title: "Por qué tu restaurante llena pero no es rentable",
     excerpt:
