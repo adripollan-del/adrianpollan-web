@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -78,6 +79,17 @@ export default function Navigation() {
               ))}
             </nav>
 
+            {/* Desktop CTA */}
+            <a
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Navegación desktop" })}
+              className="hidden lg:inline-flex items-center px-5 py-2 btn-amber text-white text-sm font-semibold tracking-wide rounded-sm"
+            >
+              Diagnóstico gratuito
+            </a>
+
             {/* Mobile hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -97,11 +109,25 @@ export default function Navigation() {
         }`}
       >
         <nav className="flex flex-col items-center justify-center h-full gap-8 px-8">
+          {/* Mobile CTA — primer elemento destacado */}
+          <a
+            href="https://diagnostico.adrianpollan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Navegación móvil" })}
+            style={{ transitionDelay: isOpen ? "0ms" : "0ms" }}
+            className={`inline-flex items-center px-7 py-3 btn-amber text-white text-lg font-semibold tracking-wide rounded-sm transition-all duration-300 ${
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            }`}
+          >
+            Diagnóstico gratuito
+          </a>
+
           {navLinks.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
-              style={{ transitionDelay: isOpen ? `${i * 60}ms` : "0ms" }}
+              style={{ transitionDelay: isOpen ? `${(i + 1) * 60}ms` : "0ms" }}
               className={`font-display text-3xl font-light tracking-wide transition-all duration-300 ${
                 isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               } ${pathname === link.href ? "text-amber" : "text-cream hover:text-amber"}`}
