@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, CheckCircle, Quote } from "lucide-react";
+import { ArrowRight, CheckCircle, Quote, X } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
@@ -221,12 +221,43 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── PARA QUIÉN TRABAJO — fondo blanco ────────────────────── */}
+      {/* ── QUÉ NO HAGO — fondo blanco ───────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+            05 — Qué no hago
+          </p>
+          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            Qué no hago
+          </h2>
+          <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
+            Tan importante como saber qué hago es saber qué no hago.
+          </p>
+          <ul className="space-y-5">
+            {[
+              "No vendo plantillas genéricas que sirven para cualquier negocio y para ninguno en concreto.",
+              "No hago informes largos que nadie implementa. El trabajo real ocurre en la ejecución, no en el papel.",
+              "No prometo resultados sin datos. Antes de hablar de mejoras, hay que entender qué está pasando realmente.",
+              "No acepto proyectos donde no creo que pueda aportar valor real. Si no encajamos, te lo digo en la primera conversación.",
+              "No desaparezco después de entregar un diagnóstico. Me quedo en el proceso mientras tenga sentido estar.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-amber/10 flex items-center justify-center">
+                  <X size={12} className="text-amber" strokeWidth={2.5} />
+                </span>
+                <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── PARA QUIÉN TRABAJO — fondo crema oscuro ──────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-              05 — Para quién trabajo
+              06 — Para quién trabajo
             </p>
             <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
               Si reconoces tu situación aquí, probablemente podemos trabajar juntos.
