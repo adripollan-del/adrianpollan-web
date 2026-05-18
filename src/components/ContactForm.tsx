@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -14,9 +14,17 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // TODO: wire up to email service (e.g. Resend, Formspree)
-    await new Promise((r) => setTimeout(r, 1000));
-    setStatus("sent");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "sent") {
@@ -27,6 +35,28 @@ export default function ContactForm() {
         <p className="font-body text-ink/65 text-base">
           Gracias por escribirme. Te respondo personalmente en menos de 24 horas.
         </p>
+      </div>
+    );
+  }
+
+  if (status === "error") {
+    return (
+      <div className="flex flex-col items-start gap-4 py-8">
+        <AlertCircle size={36} className="text-red-500" />
+        <h3 className="font-display text-navy text-2xl font-semibold">Algo ha fallado</h3>
+        <p className="font-body text-ink/65 text-base">
+          No se ha podido enviar el mensaje. Por favor escríbeme directamente a{" "}
+          <a href="mailto:adrian@adrianpollan.com" className="text-amber underline">
+            adrian@adrianpollan.com
+          </a>
+          .
+        </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="font-body text-sm text-navy/60 hover:text-navy transition-colors underline"
+        >
+          Intentar de nuevo
+        </button>
       </div>
     );
   }
