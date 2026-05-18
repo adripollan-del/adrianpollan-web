@@ -606,8 +606,8 @@ export const blogPosts: BlogPost[] = [
 <p><a href="https://diagnostico.adrianpollan.com" target="_blank" rel="noopener noreferrer">Haz el diagnóstico gratuito de tu restaurante →</a></p>`,
   },
   {
-    slug: "errores-mas-comunes-al-abrir-un-restaurante",
-    title: "Los errores más comunes al abrir un restaurante y cómo evitarlos",
+    slug: "los-10-errores-que-matan-una-apertura",
+    title: "Los 10 errores que matan una apertura antes de los 6 meses",
     excerpt:
       "Descubre los errores más frecuentes al abrir un restaurante y cómo evitarlos antes de comprometer tu inversión. Guía práctica basada en experiencia real.",
     category: "Aperturas",
@@ -662,6 +662,18 @@ export const blogPosts: BlogPost[] = [
 <p>Un restaurante que abre directamente al público sin haber hecho servicios de prueba internos está improvisando en el momento más crítico. El primer servicio real nunca sale perfecto, pero hay una diferencia enorme entre los problemas que se detectan en un servicio de prueba y los que se detectan delante de clientes reales.</p>
 
 <p>Los servicios de prueba permiten ajustar los tiempos de cocina, detectar cuellos de botella en el flujo de sala, practicar la comunicación entre cocina y sala y dar confianza al equipo antes de la presión real.</p>
+
+<h2>Error 7: No validar el concepto con clientes reales antes de abrir</h2>
+<p>Muchos emprendedores diseñan el concepto en papel sin contrastarlo con el mercado real. Una encuesta informal, una prueba de carta con personas del perfil objetivo o un pop-up temporal pueden revelar problemas de posicionamiento antes de comprometer la inversión.</p>
+
+<h2>Error 8: Ignorar la estacionalidad y los ciclos de demanda de la zona</h2>
+<p>Un restaurante en una zona turística tiene una dinámica completamente distinta a uno en un barrio residencial. No tener en cuenta la estacionalidad al calcular la viabilidad financiera puede llevar a abrir con expectativas irreales para los primeros meses.</p>
+
+<h2>Error 9: No tener un plan de contingencia para los primeros meses</h2>
+<p>Los primeros meses de operación casi nunca van según el plan. El restaurante necesita tiempo para que el boca a boca funcione, para que el equipo se asiente y para que la operativa se afine. Sin un colchón financiero y un plan B, cualquier imprevisto puede ser fatal.</p>
+
+<h2>Error 10: Subestimar el tiempo que tarda en llegar el punto de equilibrio</h2>
+<p>La mayoría de restaurantes tardan entre seis y doce meses en alcanzar el punto de equilibrio. Abrir con la expectativa de ser rentable en el primer o segundo mes es uno de los errores más frecuentes y más costosos, porque lleva a tomar decisiones precipitadas antes de que el negocio haya tenido tiempo de estabilizarse.</p>
 
 <h2>La apertura es una fase, no un destino</h2>
 

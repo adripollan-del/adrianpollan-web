@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
           "/blog/por-que-tu-restaurante-no-es-rentable-aunque-este-lleno",
         permanent: true,
       },
+      {
+        source: "/blog/errores-mas-comunes-al-abrir-un-restaurante",
+        destination: "/blog/los-10-errores-que-matan-una-apertura",
+        permanent: true,
+      },
     ];
   },
   images: {
