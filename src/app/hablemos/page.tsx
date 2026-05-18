@@ -241,12 +241,14 @@ export default function HablemosPage() {
             Sin presión, sin compromisos.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/hablemos#calendly"
+            <a
+              href="https://calendly.com/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             >
               Reserva tu sesión gratuita <ArrowRight size={15} />
-            </Link>
+            </a>
             <a
               href={`mailto:adripollan@gmail.com`}
               className="font-body text-sm text-navy/60 hover:text-navy transition-colors"

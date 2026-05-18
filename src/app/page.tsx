@@ -98,13 +98,15 @@ export default function Home() {
                 Haz el diagnóstico gratuito
                 <ArrowRight size={16} />
               </a>
-              <Link
-                href="/hablemos"
+              <a
+                href="https://calendly.com/adrianpollan"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-cream/35 text-cream text-sm font-medium tracking-wide hover:bg-cream/10 transition-colors"
               >
                 Reserva una sesión gratuita
                 <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -428,13 +430,15 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/hablemos"
+            <a
+              href="https://calendly.com/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             >
               Reserva tu sesión gratuita
               <ArrowRight size={16} />
-            </Link>
+            </a>
             <a
               href="https://diagnostico.adrianpollan.com"
               target="_blank"

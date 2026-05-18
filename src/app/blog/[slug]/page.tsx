@@ -165,12 +165,14 @@ export default async function BlogPostPage({ params }: Props) {
             >
               Hacer el diagnóstico gratuito <ExternalLink size={14} />
             </a>
-            <Link
-              href="/hablemos"
+            <a
+              href="https://calendly.com/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
             >
               O reserva una sesión →
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -146,12 +146,14 @@ export default function ServiciosPage() {
                   Hacer el diagnóstico
                   <ExternalLink size={15} />
                 </a>
-                <Link
-                  href="/hablemos"
+                <a
+                  href="https://calendly.com/adrianpollan"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors"
                 >
                   O reserva 20 minutos <ArrowRight size={15} />
-                </Link>
+                </a>
               </div>
             </div>
 

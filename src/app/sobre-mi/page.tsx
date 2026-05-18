@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -253,12 +252,14 @@ export default function SobreMiPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
-              <Link
-                href="/hablemos"
+              <a
+                href="https://calendly.com/adrianpollan"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               >
                 Reserva una sesión gratuita de 20 minutos <ArrowRight size={15} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

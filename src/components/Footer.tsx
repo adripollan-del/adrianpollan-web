@@ -58,12 +58,14 @@ export default function Footer() {
             </a>
             {/* Secondary CTA: Calendly — texto simple */}
             <div className="mt-5">
-              <Link
-                href="/hablemos"
+              <a
+                href="https://calendly.com/adrianpollan"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-cream/50 hover:text-amber transition-colors underline underline-offset-4"
               >
                 O reserva una sesión de 20 minutos →
-              </Link>
+              </a>
             </div>
           </div>
 

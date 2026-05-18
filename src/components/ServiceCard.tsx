@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { ChevronDown, Check, ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
@@ -94,13 +93,15 @@ export default function ServiceCard({
             </p>
 
             {/* Botón al final */}
-            <Link
-              href="/hablemos"
+            <a
+              href="https://calendly.com/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
             >
               Reserva una sesión gratuita
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
