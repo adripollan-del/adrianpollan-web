@@ -52,7 +52,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center opacity-100 hover:opacity-80 transition-opacity">
               <Image
                 src="/logo-transparente.png"
-                alt="Adrián Pollán"
+                alt="Adrián Pollán — Consultor de hostelería y restaurantes"
                 width={180}
                 height={44}
                 className="h-9 lg:h-10 w-auto"

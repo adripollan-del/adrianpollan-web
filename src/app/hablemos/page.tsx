@@ -26,7 +26,7 @@ export default function HablemosPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1756564800880-7a24d6c6cc15?auto=format&fit=crop&w=1920&q=80"
-          alt="Interior de bar con botellas iluminadas tenuemente"
+          alt="Interior de bar de hostelería — consultor especializado en restaurantes y F&B"
           fill
           priority
           sizes="100vw"
@@ -43,8 +43,7 @@ export default function HablemosPage() {
               Hablemos.
             </h1>
             <p className="font-body text-cream/60 text-lg leading-relaxed mb-4">
-              Si tienes un negocio de hostelería y sientes que algo podría
-              funcionar mejor, este es el sitio por donde empezar.
+              Habla con un consultor especializado en restaurantes y F&amp;B.
             </p>
             <p className="font-body text-cream/45 text-base leading-relaxed mb-10">
               No hace falta tener todo claro antes de contactar. La mayoría de

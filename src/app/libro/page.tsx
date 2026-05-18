@@ -42,7 +42,7 @@ export default function LibroPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1750943082452-c714763f73b2?auto=format&fit=crop&w=1920&q=80"
-          alt="Plato gourmet presentado por un chef"
+          alt="El Método ADRIÁN — libro de consultoría para restaurantes de Adrián Pollán"
           fill
           priority
           sizes="100vw"
@@ -145,7 +145,7 @@ export default function LibroPage() {
             <div className="relative h-[400px] lg:h-full rounded-xl overflow-hidden lg:col-span-2">
               <Image
                 src="/libro-aprendizaje.png"
-                alt="Lo que me enseñó perderlo todo"
+                alt="Adrián Pollán comparte su experiencia en gestión y recuperación de negocios de hostelería"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

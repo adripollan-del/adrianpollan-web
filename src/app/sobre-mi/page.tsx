@@ -24,7 +24,7 @@ export default function SobreMiPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1613929298076-735f9cf15ed2?auto=format&fit=crop&w=1920&q=80"
-          alt="Copa de vino tinto en ambiente de restaurante"
+          alt="Ambiente de restaurante de hostelería — consultor con más de 20 años de experiencia"
           fill
           priority
           sizes="100vw"
@@ -60,7 +60,7 @@ export default function SobreMiPage() {
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                 <Image
                   src="/Adrian Sobre Mi.png"
-                  alt="Adrián Pollán — consultor en hostelería y restauración"
+                  alt="Adrián Pollán, consultor de hostelería y restaurantes con 20 años de experiencia"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"
@@ -97,7 +97,7 @@ export default function SobreMiPage() {
               <div>
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">01 — Mi historia</p>
                 <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">
-                  Empecé desde dentro. Y eso lo cambia todo.
+                  Consultor de hostelería con más de 20 años de experiencia operativa
                 </h2>
                 <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
                   <p>

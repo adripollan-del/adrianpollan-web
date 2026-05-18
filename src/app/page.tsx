@@ -73,7 +73,7 @@ export default function Home() {
         {/* Background photo */}
         <Image
           src={PHOTOS.hero}
-          alt="Restaurante profesional — consultoría de hostelería Adrián Pollán"
+          alt="Interior de restaurante profesional — consultoría de hostelería y restaurantes"
           fill
           priority
           sizes="100vw"
@@ -148,7 +148,7 @@ export default function Home() {
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/Adrian Sobre Mi.png"
-                alt="Adrián Pollán — consultor en hostelería y restauración"
+                alt="Adrián Pollán, consultor de hostelería y restaurantes con 20 años de experiencia"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top"
@@ -192,7 +192,7 @@ export default function Home() {
               ¿Para quién?
             </p>
             <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
-              ¿Reconoces alguna de estas situaciones?
+              ¿Necesitas un consultor para tu restaurante?
             </h2>
           </div>
 
@@ -227,7 +227,7 @@ export default function Home() {
               Servicios
             </p>
             <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-              Tres formas de trabajar juntos.
+              Mis servicios como consultor de restaurantes
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed">
               Según el momento en el que está tu negocio, el acompañamiento

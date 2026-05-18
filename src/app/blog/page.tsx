@@ -24,7 +24,7 @@ export default function BlogPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1709548145082-04d0cde481d4?auto=format&fit=crop&w=1920&q=80"
-          alt="Interior de restaurante con iluminación tenue"
+          alt="Interior de restaurante con iluminación cálida — blog de consultoría para hostelería"
           fill
           priority
           sizes="100vw"
@@ -39,7 +39,7 @@ export default function BlogPage() {
               Blog
             </p>
             <h1 className="font-display text-cream text-5xl lg:text-7xl font-light leading-[1.05] mb-6">
-              Rentabilidad, gestión<br />y operativa para restaurantes
+              Blog de consultoría para<br />restaurantes y hostelería
             </h1>
             <p className="font-display text-cream/50 text-xl lg:text-2xl italic mb-5">
               Ideas que vienen del terreno, no de un manual.

@@ -120,7 +120,7 @@ export default function ServiciosPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1753078944130-2fad814a01d2?auto=format&fit=crop&w=1920&q=80"
-          alt="Cocina profesional con chefs en pleno servicio"
+          alt="Cocina profesional en servicio — consultoría para restaurantes y hostelería"
           fill
           priority
           sizes="100vw"
@@ -135,8 +135,8 @@ export default function ServiciosPage() {
               Servicios
             </p>
             <h1 className="font-display text-cream text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
-              Cómo trabajo<br />
-              <span className="font-semibold">contigo</span>
+              Consultoría para restaurantes<br />
+              <span className="font-semibold">y negocios de hostelería</span>
             </h1>
             <p className="font-body text-cream/60 text-lg leading-relaxed">
               Tres formas de colaborar, según el momento en que se encuentra
