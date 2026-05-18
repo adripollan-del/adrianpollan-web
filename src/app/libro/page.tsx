@@ -100,7 +100,7 @@ export default function LibroPage() {
       {/* ── MI HISTORIA — fondo blanco ───────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-stretch">
             <div className="lg:col-span-3">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 Mi historia
@@ -133,7 +133,7 @@ export default function LibroPage() {
               </div>
             </div>
 
-            <div className="relative h-[400px] rounded-xl overflow-hidden lg:col-span-2">
+            <div className="relative h-[400px] lg:h-full rounded-xl overflow-hidden lg:col-span-2">
               <Image
                 src="/libro-aprendizaje.png"
                 alt="Lo que me enseñó perderlo todo"
