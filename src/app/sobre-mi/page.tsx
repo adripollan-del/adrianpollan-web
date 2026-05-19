@@ -4,6 +4,7 @@ import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, Quote, X } from "lucide-react";
 import LinkedinIcon from "@/components/LinkedinIcon";
+import MetodoADRIAN from "@/components/MetodoADRIAN";
 
 export const metadata: Metadata = {
   title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
@@ -187,6 +188,8 @@ export default function SobreMiPage() {
           </div>
         </div>
       </section>
+
+      <MetodoADRIAN />
 
       {/* ── QUÉ ME DIFERENCIA — fondo crema oscuro ──────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">

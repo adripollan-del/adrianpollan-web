@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield } from "lucide-react";
+import MapaDiagnostico from "@/components/MapaDiagnostico";
 import LinkedinIcon from "@/components/LinkedinIcon";
 
 const Stats = dynamic(() => import("@/components/Stats"));
@@ -221,6 +222,8 @@ export default function Home() {
           </TrackingLink>
         </div>
       </section>
+
+      <MapaDiagnostico />
 
       {/* ── INTRODUCCIÓN PERSONAL ──────────────────────────────────── */}
       <section className="bg-cream-dark py-16 lg:py-20">

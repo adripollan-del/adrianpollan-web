@@ -5,6 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { services } from "@/data/services";
 import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
+import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
 
 const faqs = [
   {
@@ -380,6 +381,8 @@ export default function ServiciosPage() {
           </p>
         </div>
       </section>
+
+      <ProcesoDeTrabajo />
 
       {/* ── FAQ — fondo crema oscuro ─────────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">

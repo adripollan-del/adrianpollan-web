@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw, BookOpen, Target, Users } from "lucide-react";
 import WaitlistForm from "@/components/WaitlistForm";
+import MetodoADRIAN from "@/components/MetodoADRIAN";
 
 export const metadata: Metadata = {
   title: "El Método ADRIÁN — Libro de Gestión para Restaurantes y Hostelería",
@@ -201,6 +202,8 @@ export default function LibroPage() {
           </div>
         </div>
       </section>
+
+      <MetodoADRIAN />
 
       {/* ── QUÉ ES — fondo blanco ────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">

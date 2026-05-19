@@ -4,6 +4,8 @@ import ContactForm from "@/components/ContactForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
 import TrackingLink from "@/components/TrackingLink";
 import { ExternalLink, ArrowRight, Calendar, Mail, Zap } from "lucide-react";
+import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
+import MapaDiagnostico from "@/components/MapaDiagnostico";
 
 export const metadata: Metadata = {
   title: "Habla con Adrián Pollán | Sesión Gratuita de Consultoría para Hostelería",
@@ -69,6 +71,8 @@ export default function HablemosPage() {
         </div>
       </section>
 
+      <ProcesoDeTrabajo />
+
       {/* ── DIAGNÓSTICO IA — fondo blanco ─────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
@@ -117,6 +121,8 @@ export default function HablemosPage() {
           </p>
         </div>
       </section>
+
+      <MapaDiagnostico />
 
       {/* ── CALENDLY — fondo crema oscuro ─────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
