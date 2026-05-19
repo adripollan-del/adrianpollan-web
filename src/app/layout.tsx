@@ -6,7 +6,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import ClarityScript from "@/components/ClarityScript";
-import ResourceHints from "@/components/ResourceHints";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -151,7 +150,6 @@ export default function RootLayout({
   return (
     <html lang="es" className={inter.variable}>
       <body>
-        <ResourceHints />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
