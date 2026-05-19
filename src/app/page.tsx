@@ -253,7 +253,7 @@ export default function Home() {
                   Conocer mi historia <ArrowRight size={14} />
                 </Link>
                 <a
-                  href="https://www.linkedin.com/in/adrianpollan"
+                  href="https://www.linkedin.com/in/adrianpollanfernandez"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-body text-sm text-ink/50 hover:text-navy transition-colors"

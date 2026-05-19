@@ -473,7 +473,7 @@ export default function SobreMiPage() {
               Encuéntrame también en
             </h2>
             <a
-              href="https://www.linkedin.com/in/adrianpollan"
+              href="https://www.linkedin.com/in/adrianpollanfernandez"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 group"

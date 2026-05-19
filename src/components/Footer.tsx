@@ -27,7 +27,7 @@ export default function Footer() {
               Restaurantes más rentables, mejor gestionados.
             </p>
             <a
-              href="https://www.linkedin.com/in/adrianpollan"
+              href="https://www.linkedin.com/in/adrianpollanfernandez"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn de Adrián Pollán"
