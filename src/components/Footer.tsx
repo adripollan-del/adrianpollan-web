@@ -76,10 +76,9 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-body text-xs uppercase tracking-widest text-amber mb-5">Newsletter</h3>
+            <h3 className="font-body text-xs uppercase tracking-widest text-amber mb-5">Una idea práctica cada semana</h3>
             <p className="text-sm text-cream/60 mb-5">
-              Ideas prácticas sobre gestión hostelera, directamente a tu bandeja
-              de entrada. Sin spam.
+              Rentabilidad, costes y gestión para restaurantes. Sin spam.
             </p>
             <NewsletterForm />
           </div>

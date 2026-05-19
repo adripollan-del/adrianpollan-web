@@ -57,7 +57,7 @@ export default function NewsletterForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="tu@email.com"
+          placeholder="Tu email"
           disabled={status === "sending"}
           aria-label="Tu email"
           className="flex-1 bg-cream/5 border border-cream/20 px-4 py-2.5 font-body text-sm text-cream placeholder:text-cream/40 focus:outline-none focus:border-amber transition-colors disabled:opacity-60"
@@ -67,7 +67,7 @@ export default function NewsletterForm() {
           disabled={status === "sending"}
           className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-amber text-cream text-sm font-medium tracking-wide hover:bg-amber-hover disabled:opacity-60 transition-colors whitespace-nowrap"
         >
-          {status === "sending" ? "..." : "Suscribirme"}
+          {status === "sending" ? "..." : "Quiero recibirlo"}
           {status === "idle" && <ArrowRight size={14} />}
         </button>
       </div>

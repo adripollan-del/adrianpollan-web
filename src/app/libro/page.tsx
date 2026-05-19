@@ -305,18 +305,16 @@ export default function LibroPage() {
                 Próximamente
               </p>
               <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                Sé el primero en saber cuándo sale.
+                Sé el primero en saber cuándo sale
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
-                El libro está en proceso de publicación. Si quieres recibir un
-                aviso en cuanto esté disponible, déjame tu email. Sin spam.
-                Solo lo que importa, cuando importa.
+                Déjame tu email y te aviso cuando El Método ADRIÁN esté disponible.
               </p>
             </div>
             <div>
               <WaitlistForm />
               <p className="font-body text-navy/40 text-xs mt-4">
-                Sin spam. Solo el aviso cuando el libro esté listo.
+                Sin spam. Solo lo que importa, cuando importa.
               </p>
             </div>
           </div>
