@@ -25,6 +25,16 @@ const breadcrumbSchema = {
   ],
 };
 
+const clusterArticles = [
+  {
+    slug: "los-10-errores-que-matan-una-apertura",
+    title: "Los 10 errores que matan una apertura antes de los 6 meses",
+    excerpt:
+      "Los errores más costosos en una apertura se cometen antes de abrir. Aquí están los diez patrones que se repiten y cómo evitarlos.",
+    readTime: "10 min",
+  },
+];
+
 const phases = [
   {
     num: "01",
@@ -215,8 +225,42 @@ export default function AbrirUnRestaurantePage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
+      {/* ── ARTÍCULOS DEL CLUSTER — crema oscuro ─────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Profundiza en el tema
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Artículos relacionados
+            </h2>
+          </div>
+          <div className="max-w-2xl">
+            {clusterArticles.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/blog/${a.slug}`}
+                className="group flex flex-col bg-white border border-navy/10 rounded-xl p-8 hover:border-amber/40 transition-colors"
+              >
+                <p className="font-body text-amber/70 text-xs uppercase tracking-wide mb-3">
+                  {a.readTime} de lectura
+                </p>
+                <h3 className="font-display text-navy text-xl font-semibold leading-snug mb-3 group-hover:text-amber transition-colors">
+                  {a.title}
+                </h3>
+                <p className="font-body text-ink/60 text-sm leading-relaxed mb-5">{a.excerpt}</p>
+                <span className="inline-flex items-center gap-2 font-body text-sm text-amber">
+                  Leer el artículo <ArrowRight size={14} />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Estás pensando en abrir un restaurante?

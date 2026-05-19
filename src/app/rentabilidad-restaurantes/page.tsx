@@ -25,6 +25,49 @@ const breadcrumbSchema = {
   ],
 };
 
+const clusterArticles = [
+  {
+    slug: "como-calcular-el-food-cost-de-tu-restaurante",
+    title: "Cómo calcular el food cost paso a paso",
+    readTime: "8 min",
+  },
+  {
+    slug: "que-es-un-escandallo-y-por-que-lo-necesitas",
+    title: "Qué es un escandallo y por qué lo necesitas",
+    readTime: "9 min",
+  },
+  {
+    slug: "labour-cost-en-hosteleria-cuanto-gastar-en-personal",
+    title: "Labour cost: cuánto deberías gastar en personal",
+    readTime: "9 min",
+  },
+  {
+    slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+    title: "Qué es el prime cost y por qué es el indicador más importante",
+    readTime: "9 min",
+  },
+  {
+    slug: "como-mejorar-el-margen-de-un-restaurante-sin-subir-precios",
+    title: "Cómo mejorar el margen sin subir precios",
+    readTime: "8 min",
+  },
+  {
+    slug: "como-disenar-una-carta-de-restaurante-rentable",
+    title: "Cómo diseñar una carta de restaurante rentable",
+    readTime: "9 min",
+  },
+  {
+    slug: "por-que-tu-restaurante-no-es-rentable-aunque-este-lleno",
+    title: "Por qué tu restaurante no es rentable aunque esté lleno",
+    readTime: "8 min",
+  },
+  {
+    slug: "como-reducir-desperdicio-alimentario-restaurante",
+    title: "Cómo reducir el desperdicio alimentario en un restaurante",
+    readTime: "8 min",
+  },
+];
+
 const concepts = [
   {
     title: "Food cost",
@@ -186,8 +229,43 @@ export default function RentabilidadRestaurantesPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
+      {/* ── ARTÍCULOS DEL CLUSTER — blanco ────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Profundiza en cada concepto
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Artículos relacionados
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {clusterArticles.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/blog/${a.slug}`}
+                className="group flex flex-col justify-between bg-cream-dark border border-navy/10 rounded-xl p-6 hover:border-amber/40 transition-colors"
+              >
+                <div>
+                  <p className="font-body text-amber/70 text-xs uppercase tracking-wide mb-2">
+                    {a.readTime}
+                  </p>
+                  <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4 group-hover:text-amber transition-colors">
+                    {a.title}
+                  </h3>
+                </div>
+                <span className="inline-flex items-center gap-1.5 font-body text-xs text-amber">
+                  Leer <ArrowRight size={12} />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
