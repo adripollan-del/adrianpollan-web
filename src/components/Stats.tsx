@@ -68,7 +68,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-cream-dark py-12 lg:py-16">
+    <section ref={sectionRef} className="bg-navy py-12 lg:py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 text-center">
           {stats.map((s, i) => {
@@ -76,11 +76,11 @@ export default function Stats() {
             return (
               <div key={i} className="flex flex-col items-center">
                 <Icon size={32} strokeWidth={1.5} className="text-amber mb-4" />
-                <div className="font-display text-navy text-5xl lg:text-6xl font-bold leading-none mb-3">
+                <div className="font-display text-amber text-5xl lg:text-6xl font-bold leading-none mb-3">
                   <Counter target={s.value} animate={visible} />
                   {s.suffix}
                 </div>
-                <p className="font-body text-ink/65 text-sm leading-relaxed max-w-xs">
+                <p className="font-body text-cream/65 text-sm leading-relaxed max-w-xs">
                   {s.label}
                 </p>
               </div>
