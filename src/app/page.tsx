@@ -4,7 +4,7 @@ import Link from "next/link";
 import Stats from "@/components/Stats";
 import WaitlistForm from "@/components/WaitlistForm";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote, CheckCircle } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote, CheckCircle, ClipboardList, BarChart2, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Adrián Pollán | Consultor de Hostelería y Restauración",
@@ -143,6 +143,67 @@ export default function Home() {
         {/* Scroll line */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-30">
           <div className="w-px h-12 bg-cream animate-pulse" />
+        </div>
+      </section>
+
+      {/* ── DIAGNÓSTICO — cómo funciona — navy ────────────────────── */}
+      <section className="bg-navy py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-14">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
+              Diagnóstico gratuito
+            </p>
+            <h2 className="font-display text-cream text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
+              El diagnóstico gratuito no es un formulario. Es una primera foto real de tu negocio.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-14">
+            {[
+              {
+                icon: <ClipboardList size={28} className="text-amber" />,
+                title: "Respondes preguntas sobre tu operación",
+                body: "72 preguntas breves organizadas en 8 bloques. No necesitas preparar documentación. Tarda unos 10 minutos.",
+              },
+              {
+                icon: <BarChart2 size={28} className="text-amber" />,
+                title: "Recibes tu score global",
+                body: "Un número entre 0 y 100 que refleja el estado actual de tu negocio en rentabilidad, operativa, equipo y experiencia de cliente.",
+              },
+              {
+                icon: <AlertTriangle size={28} className="text-amber" />,
+                title: "Identificas tus prioridades",
+                body: "Las áreas críticas ordenadas por impacto. Sabes exactamente dónde actuar primero y por qué.",
+              },
+              {
+                icon: <ArrowRight size={28} className="text-amber" />,
+                title: "Decides el siguiente paso",
+                body: "Si quieres profundizar, puedes reservar una sesión gratuita de 20 minutos para revisar los resultados juntos.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="border-t border-amber/20 pt-6">
+                <div className="mb-5">{item.icon}</div>
+                <h3 className="font-display text-cream text-base font-semibold leading-snug mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-body text-cream/55 text-sm leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <TrackingLink
+            href="https://diagnostico.adrianpollan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            eventName="diagnostico_click"
+            eventLabel="Sección diagnóstico home"
+          >
+            Recibir Diagnóstico Gratuito
+            <ArrowRight size={16} />
+          </TrackingLink>
         </div>
       </section>
 
