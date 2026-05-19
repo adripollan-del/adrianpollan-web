@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import Stats from "@/components/Stats";
-import WaitlistForm from "@/components/WaitlistForm";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, Quote, CheckCircle, ClipboardList, BarChart2, AlertTriangle } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle } from "lucide-react";
+
+const Stats = dynamic(() => import("@/components/Stats"));
+const WaitlistForm = dynamic(() => import("@/components/WaitlistForm"));
 
 export const metadata: Metadata = {
   title: "Adrián Pollán | Consultor de Hostelería y Restauración",
