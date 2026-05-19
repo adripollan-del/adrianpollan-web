@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, Check, ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
@@ -12,6 +13,7 @@ interface ServiceCardProps {
   ideal: string;
   closing: string;
   icon: React.ReactNode;
+  href?: string;
 }
 
 export default function ServiceCard({
@@ -22,6 +24,7 @@ export default function ServiceCard({
   ideal,
   closing,
   icon,
+  href,
 }: ServiceCardProps) {
   const [open, setOpen] = useState(false);
 
@@ -104,6 +107,15 @@ export default function ServiceCard({
               Reserva una sesión gratuita
               <ArrowRight size={14} />
             </a>
+
+            {href && (
+              <Link
+                href={href}
+                className="inline-flex items-center justify-center gap-1.5 w-full mt-3 font-body text-sm text-navy/50 hover:text-amber transition-colors"
+              >
+                Ver más detalles <ArrowRight size={13} />
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ export const services = [
     ideal: "Restaurantes que trabajan duro, tienen buena ocupación y sin embargo no ven los números que esperaban.",
     closing: "A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar.",
     image: "/servicio-1.webp",
+    href: "/servicios/auditoria-fb-restaurantes",
   },
   {
     number: "02",
@@ -34,6 +35,7 @@ export const services = [
     ideal: "Negocios que ya funcionan pero que quieren dar un salto real, no cosmético.",
     closing: "Los resultados no vienen de tener el mejor plan. Vienen de implementarlo bien, con alguien que sabe lo que está haciendo.",
     image: "/servicio-2.webp",
+    href: "/servicios/consultoria-operativa-restaurantes",
   },
   {
     number: "03",
@@ -52,5 +54,6 @@ export const services = [
     ideal: "Emprendedores con un proyecto entre manos que todavía están a tiempo de ajustar el rumbo.",
     closing: "No se trata de tener el restaurante perfecto desde el día uno. Se trata de no cometer los errores que luego son difíciles de deshacer.",
     image: "/servicio-3.webp",
+    href: "/servicios/apertura-restaurante",
   },
 ];

@@ -215,6 +215,7 @@ export default function ServiciosPage() {
                 ideal={service.ideal}
                 closing={service.closing}
                 icon={serviceIcons[i]}
+                href={service.href}
               />
             ))}
           </div>
