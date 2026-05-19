@@ -5,7 +5,7 @@ import TrackingLink from "@/components/TrackingLink";
 import CalculadoraClient from "./calculadora-client";
 
 export const metadata: Metadata = {
-  title: "Calculadora de Prime Cost para Restaurantes | Adrián Pollán",
+  title: "Calculadora de Prime Cost para Restaurantes",
   description:
     "Introduce los datos de tu restaurante y calcula al instante tu food cost, labour cost y prime cost con interpretación incluida.",
   alternates: {

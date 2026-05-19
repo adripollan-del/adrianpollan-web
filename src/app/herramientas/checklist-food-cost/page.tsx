@@ -5,7 +5,7 @@ import TrackingLink from "@/components/TrackingLink";
 import ChecklistFoodCostClient from "./checklist-food-cost-client";
 
 export const metadata: Metadata = {
-  title: "Checklist de Food Cost para Restaurantes | Adrián Pollán",
+  title: "Checklist de Control de Food Cost",
   description:
     "Revisa si tienes implementados los sistemas básicos para controlar el food cost de tu restaurante. 16 ítems en 4 bloques con puntuación incluida.",
   alternates: {

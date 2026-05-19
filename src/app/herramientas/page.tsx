@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Calculator, ListChecks, TrendingDown, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Herramientas Gratuitas para Restaurantes | Adrián Pollán",
+  title: "Herramientas Gratuitas para Restaurantes",
   description:
     "Calculadoras y checklists gratuitos para gestionar mejor tu restaurante: prime cost, food cost, apertura y proveedores.",
   alternates: { canonical: "https://adrianpollan.com/herramientas" },

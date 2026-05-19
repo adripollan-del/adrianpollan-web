@@ -5,7 +5,7 @@ import TrackingLink from "@/components/TrackingLink";
 import ChecklistAperturaClient from "./checklist-apertura-client";
 
 export const metadata: Metadata = {
-  title: "Checklist para Abrir un Restaurante | Adrián Pollán",
+  title: "Checklist para Abrir un Restaurante",
   description:
     "Revisa punto por punto si tienes todo lo necesario antes de abrir tu restaurante. 24 ítems en 6 bloques clave con progreso en tiempo real.",
   alternates: {
