@@ -6,7 +6,13 @@ import { trackEvent } from "@/lib/gtag";
 
 type Status = "idle" | "sending" | "done" | "error";
 
-export default function WaitlistForm({ buttonText = "Avísame" }: { buttonText?: string }) {
+export default function WaitlistForm({
+  buttonText = "Avísame",
+  placeholder = "Tu email",
+}: {
+  buttonText?: string;
+  placeholder?: string;
+}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -60,7 +66,7 @@ export default function WaitlistForm({ buttonText = "Avísame" }: { buttonText?:
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Tu email"
+          placeholder={placeholder}
           disabled={status === "sending"}
           className="flex-1 bg-navy/10 border border-navy/20 px-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy transition-colors disabled:opacity-60"
         />

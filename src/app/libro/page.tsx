@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw } from "lucide-react";
+import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw, BookOpen, Target, Users } from "lucide-react";
 import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
@@ -25,6 +25,31 @@ const phaseData = [
   { letter: "I", title: "Implementar mejoras", question: "¿Qué acciones deben aplicarse primero?", result: "Plan de acción priorizado, medible y realista." },
   { letter: "A", title: "Acompañar al propietario", question: "¿Qué apoyo necesita la persona que decide?", result: "Decisiones mejor sostenidas, gestión del cambio y menos soledad directiva." },
   { letter: "N", title: "Normalizar procesos", question: "¿Cómo evitamos volver al caos?", result: "Rutinas, procedimientos, indicadores y hábitos sostenibles." },
+];
+
+const whyDifferent = [
+  {
+    Icon: BookOpen,
+    title: "Escrito desde la operación real, no desde un MBA",
+    body: "Cada capítulo viene de decisiones tomadas con un servicio a punto de empezar.",
+  },
+  {
+    Icon: Target,
+    title: "Un sistema, no una colección de consejos",
+    body: "El Método ADRIÁN es una secuencia de trabajo que se puede aplicar en cualquier negocio de hostelería.",
+  },
+  {
+    Icon: Users,
+    title: "Para propietarios que gestionan, no para académicos que estudian",
+    body: "El lenguaje es directo, los ejemplos son reales y las herramientas son prácticas.",
+  },
+];
+
+const forWhom = [
+  "Propietarios de restaurantes que venden bien pero no ganan lo que deberían",
+  "Gerentes que quieren ordenar la operativa sin paralizar el negocio",
+  "Emprendedores que quieren abrir con método desde el primer día",
+  "Directores de F&B que necesitan un sistema, no más reuniones",
 ];
 
 export default function LibroPage() {
@@ -56,9 +81,7 @@ export default function LibroPage() {
             {/* Portada libro mockup */}
             <div className="order-2 lg:order-1">
               <div className="relative aspect-[3/4] max-w-xs mx-auto lg:mx-0">
-                {/* Sombra del libro */}
                 <div className="absolute -bottom-3 -right-3 inset-0 bg-navy/50 border border-cream/5" />
-                {/* Portada */}
                 <div className="relative h-full bg-gradient-to-br from-amber via-amber to-[#9a6214] flex flex-col justify-between p-10 overflow-hidden border border-amber/20">
                   <div className="flex justify-between items-start">
                     <div className="w-12 h-12 border border-navy/20 rounded-full" />
@@ -91,9 +114,8 @@ export default function LibroPage() {
                 El Método<br />
                 <span className="font-semibold">ADRIÁN</span>
               </h1>
-              <p className="font-display text-cream/40 text-xl lg:text-2xl italic mb-8">
-                Un sistema de gestión para negocios de hostelería, escrito desde
-                la experiencia real. Próximamente.
+              <p className="font-display text-cream/60 text-xl lg:text-2xl italic mb-8">
+                El primer libro de gestión para restaurantes escrito desde dentro de la operación. No desde la teoría.
               </p>
               <a
                 href="#lista-espera"
@@ -157,8 +179,31 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── QUÉ ES — fondo crema oscuro ──────────────────────────── */}
+      {/* ── POR QUÉ ES DIFERENTE — fondo crema oscuro ───────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-14">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Lo que lo hace diferente
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Por qué este libro es diferente
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {whyDifferent.map(({ Icon, title, body }, i) => (
+              <div key={i} className="bg-white border border-navy/10 rounded-xl p-8">
+                <Icon size={28} className="text-amber mb-5" />
+                <h3 className="font-display text-navy text-lg font-semibold mb-3 leading-snug">{title}</h3>
+                <p className="font-body text-ink/60 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUÉ ES — fondo blanco ────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
@@ -184,8 +229,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── EL MÉTODO DE UN VISTAZO — fondo blanco ───────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── EL MÉTODO DE UN VISTAZO — fondo crema oscuro ─────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
@@ -242,7 +287,6 @@ export default function LibroPage() {
                 ))}
               </div>
 
-              {/* Texto de cierre */}
               <div className="mt-10 pt-8 border-t border-navy/10">
                 <p className="font-body text-ink/65 text-base leading-relaxed">
                   <span className="font-semibold text-navy">El orden importa.</span>{" "}
@@ -257,8 +301,8 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── PARA QUIÉN ES — fondo crema oscuro ────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── PARA QUIÉN ES — fondo blanco ─────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -284,7 +328,7 @@ export default function LibroPage() {
                 body: "Que quieren tomar las mejores decisiones posibles antes y durante la apertura, con una guía práctica que cubre todo el proceso.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors">
+              <div key={i} className="bg-cream-dark border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors">
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   0{i + 1}
                 </span>
@@ -296,27 +340,53 @@ export default function LibroPage() {
         </div>
       </section>
 
-      {/* ── LISTA DE ESPERA — fondo blanco ────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28" id="lista-espera">
+      {/* ── LISTA DE ESPERA — fondo crema oscuro ──────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28" id="lista-espera">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Próximamente
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                Sé el primero en saber cuándo sale
+              <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-5">
+                Apúntate antes de que salga
               </h2>
-              <p className="font-body text-ink/65 text-lg leading-relaxed">
-                Déjame tu email y te aviso cuando El Método ADRIÁN esté disponible.
+              <p className="font-body text-ink/70 text-lg leading-relaxed">
+                Los primeros en la lista recibirán acceso anticipado, precio especial
+                de lanzamiento y las 29 herramientas del método en Excel y Word
+                completamente gratis.
               </p>
             </div>
             <div>
-              <WaitlistForm />
-              <p className="font-body text-navy/40 text-xs mt-4">
-                Sin spam. Solo lo que importa, cuando importa.
+              <WaitlistForm
+                buttonText="Quiero acceso anticipado"
+                placeholder="Tu email profesional"
+              />
+              <p className="font-body text-navy/50 text-xs mt-4">
+                Ya hay más de 200 personas en la lista. Sin spam. Solo lo que importa.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ¿PARA QUIÉN ES ESTE LIBRO? — fondo blanco ─────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-14">
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              ¿Para quién es este libro?
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {forWhom.map((text, i) => (
+              <div key={i} className="bg-cream-dark border border-navy/10 rounded-xl p-7">
+                <span className="font-display text-amber/40 text-4xl font-light block mb-5 leading-none">
+                  0{i + 1}
+                </span>
+                <p className="font-body text-navy text-base leading-relaxed font-medium">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
