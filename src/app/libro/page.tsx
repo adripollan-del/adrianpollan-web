@@ -53,6 +53,31 @@ const forWhom = [
   "Directores de F&B que necesitan un sistema, no más reuniones",
 ];
 
+const excerpts = [
+  "La experiencia sola no reemplaza al método. Lo aprendí de la forma más cara posible.",
+  "Un restaurante que depende del propietario para funcionar no es un activo. Es una trampa.",
+  "Antes de cambiar nada, hay que entender qué está pasando de verdad. Ese es siempre el primer paso.",
+];
+
+const bookFaqs = [
+  {
+    q: "¿Cuándo sale el libro?",
+    a: "Está previsto para finales de 2025. Los suscriptores de la lista serán los primeros en saberlo.",
+  },
+  {
+    q: "¿Qué incluye exactamente?",
+    a: "El método completo en 6 fases con herramientas prácticas, casos reales y checklists aplicables desde el primer capítulo.",
+  },
+  {
+    q: "¿Para qué tipo de negocio es?",
+    a: "Para cualquier negocio de hostelería y restauración: restaurantes independientes, hoteles con F&B, bares y emprendedores que quieren abrir con criterio.",
+  },
+  {
+    q: "¿Las 29 herramientas son gratuitas?",
+    a: "Sí. Los primeros en la lista recibirán acceso gratuito a las 29 herramientas en Excel y Word que acompañan al método.",
+  },
+];
+
 export default function LibroPage() {
   const phaseIcons = [
     <Compass key="p1" size={18} className="text-navy/50" />,
@@ -111,11 +136,11 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
                 Mi libro
               </p>
-              <h1 className="font-display text-cream text-5xl lg:text-6xl font-light leading-[1.05] mb-4">
+              <h1 className="font-display text-cream text-3xl lg:text-6xl font-light leading-[1.05] mb-4">
                 El Método<br />
                 <span className="font-semibold">ADRIÁN</span>
               </h1>
-              <p className="font-display text-cream/60 text-xl lg:text-2xl italic mb-8">
+              <p className="font-display text-cream/60 text-lg lg:text-2xl italic mb-8">
                 El primer libro de gestión para restaurantes escrito desde dentro de la operación. No desde la teoría.
               </p>
               <a
@@ -137,7 +162,7 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 Mi historia
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
                 Lo que me enseñó perderlo todo.
               </h2>
               <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -187,7 +212,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Lo que lo hace diferente
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               Por qué este libro es diferente
             </h2>
           </div>
@@ -196,7 +221,7 @@ export default function LibroPage() {
               <div key={i} className="bg-white border border-navy/10 rounded-xl p-8">
                 <Icon size={28} className="text-amber mb-5" />
                 <h3 className="font-display text-navy text-lg font-semibold mb-3 leading-snug">{title}</h3>
-                <p className="font-body text-ink/60 text-sm leading-relaxed">{body}</p>
+                <p className="font-body text-ink/60 text-base leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -212,7 +237,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
               Qué es el libro
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
               Un sistema de gestión para negocios de hostelería que funciona en la vida real.
             </h2>
             <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -242,10 +267,10 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Qué encontrarás
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
                 El método de un vistazo
               </h2>
-              <p className="font-body text-ink/65 text-lg leading-relaxed">
+              <p className="font-body text-ink/65 text-base leading-relaxed">
                 ADRIÁN no es solo un nombre. Es una secuencia de trabajo para
                 diagnosticar, ordenar y transformar un negocio de hostelería.
               </p>
@@ -311,7 +336,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Para quién es
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               No es un libro para estudiantes.<br />Es para quien ya está en el negocio.
             </h2>
           </div>
@@ -336,29 +361,77 @@ export default function LibroPage() {
                   0{i + 1}
                 </span>
                 <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="font-body text-ink/65 text-sm leading-relaxed">{item.body}</p>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── LISTA DE ESPERA — fondo crema oscuro ──────────────────── */}
-      <section className="bg-cream-dark py-20 lg:py-28" id="lista-espera">
+      {/* ── EXTRACTO DEL LIBRO — fondo crema oscuro ──────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+          <div className="mb-14">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Extracto
+            </p>
+            <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight">
+              Un adelanto de lo que encontrarás
+            </h2>
+          </div>
+          <div className="space-y-10">
+            {excerpts.map((quote, i) => (
+              <blockquote
+                key={i}
+                className="relative pl-8 border-l-4 border-amber"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-5 left-4 font-display text-amber text-7xl leading-none opacity-20 select-none"
+                >
+                  &ldquo;
+                </span>
+                <p className="font-display text-navy text-xl lg:text-2xl italic leading-relaxed">
+                  {quote}
+                </p>
+                <footer className="mt-4">
+                  <cite className="font-body text-ink/40 text-xs tracking-widest uppercase not-italic">
+                    El Método ADRIÁN — Adrián Pollán
+                  </cite>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LISTA DE ESPERA — fondo blanco ──────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28" id="lista-espera">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Próximamente
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-5">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-bold leading-tight mb-5">
                 Apúntate antes de que salga
               </h2>
-              <p className="font-body text-ink/70 text-lg leading-relaxed">
-                Los primeros en la lista recibirán acceso anticipado, precio especial
-                de lanzamiento y las 29 herramientas del método en Excel y Word
-                completamente gratis.
+              <p className="font-body text-ink/70 text-base leading-relaxed mb-8">
+                Los primeros 500 suscriptores recibirán las 29 herramientas del
+                método completamente gratis. Ya hay más de 200 en la lista.
               </p>
+              {/* Contador de tracción */}
+              <div className="inline-flex items-center gap-4 bg-amber/10 border border-amber/30 px-5 py-4 rounded-xl">
+                <span className="font-display text-amber font-bold text-3xl leading-none">200+</span>
+                <div>
+                  <p className="font-body text-navy font-medium text-sm leading-snug">
+                    personas ya en la lista
+                  </p>
+                  <p className="font-body text-ink/50 text-xs mt-0.5">
+                    Más de 200 personas ya están en la lista de espera.
+                  </p>
+                </div>
+              </div>
             </div>
             <div>
               <WaitlistForm
@@ -366,24 +439,24 @@ export default function LibroPage() {
                 placeholder="Tu email profesional"
               />
               <p className="font-body text-navy/50 text-xs mt-4">
-                Ya hay más de 200 personas en la lista. Sin spam. Solo lo que importa.
+                Sin spam. Solo novedades del libro cuando las haya.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── ¿PARA QUIÉN ES ESTE LIBRO? — fondo blanco ─────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── ¿PARA QUIÉN ES ESTE LIBRO? — fondo crema oscuro ──────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-14">
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               ¿Para quién es este libro?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {forWhom.map((text, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/10 rounded-xl p-7">
+              <div key={i} className="bg-white border border-navy/10 rounded-xl p-7">
                 <span className="font-display text-amber/40 text-4xl font-light block mb-5 leading-none">
                   0{i + 1}
                 </span>
@@ -391,6 +464,33 @@ export default function LibroPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── FAQ DEL LIBRO — fondo blanco ─────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+            Preguntas frecuentes
+          </p>
+          <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-14">
+            Sobre el libro
+          </h2>
+          <dl className="space-y-0">
+            {bookFaqs.map(({ q, a }, i) => (
+              <div
+                key={i}
+                className={`py-8 ${i < bookFaqs.length - 1 ? "border-b border-navy/10" : ""}`}
+              >
+                <dt className="font-display text-navy text-lg font-semibold mb-3 leading-snug">
+                  {q}
+                </dt>
+                <dd className="font-body text-ink/70 text-base leading-relaxed">
+                  {a}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </>
