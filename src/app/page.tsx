@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield } from "lucide-react";
 import LinkedinIcon from "@/components/LinkedinIcon";
 
 const Stats = dynamic(() => import("@/components/Stats"));
@@ -163,9 +163,12 @@ export default function Home() {
             <h2 className="font-display text-navy text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
               El diagnóstico gratuito no es un formulario. Es una primera foto real de tu negocio.
             </h2>
+            <p className="font-body text-ink/60 text-base leading-relaxed mt-5">
+              En 10 minutos obtienes una foto clara de 8 áreas clave de tu negocio: rentabilidad, costes, operativa, carta, equipo, experiencia de cliente, gestión y estrategia.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 mb-14">
             {[
               {
                 icon: <ClipboardList size={28} className="text-amber" />,
@@ -186,6 +189,11 @@ export default function Home() {
                 icon: <ArrowRight size={28} className="text-amber" />,
                 title: "Decides el siguiente paso",
                 body: "Si quieres profundizar, puedes reservar una sesión gratuita de 20 minutos para revisar los resultados juntos.",
+              },
+              {
+                icon: <Shield size={28} className="text-amber" />,
+                title: "Completamente confidencial",
+                body: "Tus respuestas son solo tuyas. No se comparten, no se venden y no recibirás spam.",
               },
             ].map((item, i) => (
               <div key={i} className="border-t border-amber/30 pt-6">

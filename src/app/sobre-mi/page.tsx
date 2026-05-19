@@ -281,6 +281,59 @@ export default function SobreMiPage() {
         </div>
       </section>
 
+      {/* ── NO TRABAJO CON TODO EL MUNDO — fondo crema oscuro ───── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-3">
+            No trabajo con todo el mundo.
+          </h2>
+          <p className="font-display text-navy/50 text-xl italic mb-6 leading-relaxed">
+            Y eso es parte de cómo funciona.
+          </p>
+          <p className="font-body text-ink/65 text-base leading-relaxed mb-12">
+            Prefiero decirlo con claridad desde el principio. Hay tipos de proyectos y perfiles con los que trabajo mejor, y hay situaciones donde no soy la persona adecuada. Saberlo antes ahorra tiempo a los dos.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+            {/* Trabajo mejor con */}
+            <div>
+              <p className="font-body text-xs tracking-widest uppercase text-amber mb-5">Trabajo mejor con</p>
+              <ul className="space-y-5">
+                {[
+                  "Propietarios que quieren mirar los números con honestidad, aunque lo que encuentren sea incómodo.",
+                  "Negocios que quieren cambiar cosas de verdad, no solo tener un informe que justifique no cambiar nada.",
+                  "Gestores que entienden que mejorar lleva tiempo y que los resultados no son inmediatos ni mágicos.",
+                  "Personas que valoran el criterio y la experiencia operativa por encima de las promesas fáciles.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="text-amber flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Probablemente no encajamos si */}
+            <div>
+              <p className="font-body text-xs tracking-widest uppercase text-red-600 mb-5">Probablemente no encajamos si</p>
+              <ul className="space-y-5">
+                {[
+                  "Buscas alguien que te diga que todo está bien cuando no lo está.",
+                  "Quieres resultados en días sin cambiar nada en la operativa.",
+                  "El negocio no está dispuesto a dedicar tiempo al proceso de mejora.",
+                  "Prefieres un consultor que valide decisiones ya tomadas en lugar de uno que las cuestione.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <X size={18} className="text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CASOS REALES — fondo blanco ──────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
