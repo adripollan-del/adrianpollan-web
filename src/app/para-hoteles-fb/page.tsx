@@ -42,6 +42,9 @@ const references = [
   { name: "Ballynahinch Castle", location: "Irlanda" },
   { name: "Kilronan Castle", location: "Irlanda" },
   { name: "Les Bordes Estate", location: "Francia" },
+  { name: "Hotel Hard Rock", location: "España" },
+  { name: "Mare Nostrum Resort", location: "España" },
+  { name: "Thistle Hotels", location: "Reino Unido" },
 ];
 
 export default function ParaHotelesPage() {
