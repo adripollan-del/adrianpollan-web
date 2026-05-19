@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw, BookOpen, Target, Users } from "lucide-react";
-import WaitlistForm from "@/components/WaitlistForm";
+import dynamic from "next/dynamic";
+const WaitlistForm = dynamic(() => import("@/components/WaitlistForm"));
 import MetodoADRIAN from "@/components/MetodoADRIAN";
 
 export const metadata: Metadata = {
@@ -97,6 +98,7 @@ export default function LibroPage() {
           fill
           priority
           sizes="100vw"
+          quality={50}
           className="object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-navy/50" />

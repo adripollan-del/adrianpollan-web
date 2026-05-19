@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LinkedinIcon from "@/components/LinkedinIcon";
-import NewsletterForm from "@/components/NewsletterForm";
+import NewsletterFormLazy from "@/components/NewsletterFormLazy";
 import TrackingLink from "@/components/TrackingLink";
 
 const footerLinks = [
@@ -91,7 +91,7 @@ export default function Footer() {
             <p className="text-sm text-cream/60 mb-5">
               Rentabilidad, costes y gestión para restaurantes. Sin spam.
             </p>
-            <NewsletterForm />
+            <NewsletterFormLazy />
           </div>
         </div>
 

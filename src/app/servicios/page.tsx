@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ServiceCard from "@/components/ServiceCard";
-import FAQAccordion from "@/components/FAQAccordion";
+import dynamic from "next/dynamic";
 import { services } from "@/data/services";
 import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
 import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
+
+const ServiceCard = dynamic(() => import("@/components/ServiceCard"));
+const FAQAccordion = dynamic(() => import("@/components/FAQAccordion"));
 
 const faqs = [
   {
@@ -126,6 +128,7 @@ export default function ServiciosPage() {
           fill
           priority
           sizes="100vw"
+          quality={50}
           className="object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-navy/50" />

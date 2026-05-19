@@ -32,6 +32,7 @@ export default function SobreMiPage() {
           fill
           priority
           sizes="100vw"
+          quality={50}
           className="object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-navy/50" />
