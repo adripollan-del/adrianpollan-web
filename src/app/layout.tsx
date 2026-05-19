@@ -4,8 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
-import ClarityScript from "@/components/ClarityScript";
+import CookieBannerLazy from "@/components/CookieBannerLazy";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -157,12 +156,12 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <CookieBanner />
+        <CookieBannerLazy />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RJSBHMJ9BL"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -170,7 +169,12 @@ export default function RootLayout({
             gtag('config', 'G-RJSBHMJ9BL');
           `}
         </Script>
-        <ClarityScript />
+        <Script id="clarity" strategy="lazyOnload">
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wthj8c4zuf");`}
+        </Script>
+        <Script id="event-tracking" strategy="afterInteractive">
+          {`document.addEventListener('click',function(e){var el=e.target.closest('[data-event]');if(!el)return;if(typeof window.gtag==='function'){window.gtag('event',el.dataset.event,{event_category:'conversion',event_label:el.dataset.label||''});}},{passive:true});`}
+        </Script>
       </body>
     </html>
   );

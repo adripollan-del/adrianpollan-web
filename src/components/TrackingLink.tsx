@@ -1,7 +1,3 @@
-"use client";
-
-import { trackEvent } from "@/lib/gtag";
-
 type Props = {
   href: string;
   eventName: string;
@@ -27,9 +23,8 @@ export default function TrackingLink({
       target={target}
       rel={rel}
       className={className}
-      onClick={() =>
-        trackEvent(eventName, { event_category: "conversion", event_label: eventLabel })
-      }
+      data-event={eventName}
+      data-label={eventLabel}
     >
       {children}
     </a>
