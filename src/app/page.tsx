@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle } from "lucide-react";
+import LinkedinIcon from "@/components/LinkedinIcon";
 
 const Stats = dynamic(() => import("@/components/Stats"));
 const WaitlistForm = dynamic(() => import("@/components/WaitlistForm"));
@@ -244,12 +245,23 @@ export default function Home() {
                 Ayudo a negocios de hostelería a ser más rentables, más
                 organizados y más sostenibles.
               </p>
-              <Link
-                href="/sobre-mi"
-                className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 hover:border-amber transition-colors"
-              >
-                Conocer mi historia <ArrowRight size={14} />
-              </Link>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <Link
+                  href="/sobre-mi"
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 hover:border-amber transition-colors"
+                >
+                  Conocer mi historia <ArrowRight size={14} />
+                </Link>
+                <a
+                  href="https://www.linkedin.com/in/adrianpollan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-body text-sm text-ink/50 hover:text-navy transition-colors"
+                >
+                  <LinkedinIcon size={14} />
+                  Sígueme en LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>

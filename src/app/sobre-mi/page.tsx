@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, Quote, X } from "lucide-react";
+import LinkedinIcon from "@/components/LinkedinIcon";
 
 export const metadata: Metadata = {
   title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
@@ -464,8 +465,35 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CIERRE CTA — fondo blanco ─────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      {/* ── ENCUÉNTRAME EN — fondo blanco ────────────────────────── */}
+      <section className="bg-white py-14 lg:py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl">
+            <h2 className="font-display text-navy text-2xl font-semibold mb-6">
+              Encuéntrame también en
+            </h2>
+            <a
+              href="https://www.linkedin.com/in/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 group"
+            >
+              <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-navy text-cream group-hover:bg-amber group-hover:text-navy transition-colors">
+                <LinkedinIcon size={18} />
+              </span>
+              <span className="font-body text-navy text-sm font-medium group-hover:text-amber transition-colors">
+                LinkedIn — Adrián Pollán
+              </span>
+            </a>
+            <p className="font-body text-ink/55 text-sm leading-relaxed mt-4 max-w-sm">
+              Comparto ideas semanales sobre rentabilidad, gestión y operaciones en hostelería.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CIERRE CTA — fondo crema oscuro ──────────────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
