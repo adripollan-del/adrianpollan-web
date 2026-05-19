@@ -404,77 +404,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo blanco ─────────────── */}
-      <section className="bg-white py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-            {/* Portada del libro — placeholder elegante */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative w-64 lg:w-72 xl:w-80">
-                {/* Sombra del libro */}
-                <div className="absolute -bottom-4 left-4 right-0 h-full bg-navy/10 blur-xl" />
-                {/* Portada */}
-                <div className="relative bg-navy aspect-[2/3] flex flex-col justify-between p-8 lg:p-10 shadow-2xl">
-                  {/* Línea superior decorativa */}
-                  <div className="space-y-3">
-                    <div className="h-px w-12 bg-amber" />
-                    <p className="font-body text-amber text-xs tracking-widest uppercase">
-                      Adrián Pollán
-                    </p>
-                  </div>
-                  {/* Título */}
-                  <div>
-                    <p className="font-body text-cream/40 text-xs tracking-widest uppercase mb-4">
-                      El Método
-                    </p>
-                    <h3 className="font-display text-cream text-5xl lg:text-6xl font-semibold leading-none tracking-tight">
-                      ADRIÁN
-                    </h3>
-                    <div className="mt-6 h-px w-full bg-amber/30" />
-                    <p className="font-body text-cream/35 text-xs mt-3 leading-relaxed">
-                      Gestión de negocios de hostelería
-                    </p>
-                  </div>
-                  {/* Próximamente badge */}
-                  <div className="inline-flex self-start">
-                    <span className="font-body text-navy text-xs font-semibold tracking-widest uppercase bg-amber px-3 py-1.5">
-                      Próximamente
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenido */}
-            <div>
-              <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
-                Mi libro
-              </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-                El Método ADRIÁN
-              </h2>
-              <p className="font-display text-navy/50 text-xl italic mb-8 leading-relaxed">
-                Un libro sobre gestión de negocios de hostelería escrito
-                desde la experiencia real. Próximamente.
-              </p>
-
-              <p className="font-body text-ink/70 text-base leading-relaxed mb-10">
-                Más de veinte años de operaciones reales, errores incluidos,
-                destilados en un sistema de gestión que funciona. Si quieres
-                ser el primero en saber cuándo sale, déjame tu email.
-              </p>
-
-              <WaitlistForm buttonText="Avísame cuando salga" />
-
-              <p className="font-body text-navy/40 text-xs mt-4">
-                Sin spam. Solo el aviso cuando esté disponible.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── CASOS REALES (compacto) — fondo crema oscuro ─────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -565,8 +494,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — fondo blanco ────────────────────────────────── */}
+      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo blanco ─────────────── */}
       <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Portada del libro — placeholder elegante */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative w-64 lg:w-72 xl:w-80">
+                {/* Sombra del libro */}
+                <div className="absolute -bottom-4 left-4 right-0 h-full bg-navy/10 blur-xl" />
+                {/* Portada */}
+                <div className="relative bg-navy aspect-[2/3] flex flex-col justify-between p-8 lg:p-10 shadow-2xl">
+                  {/* Línea superior decorativa */}
+                  <div className="space-y-3">
+                    <div className="h-px w-12 bg-amber" />
+                    <p className="font-body text-amber text-xs tracking-widest uppercase">
+                      Adrián Pollán
+                    </p>
+                  </div>
+                  {/* Título */}
+                  <div>
+                    <p className="font-body text-cream/40 text-xs tracking-widest uppercase mb-4">
+                      El Método
+                    </p>
+                    <h3 className="font-display text-cream text-5xl lg:text-6xl font-semibold leading-none tracking-tight">
+                      ADRIÁN
+                    </h3>
+                    <div className="mt-6 h-px w-full bg-amber/30" />
+                    <p className="font-body text-cream/35 text-xs mt-3 leading-relaxed">
+                      Gestión de negocios de hostelería
+                    </p>
+                  </div>
+                  {/* Próximamente badge */}
+                  <div className="inline-flex self-start">
+                    <span className="font-body text-navy text-xs font-semibold tracking-widest uppercase bg-amber px-3 py-1.5">
+                      Próximamente
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenido */}
+            <div>
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
+                Mi libro
+              </p>
+              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+                El Método ADRIÁN
+              </h2>
+              <p className="font-display text-navy/50 text-xl italic mb-8 leading-relaxed">
+                Un libro sobre gestión de negocios de hostelería escrito
+                desde la experiencia real. Próximamente.
+              </p>
+
+              <p className="font-body text-ink/70 text-base leading-relaxed mb-10">
+                Más de veinte años de operaciones reales, errores incluidos,
+                destilados en un sistema de gestión que funciona. Si quieres
+                ser el primero en saber cuándo sale, déjame tu email.
+              </p>
+
+              <WaitlistForm buttonText="Avísame cuando salga" />
+
+              <p className="font-body text-navy/40 text-xs mt-4">
+                Sin spam. Solo el aviso cuando esté disponible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA FINAL — fondo crema oscuro ────────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
             Empezar
