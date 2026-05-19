@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/libro", label: "Mi Libro" },
   { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/blog", label: "Blog" },
+  { href: "/herramientas", label: "Herramientas" },
   { href: "/hablemos", label: "Hablemos" },
 ];
 
