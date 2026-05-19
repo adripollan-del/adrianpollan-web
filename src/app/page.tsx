@@ -340,8 +340,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo crema oscuro ───────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo blanco ─────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
