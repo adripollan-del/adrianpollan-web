@@ -146,14 +146,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── DIAGNÓSTICO — cómo funciona — navy ────────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── DIAGNÓSTICO — cómo funciona — blanco ──────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-14">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Diagnóstico gratuito
             </p>
-            <h2 className="font-display text-cream text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
               El diagnóstico gratuito no es un formulario. Es una primera foto real de tu negocio.
             </h2>
           </div>
@@ -181,12 +181,12 @@ export default function Home() {
                 body: "Si quieres profundizar, puedes reservar una sesión gratuita de 20 minutos para revisar los resultados juntos.",
               },
             ].map((item, i) => (
-              <div key={i} className="border-t border-amber/20 pt-6">
+              <div key={i} className="border-t border-amber/30 pt-6">
                 <div className="mb-5">{item.icon}</div>
-                <h3 className="font-display text-cream text-base font-semibold leading-snug mb-3">
+                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-3">
                   {item.title}
                 </h3>
-                <p className="font-body text-cream/55 text-sm leading-relaxed">
+                <p className="font-body text-ink/60 text-sm leading-relaxed">
                   {item.body}
                 </p>
               </div>
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* ── INTRODUCCIÓN PERSONAL ──────────────────────────────────── */}
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-cream-dark py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Foto real — archivo: /public/Adrian Sobre Mi.png */}
