@@ -5,6 +5,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import ClarityScript from "@/components/ClarityScript";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -169,6 +170,7 @@ export default function RootLayout({
             gtag('config', 'G-RJSBHMJ9BL');
           `}
         </Script>
+        <ClarityScript />
       </body>
     </html>
   );
