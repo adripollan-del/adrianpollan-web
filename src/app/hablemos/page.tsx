@@ -42,7 +42,7 @@ export default function HablemosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Hablemos
             </p>
-            <h1 className="font-display text-cream text-5xl lg:text-7xl font-light leading-[1.05] mb-6">
+            <h1 className="font-display text-cream text-3xl lg:text-7xl font-light leading-[1.05] mb-6">
               Hablemos.
             </h1>
             <p className="font-body text-cream/60 text-lg leading-relaxed mb-4">
@@ -78,7 +78,7 @@ export default function HablemosPage() {
             <Zap size={13} className="text-amber" />
             <span className="font-body text-amber text-xs tracking-widest uppercase">Opción 1 — gratis e inmediato</span>
           </div>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
             Descubre en minutos qué está frenando a tu negocio.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -134,7 +134,7 @@ export default function HablemosPage() {
                 <Calendar size={13} className="text-navy/60" />
                 <span className="font-body text-navy/60 text-xs tracking-widest uppercase">Opción 2 — sesión gratuita</span>
               </div>
-              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+              <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-4">
                 Empieza con una sesión gratuita de 20 minutos.
               </h2>
               <p className="font-body text-ink/60 text-base leading-relaxed mb-6">
@@ -175,7 +175,7 @@ export default function HablemosPage() {
                 <Mail size={13} className="text-navy/60" />
                 <span className="font-body text-navy/60 text-xs tracking-widest uppercase">Opción 3 — mensaje directo</span>
               </div>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
                 ¿Prefieres escribir primero?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -203,7 +203,7 @@ export default function HablemosPage() {
       {/* ── CTA FINAL — fondo crema oscuro ───────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             El primer paso es siempre el más sencillo.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed max-w-lg mx-auto mb-10">

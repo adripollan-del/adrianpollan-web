@@ -43,7 +43,7 @@ export default function ServiceCard({
           {title}
         </h3>
 
-        <p className="font-body text-ink/55 text-sm leading-relaxed mb-6 lg:min-h-[3.75rem]">
+        <p className="font-body text-ink/55 text-base leading-relaxed mb-6 lg:min-h-[3.75rem]">
           {subtitle}
         </p>
 
@@ -65,7 +65,7 @@ export default function ServiceCard({
             <div className="w-10 h-px bg-amber mb-6" />
 
             {/* Descripción */}
-            <div className="space-y-4 font-body text-ink/70 text-sm leading-relaxed mb-7">
+            <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed mb-7">
               {summary.split("\n\n").map((para, j) => (
                 <p key={j}>{para}</p>
               ))}
@@ -76,7 +76,7 @@ export default function ServiceCard({
               {includes.map((item, j) => (
                 <li key={j} className="flex items-start gap-3">
                   <Check size={16} className="text-amber mt-0.5 flex-shrink-0" />
-                  <span className="font-body text-ink/70 text-sm leading-relaxed">{item}</span>
+                  <span className="font-body text-ink/70 text-base leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -86,13 +86,13 @@ export default function ServiceCard({
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
                 Ideal para:
               </p>
-              <p className="font-body text-ink/65 text-sm leading-relaxed">
+              <p className="font-body text-ink/65 text-base leading-relaxed">
                 {ideal}
               </p>
             </div>
 
             {/* Frase de cierre */}
-            <p className="font-display italic text-ink/50 text-sm leading-relaxed mb-8">
+            <p className="font-display italic text-ink/50 text-base leading-relaxed mb-8">
               &ldquo;{closing}&rdquo;
             </p>
 

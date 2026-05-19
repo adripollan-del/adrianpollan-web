@@ -42,7 +42,7 @@ export default function SobreMiPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Sobre mí
             </p>
-            <h1 className="font-display text-cream text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
+            <h1 className="font-display text-cream text-3xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
               Veinte años dentro del negocio.<br />
               <span className="font-semibold">Ahora trabajo para que el tuyo funcione mejor.</span>
             </h1>
@@ -102,7 +102,7 @@ export default function SobreMiPage() {
               {/* 01 Mi historia */}
               <div>
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">01 — Mi historia</p>
-                <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">
+                <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold mb-6">
                   Consultor de hostelería con más de 20 años de experiencia operativa
                 </h2>
                 <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
@@ -116,11 +116,13 @@ export default function SobreMiPage() {
                   <p>
                     Con el tiempo fui asumiendo más responsabilidad. Pasé por
                     cocina, sala, gestión de equipos, control de costes, dirección
-                    de operaciones y dirección general. Trabajé en España, Francia,
-                    Reino Unido e Irlanda, en propiedades muy distintas entre sí,
-                    desde hoteles boutique en entornos rurales hasta
-                    establecimientos de lujo con una operativa compleja y equipos
-                    grandes.
+                    de operaciones y dirección general.
+                  </p>
+                  <p>
+                    Trabajé en España, Francia, Reino Unido e Irlanda, en
+                    propiedades muy distintas: desde hoteles boutique en entornos
+                    rurales hasta establecimientos de lujo con operativas complejas
+                    y equipos grandes.
                   </p>
                   <p>
                     Cometí errores. Tomé decisiones equivocadas y aprendí de
@@ -139,7 +141,7 @@ export default function SobreMiPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">02 — Por qué hago esto</p>
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-6">
+          <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold mb-6">
             Muchos negocios no fallan por falta de trabajo. Fallan por falta de método.
           </h2>
           <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
@@ -151,10 +153,12 @@ export default function SobreMiPage() {
             </p>
             <p>
               No es falta de esfuerzo. Casi nunca lo es. Es falta de
-              visibilidad sobre lo que está pasando realmente. Es operar sin
-              los datos correctos, tomar decisiones sin la información
-              suficiente, o estar tan dentro del día a día que es imposible
-              ver el negocio con perspectiva.
+              visibilidad sobre lo que está pasando realmente.
+            </p>
+            <p>
+              Es operar sin los datos correctos, tomar decisiones sin la
+              información suficiente, o estar tan dentro del día a día que
+              resulta imposible ver el negocio con perspectiva.
             </p>
           </div>
         </div>
@@ -166,7 +170,7 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             03 — Mi forma de trabajar
           </p>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
             Primero entender. Después actuar.
           </h2>
           <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -197,18 +201,22 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             04 — Qué me diferencia
           </p>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
             Lo que me distingue no es lo que sé. Es desde dónde lo sé.
           </h2>
-          <p className="font-body text-ink/65 text-base leading-relaxed mb-10">
-            Hay muchos consultores que conocen la teoría de la gestión
-            hostelera. Yo conozco la práctica. Cuando hablo de food cost,
-            de gestión de turnos, de estructura de equipos o de mezcla de
-            ventas, no lo hago desde la distancia de quien ha estudiado el
-            tema. Lo hago desde la experiencia de quien ha tenido que
-            resolverlo con un servicio a punto de empezar y sin margen para
-            equivocarse.
-          </p>
+          <div className="space-y-4 font-body text-ink/65 text-base leading-relaxed mb-10">
+            <p>
+              Hay muchos consultores que conocen la teoría de la gestión
+              hostelera. Yo conozco la práctica.
+            </p>
+            <p>
+              Cuando hablo de food cost, de gestión de turnos o de mezcla de
+              ventas, no lo hago desde la distancia de quien ha estudiado el
+              tema. Lo hago desde la experiencia de quien ha tenido que
+              resolverlo con un servicio a punto de empezar y sin margen para
+              equivocarse.
+            </p>
+          </div>
           <ul className="space-y-4">
             {[
               "Experiencia real en operaciones, no solo en consultoría",
@@ -232,7 +240,7 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             05 — Qué no hago
           </p>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4">
             Qué no hago
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
@@ -264,22 +272,22 @@ export default function SobreMiPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               06 — Para quién trabajo
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
               Si reconoces tu situación aquí, probablemente podemos trabajar juntos.
             </h2>
-            <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
-              <p>
-                Trabajo con propietarios de restaurantes que venden bien pero no
-                ganan lo que deberían. Con gerentes que sienten que el negocio
-                depende demasiado de ellos. Con emprendedores que están a punto
-                de abrir y quieren evitar los errores que cuestan años y dinero.
-              </p>
-              <p>
-                Con hoteles y establecimientos que quieren que su área de
-                restauración deje de ser un dolor de cabeza y empiece a ser un
-                activo real.
-              </p>
-            </div>
+            <ul className="space-y-4">
+              {[
+                "Propietarios de restaurantes que venden bien pero no ganan lo que deberían.",
+                "Gerentes que sienten que el negocio depende demasiado de ellos.",
+                "Emprendedores a punto de abrir que quieren evitar los errores que cuestan años y dinero.",
+                "Hoteles que quieren que su área de restauración deje de ser un coste y empiece a ser un activo real.",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="text-amber font-display text-lg flex-shrink-0 mt-0.5">—</span>
+                  <p className="font-body text-ink/70 text-base leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -287,7 +295,7 @@ export default function SobreMiPage() {
       {/* ── NO TRABAJO CON TODO EL MUNDO — fondo navy ───────────── */}
       <section className="bg-navy py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-cream text-4xl lg:text-5xl font-semibold leading-tight mb-3">
+          <h2 className="font-display text-cream text-2xl lg:text-5xl font-semibold leading-tight mb-3">
             No trabajo con todo el mundo.
           </h2>
           <p className="font-display text-cream/50 text-xl italic mb-6 leading-relaxed">
@@ -333,7 +341,7 @@ export default function SobreMiPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Casos reales
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
               Situaciones reales, resultados concretos
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed max-w-2xl mb-2">
@@ -470,7 +478,7 @@ export default function SobreMiPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-12">
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight">
               Lo que dicen quienes han trabajado conmigo
             </h2>
           </div>
@@ -542,14 +550,16 @@ export default function SobreMiPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-tight mb-5">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-light leading-tight mb-5">
                 Si algo de lo que has leído te resuena, el siguiente paso es sencillo.
               </h2>
-              <p className="font-body text-ink/65 text-lg leading-relaxed">
+              <p className="font-body text-ink/65 text-base leading-relaxed mb-3">
                 No hace falta tener todo claro antes de contactar. Para eso está
                 la primera conversación: para que puedas explicarme dónde estás
-                y entre los dos veamos si tiene sentido trabajar juntos. Sin
-                compromiso. Sin presión. Solo claridad.
+                y ver si tiene sentido trabajar juntos.
+              </p>
+              <p className="font-body text-ink/50 text-base leading-relaxed">
+                Sin compromiso. Sin presión. Solo claridad.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">

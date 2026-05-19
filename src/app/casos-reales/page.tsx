@@ -137,7 +137,7 @@ export default function CasosRealesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Trabajo real
             </p>
-            <h1 className="font-display text-cream text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
+            <h1 className="font-display text-cream text-3xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
               Casos reales.<br />
               <span className="font-semibold">Situaciones concretas, resultados medibles.</span>
             </h1>
@@ -181,7 +181,7 @@ export default function CasosRealesPage() {
                 </span>
                 <span className="font-body text-xs text-ink/45">{caso.tipo}</span>
               </div>
-              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
+              <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-10">
                 {caso.title}
               </h2>
 
@@ -271,7 +271,7 @@ export default function CasosRealesPage() {
                 eventName="diagnostico_click"
                 eventLabel={`Casos reales — caso ${idx + 1}`}
               >
-                ¿Tu situación se parece a esta? Recibir Diagnóstico Gratuito
+                Recibir Diagnóstico Gratuito
                 <ExternalLink size={14} />
               </TrackingLink>
 
@@ -286,7 +286,7 @@ export default function CasosRealesPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Siguiente paso
           </p>
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Tu situación se parece a alguna de estas?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">

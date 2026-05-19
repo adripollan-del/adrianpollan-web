@@ -136,7 +136,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Servicios
             </p>
-            <h1 className="font-display text-cream text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
+            <h1 className="font-display text-cream text-3xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
               Consultoría para restaurantes<br />
               <span className="font-semibold">y negocios de hostelería</span>
             </h1>
@@ -155,7 +155,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Encuentra tu caso
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               ¿Para quién es esto?
             </h2>
           </div>
@@ -192,7 +192,7 @@ export default function ServiciosPage() {
                   {item.num}
                 </span>
                 <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="font-body text-ink/65 text-sm leading-relaxed flex-1 mb-5">{item.body}</p>
+                <p className="font-body text-ink/65 text-base leading-relaxed flex-1 mb-5">{item.body}</p>
                 <span className="font-body text-amber text-sm font-medium group-hover:underline">
                   {item.cta}
                 </span>
@@ -230,7 +230,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo funciona
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               El proceso de trabajar conmigo
             </h2>
           </div>
@@ -244,7 +244,7 @@ export default function ServiciosPage() {
                 <h3 className="font-display text-navy text-xl font-semibold mb-3">
                   {step.title}
                 </h3>
-                <p className="font-body text-ink/60 text-sm leading-relaxed">
+                <p className="font-body text-ink/60 text-base leading-relaxed">
                   {step.body}
                 </p>
               </div>
@@ -259,7 +259,7 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
                 ¿No sabes cuál encaja con tu situación?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -324,7 +324,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               El proceso
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4">
               Qué pasa después de la sesión gratuita
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed">
@@ -368,7 +368,7 @@ export default function ServiciosPage() {
                   <h3 className="font-display text-navy text-base font-semibold mb-2 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="font-body text-ink/60 text-sm leading-relaxed">
+                  <p className="font-body text-ink/60 text-base leading-relaxed">
                     {step.body}
                   </p>
                 </div>
@@ -392,7 +392,7 @@ export default function ServiciosPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Preguntas frecuentes
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
                 Lo que suelen preguntar
               </h2>
               <p className="font-body text-ink/60 text-base leading-relaxed mb-8">
