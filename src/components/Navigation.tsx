@@ -63,7 +63,7 @@ export default function Navigation() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -95,6 +95,8 @@ export default function Navigation() {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden text-cream p-2 -mr-2"
               aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -104,11 +106,13 @@ export default function Navigation() {
 
       {/* Mobile menu overlay */}
       <div
+        id="mobile-menu"
+        aria-hidden={!isOpen}
         className={`fixed inset-0 z-40 bg-navy transition-opacity duration-300 lg:hidden ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center justify-center h-full gap-8 px-8">
+        <nav aria-label="Menú móvil" className="flex flex-col items-center justify-center h-full gap-8 px-8">
           {/* Mobile CTA — primer elemento destacado */}
           <a
             href="https://diagnostico.adrianpollan.com"
