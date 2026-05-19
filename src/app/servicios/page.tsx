@@ -147,6 +147,60 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* ── PARA QUIÉN — fondo blanco ─────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Encuentra tu caso
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              ¿Para quién es esto?
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Propietarios de restaurante",
+                body: "Que venden bien pero no ganan lo que deberían. Que el negocio depende demasiado de ellos y no saben exactamente dónde se escapa el margen.",
+                href: "/para-propietarios-de-restaurantes",
+                cta: "Ver mi caso →",
+              },
+              {
+                num: "02",
+                title: "Hoteles con F&B",
+                body: "Que tienen el F&B como centro de coste en lugar de activo. Con rotación de personal, sin datos de rentabilidad y huéspedes que no usan la restauración.",
+                href: "/para-hoteles-fb",
+                cta: "Ver mi caso →",
+              },
+              {
+                num: "03",
+                title: "Emprendedores que abren",
+                body: "Que quieren abrir un restaurante con criterio y evitar los errores más costosos antes de comprometer su inversión.",
+                href: "/para-emprendedores",
+                cta: "Ver mi caso →",
+              },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="group bg-cream-dark border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors flex flex-col"
+              >
+                <span className="font-display text-amber/40 text-4xl font-light block mb-4">
+                  {item.num}
+                </span>
+                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="font-body text-ink/65 text-sm leading-relaxed flex-1 mb-5">{item.body}</p>
+                <span className="font-body text-amber text-sm font-medium group-hover:underline">
+                  {item.cta}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICIOS — fondo crema oscuro con grid de 3 tarjetas ── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">

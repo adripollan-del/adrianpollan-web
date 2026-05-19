@@ -16,6 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/rentabilidad-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/abrir-un-restaurante`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/consultoria-fb-hoteles`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/para-propietarios-de-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/para-hoteles-fb`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/para-emprendedores`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
