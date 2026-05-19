@@ -35,14 +35,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "El email no es válido." }, { status: 400 });
   }
 
-  // Add to Mailchimp audience
+  // Add to Mailchimp audience (409 = already subscribed, still send welcome email)
   const result = await subscribeToList(email, listId);
-  if (!result.ok) {
+  if (!result.ok && result.code !== 409) {
     return NextResponse.json({ error: result.error }, { status: result.code });
   }
 
+  console.log("[newsletter] RESEND_API_KEY present:", !!process.env.RESEND_API_KEY);
+
   // Send welcome sequence (email 1 now, emails 2+3 scheduled via Resend)
-  await Promise.allSettled(
+  const sendResults = await Promise.allSettled(
     SEQUENCE.map(({ subject, html, delayDays }) =>
       resend.emails.send({
         from: "Adrián Pollán <noreply@adrianpollan.com>",
@@ -53,6 +55,15 @@ export async function POST(req: Request) {
       })
     )
   );
+
+  sendResults.forEach((r, i) => {
+    const step = SEQUENCE[i];
+    if (r.status === "fulfilled") {
+      console.log(`[newsletter] email step ${step.delayDays}d →`, JSON.stringify(r.value));
+    } else {
+      console.error(`[newsletter] email step ${step.delayDays}d FAILED:`, r.reason);
+    }
+  });
 
   return NextResponse.json({ ok: true });
 }
