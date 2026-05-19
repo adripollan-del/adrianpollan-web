@@ -482,7 +482,7 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              href="/sobre-mi"
+              href="/casos-reales"
               className="inline-flex items-center gap-1.5 font-body text-sm text-navy/55 hover:text-navy transition-colors whitespace-nowrap flex-shrink-0"
             >
               Ver todos los casos <ArrowRight size={14} />

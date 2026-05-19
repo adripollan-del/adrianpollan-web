@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/para-propietarios-de-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/para-hoteles-fb`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/para-emprendedores`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/casos-reales`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/servicios/auditoria-fb-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/servicios/consultoria-operativa-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/servicios/apertura-restaurante`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, Quote, X } from "lucide-react";
 
@@ -397,7 +398,7 @@ export default function SobreMiPage() {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             <TrackingLink
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
@@ -409,6 +410,12 @@ export default function SobreMiPage() {
               ¿Tu situación se parece a alguna de estas? Recibir Diagnóstico Gratuito
               <ArrowRight size={15} />
             </TrackingLink>
+            <Link
+              href="/casos-reales"
+              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+            >
+              Ver todos los casos en detalle <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
