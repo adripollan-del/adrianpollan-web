@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
-import { CheckCircle, ArrowRight, ExternalLink } from "lucide-react";
+import { CheckCircle, ArrowRight, ExternalLink, AlertTriangle, Lightbulb, X } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Casos Reales de Consultoría para Restaurantes",
@@ -25,21 +25,25 @@ const cases = [
     tipo: "Restaurante independiente · 50 cubiertos",
     title: "Restaurante con buena ocupación y margen insuficiente",
     situacion:
-      "Buena ocupación los fines de semana, reputación local positiva, pero margen insuficiente a fin de mes. El propietario llevaba tres años sin entender por qué los números no cuadraban.",
-    metricas: [
+      "Buena ocupación los fines de semana, reputación local positiva, pero margen insuficiente a fin de mes. El propietario llevaba tres años sin entender por qué los números no cuadraban. La causa no era visible desde dentro: los platos que más salían eran los que menos margen dejaban, y los escandallos nunca se habían actualizado tras la última subida de precios de los proveedores.",
+    antes: [
       "Food cost estimado sin escandallos actualizados",
       "Carta con 48 referencias activas",
-      "Merma no controlada",
+      "Merma no controlada ni medida",
       "Sin sistema de seguimiento de margen",
     ],
-    diagnostico:
-      "Carta demasiado amplia con ingredientes de baja rotación, escandallos desactualizados que hacían invisible el food cost real y mezcla de ventas desfavorable donde los platos más populares eran los de menor margen.",
+    despues: [
+      "Escandallos actualizados para el 100% de la carta",
+      "Carta reducida a 31 referencias",
+      "Control semanal de merma implantado",
+      "Sistema de seguimiento de margen funcionando",
+    ],
     acciones: [
-      "Reducción de carta de 48 a 31 referencias",
-      "Actualización de escandallos para el 100% de los platos",
+      "Reducción de carta de 48 a 31 referencias eliminando platos de baja rotación y bajo margen",
+      "Actualización de escandallos para el 100% de los platos con costes reales actualizados",
       "Reorganización visual del menú para potenciar platos rentables",
       "Formación del equipo de sala en recomendación con criterio de margen",
-      "Implantación de control semanal de merma",
+      "Implantación de control semanal de merma con responsable asignado",
     ],
     resultado:
       "En 12 semanas el propietario pasó de gestionar por intuición a tomar decisiones con datos reales. El control de costes dejó de ser una estimación y se convirtió en un proceso medible y repetible.",
@@ -51,17 +55,20 @@ const cases = [
     tipo: "Primera apertura · Restaurante independiente",
     title: "Emprendedor antes de firmar el local",
     situacion:
-      "Emprendedor con experiencia en sala a punto de firmar un contrato de arrendamiento en una zona con mucho tráfico. Tenía el concepto claro y algunos ahorros. Buscaba una segunda opinión antes de comprometerse.",
-    metricas: [
-      "Alquiler proyectado: 18% sobre ventas en escenario optimista",
+      "Emprendedor con experiencia en sala a punto de firmar un contrato de arrendamiento en una zona con mucho tráfico. Tenía el concepto claro, algunos ahorros y muchas ganas. Buscaba una segunda opinión antes de comprometerse. El análisis reveló que el local era atractivo pero financieramente inviable para el modelo planteado, y que el concepto necesitaba diferenciarse de dos competidores directos en la misma calle.",
+    antes: [
+      "Alquiler proyectado al 18% sobre ventas en escenario optimista",
       "Concepto sin diferenciación frente a 2 competidores directos en la misma calle",
       "Inversión inicial sobredimensionada en equipamiento",
     ],
-    diagnostico:
-      "El local era atractivo pero financieramente inviable para el modelo planteado. El concepto necesitaba reposicionamiento para diferenciarse de la competencia existente.",
+    despues: [
+      "Local alternativo con alquiler un 30% inferior",
+      "Concepto reposicionado con propuesta de valor diferenciada",
+      "Plan de inversión ajustado con partidas priorizadas",
+    ],
     acciones: [
-      "Análisis de viabilidad financiera del local con tres escenarios",
-      "Revisión del concepto y reposicionamiento de la propuesta de valor",
+      "Análisis de viabilidad financiera del local con tres escenarios de ventas",
+      "Revisión del concepto y reposicionamiento de la propuesta de valor frente a la competencia",
       "Análisis de tres locales alternativos en la misma zona",
       "Ajuste del plan de inversión inicial eliminando partidas sobredimensionadas",
     ],
@@ -75,20 +82,24 @@ const cases = [
     tipo: "Hotel boutique · Restaurante y bar",
     title: "Hotel con operación F&B poco rentable",
     situacion:
-      "El área de F&B generaba más problemas que ingresos. Alta rotación de equipo, clientes del hotel que raramente usaban el restaurante y sin datos reales sobre rentabilidad del departamento.",
-    metricas: [
+      "El área de F&B generaba más problemas que ingresos. Alta rotación de equipo, clientes del hotel que raramente usaban el restaurante y sin datos reales sobre la rentabilidad del departamento. El F&B no tenía identidad propia ni propuesta de valor diferenciada del hotel. Sin procesos claros ni sistema de venta activa, el coste de personal era desproporcionado para el volumen generado.",
+    antes: [
       "F&B sin KPIs propios ni seguimiento mensual",
       "Rotación de equipo alta, sin procesos documentados",
-      "Carta genérica sin identidad propia",
+      "Clientes del hotel raramente usaban el restaurante",
       "Precios no calibrados para el perfil del huésped",
     ],
-    diagnostico:
-      "El F&B no tenía identidad propia ni propuesta de valor diferenciada del hotel. Sin procesos claros ni sistema de venta activa, el coste de personal era desproporcionado para el volumen generado.",
+    despues: [
+      "Concepto gastronómico alineado con el perfil del huésped",
+      "Carta rediseñada y precios recalibrados",
+      "KPIs mensuales implantados: food cost, labour cost y ticket medio",
+      "Equipo formado en técnicas de venta contextual",
+    ],
     acciones: [
-      "Redefinición del concepto gastronómico alineado con el perfil del huésped",
-      "Rediseño de carta y recalibración de precios",
-      "Formación del equipo en técnicas de venta contextual",
-      "Creación de procesos básicos de operativa",
+      "Redefinición del concepto gastronómico alineado con el perfil y expectativas del huésped",
+      "Rediseño de carta y recalibración de precios según segmento objetivo",
+      "Formación del equipo en técnicas de venta contextual adaptadas al entorno hotelero",
+      "Creación de procesos básicos de operativa con responsables asignados",
       "Implantación de KPIs mensuales: food cost, labour cost y ticket medio",
     ],
     resultado:
@@ -98,7 +109,7 @@ const cases = [
   },
 ];
 
-const bgClasses = ["bg-cream-dark", "bg-white", "bg-cream-dark"];
+const bgClasses = ["bg-cream-dark", "bg-white", "bg-cream-dark"] as const;
 
 export default function CasosRealesPage() {
   return (
@@ -141,116 +152,133 @@ export default function CasosRealesPage() {
 
       {/* ── INTRO — blanco ────────────────────────────────────────── */}
       <section className="bg-white py-16 lg:py-20">
-        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10 space-y-6">
           <p className="font-body text-ink/65 text-lg leading-relaxed border-l-4 border-amber pl-6">
             Los tres casos que siguen tienen algo en común: el problema visible no era el problema real.
             En todos ellos, el trabajo empezó por entender qué estaba pasando antes de proponer ningún cambio.
+          </p>
+          <p className="font-body text-ink/55 text-base leading-relaxed pl-10">
+            Cada proyecto es distinto. Lo que comparten es el punto de partida: un propietario, un gerente
+            o un emprendedor que necesitaba ver con más claridad lo que estaba pasando en su negocio.
+            Lo que encontramos, lo que hicimos y lo que cambió es lo que ves aquí.
           </p>
         </div>
       </section>
 
       {/* ── CASOS ─────────────────────────────────────────────────── */}
-      {cases.map((caso, idx) => (
-        <section key={idx} className={`${bgClasses[idx]} py-20 lg:py-28`}>
-          <div className="max-w-4xl mx-auto px-6 lg:px-10">
+      {cases.map((caso, idx) => {
+        const bg = bgClasses[idx];
+        const cardBg = bg === "bg-white" ? "bg-cream-dark" : "bg-white";
 
-            {/* Cabecera del caso */}
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="font-body text-xs tracking-widest uppercase text-navy bg-amber/20 border border-amber/40 px-3 py-1">
-                {caso.label}
-              </span>
-              <span className="font-body text-xs text-ink/40">{caso.tipo}</span>
-            </div>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
-              {caso.title}
-            </h2>
+        return (
+          <section key={idx} className={`${bg} py-20 lg:py-28`}>
+            <div className="max-w-4xl mx-auto px-6 lg:px-10">
 
-            {/* Situación + Métricas de partida */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-              <div>
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-                  Situación inicial
-                </p>
+              {/* ── Cabecera ───────────────────────────────────────── */}
+              <div className="flex flex-wrap items-center gap-3 mb-5">
+                <span className="font-body text-xs tracking-widest uppercase text-navy bg-amber px-3 py-1 font-semibold">
+                  {caso.label}
+                </span>
+                <span className="font-body text-xs text-ink/45">{caso.tipo}</span>
+              </div>
+              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
+                {caso.title}
+              </h2>
+
+              {/* ── La situación ───────────────────────────────────── */}
+              <div className="mb-10">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <AlertTriangle size={16} className="text-amber flex-shrink-0" />
+                  <p className="font-body text-amber text-xs tracking-widest uppercase">La situación</p>
+                </div>
                 <p className="font-body text-ink/70 text-base leading-relaxed">
                   {caso.situacion}
                 </p>
               </div>
-              <div className={`${bgClasses[idx] === "bg-white" ? "bg-cream-dark" : "bg-white"} border border-navy/10 rounded-xl p-6`}>
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+
+              {/* ── Métricas de partida ────────────────────────────── */}
+              <div className={`${cardBg} border border-navy/10 rounded-xl p-6 lg:p-8 mb-10`}>
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                   Métricas de partida
                 </p>
-                <ul className="space-y-3">
-                  {caso.metricas.map((m, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <span className="text-ink/30 font-display text-base leading-none mt-0.5 flex-shrink-0">—</span>
-                      <p className="font-body text-ink/65 text-sm leading-relaxed">{m}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Diagnóstico */}
-            <div className="mb-10">
-              <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-                Diagnóstico
-              </p>
-              <p className="font-body text-ink/70 text-base leading-relaxed max-w-3xl">
-                {caso.diagnostico}
-              </p>
-            </div>
-
-            {/* Acciones aplicadas */}
-            <div className="mb-10">
-              <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-                Acciones aplicadas
-              </p>
-              <ul className="space-y-3">
-                {caso.acciones.map((a, j) => (
-                  <li key={j} className="flex items-start gap-4">
-                    <span className="font-display text-amber font-bold text-sm leading-none mt-0.5 flex-shrink-0 w-5">
-                      {String(j + 1).padStart(2, "0")}
-                    </span>
-                    <p className="font-body text-ink/70 text-base leading-relaxed">{a}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resultado */}
-            <div className={`${bgClasses[idx] === "bg-white" ? "bg-cream-dark" : "bg-white"} border border-navy/10 rounded-xl p-6 lg:p-8 mb-6`}>
-              <div className="flex items-start gap-4">
-                <CheckCircle size={22} className="text-amber mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
-                    Resultado
-                  </p>
-                  <p className="font-body text-ink/75 text-base leading-relaxed">
-                    {caso.resultado}
-                  </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <p className="font-body text-xs uppercase tracking-wider text-red-500 mb-4">Antes</p>
+                    <ul className="space-y-3">
+                      {caso.antes.map((m, j) => (
+                        <li key={j} className="flex items-start gap-2.5">
+                          <X size={14} className="text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <p className="font-body text-ink/65 text-sm leading-relaxed">{m}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-body text-xs uppercase tracking-wider text-amber mb-4">Después</p>
+                    <ul className="space-y-3">
+                      {caso.despues.map((m, j) => (
+                        <li key={j} className="flex items-start gap-2.5">
+                          <CheckCircle size={14} className="text-amber flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <p className="font-body text-ink/65 text-sm leading-relaxed">{m}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
+
+              {/* ── Qué hicimos ───────────────────────────────────── */}
+              <div className="mb-10">
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
+                  Qué hicimos
+                </p>
+                <ol className="space-y-4">
+                  {caso.acciones.map((a, j) => (
+                    <li key={j} className="flex items-start gap-4">
+                      <span className="font-display text-amber font-bold text-sm leading-none mt-0.5 flex-shrink-0 w-6 text-right">
+                        {String(j + 1).padStart(2, "0")}
+                      </span>
+                      <p className="font-body text-ink/70 text-base leading-relaxed">{a}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* ── Resultado — navy bg ────────────────────────────── */}
+              <div className="bg-navy rounded-xl p-6 lg:p-8 mb-8">
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+                  Resultado
+                </p>
+                <p className="font-body text-cream/85 text-base leading-relaxed">
+                  {caso.resultado}
+                </p>
+              </div>
+
+              {/* ── Lección principal ─────────────────────────────── */}
+              <div className="flex items-start gap-3 mb-10">
+                <Lightbulb size={18} className="text-amber flex-shrink-0 mt-1" strokeWidth={1.75} />
+                <p className="font-display text-navy/60 text-lg italic leading-relaxed">
+                  &ldquo;{caso.leccion}&rdquo;
+                </p>
+              </div>
+
+              {/* ── CTA del caso ──────────────────────────────────── */}
+              <TrackingLink
+                href="https://diagnostico.adrianpollan.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
+                eventName="diagnostico_click"
+                eventLabel={`Casos reales — caso ${idx + 1}`}
+              >
+                ¿Tu situación se parece a esta? Recibir Diagnóstico Gratuito
+                <ExternalLink size={14} />
+              </TrackingLink>
+
             </div>
-
-            {/* Lección */}
-            <p className="font-display text-navy/60 text-lg italic leading-relaxed border-l-4 border-amber/40 pl-5 mb-10">
-              &ldquo;{caso.leccion}&rdquo;
-            </p>
-
-            {/* CTA del caso */}
-            <TrackingLink
-              href="https://diagnostico.adrianpollan.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
-              eventName="diagnostico_click"
-              eventLabel={`Casos reales — caso ${idx + 1}`}
-            >
-              ¿Tu situación se parece a esta? Recibir Diagnóstico Gratuito <ExternalLink size={14} />
-            </TrackingLink>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
 
       {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
@@ -259,11 +287,12 @@ export default function CasosRealesPage() {
             Siguiente paso
           </p>
           <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
-            ¿Quieres ver cómo encaja con tu negocio?
+            ¿Tu situación se parece a alguna de estas?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos
-            para hablarlo directamente. Sin presión, sin compromiso.
+            No hace falta tener todo claro antes de hablar. En una primera conversación de
+            20 minutos puedo ayudarte a ver si hay un patrón reconocible en lo que está
+            pasando en tu negocio.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <TrackingLink
@@ -274,7 +303,8 @@ export default function CasosRealesPage() {
               eventName="diagnostico_click"
               eventLabel="Casos reales — CTA final"
             >
-              Recibir Diagnóstico Gratuito <ExternalLink size={14} />
+              Recibir Diagnóstico Gratuito
+              <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"
@@ -284,7 +314,7 @@ export default function CasosRealesPage() {
               eventName="calendly_click"
               eventLabel="Casos reales — CTA final"
             >
-              Reservar sesión gratuita →
+              Reservar sesión gratuita <ArrowRight size={14} />
             </TrackingLink>
           </div>
         </div>

@@ -460,7 +460,7 @@ export default function SobreMiPage() {
               href="/casos-reales"
               className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
             >
-              Ver todos los casos en detalle <ArrowRight size={14} />
+              Ver página completa de casos <ArrowRight size={14} />
             </Link>
           </div>
         </div>
