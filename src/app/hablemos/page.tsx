@@ -71,8 +71,6 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      <ProcesoDeTrabajo />
-
       {/* ── DIAGNÓSTICO IA — fondo blanco ─────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
@@ -122,7 +120,9 @@ export default function HablemosPage() {
         </div>
       </section>
 
-      <MapaDiagnostico />
+      <ProcesoDeTrabajo />
+
+      <MapaDiagnostico bg="bg-white" />
 
       {/* ── CALENDLY — fondo crema oscuro ─────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">

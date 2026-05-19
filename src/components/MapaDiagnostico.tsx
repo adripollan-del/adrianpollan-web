@@ -11,9 +11,9 @@ const areas = [
   { Icon: Package,      name: "Proveedores y compras", desc: "Control, negociación y costes" },
 ];
 
-export default function MapaDiagnostico() {
+export default function MapaDiagnostico({ bg = "bg-cream-dark" }: { bg?: string }) {
   return (
-    <section className="bg-cream-dark py-20 lg:py-28">
+    <section className={`${bg} py-20 lg:py-28`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-xl mb-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">El diagnóstico analiza</p>

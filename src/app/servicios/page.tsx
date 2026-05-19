@@ -384,8 +384,8 @@ export default function ServiciosPage() {
 
       <ProcesoDeTrabajo />
 
-      {/* ── FAQ — fondo crema oscuro ─────────────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── FAQ — fondo blanco ───────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24">

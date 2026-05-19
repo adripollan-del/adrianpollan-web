@@ -23,7 +23,7 @@ const steps = [
 
 export default function ProcesoDeTrabajo() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-cream-dark py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-xl mb-12">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">Proceso</p>
