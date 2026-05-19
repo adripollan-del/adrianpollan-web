@@ -340,6 +340,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── HERRAMIENTAS GRATUITAS — fondo blanco ────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <div>
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+                Herramientas gratuitas
+              </p>
+              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+                Herramientas gratuitas para tu restaurante
+              </h2>
+              <p className="font-body text-ink/60 text-base mt-2">
+                Calcula, analiza y mejora con estas herramientas prácticas.
+              </p>
+            </div>
+            <Link
+              href="/herramientas"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-navy/55 hover:text-navy transition-colors whitespace-nowrap flex-shrink-0"
+            >
+              Ver todas las herramientas <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                href: "/herramientas/calculadora-prime-cost",
+                label: "Calculadora",
+                title: "Prime Cost",
+                description: "Calcula food cost, labour cost y prime cost al instante con interpretación incluida.",
+              },
+              {
+                href: "/herramientas/checklist-apertura",
+                label: "Checklist",
+                title: "Apertura",
+                description: "Revisa los 24 puntos clave antes de abrir tu restaurante.",
+              },
+              {
+                href: "/herramientas/checklist-food-cost",
+                label: "Checklist",
+                title: "Food Cost",
+                description: "Evalúa si tienes los sistemas básicos de control de costes implementados.",
+              },
+            ].map((tool) => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="group bg-cream-dark border border-navy/8 rounded-xl p-6 hover:border-amber/40 transition-colors flex flex-col"
+              >
+                <span className="font-body text-amber text-xs tracking-widest uppercase mb-2">
+                  {tool.label}
+                </span>
+                <h3 className="font-display text-navy text-xl font-semibold mb-2">{tool.title}</h3>
+                <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-4">
+                  {tool.description}
+                </p>
+                <span className="font-body text-amber text-sm font-medium group-hover:underline">
+                  Usar herramienta →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo blanco ─────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">

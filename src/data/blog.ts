@@ -7,11 +7,13 @@ export type BlogPost = {
   readTime: string;
   coverImage: string;
   body: string;
+  toolCta?: { text: string; href: string };
 };
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "como-gestionar-proveedores-restaurante-negociar-mejores-precios",
+    toolCta: { text: "Audita tus proveedores", href: "/herramientas/auditoria-proveedores" },
     title: "Cómo gestionar proveedores en un restaurante y negociar mejores precios",
     excerpt:
       "Guía práctica de gestión de proveedores en restaurante: cómo auditar, negociar precios y construir relaciones que mejoren tu margen real.",
@@ -158,6 +160,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "como-disenar-una-carta-de-restaurante-rentable",
+    toolCta: { text: "Comprueba tu control de food cost", href: "/herramientas/checklist-food-cost" },
     title: "Cómo diseñar una carta de restaurante rentable",
     excerpt:
       "Aprende a diseñar una carta de restaurante que equilibre atractivo gastronómico y rentabilidad real. Claves prácticas basadas en operativa real.",
@@ -224,6 +227,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "como-calcular-el-food-cost-de-tu-restaurante",
+    toolCta: { text: "Calcula tu prime cost ahora", href: "/herramientas/calculadora-prime-cost" },
     title: "Cómo calcular el food cost de tu restaurante paso a paso",
     excerpt:
       "Aprende a calcular el food cost de tu restaurante con una fórmula clara y ejemplos reales. Descubre por qué este indicador es clave para la rentabilidad de tu negocio.",
@@ -295,6 +299,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "que-es-un-escandallo-y-por-que-lo-necesitas",
+    toolCta: { text: "Comprueba tu control de food cost", href: "/herramientas/checklist-food-cost" },
     title: "Qué es un escandallo y por qué sin él no controlas tu negocio",
     excerpt:
       "Descubre qué es un escandallo, cómo se hace y por qué es la herramienta más importante para controlar costes y rentabilidad en tu restaurante.",
@@ -361,6 +366,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "labour-cost-en-hosteleria-cuanto-gastar-en-personal",
+    toolCta: { text: "Calcula tu prime cost ahora", href: "/herramientas/calculadora-prime-cost" },
     title: "Labour cost en hostelería: cuánto deberías gastar en personal",
     excerpt:
       "Aprende qué es el labour cost, cómo calcularlo y cuánto debería representar el coste de personal en un restaurante o negocio de hostelería rentable.",
@@ -431,6 +437,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "como-mejorar-el-margen-de-un-restaurante-sin-subir-precios",
+    toolCta: { text: "Calcula tu prime cost ahora", href: "/herramientas/calculadora-prime-cost" },
     title: "Cómo mejorar el margen de un restaurante sin subir precios",
     excerpt:
       "Descubre las palancas reales para mejorar el margen de tu restaurante sin tocar los precios. Estrategias prácticas basadas en operativa real.",
@@ -578,6 +585,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "los-10-errores-que-matan-una-apertura",
+    toolCta: { text: "Usa el checklist de apertura", href: "/herramientas/checklist-apertura" },
     title: "Los 10 errores que matan una apertura antes de los 6 meses",
     excerpt:
       "Descubre los errores más frecuentes al abrir un restaurante y cómo evitarlos antes de comprometer tu inversión. Guía práctica basada en experiencia real.",
@@ -658,6 +666,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+    toolCta: { text: "Calcula tu prime cost ahora", href: "/herramientas/calculadora-prime-cost" },
     title: "Qué es el prime cost y por qué es el indicador más importante de tu restaurante",
     excerpt:
       "Descubre qué es el prime cost, cómo calcularlo y por qué es el indicador más útil para medir la rentabilidad real de un restaurante o negocio de hostelería.",

@@ -189,6 +189,27 @@ export default function ParaEmprendedoresPage() {
               </p>
             </div>
           </div>
+
+          {/* Herramienta destacada */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-5 bg-cream-dark border border-amber/40 rounded-xl p-6 lg:p-8">
+            <div>
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
+                Herramienta gratuita
+              </p>
+              <p className="font-display text-navy text-xl font-semibold">
+                Descarga el checklist de apertura gratuito
+              </p>
+              <p className="font-body text-ink/60 text-sm mt-1">
+                24 puntos clave para abrir tu restaurante con criterio.
+              </p>
+            </div>
+            <Link
+              href="/herramientas/checklist-apertura"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+            >
+              Ver checklist <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -126,6 +126,27 @@ export default function ParaPropietariosPage() {
           >
             Ver todos los servicios con detalle <ArrowRight size={15} />
           </Link>
+
+          {/* Herramienta destacada */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 bg-white border border-amber/40 rounded-xl p-6 lg:p-8">
+            <div>
+              <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
+                Herramienta gratuita
+              </p>
+              <p className="font-display text-navy text-xl font-semibold">
+                Calcula tu prime cost ahora
+              </p>
+              <p className="font-body text-ink/60 text-sm mt-1">
+                Food cost, labour cost y prime cost en segundos, con interpretación incluida.
+              </p>
+            </div>
+            <Link
+              href="/herramientas/calculadora-prime-cost"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+            >
+              Ir a la calculadora <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

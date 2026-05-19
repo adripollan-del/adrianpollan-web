@@ -168,6 +168,30 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── HERRAMIENTA CONTEXTUAL ────────────────────────────────── */}
+      {post.toolCta && (
+        <section className="bg-cream-dark py-10 lg:py-12">
+          <div className="max-w-3xl mx-auto px-6 lg:px-10">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-5 bg-white border border-amber/30 rounded-xl p-6 lg:p-8">
+              <div>
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
+                  Herramienta gratuita
+                </p>
+                <p className="font-display text-navy text-lg font-semibold leading-snug">
+                  Ponlo en práctica ahora mismo
+                </p>
+              </div>
+              <a
+                href={post.toolCta.href}
+                className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+              >
+                {post.toolCta.text} →
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── ARTÍCULOS RELACIONADOS — fondo crema ─────────────────── */}
       {related.length > 0 && (
         <section className="bg-cream-dark py-16 lg:py-20">
