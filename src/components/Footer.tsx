@@ -8,6 +8,7 @@ const footerLinks = [
   { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/blog", label: "Blog" },
   { href: "/hablemos", label: "Hablemos" },
+  { href: "/herramientas", label: "Herramientas gratuitas" },
 ];
 
 export default function Footer() {

@@ -19,6 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/para-propietarios-de-restaurantes`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/para-hoteles-fb`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/para-emprendedores`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/herramientas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/calculadora-prime-cost`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/checklist-apertura`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/checklist-food-cost`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/auditoria-proveedores`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
