@@ -100,9 +100,13 @@ export default function Home() {
               gestionados
             </h1>
 
-            <p className="font-body text-cream/65 text-lg lg:text-xl leading-relaxed max-w-xl mb-12">
-              Más de 20 años de experiencia operativa real en España,
-              Francia, Reino Unido e Irlanda.
+            <p className="font-body text-cream/75 text-lg lg:text-xl leading-relaxed max-w-2xl mb-4">
+              Ayudo a propietarios de restaurantes y operaciones F&B a recuperar margen,
+              ordenar la gestión y tomar decisiones con datos, no con intuición.
+            </p>
+            <p className="font-body text-cream/45 text-sm lg:text-base leading-relaxed max-w-xl mb-12">
+              Diagnóstico, control de costes, carta, equipo y operación para negocios
+              que venden, pero no ganan lo que deberían.
             </p>
 
             {/* CTAs — diagnóstico primero (CTA principal), Calendly segundo */}
