@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { services } from "@/data/services";
-import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X } from "lucide-react";
+import { ArrowRight, ExternalLink, Search, LineChart, Rocket, MessageSquare, Lightbulb, FileText, X, HelpCircle } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
 import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
 
@@ -205,8 +205,88 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── SERVICIOS — fondo crema oscuro con grid de 3 tarjetas ── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── ¿QUÉ SERVICIO ENCAJA? — fondo crema oscuro ───────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-12 lg:mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Encuentra tu punto de entrada
+            </p>
+            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-3">
+              ¿Qué servicio encaja contigo?
+            </h2>
+            <p className="font-body text-ink/60 text-lg leading-relaxed">
+              Según el momento en el que está tu negocio, el punto de entrada es distinto.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+            {[
+              {
+                icon: <Search size={26} className="text-amber" />,
+                title: "No sabes dónde se escapa el margen",
+                body: "Empieza por el Diagnóstico y Auditoría F&B. Antes de cambiar nada, hay que entender qué está pasando de verdad.",
+                cta: { label: "Ver servicio", href: "/servicios/auditoria-fb-restaurantes", external: false },
+              },
+              {
+                icon: <LineChart size={26} className="text-amber" />,
+                title: "Sabes que hay problemas y quieres resolverlos",
+                body: "La Consultoría Operativa Continuada es para negocios que quieren implementar cambios reales con acompañamiento sostenido.",
+                cta: { label: "Ver servicio", href: "/servicios/consultoria-operativa-restaurantes", external: false },
+              },
+              {
+                icon: <Rocket size={26} className="text-amber" />,
+                title: "Vas a abrir o estás en los primeros meses",
+                body: "El Acompañamiento a Aperturas te ayuda a tomar mejores decisiones antes de comprometer tu inversión.",
+                cta: { label: "Ver servicio", href: "/servicios/apertura-restaurante", external: false },
+              },
+              {
+                icon: <HelpCircle size={26} className="text-amber" />,
+                title: "No estás seguro por dónde empezar",
+                body: "Empieza con el diagnóstico gratuito. En 10 minutos sabrás cuáles son las áreas prioritarias de tu negocio.",
+                cta: { label: "Recibir Diagnóstico Gratuito", href: "https://diagnostico.adrianpollan.com", external: true },
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="bg-white border border-navy/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
+              >
+                {card.icon}
+                <div className="flex-1">
+                  <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="font-body text-ink/65 text-base leading-relaxed">
+                    {card.body}
+                  </p>
+                </div>
+                {card.cta.external ? (
+                  <TrackingLink
+                    href={card.cta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 btn-amber text-navy text-sm font-semibold tracking-wide self-start"
+                    eventName="diagnostico_click"
+                    eventLabel="Servicios — ¿qué servicio encaja?"
+                  >
+                    {card.cta.label} <ExternalLink size={13} />
+                  </TrackingLink>
+                ) : (
+                  <a
+                    href={card.cta.href}
+                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
+                  >
+                    {card.cta.label} <ArrowRight size={13} />
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICIOS — fondo blanco con grid de 3 tarjetas ────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {services.map((service, i) => (
