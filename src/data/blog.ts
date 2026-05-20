@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Qué es el revenue management en restaurante y cómo aplicarlo para subir ticket medio, llenar horas valle y mejorar margen sin bajar precios.",
     category: "Rentabilidad",
-    date: "2026-05-20",
+    date: "2026-01-19",
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1588560107833-167198a53677?auto=format&fit=crop&w=1792&q=80",
@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Cómo hacer una previsión de ventas en un restaurante con datos reales, sin Excel imposibles ni intuición. Método práctico para anticipar y decidir.",
     category: "El Método",
-    date: "2026-05-20",
+    date: "2026-01-26",
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1584747296141-1dc36d349b26?auto=format&fit=crop&w=1792&q=80",
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Qué es el ticket medio de un restaurante y cómo aumentarlo sin subir precios. Estrategias reales basadas en 20 años de operativa en sala.",
     category: "Rentabilidad",
-    date: "2026-05-20",
+    date: "2026-02-02",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1599458252573-56ae36120de1?auto=format&fit=crop&w=1792&q=80",
@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Cómo calcular el punto de equilibrio de un restaurante paso a paso, con ejemplos reales y los errores que cometen la mayoría de operadores.",
     category: "Rentabilidad",
-    date: "2026-05-20",
+    date: "2026-02-09",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1658426837321-9e04e1d227ee?auto=format&fit=crop&w=1792&q=80",
