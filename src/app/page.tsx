@@ -11,9 +11,9 @@ const Stats = dynamic(() => import("@/components/Stats"));
 const WaitlistForm = dynamic(() => import("@/components/WaitlistForm"));
 
 export const metadata: Metadata = {
-  title: "Adrián Pollán | Consultor de Hostelería y Restauración",
+  title: "Consultor de Restaurantes y Hostelería | Adrián Pollán",
   description:
-    "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real en España, Francia, UK e Irlanda. Diagnóstico gratuito.",
+    "Consultoría especializada para restaurantes y operaciones F&B. Diagnóstico gratuito, control de costes, rentabilidad y acompañamiento operativo. Más de 20 años de experiencia real.",
   alternates: {
     canonical: "https://adrianpollan.com",
   },

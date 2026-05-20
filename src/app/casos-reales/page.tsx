@@ -5,9 +5,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { CheckCircle, ArrowRight, ExternalLink, AlertTriangle, Lightbulb, X } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Casos Reales de Consultoría para Restaurantes",
+  title: "Casos Reales de Consultoría para Restaurantes | Adrián Pollán",
   description:
-    "Casos reales anónimos de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero. Situación, diagnóstico, acciones y resultado.",
+    "Casos reales anonimizados de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero. Situación, diagnóstico, acciones y resultado concreto.",
   alternates: {
     canonical: "https://adrianpollan.com/casos-reales",
   },
