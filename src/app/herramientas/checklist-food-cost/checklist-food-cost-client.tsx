@@ -171,6 +171,28 @@ export default function ChecklistFoodCostClient() {
           <p className="font-body text-sm leading-relaxed opacity-80">{result.body}</p>
         </div>
 
+        {/* Interpretación */}
+        <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+            ¿Qué significa tu resultado?
+          </p>
+          <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
+            {progressPct < 50
+              ? "El control de food cost en tu negocio tiene margen de mejora importante. Sin un sistema claro, el margen se escapa sin que nadie lo vea."
+              : progressPct <= 75
+              ? "Tienes algunas bases, pero hay procesos sin implantar que pueden estar costando margen cada mes."
+              : "Tienes un buen nivel de control. El siguiente paso es asegurarte de que se mantiene actualizado y que el equipo lo aplica de forma consistente."}
+          </p>
+          <a
+            href="https://diagnostico.adrianpollan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+          >
+            Recibir diagnóstico completo de tu negocio →
+          </a>
+        </div>
+
       </div>
     </section>
   );

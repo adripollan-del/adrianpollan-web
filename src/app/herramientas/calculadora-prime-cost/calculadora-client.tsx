@@ -191,6 +191,30 @@ export default function CalculadoraClient() {
           )}
         </div>
 
+        {/* Interpretación */}
+        {showPrime && (
+          <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+              ¿Qué significa tu resultado?
+            </p>
+            <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
+              {primeCost > 70
+                ? "Tu prime cost está por encima del umbral sostenible. Hay fugas de margen que conviene identificar antes de que afecten más al negocio."
+                : primeCost >= 60
+                ? "Tu prime cost está en zona de atención. Hay margen de mejora que con los ajustes correctos puede cambiar significativamente el resultado."
+                : "Tu prime cost está en un rango saludable. El trabajo ahora es mantenerlo y optimizar otros indicadores."}
+            </p>
+            <a
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+            >
+              Recibir diagnóstico completo de tu negocio →
+            </a>
+          </div>
+        )}
+
         {/* Reference ranges */}
         <div className="border-t border-navy/10 pt-8">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">

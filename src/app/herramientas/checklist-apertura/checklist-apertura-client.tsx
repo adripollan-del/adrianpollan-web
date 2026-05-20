@@ -192,6 +192,28 @@ export default function ChecklistAperturaClient() {
           <p className="font-body text-sm leading-relaxed opacity-80">{result.body}</p>
         </div>
 
+        {/* Interpretación */}
+        <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+            ¿Qué significa tu resultado?
+          </p>
+          <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
+            {progressPct < 50
+              ? "Quedan decisiones importantes por tomar antes de abrir. Este es el momento de reforzar las bases antes de comprometer más inversión."
+              : progressPct <= 80
+              ? "Vas por buen camino, pero hay áreas que conviene revisar antes de avanzar."
+              : "Tienes una base sólida. El siguiente paso es asegurarte de que la ejecución respeta ese nivel de preparación."}
+          </p>
+          <a
+            href="https://calendly.com/adrianpollan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+          >
+            Habla con Adrián antes de dar el siguiente paso →
+          </a>
+        </div>
+
       </div>
     </section>
   );

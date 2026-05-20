@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Calculator, ListChecks, TrendingDown, Truck } from "lucide-react";
+import { Calculator, ListChecks, TrendingDown, Truck, UtensilsCrossed } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Aperturas | Adrián Pollán",
@@ -52,6 +52,15 @@ const tools = [
     description:
       "Evalúa la gestión actual de tus proveedores e identifica dónde puedes mejorar condiciones y reducir costes. 16 ítems en 4 bloques.",
     cta: "Hacer auditoría →",
+  },
+  {
+    href: "/herramientas/calculadora-escandallo",
+    icon: <UtensilsCrossed size={28} className="text-amber" />,
+    num: "05",
+    title: "Calculadora de Escandallo",
+    description:
+      "Calcula el coste exacto de producción de cualquier plato. Obtén el food cost, el precio de venta recomendado y el margen real por ración.",
+    cta: "Calcular escandallo →",
   },
 ];
 

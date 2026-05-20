@@ -171,6 +171,28 @@ export default function AuditoriaClient() {
           <p className="font-body text-sm leading-relaxed opacity-80">{result.body}</p>
         </div>
 
+        {/* Interpretación */}
+        <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+            ¿Qué significa tu resultado?
+          </p>
+          <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
+            {progressPct < 50
+              ? "La gestión de proveedores en tu negocio tiene margen de mejora significativo. Es una de las áreas donde se pueden recuperar varios puntos de food cost con cambios concretos."
+              : progressPct <= 75
+              ? "Tienes algunas prácticas correctas, pero hay elementos sin implantar que pueden estar afectando al coste de compra."
+              : "Tienes una gestión de proveedores ordenada. El trabajo ahora es mantener la disciplina y revisar condiciones periódicamente."}
+          </p>
+          <a
+            href="https://diagnostico.adrianpollan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+          >
+            Recibir diagnóstico completo de tu negocio →
+          </a>
+        </div>
+
       </div>
     </section>
   );
