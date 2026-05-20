@@ -488,17 +488,17 @@ export default function SobreMiPage() {
               {
                 text: "Llevábamos tres años con el restaurante lleno casi todos los fines de semana y sin entender por qué el margen no aparecía. En dos meses de trabajo con Adrián identificamos dónde se escapaba el dinero y lo corregimos. El cambio fue inmediato.",
                 name: "Carlos M.",
-                role: "Propietario, Restaurante en Miami",
+                role: "Propietario · Restaurante independiente · 50 cubiertos · Miami",
               },
               {
                 text: "Estaba a punto de firmar el local para mi primer restaurante cuando empecé a trabajar con Adrián. Me hizo las preguntas que nadie me había hecho y me ayudó a tomar decisiones mucho más sólidas antes de comprometer mi inversión.",
                 name: "Laura G.",
-                role: "Emprendedora, Valencia",
+                role: "Emprendedora · Apertura de primer restaurante · Valencia",
               },
               {
                 text: "Lo que más me sorprendió fue que no llegó con soluciones preparadas. Primero entendió el negocio, luego propuso. Esa forma de trabajar marca la diferencia respecto a otros consultores que había contratado antes.",
                 name: "Javier R.",
-                role: "Director de F&B, Hotel en Ciudad de México",
+                role: "Director de F&B · Hotel de 4 estrellas · Ciudad de México",
               },
             ].map((t, i) => (
               <div
@@ -516,6 +516,9 @@ export default function SobreMiPage() {
               </div>
             ))}
           </div>
+          <p className="font-body text-ink/40 text-xs mt-8 text-center">
+            Los nombres han sido anonimizados a petición de los clientes.
+          </p>
         </div>
       </section>
 

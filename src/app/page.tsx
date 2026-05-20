@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield, Calculator, Phone } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield, Calculator, Phone, Clock, Globe, Building2, Target, BookOpen } from "lucide-react";
 import MapaDiagnostico from "@/components/MapaDiagnostico";
 import LinkedinIcon from "@/components/LinkedinIcon";
 
@@ -280,6 +280,68 @@ export default function Home() {
 
       {/* ── ESTADÍSTICAS — fondo amber ─────────────────────────────── */}
       <Stats />
+
+      {/* ── POR QUÉ TRABAJAR CONMIGO — fondo navy ───────────────────── */}
+      <section className="bg-navy py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-12 lg:mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Por qué confiar en mí
+            </p>
+            <h2 className="font-display text-cream text-3xl lg:text-5xl font-semibold leading-tight">
+              Por qué trabajar conmigo
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {[
+              {
+                icon: <Clock size={24} className="text-amber" />,
+                title: "20+ años en operaciones reales",
+                body: "No desde un despacho. Desde cocina, sala, gestión y dirección general en negocios abiertos.",
+              },
+              {
+                icon: <Globe size={24} className="text-amber" />,
+                title: "4 países de experiencia",
+                body: "España, Francia, Reino Unido e Irlanda. Contextos distintos, problemas distintos, soluciones distintas.",
+              },
+              {
+                icon: <Building2 size={24} className="text-amber" />,
+                title: "Hoteles y restaurantes de todos los tamaños",
+                body: "Desde restaurantes familiares hasta propiedades de lujo con operativas complejas.",
+              },
+              {
+                icon: <Target size={24} className="text-amber" />,
+                title: "Especialización en rentabilidad y F&B",
+                body: "Food cost, prime cost, carta, equipos, operativa y experiencia de cliente.",
+              },
+              {
+                icon: <BookOpen size={24} className="text-amber" />,
+                title: "Método propio basado en diagnóstico y datos",
+                body: "No trabajo con intuiciones. Trabajo con información real y decisiones fundamentadas.",
+              },
+              {
+                icon: <CheckCircle size={24} className="text-amber" />,
+                title: "Acompañamiento real, no informes",
+                body: "Me quedo en el proceso mientras tiene sentido estar. No entrego un PDF y desaparezco.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-amber/10 border border-amber/20 rounded-lg flex items-center justify-center mt-0.5">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-display text-cream text-base font-semibold leading-snug mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="font-body text-cream/60 text-sm leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── ¿PARA QUIÉN? — fondo blanco ────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
