@@ -174,7 +174,7 @@ export default function Home() {
               {
                 icon: <ClipboardList size={28} className="text-amber" />,
                 title: "Respondes preguntas sobre tu operación",
-                body: "72 preguntas breves organizadas en 8 bloques. No necesitas preparar documentación. Tarda unos 10 minutos.",
+                body: "66 preguntas breves organizadas en 8 bloques. No necesitas preparar documentación. Tarda unos 10 minutos.",
               },
               {
                 icon: <BarChart2 size={28} className="text-amber" />,
