@@ -306,14 +306,14 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── PROCESO — fondo blanco ───────────────────────────────── */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* ── PROCESO — fondo navy ─────────────────────────────────── */}
+      <section className="bg-navy py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo funciona
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-cream text-2xl lg:text-5xl font-semibold leading-tight">
               El proceso de trabajar conmigo
             </h2>
           </div>
@@ -321,13 +321,13 @@ export default function ServiciosPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step) => (
               <div key={step.num} className="relative">
-                <span className="font-display text-5xl font-light text-amber/25 block mb-4">
+                <span className="font-display text-5xl font-light text-amber block mb-4">
                   {step.num}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">
+                <h3 className="font-display text-cream text-xl font-semibold mb-3">
                   {step.title}
                 </h3>
-                <p className="font-body text-ink/60 text-base leading-relaxed">
+                <p className="font-body text-cream/60 text-base leading-relaxed">
                   {step.body}
                 </p>
               </div>
