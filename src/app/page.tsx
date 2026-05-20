@@ -226,7 +226,7 @@ export default function Home() {
       <MapaDiagnostico />
 
       {/* ── INTRODUCCIÓN PERSONAL ──────────────────────────────────── */}
-      <section className="bg-cream-dark py-16 lg:py-20">
+      <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Foto real — archivo: /public/Adrian Sobre Mi.png */}
