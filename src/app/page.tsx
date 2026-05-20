@@ -281,14 +281,14 @@ export default function Home() {
       {/* ── ESTADÍSTICAS — fondo amber ─────────────────────────────── */}
       <Stats />
 
-      {/* ── POR QUÉ TRABAJAR CONMIGO — fondo navy ───────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── POR QUÉ TRABAJAR CONMIGO — fondo crema oscuro ──────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-12 lg:mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Por qué confiar en mí
             </p>
-            <h2 className="font-display text-cream text-3xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-navy text-3xl lg:text-5xl font-semibold leading-tight">
               Por qué trabajar conmigo
             </h2>
           </div>
@@ -330,10 +330,10 @@ export default function Home() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-cream text-base font-semibold leading-snug mb-1.5">
+                  <h3 className="font-display text-navy text-base font-semibold leading-snug mb-1.5">
                     {item.title}
                   </h3>
-                  <p className="font-body text-cream/60 text-sm leading-relaxed">
+                  <p className="font-body text-ink/60 text-sm leading-relaxed">
                     {item.body}
                   </p>
                 </div>
