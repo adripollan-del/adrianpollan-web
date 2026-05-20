@@ -402,8 +402,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICIOS — fondo crema oscuro ──────────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32">
+      {/* ── SERVICIOS — fondo blanco ────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-16 lg:mb-20">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -439,7 +439,7 @@ export default function Home() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="bg-white shadow-md border border-navy/10 rounded-xl p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
+                className="bg-cream-dark shadow-md border border-navy/10 rounded-xl p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
               >
                 <div className="mb-5">{s.icon}</div>
                 <h3 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight mb-3">
