@@ -114,7 +114,7 @@ export default async function BlogPostPage({ params }: Props) {
               })}
             </span>
           </div>
-          <h1 className="font-display text-cream text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight">
+          <h1 className="font-display text-cream text-3xl lg:text-5xl xl:text-6xl font-semibold leading-tight">
             {post.title}
           </h1>
         </div>

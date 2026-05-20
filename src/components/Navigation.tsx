@@ -10,6 +10,7 @@ import { trackEvent } from "@/lib/gtag";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/servicios", label: "Servicios" },
+  { href: "/casos-reales", label: "Casos reales" },
   { href: "/libro", label: "Mi Libro" },
   { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/blog", label: "Blog" },

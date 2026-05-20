@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, Key, Search, LineChart, Rocket, CheckCircle, ClipboardList, BarChart2, AlertTriangle, Shield, Calculator, Phone } from "lucide-react";
 import MapaDiagnostico from "@/components/MapaDiagnostico";
 import LinkedinIcon from "@/components/LinkedinIcon";
 
@@ -310,6 +310,92 @@ export default function Home() {
                 <p className="font-body text-ink/65 text-sm leading-relaxed">
                   {card.body}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMPIEZA SEGÚN TU SITUACIÓN — fondo crema oscuro ─────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-12 lg:mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Empieza aquí
+            </p>
+            <h2 className="font-display text-navy text-3xl lg:text-5xl font-semibold leading-tight">
+              Empieza según tu situación
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+            {[
+              {
+                icon: <TrendingDown size={26} className="text-amber" />,
+                situation: "Vendo bien pero no gano lo que debería",
+                cta: (
+                  <TrackingLink
+                    href="https://diagnostico.adrianpollan.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                    eventName="diagnostico_click"
+                    eventLabel="Empieza según situación — home"
+                  >
+                    Recibir Diagnóstico Gratuito <ArrowRight size={14} />
+                  </TrackingLink>
+                ),
+              },
+              {
+                icon: <Calculator size={26} className="text-amber" />,
+                situation: "Quiero controlar mis costes",
+                cta: (
+                  <Link
+                    href="/herramientas/calculadora-prime-cost"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                  >
+                    Calcular mi prime cost <ArrowRight size={14} />
+                  </Link>
+                ),
+              },
+              {
+                icon: <Key size={26} className="text-amber" />,
+                situation: "Voy a abrir un restaurante",
+                cta: (
+                  <Link
+                    href="/herramientas/checklist-apertura"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                  >
+                    Usar el checklist de apertura <ArrowRight size={14} />
+                  </Link>
+                ),
+              },
+              {
+                icon: <Phone size={26} className="text-amber" />,
+                situation: "Necesito ayuda directa",
+                cta: (
+                  <TrackingLink
+                    href="https://calendly.com/adrianpollan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                    eventName="calendly_click"
+                    eventLabel="Empieza según situación — home"
+                  >
+                    Reservar sesión gratuita <ArrowRight size={14} />
+                  </TrackingLink>
+                ),
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="bg-white border border-navy/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
+              >
+                {card.icon}
+                <p className="font-display text-navy text-lg font-semibold leading-snug flex-1">
+                  {card.situation}
+                </p>
+                {card.cta}
               </div>
             ))}
           </div>
