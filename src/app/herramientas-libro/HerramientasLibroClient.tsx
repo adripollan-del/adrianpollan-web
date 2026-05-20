@@ -7,18 +7,18 @@ const PASSWORD = "herramientas29";
 const LS_KEY = "herramientas_libro_v1";
 
 const chapters = [
-  { num: 1,  title: "El Método ADRIÁN",                  href: "https://drive.google.com/drive/folders/12halagTHF6uWPDic9uPKgF9m7Tc0KL6A?usp=sharing" },
-  { num: 2,  title: "El mapa del negocio",                href: "https://drive.google.com/drive/folders/15qm6A-NPksl3VQuvCVhNLjiNelb9hx9J?usp=sharing" },
-  { num: 3,  title: "El restaurante que evoluciona",      href: "https://drive.google.com/drive/folders/169wBG_4F1GK6RPnj0oUx9ERB5bHWVSdO?usp=sharing" },
-  { num: 4,  title: "El ADN del restaurante",             href: "https://drive.google.com/drive/folders/172yycLl3baa5mxPdgrW1bwbqQ1KcbTlS?usp=sharing" },
-  { num: 5,  title: "El arte del diagnóstico",            href: "https://drive.google.com/drive/folders/1EsSSSa-8rotw6PaDNw4MOnetF5cBnnSj?usp=sharing" },
-  { num: 6,  title: "Síntomas, causas y soluciones",      href: "https://drive.google.com/drive/folders/1FloKAUgZ6sj6Y-9GCoQVDpvDQXVlInc-?usp=sharing" },
-  { num: 7,  title: "La caja de herramientas",            href: "https://drive.google.com/drive/folders/1L1FqSLYQ3htPualFfy6RydVHY5eTXJ2-?usp=sharing" },
-  { num: 8,  title: "El líder que el sector necesita",    href: "https://drive.google.com/drive/folders/1aHiBnHy6e7nqJ4j4msctF-e466SIyR0v?usp=sharing" },
-  { num: 9,  title: "La experiencia que fideliza",        href: "https://drive.google.com/drive/folders/1aehfDVrRdKOPpyyPWFynOkPiv6j9qjwU?usp=sharing" },
-  { num: 10, title: "Acompañar al que empieza",           href: "https://drive.google.com/drive/folders/1g_3fampR_pRUozUg6dDWnNegFf7sdYy6?usp=sharing" },
-  { num: 11, title: "Tu práctica consultora",             href: "https://drive.google.com/drive/folders/1q8q9ElFwZpanvsTURFJg7Z-jZzzMvO-n?usp=sharing" },
-  { num: 12, title: "Tu marca y tu autoridad",            href: "https://drive.google.com/drive/folders/1rKnBAsu854Hhx1x_jEZ7TNN6qUvbzP1F?usp=sharing" },
+  { num: 1,  title: "El Método ADRIÁN",                  href: "https://drive.google.com/drive/folders/1g_3fampR_pRUozUg6dDWnNegFf7sdYy6?usp=drive_link" },
+  { num: 2,  title: "El mapa del negocio",                href: "https://drive.google.com/drive/folders/172yycLl3baa5mxPdgrW1bwbqQ1KcbTlS?usp=drive_link" },
+  { num: 3,  title: "El restaurante que evoluciona",      href: "https://drive.google.com/drive/folders/12halagTHF6uWPDic9uPKgF9m7Tc0KL6A?usp=drive_link" },
+  { num: 4,  title: "El ADN del restaurante",             href: "https://drive.google.com/drive/folders/1EsSSSa-8rotw6PaDNw4MOnetF5cBnnSj?usp=drive_link" },
+  { num: 5,  title: "El arte del diagnóstico",            href: "https://drive.google.com/drive/folders/1aHiBnHy6e7nqJ4j4msctF-e466SIyR0v?usp=drive_link" },
+  { num: 6,  title: "Síntomas, causas y soluciones",      href: "https://drive.google.com/drive/folders/1L1FqSLYQ3htPualFfy6RydVHY5eTXJ2-?usp=drive_link" },
+  { num: 7,  title: "La caja de herramientas",            href: "https://drive.google.com/drive/folders/15qm6A-NPksl3VQuvCVhNLjiNelb9hx9J?usp=drive_link" },
+  { num: 8,  title: "El líder que el sector necesita",    href: "https://drive.google.com/drive/folders/1FloKAUgZ6sj6Y-9GCoQVDpvDQXVlInc-?usp=drive_link" },
+  { num: 9,  title: "La experiencia que fideliza",        href: "https://drive.google.com/drive/folders/1rKnBAsu854Hhx1x_jEZ7TNN6qUvbzP1F?usp=drive_link" },
+  { num: 10, title: "Acompañar al que empieza",           href: "https://drive.google.com/drive/folders/1aehfDVrRdKOPpyyPWFynOkPiv6j9qjwU?usp=drive_link" },
+  { num: 11, title: "Tu práctica consultora",             href: "https://drive.google.com/drive/folders/1q8q9ElFwZpanvsTURFJg7Z-jZzzMvO-n?usp=drive_link" },
+  { num: 12, title: "Tu marca y tu autoridad",            href: "https://drive.google.com/drive/folders/169wBG_4F1GK6RPnj0oUx9ERB5bHWVSdO?usp=drive_link" },
 ];
 
 export default function HerramientasLibroClient() {
