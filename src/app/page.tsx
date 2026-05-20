@@ -603,10 +603,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                href: "/herramientas/calculadora-prime-cost",
+                href: "/herramientas/calculadora-escandallo",
                 label: "Calculadora",
-                title: "Prime Cost",
-                description: "Calcula food cost, labour cost y prime cost al instante con interpretación incluida.",
+                title: "Escandallo",
+                description: "Calcula el coste exacto de producción de tus platos, el food cost y el precio de venta recomendado.",
               },
               {
                 href: "/herramientas/checklist-apertura",
