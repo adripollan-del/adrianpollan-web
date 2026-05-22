@@ -21,9 +21,12 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error();
-      setStatus("sent");
-      trackEvent("form_submit", { event_category: "conversion", event_label: "Formulario de contacto" });
+      if (res.ok) {
+        setStatus("sent");
+        trackEvent("form_submit", { event_category: "conversion", event_label: "Formulario de contacto" });
+      } else {
+        throw new Error();
+      }
     } catch {
       setStatus("error");
     }
