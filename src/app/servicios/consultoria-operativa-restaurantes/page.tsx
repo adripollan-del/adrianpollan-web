@@ -26,11 +26,12 @@ const forWhom = [
 ];
 
 const includes = [
-  "Sesiones de trabajo periódicas por videollamada",
-  "Seguimiento continuo de indicadores clave",
-  "Soporte en la toma de decisiones del día a día",
-  "Formación y acompañamiento al equipo de gestión",
-  "Acceso directo entre sesiones para resolver lo urgente",
+  "KPIs definidos desde el día uno: food cost, prime cost, ticket medio, cobertura",
+  "Decisiones tomadas con datos, no con intuición",
+  "Equipo de gestión con más autonomía y menos dependencia del propietario",
+  "Procesos documentados que funcionan sin que estés tú encima",
+  "Carta y turnos optimizados para mejorar margen sin bajar calidad",
+  "Acceso directo entre sesiones para cuando surge algo que no puede esperar",
 ];
 
 const steps = [
@@ -170,6 +171,65 @@ export default function ConsultoriaOperativaPage() {
         </div>
       </section>
 
+      {/* ── QUÉ CAMBIA — blanco ──────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Qué cambia
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+              Qué cambia durante el acompañamiento
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              No son promesas. Son los cambios que miden si el trabajo está funcionando.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              "El negocio deja de depender de que estés tú en todo momento",
+              "Los números dejan de ser una sorpresa a final de mes",
+              "El equipo trabaja con criterio propio, no solo siguiendo instrucciones",
+              "Tomas decisiones con datos, no con intuición ni costumbre",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-6">
+                <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
+                <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDICADORES DE SEGUIMIENTO — crema oscuro ─────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Indicadores de seguimiento
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Lo que medimos cada mes
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "Food cost y prime cost mensual",
+              "Ticket medio por turno y servicio",
+              "Ratio de dependencia operativa del propietario",
+              "Margen neto antes y después",
+            ].map((item, i) => (
+              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6">
+                <span className="font-display text-3xl font-light text-amber/30 block mb-3">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/75 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CÓMO FUNCIONA — blanco ────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -193,6 +253,34 @@ export default function ConsultoriaOperativaPage() {
                 <p className="font-body text-ink/60 text-sm leading-relaxed">
                   {step.body}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CUÁNDO NO TIENE SENTIDO — blanco ─────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Honestidad ante todo
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Cuándo no tiene sentido
+            </h2>
+          </div>
+          <div className="space-y-4 max-w-2xl">
+            {[
+              "Si no hay voluntad real de cambiar. El acompañamiento requiere implicación tuya y de tu equipo.",
+              "Si buscas resultados inmediatos sin proceso. Los cambios reales llevan semanas, no días.",
+              "Si el negocio está en crisis aguda. Primero hay que estabilizar, luego optimizar.",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 border border-navy/10 rounded-xl p-5">
+                <span className="font-display text-base font-semibold text-navy/30 flex-shrink-0 mt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
