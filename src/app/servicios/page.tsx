@@ -530,6 +530,82 @@ export default function ServiciosPage() {
 
       <ProcesoDeTrabajo />
 
+      {/* ── ¿CÓMO SÉ SI NECESITO AYUDA? — fondo blanco ─────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Señales de alerta
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+              ¿Cómo sé si necesito ayuda?
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              No hace falta tener todo roto para que tenga sentido pedir ayuda. Estas son las señales más comunes.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+            {[
+              {
+                num: "01",
+                title: "Vendes bien, pero los números no cuadran",
+                body: "Buena ocupación, trabajo que no falta, pero a fin de mes el margen no refleja el esfuerzo. El problema casi nunca está donde crees.",
+              },
+              {
+                num: "02",
+                title: "Tomas decisiones sin datos reales",
+                body: "Gestionas por intuición, por costumbre o por lo que \"siempre se ha hecho así\". No tienes un sistema de seguimiento que te diga qué está funcionando y qué no.",
+              },
+              {
+                num: "03",
+                title: "El negocio depende demasiado de ti",
+                body: "Si no estás, las cosas no funcionan igual. Tu equipo necesita que estés encima de todo y eso no escala.",
+              },
+              {
+                num: "04",
+                title: "El food cost o el prime cost se te escapa",
+                body: "Sabes que algo no cuadra en los costes, pero no tienes claro dónde está el agujero ni cómo taparlo.",
+              },
+              {
+                num: "05",
+                title: "Vas a abrir y no quieres cometer errores caros",
+                body: "Tienes el proyecto, las ganas y la inversión comprometida o a punto de comprometerse. Hay decisiones que luego son difíciles de deshacer.",
+              },
+              {
+                num: "06",
+                title: "El F&B de tu hotel es un centro de coste, no un activo",
+                body: "Alta rotación, huéspedes que no usan la restauración, sin KPIs claros. Sabes que puede dar más, pero no sabes por dónde empezar.",
+              },
+            ].map((card) => (
+              <div key={card.num} className="bg-cream-dark border border-navy/8 rounded-xl p-6">
+                <span className="font-display text-3xl font-light text-amber/30 block mb-4">
+                  {card.num}
+                </span>
+                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-2">
+                  {card.title}
+                </h3>
+                <p className="font-body text-ink/65 text-sm leading-relaxed">{card.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-8">
+              Si reconoces alguna de estas situaciones, el diagnóstico gratuito es el primer paso.
+            </p>
+            <TrackingLink
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              eventName="diagnostico_click"
+              eventLabel="Servicios — ¿cómo sé si necesito ayuda?"
+            >
+              Recibir Diagnóstico Gratuito <ExternalLink size={14} />
+            </TrackingLink>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ — fondo blanco ───────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
