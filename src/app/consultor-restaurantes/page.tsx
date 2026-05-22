@@ -147,7 +147,7 @@ export default function ConsultorRestaurantesPage() {
                 {[
                   { num: "20+", label: "Años de experiencia operativa en hostelería" },
                   { num: "4", label: "Países: España, Francia, Reino Unido e Irlanda" },
-                  { num: "100+", label: "Negocios acompañados y transformados" },
+                  { num: "100+", label: "Negocios acompañados" },
                 ].map((s) => (
                   <div key={s.num} className="flex items-center gap-5">
                     <span className="font-display text-4xl font-bold text-navy leading-none w-20 flex-shrink-0">

@@ -281,6 +281,15 @@ export default function Home() {
       {/* ── ESTADÍSTICAS — fondo amber ─────────────────────────────── */}
       <Stats />
 
+      {/* ── Nota de contexto sobre las estadísticas ────────────────── */}
+      <section className="bg-cream py-6 lg:py-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-ink/55 text-sm text-center leading-relaxed">
+            Experiencia acumulada en dirección, operaciones y consultoría en restaurantes, hoteles y negocios F&B en España, Francia, Reino Unido e Irlanda.
+          </p>
+        </div>
+      </section>
+
       {/* ── POR QUÉ TRABAJAR CONMIGO — fondo crema oscuro ──────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">

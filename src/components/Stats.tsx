@@ -14,7 +14,7 @@ type Stat = {
 const stats: Stat[] = [
   { icon: Clock, value: 20, suffix: "+", label: "Años de experiencia operativa" },
   { icon: Globe, value: 4, suffix: "", label: "Países: España, Francia, UK, Irlanda" },
-  { icon: Users, value: 100, suffix: "+", label: "Negocios transformados" },
+  { icon: Users, value: 100, suffix: "+", label: "Negocios acompañados" },
 ];
 
 function Counter({ target, animate }: { target: number; animate: boolean }) {
