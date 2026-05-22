@@ -214,12 +214,24 @@ export default function ChecklistAperturaClient() {
               : "Tienes una base sólida. El siguiente paso es asegurarte de que la ejecución respeta ese nivel de preparación."}
           </p>
           <a
-            href="https://calendly.com/adrianpollan"
+            href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
           >
-            Habla con Adrián antes de dar el siguiente paso →
+            {progressPct < 50
+              ? "Quedan decisiones clave — recibir diagnóstico gratuito →"
+              : progressPct <= 80
+              ? "Vas por buen camino — analiza el resto de tu negocio →"
+              : "Preparación sólida — confirma que todo está bien encaminado →"}
+          </a>
+          <a
+            href="https://calendly.com/adrianpollan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-3 font-body text-sm text-ink/50 hover:text-amber transition-colors underline underline-offset-4"
+          >
+            O reservar una sesión de 20 minutos →
           </a>
         </div>
 
