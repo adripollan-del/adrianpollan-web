@@ -200,6 +200,23 @@ export default function CalculadoraClient() {
           )}
         </div>
 
+        {/* CTA parcial — solo food o labour, sin prime */}
+        {showAny && !showPrime && (
+          <div className="mt-6 bg-cream-dark border border-navy/10 rounded-xl p-6">
+            <p className="font-body text-ink/70 text-sm leading-relaxed mb-4">
+              Introduce el coste de personal para calcular el prime cost completo. O si prefieres, el diagnóstico gratuito analiza todas las áreas de tu negocio en 10 minutos.
+            </p>
+            <a
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+            >
+              Recibir Diagnóstico Gratuito →
+            </a>
+          </div>
+        )}
+
         {/* Interpretación */}
         {showPrime && (
           <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
@@ -219,7 +236,11 @@ export default function CalculadoraClient() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
             >
-              Recibir diagnóstico completo de tu negocio →
+              {pcLevel === "rojo"
+                ? "Tu prime cost está en zona crítica — ver diagnóstico gratuito →"
+                : pcLevel === "amarillo"
+                ? "Hay margen de mejora real — ver diagnóstico gratuito →"
+                : "Buen resultado — analiza el resto de tu negocio →"}
             </a>
           </div>
         )}
