@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
-import { ArrowRight, CheckCircle, ExternalLink, TrendingDown } from "lucide-react";
+import { ArrowRight, CheckCircle, ClipboardList, ExternalLink, Lightbulb, Target, TrendingDown, Users, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Diagnóstico y Auditoría F&B para Restaurantes",
@@ -26,11 +26,25 @@ const forWhom = [
 ];
 
 const includes = [
-  "Reuniones de trabajo por videollamada",
-  "Revisión completa de costes, márgenes y estructura de ingresos",
-  "Análisis de carta, ticket medio y mezcla de ventas",
-  "Evaluación del equipo y sus dinámicas",
-  "Informe ejecutivo con prioridades de acción",
+  "Mapa de dónde se escapa el margen, con datos reales de tu negocio",
+  "Análisis de food cost real vs. teórico, prime cost y estructura de ingresos",
+  "Evaluación de carta: qué vender más, qué eliminar, dónde ajustar precio",
+  "Diagnóstico del equipo y sus dinámicas operativas",
+  "Informe ejecutivo con las 3-5 palancas prioritarias y plan de acción concreto",
+];
+
+const cambios = [
+  { icon: Target, text: "Sabes exactamente dónde se escapa el margen, con datos, no con intuición" },
+  { icon: ClipboardList, text: "Tienes un orden de prioridades claro: qué mover primero y qué puede esperar" },
+  { icon: Lightbulb, text: "Las decisiones que tomabas a ciegas tienen ahora fundamento" },
+  { icon: Users, text: "Tu equipo y tú habláis el mismo idioma sobre los problemas reales" },
+];
+
+const indicadores = [
+  "Food cost real vs. teórico",
+  "Prime cost y ratio sobre ventas",
+  "Ticket medio por servicio y cobertura",
+  "Mezcla de ventas por categoría",
 ];
 
 export default function AuditoriaFBPage() {
@@ -152,6 +166,53 @@ export default function AuditoriaFBPage() {
         </div>
       </section>
 
+      {/* ── QUÉ CAMBIA — blanco ──────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-14">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Qué cambia
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              Qué cambia después de la auditoría
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              No es un informe que lees una vez. Es una conversación que cambia cómo gestionas.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {cambios.map(({ icon: Icon, text }, i) => (
+              <div key={i} className="bg-cream-dark border border-navy/8 rounded-xl p-6 lg:p-8">
+                <Icon size={28} className="text-amber mb-5" />
+                <p className="font-body text-ink/75 text-base leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDICADORES — crema oscuro ───────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-14">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Indicadores
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Indicadores que analizamos
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            {indicadores.map((item, i) => (
+              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6 flex flex-col gap-4">
+                <div className="w-10 h-px bg-amber" />
+                <p className="font-display text-navy text-base font-semibold leading-snug">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── QUÉ RECIBES — blanco ──────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -181,6 +242,37 @@ export default function AuditoriaFBPage() {
       {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
+
+          {/* Callout: cuándo no tiene sentido */}
+          <div className="max-w-3xl mx-auto mb-16 bg-white border border-navy/10 rounded-xl p-8 lg:p-10 text-left">
+            <div className="flex items-center gap-3 mb-6">
+              <XCircle size={22} className="text-amber" />
+              <p className="font-body text-amber text-xs tracking-widest uppercase">
+                Cuándo no tiene sentido
+              </p>
+            </div>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="font-display text-amber font-semibold text-base flex-shrink-0">—</span>
+                <p className="font-body text-ink/70 text-base leading-relaxed">
+                  Si buscas que alguien te confirme lo que ya crees. El diagnóstico revela lo que hay, no lo que quieres oír.
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-display text-amber font-semibold text-base flex-shrink-0">—</span>
+                <p className="font-body text-ink/70 text-base leading-relaxed">
+                  Si el negocio lleva menos de 3 meses abierto. No hay datos suficientes para trabajar con criterio.
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-display text-amber font-semibold text-base flex-shrink-0">—</span>
+                <p className="font-body text-ink/70 text-base leading-relaxed">
+                  Si no estás dispuesto a compartir los números reales. Sin datos, no hay diagnóstico.
+                </p>
+              </li>
+            </ul>
+          </div>
+
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             "A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar."
           </h2>
