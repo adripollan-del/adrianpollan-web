@@ -104,7 +104,7 @@ export default function HerramientasPage() {
               <Link
                 key={tool.href}
                 href={tool.href}
-                className="group bg-white border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors flex flex-col"
+                className="group bg-white border border-navy/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-12 h-12 bg-amber/10 border border-amber/20 rounded-xl flex items-center justify-center flex-shrink-0">

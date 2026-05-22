@@ -189,7 +189,7 @@ export default function ServiciosPage() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group bg-cream-dark border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors flex flex-col"
+                className="group bg-cream-dark border border-navy/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   {item.num}
