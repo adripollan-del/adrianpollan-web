@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/los-10-errores-que-matan-una-apertura",
         permanent: true,
       },
+      {
+        source: "/blog/ticket-medio-restaurante-como-aumentarlo",
+        destination:
+          "/blog/ticket-medio-restaurante-como-aumentarlo-sin-subir-precios",
+        permanent: true,
+      },
     ];
   },
   images: {
