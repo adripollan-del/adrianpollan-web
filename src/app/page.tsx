@@ -787,8 +787,7 @@ export default function Home() {
             El primer paso es siempre el más sencillo.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed max-w-xl mx-auto mb-12">
-            Una sesión gratuita de 20 minutos para ver dónde está tu negocio
-            y si tiene sentido trabajar juntos.
+            En 10 minutos recibes una foto clara de las áreas prioritarias de tu negocio. Sin registro, sin compromiso, sin tarjeta de crédito.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
