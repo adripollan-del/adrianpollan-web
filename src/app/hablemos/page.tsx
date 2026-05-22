@@ -220,7 +220,7 @@ export default function HablemosPage() {
               eventName="calendly_click"
               eventLabel="Hablemos — CTA final"
             >
-              Reserva tu sesión gratuita <ArrowRight size={15} />
+              Reservar sesión gratuita de 20 min <ArrowRight size={15} />
             </TrackingLink>
           </div>
         </div>

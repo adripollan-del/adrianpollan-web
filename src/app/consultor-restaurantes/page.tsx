@@ -243,7 +243,7 @@ export default function ConsultorRestaurantesPage() {
               eventName="calendly_click"
               eventLabel="Consultor restaurantes — CTA final"
             >
-              O reserva una sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
           <p className="font-body text-ink/40 text-xs mt-8">

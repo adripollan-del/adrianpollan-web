@@ -315,7 +315,7 @@ export default function CasosRealesPage() {
               eventName="calendly_click"
               eventLabel="Casos reales — CTA final"
             >
-              Reservar sesión gratuita <ArrowRight size={14} />
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

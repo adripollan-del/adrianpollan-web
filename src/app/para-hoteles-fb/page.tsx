@@ -250,7 +250,7 @@ export default function ParaHotelesPage() {
               eventName="calendly_click"
               eventLabel="Para hoteles FB — CTA final"
             >
-              Reservar sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

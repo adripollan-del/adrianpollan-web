@@ -315,7 +315,7 @@ export default function ConsultoriaOperativaPage() {
               eventName="calendly_click"
               eventLabel="Consultoría Operativa — CTA final"
             >
-              Reservar sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

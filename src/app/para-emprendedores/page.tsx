@@ -293,7 +293,7 @@ export default function ParaEmprendedoresPage() {
               eventName="calendly_click"
               eventLabel="Para emprendedores — CTA final"
             >
-              Reservar sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

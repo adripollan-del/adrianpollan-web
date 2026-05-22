@@ -222,7 +222,7 @@ export default function ParaPropietariosPage() {
               eventName="calendly_click"
               eventLabel="Para propietarios — CTA final"
             >
-              Reservar sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

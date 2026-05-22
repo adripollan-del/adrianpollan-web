@@ -129,7 +129,7 @@ export default function ServiceCard({
               className="inline-flex items-center justify-center gap-2 px-6 py-3 mt-3 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors w-full"
               onClick={() => trackEvent("calendly_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
-              Reserva una sesión gratuita
+              Reservar sesión gratuita de 20 min
               <ArrowRight size={14} />
             </a>
 

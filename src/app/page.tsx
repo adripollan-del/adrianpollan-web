@@ -134,7 +134,7 @@ export default function Home() {
                 eventName="calendly_click"
                 eventLabel="Hero home"
               >
-                Reserva una sesión gratuita
+                Reservar sesión gratuita de 20 min
                 <ArrowRight size={16} />
               </TrackingLink>
             </div>
@@ -464,7 +464,7 @@ export default function Home() {
                       eventName="calendly_click"
                       eventLabel="Empieza según situación — home secundario"
                     >
-                      O reserva una sesión gratuita →
+                      O reservar una sesión de 20 minutos →
                     </TrackingLink>
                   </div>
                 ),
@@ -810,7 +810,7 @@ export default function Home() {
               eventName="calendly_click"
               eventLabel="CTA final home secundario"
             >
-              O reserva una sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>

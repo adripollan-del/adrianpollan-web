@@ -189,7 +189,7 @@ export default function ConsultoriaFbHotelesPage() {
               eventName="calendly_click"
               eventLabel="Consultoría F&B hoteles — CTA final"
             >
-              O reserva una sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
           <p className="font-body text-ink/40 text-xs mt-8">

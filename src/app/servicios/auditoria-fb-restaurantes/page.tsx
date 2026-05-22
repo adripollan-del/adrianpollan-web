@@ -299,7 +299,7 @@ export default function AuditoriaFBPage() {
               eventName="calendly_click"
               eventLabel="Auditoría F&B — CTA final"
             >
-              Reservar sesión gratuita →
+              O reservar una sesión de 20 minutos →
             </TrackingLink>
           </div>
         </div>
