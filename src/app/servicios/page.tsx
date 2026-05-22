@@ -358,6 +358,7 @@ export default function ServiciosPage() {
                 subtitle={service.subtitle}
                 summary={service.summary}
                 includes={service.includes}
+                notFor={service.notFor}
                 ideal={service.ideal}
                 closing={service.closing}
                 icon={serviceIcons[i]}

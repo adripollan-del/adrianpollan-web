@@ -10,6 +10,7 @@ interface ServiceCardProps {
   subtitle: string;
   summary: string;
   includes: string[];
+  notFor?: string;
   ideal: string;
   closing: string;
   icon: React.ReactNode;
@@ -21,6 +22,7 @@ export default function ServiceCard({
   subtitle,
   summary,
   includes,
+  notFor,
   ideal,
   closing,
   icon,
@@ -80,6 +82,17 @@ export default function ServiceCard({
                 </li>
               ))}
             </ul>
+
+            {notFor && (
+              <div className="mb-6 pt-5 border-t border-navy/10">
+                <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
+                  Cuándo no tiene sentido
+                </p>
+                <p className="font-body text-ink/65 text-base leading-relaxed">
+                  {notFor}
+                </p>
+              </div>
+            )}
 
             {/* Ideal para */}
             <div className="mb-6 pt-5 border-t border-navy/10">
