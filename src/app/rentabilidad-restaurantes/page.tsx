@@ -4,7 +4,7 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán",
+  title: { absolute: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán" },
   description:
     "Aprende a mejorar la rentabilidad de tu restaurante. Food cost, prime cost, labour cost, carta rentable y control de costes. Guía práctica basada en experiencia real.",
   alternates: { canonical: "https://adrianpollan.com/rentabilidad-restaurantes" },

@@ -4,7 +4,7 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Rocket, CheckCircle, AlertTriangle, TrendingDown } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Para Emprendedores que Quieren Abrir un Restaurante | Adrián Pollán",
+  title: { absolute: "Para Emprendedores que Quieren Abrir un Restaurante | Adrián Pollán" },
   description:
     "Acompañamiento para emprendedores que quieren abrir un restaurante con criterio. Evita los errores más costosos antes de comprometer tu inversión.",
   alternates: {

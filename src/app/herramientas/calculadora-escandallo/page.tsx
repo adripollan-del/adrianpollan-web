@@ -5,7 +5,7 @@ import TrackingLink from "@/components/TrackingLink";
 import EscandalloClient from "./escandallo-client";
 
 export const metadata: Metadata = {
-  title: "Calculadora de Escandallo para Restaurantes | Adrián Pollán",
+  title: { absolute: "Calculadora de Escandallo para Restaurantes | Adrián Pollán" },
   description:
     "Calcula el escandallo de tus platos de forma profesional. Introduce ingredientes, cantidades y costes y obtén el food cost, precio de venta recomendado y margen real.",
   alternates: {

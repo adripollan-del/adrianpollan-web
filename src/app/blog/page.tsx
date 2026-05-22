@@ -3,7 +3,7 @@ import Image from "next/image";
 import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
-  title: "Blog de Consultoría para Restaurantes | Rentabilidad, Costes y Gestión | Adrián Pollán",
+  title: { absolute: "Blog de Consultoría para Restaurantes | Rentabilidad, Costes y Gestión | Adrián Pollán" },
   description:
     "Artículos prácticos sobre food cost, prime cost, labour cost, escandallos, proveedores, aperturas y gestión de equipos. Ideas reales para restaurantes más rentables.",
   alternates: {

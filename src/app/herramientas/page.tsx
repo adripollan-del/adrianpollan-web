@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Calculator, ListChecks, TrendingDown, Truck, UtensilsCrossed } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Aperturas | Adrián Pollán",
+  title: { absolute: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Aperturas | Adrián Pollán" },
   description:
     "Calculadora de prime cost, checklist de apertura, control de food cost y auditoría de proveedores. Herramientas gratuitas para restaurantes y hostelería.",
   alternates: { canonical: "https://adrianpollan.com/herramientas" },

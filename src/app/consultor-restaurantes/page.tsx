@@ -4,7 +4,7 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, Rocket, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Consultor de Restaurantes | Adrián Pollán",
+  title: { absolute: "Consultor de Restaurantes | Adrián Pollán" },
   description:
     "Consultor especializado en restaurantes y negocios de hostelería. Más de 20 años de experiencia operativa en España, Francia, Reino Unido e Irlanda.",
   alternates: { canonical: "https://adrianpollan.com/consultor-restaurantes" },

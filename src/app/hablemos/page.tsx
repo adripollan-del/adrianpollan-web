@@ -8,7 +8,7 @@ import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
 import MapaDiagnostico from "@/components/MapaDiagnostico";
 
 export const metadata: Metadata = {
-  title: "Habla con Adrián Pollán | Consultor de Restaurantes y Hostelería",
+  title: { absolute: "Habla con Adrián Pollán | Consultor de Restaurantes y Hostelería" },
   description:
     "Diagnóstico gratuito de tu negocio, sesión gratuita de 20 minutos o mensaje directo. Primera conversación sin compromiso para ver si tiene sentido trabajar juntos.",
   alternates: {

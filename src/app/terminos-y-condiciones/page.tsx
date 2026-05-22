@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones — Adrián Pollán",
+  title: { absolute: "Términos y Condiciones — Adrián Pollán" },
   description: "Términos y condiciones de uso y contratación de servicios en adrianpollan.com.",
   robots: { index: false, follow: false },
 };

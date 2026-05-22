@@ -63,7 +63,7 @@ const excerpts = [
 const bookFaqs = [
   {
     q: "¿Cuándo sale el libro?",
-    a: "Está previsto para finales de 2025. Los suscriptores de la lista serán los primeros en saberlo.",
+    a: "La fecha de publicación está por confirmar. Los suscriptores de la lista serán los primeros en saberlo.",
   },
   {
     q: "¿Qué incluye exactamente?",

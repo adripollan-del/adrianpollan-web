@@ -4,7 +4,7 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Para Propietarios de Restaurantes | Adrián Pollán",
+  title: { absolute: "Para Propietarios de Restaurantes | Adrián Pollán" },
   description:
     "Consultoría especializada para propietarios de restaurantes que venden bien pero no ganan lo que deberían. Diagnóstico, operativa y rentabilidad real.",
   alternates: {

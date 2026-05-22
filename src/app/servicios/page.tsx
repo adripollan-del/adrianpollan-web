@@ -58,7 +58,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Consultoría para Restaurantes, Hoteles y F&B | Servicios | Adrián Pollán",
+  title: { absolute: "Consultoría para Restaurantes, Hoteles y F&B | Servicios | Adrián Pollán" },
   description:
     "Diagnóstico y auditoría F&B, consultoría operativa y acompañamiento a aperturas. Servicios de consultoría para restaurantes y hostelería basados en experiencia operativa real.",
   alternates: {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aviso Legal — Adrián Pollán",
+  title: { absolute: "Aviso Legal — Adrián Pollán" },
   description: "Información legal sobre la titularidad y condiciones de uso de adrianpollan.com.",
   robots: { index: false, follow: false },
 };

@@ -7,7 +7,7 @@ import LinkedinIcon from "@/components/LinkedinIcon";
 import MetodoADRIAN from "@/components/MetodoADRIAN";
 
 export const metadata: Metadata = {
-  title: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia",
+  title: { absolute: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia" },
   description:
     "Conoce a Adrián Pollán: consultor en restauración y F&B con más de 20 años de experiencia operativa en España, Francia, Reino Unido e Irlanda. Trabajo desde dentro del negocio, no desde un despacho.",
   alternates: {

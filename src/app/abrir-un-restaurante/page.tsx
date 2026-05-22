@@ -4,7 +4,7 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cómo Abrir un Restaurante | Guía Paso a Paso | Adrián Pollán",
+  title: { absolute: "Cómo Abrir un Restaurante | Guía Paso a Paso | Adrián Pollán" },
   description:
     "Guía práctica para abrir un restaurante con criterio. Concepto, inversión, local, carta, equipo y errores que evitar. Basada en experiencia real en aperturas.",
   alternates: { canonical: "https://adrianpollan.com/abrir-un-restaurante" },
