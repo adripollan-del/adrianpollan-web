@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Plus, Trash2, ArrowRight } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
 type Unit = "g" | "kg" | "ml" | "l" | "ud";
@@ -338,7 +338,11 @@ export default function EscandalloClient() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
               >
-                Recibir diagnóstico completo de tu negocio <ArrowRight size={14} />
+                {targetFC > 38
+                  ? "Food cost por encima del umbral — ver diagnóstico gratuito →"
+                  : targetFC >= 32
+                  ? "Hay margen de mejora — ver diagnóstico gratuito →"
+                  : "Buen resultado — analiza el resto de tu negocio →"}
               </a>
             </div>
 
