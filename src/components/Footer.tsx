@@ -57,7 +57,7 @@ export default function Footer() {
           <div>
             <h3 className="font-body text-xs uppercase tracking-widest text-amber mb-5">Empezar</h3>
             <p className="text-sm text-cream/60 mb-5">
-              ¿Quieres saber si puedo ayudarte? Empieza con una sesión gratuita de 20 minutos.
+              ¿Sabes dónde está perdiendo rentabilidad tu negocio? Empieza con el diagnóstico gratuito. Si después tiene sentido, reservamos una sesión de 20 minutos.
             </p>
             {/* Primary CTA: diagnóstico — botón amber sólido */}
             <TrackingLink
