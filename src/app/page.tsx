@@ -687,24 +687,27 @@ export default function Home() {
             {[
               {
                 label: "Rentabilidad",
+                metric: "−6,5 puntos de food cost en 8 semanas",
                 title: "Restaurante con buena ocupación y margen insuficiente",
-                antes: ["48 referencias activas", "Merma no controlada", "Sin seguimiento de margen"],
-                despues: ["Carta reducida a 31 referencias", "Control semanal de merma", "Sistema real de seguimiento"],
-                resultado: "En 12 semanas: de gestionar por intuición a tomar decisiones con datos reales.",
+                antes: ["Food cost real al 38%", "Escandallos desactualizados", "Porciones servidas a ojo"],
+                despues: ["Food cost al 31,5%", "Fichas técnicas implantadas", "Control semanal de compras y stock"],
+                resultado: "Sin reducir calidad percibida ni afectar ventas. El propietario pasó de mirar la facturación a controlar el margen real por plato.",
               },
               {
                 label: "Apertura",
+                metric: "Alquiler un 30% más barato. Primeras reseñas positivas.",
                 title: "Emprendedor antes de firmar el local",
-                antes: ["Alquiler al 18% sobre ventas proyectadas", "Concepto sin diferenciación clara", "Inversión sobredimensionada"],
-                despues: ["Local alternativo un 30% más barato", "Concepto reposicionado", "Plan de inversión ajustado"],
-                resultado: "No firmó ese local. Abrió tres meses después con estructura financiera más sólida.",
+                antes: ["Alquiler al 18% sobre ventas proyectadas", "Carta demasiado extensa para apertura", "Operativa sin procesos definidos"],
+                despues: ["Local alternativo un 30% más barato", "Carta reducida a los platos más rentables", "Soft opening con servicios de prueba"],
+                resultado: "No firmó ese local. Abrió tres meses después sin quemar reputación en las primeras semanas.",
               },
               {
                 label: "F&B Hotelero",
+                metric: "F&B pasó de centro de coste a activo estratégico",
                 title: "Hotel con operación F&B poco rentable",
-                antes: ["F&B sin KPIs ni seguimiento", "Alta rotación, sin procesos", "Clientes raramente usaban el restaurante"],
-                despues: ["Concepto alineado con el huésped", "KPIs implantados: food cost, labour cost", "Equipo formado en venta contextual"],
-                resultado: "El F&B dejó de ser un problema y se convirtió en un diferenciador real.",
+                antes: ["F&B sin KPIs ni seguimiento", "Clientes raramente usaban el restaurante", "Eventos sin control de margen"],
+                despues: ["GP mejorado y gasto medio por huésped al alza", "Oferta alineada con el perfil del huésped", "Equipo formado en upselling natural"],
+                resultado: "El F&B dejó de verse como el restaurante del hotel y empezó a gestionarse como parte estratégica de la rentabilidad global.",
               },
             ].map((caso, i) => (
               <div
@@ -714,6 +717,9 @@ export default function Home() {
                 <span className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                   {caso.label}
                 </span>
+                <p className="font-display text-amber text-sm font-semibold leading-snug mb-2">
+                  {caso.metric}
+                </p>
                 <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4">
                   {caso.title}
                 </h3>
