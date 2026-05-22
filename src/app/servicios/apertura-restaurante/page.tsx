@@ -26,12 +26,12 @@ const forWhom = [
 ];
 
 const includes = [
-  "Validación del concepto y análisis de viabilidad inicial",
-  "Análisis de posicionamiento y propuesta de valor",
-  "Asesoramiento en diseño operativo (cocina, sala, procesos)",
-  "Desarrollo de carta con análisis de márgenes por plato",
-  "Planificación del equipo inicial",
-  "Sesiones de seguimiento durante los primeros meses",
+  "Validación del concepto antes de comprometer la inversión",
+  "Posicionamiento claro: a quién le hablas, qué ofreces, por qué te van a elegir",
+  "Cocina y sala diseñadas para los tiempos de servicio reales, no para que queden bonitas en plano",
+  "Carta calculada con márgenes reales desde el primer día",
+  "Equipo dimensionado y perfilado según el concepto",
+  "Acompañamiento durante los primeros meses, cuando más errores se cometen",
 ];
 
 const riskItems = [
@@ -162,6 +162,65 @@ export default function AperturaRestaurantePage() {
         </div>
       </section>
 
+      {/* ── QUÉ CAMBIA — blanco ──────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Qué cambia
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+              Qué cambia cuando abres con acompañamiento
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              La diferencia no está en si algo sale mal. Está en cuánto cuesta cuando pasa.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              "Tomas decisiones con criterio antes de que el dinero esté comprometido",
+              "Evitas los errores más caros: local mal ubicado, cocina mal diseñada, carta sin margen",
+              "Abres con un equipo dimensionado para tu concepto real, no para el que imaginabas",
+              "Los primeros meses tienen acompañamiento, que es cuando más se aprende y más se pierde",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-6">
+                <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
+                <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDICADORES — crema oscuro ────────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-16">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Indicadores
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Indicadores que trabajamos desde el día uno
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "Viabilidad financiera antes de firmar",
+              "Margen por plato desde el diseño de carta",
+              "Punto de equilibrio en semanas, no en años",
+              "Ratio de ocupación necesaria para cubrir costes fijos",
+            ].map((item, i) => (
+              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6">
+                <span className="font-display text-3xl font-light text-amber/30 block mb-3">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/75 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── POR QUÉ IMPORTA — blanco ──────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -223,6 +282,34 @@ export default function AperturaRestaurantePage() {
                 Antes de comprometer la inversión es cuando más valor aporta el acompañamiento.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CUÁNDO NO TIENE SENTIDO — blanco ─────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Honestidad ante todo
+            </p>
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+              Cuándo no tiene sentido
+            </h2>
+          </div>
+          <div className="space-y-4 max-w-2xl">
+            {[
+              "Si el local ya está firmado, el equipo contratado y la carta cerrada. Cuanto antes entro, más impacto tiene.",
+              "Si el proyecto todavía es una idea sin números. Primero valida la viabilidad básica.",
+              "Si buscas solo validación de lo que ya has decidido. El acompañamiento sirve para mejorar decisiones, no para confirmarlas.",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 border border-navy/10 rounded-xl p-5">
+                <span className="font-display text-base font-semibold text-navy/30 flex-shrink-0 mt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
