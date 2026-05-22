@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 type Level = "verde" | "amarillo" | "rojo";
 
@@ -85,6 +86,14 @@ export default function CalculadoraClient() {
     showLabour && { key: "labour" as const, label: "Labour Cost", value: labourCost, level: lcLevel },
     showPrime && { key: "prime" as const, label: "Prime Cost", value: primeCost, level: pcLevel },
   ].filter(Boolean) as Array<{ key: "food" | "labour" | "prime"; label: string; value: number; level: Level }>;
+
+  const trackedRef = useRef(false);
+  useEffect(() => {
+    if (showAny && !trackedRef.current) {
+      trackedRef.current = true;
+      trackEvent("herramienta_calculada", { event_category: "herramienta", event_label: "Calculadora Prime Cost" });
+    }
+  }, [showAny]);
 
   return (
     <section className="bg-white py-16 lg:py-24">

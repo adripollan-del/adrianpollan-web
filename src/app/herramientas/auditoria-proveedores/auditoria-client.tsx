@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 interface ChecklistBlock {
   title: string;
@@ -91,6 +92,14 @@ export default function AuditoriaClient() {
   const count = checked.size;
   const progressPct = Math.round((count / total) * 100);
   const result = getResult(count);
+
+  const trackedRef = useRef(false);
+  useEffect(() => {
+    if (count === total && !trackedRef.current) {
+      trackedRef.current = true;
+      trackEvent("auditoria_completada", { event_category: "herramienta", event_label: "Auditoría Proveedores" });
+    }
+  }, [count]);
 
   return (
     <section className="bg-white py-16 lg:py-24">

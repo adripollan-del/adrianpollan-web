@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Plus, Trash2, ArrowRight } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 type Unit = "g" | "kg" | "ml" | "l" | "ud";
 
@@ -93,6 +94,14 @@ export default function EscandalloClient() {
     setPortions("1");
     setTargetFC(32);
   }
+
+  const trackedRef = useRef(false);
+  useEffect(() => {
+    if (hasResults && !trackedRef.current) {
+      trackedRef.current = true;
+      trackEvent("escandallo_calculado", { event_category: "herramienta", event_label: "Calculadora Escandallo" });
+    }
+  }, [hasResults]);
 
   return (
     <section className="bg-white py-16 lg:py-24">

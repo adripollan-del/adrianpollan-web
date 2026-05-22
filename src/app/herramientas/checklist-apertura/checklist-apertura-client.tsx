@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 interface ChecklistBlock {
   title: string;
@@ -110,6 +111,14 @@ export default function ChecklistAperturaClient() {
   const pct = count / total;
   const progressPct = Math.round(pct * 100);
   const result = getResult(pct);
+
+  const trackedRef = useRef(false);
+  useEffect(() => {
+    if (count === total && !trackedRef.current) {
+      trackedRef.current = true;
+      trackEvent("checklist_completado", { event_category: "herramienta", event_label: "Checklist Apertura" });
+    }
+  }, [count]);
 
   return (
     <section className="bg-white py-16 lg:py-24">
