@@ -96,12 +96,24 @@ export default function ServiceCard({
               &ldquo;{closing}&rdquo;
             </p>
 
-            {/* Botón al final */}
+            {/* CTA principal — diagnóstico */}
+            <a
+              href="https://diagnostico.adrianpollan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
+              onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
+            >
+              Recibir Diagnóstico Gratuito
+              <ArrowRight size={14} />
+            </a>
+
+            {/* CTA secundario — Calendly outline */}
             <a
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 mt-3 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors w-full"
               onClick={() => trackEvent("calendly_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
               Reserva una sesión gratuita

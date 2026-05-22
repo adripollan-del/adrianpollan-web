@@ -568,14 +568,24 @@ export default function SobreMiPage() {
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
               <TrackingLink
-                href="https://calendly.com/adrianpollan"
+                href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
-                eventName="calendly_click"
-                eventLabel="Sobre mí"
+                eventName="diagnostico_click"
+                eventLabel="Sobre mí — CTA final"
               >
-                Reserva una sesión gratuita de 20 minutos <ArrowRight size={15} />
+                Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+              </TrackingLink>
+              <TrackingLink
+                href="https://calendly.com/adrianpollan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors"
+                eventName="calendly_click"
+                eventLabel="Sobre mí — CTA final"
+              >
+                Reserva una sesión gratuita <ArrowRight size={15} />
               </TrackingLink>
             </div>
           </div>

@@ -445,16 +445,28 @@ export default function Home() {
                 icon: <Phone size={26} className="text-amber" />,
                 situation: "Necesito ayuda directa",
                 cta: (
-                  <TrackingLink
-                    href="https://calendly.com/adrianpollan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
-                    eventName="calendly_click"
-                    eventLabel="Empieza según situación — home"
-                  >
-                    Reservar sesión gratuita <ArrowRight size={14} />
-                  </TrackingLink>
+                  <div className="flex flex-col items-start gap-2 self-start mt-auto">
+                    <TrackingLink
+                      href="https://diagnostico.adrianpollan.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
+                      eventName="diagnostico_click"
+                      eventLabel="Empieza según situación — home"
+                    >
+                      Recibir Diagnóstico Gratuito <ArrowRight size={14} />
+                    </TrackingLink>
+                    <TrackingLink
+                      href="https://calendly.com/adrianpollan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-body text-xs text-navy/55 hover:text-navy transition-colors"
+                      eventName="calendly_click"
+                      eventLabel="Empieza según situación — home secundario"
+                    >
+                      O reserva una sesión gratuita →
+                    </TrackingLink>
+                  </div>
                 ),
               },
             ].map((card, i) => (
@@ -781,25 +793,25 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <TrackingLink
-              href="https://calendly.com/adrianpollan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
-              eventName="calendly_click"
-              eventLabel="CTA final home"
-            >
-              Reserva tu sesión gratuita
-              <ArrowRight size={16} />
-            </TrackingLink>
-            <TrackingLink
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
+              eventLabel="CTA final home"
+            >
+              Recibir Diagnóstico Gratuito
+              <ArrowRight size={16} />
+            </TrackingLink>
+            <TrackingLink
+              href="https://calendly.com/adrianpollan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              eventName="calendly_click"
               eventLabel="CTA final home secundario"
             >
-              O haz el diagnóstico gratuito →
+              O reserva una sesión gratuita →
             </TrackingLink>
           </div>
         </div>
