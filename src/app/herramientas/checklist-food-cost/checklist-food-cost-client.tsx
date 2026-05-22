@@ -198,7 +198,11 @@ export default function ChecklistFoodCostClient() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
           >
-            Recibir diagnóstico completo de tu negocio →
+            {progressPct < 50
+              ? "Control insuficiente — ver diagnóstico gratuito →"
+              : progressPct <= 75
+              ? "Hay procesos sin implantar — ver diagnóstico gratuito →"
+              : "Buen control — analiza el resto de tu negocio →"}
           </a>
         </div>
 
