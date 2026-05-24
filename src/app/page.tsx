@@ -94,7 +94,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28 pt-40 lg:pt-48">
           <div className="max-w-4xl">
             <p className="font-body text-amber text-sm tracking-widest uppercase mb-7">
-              Consultoría en hostelería y restauración
+              Consultor de restaurantes y hostelería
             </p>
 
             <h1 className="font-display text-cream text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-light leading-[1.05] tracking-tight mb-8">
