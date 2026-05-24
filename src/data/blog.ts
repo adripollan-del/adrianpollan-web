@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Los errores al abrir un restaurante que más caros salen no se cometen el día de la inauguración, sino meses antes. Te cuento cuáles y cómo evitarlos.",
     category: "Aperturas",
-    date: "2026-05-24",
+    date: "2025-12-15",
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1556745750-68295fefafc5?auto=format&fit=crop&w=1792&q=80",
@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "El prime cost en un restaurante es el indicador que decide si ganas o pierdes dinero. Te explico cómo calcularlo y controlarlo de verdad.",
     category: "Rentabilidad",
-    date: "2026-05-24",
+    date: "2025-12-22",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1662982696492-057328dce48b?auto=format&fit=crop&w=1792&q=80",
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Checklist de apertura de restaurante con los 24 puntos críticos que decidirán si tu negocio sobrevive a los primeros seis meses o no.",
     category: "Aperturas",
-    date: "2026-05-24",
+    date: "2025-12-29",
     readTime: "9 min",
     coverImage:
       "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=1792&q=80",
