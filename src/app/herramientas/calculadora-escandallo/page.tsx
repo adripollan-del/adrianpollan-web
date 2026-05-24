@@ -7,7 +7,7 @@ import EscandalloClient from "./escandallo-client";
 export const metadata: Metadata = {
   title: { absolute: "Calculadora de Escandallo para Restaurantes | Adrián Pollán" },
   description:
-    "Calcula el escandallo de tus platos de forma profesional. Introduce ingredientes, cantidades y costes y obtén el food cost, precio de venta recomendado y margen real.",
+    "Calcula el coste exacto de producción de tus platos, el food cost y el precio de venta recomendado. Herramienta de escandallo gratuita para restaurantes.",
   alternates: {
     canonical: "https://adrianpollan.com/herramientas/calculadora-escandallo",
   },

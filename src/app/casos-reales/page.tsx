@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, ExternalLink, AlertTriangle, Lightbulb, X } fr
 export const metadata: Metadata = {
   title: { absolute: "Casos Reales de Consultoría para Restaurantes | Adrián Pollán" },
   description:
-    "Casos reales anonimizados de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero. Situación, diagnóstico, acciones y resultado concreto.",
+    "Casos reales de consultoría para restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero rentable. Resultados con datos reales.",
   alternates: {
     canonical: "https://adrianpollan.com/casos-reales",
   },

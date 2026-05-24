@@ -4,9 +4,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Para Propietarios de Restaurantes | Adrián Pollán" },
+  title: { absolute: "Consultoría para Propietarios de Restaurantes | Recupera el Margen | Adrián Pollán" },
   description:
-    "Consultoría especializada para propietarios de restaurantes que venden bien pero no ganan lo que deberían. Diagnóstico, operativa y rentabilidad real.",
+    "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo que deberían. Diagnóstico gratuito y acompañamiento para recuperar el margen real.",
   alternates: {
     canonical: "https://adrianpollan.com/para-propietarios-de-restaurantes",
   },

@@ -9,7 +9,7 @@ import MetodoADRIAN from "@/components/MetodoADRIAN";
 export const metadata: Metadata = {
   title: { absolute: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia" },
   description:
-    "Conoce a Adrián Pollán: consultor en restauración y F&B con más de 20 años de experiencia operativa en España, Francia, Reino Unido e Irlanda. Trabajo desde dentro del negocio, no desde un despacho.",
+    "Adrián Pollán, consultor de hostelería y restauración con 20+ años de experiencia operativa real. España, Francia, Reino Unido e Irlanda. Restaurantes, hoteles y F&B.",
   alternates: {
     canonical: "https://adrianpollan.com/sobre-mi",
   },

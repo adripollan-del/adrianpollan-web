@@ -5,9 +5,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, ExternalLink, TrendingUp, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Acompañamiento para Abrir un Restaurante",
+  title: { absolute: "Cómo Abrir un Restaurante con Criterio | Acompañamiento a Aperturas | Adrián Pollán" },
   description:
-    "Desde la validación del concepto hasta el primer servicio. Toma mejores decisiones antes de comprometer tu inversión y tus años de vida.",
+    "Acompañamiento experto para abrir un restaurante evitando los errores más caros. Concepto, local, inversión, carta y equipo antes de comprometer tu dinero.",
   alternates: {
     canonical: "https://adrianpollan.com/servicios/apertura-restaurante",
   },

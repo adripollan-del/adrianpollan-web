@@ -4,9 +4,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Users, ClipboardList, BarChart2, Settings } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Gestión Operativa de Restaurantes",
+  title: { absolute: "Gestión Operativa de Restaurantes | Procesos y Rentabilidad | Adrián Pollán" },
   description:
-    "Guía completa sobre gestión operativa en restaurantes: equipos, procesos, turnos y dependencia del propietario. Basada en experiencia real.",
+    "Guía de gestión operativa para restaurantes: equipos con autonomía, procesos documentados, KPIs y control de proveedores. Basada en 20+ años de experiencia real.",
   alternates: { canonical: "https://adrianpollan.com/gestion-operativa-restaurantes" },
   openGraph: {
     title: "Gestión Operativa de Restaurantes | Adrián Pollán",

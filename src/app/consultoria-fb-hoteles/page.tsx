@@ -6,7 +6,7 @@ import { ArrowRight, TrendingDown, Users, BookOpen, Star } from "lucide-react";
 export const metadata: Metadata = {
   title: { absolute: "Consultoría F&B para Hoteles | Adrián Pollán" },
   description:
-    "Consultoría especializada en F&B para hoteles. Rentabilidad, operaciones, costes y gestión de restauración hotelera. Experiencia en propiedades de lujo y boutique.",
+    "Consultoría F&B para hoteles: convierte el restaurante en un activo rentable. Control de costes, oferta gastronómica, KPIs y formación de equipos. Adrián Pollán.",
   alternates: { canonical: "https://adrianpollan.com/consultoria-fb-hoteles" },
   openGraph: {
     title: "Consultoría F&B para Hoteles | Adrián Pollán",

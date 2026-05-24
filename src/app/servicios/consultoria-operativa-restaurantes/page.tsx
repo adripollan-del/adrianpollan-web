@@ -5,9 +5,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Consultoría Operativa para Restaurantes",
+  title: { absolute: "Consultoría Operativa para Restaurantes | Acompañamiento F&B | Adrián Pollán" },
   description:
-    "Acompañamiento continuado para implementar mejoras reales mientras tu negocio sigue abierto. Sin planes estratégicos que acaban en una carpeta.",
+    "Acompañamiento operativo continuado para restaurantes. Mejora el margen, reduce dependencias y toma decisiones con datos. Sin informes que nadie implementa. Adrián Pollán.",
   alternates: {
     canonical: "https://adrianpollan.com/servicios/consultoria-operativa-restaurantes",
   },

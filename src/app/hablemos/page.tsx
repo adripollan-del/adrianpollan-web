@@ -10,7 +10,7 @@ import MapaDiagnostico from "@/components/MapaDiagnostico";
 export const metadata: Metadata = {
   title: { absolute: "Habla con Adrián Pollán | Consultor de Restaurantes y Hostelería" },
   description:
-    "Diagnóstico gratuito de tu negocio, sesión gratuita de 20 minutos o mensaje directo. Primera conversación sin compromiso para ver si tiene sentido trabajar juntos.",
+    "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante. Sin compromiso. Adrián Pollán, consultor de hostelería.",
   alternates: {
     canonical: "https://adrianpollan.com/hablemos",
   },

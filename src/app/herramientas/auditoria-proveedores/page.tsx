@@ -5,9 +5,9 @@ import TrackingLink from "@/components/TrackingLink";
 import AuditoriaClient from "./auditoria-client";
 
 export const metadata: Metadata = {
-  title: "Auditoría de Proveedores para Restaurantes",
+  title: { absolute: "Auditoría de Proveedores para Restaurantes | Herramienta Gratuita | Adrián Pollán" },
   description:
-    "Evalúa la gestión actual de tus proveedores e identifica dónde puedes mejorar condiciones y reducir costes. 16 ítems en 4 bloques.",
+    "Evalúa la gestión de proveedores de tu restaurante en minutos. 16 ítems en 4 bloques: precios, calidad, condiciones comerciales y operativa. Sin registro.",
   alternates: {
     canonical: "https://adrianpollan.com/herramientas/auditoria-proveedores",
   },

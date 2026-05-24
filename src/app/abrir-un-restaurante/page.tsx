@@ -6,7 +6,7 @@ import { ArrowRight, AlertTriangle } from "lucide-react";
 export const metadata: Metadata = {
   title: { absolute: "Cómo Abrir un Restaurante | Guía Paso a Paso | Adrián Pollán" },
   description:
-    "Guía práctica para abrir un restaurante con criterio. Concepto, inversión, local, carta, equipo y errores que evitar. Basada en experiencia real en aperturas.",
+    "Guía completa para abrir un restaurante paso a paso: validación del concepto, local, inversión, carta, equipo y primeros servicios. Con checklist gratuito incluido.",
   alternates: { canonical: "https://adrianpollan.com/abrir-un-restaurante" },
   openGraph: {
     title: "Cómo Abrir un Restaurante | Guía Paso a Paso | Adrián Pollán",

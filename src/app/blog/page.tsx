@@ -5,7 +5,7 @@ import BlogGrid from "@/components/BlogGrid";
 export const metadata: Metadata = {
   title: { absolute: "Blog de Consultoría para Restaurantes | Rentabilidad, Costes y Gestión | Adrián Pollán" },
   description:
-    "Artículos prácticos sobre food cost, prime cost, labour cost, escandallos, proveedores, aperturas y gestión de equipos. Ideas reales para restaurantes más rentables.",
+    "Artículos prácticos sobre rentabilidad, food cost, prime cost, gestión de equipos y aperturas de restaurantes. Sin teoría vacía. Solo lo que funciona en la operación real.",
   alternates: {
     canonical: "https://adrianpollan.com/blog",
   },

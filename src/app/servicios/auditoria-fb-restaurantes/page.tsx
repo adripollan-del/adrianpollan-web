@@ -5,9 +5,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, ClipboardList, ExternalLink, Lightbulb, Target, TrendingDown, Users, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Diagnóstico y Auditoría F&B para Restaurantes",
+  title: { absolute: "Diagnóstico y Auditoría F&B para Restaurantes | Adrián Pollán" },
   description:
-    "Análisis completo de tu operación: concepto, rentabilidad, equipo, procesos y experiencia del cliente. Identifica dónde actuar primero y por qué.",
+    "Detecta dónde se escapa el margen en tu restaurante. Auditoría F&B con informe ejecutivo de prioridades: food cost, carta, equipo y operativa. Adrián Pollán, consultor de hostelería.",
   alternates: {
     canonical: "https://adrianpollan.com/servicios/auditoria-fb-restaurantes",
   },

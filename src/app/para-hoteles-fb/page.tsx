@@ -4,9 +4,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Consultoría F&B para Hoteles | Adrián Pollán" },
+  title: { absolute: "F&B Hotelero | Rentabilidad y Gestión para Hoteles con Restaurante | Adrián Pollán" },
   description:
-    "Consultoría especializada en F&B para hoteles. Rentabilidad, operaciones y gestión de restauración hotelera con más de 20 años de experiencia real.",
+    "Convierte el F&B de tu hotel en una línea de negocio rentable. Control de costes, oferta alineada con el huésped y equipos que venden. Adrián Pollán, consultor F&B.",
   alternates: {
     canonical: "https://adrianpollan.com/para-hoteles-fb",
   },

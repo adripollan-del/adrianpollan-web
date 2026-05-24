@@ -4,9 +4,9 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, Rocket, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Consultor de Restaurantes | Adrián Pollán" },
+  title: { absolute: "Consultor de Restaurantes y Hostelería | Rentabilidad y Gestión | Adrián Pollán" },
   description:
-    "Consultor especializado en restaurantes y negocios de hostelería. Más de 20 años de experiencia operativa en España, Francia, Reino Unido e Irlanda.",
+    "Consultor de restaurantes especializado en rentabilidad, control de costes y gestión operativa. Diagnóstico gratuito disponible. 20+ años de experiencia real en hostelería.",
   alternates: { canonical: "https://adrianpollan.com/consultor-restaurantes" },
   openGraph: {
     title: "Consultor de Restaurantes | Adrián Pollán",
