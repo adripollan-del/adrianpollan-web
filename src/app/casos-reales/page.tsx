@@ -202,28 +202,24 @@ export default function CasosRealesPage() {
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                   Métricas de partida
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <p className="font-body text-xs uppercase tracking-wider text-red-500 mb-4">Antes</p>
-                    <ul className="space-y-3">
-                      {caso.antes.map((m, j) => (
-                        <li key={j} className="flex items-start gap-2.5">
+                <div>
+                  <div className="grid grid-cols-2 gap-x-6 mb-4">
+                    <p className="font-body text-xs uppercase tracking-wider text-red-500">Antes</p>
+                    <p className="font-body text-xs uppercase tracking-wider text-amber">Después</p>
+                  </div>
+                  <div className="space-y-3">
+                    {caso.antes.map((m, j) => (
+                      <div key={j} className="grid grid-cols-2 gap-x-6 items-start">
+                        <div className="flex items-start gap-2.5">
                           <X size={14} className="text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                           <p className="font-body text-ink/65 text-sm leading-relaxed">{m}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-body text-xs uppercase tracking-wider text-amber mb-4">Después</p>
-                    <ul className="space-y-3">
-                      {caso.despues.map((m, j) => (
-                        <li key={j} className="flex items-start gap-2.5">
+                        </div>
+                        <div className="flex items-start gap-2.5">
                           <CheckCircle size={14} className="text-amber flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                          <p className="font-body text-ink/65 text-sm leading-relaxed">{m}</p>
-                        </li>
-                      ))}
-                    </ul>
+                          <p className="font-body text-ink/65 text-sm leading-relaxed">{caso.despues[j]}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

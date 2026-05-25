@@ -419,28 +419,24 @@ export default function SobreMiPage() {
                 <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-5">
                   {caso.title}
                 </h3>
-                <div className="grid grid-cols-2 gap-4 flex-1 mb-5">
-                  <div>
-                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-2">Antes</p>
-                    <ul className="space-y-1.5">
-                      {caso.antes.map((item, j) => (
-                        <li key={j} className="flex items-start gap-2">
+                <div className="flex-1 mb-5">
+                  <div className="grid grid-cols-2 gap-x-4 mb-2">
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider">Antes</p>
+                    <p className="font-body text-amber text-xs uppercase tracking-wider">Después</p>
+                  </div>
+                  <div className="space-y-2">
+                    {caso.antes.map((item, j) => (
+                      <div key={j} className="grid grid-cols-2 gap-x-4 items-start">
+                        <div className="flex items-start gap-2">
                           <span className="text-ink/30 text-xs mt-0.5 flex-shrink-0">—</span>
                           <p className="font-body text-ink/55 text-xs leading-relaxed">{item}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-body text-amber text-xs uppercase tracking-wider mb-2">Después</p>
-                    <ul className="space-y-1.5">
-                      {caso.despues.map((item, j) => (
-                        <li key={j} className="flex items-start gap-2">
+                        </div>
+                        <div className="flex items-start gap-2">
                           <span className="text-amber text-xs mt-0.5 flex-shrink-0">✓</span>
-                          <p className="font-body text-ink/70 text-xs leading-relaxed">{item}</p>
-                        </li>
-                      ))}
-                    </ul>
+                          <p className="font-body text-ink/70 text-xs leading-relaxed">{caso.despues[j]}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="pt-5 border-t border-navy/10 flex items-start gap-3">

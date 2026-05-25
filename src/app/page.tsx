@@ -723,28 +723,24 @@ export default function Home() {
                 <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4">
                   {caso.title}
                 </h3>
-                <div className="grid grid-cols-2 gap-3 flex-1 mb-4">
-                  <div>
-                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider mb-1.5">Antes</p>
-                    <ul className="space-y-1">
-                      {caso.antes.map((item, j) => (
-                        <li key={j} className="flex items-start gap-1.5">
+                <div className="flex-1 mb-4">
+                  <div className="grid grid-cols-2 gap-x-3 mb-1.5">
+                    <p className="font-body text-ink/40 text-xs uppercase tracking-wider">Antes</p>
+                    <p className="font-body text-amber text-xs uppercase tracking-wider">Después</p>
+                  </div>
+                  <div className="space-y-2">
+                    {caso.antes.map((item, j) => (
+                      <div key={j} className="grid grid-cols-2 gap-x-3 items-start">
+                        <div className="flex items-start gap-1.5">
                           <span className="text-ink/30 text-xs mt-0.5 flex-shrink-0">—</span>
                           <p className="font-body text-ink/55 text-xs leading-snug">{item}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-body text-amber text-xs uppercase tracking-wider mb-1.5">Después</p>
-                    <ul className="space-y-1">
-                      {caso.despues.map((item, j) => (
-                        <li key={j} className="flex items-start gap-1.5">
+                        </div>
+                        <div className="flex items-start gap-1.5">
                           <span className="text-amber text-xs mt-0.5 flex-shrink-0">✓</span>
-                          <p className="font-body text-ink/70 text-xs leading-snug">{item}</p>
-                        </li>
-                      ))}
-                    </ul>
+                          <p className="font-body text-ink/70 text-xs leading-snug">{caso.despues[j]}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="flex items-start gap-2.5 pt-4 border-t border-navy/10">
