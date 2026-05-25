@@ -278,11 +278,12 @@ function insertArticle({ slug, title, excerpt, category, readTime, coverImage, b
     body: \`${safeBody}\`,
   },\n`;
 
-  const marker = 'export const blogPosts: BlogPost[] = [\n';
+  const marker = 'export const blogPosts: BlogPost[] = [';
   const idx    = content.indexOf(marker);
   if (idx === -1) throw new Error('No se encontró blogPosts en blog.ts');
 
-  content = content.slice(0, idx + marker.length) + entry + content.slice(idx + marker.length);
+  const afterMarker = content.indexOf('\n', idx + marker.length) + 1;
+  content = content.slice(0, afterMarker) + entry + content.slice(afterMarker);
   writeFileSync(BLOG_FILE, content, 'utf8');
   console.log('✅  Artículo insertado en blog.ts');
 }
