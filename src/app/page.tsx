@@ -599,6 +599,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CÓMO FUNCIONA EL PROCESO ── bg-cream-dark ──────────────── */}
+      <section className="bg-cream-dark py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-14">
+            <p className="font-body text-amber text-sm tracking-widest uppercase mb-4">
+              Cómo funciona
+            </p>
+            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+              Del diagnóstico a los resultados
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
+            {[
+              {
+                num: "01",
+                title: "Diagnóstico gratuito",
+                desc: "10 minutos. 66 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
+                cta: "Empezar ahora",
+                href: "https://diagnostico.adrianpollan.com",
+                external: true,
+              },
+              {
+                num: "02",
+                title: "Sesión de 20 minutos",
+                desc: "Si el diagnóstico revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
+                cta: "Reservar sesión",
+                href: "https://calendly.com/adrianpollan",
+                external: true,
+              },
+              {
+                num: "03",
+                title: "Propuesta personalizada",
+                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin plantillas genéricas.",
+                cta: null,
+                href: null,
+                external: false,
+              },
+              {
+                num: "04",
+                title: "Implementación",
+                desc: "Trabajamos juntos mientras el negocio sigue abierto. Con seguimiento real y ajuste continuo.",
+                cta: null,
+                href: null,
+                external: false,
+              },
+            ].map((step, i) => (
+              <div
+                key={i}
+                className="relative flex flex-col md:border-r border-b md:border-b-0 border-navy/10 last:border-r-0 last:border-b-0 px-0 md:px-8 first:pl-0 last:pr-0 py-8 md:py-0"
+              >
+                <span className="font-display text-5xl font-light text-amber/30 leading-none mb-4">
+                  {step.num}
+                </span>
+                <h3 className="font-display text-navy text-lg font-semibold leading-tight mb-3">
+                  {step.title}
+                </h3>
+                <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-4">
+                  {step.desc}
+                </p>
+                {step.cta && step.href && (
+                  <a
+                    href={step.href}
+                    target={step.external ? "_blank" : undefined}
+                    rel={step.external ? "noopener noreferrer" : undefined}
+                    className="font-body text-amber text-sm font-medium hover:underline transition-colors"
+                  >
+                    {step.cta} →
+                  </a>
+                )}
+                {i < 3 && (
+                  <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-6 h-6 items-center justify-center z-10">
+                    <span className="text-navy/20 text-lg">›</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── HERRAMIENTAS GRATUITAS — fondo blanco ────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
