@@ -409,7 +409,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               {[
                 { stat: "20+", label: "Años de experiencia operativa" },
                 { stat: "4", label: "Países: España, Francia, UK, Irlanda" },
-                { stat: "100+", label: "Negocios acompañados" },
+                { stat: "100+", label: "Negocios acompañados", note: "Experiencia acumulada en dirección, operaciones, aperturas y consultoría" },
                 { stat: "3", label: "Tipos: restaurantes, hoteles, grupos" },
               ].map((item, i) => (
                 <div
@@ -419,7 +419,12 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                   <span className="font-display text-amber text-5xl font-bold leading-none mb-3">
                     {item.stat}
                   </span>
-                  <p className="font-body text-ink/65 text-sm leading-snug">{item.label}</p>
+                  <div>
+                    <p className="font-body text-ink/65 text-sm leading-snug">{item.label}</p>
+                    {item.note && (
+                      <p className="font-body text-ink/45 text-xs mt-1">{item.note}</p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
