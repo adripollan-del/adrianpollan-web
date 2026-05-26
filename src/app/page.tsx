@@ -649,7 +649,7 @@ export default function Home() {
                 key={i}
                 className="relative flex flex-col md:border-r border-b md:border-b-0 border-navy/10 last:border-r-0 last:border-b-0 px-0 md:px-8 first:pl-0 last:pr-0 py-8 md:py-0"
               >
-                <span className="font-display text-5xl font-light text-amber/30 leading-none mb-4">
+                <span className="font-display text-5xl font-light text-amber leading-none mb-4">
                   {step.num}
                 </span>
                 <h3 className="font-display text-navy text-lg font-semibold leading-tight mb-3">
