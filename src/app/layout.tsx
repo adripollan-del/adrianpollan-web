@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: "https://adrianpollan.com",
     images: [
       {
-        url: "/Adrian%20Sobre%20Mi.png",
+        url: "/Imagen-de-marca.png",
         width: 1200,
         height: 630,
         alt: "Adrián Pollán — Consultor de Hostelería y Restauración",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Adrián Pollán | Consultor de Hostelería y Restauración",
     description:
       "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real.",
-    images: ["/Adrian%20Sobre%20Mi.png"],
+    images: ["/Imagen-de-marca.png"],
   },
   icons: {
     icon: [
@@ -96,7 +96,7 @@ const jsonLd = {
       "@id": "https://adrianpollan.com/#person",
       name: "Adrián Pollán",
       url: "https://adrianpollan.com",
-      image: "https://adrianpollan.com/Adrian%20Sobre%20Mi.png",
+      image: "https://adrianpollan.com/Imagen-de-marca.png",
       jobTitle: "Consultor de Hostelería y Restauración",
       description:
         "Consultor especializado en rentabilidad de restaurantes, gestión operativa y F&B con más de 20 años de experiencia en España, Francia, Reino Unido e Irlanda.",
