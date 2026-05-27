@@ -11,20 +11,20 @@ interface Message {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hola, soy Luka, el asistente virtual de Adrián. Cuéntame brevemente en qué puedo ayudarte.",
+    "Hola, soy Adri, el asistente virtual de Adrián. Cuéntame brevemente en qué puedo ayudarte.",
 };
 
 const STORAGE_MESSAGES = "chatbox_messages";
 const STORAGE_OPEN     = "chatbox_open";
 
-/* ─── Avatar de Luka ────────────────────────────────────────────
+/* ─── Avatar de Adri ────────────────────────────────────────────
    Imagen en /public/luka-avatar.png                              */
-function LukaAvatar({ size = 40 }: { size?: number }) {
+function AdriAvatar({ size = 40 }: { size?: number }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src="/luka-avatar.png"
-      alt="Luka — asistente virtual"
+      alt="Adri — asistente virtual"
       width={size}
       height={size}
       style={{
@@ -302,12 +302,12 @@ export default function ChatBox() {
             <div className="flex items-center gap-3">
               <div className="relative shrink-0">
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/20">
-                  <LukaAvatar size={40} />
+                  <AdriAvatar size={40} />
                 </div>
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
               </div>
               <div className="min-w-0">
-                <p className="font-semibold text-sm leading-tight">Luka</p>
+                <p className="font-semibold text-sm leading-tight">Adri</p>
                 <p className="text-xs text-amber-400/80">Asistente virtual · IA</p>
               </div>
             </div>
@@ -350,7 +350,7 @@ export default function ChatBox() {
               <div key={i} className={`flex items-end gap-1.5 ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 {m.role === "assistant" && (
                   <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mb-0.5 shadow">
-                    <LukaAvatar size={28} />
+                    <AdriAvatar size={28} />
                   </div>
                 )}
                 <div className={[
@@ -370,7 +370,7 @@ export default function ChatBox() {
             {loading && (
               <div className="flex items-end gap-1.5 justify-start">
                 <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mb-0.5">
-                  <LukaAvatar size={28} />
+                  <AdriAvatar size={28} />
                 </div>
                 <div className="bg-white px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
                   <div className="flex gap-1 items-center h-4">
@@ -433,12 +433,12 @@ export default function ChatBox() {
               >
                 <div className="relative shrink-0">
                   <div className="w-9 h-9 rounded-full overflow-hidden">
-                    <LukaAvatar size={36} />
+                    <AdriAvatar size={36} />
                   </div>
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-white font-semibold text-sm leading-tight">Luka</p>
+                  <p className="text-white font-semibold text-sm leading-tight">Adri</p>
                   <p className="text-neutral-400 text-xs truncate leading-snug mt-0.5">
                     {lastMessagePreview()}
                   </p>
@@ -477,7 +477,7 @@ export default function ChatBox() {
           <button
             onClick={handleOpen}
             className="relative w-14 h-14 bg-[#BA7517] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#9a6214] transition-colors"
-            aria-label="Hablar con Luka"
+            aria-label="Hablar con Adri"
           >
             <WhatsAppIcon size={28} />
           </button>
