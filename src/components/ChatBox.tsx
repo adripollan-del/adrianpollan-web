@@ -10,8 +10,11 @@ interface Message {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hola, soy Luka, el asistente de Adrián. Cuéntame brevemente en qué te puedo ayudar.",
+    "Hola, soy Luka, el asistente virtual de Adrián. Cuéntame brevemente en qué puedo ayudarte.",
 };
+
+const STORAGE_MESSAGES = "chatbox_messages";
+const STORAGE_OPEN     = "chatbox_open";
 
 /* ─── Avatar ilustrado de Luka ──────────────────────────────────── */
 function LukaAvatar({ size = 40 }: { size?: number }) {
@@ -129,14 +132,47 @@ function SendIcon() {
 
 /* ═══════════════════════════════════════════════════════════════ */
 export default function ChatBox() {
-  const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
+  // Inicializa desde sessionStorage si existe (persiste entre páginas y reloads)
+  const [messages, setMessages] = useState<Message[]>(() => {
+    if (typeof window === "undefined") return [WELCOME_MESSAGE];
+    try {
+      const saved = sessionStorage.getItem(STORAGE_MESSAGES);
+      return saved ? (JSON.parse(saved) as Message[]) : [WELCOME_MESSAGE];
+    } catch {
+      return [WELCOME_MESSAGE];
+    }
+  });
+
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(STORAGE_OPEN) === "true";
+  });
   const [showExitPopup, setShowExitPopup] = useState(false);
-  const [hasNotification, setHasNotification] = useState(true);
+  const [hasNotification, setHasNotification] = useState(() => {
+    if (typeof window === "undefined") return true;
+    // Si ya hay historial real (más de 1 mensaje), no mostrar badge
+    try {
+      const saved = sessionStorage.getItem(STORAGE_MESSAGES);
+      const msgs = saved ? (JSON.parse(saved) as Message[]) : [WELCOME_MESSAGE];
+      return msgs.length <= 1;
+    } catch {
+      return true;
+    }
+  });
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  // Persiste mensajes en sessionStorage cada vez que cambian
+  useEffect(() => {
+    sessionStorage.setItem(STORAGE_MESSAGES, JSON.stringify(messages));
+  }, [messages]);
+
+  // Persiste estado abierto/cerrado
+  useEffect(() => {
+    sessionStorage.setItem(STORAGE_OPEN, String(open));
+  }, [open]);
 
   const handleExitIntent = useCallback(() => {
     const dismissed = sessionStorage.getItem("chatbox_dismissed");
