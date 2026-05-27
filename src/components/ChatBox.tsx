@@ -11,30 +11,49 @@ interface Message {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hola, soy Adri, el asistente virtual de Adrián. Cuéntame brevemente en qué puedo ayudarte.",
+    "Hola, soy Robi, el asistente virtual de Adrián. Cuéntame brevemente en qué puedo ayudarte.",
 };
 
 const STORAGE_MESSAGES = "chatbox_messages";
 const STORAGE_OPEN     = "chatbox_open";
 
-/* ─── Avatar de Adri ────────────────────────────────────────────
-   Imagen en /public/luka-avatar.png                              */
-function AdriAvatar({ size = 40 }: { size?: number }) {
+/* ─── Avatar robot de Robi ──────────────────────────────────────
+   SVG inline: robot con colores de marca (navy + amber).         */
+function RobiAvatar({ size = 40 }: { size?: number }) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src="/luka-avatar.png"
-      alt="Adri — asistente virtual"
+    <svg
       width={size}
       height={size}
-      style={{
-        width: size,
-        height: size,
-        borderRadius: "50%",
-        objectFit: "cover",
-        display: "block",
-      }}
-    />
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: "block", flexShrink: 0 }}
+    >
+      {/* Fondo circular navy */}
+      <circle cx="50" cy="50" r="50" fill="#0f1923" />
+
+      {/* Antena */}
+      <line x1="50" y1="26" x2="50" y2="14" stroke="#BA7517" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="50" cy="11" r="5" fill="#BA7517" />
+
+      {/* Cabeza del robot */}
+      <rect x="20" y="26" width="60" height="52" rx="10" fill="#1a2d3d" stroke="#BA7517" strokeWidth="2" />
+
+      {/* Ojos rectangulares con brillo */}
+      <rect x="27" y="38" width="18" height="13" rx="4" fill="#BA7517" />
+      <rect x="55" y="38" width="18" height="13" rx="4" fill="#BA7517" />
+      <rect x="29" y="40" width="6" height="4" rx="1.5" fill="white" opacity="0.55" />
+      <rect x="57" y="40" width="6" height="4" rx="1.5" fill="white" opacity="0.55" />
+
+      {/* Boca — barra con puntos */}
+      <rect x="30" y="60" width="40" height="9" rx="4.5" fill="#0f1923" stroke="#BA7517" strokeWidth="1.5" />
+      <circle cx="40" cy="64.5" r="2.5" fill="#BA7517" />
+      <circle cx="50" cy="64.5" r="2.5" fill="#BA7517" />
+      <circle cx="60" cy="64.5" r="2.5" fill="#BA7517" />
+
+      {/* Tornillos laterales */}
+      <circle cx="20" cy="52" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
+      <circle cx="80" cy="52" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
+    </svg>
   );
 }
 
@@ -302,12 +321,12 @@ export default function ChatBox() {
             <div className="flex items-center gap-3">
               <div className="relative shrink-0">
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/20">
-                  <AdriAvatar size={40} />
+                  <RobiAvatar size={40} />
                 </div>
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
               </div>
               <div className="min-w-0">
-                <p className="font-semibold text-sm leading-tight">Adri</p>
+                <p className="font-semibold text-sm leading-tight">Robi</p>
                 <p className="text-xs text-amber-400/80">Asistente virtual · IA</p>
               </div>
             </div>
@@ -350,7 +369,7 @@ export default function ChatBox() {
               <div key={i} className={`flex items-end gap-1.5 ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 {m.role === "assistant" && (
                   <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mb-0.5 shadow">
-                    <AdriAvatar size={28} />
+                    <RobiAvatar size={28} />
                   </div>
                 )}
                 <div className={[
@@ -370,7 +389,7 @@ export default function ChatBox() {
             {loading && (
               <div className="flex items-end gap-1.5 justify-start">
                 <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mb-0.5">
-                  <AdriAvatar size={28} />
+                  <RobiAvatar size={28} />
                 </div>
                 <div className="bg-white px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
                   <div className="flex gap-1 items-center h-4">
@@ -433,12 +452,12 @@ export default function ChatBox() {
               >
                 <div className="relative shrink-0">
                   <div className="w-9 h-9 rounded-full overflow-hidden">
-                    <AdriAvatar size={36} />
+                    <RobiAvatar size={36} />
                   </div>
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-white font-semibold text-sm leading-tight">Adri</p>
+                  <p className="text-white font-semibold text-sm leading-tight">Robi</p>
                   <p className="text-neutral-400 text-xs truncate leading-snug mt-0.5">
                     {lastMessagePreview()}
                   </p>
@@ -477,7 +496,7 @@ export default function ChatBox() {
           <button
             onClick={handleOpen}
             className="relative w-14 h-14 bg-[#BA7517] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#9a6214] transition-colors"
-            aria-label="Hablar con Adri"
+            aria-label="Hablar con Robi"
           >
             <WhatsAppIcon size={28} />
           </button>
