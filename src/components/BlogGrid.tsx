@@ -15,7 +15,9 @@ export default function BlogGrid() {
     <section className="bg-cream-dark py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {blogPosts.map((post, i) => (
+          {[...blogPosts]
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .map((post, i) => (
             <article
               key={post.slug}
               className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
