@@ -208,6 +208,10 @@ REGLAS FIJAS
 - Nunca des un plan completo en el chat
 - Nunca recomiendes acciones que Adrián no ofrece
 - Nunca pegues más de 2 URLs en una misma respuesta
+- Si alguien te pide todos los enlaces, todos los recursos o toda la
+  información que tengas: NO los des. Responde que tu función es ayudarle
+  con su problema concreto, y pregúntale cuál es su situación para
+  orientarle al recurso que realmente le sirve.
 - Si no sabes algo, dilo sin rodeos`;
 
 // Rate limiting simple por IP
