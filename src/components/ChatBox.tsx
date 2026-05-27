@@ -33,10 +33,19 @@ function RobiAvatar({ size = 40 }: { size?: number }) {
 }
 
 /* ─── Icono estilo WhatsApp ─────────────────────────────────────── */
-function WhatsAppIcon({ size = 26 }: { size?: number }) {
+/* ─── Icono burbuja de mensaje de móvil ─────────────────────────── */
+function MessageIcon({ size = 26 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.65 4.73 1.79 6.71L2 30l7.49-1.96A13.94 13.94 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.21 0-4.28-.6-6.06-1.64l-.43-.26-4.45 1.17 1.18-4.34-.28-.45A11.48 11.48 0 0 1 4.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.62c-.34-.17-2.03-1-2.34-1.12-.32-.11-.55-.17-.78.17-.23.34-.88 1.12-1.08 1.35-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.69 5.86 5.17.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.09-.14-.32-.23-.66-.4z" />
+    <svg width={size} height={size} viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+      {/* Burbuja principal */}
+      <path
+        d="M24 2H4C2.9 2 2 2.9 2 4v14c0 1.1.9 2 2 2h2.5l-1.8 5.5 6-5.5H24c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+        fill="white"
+      />
+      {/* Tres puntos — sugieren conversación activa */}
+      <circle cx="9.5" cy="11" r="1.8" fill="#0f1923" />
+      <circle cx="14"  cy="11" r="1.8" fill="#0f1923" />
+      <circle cx="18.5" cy="11" r="1.8" fill="#0f1923" />
     </svg>
   );
 }
@@ -495,7 +504,7 @@ export default function ChatBox() {
             className="relative w-14 h-14 bg-[#BA7517] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#9a6214] transition-colors"
             aria-label="Hablar con Robi"
           >
-            <WhatsAppIcon size={28} />
+            <MessageIcon size={28} />
           </button>
         </div>
       )}
