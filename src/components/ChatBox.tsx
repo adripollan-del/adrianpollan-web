@@ -75,21 +75,18 @@ export default function ChatBox() {
         throw new Error("API error");
       }
 
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error ?? `HTTP ${res.status}`);
-      }
+      const { reply } = await res.json();
       setMessages([
         ...updatedMessages,
-        { role: "assistant", content: data.reply },
+        { role: "assistant", content: reply },
       ]);
-    } catch (err) {
-      const detail = err instanceof Error ? err.message : String(err);
+    } catch {
       setMessages([
         ...updatedMessages,
         {
           role: "assistant",
-          content: `Error técnico: ${detail}`,
+          content:
+            "Ha habido un problema técnico. Puedes contactar directamente en adrianpollan.com/hablemos",
         },
       ]);
     } finally {
