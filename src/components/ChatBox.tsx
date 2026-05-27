@@ -17,38 +17,26 @@ const WELCOME_MESSAGE: Message = {
 const STORAGE_MESSAGES = "chatbox_messages";
 const STORAGE_OPEN     = "chatbox_open";
 
-/* ─── Avatar ilustrado de Luka (camisa amber) ───────────────────── */
+/* ─── Avatar de Luka via DiceBear personas ──────────────────────
+   SVG servido por api.dicebear.com — sin hosting, sin dependencias.
+   seed=Luka fija siempre el mismo avatar.
+   backgroundColor=fdf3e3 combina con el fondo cálido del chat.    */
+const LUKA_AVATAR_URL =
+  "https://api.dicebear.com/9.x/personas/svg" +
+  "?seed=Luka" +
+  "&backgroundColor=fdf3e3" +
+  "&size=128";
+
 function LukaAvatar({ size = 40 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="50" fill="#fdf3e3" />
-      {/* Cuerpo / camisa amber */}
-      <path d="M10 100C10 68 30 63 50 63C70 63 90 68 90 100Z" fill="#BA7517" />
-      <path d="M44 63L50 73L56 63" fill="white" opacity="0.85" />
-      <rect x="43" y="55" width="14" height="10" rx="3" fill="#F1A06B" />
-      <circle cx="50" cy="40" r="24" fill="#F1A06B" />
-      <path d="M26 38C26 22 37 13 50 13C63 13 74 22 74 38C74 28 64 22 50 22C36 22 26 28 26 38Z" fill="#1C0F07" />
-      <rect x="25" y="36" width="4" height="10" rx="2" fill="#1C0F07" />
-      <rect x="71" y="36" width="4" height="10" rx="2" fill="#1C0F07" />
-      <ellipse cx="26" cy="42" rx="4.5" ry="6" fill="#F1A06B" />
-      <ellipse cx="26" cy="42" rx="2.5" ry="4" fill="#E8925C" />
-      <ellipse cx="74" cy="42" rx="4.5" ry="6" fill="#F1A06B" />
-      <ellipse cx="74" cy="42" rx="2.5" ry="4" fill="#E8925C" />
-      <ellipse cx="41" cy="41" rx="6.5" ry="6.5" fill="white" />
-      <ellipse cx="59" cy="41" rx="6.5" ry="6.5" fill="white" />
-      <circle cx="42" cy="42" r="4" fill="#1B4F8A" />
-      <circle cx="60" cy="42" r="4" fill="#1B4F8A" />
-      <circle cx="42.5" cy="42.5" r="2.2" fill="#0A1628" />
-      <circle cx="60.5" cy="42.5" r="2.2" fill="#0A1628" />
-      <circle cx="43.8" cy="41" r="1" fill="white" />
-      <circle cx="61.8" cy="41" r="1" fill="white" />
-      <path d="M35 34Q41 30 47 34" stroke="#1C0F07" strokeWidth="2.2" strokeLinecap="round" fill="none" />
-      <path d="M53 34Q59 30 65 34" stroke="#1C0F07" strokeWidth="2.2" strokeLinecap="round" fill="none" />
-      <path d="M49 45C48 49 48 52 50 53C52 52 52 49 51 45" stroke="#D4845A" strokeWidth="1.4" fill="none" strokeLinecap="round" />
-      <path d="M43 54Q50 61 57 54" stroke="#B56030" strokeWidth="2" fill="none" strokeLinecap="round" />
-      <ellipse cx="34" cy="51" rx="5" ry="3" fill="#F4845A" opacity="0.25" />
-      <ellipse cx="66" cy="51" rx="5" ry="3" fill="#F4845A" opacity="0.25" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={LUKA_AVATAR_URL}
+      alt="Luka — asistente virtual"
+      width={size}
+      height={size}
+      style={{ width: size, height: size, borderRadius: "50%", display: "block" }}
+    />
   );
 }
 
