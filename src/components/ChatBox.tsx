@@ -161,9 +161,8 @@ export default function ChatBox() {
       return true;
     }
   });
-  const bottomRef    = useRef<HTMLDivElement>(null);
-  const inputRef     = useRef<HTMLTextAreaElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef  = useRef<HTMLTextAreaElement>(null);
 
   // Persiste mensajes en sessionStorage cada vez que cambian
   useEffect(() => {
@@ -175,31 +174,42 @@ export default function ChatBox() {
     sessionStorage.setItem(STORAGE_OPEN, String(open));
   }, [open]);
 
-  // ── Visual Viewport API: ajusta la altura cuando aparece el teclado ──
-  // Funciona en iOS Safari y Android Chrome. Sin esto, el input queda
-  // oculto bajo el teclado en móvil.
+  // ── Bloquear scroll del body en móvil cuando el chat está abierto ──
+  // Técnica estándar para iOS: position:fixed + guardar/restaurar scrollY.
+  // Sin esto, la página de detrás sigue siendo scrollable a través del chat.
   useEffect(() => {
-    if (!open || typeof window === "undefined") return;
-    const vv = window.visualViewport;
-    if (!vv) return;
+    if (typeof window === "undefined") return;
+    if (window.innerWidth >= 640) return; // solo mobile
 
-    const update = () => {
-      const el = containerRef.current;
-      if (!el || window.innerWidth >= 640) return; // solo móvil
-      el.style.height = `${vv.height}px`;
-      el.style.top    = `${vv.offsetTop}px`;
-    };
-
-    update();
-    vv.addEventListener("resize", update);
-    vv.addEventListener("scroll", update);
+    if (open) {
+      const scrollY = window.scrollY;
+      document.body.dataset.chatScrollY = String(scrollY);
+      document.body.style.position = "fixed";
+      document.body.style.top      = `-${scrollY}px`;
+      document.body.style.left     = "0";
+      document.body.style.right    = "0";
+      document.body.style.overflow = "hidden";
+    } else {
+      const scrollY = Number(document.body.dataset.chatScrollY ?? 0);
+      document.body.style.position = "";
+      document.body.style.top      = "";
+      document.body.style.left     = "";
+      document.body.style.right    = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, scrollY);
+    }
 
     return () => {
-      vv.removeEventListener("resize", update);
-      vv.removeEventListener("scroll", update);
-      // Limpia estilos inline al cerrar
-      const el = containerRef.current;
-      if (el) { el.style.height = ""; el.style.top = ""; }
+      // Limpieza si el componente se desmonta con el chat abierto
+      if (document.body.style.position === "fixed") {
+        const scrollY = Number(document.body.dataset.chatScrollY ?? 0);
+        document.body.style.position = "";
+        document.body.style.top      = "";
+        document.body.style.left     = "";
+        document.body.style.right    = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      }
     };
   }, [open]);
 
@@ -307,13 +317,13 @@ export default function ChatBox() {
       {/* ── Panel de chat ────────────────────────────────────────── */}
       {open && (
         <div
-          ref={containerRef}
           className={[
-            "fixed z-50 shadow-2xl flex flex-col overflow-hidden",
-            // Móvil: cubre toda la pantalla desde arriba (inset-0)
-            "inset-0",
-            // Desktop: panel flotante en esquina
-            "sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[375px] sm:h-[540px] sm:rounded-2xl",
+            "fixed z-50 flex flex-col overflow-hidden",
+            // Móvil: anclado arriba, ancho completo, altura dinámica.
+            // h-dvh se encoge automáticamente cuando sube el teclado virtual.
+            "inset-x-0 top-0 h-dvh",
+            // Desktop: panel flotante en esquina inferior derecha
+            "sm:inset-auto sm:top-auto sm:bottom-6 sm:right-6 sm:w-[375px] sm:h-[540px] sm:rounded-2xl sm:shadow-2xl",
             "border-0 sm:border sm:border-gray-200",
             showExitPopup ? "animate-slide-up" : "",
           ].join(" ")}
@@ -361,7 +371,7 @@ export default function ChatBox() {
 
           {/* Área de mensajes — fondo WhatsApp */}
           <div
-            className="flex-1 overflow-y-auto p-4 space-y-2"
+            className="flex-1 overflow-y-auto overscroll-y-contain p-4 space-y-2"
             style={{
               backgroundColor: "#e5ddd5",
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8b9a8' fill-opacity='0.25'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
