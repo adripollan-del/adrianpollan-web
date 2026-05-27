@@ -10,7 +10,7 @@ interface Message {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hola, soy Luka, el asistente de Adrián Pollán. Cuéntame brevemente qué está pasando en tu negocio y te digo si tiene sentido que hablemos.",
+    "Hola, soy Luka, el asistente de Adrián. Cuéntame brevemente en qué te puedo ayudar.",
 };
 
 /* ─── Avatar ilustrado de Luka ──────────────────────────────────── */
@@ -372,13 +372,9 @@ export default function ChatBox() {
         </div>
       )}
 
-      {/* ── Botón flotante estilo WhatsApp ───────────────────────── */}
+      {/* ── Botón flotante ───────────────────────────────────────── */}
       {!open && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
-          {/* Anillos de pulso */}
-          <span className="absolute w-14 h-14 rounded-full bg-[#25D366] animate-ping-slow" />
-          <span className="absolute w-14 h-14 rounded-full bg-[#25D366] animate-ping-slower" />
-
           {/* Badge notificación */}
           {hasNotification && (
             <span className="absolute -top-1 -right-1 z-10 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow">
@@ -388,7 +384,7 @@ export default function ChatBox() {
 
           <button
             onClick={handleOpen}
-            className="relative w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#1eb858] transition-colors"
+            className="relative w-14 h-14 bg-[#BA7517] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#9a6214] transition-colors"
             aria-label="Hablar con Luka"
           >
             <WhatsAppIcon size={28} />
