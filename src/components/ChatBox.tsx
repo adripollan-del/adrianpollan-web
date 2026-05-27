@@ -22,10 +22,9 @@ const STORAGE_OPEN     = "chatbox_open";
    seed=Luka fija siempre el mismo avatar.
    backgroundColor=fdf3e3 combina con el fondo cálido del chat.    */
 const LUKA_AVATAR_URL =
-  "https://api.dicebear.com/9.x/personas/svg" +
+  "https://api.dicebear.com/9.x/notionists/svg" +
   "?seed=Luka" +
-  "&backgroundColor=fdf3e3" +
-  "&size=128";
+  "&backgroundColor=fdf3e3";
 
 function LukaAvatar({ size = 40 }: { size?: number }) {
   return (
