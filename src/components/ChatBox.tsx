@@ -216,6 +216,10 @@ export default function ChatBox() {
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
     setInput("");
+    // Reset altura del textarea al enviar
+    if (inputRef.current) {
+      inputRef.current.style.height = "auto";
+    }
     setLoading(true);
 
     try {
@@ -400,10 +404,16 @@ export default function ChatBox() {
                 <textarea
                   ref={inputRef}
                   rows={1}
-                  className="flex-1 text-gray-800 text-[16px] sm:text-sm focus:outline-none placeholder-gray-400 resize-none bg-transparent max-h-28 leading-relaxed"
+                  className="flex-1 text-gray-800 text-[16px] sm:text-sm focus:outline-none placeholder-gray-400 resize-none bg-transparent leading-relaxed"
+                  style={{ maxHeight: "112px", overflowY: "auto" }}
                   placeholder="Escribe un mensaje…"
                   value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  onChange={(e) => {
+                    setInput(e.target.value);
+                    // Auto-resize: colapsa primero, luego expande al scrollHeight real
+                    e.target.style.height = "auto";
+                    e.target.style.height = Math.min(e.target.scrollHeight, 112) + "px";
+                  }}
                   onKeyDown={handleKeyDown}
                   onFocus={() =>
                     setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), 350)
