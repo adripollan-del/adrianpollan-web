@@ -245,17 +245,29 @@ export default function ChatBox() {
 
   /* ── Renderizado de mensajes ─────────────────────────────────── */
   const renderMessage = (content: string) => {
+    // Captura URLs sin incluir puntuación de cierre al final
     const tokenRegex = /(\*\*[^*]+\*\*|https?:\/\/[^\s]+|\n)/g;
     const parts = content.split(tokenRegex);
     return parts.map((part, i) => {
       if (!part) return null;
       if (part === "\n") return <br key={i} />;
       if (/^https?:\/\//.test(part)) {
+        // Elimina puntuación final que no forma parte de la URL
+        const cleanUrl = part.replace(/[.,;:!?)]+$/, "");
+        const trailing = part.slice(cleanUrl.length);
         return (
-          <a key={i} href={part} target="_blank" rel="noopener noreferrer"
-            className="font-medium underline break-all text-[#BA7517] hover:text-[#9a6214] transition-colors">
-            {part}
-          </a>
+          <span key={i}>
+            <a
+              href={cleanUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="font-medium underline break-all text-[#BA7517] hover:text-[#9a6214] transition-colors"
+            >
+              {cleanUrl}
+            </a>
+            {trailing}
+          </span>
         );
       }
       if (/^\*\*[^*]+\*\*$/.test(part)) {
@@ -348,7 +360,7 @@ export default function ChatBox() {
                   </div>
                 )}
                 <div className={[
-                  "max-w-[78%] px-3 py-2 text-sm leading-relaxed shadow-sm",
+                  "max-w-[78%] min-w-0 px-3 py-2 text-sm leading-relaxed shadow-sm break-words overflow-hidden",
                   m.role === "user"
                     ? "bg-[#fde9bb] text-gray-800 rounded-2xl rounded-br-sm"
                     : "bg-white text-gray-800 rounded-2xl rounded-bl-sm",
