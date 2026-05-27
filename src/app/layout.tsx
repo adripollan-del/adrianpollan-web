@@ -5,6 +5,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBannerLazy from "@/components/CookieBannerLazy";
+import ChatBox from "@/components/ChatBox";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -162,6 +163,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <CookieBannerLazy />
+        <ChatBox />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RJSBHMJ9BL"
           strategy="lazyOnload"
