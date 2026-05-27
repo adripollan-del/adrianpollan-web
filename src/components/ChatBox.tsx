@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { useExitIntent } from "@/hooks/useExitIntent";
 
 interface Message {
@@ -21,38 +22,13 @@ const STORAGE_OPEN     = "chatbox_open";
    SVG inline: robot con colores de marca (navy + amber).         */
 function RobiAvatar({ size = 40 }: { size?: number }) {
   return (
-    <svg
+    <Image
+      src="/robi-avatar.jpg"
+      alt="Robi"
       width={size}
       height={size}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block", flexShrink: 0 }}
-    >
-      {/* Fondo circular */}
-      <circle cx="50" cy="50" r="50" fill="#0f1923" />
-
-      {/* Antena */}
-      <line x1="50" y1="27" x2="50" y2="16" stroke="#BA7517" strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="50" cy="12" r="5" fill="#BA7517" />
-
-      {/* Cabeza */}
-      <rect x="16" y="27" width="68" height="52" rx="13" fill="#1a2d3d" />
-      <rect x="16" y="27" width="68" height="52" rx="13" fill="none" stroke="#BA7517" strokeWidth="1.5" />
-
-      {/* Visor — ojo ancho único */}
-      <rect x="25" y="39" width="50" height="17" rx="5.5" fill="#BA7517" />
-      {/* Reflejo en el visor */}
-      <rect x="28" y="41.5" width="18" height="5" rx="2.5" fill="white" opacity="0.25" />
-
-      {/* Boca — tres puntos */}
-      <circle cx="38" cy="66" r="2.8" fill="#BA7517" />
-      <circle cx="50" cy="66" r="2.8" fill="#BA7517" />
-      <circle cx="62" cy="66" r="2.8" fill="#BA7517" />
-
-      {/* Tornillos laterales */}
-      <circle cx="16" cy="53" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
-      <circle cx="84" cy="53" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
-    </svg>
+      style={{ display: "block", flexShrink: 0, objectFit: "cover" }}
+    />
   );
 }
 
