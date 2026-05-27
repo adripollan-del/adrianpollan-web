@@ -155,8 +155,16 @@ export async function POST(req: Request) {
 
     const { messages } = await req.json();
 
+    // Elimina mensajes de bienvenida sintéticos (assistant al inicio):
+    // la API de Anthropic exige que la conversación empiece con role "user"
+    const firstUserIdx = messages.findIndex(
+      (m: { role: string }) => m.role === "user"
+    );
+    const trimmed =
+      firstUserIdx === -1 ? [] : messages.slice(firstUserIdx);
+
     // Limita el historial a los últimos 10 mensajes para controlar coste
-    const recentMessages = messages.slice(-10);
+    const recentMessages = trimmed.slice(-10);
 
     const response = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
