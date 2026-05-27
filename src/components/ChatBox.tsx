@@ -340,7 +340,7 @@ export default function ChatBox() {
           {/* Sub-header amber */}
           <div className="px-4 py-1.5 bg-[#BA7517] text-center shrink-0">
             <p className="text-[11px] text-amber-100">
-              Asistente de <span className="font-semibold text-white">Adrián Pollán</span> · Consultor de hostelería
+              Asistente de <span className="font-semibold text-white">Adrián</span> · Consultor de hostelería
             </p>
           </div>
 
