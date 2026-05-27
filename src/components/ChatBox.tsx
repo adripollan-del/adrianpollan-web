@@ -28,31 +28,30 @@ function RobiAvatar({ size = 40 }: { size?: number }) {
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block", flexShrink: 0 }}
     >
-      {/* Fondo circular navy */}
+      {/* Fondo circular */}
       <circle cx="50" cy="50" r="50" fill="#0f1923" />
 
       {/* Antena */}
-      <line x1="50" y1="26" x2="50" y2="14" stroke="#BA7517" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="50" cy="11" r="5" fill="#BA7517" />
+      <line x1="50" y1="27" x2="50" y2="16" stroke="#BA7517" strokeWidth="2.5" strokeLinecap="round" />
+      <circle cx="50" cy="12" r="5" fill="#BA7517" />
 
-      {/* Cabeza del robot */}
-      <rect x="20" y="26" width="60" height="52" rx="10" fill="#1a2d3d" stroke="#BA7517" strokeWidth="2" />
+      {/* Cabeza */}
+      <rect x="16" y="27" width="68" height="52" rx="13" fill="#1a2d3d" />
+      <rect x="16" y="27" width="68" height="52" rx="13" fill="none" stroke="#BA7517" strokeWidth="1.5" />
 
-      {/* Ojos rectangulares con brillo */}
-      <rect x="27" y="38" width="18" height="13" rx="4" fill="#BA7517" />
-      <rect x="55" y="38" width="18" height="13" rx="4" fill="#BA7517" />
-      <rect x="29" y="40" width="6" height="4" rx="1.5" fill="white" opacity="0.55" />
-      <rect x="57" y="40" width="6" height="4" rx="1.5" fill="white" opacity="0.55" />
+      {/* Visor — ojo ancho único */}
+      <rect x="25" y="39" width="50" height="17" rx="5.5" fill="#BA7517" />
+      {/* Reflejo en el visor */}
+      <rect x="28" y="41.5" width="18" height="5" rx="2.5" fill="white" opacity="0.25" />
 
-      {/* Boca — barra con puntos */}
-      <rect x="30" y="60" width="40" height="9" rx="4.5" fill="#0f1923" stroke="#BA7517" strokeWidth="1.5" />
-      <circle cx="40" cy="64.5" r="2.5" fill="#BA7517" />
-      <circle cx="50" cy="64.5" r="2.5" fill="#BA7517" />
-      <circle cx="60" cy="64.5" r="2.5" fill="#BA7517" />
+      {/* Boca — tres puntos */}
+      <circle cx="38" cy="66" r="2.8" fill="#BA7517" />
+      <circle cx="50" cy="66" r="2.8" fill="#BA7517" />
+      <circle cx="62" cy="66" r="2.8" fill="#BA7517" />
 
       {/* Tornillos laterales */}
-      <circle cx="20" cy="52" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
-      <circle cx="80" cy="52" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
+      <circle cx="16" cy="53" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
+      <circle cx="84" cy="53" r="5" fill="#1a2d3d" stroke="#BA7517" strokeWidth="1.5" />
     </svg>
   );
 }
