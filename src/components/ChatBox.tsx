@@ -17,25 +17,35 @@ const WELCOME_MESSAGE: Message = {
 const STORAGE_MESSAGES = "chatbox_messages";
 const STORAGE_OPEN     = "chatbox_open";
 
-/* ─── Avatar de Luka via DiceBear personas ──────────────────────
-   SVG servido por api.dicebear.com — sin hosting, sin dependencias.
-   seed=Luka fija siempre el mismo avatar.
-   backgroundColor=fdf3e3 combina con el fondo cálido del chat.    */
-const LUKA_AVATAR_URL =
-  "https://api.dicebear.com/9.x/notionists/svg" +
-  "?seed=Luka" +
-  "&backgroundColor=fdf3e3";
-
+/* ─── Avatar monograma de Luka ──────────────────────────────────
+   SVG inline: fondo navy, anillo amber, letra L blanca.
+   Sin servicios externos. Colores de marca exactos.               */
 function LukaAvatar({ size = 40 }: { size?: number }) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={LUKA_AVATAR_URL}
-      alt="Luka — asistente virtual"
+    <svg
       width={size}
       height={size}
-      style={{ width: size, height: size, borderRadius: "50%", display: "block" }}
-    />
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: "block", flexShrink: 0 }}
+    >
+      {/* Fondo navy */}
+      <circle cx="50" cy="50" r="50" fill="#0f1923" />
+      {/* Anillo amber sutil */}
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#BA7517" strokeWidth="3" opacity="0.7" />
+      {/* Letra L */}
+      <text
+        x="50"
+        y="68"
+        textAnchor="middle"
+        fontFamily="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+        fontSize="54"
+        fontWeight="800"
+        fill="white"
+      >
+        L
+      </text>
+    </svg>
   );
 }
 
