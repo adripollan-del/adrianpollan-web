@@ -206,24 +206,35 @@ export default function ChatBox() {
     }
   };
 
+  // Parsea markdown básico: **negrita**, URLs coloreadas y saltos de línea
   const renderMessage = (content: string) => {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const parts = content.split(urlRegex);
-    return parts.map((part, i) =>
-      urlRegex.test(part) ? (
-        <a
-          key={i}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline opacity-80 hover:opacity-100 break-all"
-        >
-          {part}
-        </a>
-      ) : (
-        part
-      )
-    );
+    const tokenRegex = /(\*\*[^*]+\*\*|https?:\/\/[^\s]+|\n)/g;
+    const parts = content.split(tokenRegex);
+    return parts.map((part, i) => {
+      if (!part) return null;
+      if (part === "\n") return <br key={i} />;
+      if (/^https?:\/\//.test(part)) {
+        return (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline break-all text-[#075e54] hover:text-[#25D366] transition-colors"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (/^\*\*[^*]+\*\*$/.test(part)) {
+        return (
+          <strong key={i} className="font-semibold">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return <span key={i}>{part}</span>;
+    });
   };
 
   return (
