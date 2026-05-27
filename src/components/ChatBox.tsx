@@ -161,8 +161,9 @@ export default function ChatBox() {
       return true;
     }
   });
-  const bottomRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const bottomRef    = useRef<HTMLDivElement>(null);
+  const inputRef     = useRef<HTMLTextAreaElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Persiste mensajes en sessionStorage cada vez que cambian
   useEffect(() => {
@@ -172,6 +173,34 @@ export default function ChatBox() {
   // Persiste estado abierto/cerrado
   useEffect(() => {
     sessionStorage.setItem(STORAGE_OPEN, String(open));
+  }, [open]);
+
+  // ── Visual Viewport API: ajusta la altura cuando aparece el teclado ──
+  // Funciona en iOS Safari y Android Chrome. Sin esto, el input queda
+  // oculto bajo el teclado en móvil.
+  useEffect(() => {
+    if (!open || typeof window === "undefined") return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+
+    const update = () => {
+      const el = containerRef.current;
+      if (!el || window.innerWidth >= 640) return; // solo móvil
+      el.style.height = `${vv.height}px`;
+      el.style.top    = `${vv.offsetTop}px`;
+    };
+
+    update();
+    vv.addEventListener("resize", update);
+    vv.addEventListener("scroll", update);
+
+    return () => {
+      vv.removeEventListener("resize", update);
+      vv.removeEventListener("scroll", update);
+      // Limpia estilos inline al cerrar
+      const el = containerRef.current;
+      if (el) { el.style.height = ""; el.style.top = ""; }
+    };
   }, [open]);
 
   const handleExitIntent = useCallback(() => {
@@ -278,16 +307,25 @@ export default function ChatBox() {
       {/* ── Panel de chat ────────────────────────────────────────── */}
       {open && (
         <div
+          ref={containerRef}
           className={[
             "fixed z-50 shadow-2xl flex flex-col overflow-hidden",
-            "bottom-0 right-0 w-full h-full",
-            "sm:bottom-6 sm:right-6 sm:w-[375px] sm:h-[540px] sm:rounded-2xl",
-            "border border-gray-200",
+            // Móvil: cubre toda la pantalla desde arriba (inset-0)
+            "inset-0",
+            // Desktop: panel flotante en esquina
+            "sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[375px] sm:h-[540px] sm:rounded-2xl",
+            "border-0 sm:border sm:border-gray-200",
             showExitPopup ? "animate-slide-up" : "",
           ].join(" ")}
         >
-          {/* Header verde */}
-          <div className="flex items-center justify-between px-4 py-3 bg-[#075e54] text-white shrink-0">
+          {/* Header verde — con padding top para el notch de iOS */}
+          <div
+            className="flex items-center justify-between px-4 bg-[#075e54] text-white shrink-0"
+            style={{
+              paddingTop:    "max(12px, env(safe-area-inset-top))",
+              paddingBottom: "12px",
+            }}
+          >
             <div className="flex items-center gap-3">
               <div className="relative shrink-0">
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/30">
@@ -378,18 +416,32 @@ export default function ChatBox() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Input */}
-          <div className="shrink-0 px-3 py-2.5 bg-[#f0f2f5] border-t border-gray-200">
+          {/* Input — con padding bottom para el home indicator de iPhone */}
+          <div
+            className="shrink-0 px-3 bg-[#f0f2f5] border-t border-gray-200"
+            style={{
+              paddingTop:    "10px",
+              paddingBottom: "max(10px, env(safe-area-inset-bottom))",
+            }}
+          >
             <div className="flex gap-2 items-end">
               <div className="flex-1 bg-white rounded-2xl px-3 py-2 shadow-sm border border-gray-100 flex items-end">
                 <textarea
                   ref={inputRef}
                   rows={1}
-                  className="flex-1 text-gray-800 text-sm focus:outline-none placeholder-gray-400 resize-none bg-transparent max-h-24"
+                  // text-[16px] es crítico en iOS: evita el auto-zoom al enfocar
+                  className="flex-1 text-gray-800 text-[16px] sm:text-sm focus:outline-none placeholder-gray-400 resize-none bg-transparent max-h-28 leading-relaxed"
                   placeholder="Escribe un mensaje…"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
+                  // Al enfocar, espera a que suba el teclado y luego hace scroll
+                  onFocus={() =>
+                    setTimeout(
+                      () => bottomRef.current?.scrollIntoView({ behavior: "smooth" }),
+                      350
+                    )
+                  }
                 />
               </div>
               <button
@@ -401,7 +453,7 @@ export default function ChatBox() {
                 <SendIcon />
               </button>
             </div>
-            <p className="text-[10px] text-gray-400 mt-1.5 text-center">
+            <p className="text-[10px] text-gray-400 mt-1.5 mb-0.5 text-center">
               Asistente de IA · adrianpollan.com
             </p>
           </div>
