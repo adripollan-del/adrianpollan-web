@@ -24,7 +24,7 @@ function RobiAvatar({ size = 40 }: { size?: number }) {
   return (
     <Image
       src="/robi-avatar.jpg"
-      alt="Robi"
+      alt="Robi, asistente virtual de Adrián Pollán"
       width={size}
       height={size}
       style={{ display: "block", flexShrink: 0, objectFit: "cover" }}

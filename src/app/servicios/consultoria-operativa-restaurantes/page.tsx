@@ -59,7 +59,7 @@ export default function ConsultoriaOperativaPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
-          alt="Consultoría operativa para restaurantes — gestión y seguimiento"
+          alt="Emplatado en cocina profesional durante el servicio — consultoría operativa para optimizar procesos en restaurantes"
           fill
           priority
           sizes="100vw"

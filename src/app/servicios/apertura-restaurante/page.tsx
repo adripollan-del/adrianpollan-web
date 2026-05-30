@@ -48,7 +48,7 @@ export default function AperturaRestaurantePage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
-          alt="Interior de restaurante — acompañamiento a aperturas"
+          alt="Sala de restaurante preparada para el servicio — consultoría especializada en aperturas de restaurantes"
           fill
           priority
           sizes="100vw"

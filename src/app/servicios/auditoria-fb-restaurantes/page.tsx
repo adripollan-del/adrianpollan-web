@@ -54,7 +54,7 @@ export default function AuditoriaFBPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80"
-          alt="Análisis de datos y auditoría para restaurantes"
+          alt="Análisis de datos financieros en pantalla — auditoría de food and beverage para restaurantes y hoteles"
           fill
           priority
           sizes="100vw"
