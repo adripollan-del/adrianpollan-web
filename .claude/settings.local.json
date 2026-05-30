@@ -38,7 +38,9 @@
       "Bash(ANALYZE=true npm run build)",
       "Bash(sort -k5 -rh)",
       "Bash(sort -k5 -rn)",
-      "Bash(git pull *)"
+      "Bash(git pull *)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(git stash *)"
     ]
   }
 }
