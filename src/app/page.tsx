@@ -743,13 +743,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CASOS REALES (compacto) — fondo crema oscuro ─────────────── */}
+      {/* ── CASOS DE ÉXITO (compacto) — fondo crema oscuro ─────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-                Casos reales
+                Casos de éxito
               </p>
               <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
                 Situaciones reales, resultados concretos

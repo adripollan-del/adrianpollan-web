@@ -335,12 +335,12 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── CASOS REALES — fondo blanco ──────────────────────────── */}
+      {/* ── CASOS DE ÉXITO — fondo blanco ──────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="mb-12">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-              Casos reales
+              Casos de éxito
             </p>
             <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
               Situaciones reales, resultados concretos
@@ -456,7 +456,7 @@ export default function SobreMiPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
-              eventLabel="Sobre mí — casos reales"
+              eventLabel="Sobre mí — casos de éxito"
             >
               ¿Tu situación se parece a alguna de estas? Recibir Diagnóstico Gratuito
               <ArrowRight size={15} />

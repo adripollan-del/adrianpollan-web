@@ -67,7 +67,7 @@ const bookFaqs = [
   },
   {
     q: "¿Qué incluye exactamente?",
-    a: "El método completo en 6 fases con herramientas prácticas, casos reales y checklists aplicables desde el primer capítulo.",
+    a: "El método completo en 6 fases con herramientas prácticas, casos de éxito y checklists aplicables desde el primer capítulo.",
   },
   {
     q: "¿Para qué tipo de negocio es?",

@@ -5,16 +5,16 @@ import TrackingLink from "@/components/TrackingLink";
 import { CheckCircle, ArrowRight, ExternalLink, AlertTriangle, Lightbulb, X } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Casos Reales de Consultoría para Restaurantes | Adrián Pollán" },
+  title: { absolute: "Casos de Éxito de Consultoría para Restaurantes | Adrián Pollán" },
   description:
-    "Casos reales de consultoría para restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero rentable. Resultados con datos reales.",
+    "Casos de éxito de consultoría para restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero rentable. Resultados con datos reales.",
   alternates: {
     canonical: "https://adrianpollan.com/casos-reales",
   },
   openGraph: {
-    title: "Casos Reales de Consultoría para Restaurantes | Adrián Pollán",
+    title: "Casos de Éxito de Consultoría para Restaurantes | Adrián Pollán",
     description:
-      "Casos reales anónimos de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero.",
+      "Casos de éxito anónimos de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero.",
     url: "https://adrianpollan.com/casos-reales",
   },
 };
@@ -118,7 +118,7 @@ export default function CasosRealesPage() {
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1920&q=80"
-          alt="Interior de restaurante — casos reales de consultoría en hostelería"
+          alt="Interior de restaurante — casos de éxito de consultoría en hostelería"
           fill
           priority
           sizes="100vw"
@@ -132,14 +132,14 @@ export default function CasosRealesPage() {
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-amber transition-colors">Inicio</Link>
             <span className="mx-2">›</span>
-            <span className="text-amber">Casos reales</span>
+            <span className="text-amber">Casos de éxito</span>
           </nav>
           <div className="max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Trabajo real
             </p>
             <h1 className="font-display text-cream text-3xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
-              Casos reales.<br />
+              Casos de éxito.<br />
               <span className="font-semibold">Situaciones concretas, resultados medibles.</span>
             </h1>
             <p className="font-body text-cream/60 text-lg leading-relaxed max-w-2xl">
@@ -266,7 +266,7 @@ export default function CasosRealesPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
                 eventName="diagnostico_click"
-                eventLabel={`Casos reales — caso ${idx + 1}`}
+                eventLabel={`Casos de éxito — caso ${idx + 1}`}
               >
                 Recibir Diagnóstico Gratuito
                 <ExternalLink size={14} />
@@ -298,7 +298,7 @@ export default function CasosRealesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
-              eventLabel="Casos reales — CTA final"
+              eventLabel="Casos de éxito — CTA final"
             >
               Recibir Diagnóstico Gratuito
               <ExternalLink size={14} />
@@ -309,7 +309,7 @@ export default function CasosRealesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
               eventName="calendly_click"
-              eventLabel="Casos reales — CTA final"
+              eventLabel="Casos de éxito — CTA final"
             >
               O reservar una sesión de 20 minutos →
             </TrackingLink>

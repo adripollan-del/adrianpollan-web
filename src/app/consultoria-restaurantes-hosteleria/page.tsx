@@ -432,12 +432,12 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
         </div>
       </section>
 
-      {/* ── 7. CASOS REALES — blanco ────────────────────────────────── */}
+      {/* ── 7. CASOS DE ÉXITO — blanco ────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-              Casos reales
+              Casos de éxito
             </p>
             <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
               Situaciones reales, resultados concretos
