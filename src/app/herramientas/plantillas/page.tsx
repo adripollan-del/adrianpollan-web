@@ -5,16 +5,16 @@ import { ArrowRight, Zap, BookOpen, Mail } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Plantillas de Gestión para Restaurantes | Adrián Pollán" },
+  title: { absolute: "Plantillas Excel para Gestión de Restaurantes | Adrián Pollán" },
   description:
-    "Plantillas profesionales en Excel para gestionar tu restaurante: escandallos, ingeniería de menú, inventario, cuadro de mando y operaciones.",
+    "Plantillas profesionales en Excel y Google Sheets para gestionar tu restaurante: escandallos, ingeniería de menú, inventario, cuadro de mando y operaciones. Listas para usar hoy.",
   alternates: {
     canonical: "https://adrianpollan.com/herramientas/plantillas",
   },
   openGraph: {
-    title: "Plantillas de Gestión para Restaurantes | Adrián Pollán",
+    title: "Plantillas Excel para Gestión de Restaurantes | Adrián Pollán",
     description:
-      "Plantillas profesionales en Excel para gestionar tu restaurante: escandallos, ingeniería de menú, inventario, cuadro de mando y operaciones.",
+      "Plantillas profesionales en Excel y Google Sheets para gestionar tu restaurante: escandallos, ingeniería de menú, inventario, cuadro de mando y operaciones. Listas para usar hoy.",
     url: "https://adrianpollan.com/herramientas/plantillas",
   },
 };
@@ -23,35 +23,80 @@ const individuales = [
   {
     title: "Ingeniería de Menú",
     description:
-      "Analiza ventas, costes y popularidad de tu carta. Clasifica platos por rentabilidad y toma decisiones con datos reales.",
+      "Analiza ventas, costes y popularidad de tu carta. Clasifica cada plato por rentabilidad real y deja de empujar los que más salen si no son los que más dejan.",
+    descriptionLong:
+      "La mayoría de restaurantes llena la carta de platos que se venden, no de platos que generan margen. Esta plantilla clasifica cada plato según su rentabilidad y popularidad real, así sabes exactamente en cuáles tienes que subir precio, simplificar o apostar fuerte. Todo con los datos de tus propias ventas, no con suposiciones.",
+    bullets: [
+      "Clasificación BCG automática (Estrella, Vaca, Incógnita, Perro)",
+      "Análisis de mix de ventas y margen por plato",
+      "Coeficiente de Omnes para detectar cartas mal estructuradas",
+      "Dashboard ejecutivo con lectura inmediata",
+      "Datos de ejemplo del restaurante La Mesa + plantilla en blanco",
+    ],
     price: "49 €",
     href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4",
   },
   {
     title: "Escandallo y Calculadora de Precios",
     description:
-      "Calcula el coste real de cada receta, aplica mermas y fija precios con margen garantizado por canal de venta.",
+      "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado por canal. Deja de adivinar si un plato deja dinero.",
+    descriptionLong:
+      "Cuando suben los proveedores, ¿sabes exactamente qué platos absorben ese golpe y cuáles empiezan a perder margen? Sin un escandallo actualizado, se fijan precios por intuición o copiando a la competencia. Esta plantilla calcula el coste real de cada receta, aplica mermas automáticamente y te dice el precio mínimo para cada canal: sala, delivery o take away.",
+    bullets: [
+      "Coste por receta con mermas aplicadas automáticamente",
+      "Calculadora de precio por canal (sala, Uber Eats, Glovo, take away)",
+      "Alerta de margen crítico configurable",
+      "Historial de variación de costes por ingrediente",
+      "Sub-recetas para masas, salsas y preparaciones intermedias",
+    ],
     price: "59 €",
     href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb",
   },
   {
     title: "Control de Inventario y Pedidos",
     description:
-      "Controla tu stock en tiempo real, calcula puntos de pedido automáticos y reduce roturas y excesos de inventario.",
+      "Controla el stock en tiempo real y recibe pedidos sugeridos automáticos por proveedor. Deja de vivir entre roturas de stock y cámaras llenas de producto inmovilizado.",
+    descriptionLong:
+      "El dinero que un restaurante tiene parado en cámaras y almacén es dinero que no trabaja. Y las urgencias de última hora con proveedores cuestan más que el pedido planificado. Esta plantilla calcula el punto de pedido de cada producto según tu consumo real y tu plazo de reposición, y te genera una lista de pedido sugerida filtrable por proveedor.",
+    bullets: [
+      "Cálculo automático de punto de pedido por producto",
+      "Pedido sugerido filtrable por proveedor y categoría",
+      "Valoración del inventario en tiempo real",
+      "Registro de recepciones y seguimiento de pedidos",
+      "Compatible con importación desde la plantilla de escandallo",
+    ],
     price: "69 €",
     href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118",
   },
   {
     title: "Cuadro de Mando Financiero",
     description:
-      "Registra ingresos y gastos, visualiza tu PyG en tiempo real y detecta desviaciones antes de que afecten tu caja.",
+      "Registra ingresos y gastos y visualiza tu PyG, KPIs y caja en tiempo real. Deja de tardar días en saber si el mes fue bueno o malo.",
+    descriptionLong:
+      "Sin un cuadro de mando, saber si el negocio gana dinero implica juntar ventas del TPV, extractos bancarios, facturas de proveedores y nóminas. Con esta plantilla introduces cada movimiento en un registro central y el sistema actualiza solo la cuenta de resultados, los KPIs clave y las alertas de desviación. Una estructura mensual clara en lugar de números dispersos.",
+    bullets: [
+      "PyG mensual con actualización automática vía SUMIFS",
+      "KPIs: food cost, labour cost, EBITDA y margen por canal",
+      "Alertas configurables de desviación sobre umbrales",
+      "Simulador de comisiones por plataforma de delivery",
+      "Compatible con registro desde Google Forms en móvil",
+    ],
     price: "79 €",
     href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5",
   },
   {
     title: "Kit de Gestión Operativa",
     description:
-      "Plantillas listas para cocina, barra y sala: control de mermas, temperaturas, pedidos, limpieza y checklists diarios.",
+      "Checklists y plantillas para cocina, barra y sala: aperturas, cierres, producción, mermas, temperaturas y limpieza. El mismo estándar en todos los turnos, sin depender de la memoria de nadie.",
+    descriptionLong:
+      "En la mayoría de restaurantes cada turno abre, produce y cierra a su manera. Las tareas críticas dependen de quién esté ese día y de lo que recuerde. Este kit estandariza todas las operaciones del día con checklists listos para imprimir o usar en pantalla, para que el equipo siga el mismo proceso independientemente de quién esté al frente.",
+    bullets: [
+      "Checklist de apertura y cierre por área (cocina, barra, sala)",
+      "Control diario de temperaturas y APPCC simplificado",
+      "Registro de mermas y producción por turno",
+      "Control de pedidos y recepciones de mercancía",
+      "Plantillas en blanco + ejemplos rellenos del restaurante La Mesa",
+    ],
     price: "89 €",
     href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8",
   },
@@ -61,7 +106,7 @@ const bundles = [
   {
     title: "Starter Pack",
     description:
-      "Ingeniería de Menú + Escandallo. Domina el coste de tus recetas y optimiza tu carta con datos reales.",
+      "El punto de partida para cualquier restaurante que quiera controlar sus márgenes: saber qué platos dejan dinero y cuánto cuesta producir cada uno.",
     price: "79 €",
     savings: "Ahorras 29 €",
     featured: false,
@@ -70,7 +115,7 @@ const bundles = [
   {
     title: "Pack Control",
     description:
-      "Escandallo + Inventario + Ingeniería de Menú. El sistema completo para gestionar compras y márgenes.",
+      "El sistema completo para controlar compras, costes y carta. Desde el precio del ingrediente hasta el margen del plato, sin puntos ciegos.",
     price: "129 €",
     savings: "Ahorras 48 €",
     featured: false,
@@ -79,7 +124,7 @@ const bundles = [
   {
     title: "Pack Gestión",
     description:
-      "Cuadro de Mando + Escandallo + Ingeniería de Menú. Tres plantillas para controlar costes, márgenes y resultados económicos.",
+      "Para el restaurante que quiere tomar decisiones financieras con datos reales: costes, márgenes y resultados en una sola estructura.",
     price: "149 €",
     savings: "Ahorras 38 €",
     featured: false,
@@ -88,7 +133,7 @@ const bundles = [
   {
     title: "Pack Operación Pro",
     description:
-      "Kit de Gestión + Inventario. Todo lo que necesita tu equipo para operar sin errores.",
+      "Para estandarizar el día a día y controlar el stock al mismo tiempo. El equipo sabe qué hacer en cada turno y el almacén deja de ser una caja negra.",
     price: "139 €",
     savings: "Ahorras 19 €",
     featured: false,
@@ -97,7 +142,7 @@ const bundles = [
   {
     title: "Suite Completa",
     description:
-      "Las 5 plantillas de gestión para restaurantes. El sistema completo para gestionar tu restaurante con criterio.",
+      "El sistema completo de gestión para restaurantes. Costes, inventario, carta, operaciones y finanzas en un solo pack. Para el restaurante que quiere dejar de gestionar por intuición.",
     price: "219 €",
     savings: "Ahorras 126 €",
     featured: true,
@@ -109,17 +154,17 @@ const garantias = [
   {
     icon: <Zap size={24} className="text-amber" />,
     title: "Acceso inmediato",
-    body: "Recibes los archivos en tu email nada más completar la compra.",
+    body: "Recibes los archivos en tu email nada más completar la compra. Sin esperas ni procesos de activación.",
   },
   {
     icon: <BookOpen size={24} className="text-amber" />,
-    title: "Listas para usar",
-    body: "Incluyen datos de ejemplo y guía paso a paso para que puedas empezar hoy.",
+    title: "Listas para usar desde hoy",
+    body: "Cada plantilla incluye datos de ejemplo del restaurante La Mesa y una guía de primeros pasos. No necesitas saber Excel para empezar.",
   },
   {
     icon: <Mail size={24} className="text-amber" />,
-    title: "Soporte incluido",
-    body: "Si tienes dudas sobre cómo usar cualquier plantilla, escríbeme directamente.",
+    title: "Soporte directo incluido",
+    body: "Si tienes dudas sobre cómo adaptar cualquier plantilla a tu negocio, escríbeme directamente. No hay un formulario de soporte, hay una persona.",
   },
 ];
 
@@ -151,12 +196,13 @@ export default function PlantillasPage() {
               Plantillas · Excel
             </p>
             <h1 className="font-display text-cream text-5xl lg:text-6xl font-light leading-[1.05] mb-5">
-              Plantillas de gestión<br />
-              <span className="font-semibold">para restaurantes</span>
+              Plantillas de gestión para restaurantes<br />
+              <span className="font-semibold">en Excel y Google Sheets</span>
             </h1>
             <p className="font-body text-cream/65 text-lg leading-relaxed">
-              Herramientas profesionales en Excel listas para usar. Con datos de ejemplo,
-              instrucciones paso a paso y fórmulas automáticas.
+              Cinco herramientas diseñadas para restaurantes reales: con datos de ejemplo,
+              manual operativo y fórmulas automáticas. Sin necesidad de ser experto en
+              Excel para empezar a usarlas hoy.
             </p>
           </div>
         </div>
@@ -165,13 +211,19 @@ export default function PlantillasPage() {
       {/* ── PLANTILLAS INDIVIDUALES — crema oscuro ────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-xl mb-12">
+          <div className="max-w-2xl mb-12">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               Plantillas individuales
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
-              Elige la que necesitas ahora
+            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+              Plantillas individuales de gestión para restaurantes
             </h2>
+            <p className="font-body text-ink/60 text-base leading-relaxed">
+              Cada plantilla ataca un problema concreto de operación o rentabilidad. No son
+              archivos genéricos descargados de internet: están construidas sobre situaciones
+              reales de restaurantes en funcionamiento, con instrucciones paso a paso para que
+              tu equipo las adopte desde el primer turno.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,9 +235,20 @@ export default function PlantillasPage() {
                 <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-3">
                   {p.title}
                 </h3>
-                <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-6">
+                <p className="font-body text-ink/60 text-sm leading-relaxed mb-4">
                   {p.description}
                 </p>
+                <p className="font-body text-ink/70 text-sm leading-relaxed mb-4">
+                  {p.descriptionLong}
+                </p>
+                <ul className="space-y-1.5 mb-6 flex-1">
+                  {p.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2">
+                      <span className="text-amber mt-0.5 flex-shrink-0 text-xs">✓</span>
+                      <span className="font-body text-ink/65 text-xs leading-snug">{b}</span>
+                    </li>
+                  ))}
+                </ul>
                 <p className="font-display text-amber text-3xl font-bold mb-5">
                   {p.price}
                 </p>
@@ -208,13 +271,18 @@ export default function PlantillasPage() {
       {/* ── BUNDLES — blanco ──────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-xl mb-12">
+          <div className="max-w-2xl mb-12">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               Packs con descuento
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-2">
-              Combina plantillas y ahorra hasta un 37%
+            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+              Packs con descuento: combina plantillas y ahorra hasta un 37%
             </h2>
+            <p className="font-body text-ink/60 text-base leading-relaxed">
+              Si el problema no es solo uno, la solución tampoco debería serlo. Estos packs
+              combinan las plantillas que más se complementan entre sí, con un descuento sobre
+              el precio individual.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -264,6 +332,9 @@ export default function PlantillasPage() {
       {/* ── GARANTÍAS — navy ─────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <h2 className="font-display text-cream text-2xl lg:text-3xl font-semibold leading-tight mb-10 lg:mb-12">
+            Diseñadas para restaurantes reales, no para demos
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {garantias.map((g) => (
               <div key={g.title} className="flex gap-4">
@@ -288,11 +359,11 @@ export default function PlantillasPage() {
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
-            ¿Prefieres que lo analicemos juntos?
+            ¿No sabes qué plantilla necesitas primero?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            Si tienes dudas sobre qué plantilla necesitas o quieres revisar los números
-            de tu negocio, agenda una sesión gratuita de 20 minutos.
+            En 20 minutos puedo ayudarte a identificar cuál es el problema más urgente de
+            tu restaurante y qué herramienta atacarlo primero. Sin coste y sin compromiso.
           </p>
           <TrackingLink
             href="https://calendly.com/adrianpollan"
