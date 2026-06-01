@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap, BookOpen, Mail } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
@@ -127,7 +128,15 @@ export default function PlantillasPage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+        <Image
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
+          alt="Análisis y datos para gestión de restaurantes — plantillas profesionales"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-navy/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
