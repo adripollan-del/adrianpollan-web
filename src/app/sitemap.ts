@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/herramientas/checklist-food-cost`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/herramientas/auditoria-proveedores`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/herramientas/calculadora-escandallo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/plantillas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
