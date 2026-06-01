@@ -5,7 +5,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBannerLazy from "@/components/CookieBannerLazy";
-import ChatBox from "@/components/ChatBox";
+import ChatBoxLazy from "@/components/ChatBoxLazy";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -163,7 +163,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <CookieBannerLazy />
-        <ChatBox />
+        <ChatBoxLazy />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RJSBHMJ9BL"
           strategy="lazyOnload"
@@ -179,7 +179,7 @@ export default function RootLayout({
         <Script id="clarity" strategy="lazyOnload">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wthj8c4zuf");`}
         </Script>
-        <Script id="event-tracking" strategy="afterInteractive">
+        <Script id="event-tracking" strategy="lazyOnload">
           {`document.addEventListener('click',function(e){var el=e.target.closest('[data-event]');if(!el)return;if(typeof window.gtag==='function'){window.gtag('event',el.dataset.event,{event_category:'conversion',event_label:el.dataset.label||''});}},{passive:true});`}
         </Script>
       </body>
