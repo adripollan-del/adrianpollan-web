@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Calculator, ListChecks, TrendingDown, Truck, UtensilsCrossed } from "lucide-react";
+import { Calculator, LayoutGrid, ListChecks, TrendingDown, Truck, UtensilsCrossed } from "lucide-react";
 
 export const metadata: Metadata = {
   title: { absolute: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Más | Adrián Pollán" },
@@ -61,6 +61,15 @@ const tools = [
     description:
       "Calcula el coste exacto de producción de cualquier plato. Obtén el food cost, el precio de venta recomendado y el margen real por ración.",
     cta: "Calcular escandallo →",
+  },
+  {
+    href: "/herramientas/plantillas",
+    icon: <LayoutGrid size={28} className="text-amber" />,
+    num: "06",
+    title: "Plantillas de Gestión",
+    description:
+      "Plantillas profesionales en Excel para gestionar tu restaurante: escandallos, ingeniería de menú, inventario, cuadro de mando y operaciones.",
+    cta: "Ver plantillas →",
   },
 ];
 
