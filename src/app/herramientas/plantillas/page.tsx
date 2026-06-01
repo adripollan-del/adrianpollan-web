@@ -252,20 +252,20 @@ export default function PlantillasPage() {
         </div>
       </section>
 
-      {/* ── GARANTÍAS — crema ─────────────────────────────────────── */}
-      <section className="bg-cream py-16 lg:py-20">
+      {/* ── GARANTÍAS — navy ─────────────────────────────────────── */}
+      <section className="bg-navy py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {garantias.map((g) => (
               <div key={g.title} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-amber/10 border border-amber/20 rounded-lg flex items-center justify-center mt-0.5">
+                <div className="flex-shrink-0 w-10 h-10 bg-amber/20 border border-amber/30 rounded-lg flex items-center justify-center mt-0.5">
                   {g.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-navy text-base font-semibold mb-1.5">
+                  <h3 className="font-display text-cream text-base font-semibold mb-1.5">
                     {g.title}
                   </h3>
-                  <p className="font-body text-ink/60 text-sm leading-relaxed">
+                  <p className="font-body text-cream/60 text-sm leading-relaxed">
                     {g.body}
                   </p>
                 </div>
@@ -275,8 +275,8 @@ export default function PlantillasPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
-      <section className="bg-cream-dark py-16 lg:py-24">
+      {/* ── CTA FINAL — blanco ───────────────────────────────────── */}
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
             ¿Prefieres que lo analicemos juntos?
