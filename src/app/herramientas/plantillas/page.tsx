@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap, BookOpen, Mail } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
+import FaqsClient from "./faqs-client";
 
 export const metadata: Metadata = {
   title: { absolute: "Plantillas Excel para Gestión de Restaurantes | Adrián Pollán" },
@@ -328,6 +329,9 @@ export default function PlantillasPage() {
           </div>
         </div>
       </section>
+
+      {/* ── FAQs — crema ─────────────────────────────────────────── */}
+      <FaqsClient />
 
       {/* ── GARANTÍAS — navy ─────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
