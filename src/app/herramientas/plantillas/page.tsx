@@ -24,35 +24,35 @@ const individuales = [
     description:
       "Analiza ventas, costes y popularidad de tu carta. Clasifica platos por rentabilidad y toma decisiones con datos reales.",
     price: "49 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4",
   },
   {
     title: "Escandallo y Calculadora de Precios",
     description:
       "Calcula el coste real de cada receta, aplica mermas y fija precios con margen garantizado por canal de venta.",
     price: "59 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb",
   },
   {
     title: "Control de Inventario y Pedidos",
     description:
       "Controla tu stock en tiempo real, calcula puntos de pedido automáticos y reduce roturas y excesos de inventario.",
     price: "69 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118",
   },
   {
     title: "Cuadro de Mando Financiero",
     description:
       "Registra ingresos y gastos, visualiza tu PyG en tiempo real y detecta desviaciones antes de que afecten tu caja.",
     price: "79 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5",
   },
   {
     title: "Kit de Gestión Operativa",
     description:
       "Plantillas listas para cocina, barra y sala: control de mermas, temperaturas, pedidos, limpieza y checklists diarios.",
     price: "89 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8",
   },
 ];
 
@@ -64,7 +64,7 @@ const bundles = [
     price: "79 €",
     savings: "Ahorras 29 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/bdf998c1-be1e-4905-b613-5d64713e7784",
   },
   {
     title: "Pack Control",
@@ -73,7 +73,7 @@ const bundles = [
     price: "129 €",
     savings: "Ahorras 48 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
   },
   {
     title: "Pack Gestión",
@@ -82,7 +82,7 @@ const bundles = [
     price: "149 €",
     savings: "Ahorras 38 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/bdf998c1-be1e-4905-b613-5d64713e7784",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e5142082-3c6c-47c4-ac14-392211d0cfb7",
   },
   {
     title: "Pack Operación Pro",
@@ -91,7 +91,7 @@ const bundles = [
     price: "139 €",
     savings: "Ahorras 19 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
   },
   {
     title: "Suite Completa",
@@ -100,7 +100,7 @@ const bundles = [
     price: "219 €",
     savings: "Ahorras 126 €",
     featured: true,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
   },
 ];
 
