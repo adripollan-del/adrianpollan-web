@@ -1,5 +1,5 @@
 # Backlog maestro — adrianpollan.com
-Última actualización: mayo 2026
+Última actualización: junio 2026
 
 ---
 
@@ -120,7 +120,16 @@
 | I4 | Página /herramientas/plantillas con copy SEO, FAQs, garantías y CTAs | Completado |
 | I5 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
 | I6 | Activar live mode en Lemon Squeezy | Pendiente: verificación de identidad en curso |
-| I7 | Imágenes de producto generadas con ChatGPT (10 imágenes: 5 individuales + 5 bundles) y subidas a Lemon Squeezy | Completado |
+| I7 | Imágenes de producto generadas y subidas a Lemon Squeezy | Completado |
+| I8 | Páginas individuales por plantilla (/herramientas/plantillas/[slug]) con estructura de embudo, imágenes, upsell de bundles y Schema Product | Completado |
+| I9 | Micro-copy de CTAs actualizado en toda la web | Completado |
+| I10 | Artículo "Cuánto cuesta un consultor de restaurantes" publicado | Completado |
+| I11 | Schema Markup implementado en 7 páginas y verificado con Rich Results Test | Completado |
+| I12 | Menú de navegación actualizado con dropdown de Herramientas y regla del 5 | Completado |
+| I13 | Bloque de plantillas añadido en /herramientas | Completado |
+| I14 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
+| I15 | Script de autogeneración de blog actualizado para incluir bloques de plantillas en artículos futuros | Completado |
+| I16 | Robi actualizado para recomendar plantillas según problema del visitante | Completado |
 
 ---
 
