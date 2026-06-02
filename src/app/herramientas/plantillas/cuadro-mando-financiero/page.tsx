@@ -183,7 +183,7 @@ export default function CuadroMandoFinancieroPage() {
           </div>
           <div className="max-w-[900px] mx-auto">
             <Image
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+              src="/images/plantillas/plantilla-cuadro-mando-financiero.png"
               alt="Vista previa del cuadro de mando financiero con datos de ejemplo"
               width={1200}
               height={675}

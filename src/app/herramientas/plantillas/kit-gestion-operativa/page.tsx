@@ -183,7 +183,7 @@ export default function KitGestionOperativaPage() {
           </div>
           <div className="max-w-[900px] mx-auto">
             <Image
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+              src="/images/plantillas/plantilla-kit-gestion-operativa.png"
               alt="Vista previa del kit de gestión operativa con datos de ejemplo"
               width={1200}
               height={675}
