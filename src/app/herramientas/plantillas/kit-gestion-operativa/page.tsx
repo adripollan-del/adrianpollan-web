@@ -113,8 +113,8 @@ export default function KitGestionOperativaPage() {
 
       {/* ── ASÍ SE VE LA PLANTILLA ──────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-3xl mx-auto mb-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <div className="mb-10">
             <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
               Así se ve la plantilla
             </h2>
@@ -139,7 +139,7 @@ export default function KitGestionOperativaPage() {
 
       {/* ── ¿QUÉ INCLUYE? ─────────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué incluye?
           </h2>
@@ -202,7 +202,7 @@ export default function KitGestionOperativaPage() {
 
       {/* ── ¿PARA QUIÉN ES? ───────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
-        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
             ¿Para quién es esta plantilla?
           </h2>
@@ -222,7 +222,7 @@ export default function KitGestionOperativaPage() {
 
       {/* ── GARANTÍAS ────────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-cream text-2xl lg:text-3xl font-semibold leading-tight mb-10 lg:mb-12">
             Diseñadas para restaurantes reales, no para demos
           </h2>
@@ -242,44 +242,35 @@ export default function KitGestionOperativaPage() {
         </div>
       </section>
 
-      {/* ── SEGUNDO CTA ──────────────────────────────────────────── */}
-      <section className="bg-cream-dark py-16 lg:py-20">
-        <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-2xl lg:text-3xl font-semibold leading-tight mb-8">
+      {/* ── CTA FINAL ────────────────────────────────────────────── */}
+      <section className="bg-[#f5f0e8] py-20 lg:py-28">
+        <div className="max-w-[700px] mx-auto px-6 lg:px-10 text-center">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-8">
             ¿Listo para estandarizar tu operación?
           </h2>
           <TrackingLink
             href="https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
-            eventName="plantilla_compra" eventLabel="Kit Operativo — Segundo CTA"
+            eventName="plantilla_compra" eventLabel="Kit Operativo — CTA final"
           >
             Comprar ahora <ArrowRight size={15} />
           </TrackingLink>
-        </div>
-      </section>
-
-      {/* ── CTA FINAL ────────────────────────────────────────────── */}
-      <section className="bg-white py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
-            ¿No sabes si esta plantilla es la que necesitas?
-          </h2>
-          <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            En 20 minutos puedo ayudarte a identificar cuál es el problema más urgente de tu restaurante. Sin coste y sin compromiso.
+          <div className="border-t border-navy/10 my-10" />
+          <p className="font-body text-ink/60 text-base mb-6">
+            ¿No sabes si es la plantilla que necesitas?
           </p>
           <TrackingLink
-            href="https://calendly.com/adrianpollan" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            href="https://calendly.com/adrianpollan"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 border border-amber text-amber text-sm font-semibold tracking-wide hover:bg-amber/5 transition-colors"
             eventName="calendly_click" eventLabel="Kit Operativo — CTA final"
           >
-            Agendar sesión gratuita <ArrowRight size={15} />
+            Agendar sesión gratuita de 20 minutos
           </TrackingLink>
-          <div className="mt-6">
-            <Link href="/herramientas/plantillas" className="font-body text-sm text-ink/50 hover:text-amber transition-colors">
-              ← Ver todas las plantillas
-            </Link>
-          </div>
+          <p className="font-body text-ink/40 text-xs mt-4">
+            Sin coste · Sin compromiso
+          </p>
         </div>
       </section>
     </>
