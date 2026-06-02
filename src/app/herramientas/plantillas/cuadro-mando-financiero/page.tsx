@@ -137,30 +137,8 @@ export default function CuadroMandoFinancieroPage() {
         </div>
       </section>
 
-      {/* ── ¿TE SUENA ESTO? ───────────────────────────────────────── */}
-      <TeReconoces symptoms={symptoms} />
-
-      {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
-      <section className="bg-cream-dark py-20 lg:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
-            ¿Qué puedes hacer con esta plantilla?
-          </h2>
-          <ol className="space-y-5">
-            {actions.map((a, i) => (
-              <li key={i} className="flex items-start gap-5">
-                <span className="font-display text-amber text-2xl font-bold leading-none flex-shrink-0 w-8 pt-0.5">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="font-body text-ink/75 text-base leading-relaxed">{a}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       {/* ── ¿QUÉ INCLUYE? ─────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué incluye?
@@ -183,12 +161,30 @@ export default function CuadroMandoFinancieroPage() {
         </div>
       </section>
 
-      {/* ── PRECIO ───────────────────────────────────────────────── */}
+      {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
+            ¿Qué puedes hacer con esta plantilla?
+          </h2>
+          <ol className="space-y-5">
+            {actions.map((a, i) => (
+              <li key={i} className="flex items-start gap-5">
+                <span className="font-display text-amber text-2xl font-bold leading-none flex-shrink-0 w-8 pt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/75 text-base leading-relaxed">{a}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── PRIMER CTA ───────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
         <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
-          <p className="font-display text-amber text-7xl font-bold mb-3">79 €</p>
-          <p className="font-body text-cream/60 text-base mb-8">
-            Si tardas tres días al mes en cuadrar los números de tu negocio, ya has perdido más tiempo del que vale esta plantilla.
+          <p className="font-body text-cream/80 text-lg mb-8">
+            Accede ahora por <span className="font-semibold text-amber">79 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
             href="https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5"
@@ -205,7 +201,7 @@ export default function CuadroMandoFinancieroPage() {
       </section>
 
       {/* ── ¿PARA QUIÉN ES? ───────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
             ¿Para quién es esta plantilla?
@@ -220,6 +216,9 @@ export default function CuadroMandoFinancieroPage() {
           </ul>
         </div>
       </section>
+
+      {/* ── LO QUE CAMBIA CUANDO LO USAS ────────────────────────── */}
+      <TeReconoces symptoms={symptoms} title="Lo que cambia cuando lo usas" />
 
       {/* ── GARANTÍAS ────────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
@@ -240,6 +239,23 @@ export default function CuadroMandoFinancieroPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SEGUNDO CTA ──────────────────────────────────────────── */}
+      <section className="bg-cream-dark py-16 lg:py-20">
+        <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
+          <h2 className="font-display text-navy text-2xl lg:text-3xl font-semibold leading-tight mb-8">
+            ¿Listo para cerrar el mes con claridad?
+          </h2>
+          <TrackingLink
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            eventName="plantilla_compra" eventLabel="Cuadro de Mando — Segundo CTA"
+          >
+            Comprar ahora <ArrowRight size={15} />
+          </TrackingLink>
         </div>
       </section>
 

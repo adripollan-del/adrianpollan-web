@@ -137,30 +137,8 @@ export default function MenuEngineeringPage() {
         </div>
       </section>
 
-      {/* ── ¿TE SUENA ESTO? ───────────────────────────────────────── */}
-      <TeReconoces symptoms={symptoms} />
-
-      {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
-      <section className="bg-cream-dark py-20 lg:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
-            ¿Qué puedes hacer con esta plantilla?
-          </h2>
-          <ol className="space-y-5">
-            {actions.map((a, i) => (
-              <li key={i} className="flex items-start gap-5">
-                <span className="font-display text-amber text-2xl font-bold leading-none flex-shrink-0 w-8 pt-0.5">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="font-body text-ink/75 text-base leading-relaxed">{a}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       {/* ── ¿QUÉ INCLUYE? ─────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué incluye?
@@ -183,12 +161,30 @@ export default function MenuEngineeringPage() {
         </div>
       </section>
 
-      {/* ── PRECIO ───────────────────────────────────────────────── */}
+      {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
+            ¿Qué puedes hacer con esta plantilla?
+          </h2>
+          <ol className="space-y-5">
+            {actions.map((a, i) => (
+              <li key={i} className="flex items-start gap-5">
+                <span className="font-display text-amber text-2xl font-bold leading-none flex-shrink-0 w-8 pt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-body text-ink/75 text-base leading-relaxed">{a}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── PRIMER CTA ───────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
         <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
-          <p className="font-display text-amber text-7xl font-bold mb-3">49 €</p>
-          <p className="font-body text-cream/60 text-base mb-8">
-            La mayoría de restaurantes pierde más que esto en una sola semana por no tener clara la rentabilidad de su carta.
+          <p className="font-body text-cream/80 text-lg mb-8">
+            Accede ahora por <span className="font-semibold text-amber">49 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
             href="https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4"
@@ -205,7 +201,7 @@ export default function MenuEngineeringPage() {
       </section>
 
       {/* ── ¿PARA QUIÉN ES? ───────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
             ¿Para quién es esta plantilla?
@@ -220,6 +216,9 @@ export default function MenuEngineeringPage() {
           </ul>
         </div>
       </section>
+
+      {/* ── LO QUE CAMBIA CUANDO LO USAS ────────────────────────── */}
+      <TeReconoces symptoms={symptoms} title="Lo que cambia cuando lo usas" />
 
       {/* ── GARANTÍAS ────────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
@@ -240,6 +239,23 @@ export default function MenuEngineeringPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SEGUNDO CTA ──────────────────────────────────────────── */}
+      <section className="bg-cream-dark py-16 lg:py-20">
+        <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
+          <h2 className="font-display text-navy text-2xl lg:text-3xl font-semibold leading-tight mb-8">
+            ¿Listo para tomar el control de tu carta?
+          </h2>
+          <TrackingLink
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            eventName="plantilla_compra" eventLabel="Ingeniería de Menú — Segundo CTA"
+          >
+            Comprar ahora <ArrowRight size={15} />
+          </TrackingLink>
         </div>
       </section>
 
