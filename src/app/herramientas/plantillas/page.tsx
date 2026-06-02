@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, BookOpen, Mail } from "lucide-react";
+import { ArrowRight, BarChart2, Calculator, CheckSquare, LayoutDashboard, Package, Zap, BookOpen, Mail } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
 import FaqsClient from "./faqs-client";
 
@@ -24,87 +24,37 @@ const individuales = [
   {
     title: "Ingeniería de Menú",
     pageHref: "/herramientas/plantillas/menu-engineering",
-    description:
-      "Analiza ventas, costes y popularidad de tu carta. Clasifica cada plato por rentabilidad real y deja de empujar los que más salen si no son los que más dejan.",
-    descriptionLong:
-      "La mayoría de restaurantes llena la carta de platos que se venden, no de platos que generan margen. Esta plantilla clasifica cada plato según su rentabilidad y popularidad real, así sabes exactamente en cuáles tienes que subir precio, simplificar o apostar fuerte. Todo con los datos de tus propias ventas, no con suposiciones.",
-    bullets: [
-      "Clasificación BCG automática (Estrella, Vaca, Incógnita, Perro)",
-      "Análisis de mix de ventas y margen por plato",
-      "Coeficiente de Omnes para detectar cartas mal estructuradas",
-      "Dashboard ejecutivo con lectura inmediata",
-      "Datos de ejemplo del restaurante La Mesa + plantilla en blanco",
-    ],
+    description: "Clasifica cada plato de tu carta por rentabilidad real y toma decisiones con datos, no con intuición.",
     price: "49 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/4495b9a9-0195-4cf2-a68e-504f0edec8d4",
+    icon: <BarChart2 size={22} className="text-amber" />,
   },
   {
     title: "Escandallo y Calculadora de Precios",
     pageHref: "/herramientas/plantillas/escandallo-calculadora-precios",
-    description:
-      "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado por canal. Deja de adivinar si un plato deja dinero.",
-    descriptionLong:
-      "Cuando suben los proveedores, ¿sabes exactamente qué platos absorben ese golpe y cuáles empiezan a perder margen? Sin un escandallo actualizado, se fijan precios por intuición o copiando a la competencia. Esta plantilla calcula el coste real de cada receta, aplica mermas automáticamente y te dice el precio mínimo para cada canal: sala, delivery o take away.",
-    bullets: [
-      "Coste por receta con mermas aplicadas automáticamente",
-      "Calculadora de precio por canal (sala, Uber Eats, Glovo, take away)",
-      "Alerta de margen crítico configurable",
-      "Historial de variación de costes por ingrediente",
-      "Sub-recetas para masas, salsas y preparaciones intermedias",
-    ],
+    description: "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado.",
     price: "59 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb",
+    icon: <Calculator size={22} className="text-amber" />,
   },
   {
     title: "Control de Inventario y Pedidos",
     pageHref: "/herramientas/plantillas/control-inventario-pedidos",
-    description:
-      "Controla el stock en tiempo real y recibe pedidos sugeridos automáticos por proveedor. Deja de vivir entre roturas de stock y cámaras llenas de producto inmovilizado.",
-    descriptionLong:
-      "El dinero que un restaurante tiene parado en cámaras y almacén es dinero que no trabaja. Y las urgencias de última hora con proveedores cuestan más que el pedido planificado. Esta plantilla calcula el punto de pedido de cada producto según tu consumo real y tu plazo de reposición, y te genera una lista de pedido sugerida filtrable por proveedor.",
-    bullets: [
-      "Cálculo automático de punto de pedido por producto",
-      "Pedido sugerido filtrable por proveedor y categoría",
-      "Valoración del inventario en tiempo real",
-      "Registro de recepciones y seguimiento de pedidos",
-      "Compatible con importación desde la plantilla de escandallo",
-    ],
+    description: "Elimina roturas de stock y pedidos urgentes con puntos de pedido automáticos por proveedor.",
     price: "69 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118",
+    icon: <Package size={22} className="text-amber" />,
   },
   {
     title: "Cuadro de Mando Financiero",
     pageHref: "/herramientas/plantillas/cuadro-mando-financiero",
-    description:
-      "Registra ingresos y gastos y visualiza tu PyG, KPIs y caja en tiempo real. Deja de tardar días en saber si el mes fue bueno o malo.",
-    descriptionLong:
-      "Sin un cuadro de mando, saber si el negocio gana dinero implica juntar ventas del TPV, extractos bancarios, facturas de proveedores y nóminas. Con esta plantilla introduces cada movimiento en un registro central y el sistema actualiza solo la cuenta de resultados, los KPIs clave y las alertas de desviación. Una estructura mensual clara en lugar de números dispersos.",
-    bullets: [
-      "PyG mensual con actualización automática vía SUMIFS",
-      "KPIs: food cost, labour cost, EBITDA y margen por canal",
-      "Alertas configurables de desviación sobre umbrales",
-      "Simulador de comisiones por plataforma de delivery",
-      "Compatible con registro desde Google Forms en móvil",
-    ],
+    description: "Cierra el mes con una lectura clara de ventas, costes y margen. Sin juntar números de mil sitios.",
     price: "79 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5",
+    icon: <LayoutDashboard size={22} className="text-amber" />,
   },
   {
     title: "Kit de Gestión Operativa",
     pageHref: "/herramientas/plantillas/kit-gestion-operativa",
-    description:
-      "Checklists y plantillas para cocina, barra y sala: aperturas, cierres, producción, mermas, temperaturas y limpieza. El mismo estándar en todos los turnos, sin depender de la memoria de nadie.",
-    descriptionLong:
-      "En la mayoría de restaurantes cada turno abre, produce y cierra a su manera. Las tareas críticas dependen de quién esté ese día y de lo que recuerde. Este kit estandariza todas las operaciones del día con checklists listos para imprimir o usar en pantalla, para que el equipo siga el mismo proceso independientemente de quién esté al frente.",
-    bullets: [
-      "Checklist de apertura y cierre por área (cocina, barra, sala)",
-      "Control diario de temperaturas y APPCC simplificado",
-      "Registro de mermas y producción por turno",
-      "Control de pedidos y recepciones de mercancía",
-      "Plantillas en blanco + ejemplos rellenos del restaurante La Mesa",
-    ],
+    description: "El mismo estándar operativo en todos los turnos, sin depender de la memoria de nadie.",
     price: "89 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8",
+    icon: <CheckSquare size={22} className="text-amber" />,
   },
 ];
 
@@ -290,43 +240,27 @@ export default function PlantillasPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {individuales.map((p) => (
-              <div
-                key={p.href}
-                className="bg-white border border-navy/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+              <Link
+                key={p.pageHref}
+                href={p.pageHref}
+                className="group bg-white border border-navy/8 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
-                <Link href={p.pageHref} className="hover:text-amber transition-colors">
-                  <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-3 hover:text-amber transition-colors">
-                    {p.title}
-                  </h3>
-                </Link>
-                <p className="font-body text-ink/60 text-sm leading-relaxed mb-4">
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-10 h-10 bg-amber/10 border border-amber/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    {p.icon}
+                  </div>
+                  <span className="font-display text-amber font-bold text-xl">{p.price}</span>
+                </div>
+                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-2">
+                  {p.title}
+                </h3>
+                <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-5">
                   {p.description}
                 </p>
-                <p className="font-body text-ink/70 text-sm leading-relaxed mb-4">
-                  {p.descriptionLong}
-                </p>
-                <ul className="space-y-1.5 mb-6 flex-1">
-                  {p.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2">
-                      <span className="text-amber mt-0.5 flex-shrink-0 text-xs">✓</span>
-                      <span className="font-body text-ink/65 text-xs leading-snug">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="font-display text-amber text-3xl font-bold mb-5">
-                  {p.price}
-                </p>
-                <TrackingLink
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
-                  eventName="plantilla_compra"
-                  eventLabel={p.title}
-                >
-                  Comprar ahora <ArrowRight size={14} />
-                </TrackingLink>
-              </div>
+                <span className="font-body text-amber text-sm font-medium group-hover:underline">
+                  Ver plantilla →
+                </span>
+              </Link>
             ))}
           </div>
         </div>
