@@ -268,7 +268,7 @@ export default function CasosRealesPage() {
                 eventName="diagnostico_click"
                 eventLabel={`Casos de éxito — caso ${idx + 1}`}
               >
-                Recibir Diagnóstico Gratuito
+                Quiero resultados como estos
                 <ExternalLink size={14} />
               </TrackingLink>
 
@@ -300,7 +300,7 @@ export default function CasosRealesPage() {
               eventName="diagnostico_click"
               eventLabel="Casos de éxito — CTA final"
             >
-              Recibir Diagnóstico Gratuito
+              Quiero resultados como estos
               <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink

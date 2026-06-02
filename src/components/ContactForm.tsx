@@ -136,7 +136,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide disabled:opacity-60"
       >
-        {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+        {status === "sending" ? "Enviando..." : "Enviar mi caso a Adrián"}
         {status !== "sending" && <ArrowRight size={16} />}
       </button>
     </form>

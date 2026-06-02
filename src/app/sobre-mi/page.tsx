@@ -475,7 +475,7 @@ export default function SobreMiPage() {
               eventName="diagnostico_click"
               eventLabel="Sobre mí — casos de éxito"
             >
-              ¿Tu situación se parece a alguna de estas? Recibir Diagnóstico Gratuito
+              ¿Tu situación se parece a alguna de estas? Empezar mi diagnóstico gratuito
               <ArrowRight size={15} />
             </TrackingLink>
             <Link
@@ -588,7 +588,7 @@ export default function SobreMiPage() {
                 eventName="diagnostico_click"
                 eventLabel="Sobre mí — CTA final"
               >
-                Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+                Empezar mi diagnóstico gratuito <ArrowRight size={15} />
               </TrackingLink>
               <TrackingLink
                 href="https://calendly.com/adrianpollan"
@@ -598,7 +598,7 @@ export default function SobreMiPage() {
                 eventName="calendly_click"
                 eventLabel="Sobre mí — CTA final"
               >
-                Reservar sesión gratuita de 20 min <ArrowRight size={15} />
+                Agendar sesión gratuita <ArrowRight size={15} />
               </TrackingLink>
             </div>
           </div>

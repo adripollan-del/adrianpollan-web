@@ -240,7 +240,7 @@ export default function ParaHotelesPage() {
               eventName="diagnostico_click"
               eventLabel="Para hoteles FB — CTA final"
             >
-              Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

@@ -304,7 +304,7 @@ export default function AuditoriaFBPage() {
               eventName="diagnostico_click"
               eventLabel="Auditoría F&B — CTA final"
             >
-              Recibir Diagnóstico Gratuito <ExternalLink size={14} />
+              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

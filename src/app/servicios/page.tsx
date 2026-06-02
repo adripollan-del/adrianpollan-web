@@ -244,7 +244,7 @@ export default function ServiciosPage() {
                 icon: <HelpCircle size={26} className="text-amber" />,
                 title: "No estás seguro por dónde empezar",
                 body: "Empieza con el diagnóstico gratuito. En 10 minutos sabrás cuáles son las áreas prioritarias de tu negocio.",
-                cta: { label: "Recibir Diagnóstico Gratuito", href: "https://diagnostico.adrianpollan.com", external: true },
+                cta: { label: "Empezar mi diagnóstico gratuito", href: "https://diagnostico.adrianpollan.com", external: true },
               },
             ].map((card, i) => (
               <div
@@ -600,7 +600,7 @@ export default function ServiciosPage() {
               eventName="diagnostico_click"
               eventLabel="Servicios — ¿cómo sé si necesito ayuda?"
             >
-              Recibir Diagnóstico Gratuito <ExternalLink size={14} />
+              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
             </TrackingLink>
           </div>
         </div>

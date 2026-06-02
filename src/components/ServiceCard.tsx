@@ -117,7 +117,7 @@ export default function ServiceCard({
               className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
               onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
-              Recibir Diagnóstico Gratuito
+              Empezar mi diagnóstico gratuito
               <ArrowRight size={14} />
             </a>
 
@@ -129,7 +129,7 @@ export default function ServiceCard({
               className="inline-flex items-center justify-center gap-2 px-6 py-3 mt-3 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors w-full"
               onClick={() => trackEvent("calendly_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
-              Reservar sesión gratuita de 20 min
+              Agendar sesión gratuita
               <ArrowRight size={14} />
             </a>
 
@@ -138,7 +138,7 @@ export default function ServiceCard({
                 href={href}
                 className="inline-flex items-center justify-center gap-1.5 w-full mt-3 font-body text-sm text-navy/50 hover:text-amber transition-colors"
               >
-                Ver más detalles <ArrowRight size={13} />
+                Ver cómo funciona <ArrowRight size={13} />
               </Link>
             )}
           </div>

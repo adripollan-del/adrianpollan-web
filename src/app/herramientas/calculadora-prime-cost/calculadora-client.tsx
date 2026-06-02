@@ -212,7 +212,7 @@ export default function CalculadoraClient() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
             >
-              Recibir Diagnóstico Gratuito →
+              Empezar mi diagnóstico gratuito →
             </a>
           </div>
         )}

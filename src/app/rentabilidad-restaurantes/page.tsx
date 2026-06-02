@@ -283,7 +283,7 @@ export default function RentabilidadRestaurantesPage() {
               eventName="diagnostico_click"
               eventLabel="Rentabilidad restaurantes — CTA final"
             >
-              Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
             </TrackingLink>
           </div>
         </div>

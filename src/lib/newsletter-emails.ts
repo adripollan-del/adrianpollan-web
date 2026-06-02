@@ -208,7 +208,7 @@ export function email3Html(): string {
             Me cuentas dónde estás y vemos juntos si tiene sentido trabajar juntos.
           </p>
           <p style="margin:0;">
-            ${textLink("Reservar sesión gratuita →", "https://calendly.com/adrianpollan")}
+            ${textLink("Agendar sesión gratuita →", "https://calendly.com/adrianpollan")}
           </p>
         </td>
       </tr>

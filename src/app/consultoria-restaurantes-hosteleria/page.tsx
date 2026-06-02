@@ -140,7 +140,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                 eventName="diagnostico_click"
                 eventLabel="Pilar consultoría — hero"
               >
-                Recibir Diagnóstico Gratuito
+                Empezar mi diagnóstico gratuito
                 <ExternalLink size={15} />
               </TrackingLink>
               <a
@@ -149,7 +149,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-cream/30 text-cream text-sm font-medium hover:border-cream/60 transition-colors"
               >
-                Reservar sesión de 20 minutos
+                Agendar sesión gratuita
                 <ArrowRight size={15} />
               </a>
             </div>
@@ -592,7 +592,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               eventName="diagnostico_click"
               eventLabel="Pilar consultoría — CTA final"
             >
-              Recibir Diagnóstico Gratuito
+              Empezar mi diagnóstico gratuito
               <ExternalLink size={15} />
             </TrackingLink>
             <a

@@ -170,7 +170,7 @@ export default function Home() {
                 eventName="diagnostico_click"
                 eventLabel="Hero home"
               >
-                Recibir Diagnóstico Gratuito
+                Diagnóstico gratuito
                 <ArrowRight size={16} />
               </TrackingLink>
               <TrackingLink
@@ -181,7 +181,7 @@ export default function Home() {
                 eventName="calendly_click"
                 eventLabel="Hero home"
               >
-                Reservar sesión gratuita de 20 min
+                Hablar de mi negocio
                 <ArrowRight size={16} />
               </TrackingLink>
             </div>
@@ -264,7 +264,7 @@ export default function Home() {
             eventName="diagnostico_click"
             eventLabel="Sección diagnóstico home"
           >
-            Recibir Diagnóstico Gratuito
+            Empezar mi diagnóstico gratuito
             <ArrowRight size={16} />
           </TrackingLink>
         </div>
@@ -460,7 +460,7 @@ export default function Home() {
                     eventName="diagnostico_click"
                     eventLabel="Empieza según situación — home"
                   >
-                    Recibir Diagnóstico Gratuito <ArrowRight size={14} />
+                    Empezar mi diagnóstico gratuito <ArrowRight size={14} />
                   </TrackingLink>
                 ),
               },
@@ -501,7 +501,7 @@ export default function Home() {
                       eventName="diagnostico_click"
                       eventLabel="Empieza según situación — home"
                     >
-                      Recibir Diagnóstico Gratuito <ArrowRight size={14} />
+                      Empezar mi diagnóstico gratuito <ArrowRight size={14} />
                     </TrackingLink>
                     <TrackingLink
                       href="https://calendly.com/adrianpollan"
@@ -582,7 +582,7 @@ export default function Home() {
                   href="/servicios"
                   className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
                 >
-                  Ver más <ArrowRight size={13} />
+                  Ver cómo funciona <ArrowRight size={13} />
                 </Link>
               </div>
             ))}
@@ -640,7 +640,7 @@ export default function Home() {
             eventName="diagnostico_click"
             eventLabel="Sección problemas home"
           >
-            Recibir Diagnóstico Gratuito
+            Empezar mi diagnóstico gratuito
             <ArrowRight size={16} />
           </TrackingLink>
         </div>
@@ -671,7 +671,7 @@ export default function Home() {
                 num: "02",
                 title: "Sesión de 20 minutos",
                 desc: "Si el diagnóstico revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
-                cta: "Reservar sesión",
+                cta: "Agendar sesión gratuita",
                 href: "https://calendly.com/adrianpollan",
                 external: true,
               },
@@ -782,7 +782,7 @@ export default function Home() {
                   {tool.description}
                 </p>
                 <span className="font-body text-amber text-sm font-medium group-hover:underline">
-                  Usar herramienta →
+                  Usar herramienta gratis →
                 </span>
               </Link>
             ))}
@@ -928,7 +928,7 @@ export default function Home() {
               eventName="diagnostico_click"
               eventLabel="CTA final home"
             >
-              Recibir Diagnóstico Gratuito
+              Empezar mi diagnóstico gratuito
               <ArrowRight size={16} />
             </TrackingLink>
             <TrackingLink

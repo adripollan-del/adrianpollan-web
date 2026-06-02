@@ -71,7 +71,7 @@ export default function ChecklistFoodCostPage() {
             eventName="diagnostico_click"
             eventLabel="Checklist food cost — CTA"
           >
-            Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

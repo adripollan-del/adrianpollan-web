@@ -72,7 +72,7 @@ export default function CalculadoraEscandalloPage() {
             eventName="diagnostico_click"
             eventLabel="Calculadora escandallo — CTA"
           >
-            Recibir Diagnóstico Gratuito <ArrowRight size={15} />
+            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>
