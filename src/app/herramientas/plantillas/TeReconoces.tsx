@@ -46,9 +46,9 @@ function TypewriterCard({
   }, [typing, text]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="bg-white/5 border-l-4 border-amber rounded-r-xl p-7">
+    <div className="bg-white border-l-4 border-amber rounded-r-xl p-7">
       <div className="mb-4">{icon}</div>
-      <p className="font-body text-cream/80 text-base leading-relaxed min-h-[5rem]">
+      <p className="font-body text-navy text-base leading-relaxed min-h-[5rem]">
         {displayed}
         {!done && started && !instant && (
           <span className="animate-pulse ml-px text-amber">|</span>
@@ -84,8 +84,8 @@ export default function TeReconoces({ symptoms }: { symptoms: Symptom[] }) {
 
   return (
     <section ref={ref} className="bg-[#0f1923] py-20 lg:py-28">
-      <div className="max-w-[800px] mx-auto px-6 lg:px-10">
-        <h2 className="font-display text-white text-3xl lg:text-4xl font-semibold leading-tight mb-12">
+      <div className="max-w-[1000px] mx-auto px-6 lg:px-10">
+        <h2 className="font-display text-white text-3xl lg:text-4xl font-semibold leading-tight mb-12 text-center">
           ¿Te suena esto?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
