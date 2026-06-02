@@ -65,6 +65,49 @@ const audienceCardData = [
   },
 ];
 
+const jsonLdHome = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es un consultor de restaurantes?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Un consultor de restaurantes es un profesional especializado en mejorar la rentabilidad y gestión operativa de negocios de hostelería, identificando ineficiencias y aplicando soluciones concretas en áreas como costes, equipo, carta y operaciones.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuánto cuesta una consultoría de restaurantes?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "El coste varía según el alcance del proyecto. El punto de partida es un diagnóstico gratuito de 10 minutos en diagnostico.adrianpollan.com, seguido de una sesión gratuita de 20 minutos para valorar el caso concreto.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo sé si mi restaurante necesita un consultor?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Si tu restaurante tiene buena ocupación pero los números no cuadran, si el food cost o el labour cost se disparan, o si la operación depende demasiado de ti, son señales claras de que necesitas una revisión externa.",
+          },
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Consultoría de Restaurantes y Hostelería",
+      provider: { "@id": "https://adrianpollan.com/#person" },
+      areaServed: ["España", "Irlanda", "Francia", "Reino Unido"],
+      serviceType: "Consultoría de Restauración y F&B",
+      url: "https://adrianpollan.com",
+    },
+  ],
+};
+
 export default function Home() {
   const audienceIcons = [
     <TrendingDown key="a1" size={28} className="text-amber" />,
@@ -73,6 +116,10 @@ export default function Home() {
   ];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHome) }}
+      />
       {/* ── HERO — navy + imagen de fondo ──────────────────────────── */}
       <section className="relative min-h-screen hero-navy flex flex-col justify-end overflow-hidden">
         {/* Background photo */}

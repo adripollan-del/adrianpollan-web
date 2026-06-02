@@ -169,9 +169,65 @@ const garantias = [
   },
 ];
 
+const jsonLdPlantillas = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      name: "Plantillas de Gestión para Restaurantes",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      numberOfItems: 5,
+    },
+    {
+      "@type": "Product",
+      name: "Plantilla de Ingeniería de Menú para Restaurantes",
+      description: "Clasifica cada plato de tu carta por rentabilidad y popularidad real con clasificación BCG automática.",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      brand: { "@type": "Brand", name: "Adrián Pollán" },
+      offers: { "@type": "Offer", price: "49", priceCurrency: "EUR", availability: "https://schema.org/InStock", seller: { "@id": "https://adrianpollan.com/#person" } },
+    },
+    {
+      "@type": "Product",
+      name: "Plantilla de Escandallo y Calculadora de Precios",
+      description: "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado por canal.",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      brand: { "@type": "Brand", name: "Adrián Pollán" },
+      offers: { "@type": "Offer", price: "59", priceCurrency: "EUR", availability: "https://schema.org/InStock", seller: { "@id": "https://adrianpollan.com/#person" } },
+    },
+    {
+      "@type": "Product",
+      name: "Plantilla de Control de Inventario y Pedidos Sugeridos",
+      description: "Controla el stock en tiempo real y recibe pedidos sugeridos automáticos por proveedor.",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      brand: { "@type": "Brand", name: "Adrián Pollán" },
+      offers: { "@type": "Offer", price: "69", priceCurrency: "EUR", availability: "https://schema.org/InStock", seller: { "@id": "https://adrianpollan.com/#person" } },
+    },
+    {
+      "@type": "Product",
+      name: "Cuadro de Mando Financiero para Restaurantes",
+      description: "Registra ingresos y gastos y visualiza tu PyG, KPIs y caja en tiempo real.",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      brand: { "@type": "Brand", name: "Adrián Pollán" },
+      offers: { "@type": "Offer", price: "79", priceCurrency: "EUR", availability: "https://schema.org/InStock", seller: { "@id": "https://adrianpollan.com/#person" } },
+    },
+    {
+      "@type": "Product",
+      name: "Kit de Gestión Operativa para Restaurantes",
+      description: "Checklists y plantillas para cocina, barra y sala: aperturas, cierres, producción, mermas y temperaturas.",
+      url: "https://adrianpollan.com/herramientas/plantillas",
+      brand: { "@type": "Brand", name: "Adrián Pollán" },
+      offers: { "@type": "Offer", price: "89", priceCurrency: "EUR", availability: "https://schema.org/InStock", seller: { "@id": "https://adrianpollan.com/#person" } },
+    },
+  ],
+};
+
 export default function PlantillasPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlantillas) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
         <Image

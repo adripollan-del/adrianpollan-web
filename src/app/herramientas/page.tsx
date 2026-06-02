@@ -101,9 +101,29 @@ const tools = [
   },
 ];
 
+const jsonLdHerramientas = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Herramientas gratuitas de gestión para restaurantes",
+  url: "https://adrianpollan.com/herramientas",
+  numberOfItems: 6,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Calculadora de Prime Cost", url: "https://adrianpollan.com/herramientas/calculadora-prime-cost" },
+    { "@type": "ListItem", position: 2, name: "Calculadora de Escandallo", url: "https://adrianpollan.com/herramientas/calculadora-escandallo" },
+    { "@type": "ListItem", position: 3, name: "Checklist de Apertura", url: "https://adrianpollan.com/herramientas/checklist-apertura" },
+    { "@type": "ListItem", position: 4, name: "Checklist de Food Cost", url: "https://adrianpollan.com/herramientas/checklist-food-cost" },
+    { "@type": "ListItem", position: 5, name: "Auditoría de Proveedores", url: "https://adrianpollan.com/herramientas/auditoria-proveedores" },
+    { "@type": "ListItem", position: 6, name: "Plantillas de Gestión", url: "https://adrianpollan.com/herramientas/plantillas" },
+  ],
+};
+
 export default function HerramientasPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHerramientas) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image

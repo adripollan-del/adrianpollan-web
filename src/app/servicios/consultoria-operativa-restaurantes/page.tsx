@@ -52,9 +52,24 @@ const steps = [
   },
 ];
 
+const jsonLdConsultoriaOp = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Consultoría Operativa para Restaurantes",
+  description: "Acompañamiento continuo para mejorar la operación, reducir costes y aumentar el margen de tu restaurante con implementación real sobre el terreno.",
+  provider: { "@id": "https://adrianpollan.com/#person" },
+  areaServed: ["España", "Irlanda", "Francia", "Reino Unido"],
+  serviceType: "Consultoría Operativa",
+  url: "https://adrianpollan.com/servicios/consultoria-operativa-restaurantes",
+};
+
 export default function ConsultoriaOperativaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdConsultoriaOp) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image

@@ -21,9 +21,26 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLdSobreMi = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://adrianpollan.com/#person",
+  name: "Adrián Pollán",
+  jobTitle: "Consultor de Restauración y F&B",
+  description: "Consultor en restauración y F&B con más de 20 años de experiencia internacional en España, Francia, Reino Unido e Irlanda. GM activo con historial en propiedades como Ballynahinch Castle, Kilronan Castle, Les Bordes Estate y Kenmare Bay Hotel.",
+  knowsAbout: ["Consultoría de restaurantes", "Food & Beverage", "Revenue Management", "Gestión operativa hostelería", "Prime cost", "Food cost", "Apertura de restaurantes", "Gestión de equipos hostelería"],
+  worksFor: { "@id": "https://adrianpollan.com/#organization" },
+  url: "https://adrianpollan.com/sobre-mi",
+  sameAs: ["https://www.linkedin.com/in/adrianpollan"],
+};
+
 export default function SobreMiPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSobreMi) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image

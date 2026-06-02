@@ -47,9 +47,24 @@ const indicadores = [
   "Mezcla de ventas por categoría",
 ];
 
+const jsonLdAuditoria = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Diagnóstico y Auditoría F&B para Restaurantes",
+  description: "Auditoría completa de las operaciones F&B de tu restaurante: costes, carta, equipo, proveedores y procesos. Con informe de diagnóstico y plan de acción priorizado.",
+  provider: { "@id": "https://adrianpollan.com/#person" },
+  areaServed: ["España", "Irlanda", "Francia", "Reino Unido"],
+  serviceType: "Auditoría F&B",
+  url: "https://adrianpollan.com/servicios/auditoria-fb-restaurantes",
+};
+
 export default function AuditoriaFBPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAuditoria) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image

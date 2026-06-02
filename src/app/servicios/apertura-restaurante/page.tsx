@@ -41,9 +41,24 @@ const riskItems = [
   "Lanzar una carta sin calcular el margen por plato",
 ];
 
+const jsonLdApertura = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Consultoría de Apertura de Restaurante",
+  description: "Acompañamiento especializado para la apertura de tu restaurante: concepto, operaciones, equipo, costes y puesta en marcha. Con más de 20 años de experiencia en aperturas internacionales.",
+  provider: { "@id": "https://adrianpollan.com/#person" },
+  areaServed: ["España", "Irlanda", "Francia", "Reino Unido"],
+  serviceType: "Consultoría de Apertura",
+  url: "https://adrianpollan.com/servicios/apertura-restaurante",
+};
+
 export default function AperturaRestaurantePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdApertura) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
