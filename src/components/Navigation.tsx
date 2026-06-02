@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
 const navLinks = [
@@ -13,8 +13,12 @@ const navLinks = [
   { href: "/casos-reales", label: "Casos de éxito" },
   { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/blog", label: "Blog" },
-  { href: "/herramientas", label: "Herramientas" },
   { href: "/hablemos", label: "Hablemos" },
+];
+
+const herramientasLinks = [
+  { href: "/herramientas", label: "Herramientas gratuitas" },
+  { href: "/herramientas/plantillas", label: "Plantillas" },
 ];
 
 export default function Navigation() {
@@ -78,6 +82,34 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
+              {/* Herramientas dropdown */}
+              <div className="relative group">
+                <button
+                  className={`font-body text-sm tracking-wide transition-colors flex items-center gap-1 ${
+                    pathname.startsWith("/herramientas")
+                      ? "text-amber"
+                      : "text-cream/80 hover:text-cream"
+                  }`}
+                >
+                  Herramientas
+                  <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                <div className="absolute top-full left-0 mt-3 w-52 bg-navy border border-amber/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+                  {herramientasLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`block px-4 py-2.5 font-body text-sm transition-colors ${
+                        pathname === link.href
+                          ? "text-amber"
+                          : "text-cream/80 hover:text-amber hover:bg-amber/5"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </nav>
 
             {/* Desktop CTA */}
@@ -136,6 +168,19 @@ export default function Navigation() {
               className={`font-display text-3xl font-light tracking-wide transition-all duration-300 ${
                 isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               } ${pathname === link.href ? "text-amber" : "text-cream hover:text-amber"}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          {/* Herramientas sub-enlaces en móvil */}
+          {herramientasLinks.map((link, i) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{ transitionDelay: isOpen ? `${(navLinks.length + i + 1) * 60}ms` : "0ms" }}
+              className={`font-display text-2xl font-light tracking-wide transition-all duration-300 ${
+                isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              } ${pathname === link.href ? "text-amber" : "text-cream/70 hover:text-amber"}`}
             >
               {link.label}
             </Link>

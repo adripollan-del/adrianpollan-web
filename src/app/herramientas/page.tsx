@@ -3,6 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calculator, LayoutGrid, ListChecks, TrendingDown, Truck, UtensilsCrossed } from "lucide-react";
 
+const paidTemplates = [
+  {
+    title: "Ingeniería de Menú",
+    price: "49 €",
+    description: "Clasifica cada plato de tu carta por rentabilidad real y toma decisiones con datos, no con intuición.",
+  },
+  {
+    title: "Escandallo y Calculadora",
+    price: "59 €",
+    description: "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado.",
+  },
+  {
+    title: "Control de Inventario",
+    price: "69 €",
+    description: "Elimina roturas de stock y pedidos urgentes con puntos de pedido automáticos por proveedor.",
+  },
+  {
+    title: "Cuadro de Mando Financiero",
+    price: "79 €",
+    description: "Cierra el mes con una lectura clara de ventas, costes y margen. Sin juntar números de mil sitios.",
+  },
+  {
+    title: "Kit de Gestión Operativa",
+    price: "89 €",
+    description: "El mismo estándar operativo en todos los turnos, sin depender de la memoria de nadie.",
+  },
+];
+
 export const metadata: Metadata = {
   title: { absolute: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Más | Adrián Pollán" },
   description:
@@ -134,6 +162,53 @@ export default function HerramientasPage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PLANTILLAS DE PAGO ────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32 border-t border-navy/8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-14">
+            <h2 className="font-display text-navy text-4xl lg:text-5xl font-light leading-[1.1] mb-5">
+              Plantillas profesionales<br />
+              <span className="font-semibold">de gestión</span>
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              Herramientas en Excel y Google Sheets diseñadas para restaurantes
+              reales. Con datos de ejemplo, fórmulas automáticas y guía de
+              primeros pasos.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {paidTemplates.map((tpl) => (
+              <div
+                key={tpl.title}
+                className="bg-[#f5f0e8] border border-navy/8 rounded-xl p-7 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-navy text-lg font-semibold leading-snug pr-4">
+                    {tpl.title}
+                  </h3>
+                  <span className="font-display text-amber text-xl font-semibold whitespace-nowrap">
+                    {tpl.price}
+                  </span>
+                </div>
+                <p className="font-body text-ink/65 text-sm leading-relaxed flex-1">
+                  {tpl.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/herramientas/plantillas"
+              className="inline-flex items-center px-8 py-3.5 btn-amber text-white text-sm font-semibold tracking-wide rounded-sm"
+            >
+              Ver todas las plantillas
+            </Link>
           </div>
         </div>
       </section>
