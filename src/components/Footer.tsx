@@ -5,11 +5,13 @@ import TrackingLink from "@/components/TrackingLink";
 
 const footerLinks = [
   { href: "/servicios", label: "Servicios" },
+  { href: "/casos-reales", label: "Casos de éxito" },
   { href: "/libro", label: "Mi Libro" },
   { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/blog", label: "Blog" },
   { href: "/hablemos", label: "Hablemos" },
   { href: "/herramientas", label: "Herramientas gratuitas" },
+  { href: "/herramientas/plantillas", label: "Plantillas" },
 ];
 
 export default function Footer() {

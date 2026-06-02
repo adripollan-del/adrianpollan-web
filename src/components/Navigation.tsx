@@ -25,6 +25,7 @@ const herramientasLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [herramientasOpen, setHerramientasOpen] = useState(false);
   const pathname = usePathname();
 
   const isHome = pathname === "/";
@@ -37,7 +38,12 @@ export default function Navigation() {
 
   useEffect(() => {
     setIsOpen(false);
+    setHerramientasOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!isOpen) setHerramientasOpen(false);
+  }, [isOpen]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -187,25 +193,49 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          {/* Herramientas sub-enlaces en móvil */}
-          {herramientasLinks.map((link, i) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + i + 1) * 60}ms` : "0ms" }}
-              className={`font-display text-2xl font-light tracking-wide transition-all duration-300 ${
-                isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-              } ${pathname === link.href ? "text-amber" : "text-cream/70 hover:text-amber"}`}
+          {/* Herramientas toggle */}
+          <div
+            style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + 1) * 60}ms` : "0ms" }}
+            className={`flex flex-col items-center transition-all duration-300 ${
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            }`}
+          >
+            <button
+              onClick={() => setHerramientasOpen((v) => !v)}
+              className={`font-display text-3xl font-light tracking-wide flex items-center gap-2 transition-colors ${
+                pathname.startsWith("/herramientas") ? "text-amber" : "text-cream hover:text-amber"
+              }`}
             >
-              {link.label}
-            </Link>
-          ))}
+              Herramientas
+              <ChevronDown
+                size={22}
+                className={`transition-transform duration-200 ${herramientasOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            <div
+              className={`flex flex-col items-center gap-4 overflow-hidden transition-all duration-300 ${
+                herramientasOpen ? "max-h-32 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
+              }`}
+            >
+              {herramientasLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-display text-xl font-light tracking-wide transition-colors ${
+                    pathname === link.href ? "text-amber" : "text-cream/70 hover:text-amber"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           {/* Blog, Sobre Mí, Hablemos */}
           {navLinksRight.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
-              style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + herramientasLinks.length + i + 1) * 60}ms` : "0ms" }}
+              style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + 1 + i + 1) * 60}ms` : "0ms" }}
               className={`font-display text-3xl font-light tracking-wide transition-all duration-300 ${
                 isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               } ${pathname === link.href ? "text-amber" : "text-cream hover:text-amber"}`}
