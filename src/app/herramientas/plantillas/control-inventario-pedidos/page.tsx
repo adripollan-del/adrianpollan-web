@@ -75,6 +75,30 @@ const garantias = [
   { icon: <Mail size={24} className="text-amber" />, title: "Soporte directo incluido", body: "Si tienes dudas sobre cómo adaptar la plantilla a tu negocio, escríbeme directamente a adrian@adrianpollan.com" },
 ];
 
+const bundles = [
+  {
+    title: "Pack Control",
+    includes: ["Control de Inventario", "Escandallo y Calculadora", "Ingeniería de Menú"],
+    savings: "Ahorras 48 €",
+    price: "129 €",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
+  },
+  {
+    title: "Pack Operación Pro",
+    includes: ["Control de Inventario", "Kit de Gestión Operativa"],
+    savings: "Ahorras 19 €",
+    price: "139 €",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+  },
+  {
+    title: "Suite Completa",
+    includes: ["Las 5 plantillas"],
+    savings: "Ahorras 126 €",
+    price: "219 €",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+  },
+];
+
 export default function ControlInventarioPedidosPage() {
   return (
     <>
@@ -236,6 +260,45 @@ export default function ControlInventarioPedidosPage() {
                   <h3 className="font-display text-cream text-base font-semibold mb-1.5">{g.title}</h3>
                   <p className="font-body text-cream/60 text-sm leading-relaxed">{g.body}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TAMBIÉN EN PACK ──────────────────────────────────────── */}
+      <section className="bg-[#f5f0e8] py-20 lg:py-28">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-3">
+            También disponible en pack
+          </h2>
+          <p className="font-body text-ink/60 text-base mb-10">
+            Combina esta plantilla con otras y ahorra.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {bundles.map((b) => (
+              <div key={b.title} className="bg-white border border-navy/8 rounded-xl p-7 flex flex-col transition-shadow hover:shadow-[0_8px_24px_-6px_rgba(186,117,23,0.2)] hover:border-amber/30">
+                <h3 className="font-display text-navy text-lg font-semibold mb-4">{b.title}</h3>
+                <ul className="space-y-1.5 mb-5 flex-1">
+                  {b.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-amber text-xs mt-0.5 flex-shrink-0">✓</span>
+                      <span className="font-body text-ink/65 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="font-body text-green-600 text-sm font-medium mb-1">{b.savings}</p>
+                <p className="font-display text-amber text-2xl font-bold mb-5">{b.price}</p>
+                <TrackingLink
+                  href={b.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-6 py-2.5 border border-amber text-amber text-sm font-semibold tracking-wide hover:bg-amber/5 transition-colors self-start"
+                  eventName="bundle_compra"
+                  eventLabel={b.title}
+                >
+                  Ver pack →
+                </TrackingLink>
               </div>
             ))}
           </div>
