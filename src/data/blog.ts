@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Guía práctica de formación equipo sala restaurante para aumentar ticket medio, mejorar la experiencia y vender con criterio sin sonar a vendedor.",
     category: "Equipos",
-    date: "2026-06-01",
+    date: "2025-12-01",
     readTime: "8 min",
     coverImage:
       "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?auto=format&fit=crop&w=1792&q=80",
