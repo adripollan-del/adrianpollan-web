@@ -73,6 +73,21 @@ REQUISITOS:
   <p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>
 - Busca el ángulo más diferenciado y útil, no el más obvio
 
+BLOQUE DE PLANTILLA (obligatorio, exactamente uno por artículo):
+En el momento más relevante del artículo, donde el lector ya entiende el problema que se está tratando, inserta exactamente este bloque HTML adaptando solo el título y la descripción según el tema del artículo:
+
+<div style="background-color:#f5f0e8;border-left:4px solid #BA7517;padding:24px 28px;margin:32px 0;border-radius:4px;"><p style="margin:0 0 8px 0;font-weight:700;color:#0f1923;font-size:1rem;">TÍTULO DE LA PLANTILLA MÁS RELEVANTE</p><p style="margin:0 0 16px 0;color:#0f1923;font-size:0.95rem;">DESCRIPCIÓN DE UNA LÍNEA QUE CONECTA EL PROBLEMA DEL ARTÍCULO CON LO QUE RESUELVE LA PLANTILLA</p><a href="/herramientas/plantillas" style="background-color:#BA7517;color:#ffffff;padding:10px 20px;text-decoration:none;font-size:0.9rem;font-weight:600;border-radius:4px;display:inline-block;">Ver plantilla →</a></div>
+
+Elige el título según el tema del artículo:
+- Artículos sobre costes, recetas, food cost, precios o márgenes por plato → título: Escandallo y Calculadora de Precios
+- Artículos sobre carta, rentabilidad de platos o ingeniería de menú → título: Plantilla de Ingeniería de Menú
+- Artículos sobre inventario, proveedores, stock o compras → título: Control de Inventario y Pedidos Sugeridos
+- Artículos sobre finanzas, KPIs, resultados mensuales o rentabilidad global → título: Cuadro de Mando Financiero
+- Artículos sobre operaciones, turnos, equipo, checklists o aperturas → título: Kit de Gestión Operativa
+- Artículos sobre gestión global, consultoría o múltiples áreas → título: Suite Completa: Las 5 Plantillas de Gestión
+
+Inserta solo un bloque por artículo. No lo pongas al final: ponlo en el momento del texto donde el lector siente más el dolor del problema.
+
 CATEGORÍA (elige exactamente una de estas cuatro):
 - "Rentabilidad" → costes, márgenes, food cost, labour cost, prime cost, carta, precios, escandallo
 - "Equipos"      → gestión de personal, liderazgo, formación, cultura, turnos, autonomía
