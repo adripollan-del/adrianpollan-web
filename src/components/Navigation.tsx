@@ -7,12 +7,13 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
-const navLinks = [
-  { href: "/", label: "Home" },
+const navLinksLeft = [
   { href: "/servicios", label: "Servicios" },
-  { href: "/casos-reales", label: "Casos de éxito" },
-  { href: "/sobre-mi", label: "Sobre Mí" },
+];
+
+const navLinksRight = [
   { href: "/blog", label: "Blog" },
+  { href: "/sobre-mi", label: "Sobre Mí" },
   { href: "/hablemos", label: "Hablemos" },
 ];
 
@@ -69,7 +70,7 @@ export default function Navigation() {
 
             {/* Desktop nav */}
             <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
+              {navLinksLeft.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -110,6 +111,19 @@ export default function Navigation() {
                   ))}
                 </div>
               </div>
+              {navLinksRight.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-body text-sm tracking-wide transition-colors ${
+                    pathname === link.href
+                      ? "text-amber"
+                      : "text-cream/80 hover:text-cream"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
             {/* Desktop CTA */}
@@ -160,7 +174,8 @@ export default function Navigation() {
             Diagnóstico gratuito
           </a>
 
-          {navLinks.map((link, i) => (
+          {/* Servicios */}
+          {navLinksLeft.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
@@ -177,10 +192,23 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              style={{ transitionDelay: isOpen ? `${(navLinks.length + i + 1) * 60}ms` : "0ms" }}
+              style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + i + 1) * 60}ms` : "0ms" }}
               className={`font-display text-2xl font-light tracking-wide transition-all duration-300 ${
                 isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               } ${pathname === link.href ? "text-amber" : "text-cream/70 hover:text-amber"}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          {/* Blog, Sobre Mí, Hablemos */}
+          {navLinksRight.map((link, i) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{ transitionDelay: isOpen ? `${(navLinksLeft.length + herramientasLinks.length + i + 1) * 60}ms` : "0ms" }}
+              className={`font-display text-3xl font-light tracking-wide transition-all duration-300 ${
+                isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              } ${pathname === link.href ? "text-amber" : "text-cream hover:text-amber"}`}
             >
               {link.label}
             </Link>
