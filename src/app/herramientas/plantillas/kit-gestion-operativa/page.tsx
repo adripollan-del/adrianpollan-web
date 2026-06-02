@@ -170,6 +170,32 @@ export default function KitGestionOperativaPage() {
         </div>
       </section>
 
+      {/* ── ASÍ SE VE LA PLANTILLA ──────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+              Así se ve la plantilla
+            </h2>
+            <p className="font-body text-ink/60 text-base">
+              Datos de ejemplo incluidos para que puedas ver cómo funciona antes de meter los tuyos.
+            </p>
+          </div>
+          <div className="max-w-[900px] mx-auto">
+            <Image
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+              alt="Vista previa del kit de gestión operativa con datos de ejemplo"
+              width={1200}
+              height={675}
+              className="w-full rounded-xl shadow-lg border border-navy/8"
+            />
+            <p className="font-body text-ink/40 text-xs text-center mt-4">
+              Captura real de la plantilla con datos de ejemplo del restaurante La Mesa
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── PRECIO ───────────────────────────────────────────────── */}
       <section className="bg-navy py-16 lg:py-20">
         <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
