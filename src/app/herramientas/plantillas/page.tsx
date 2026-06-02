@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 const individuales = [
   {
     title: "Ingeniería de Menú",
+    pageHref: "/herramientas/plantillas/menu-engineering",
     description:
       "Analiza ventas, costes y popularidad de tu carta. Clasifica cada plato por rentabilidad real y deja de empujar los que más salen si no son los que más dejan.",
     descriptionLong:
@@ -39,6 +40,7 @@ const individuales = [
   },
   {
     title: "Escandallo y Calculadora de Precios",
+    pageHref: "/herramientas/plantillas/escandallo-calculadora-precios",
     description:
       "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado por canal. Deja de adivinar si un plato deja dinero.",
     descriptionLong:
@@ -55,6 +57,7 @@ const individuales = [
   },
   {
     title: "Control de Inventario y Pedidos",
+    pageHref: "/herramientas/plantillas/control-inventario-pedidos",
     description:
       "Controla el stock en tiempo real y recibe pedidos sugeridos automáticos por proveedor. Deja de vivir entre roturas de stock y cámaras llenas de producto inmovilizado.",
     descriptionLong:
@@ -71,6 +74,7 @@ const individuales = [
   },
   {
     title: "Cuadro de Mando Financiero",
+    pageHref: "/herramientas/plantillas/cuadro-mando-financiero",
     description:
       "Registra ingresos y gastos y visualiza tu PyG, KPIs y caja en tiempo real. Deja de tardar días en saber si el mes fue bueno o malo.",
     descriptionLong:
@@ -87,6 +91,7 @@ const individuales = [
   },
   {
     title: "Kit de Gestión Operativa",
+    pageHref: "/herramientas/plantillas/kit-gestion-operativa",
     description:
       "Checklists y plantillas para cocina, barra y sala: aperturas, cierres, producción, mermas, temperaturas y limpieza. El mismo estándar en todos los turnos, sin depender de la memoria de nadie.",
     descriptionLong:
@@ -289,9 +294,11 @@ export default function PlantillasPage() {
                 key={p.href}
                 className="bg-white border border-navy/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
-                <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-3">
-                  {p.title}
-                </h3>
+                <Link href={p.pageHref} className="hover:text-amber transition-colors">
+                  <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-3 hover:text-amber transition-colors">
+                    {p.title}
+                  </h3>
+                </Link>
                 <p className="font-body text-ink/60 text-sm leading-relaxed mb-4">
                   {p.description}
                 </p>

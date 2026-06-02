@@ -32,6 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/herramientas/auditoria-proveedores`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/herramientas/calculadora-escandallo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/herramientas/plantillas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/herramientas/plantillas/menu-engineering`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/herramientas/plantillas/escandallo-calculadora-precios`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/herramientas/plantillas/control-inventario-pedidos`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/herramientas/plantillas/cuadro-mando-financiero`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/herramientas/plantillas/kit-gestion-operativa`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
