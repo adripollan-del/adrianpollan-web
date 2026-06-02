@@ -243,7 +243,7 @@ export default function MenuEngineeringPage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────────────────────── */}
-      <section className="bg-[#f5f0e8] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-[700px] mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-8">
             ¿Listo para tomar el control de tu carta?
