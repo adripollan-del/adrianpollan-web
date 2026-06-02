@@ -7,6 +7,7 @@ import {
   CheckSquare, Thermometer, Trash2, ShoppingCart, FileSpreadsheet,
 } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
+import TeReconoces from "../TeReconoces";
 
 export const metadata: Metadata = {
   title: { absolute: "Kit de Gestión Operativa para Restaurantes | Adrián Pollán" },
@@ -113,7 +114,7 @@ export default function KitGestionOperativaPage() {
       {/* ── ASÍ SE VE LA PLANTILLA ──────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-3xl mx-auto text-center mb-10">
+          <div className="max-w-3xl mx-auto mb-10">
             <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
               Así se ve la plantilla
             </h2>
@@ -137,21 +138,7 @@ export default function KitGestionOperativaPage() {
       </section>
 
       {/* ── ¿TE SUENA ESTO? ───────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12 text-center">
-            ¿Te suena esto?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {symptoms.map((s, i) => (
-              <div key={i} className="bg-[#f5f0e8] border-l-4 border-amber rounded-r-xl p-7">
-                <div className="mb-4">{s.icon}</div>
-                <p className="font-body text-ink/80 text-base leading-relaxed">{s.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeReconoces symptoms={symptoms} />
 
       {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
@@ -209,7 +196,7 @@ export default function KitGestionOperativaPage() {
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Kit de Gestión Operativa"
           >
-            Comprar ahora — 89 € <ArrowRight size={15} />
+            Comprar ahora <ArrowRight size={15} />
           </TrackingLink>
           <p className="font-body text-cream/40 text-xs mt-5">
             Acceso inmediato · Excel y Google Sheets · Soporte incluido
@@ -258,7 +245,7 @@ export default function KitGestionOperativaPage() {
 
       {/* ── CTA FINAL ────────────────────────────────────────────── */}
       <section className="bg-white py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
             ¿No sabes si esta plantilla es la que necesitas?
           </h2>
