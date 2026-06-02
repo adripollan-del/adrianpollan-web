@@ -143,7 +143,7 @@ export default function EscandalloCalculadoraPage() {
       {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12 text-center">
+          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué puedes hacer con esta plantilla?
           </h2>
           <ol className="space-y-5">
