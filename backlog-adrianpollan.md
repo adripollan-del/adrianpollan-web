@@ -120,7 +120,7 @@
 | I4 | Página /herramientas/plantillas con copy SEO, FAQs, garantías y CTAs | Completado |
 | I5 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
 | I6 | Activar live mode en Lemon Squeezy | Pendiente: verificación de identidad en curso |
-| I7 | Imágenes de producto generadas con ChatGPT (10 imágenes: 5 individuales + 5 bundles) y subidas a Lemon Squeezy | Pendiente |
+| I7 | Imágenes de producto generadas con ChatGPT (10 imágenes: 5 individuales + 5 bundles) y subidas a Lemon Squeezy | Completado |
 
 ---
 
