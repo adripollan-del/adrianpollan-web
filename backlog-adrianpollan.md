@@ -110,6 +110,20 @@
 
 ---
 
+## I. PLANTILLAS DE VENTA
+
+| # | Descripción | Estado |
+|---|-------------|--------|
+| I1 | Productos en Lemon Squeezy: 5 individuales + 5 bundles configurados con precios, descripciones, archivos y textos de checkout | Completado |
+| I2 | Webhook /api/lemon/webhook en producción: captura compras y añade contactos a Mailchimp con tag por producto | Completado |
+| I3 | Audiencia "Clientes Plantillas" en Mailchimp con 10 Customer Journeys y secuencia de 4 emails por producto | Completado |
+| I4 | Página /herramientas/plantillas con copy SEO, FAQs, garantías y CTAs | Completado |
+| I5 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
+| I6 | Activar live mode en Lemon Squeezy | Pendiente: verificación de identidad en curso |
+| I7 | Imágenes de producto generadas con ChatGPT (10 imágenes: 5 individuales + 5 bundles) y subidas a Lemon Squeezy | Pendiente |
+
+---
+
 ## Resumen por prioridad
 
 **Alta (ejecutar primero):**
