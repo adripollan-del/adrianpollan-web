@@ -131,7 +131,7 @@ export default function ControlInventarioPedidosPage() {
               className="w-full rounded-xl shadow-lg border border-navy/8"
             />
             <p className="font-body text-ink/40 text-xs text-center mt-4">
-              Captura real de la plantilla con datos de ejemplo del restaurante La Mesa
+              Captura real de la plantilla con datos de ejemplo
             </p>
           </div>
         </div>
