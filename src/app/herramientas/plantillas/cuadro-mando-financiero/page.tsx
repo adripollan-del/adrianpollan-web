@@ -81,14 +81,14 @@ const bundles = [
     includes: ["Cuadro de Mando Financiero", "Escandallo y Calculadora", "Ingeniería de Menú"],
     savings: "Ahorras 38 €",
     price: "149 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e5142082-3c6c-47c4-ac14-392211d0cfb7",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/258b8c7e-9ef2-485b-9009-2e259d195537",
   },
   {
     title: "Suite Completa",
     includes: ["Las 5 plantillas"],
     savings: "Ahorras 126 €",
     price: "219 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e169cc11-fc65-44f4-8c5b-83ae0732c6cf",
   },
 ];
 
@@ -204,7 +204,7 @@ export default function CuadroMandoFinancieroPage() {
             Accede ahora por <span className="font-semibold text-amber">79 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/88a4d269-e771-4ea8-a522-444cb89e7469"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Cuadro de Mando Financiero"
@@ -305,7 +305,7 @@ export default function CuadroMandoFinancieroPage() {
             ¿Listo para cerrar el mes con claridad?
           </h2>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/368c6b4a-fd85-4a12-864b-febd05665eb5"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/88a4d269-e771-4ea8-a522-444cb89e7469"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Cuadro de Mando — CTA final"

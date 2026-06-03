@@ -81,28 +81,28 @@ const bundles = [
     includes: ["Escandallo y Calculadora", "Ingeniería de Menú"],
     savings: "Ahorras 29 €",
     price: "79 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/bdf998c1-be1e-4905-b613-5d64713e7784",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/c7ef3d4f-ba9d-4b74-876f-af0c1376eece",
   },
   {
     title: "Pack Control",
     includes: ["Escandallo y Calculadora", "Control de Inventario", "Ingeniería de Menú"],
     savings: "Ahorras 48 €",
     price: "129 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/b3b79984-05a9-4a43-a742-e1a21ccd86ea",
   },
   {
     title: "Pack Gestión",
     includes: ["Escandallo y Calculadora", "Cuadro de Mando Financiero", "Ingeniería de Menú"],
     savings: "Ahorras 38 €",
     price: "149 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e5142082-3c6c-47c4-ac14-392211d0cfb7",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/258b8c7e-9ef2-485b-9009-2e259d195537",
   },
   {
     title: "Suite Completa",
     includes: ["Las 5 plantillas"],
     savings: "Ahorras 126 €",
     price: "219 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e169cc11-fc65-44f4-8c5b-83ae0732c6cf",
   },
 ];
 
@@ -218,7 +218,7 @@ export default function EscandalloCalculadoraPage() {
             Accede ahora por <span className="font-semibold text-amber">59 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/9d925da4-39e2-4ae8-9764-b794648b1526"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Escandallo y Calculadora de Precios"
@@ -319,7 +319,7 @@ export default function EscandalloCalculadoraPage() {
             ¿Listo para conocer el coste real de cada plato?
           </h2>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/cc2272c9-eb28-45af-86fd-97f00aaf60cb"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/9d925da4-39e2-4ae8-9764-b794648b1526"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Escandallo — CTA final"

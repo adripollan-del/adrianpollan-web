@@ -66,7 +66,7 @@ const bundles = [
     price: "79 €",
     savings: "Ahorras 29 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/bdf998c1-be1e-4905-b613-5d64713e7784",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/c7ef3d4f-ba9d-4b74-876f-af0c1376eece",
   },
   {
     title: "Pack Control",
@@ -75,7 +75,7 @@ const bundles = [
     price: "129 €",
     savings: "Ahorras 48 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/b3b79984-05a9-4a43-a742-e1a21ccd86ea",
   },
   {
     title: "Pack Gestión",
@@ -84,7 +84,7 @@ const bundles = [
     price: "149 €",
     savings: "Ahorras 38 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e5142082-3c6c-47c4-ac14-392211d0cfb7",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/258b8c7e-9ef2-485b-9009-2e259d195537",
   },
   {
     title: "Pack Operación Pro",
@@ -93,7 +93,7 @@ const bundles = [
     price: "139 €",
     savings: "Ahorras 19 €",
     featured: false,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a29df315-c6e6-4d79-9cbb-fa3ee24c07e3",
   },
   {
     title: "Suite Completa",
@@ -102,7 +102,7 @@ const bundles = [
     price: "219 €",
     savings: "Ahorras 126 €",
     featured: true,
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e169cc11-fc65-44f4-8c5b-83ae0732c6cf",
   },
 ];
 

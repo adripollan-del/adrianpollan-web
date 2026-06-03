@@ -81,14 +81,14 @@ const bundles = [
     includes: ["Kit de Gestión Operativa", "Control de Inventario"],
     savings: "Ahorras 19 €",
     price: "139 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a29df315-c6e6-4d79-9cbb-fa3ee24c07e3",
   },
   {
     title: "Suite Completa",
     includes: ["Las 5 plantillas"],
     savings: "Ahorras 126 €",
     price: "219 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e169cc11-fc65-44f4-8c5b-83ae0732c6cf",
   },
 ];
 
@@ -204,7 +204,7 @@ export default function KitGestionOperativaPage() {
             Accede ahora por <span className="font-semibold text-amber">89 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/d75e6db2-425e-4e33-9642-5197fb133bfb"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Kit de Gestión Operativa"
@@ -305,7 +305,7 @@ export default function KitGestionOperativaPage() {
             ¿Listo para estandarizar tu operación?
           </h2>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/85495638-c754-4fdb-a7f0-d98a849e50a8"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/d75e6db2-425e-4e33-9642-5197fb133bfb"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Kit Operativo — CTA final"

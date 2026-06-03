@@ -81,21 +81,21 @@ const bundles = [
     includes: ["Control de Inventario", "Escandallo y Calculadora", "Ingeniería de Menú"],
     savings: "Ahorras 48 €",
     price: "129 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/db756f4e-fb8d-4b02-9459-ce113370ffcd",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/b3b79984-05a9-4a43-a742-e1a21ccd86ea",
   },
   {
     title: "Pack Operación Pro",
     includes: ["Control de Inventario", "Kit de Gestión Operativa"],
     savings: "Ahorras 19 €",
     price: "139 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a8470b16-0c8f-458b-af26-9280a6a11808",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/a29df315-c6e6-4d79-9cbb-fa3ee24c07e3",
   },
   {
     title: "Suite Completa",
     includes: ["Las 5 plantillas"],
     savings: "Ahorras 126 €",
     price: "219 €",
-    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/8ba24dda-671a-45f2-a3e2-5276f83c104a",
+    href: "https://adrianpollan.lemonsqueezy.com/checkout/buy/e169cc11-fc65-44f4-8c5b-83ae0732c6cf",
   },
 ];
 
@@ -211,7 +211,7 @@ export default function ControlInventarioPedidosPage() {
             Accede ahora por <span className="font-semibold text-amber">69 €</span> y empieza a usarla hoy.
           </p>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/c2399b22-1587-49d7-979a-40936367ed74"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Control de Inventario y Pedidos"
@@ -312,7 +312,7 @@ export default function ControlInventarioPedidosPage() {
             ¿Listo para dejar de comprar a ciegas?
           </h2>
           <TrackingLink
-            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/7f6c6c39-17ab-4ebb-b1ba-e6b921d4f118"
+            href="https://adrianpollan.lemonsqueezy.com/checkout/buy/c2399b22-1587-49d7-979a-40936367ed74"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Control de Inventario — CTA final"

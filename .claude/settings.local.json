@@ -40,7 +40,10 @@
       "Bash(sort -k5 -rn)",
       "Bash(git pull *)",
       "WebFetch(domain:unsplash.com)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(git *)",
+      "Bash(git -C /Users/adrianpollan/adrianpollan-web add .claude/settings.local.json)",
+      "Bash(git -C /Users/adrianpollan/adrianpollan-web stash drop)"
     ]
   }
 }
