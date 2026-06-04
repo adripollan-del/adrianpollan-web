@@ -28,6 +28,7 @@ const jsonLd = {
   name: "Plantilla de Escandallo y Calculadora de Precios para Restaurantes",
   description: "Calcula el coste real de cada receta con mermas incluidas y fija precios con margen garantizado por canal.",
   url: "https://adrianpollan.com/herramientas/plantillas/escandallo-calculadora-precios",
+  image: "https://adrianpollan.com/images/plantillas/plantilla-escandallo-calculadora.png",
   brand: { "@type": "Brand", name: "Adrián Pollán" },
   offers: {
     "@type": "Offer",

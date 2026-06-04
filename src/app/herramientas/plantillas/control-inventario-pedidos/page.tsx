@@ -28,6 +28,7 @@ const jsonLd = {
   name: "Plantilla de Control de Inventario y Pedidos Sugeridos para Restaurantes",
   description: "Controla el stock en tiempo real y recibe pedidos sugeridos automáticos por proveedor.",
   url: "https://adrianpollan.com/herramientas/plantillas/control-inventario-pedidos",
+  image: "https://adrianpollan.com/images/plantillas/plantilla-control-inventario.png",
   brand: { "@type": "Brand", name: "Adrián Pollán" },
   offers: {
     "@type": "Offer",

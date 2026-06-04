@@ -28,6 +28,7 @@ const jsonLd = {
   name: "Cuadro de Mando Financiero para Restaurantes",
   description: "Registra ingresos y gastos y visualiza tu PyG, KPIs y caja en tiempo real.",
   url: "https://adrianpollan.com/herramientas/plantillas/cuadro-mando-financiero",
+  image: "https://adrianpollan.com/images/plantillas/plantilla-cuadro-mando-financiero.png",
   brand: { "@type": "Brand", name: "Adrián Pollán" },
   offers: {
     "@type": "Offer",

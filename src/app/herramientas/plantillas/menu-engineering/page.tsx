@@ -28,6 +28,7 @@ const jsonLd = {
   name: "Plantilla de Ingeniería de Menú para Restaurantes",
   description: "Clasifica cada plato de tu carta por rentabilidad y popularidad real con clasificación BCG automática.",
   url: "https://adrianpollan.com/herramientas/plantillas/menu-engineering",
+  image: "https://adrianpollan.com/images/plantillas/plantilla-menu-engineering.png",
   brand: { "@type": "Brand", name: "Adrián Pollán" },
   offers: {
     "@type": "Offer",

@@ -28,6 +28,7 @@ const jsonLd = {
   name: "Kit de Gestión Operativa para Restaurantes",
   description: "Checklists y plantillas para cocina, barra y sala: aperturas, cierres, producción, mermas y temperaturas.",
   url: "https://adrianpollan.com/herramientas/plantillas/kit-gestion-operativa",
+  image: "https://adrianpollan.com/images/plantillas/plantilla-kit-gestion-operativa.png",
   brand: { "@type": "Brand", name: "Adrián Pollán" },
   offers: {
     "@type": "Offer",
