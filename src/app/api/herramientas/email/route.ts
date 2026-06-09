@@ -23,15 +23,10 @@ function emailShell(bodyContent: string): string {
   return `<!DOCTYPE html>
 <html lang="es">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f5f0e8;font-family:Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f0e8;padding:32px 16px;">
+<body style="margin:0;padding:0;background:#ffffff;font-family:Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;padding:32px 16px;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;max-width:600px;width:100%;">
-        <tr>
-          <td style="background:#0f1923;padding:24px 32px;">
-            <span style="color:#ffffff;font-size:18px;font-weight:700;letter-spacing:1px;">ADRIÁN POLLÁN</span>
-          </td>
-        </tr>
         <tr>
           <td style="padding:32px;">
             ${bodyContent}
