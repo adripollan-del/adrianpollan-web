@@ -678,7 +678,7 @@ export default function Home() {
               {
                 num: "03",
                 title: "Propuesta personalizada",
-                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin plantillas genéricas.",
+                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin soluciones de copia y pega.",
                 cta: null,
                 href: null,
                 external: false,

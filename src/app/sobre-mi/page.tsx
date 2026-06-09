@@ -266,7 +266,7 @@ export default function SobreMiPage() {
           </p>
           <ul className="space-y-5">
             {[
-              "No vendo plantillas genéricas que sirven para cualquier negocio y para ninguno en concreto.",
+              "No aplico soluciones estándar que sirven para cualquier negocio y para ninguno en concreto.",
               "No hago informes largos que nadie implementa. El trabajo real ocurre en la ejecución, no en el papel.",
               "No prometo resultados sin datos. Antes de hablar de mejoras, hay que entender qué está pasando realmente.",
               "No acepto proyectos donde no creo que pueda aportar valor real. Si no encajamos, te lo digo en la primera conversación.",

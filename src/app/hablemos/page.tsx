@@ -151,7 +151,7 @@ export default function HablemosPage() {
               {
                 num: "03",
                 title: "Propuesta personalizada",
-                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin plantillas genéricas.",
+                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin soluciones de copia y pega.",
               },
               {
                 num: "04",
