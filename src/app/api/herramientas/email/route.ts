@@ -230,6 +230,8 @@ export async function POST(req: Request) {
   const audienceId = process.env.MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID;
   const resendKey = process.env.RESEND_API_KEY;
 
+  console.log("[herramientas/email] audienceId:", audienceId ? "present" : "missing");
+
   if (!apiKey || !audienceId || !resendKey) {
     return NextResponse.json({ error: "Server not configured" }, { status: 500 });
   }
@@ -269,6 +271,8 @@ export async function POST(req: Request) {
     body: JSON.stringify({ email_address: email, status_if_new: "subscribed" }),
   });
 
+  console.log("[herramientas/email] memberRes status:", memberRes.status);
+
   if (!memberRes.ok) {
     const err = await memberRes.json().catch(() => null);
     console.error("[herramientas/email] Mailchimp member error:", err);
@@ -280,6 +284,8 @@ export async function POST(req: Request) {
     headers: { "Content-Type": "application/json", Authorization: `Basic ${auth}` },
     body: JSON.stringify({ tags: [{ name: tag, status: "active" }] }),
   });
+
+  console.log("[herramientas/email] tagRes status:", tagRes.status);
 
   if (!tagRes.ok) {
     const err = await tagRes.json().catch(() => null);
