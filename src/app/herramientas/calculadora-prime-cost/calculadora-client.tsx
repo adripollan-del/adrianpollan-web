@@ -272,13 +272,25 @@ export default function CalculadoraClient() {
           </div>
         )}
 
-        {/* Interpretación */}
+        {/* Email capture — prime cost */}
         {showPrime && (
-          <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
-            <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-              ¿Qué significa tu resultado?
-            </p>
-            <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
+          <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
+            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu análisis con los indicadores calculados y referencias del sector.</p>
+            <EmailCapture
+              foodCost={foodCost}
+              labourCost={labourCost}
+              primeCost={primeCost}
+              level={levelLabels[pcLevel]}
+            />
+          </div>
+        )}
+
+        {/* CTA diagnóstico */}
+        {showPrime && (
+          <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 lg:p-8 rounded-r-xl">
+            <p className="font-display text-navy text-base font-bold mb-2">¿Qué significa tu resultado?</p>
+            <p className="font-body text-navy/70 text-sm mb-5">
               {primeCost > 70
                 ? "Tu prime cost está por encima del umbral sostenible. Hay fugas de margen que conviene identificar antes de que afecten más al negocio."
                 : primeCost >= 60
@@ -297,20 +309,6 @@ export default function CalculadoraClient() {
                 ? "Hay margen de mejora real — ver diagnóstico gratuito →"
                 : "Buen resultado — analiza el resto de tu negocio →"}
             </a>
-          </div>
-        )}
-
-        {/* Email capture — prime cost */}
-        {showPrime && (
-          <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
-            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
-            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu análisis con los indicadores calculados y referencias del sector.</p>
-            <EmailCapture
-              foodCost={foodCost}
-              labourCost={labourCost}
-              primeCost={primeCost}
-              level={levelLabels[pcLevel]}
-            />
           </div>
         )}
 

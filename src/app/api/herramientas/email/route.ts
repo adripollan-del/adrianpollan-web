@@ -150,13 +150,63 @@ function buildPrimeCostEmail(data: {
   return { subject: "Tu análisis de prime cost", html: emailShell(body) };
 }
 
+// ─── Checklist blocks (mirrors the client-side blocks[]) ──────────────────────
+
+const APERTURA_BLOCKS = [
+  { title: "Concepto y validación", items: ["Concepto definido con claridad: qué ofrezco, a quién y por qué", "Público objetivo identificado y validado, no asumido", "Propuesta de valor diferenciada respecto a la competencia directa", "Análisis de competencia en la zona realizado", "Viabilidad financiera del concepto calculada con números reales"] },
+  { title: "Local y negociación", items: ["Tráfico peatonal y perfil de cliente validados en el local", "Alquiler por debajo del 12% de las ventas proyectadas", "Superficie adecuada para el concepto y la operativa prevista", "Condiciones legales del contrato revisadas por profesional", "Obras y licencias planificadas con margen de tiempo suficiente"] },
+  { title: "Financiación e inversión", items: ["Inversión total calculada con un margen del 20% para imprevistos", "Fondo de maniobra para cubrir 3-6 meses de gastos fijos", "Fuentes de financiación confirmadas y disponibles"] },
+  { title: "Carta y operativa", items: ["Carta diseñada con criterio de margen, no solo de concepto", "Escandallos calculados para los platos principales", "Proveedores seleccionados y condiciones negociadas", "Procesos básicos de cocina definidos y documentados"] },
+  { title: "Equipo", items: ["Perfiles necesarios identificados con claridad y timing correcto", "Plan de contratación con fechas ajustadas a la apertura", "Formación planificada antes del primer servicio real", "Servicios de prueba (soft opening) previstos y organizados"] },
+  { title: "Apertura", items: ["Plan de comunicación y marketing preparado para el lanzamiento", "Sistemas de gestión instalados y probados antes del primer servicio", "KPIs definidos para hacer seguimiento en los primeros 3 meses"] },
+];
+
+const FOOD_COST_BLOCKS = [
+  { title: "Escandallos", items: ["Todos los platos de la carta tienen escandallo actualizado", "Los escandallos se han revisado en los últimos 3 meses", "El food cost está calculado por plato y por familia", "La carta se ha revisado eliminando o ajustando platos con margen negativo"] },
+  { title: "Control de stock", items: ["Se realiza inventario de almacén al menos una vez por semana", "El sistema de rotación FIFO está implementado en todos los almacenes", "Las mermas y pérdidas se registran y analizan periódicamente", "Las recepciones de mercancía se verifican contra el pedido y el albarán"] },
+  { title: "Porciones y producción", items: ["Las porciones están estandarizadas para todos los platos", "El equipo pesa y mide según las fichas técnicas durante el servicio", "Las fichas técnicas están accesibles en cocina y actualizadas", "Las producciones previas al servicio están planificadas y controladas"] },
+  { title: "Análisis y seguimiento", items: ["El food cost real se calcula mensualmente y se compara con el objetivo", "Se analiza la mezcla de ventas para detectar platos que dañan el margen", "Existe un objetivo de food cost definido y conocido por el equipo", "Se hacen reuniones periódicas para revisar resultados con el equipo"] },
+];
+
+const AUDITORIA_BLOCKS = [
+  { title: "Control de precios", items: ["Los precios de los proveedores principales se revisan al menos mensualmente", "Se comparan precios entre al menos 2 proveedores para cada categoría clave", "Las subidas de precio se registran y se negocian cuando son injustificadas", "Se hace una negociación formal de condiciones al menos una vez al año"] },
+  { title: "Calidad y servicio", items: ["Existen criterios definidos de evaluación para cada proveedor clave", "Las incidencias de calidad se registran y se comunican al proveedor", "Los criterios de aceptación de mercancía están definidos y se aplican", "Hay un proveedor alternativo identificado para las referencias críticas"] },
+  { title: "Condiciones comerciales", items: ["Se han negociado rappels o descuentos por volumen con los proveedores principales", "Las condiciones de pago están optimizadas para la tesorería del negocio", "El pedido mínimo está ajustado a las necesidades reales, sin exceso de stock", "Los albaranes se controlan y cuadran contra las facturas recibidas"] },
+  { title: "Gestión operativa", items: ["Los pedidos se planifican con antelación suficiente, no por urgencia", "Hay un responsable claro de compras y gestión de proveedores", "El almacén está organizado con FIFO y control de ubicaciones", "Las caducidades se controlan activamente para evitar pérdidas de producto"] },
+];
+
+function renderChecklistBlocks(
+  blocksDef: { title: string; items: string[] }[],
+  checkedIds: string[]
+): string {
+  const checkedSet = new Set(checkedIds);
+  return blocksDef
+    .map((block, bi) => {
+      const rows = block.items
+        .map((item, ii) => {
+          const id = `${bi}-${ii}`;
+          const ok = checkedSet.has(id);
+          return `<tr>
+            <td style="padding:6px 10px;border-bottom:1px solid #f0ebe3;font-size:15px;color:${ok ? "#16a34a" : "#dc2626"};width:22px;vertical-align:top;">${ok ? "✓" : "✗"}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid #f0ebe3;font-size:14px;color:${ok ? "#374151" : "#6b7280"};">${item}</td>
+          </tr>`;
+        })
+        .join("");
+      return `<p style="color:#0f1923;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:20px 0 2px;padding:0;">${block.title}</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:8px;"><tbody>${rows}</tbody></table>`;
+    })
+    .join("");
+}
+
 function buildChecklistAperturaEmail(data: {
   completed?: number;
   total?: number;
   level?: string;
+  checkedIds?: string[];
 }): { subject: string; html: string } {
   const completed = data.completed ?? 0;
   const total = data.total ?? 24;
+  const checkedIds = data.checkedIds ?? [];
   const pct = total > 0 ? (completed / total) * 100 : 0;
   const contextual =
     pct >= 75
@@ -167,6 +217,8 @@ function buildChecklistAperturaEmail(data: {
     p("Hola,") +
     p(`Has completado <strong>${completed} de ${total} puntos</strong> de la checklist de apertura.`) +
     p(contextual) +
+    renderChecklistBlocks(APERTURA_BLOCKS, checkedIds) +
+    p(`<strong>Resumen: ${completed} de ${total} puntos completados.</strong>`, "#6b7280") +
     p("Para estandarizar la operación desde el primer día, el <strong>Kit de Gestión Operativa</strong> incluye checklists de apertura, cierre, producción y control de temperaturas listos para usar.") +
     btn("Ver Kit de Gestión → 89 €", "https://adrianpollan.com/herramientas/plantillas/kit-gestion-operativa");
 
@@ -177,9 +229,11 @@ function buildChecklistFoodCostEmail(data: {
   completed?: number;
   total?: number;
   level?: string;
+  checkedIds?: string[];
 }): { subject: string; html: string } {
   const completed = data.completed ?? 0;
   const total = data.total ?? 16;
+  const checkedIds = data.checkedIds ?? [];
   const pct = total > 0 ? (completed / total) * 100 : 0;
   const contextual =
     pct >= 75
@@ -192,6 +246,8 @@ function buildChecklistFoodCostEmail(data: {
     p("Hola,") +
     p(`Has completado <strong>${completed} de ${total} puntos</strong> del control de food cost.`) +
     p(contextual) +
+    renderChecklistBlocks(FOOD_COST_BLOCKS, checkedIds) +
+    p(`<strong>Resumen: ${completed} de ${total} puntos completados.</strong>`, "#6b7280") +
     p("Para calcular el food cost real de cada receta con mermas incluidas y fijar precios con margen garantizado, la <strong>Plantilla de Escandallo y Calculadora de Precios</strong> hace ese trabajo automáticamente.") +
     btn("Ver plantilla de Escandallo → 59 €", "https://adrianpollan.com/herramientas/plantillas/escandallo-calculadora-precios");
 
@@ -202,9 +258,11 @@ function buildAuditoriaProveedoresEmail(data: {
   completed?: number;
   total?: number;
   level?: string;
+  checkedIds?: string[];
 }): { subject: string; html: string } {
   const completed = data.completed ?? 0;
   const total = data.total ?? 16;
+  const checkedIds = data.checkedIds ?? [];
   const pct = total > 0 ? (completed / total) * 100 : 0;
   const contextual =
     pct >= 75
@@ -217,6 +275,8 @@ function buildAuditoriaProveedoresEmail(data: {
     p("Hola,") +
     p(`Has completado <strong>${completed} de ${total} puntos</strong> de la auditoría de proveedores.`) +
     p(contextual) +
+    renderChecklistBlocks(AUDITORIA_BLOCKS, checkedIds) +
+    p(`<strong>Resumen: ${completed} de ${total} puntos completados.</strong>`, "#6b7280") +
     p("Para controlar el stock en tiempo real y recibir pedidos sugeridos automáticos por proveedor, la <strong>Plantilla de Control de Inventario</strong> elimina las roturas de stock y las compras innecesarias.") +
     btn("Ver plantilla de Inventario → 69 €", "https://adrianpollan.com/herramientas/plantillas/control-inventario-pedidos");
 

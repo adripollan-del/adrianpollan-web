@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
-function EmailCapture({ completed, total, level }: { completed: number; total: number; level: string }) {
+function EmailCapture({ completed, total, level, checkedIds }: { completed: number; total: number; level: string; checkedIds: string[] }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
 
@@ -14,7 +14,7 @@ function EmailCapture({ completed, total, level }: { completed: number; total: n
     await fetch("/api/herramientas/email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, tool: "auditoria-proveedores", data: { completed, total, level } }),
+      body: JSON.stringify({ email, tool: "auditoria-proveedores", data: { completed, total, level, checkedIds } }),
     });
     setStatus("done");
   }
@@ -188,7 +188,6 @@ export default function AuditoriaClient() {
                           className={`w-5 h-5 border flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
                             isChecked ? "bg-amber border-amber" : "border-navy/30 hover:border-amber/60"
                           }`}
-                          onClick={() => toggle(id)}
                         >
                           {isChecked && <Check size={12} className="text-white" strokeWidth={3} />}
                         </div>
@@ -230,33 +229,21 @@ export default function AuditoriaClient() {
           <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
             <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
             <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu informe de auditoría con el nivel alcanzado y los puntos de mejora.</p>
-            <EmailCapture completed={count} total={total} level={result.label} />
+            <EmailCapture completed={count} total={total} level={result.label} checkedIds={Array.from(checked)} />
           </div>
         )}
 
-        {/* Interpretación */}
-        <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-            ¿Qué significa tu resultado?
-          </p>
-          <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
-            {progressPct < 50
-              ? "La gestión de proveedores en tu negocio tiene margen de mejora significativo. Es una de las áreas donde se pueden recuperar varios puntos de food cost con cambios concretos."
-              : progressPct <= 75
-              ? "Tienes algunas prácticas correctas, pero hay elementos sin implantar que pueden estar afectando al coste de compra."
-              : "Tienes una gestión de proveedores ordenada. El trabajo ahora es mantener la disciplina y revisar condiciones periódicamente."}
-          </p>
+        {/* CTA diagnóstico */}
+        <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 lg:p-8 rounded-r-xl">
+          <p className="font-display text-navy text-base font-bold mb-2">¿Quieres saber en qué otras áreas puede mejorar tu restaurante?</p>
+          <p className="font-body text-navy/70 text-sm mb-5">El diagnóstico gratuito analiza 8 áreas de tu negocio en 10 minutos.</p>
           <a
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
           >
-            {progressPct < 50
-              ? "Gestión reactiva — ver diagnóstico gratuito →"
-              : progressPct <= 75
-              ? "Hay procesos sin implantar — ver diagnóstico gratuito →"
-              : "Gestión ordenada — analiza el resto de tu negocio →"}
+            Empezar diagnóstico gratuito →
           </a>
         </div>
 
