@@ -43,7 +43,14 @@
       "Bash(git stash *)",
       "Bash(git *)",
       "Bash(git -C /Users/adrianpollan/adrianpollan-web add .claude/settings.local.json)",
-      "Bash(git -C /Users/adrianpollan/adrianpollan-web stash drop)"
+      "Bash(git -C /Users/adrianpollan/adrianpollan-web stash drop)",
+      "Bash(Get-ChildItem -Path src -Include *.tsx -Recurse)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(gh workflow *)",
+      "Bash(sort -t'\"' -k4 -r)",
+      "Bash(Get-Content \"C:\\\\Users\\\\adria\\\\adrianpollan-web\\\\backlog-adrianpollan.md\")",
+      "Bash(Measure-Object -Line)",
+      "PowerShell(New-Item *)"
     ]
   }
 }
