@@ -2,6 +2,51 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
+
+function EmailCapture({ saved }: { saved: SavedDish[] }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    await fetch("/api/herramientas/email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, tool: "escandallo", data: { dishes: saved } }),
+    });
+    setStatus("done");
+  }
+
+  if (status === "done") {
+    return (
+      <p style={{ color: "#16a34a" }} className="font-body text-sm font-medium py-4">
+        ✓ Enviado. Revisa tu email en unos minutos.
+      </p>
+    );
+  }
+
+  return (
+    <form onSubmit={submit} className="space-y-3">
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="tu@email.com"
+        className="w-full bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+      />
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="w-full px-5 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
+      >
+        {status === "loading" ? "Enviando..." : "Recibir mis recetas por email"}
+      </button>
+      <p className="font-body text-ink/40 text-xs">Sin spam. Solo tus resultados y recursos relacionados.</p>
+    </form>
+  );
+}
 import { trackEvent } from "@/lib/gtag";
 
 type Unit = "g" | "kg" | "ml" | "l" | "ud";
@@ -364,6 +409,15 @@ export default function EscandalloClient() {
             <p className="font-body text-ink/40 text-sm">
               Introduce los ingredientes para ver los resultados al instante.
             </p>
+          </div>
+        )}
+
+        {/* Email capture — escandallo */}
+        {saved.length > 0 && (
+          <div className="border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
+            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos un resumen de tus recetas con costes, precios recomendados y márgenes.</p>
+            <EmailCapture saved={saved} />
           </div>
         )}
 
