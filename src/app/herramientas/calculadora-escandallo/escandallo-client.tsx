@@ -459,19 +459,6 @@ export default function EscandalloClient() {
           </div>
         )}
 
-        {/* CTA diagnóstico */}
-        <div className="border-l-4 border-amber bg-cream-dark p-6 lg:p-8 rounded-r-xl">
-          <p className="font-display text-navy text-base font-bold mb-2">¿Quieres un análisis completo de la rentabilidad de tu restaurante?</p>
-          <p className="font-body text-navy/70 text-sm mb-5">El diagnóstico gratuito analiza 8 áreas de tu negocio en 10 minutos.</p>
-          <a
-            href="https://diagnostico.adrianpollan.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
-          >
-            Empezar diagnóstico gratuito →
-          </a>
-        </div>
 
       </div>
     </section>
