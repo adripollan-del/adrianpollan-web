@@ -141,7 +141,7 @@ export default function HablemosPage() {
               {
                 num: "01",
                 title: "Diagnóstico gratuito",
-                desc: "10 minutos. 66 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
+                desc: "10 minutos. 67 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
               },
               {
                 num: "02",

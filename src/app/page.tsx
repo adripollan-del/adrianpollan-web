@@ -221,7 +221,7 @@ export default function Home() {
               {
                 icon: <ClipboardList size={28} className="text-amber" />,
                 title: "Respondes preguntas sobre tu operación",
-                body: "66 preguntas breves organizadas en 8 bloques. No necesitas preparar documentación. Tarda unos 10 minutos.",
+                body: "67 preguntas breves organizadas en 8 bloques. No necesitas preparar documentación. Tarda unos 10 minutos.",
               },
               {
                 icon: <BarChart2 size={28} className="text-amber" />,
@@ -662,7 +662,7 @@ export default function Home() {
               {
                 num: "01",
                 title: "Diagnóstico gratuito",
-                desc: "10 minutos. 66 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
+                desc: "10 minutos. 67 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
                 cta: "Empezar ahora",
                 href: "https://diagnostico.adrianpollan.com",
                 external: true,
