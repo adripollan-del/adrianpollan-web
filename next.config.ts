@@ -17,6 +17,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.adrianpollan.com" }],
+        destination: "https://adrianpollan.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/blog/por-que-tu-restaurante-no-es-rentable",
         destination:
           "/blog/por-que-tu-restaurante-no-es-rentable-aunque-este-lleno",
