@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBannerLazy from "@/components/CookieBannerLazy";
 import ChatBoxLazy from "@/components/ChatBoxLazy";
+import AnalyticsScripts from "@/components/AnalyticsScripts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -151,8 +151,6 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.clarity.ms" />
       </head>
       <body>
         <script
@@ -164,24 +162,7 @@ export default function RootLayout({
         <Footer />
         <CookieBannerLazy />
         <ChatBoxLazy />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RJSBHMJ9BL"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RJSBHMJ9BL');
-          `}
-        </Script>
-        <Script id="clarity" strategy="lazyOnload">
-          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wthj8c4zuf");`}
-        </Script>
-        <Script id="event-tracking" strategy="lazyOnload">
-          {`document.addEventListener('click',function(e){var el=e.target.closest('[data-event]');if(!el)return;if(typeof window.gtag==='function'){window.gtag('event',el.dataset.event,{event_category:'conversion',event_label:el.dataset.label||''});}},{passive:true});`}
-        </Script>
+        <AnalyticsScripts />
       </body>
     </html>
   );

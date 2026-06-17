@@ -3,23 +3,52 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const STORAGE_KEY = "cookie-consent";
+const CONSENT_KEY = "cookie-consent";
+const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000; // 12 meses
+
+type ConsentValue = "accepted" | "essential";
+
+function readConsent(): ConsentValue | null {
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    try {
+      const parsed = JSON.parse(raw) as { value: ConsentValue; ts: number };
+      if (Date.now() - parsed.ts > CONSENT_MAX_AGE_MS) {
+        localStorage.removeItem(CONSENT_KEY);
+        return null;
+      }
+      return parsed.value;
+    } catch {
+      // Formato legacy: string plano — migrar
+      const value = raw as ConsentValue;
+      localStorage.setItem(CONSENT_KEY, JSON.stringify({ value, ts: Date.now() }));
+      return value;
+    }
+  } catch {
+    return null;
+  }
+}
+
+function saveConsent(value: ConsentValue) {
+  localStorage.setItem(CONSENT_KEY, JSON.stringify({ value, ts: Date.now() }));
+  window.dispatchEvent(new Event("cookie-consent-updated"));
+}
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const choice = localStorage.getItem(STORAGE_KEY);
-    if (!choice) setVisible(true);
+    if (!readConsent()) setVisible(true);
   }, []);
 
   const handleAcceptAll = () => {
-    localStorage.setItem(STORAGE_KEY, "accepted");
+    saveConsent("accepted");
     setVisible(false);
   };
 
   const handleEssentialOnly = () => {
-    localStorage.setItem(STORAGE_KEY, "essential");
+    saveConsent("essential");
     setVisible(false);
   };
 
