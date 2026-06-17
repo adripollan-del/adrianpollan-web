@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { checkChatLimit, getIP } from "@/lib/rate-limit";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -433,45 +434,56 @@ REGLAS FIJAS
   trabaja fuera de España, la respuesta siempre es si.
 - Si no sabes algo, dilo sin rodeos`;
 
-// Rate limiting simple por IP
-const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
-const RATE_LIMIT = 20;
-const WINDOW_MS = 24 * 60 * 60 * 1000; // 24 horas
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-
-  if (!entry || now - entry.timestamp > WINDOW_MS) {
-    rateLimitMap.set(ip, { count: 1, timestamp: now });
-    return true;
-  }
-
-  if (entry.count >= RATE_LIMIT) return false;
-
-  entry.count++;
-  return true;
-}
+const MAX_BODY_BYTES = 32_000;
+const MAX_MESSAGE_CHARS = 2000;
 
 export async function POST(req: Request) {
   try {
-    const ip =
-      req.headers.get("x-forwarded-for")?.split(",")[0] ?? "unknown";
+    // Tamaño de payload antes de parsear
+    const contentLength = req.headers.get("content-length");
+    if (contentLength && parseInt(contentLength, 10) > MAX_BODY_BYTES) {
+      return Response.json({ error: "Payload too large." }, { status: 413 });
+    }
 
-    if (!checkRateLimit(ip)) {
+    // Rate limit Upstash (fail-closed: si Redis falla, se bloquea)
+    const ip = getIP(req);
+    const { allowed } = await checkChatLimit(ip);
+    if (!allowed) {
       return Response.json(
         { error: "Too many requests. Try again tomorrow." },
         { status: 429 }
       );
     }
 
-    const { messages } = await req.json();
+    // Parseo y validación del payload
+    let body: { messages?: unknown };
+    try {
+      body = await req.json();
+    } catch {
+      return Response.json({ error: "Invalid request." }, { status: 400 });
+    }
+
+    if (!Array.isArray(body?.messages)) {
+      return Response.json({ error: "Invalid payload." }, { status: 400 });
+    }
+
+    const rawMessages = body.messages as Array<unknown>;
+
+    // Solo roles válidos y content de tipo string con longitud máxima
+    const messages = rawMessages.filter(
+      (m): m is { role: "user" | "assistant"; content: string } =>
+        m !== null &&
+        typeof m === "object" &&
+        ((m as Record<string, unknown>).role === "user" ||
+          (m as Record<string, unknown>).role === "assistant") &&
+        typeof (m as Record<string, unknown>).content === "string" &&
+        ((m as Record<string, unknown>).content as string).length <=
+          MAX_MESSAGE_CHARS
+    );
 
     // Elimina mensajes de bienvenida sintéticos (assistant al inicio):
     // la API de Anthropic exige que la conversación empiece con role "user"
-    const firstUserIdx = messages.findIndex(
-      (m: { role: string }) => m.role === "user"
-    );
+    const firstUserIdx = messages.findIndex((m) => m.role === "user");
     const trimmed =
       firstUserIdx === -1 ? [] : messages.slice(firstUserIdx);
 

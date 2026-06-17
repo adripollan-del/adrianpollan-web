@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { subscribeToList } from "@/lib/mailchimp";
+import { checkLeadLimit, getIP } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -12,15 +13,36 @@ export async function POST(req: Request) {
     );
   }
 
-  let email: unknown;
+  // Rate limit (fail-open)
+  const ip = getIP(req);
+  const { allowed } = await checkLeadLimit(ip);
+  if (!allowed) {
+    return NextResponse.json(
+      { error: "Demasiados intentos. Inténtalo más tarde." },
+      { status: 429 }
+    );
+  }
+
+  let body: Record<string, unknown>;
   try {
-    const body = (await req.json()) as { email?: unknown };
-    email = body.email;
+    body = (await req.json()) as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
   }
 
-  if (typeof email !== "string" || !EMAIL_RE.test(email)) {
+  const { email, _hp, _ts } = body as Record<string, string>;
+
+  // Honeypot
+  if (_hp) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Timing
+  if (_ts && Date.now() - parseInt(_ts, 10) < 2000) {
+    return NextResponse.json({ ok: true });
+  }
+
+  if (typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 254) {
     return NextResponse.json({ error: "El email no es válido." }, { status: 400 });
   }
 

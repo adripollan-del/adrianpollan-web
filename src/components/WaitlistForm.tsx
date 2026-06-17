@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
@@ -16,6 +16,8 @@ export default function WaitlistForm({
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const [renderTs] = useState(() => Date.now().toString());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +28,11 @@ export default function WaitlistForm({
       const res = await fetch("/api/libro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          _hp: honeypotRef.current?.value ?? "",
+          _ts: renderTs,
+        }),
       });
 
       if (res.ok) {
@@ -60,6 +66,20 @@ export default function WaitlistForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-md mx-auto">
+      {/* Honeypot: invisible para humanos, trampa para bots */}
+      <div
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}
+      >
+        <input
+          ref={honeypotRef}
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+      <input type="hidden" name="_ts" value={renderTs} />
       <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"

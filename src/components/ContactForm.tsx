@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({ name: "", email: "", business: "", message: "" });
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const [renderTs] = useState(() => Date.now().toString());
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -19,7 +21,11 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          _hp: honeypotRef.current?.value ?? "",
+          _ts: renderTs,
+        }),
       });
       if (res.ok) {
         setStatus("sent");
@@ -71,6 +77,20 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot: invisible para humanos, trampa para bots */}
+      <div
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}
+      >
+        <input
+          ref={honeypotRef}
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+      <input type="hidden" name="_ts" value={renderTs} />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="font-body text-xs text-navy/50 uppercase tracking-wider block mb-1.5">
