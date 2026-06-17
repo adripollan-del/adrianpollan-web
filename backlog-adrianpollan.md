@@ -98,7 +98,9 @@
 | G7 | Verificar en Search Console (2-3 semanas tras G6) que no aparecen errores nuevos de cobertura, caída de impresiones o páginas marcadas como duplicadas/no canónicas tras el cambio de dominio Production en Vercel | Confirmar que el cambio de canónico no generó pérdida de señal SEO | Media | G6 completado | Bajo | Pendiente |
 | G8 | GDPR: bloqueado la carga de GA4 y Microsoft Clarity hasta consentimiento real del usuario (antes el banner solo escribía en localStorage sin bloquear nada); invalidadas las decisiones de consentimiento previas al cambio, ya que no representaban consentimiento real bajo el comportamiento anterior; expiración de la decisión a 365 días | Cumplimiento real de consentimiento previo, no solo registro decorativo | Alta | Ninguna | Medio | Completado |
 | G9 | Completado .env.example con las 9 variables que faltaban (RESEND_API_KEY, ANTHROPIC_API_KEY, CRON_SECRET, LEMONSQUEEZY_SIGNING_SECRET, MAILCHIMP_PLANTILLAS_AUDIENCE_ID, MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN, UNSPLASH_ACCESS_KEY) | Evitar confusión de configuración al clonar el repo o incorporar nuevas máquinas | Media | Ninguna | Bajo | Completado |
-| G10 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
+| G10 | Eliminada página fantasma /diagnostico/[id] (tracking de GA4 sin conexión real, nunca enlazada desde ningún flujo, residuo de un commit del 22 de mayo que nunca se completó) | Evitar pantalla en blanco sin contexto para cualquier visita accidental | Baja | Ninguna | Bajo | Completado |
+| G11 | Limpieza de código muerto: eliminadas dependencias @microsoft/clarity y @radix-ui/react-accordion (sin uso), componente ClarityScript.tsx (nunca montado), endpoint /api/cron/newsletter y src/lib/newsletter-emails.ts (sin caller, confirmado que no hay cron externo en Railway ni cron-job.org apuntando ahí), variable CRON_SECRET retirada de .env.example y de Vercel | Reducir superficie de mantenimiento y confusión de configuración | Baja | Ninguna | Bajo | Completado |
+| G12 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
 
 **Nota de proceso (junio 2026):** antes de dar por inexistente cualquier funcionalidad mencionada en una auditoría o en memoria de Claude, comprobar con curl directo contra producción, no solo con grep en el código local. Un endpoint puede estar vivo en Vercel sin estar en el git local si hubo desincronización entre el checkout y el remoto (ver G5).
 
@@ -132,7 +134,7 @@
 B1, B2, B3, F1, F7, G1, G3
 
 **Media:**
-A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G10
+A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G12
 
 **Baja:**
 D6, E4, F7, H15
