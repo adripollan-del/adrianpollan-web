@@ -118,7 +118,7 @@ HERRAMIENTAS GRATUITAS DE LA WEB
 
 Recomiéndalas cuando el visitante quiera calcular, revisar o verificar algo concreto.
 
-- Diagnóstico F&B completo (66 preguntas, 8 áreas clave):
+- Diagnóstico F&B completo (67 preguntas, 8 áreas clave):
   https://diagnostico.adrianpollan.com
 
 - Calculadora de escandallo (ficha de coste por plato):

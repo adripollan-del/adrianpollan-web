@@ -51,11 +51,11 @@
 
 | # | Descripción | Objetivo | Prioridad | Dependencias | Esfuerzo | Estado |
 |---|-------------|----------|-----------|--------------|----------|--------|
-| D1 | Identificar directorios especializados en consultoría gastronómica | Backlinks de nicho | Media | Ninguna | Bajo | ✅ Completado |
-| D2 | Preparar email tipo para solicitar inclusión en directorios | Estandarizar outreach | Media | D1 | Bajo | ✅ Completado |
+| D1 | Identificar directorios especializados en consultoría gastronómica | Backlinks de nicho | Media | Ninguna | Bajo | 🔄 En progreso |
+| D2 | Preparar email tipo para solicitar inclusión en directorios | Estandarizar outreach | Media | D1 | Bajo | 🔄 En progreso |
 | D3 | Enviar solicitudes de inclusión a directorios identificados | Obtener backlinks | Media | D2 | Bajo | 🔄 En progreso |
-| D4 | Identificar blogs y medios donde proponer guest posts (Caternews, Hosteltur, Qamarero) | Backlinks + visibilidad | Media | Ninguna | Bajo | ✅ Completado |
-| D5 | Preparar y enviar propuestas de guest post | Posicionamiento como experto + backlinks | Media | D4 | Alto | 🔄 En progreso (Caternews enviado, Hosteltur artículo listo, Qamarero pendiente) |
+| D4 | Identificar blogs y medios donde proponer guest posts (Caternews, Hosteltur, Qamarero) | Backlinks + visibilidad | Media | Ninguna | Bajo | Pendiente |
+| D5 | Preparar y enviar propuestas de guest post | Posicionamiento como experto + backlinks | Media | D4 | Alto | Pendiente |
 | D6 | Solicitar inclusión en listas de expertos en gestión de restaurantes | Visibilidad y backlinks | Baja | D4 | Bajo | Pendiente |
 
 ---
@@ -75,12 +75,12 @@
 
 | # | Descripción | Objetivo | Prioridad | Dependencias | Esfuerzo | Estado |
 |---|-------------|----------|-----------|--------------|----------|--------|
-| F1 | Newsletter semanal en Mailchimp con plantilla HTML y calendario de envíos | Activar lista de suscriptores | Alta | Ninguna | Medio | ✅ Completado |
+| F1 | Newsletter semanal en Mailchimp con plantilla HTML y calendario de envíos | Activar lista de suscriptores | Alta | Ninguna | Medio | Pendiente |
 | F2 | CTAs contextuales post-resultado en todas las herramientas | Convertir usuarios en leads | Alta | Ninguna | Medio | ✅ Completado |
-| F3 | Sección "Resultados" en home con métricas concretas | Aumentar credibilidad | Media | Adrián proporciona casos | Alto | ✅ Completado (parcial) |
+| F3 | Sección "Resultados" en home con métricas concretas | Aumentar credibilidad | Media | Adrián proporciona casos | Alto | Pendiente (depende de Adrián) |
 | F4 | Bloque visual del embudo: Diagnóstico → Sesión → Propuesta → Implementación | Clarificar el proceso para el visitante | Media | Ninguna | Medio | ✅ Completado |
-| F5 | Lead magnets adicionales por segmento (plantilla escandallo, checklist prime cost) | Captar emails cualificados | Baja | Ninguna | Alto | Pendiente |
-| F6 | Unificar copy de "Qué pasa después del diagnóstico" en todas las páginas | Reducir fricción | Baja | Ninguna | Bajo | Pendiente |
+| F5 | Lead magnets adicionales por segmento (plantilla escandallo, checklist prime cost) | Captar emails cualificados | Baja | Ninguna | Alto | ✅ Completado (plantillas de pago) |
+| F6 | Unificar copy de "Qué pasa después del diagnóstico" en todas las páginas | Reducir fricción | Baja | Ninguna | Bajo | ✅ Completado |
 | F7 | Crear página puente post-diagnóstico: "Tu score indica que el problema principal está en X. ¿Lo revisamos en 20 minutos?" con CTA directo a Calendly | Conectar diagnóstico con sesión de conversión | Alta | Ninguna | Medio | Pendiente |
 
 ---
@@ -89,60 +89,46 @@
 
 | # | Descripción | Objetivo | Prioridad | Dependencias | Esfuerzo | Estado |
 |---|-------------|----------|-----------|--------------|----------|--------|
-| G1 | Verificar cada lunes que el GitHub Actions de publicación de blog se ejecutó correctamente | Mantener pipeline activo | Alta | Ninguna | Bajo | 🔄 Recurrente |
+| G1 | Verificar cada lunes que el GitHub Actions de publicación de blog se ejecutó correctamente | Mantener pipeline activo | Alta | Ninguna | Bajo | 🔄 Recurrente activo |
 | G2 | Continuar indexación en Search Console | Acelerar indexación | Media | Ninguna | Bajo | 🔄 En progreso |
-| G3 | Verificar mensualmente el cron de Vercel de emails de seguimiento | Mantener secuencia de emails activa | Alta | Ninguna | Bajo | 🔄 Recurrente |
-| G4 | Actualizar pipeline.json del blog cuando la cola baje de 5 artículos | Mantener publicación automática | Media | Ninguna | Bajo | 🔄 Recurrente |
+| G3 | Verificar mensualmente el cron de Vercel de emails de seguimiento | Mantener secuencia de emails activa | Alta | Ninguna | Bajo | 🔄 Recurrente activo |
+| G4 | Actualizar pipeline.json del blog cuando la cola baje de 5 artículos | Mantener publicación automática | Media | Ninguna | Bajo | 🔄 Recurrente activo |
 | G5 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
 
 ---
 
-## H. PÁGINAS POR SEGMENTO Y CONVERSIÓN (NUEVO)
-
-| # | Descripción | Objetivo | Prioridad | Dependencias | Esfuerzo | Estado |
-|---|-------------|----------|-----------|--------------|----------|--------|
-| H1 | Crear página puente post-diagnóstico con diagnóstico contextual y CTA a sesión | Aumentar conversión de diagnóstico a sesión | Alta | Ninguna | Medio | Pendiente |
-| H2 | Crear página `/para-propietarios-de-restaurantes` (las tarjetas del hero ya enlazan a esta URL) | Segmentar visitante y mejorar conversión | Media | Ninguna | Medio | Pendiente |
-| H3 | Crear página `/para-hoteles-fb` | Cluster SEO hoteles F&B + conversión | Media | Ninguna | Medio | Pendiente |
-| H4 | Crear página `/para-emprendedores` | Cluster SEO aperturas + conversión | Media | Ninguna | Medio | Pendiente |
-| H5 | Revisión mobile home: simplificar a 3 niveles (dolor + CTA, 3 rutas, prueba de autoridad) | Mejorar conversión en móvil | Media | Ninguna | Medio | Pendiente |
-| H6 | Crear informe con datos agregados del diagnóstico: "Los principales puntos débiles de restaurantes en España y Latam" | Contenido propietario de alta autoridad | Baja | Mínimo 100 diagnósticos realizados | Alto | Pendiente |
-
----
-
-## I. PLANTILLAS DE VENTA
+## H. PLANTILLAS DE VENTA Y HERRAMIENTAS DE CAPTACIÓN
 
 | # | Descripción | Estado |
-|---|-------------|--------|
-| I1 | Productos en Lemon Squeezy: 5 individuales + 5 bundles configurados con precios, descripciones, archivos y textos de checkout | Completado |
-| I2 | Webhook /api/lemon/webhook en producción: captura compras y añade contactos a Mailchimp con tag por producto | Completado |
-| I3 | Audiencia "Clientes Plantillas" en Mailchimp con 10 Customer Journeys y secuencia de 4 emails por producto | Completado |
-| I4 | Página /herramientas/plantillas con copy SEO, FAQs, garantías y CTAs | Completado |
-| I5 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
-| I6 | Activar live mode en Lemon Squeezy | Pendiente: verificación de identidad en curso |
-| I7 | Imágenes de producto generadas y subidas a Lemon Squeezy | Completado |
-| I8 | Páginas individuales por plantilla (/herramientas/plantillas/[slug]) con estructura de embudo, imágenes, upsell de bundles y Schema Product | Completado |
-| I9 | Micro-copy de CTAs actualizado en toda la web | Completado |
-| I10 | Artículo "Cuánto cuesta un consultor de restaurantes" publicado | Completado |
-| I11 | Schema Markup implementado en 7 páginas y verificado con Rich Results Test | Completado |
-| I12 | Menú de navegación actualizado con dropdown de Herramientas y regla del 5 | Completado |
-| I13 | Bloque de plantillas añadido en /herramientas | Completado |
-| I14 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
-| I15 | Script de autogeneración de blog actualizado para incluir bloques de plantillas en artículos futuros | Completado |
-| I16 | Robi actualizado para recomendar plantillas según problema del visitante | Completado |
+|---|---|---|
+| H1 | 10 productos en Lemon Squeezy (5 individuales + 5 bundles) con precios, descripciones, archivos e imágenes | Completado |
+| H2 | Webhook /api/lemon/webhook en producción: captura compras y añade contactos a Mailchimp audiencia Clientes Plantillas | Completado |
+| H3 | 10 Customer Journeys en Mailchimp con secuencia de 4 emails cada uno apuntando a consultoría | Completado |
+| H4 | Página /herramientas/plantillas con copy SEO, FAQs, garantías y CTAs | Completado |
+| H5 | 5 páginas individuales /herramientas/plantillas/[slug] con estructura de embudo, imágenes, upsell de bundles y Schema Product | Completado |
+| H6 | Bloques de plantillas integrados en 22 artículos de blog | Completado |
+| H7 | Script de autogeneración de blog actualizado para incluir bloques de plantillas en artículos futuros | Completado |
+| H8 | Robi actualizado para recomendar plantillas según problema del visitante | Completado |
+| H9 | Captura de email en 5 herramientas gratuitas con envío de resultado por Resend y alta en Mailchimp audiencia Usuarios Herramientas | Completado |
+| H10 | 5 Customer Journeys en Mailchimp audiencia Usuarios Herramientas (2 emails por herramienta, días 3 y 7) | Completado |
+| H11 | Schema Markup implementado en 7 páginas adicionales y verificado con Rich Results Test | Completado |
+| H12 | Menú de navegación actualizado con dropdown Herramientas y regla del 5 | Completado |
+| H13 | Micro-copy de CTAs actualizado en toda la web | Completado |
+| H14 | Live mode activo en Lemon Squeezy con precios tax-inclusive | Completado |
+| H15 | Lemon Squeezy: actualizar URLs de checkout a live mode en todo el proyecto | Pendiente |
 
 ---
 
 ## Resumen por prioridad
 
 **Alta (ejecutar primero):**
-B1, B2, B3, F7, H1, G1, G3
+B1, B2, B3, F1, F7, G1, G3
 
 **Media:**
-A4, B4, B6, D3, D5, G2, G4, G5, H2, H3, H4, H5
+A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G5
 
 **Baja:**
-C12 (aparcado), D6, E1-E4 (aparcados), F5, F6, H6
+D6, E4, F7, H15
 
 **Aparcados hasta lanzamiento del libro (>90 días):**
 C12, E1, E2, E3

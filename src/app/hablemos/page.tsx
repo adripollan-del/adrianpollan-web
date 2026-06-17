@@ -141,7 +141,7 @@ export default function HablemosPage() {
               {
                 num: "01",
                 title: "Diagnóstico gratuito",
-                desc: "10 minutos. 66 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
+                desc: "10 minutos. 67 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
               },
               {
                 num: "02",
@@ -151,7 +151,7 @@ export default function HablemosPage() {
               {
                 num: "03",
                 title: "Propuesta personalizada",
-                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin plantillas genéricas.",
+                desc: "Si hay encaje, preparo una propuesta adaptada a tu negocio concreto. Sin soluciones de copia y pega.",
               },
               {
                 num: "04",

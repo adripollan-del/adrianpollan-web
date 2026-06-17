@@ -4,6 +4,51 @@ import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
+function EmailCapture({ completed, total, level, checkedIds }: { completed: number; total: number; level: string; checkedIds: string[] }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    await fetch("/api/herramientas/email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, tool: "auditoria-proveedores", data: { completed, total, level, checkedIds } }),
+    });
+    setStatus("done");
+  }
+
+  if (status === "done") {
+    return (
+      <p style={{ color: "#16a34a" }} className="font-body text-sm font-medium py-4">
+        ✓ Enviado. Revisa tu email en unos minutos.
+      </p>
+    );
+  }
+
+  return (
+    <form onSubmit={submit} className="space-y-3">
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="tu@email.com"
+        className="w-full bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+      />
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="w-full px-5 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
+      >
+        {status === "loading" ? "Enviando..." : "Recibir mi informe por email"}
+      </button>
+      <p className="font-body text-ink/40 text-xs">Sin spam. Solo tus resultados y recursos relacionados.</p>
+    </form>
+  );
+}
+
 interface ChecklistBlock {
   title: string;
   items: string[];
@@ -143,7 +188,6 @@ export default function AuditoriaClient() {
                           className={`w-5 h-5 border flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
                             isChecked ? "bg-amber border-amber" : "border-navy/30 hover:border-amber/60"
                           }`}
-                          onClick={() => toggle(id)}
                         >
                           {isChecked && <Check size={12} className="text-white" strokeWidth={3} />}
                         </div>
@@ -180,31 +224,15 @@ export default function AuditoriaClient() {
           <p className="font-body text-sm leading-relaxed opacity-80">{result.body}</p>
         </div>
 
-        {/* Interpretación */}
-        <div className="mt-8 bg-cream-dark border border-navy/10 rounded-xl p-6 lg:p-8">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
-            ¿Qué significa tu resultado?
-          </p>
-          <p className="font-body text-ink/70 text-base leading-relaxed mb-5">
-            {progressPct < 50
-              ? "La gestión de proveedores en tu negocio tiene margen de mejora significativo. Es una de las áreas donde se pueden recuperar varios puntos de food cost con cambios concretos."
-              : progressPct <= 75
-              ? "Tienes algunas prácticas correctas, pero hay elementos sin implantar que pueden estar afectando al coste de compra."
-              : "Tienes una gestión de proveedores ordenada. El trabajo ahora es mantener la disciplina y revisar condiciones periódicamente."}
-          </p>
-          <a
-            href="https://diagnostico.adrianpollan.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
-          >
-            {progressPct < 50
-              ? "Gestión reactiva — ver diagnóstico gratuito →"
-              : progressPct <= 75
-              ? "Hay procesos sin implantar — ver diagnóstico gratuito →"
-              : "Gestión ordenada — analiza el resto de tu negocio →"}
-          </a>
-        </div>
+        {/* Email capture — auditoría proveedores */}
+        {count > 0 && (
+          <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
+            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu informe de auditoría con el nivel alcanzado y los puntos de mejora.</p>
+            <EmailCapture completed={count} total={total} level={result.label} checkedIds={Array.from(checked)} />
+          </div>
+        )}
+
 
       </div>
     </section>
