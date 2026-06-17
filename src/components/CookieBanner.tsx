@@ -20,10 +20,11 @@ function readConsent(): ConsentValue | null {
       }
       return parsed.value;
     } catch {
-      // Formato legacy: string plano — migrar
-      const value = raw as ConsentValue;
-      localStorage.setItem(CONSENT_KEY, JSON.stringify({ value, ts: Date.now() }));
-      return value;
+      // Formato legacy (string plano): decisión tomada bajo el sistema anterior,
+      // donde los scripts se cargaban igualmente. No es consentimiento válido
+      // para el nuevo sistema — invalidar y pedir de nuevo.
+      localStorage.removeItem(CONSENT_KEY);
+      return null;
     }
   } catch {
     return null;
