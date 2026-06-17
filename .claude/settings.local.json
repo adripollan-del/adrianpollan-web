@@ -44,13 +44,13 @@
       "Bash(git *)",
       "Bash(git -C /Users/adrianpollan/adrianpollan-web add .claude/settings.local.json)",
       "Bash(git -C /Users/adrianpollan/adrianpollan-web stash drop)",
-      "Bash(Get-ChildItem -Path src -Include *.tsx -Recurse)",
-      "Bash(Select-Object -ExpandProperty FullName)",
-      "Bash(gh workflow *)",
-      "Bash(sort -t'\"' -k4 -r)",
-      "Bash(Get-Content \"C:\\\\Users\\\\adria\\\\adrianpollan-web\\\\backlog-adrianpollan.md\")",
-      "Bash(Measure-Object -Line)",
-      "PowerShell(New-Item *)"
+      "Bash(xargs sed -i '' 's|8ba24dda-671a-45f2-a3e2-5276f83c104a|e169cc11-fc65-44f4-8c5b-83ae0732c6cf|g')",
+      "mcp__claude_ai_Vercel__list_teams",
+      "mcp__claude_ai_Vercel__list_projects",
+      "mcp__claude_ai_Vercel__list_deployments",
+      "Bash(gh api *)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

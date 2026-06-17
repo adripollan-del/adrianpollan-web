@@ -1,6 +1,13 @@
 import { createHash } from "crypto";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { checkLeadLimit, getIP } from "@/lib/rate-limit";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_BODY_BYTES = 50_000;
+const MAX_CHECKED_IDS = 30;   // apertura tiene 24, el más largo
+const MAX_CHECKED_ID_LEN = 10; // formato "bi-ii", ej. "5-4"
+const MAX_DISHES = 50;
 
 type Tool =
   | "escandallo"
@@ -281,6 +288,22 @@ function buildAuditoriaProveedoresEmail(data: {
 // ─── Route handler ────────────────────────────────────────────────────────────
 
 export async function POST(req: Request) {
+  // Tamaño de payload antes de parsear
+  const contentLength = req.headers.get("content-length");
+  if (contentLength && parseInt(contentLength, 10) > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large." }, { status: 413 });
+  }
+
+  // Rate limit (fail-open: no bloquear leads reales por un hipo de Redis)
+  const ip = getIP(req);
+  const { allowed } = await checkLeadLimit(ip);
+  if (!allowed) {
+    return NextResponse.json(
+      { error: "Demasiados intentos. Inténtalo más tarde." },
+      { status: 429 }
+    );
+  }
+
   const apiKey = process.env.MAILCHIMP_API_KEY;
   const audienceId = process.env.MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID;
   const resendKey = process.env.RESEND_API_KEY;
@@ -289,24 +312,63 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Server not configured" }, { status: 500 });
   }
 
-  let body: { email?: string; tool?: string; data?: unknown };
+  let body: { email?: string; tool?: string; data?: unknown; _hp?: string; _ts?: string };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { email, tool, data } = body;
+  const { email, tool, data, _hp, _ts } = body;
 
-  if (!email || typeof email !== "string" || !email.includes("@")) {
+  // Honeypot: bot ha rellenado campo oculto → fingir éxito sin procesar
+  if (_hp) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Timing: envío < 2s desde renderizado del formulario
+  if (_ts && typeof _ts === "string" && Date.now() - parseInt(_ts, 10) < 2000) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Validación de email con regex + longitud máxima
+  if (
+    !email ||
+    typeof email !== "string" ||
+    !EMAIL_RE.test(email) ||
+    email.length > 254
+  ) {
     return NextResponse.json({ error: "Email inválido" }, { status: 400 });
   }
-  if (!tool || !(tool in TOOL_TAG)) {
+
+  // Validación de tool: solo los 5 valores conocidos
+  if (!tool || typeof tool !== "string" || !(tool in TOOL_TAG)) {
     return NextResponse.json({ error: "Tool inválido" }, { status: 400 });
   }
 
   const validTool = tool as Tool;
   const tag = TOOL_TAG[validTool];
+
+  // Validación de data
+  const toolData = (data ?? {}) as Record<string, unknown>;
+
+  if ("checkedIds" in toolData) {
+    const ids = toolData.checkedIds;
+    if (
+      !Array.isArray(ids) ||
+      ids.length > MAX_CHECKED_IDS ||
+      !ids.every((id) => typeof id === "string" && id.length <= MAX_CHECKED_ID_LEN)
+    ) {
+      return NextResponse.json({ error: "Payload inválido." }, { status: 400 });
+    }
+  }
+
+  if ("dishes" in toolData) {
+    const dishes = toolData.dishes;
+    if (!Array.isArray(dishes) || dishes.length > MAX_DISHES) {
+      return NextResponse.json({ error: "Payload inválido." }, { status: 400 });
+    }
+  }
 
   // ── Mailchimp upsert ───────────────────────────────────────────────────────
   const dc = apiKey.split("-").pop();
@@ -343,7 +405,6 @@ export async function POST(req: Request) {
   }
 
   // ── Build email content ────────────────────────────────────────────────────
-  const toolData = (data ?? {}) as Record<string, unknown>;
   let emailContent: { subject: string; html: string };
 
   switch (validTool) {

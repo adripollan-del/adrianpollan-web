@@ -7,6 +7,9 @@ import { trackEvent } from "@/lib/gtag";
 function EmailCapture({ completed, total, level, checkedIds }: { completed: number; total: number; level: string; checkedIds: string[] }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const [renderTs, setRenderTs] = useState("");
+  useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -14,7 +17,13 @@ function EmailCapture({ completed, total, level, checkedIds }: { completed: numb
     await fetch("/api/herramientas/email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, tool: "checklist-apertura", data: { completed, total, level, checkedIds } }),
+      body: JSON.stringify({
+        email,
+        tool: "checklist-apertura",
+        data: { completed, total, level, checkedIds },
+        _hp: honeypotRef.current?.value ?? "",
+        _ts: renderTs,
+      }),
     });
     setStatus("done");
   }
@@ -29,6 +38,10 @@ function EmailCapture({ completed, total, level, checkedIds }: { completed: numb
 
   return (
     <form onSubmit={submit} className="space-y-3">
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
+        <input ref={honeypotRef} type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+      <input type="hidden" name="_ts" value={renderTs} />
       <input
         type="email"
         required

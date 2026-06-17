@@ -6,6 +6,9 @@ import { Plus, Trash2 } from "lucide-react";
 function EmailCapture({ saved }: { saved: SavedDish[] }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const [renderTs, setRenderTs] = useState("");
+  useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -13,7 +16,13 @@ function EmailCapture({ saved }: { saved: SavedDish[] }) {
     await fetch("/api/herramientas/email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, tool: "escandallo", data: { dishes: saved } }),
+      body: JSON.stringify({
+        email,
+        tool: "escandallo",
+        data: { dishes: saved },
+        _hp: honeypotRef.current?.value ?? "",
+        _ts: renderTs,
+      }),
     });
     setStatus("done");
   }
@@ -28,6 +37,10 @@ function EmailCapture({ saved }: { saved: SavedDish[] }) {
 
   return (
     <form onSubmit={submit} className="space-y-3">
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
+        <input ref={honeypotRef} type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+      <input type="hidden" name="_ts" value={renderTs} />
       <input
         type="email"
         required
