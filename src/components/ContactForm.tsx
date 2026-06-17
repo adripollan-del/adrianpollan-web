@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
@@ -8,7 +8,10 @@ export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({ name: "", email: "", business: "", message: "" });
   const honeypotRef = useRef<HTMLInputElement>(null);
-  const [renderTs] = useState(() => Date.now().toString());
+  // Timestamp fijado en el cliente al montar, nunca en el servidor (SSG/SSR).
+  // Un useState lazy-init correría en el servidor y daría la hora del build.
+  const [renderTs, setRenderTs] = useState("");
+  useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
@@ -17,7 +17,8 @@ export default function WaitlistForm({
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const honeypotRef = useRef<HTMLInputElement>(null);
-  const [renderTs] = useState(() => Date.now().toString());
+  const [renderTs, setRenderTs] = useState("");
+  useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
