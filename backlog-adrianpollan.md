@@ -96,7 +96,9 @@
 | G5 | Auditoría de seguridad y endpoints públicos (junio 2026): rate limit persistente en Upstash para /api/chat (fail-closed), /api/contact, /api/newsletter, /api/libro y /api/herramientas/email (fail-open); honeypot + validación de timing en todos los formularios públicos; validación de payload reforzada (el email solo se validaba con .includes("@")); recuperado endpoint /api/herramientas/email que estaba vivo en producción pero ausente del git local por desincronización entre main remoto y checkout local | Cerrar superficie de abuso de coste (Anthropic) y de reputación de email (Resend/Mailchimp) | Alta | Ninguna | Alto | Completado |
 | G6 | Corregido dominio canónico en Vercel: www.adrianpollan.com estaba configurado como Production, invirtiendo el redirect respecto a lo que indica el código (metadataBase, sitemap, canonicals, todos en adrianpollan.com sin www) y respecto al historial de Search Console, que solo existe para el dominio sin www | Evitar pérdida de señal SEO acumulada y alinear panel de Vercel con código | Alta | Ninguna | Bajo | Completado |
 | G7 | Verificar en Search Console (2-3 semanas tras G6) que no aparecen errores nuevos de cobertura, caída de impresiones o páginas marcadas como duplicadas/no canónicas tras el cambio de dominio Production en Vercel | Confirmar que el cambio de canónico no generó pérdida de señal SEO | Media | G6 completado | Bajo | Pendiente |
-| G8 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
+| G8 | GDPR: bloqueado la carga de GA4 y Microsoft Clarity hasta consentimiento real del usuario (antes el banner solo escribía en localStorage sin bloquear nada); invalidadas las decisiones de consentimiento previas al cambio, ya que no representaban consentimiento real bajo el comportamiento anterior; expiración de la decisión a 365 días | Cumplimiento real de consentimiento previo, no solo registro decorativo | Alta | Ninguna | Medio | Completado |
+| G9 | Completado .env.example con las 9 variables que faltaban (RESEND_API_KEY, ANTHROPIC_API_KEY, CRON_SECRET, LEMONSQUEEZY_SIGNING_SECRET, MAILCHIMP_PLANTILLAS_AUDIENCE_ID, MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN, UNSPLASH_ACCESS_KEY) | Evitar confusión de configuración al clonar el repo o incorporar nuevas máquinas | Media | Ninguna | Bajo | Completado |
+| G10 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
 
 **Nota de proceso (junio 2026):** antes de dar por inexistente cualquier funcionalidad mencionada en una auditoría o en memoria de Claude, comprobar con curl directo contra producción, no solo con grep en el código local. Un endpoint puede estar vivo en Vercel sin estar en el git local si hubo desincronización entre el checkout y el remoto (ver G5).
 
@@ -130,7 +132,7 @@
 B1, B2, B3, F1, F7, G1, G3
 
 **Media:**
-A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G8
+A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G10
 
 **Baja:**
 D6, E4, F7, H15
