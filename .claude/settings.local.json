@@ -50,7 +50,15 @@
       "mcp__claude_ai_Vercel__list_deployments",
       "Bash(gh api *)",
       "WebFetch(domain:api.github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__claude_ai_Vercel__get_deployment",
+      "Bash(sort -t: -k1,2)",
+      "Bash(npx playwright *)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(npm init *)",
+      "Bash(kill %1)",
+      "mcp__claude_ai_Vercel__get_access_to_vercel_url",
+      "mcp__claude_ai_Vercel__get_project"
     ]
   }
 }
