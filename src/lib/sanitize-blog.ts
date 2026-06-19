@@ -12,9 +12,17 @@ const OPTIONS: sanitizeHtml.IOptions = {
     "div",
   ],
   allowedAttributes: {
-    a:   ["href", "rel", "target"],
+    a: [
+      "href", "rel", "target",
+      { name: "class", values: ["blog-cta-btn"] },
+    ],
     img: ["src", "alt"],
-    div: ["class"],
+    p: [
+      { name: "class", values: ["blog-cta-title", "blog-cta-desc"] },
+    ],
+    div: [
+      { name: "class", values: ["blog-cta-block", "internal-links"] },
+    ],
   },
   allowedSchemes: ["http", "https"],
   allowProtocolRelative: false,
