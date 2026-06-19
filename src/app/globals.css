@@ -102,6 +102,40 @@ body {
   overflow: hidden;
 }
 
+/* ─── Bloque CTA en cuerpo de artículos de blog ──────────────── */
+.blog-cta-block {
+  background-color: #f5f0e8;
+  border-left: 4px solid #BA7517;
+  padding: 24px 28px;
+  margin: 32px 0;
+  border-radius: 4px;
+}
+.blog-cta-title {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #0f1923;
+  font-size: 1rem;
+}
+.blog-cta-desc {
+  margin: 0 0 16px 0;
+  color: #0f1923;
+  font-size: 0.95rem;
+}
+.blog-cta-btn {
+  background-color: #BA7517;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+.blog-cta-btn:hover {
+  background-color: #9a6214;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
