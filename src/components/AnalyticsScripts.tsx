@@ -33,7 +33,7 @@ function readConsent(): ConsentValue | null {
   }
 }
 
-export default function AnalyticsScripts() {
+export default function AnalyticsScripts({ nonce }: { nonce?: string }) {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
@@ -51,8 +51,9 @@ export default function AnalyticsScripts() {
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-RJSBHMJ9BL"
         strategy="lazyOnload"
+        nonce={nonce}
       />
-      <Script id="google-analytics" strategy="lazyOnload">
+      <Script id="google-analytics" strategy="lazyOnload" nonce={nonce}>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -60,10 +61,10 @@ export default function AnalyticsScripts() {
           gtag('config', 'G-RJSBHMJ9BL');
         `}
       </Script>
-      <Script id="clarity" strategy="lazyOnload">
+      <Script id="clarity" strategy="lazyOnload" nonce={nonce}>
         {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wthj8c4zuf");`}
       </Script>
-      <Script id="event-tracking" strategy="lazyOnload">
+      <Script id="event-tracking" strategy="lazyOnload" nonce={nonce}>
         {`document.addEventListener('click',function(e){var el=e.target.closest('[data-event]');if(!el)return;if(typeof window.gtag==='function'){window.gtag('event',el.dataset.event,{event_category:'conversion',event_label:el.dataset.label||''});}},{passive:true});`}
       </Script>
     </>
