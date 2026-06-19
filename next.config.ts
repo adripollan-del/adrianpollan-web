@@ -44,7 +44,8 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://www.clarity.ms",
+              // vercel.live: toolbar de feedback de Vercel (solo en previews, inocuo en producción)
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://www.clarity.ms https://vercel.live",
               "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
               "img-src 'self' data: https://images.unsplash.com",
               "font-src 'self'",
