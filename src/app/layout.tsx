@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -143,13 +142,11 @@ const jsonLd = {
   ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
-
   return (
     <html lang="es" className={inter.variable}>
       <head>
@@ -158,7 +155,6 @@ export default async function RootLayout({
       <body>
         <script
           type="application/ld+json"
-          nonce={nonce}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Navigation />
@@ -166,7 +162,7 @@ export default async function RootLayout({
         <Footer />
         <CookieBannerLazy />
         <ChatBoxLazy />
-        <AnalyticsScripts nonce={nonce} />
+        <AnalyticsScripts />
       </body>
     </html>
   );

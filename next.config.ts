@@ -13,8 +13,6 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // Security headers estáticos aplicados a todas las rutas.
-        // La CSP (con nonce por request) va en proxy.ts, no aquí.
         source: "/(.*)",
         headers: [
           {
@@ -36,6 +34,28 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()",
+          },
+          {
+            // 'unsafe-inline' necesario para los scripts de RSC streaming que
+            // Next.js inyecta en el HTML estático (self.__next_f.push([...])).
+            // No se usan nonces porque harían todas las páginas dinámicas.
+            // El riesgo de inyección inline ya está cerrado: sanitize-html en
+            // el blog y escapeHtml en herramientas/email.
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://www.clarity.ms",
+              "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
+              "img-src 'self' data: https://images.unsplash.com",
+              "font-src 'self'",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://api.calendly.com https://assets.calendly.com",
+              "frame-src https://calendly.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "frame-ancestors 'none'",
+              "form-action 'self'",
+              "upgrade-insecure-requests",
+            ].join("; "),
           },
         ],
       },
