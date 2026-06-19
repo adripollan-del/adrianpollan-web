@@ -306,7 +306,7 @@ export default function ConsultoriaOperativaPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
-            "Los resultados no vienen de tener el mejor plan. Vienen de implementarlo bien, con alguien que sabe lo que está haciendo."
+            &quot;Los resultados no vienen de tener el mejor plan. Vienen de implementarlo bien, con alguien que sabe lo que está haciendo.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
             Empieza con el diagnóstico gratuito para ver si encaja con tu momento. Sin presión.
