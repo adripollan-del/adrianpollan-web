@@ -14,6 +14,27 @@ import { readFileSync, writeFileSync, unlinkSync } from 'fs';
 import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import sanitizeHtml from 'sanitize-html';
+
+const BLOG_SANITIZE_OPTIONS = {
+  allowedTags: [
+    'h2', 'h3', 'h4',
+    'p', 'ul', 'ol', 'li',
+    'a',
+    'strong', 'em', 'b', 'i',
+    'blockquote',
+    'img',
+    'table', 'thead', 'tbody', 'tr', 'th', 'td',
+    'div',
+  ],
+  allowedAttributes: {
+    a:   ['href', 'rel', 'target'],
+    img: ['src', 'alt'],
+    div: ['class'],
+  },
+  allowedSchemes: ['http', 'https'],
+  allowProtocolRelative: false,
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
@@ -275,8 +296,11 @@ function insertArticle({ slug, title, excerpt, category, readTime, coverImage, b
     throw new Error(`El slug ya existe: ${slug}`);
   }
 
+  // Sanitizar HTML antes de guardar (defensa en profundidad)
+  const cleanBody = sanitizeHtml(body, BLOG_SANITIZE_OPTIONS);
+
   // Escapar caracteres que romperían el template literal
-  const safeBody = body
+  const safeBody = cleanBody
     .replace(/`/g,    '\\`')
     .replace(/\$\{/g, '\\${');
 

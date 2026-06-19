@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+import { sanitizeBlogHtml } from "@/lib/sanitize-blog";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
@@ -152,7 +153,7 @@ export default async function BlogPostPage({ params }: Props) {
               prose-strong:text-navy prose-strong:font-semibold
               prose-a:text-amber prose-a:no-underline hover:prose-a:underline
             "
-            dangerouslySetInnerHTML={{ __html: post.body }}
+            dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body) }}
           />
 
           {/* Firma del autor */}
