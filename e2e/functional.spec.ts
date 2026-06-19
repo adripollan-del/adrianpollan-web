@@ -1,13 +1,20 @@
 import { test, expect, type Page } from "@playwright/test";
 
-// Captura todos los errores de CSP que aparecen en consola.
-// La especificación del W3C hace que los navegadores los emitan como errores.
+// Captura errores de CSP del sitio, excluyendo ruido de herramientas de Vercel.
+// El Toolbar de feedback de vercel.live inyecta un iframe en deployments de
+// preview que es bloqueado por frame-src (vercel.live no está en la CSP de
+// producción). Es ruido esperado en preview, no un error del sitio real.
+function isCspNoise(text: string): boolean {
+  return text.includes("vercel.live");
+}
+
 function captureCspErrors(page: Page): string[] {
   const errs: string[] = [];
   page.on("console", (msg) => {
     const t = msg.text();
     if (
       msg.type() === "error" &&
+      !isCspNoise(t) &&
       (t.includes("Content Security Policy") ||
         t.includes("content-security-policy") ||
         t.includes("Refused to") ||
@@ -18,7 +25,10 @@ function captureCspErrors(page: Page): string[] {
   });
   // También capturar page errors (uncaught exceptions)
   page.on("pageerror", (err) => {
-    if (err.message.includes("CSP") || err.message.includes("Refused")) {
+    if (
+      !isCspNoise(err.message) &&
+      (err.message.includes("CSP") || err.message.includes("Refused"))
+    ) {
       errs.push(`pageerror: ${err.message}`);
     }
   });
@@ -154,6 +164,7 @@ test("5. Sin errores de CSP en las páginas principales", async ({ page }) => {
       const t = msg.text();
       if (
         msg.type() === "error" &&
+        !isCspNoise(t) &&
         (t.includes("Content Security Policy") ||
           t.includes("content-security-policy") ||
           t.includes("Refused to") ||
