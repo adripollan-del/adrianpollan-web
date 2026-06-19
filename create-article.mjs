@@ -15,26 +15,7 @@ import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import sanitizeHtml from 'sanitize-html';
-
-const BLOG_SANITIZE_OPTIONS = {
-  allowedTags: [
-    'h2', 'h3', 'h4',
-    'p', 'ul', 'ol', 'li',
-    'a',
-    'strong', 'em', 'b', 'i',
-    'blockquote',
-    'img',
-    'table', 'thead', 'tbody', 'tr', 'th', 'td',
-    'div',
-  ],
-  allowedAttributes: {
-    a:   ['href', 'rel', 'target'],
-    img: ['src', 'alt'],
-    div: ['class'],
-  },
-  allowedSchemes: ['http', 'https'],
-  allowProtocolRelative: false,
-};
+import { BLOG_SANITIZE_OPTIONS } from './src/lib/sanitize-blog-options.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
