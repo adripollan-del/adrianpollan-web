@@ -58,7 +58,15 @@
       "Bash(npm init *)",
       "Bash(kill %1)",
       "mcp__claude_ai_Vercel__get_access_to_vercel_url",
-      "mcp__claude_ai_Vercel__get_project"
+      "mcp__claude_ai_Vercel__get_project",
+      "mcp__claude_ai_Vercel__web_fetch_vercel_url",
+      "Bash(python *)",
+      "Bash(grep -o '<script[^>]*>[^<]*<\\\\/script>' /c/Users/adria/adrianpollan-web/.next/server/app/_global-error.html)",
+      "PowerShell(cd C:\\\\Users\\\\adria\\\\adrianpollan-web; $env:PLAYWRIGHT_BASE_URL=\"https://adrianpollan-b2hy3ssf7-adrianpollan.vercel.app\"; npx playwright test --config playwright.config.ts 2>&1)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://adrianpollan-b2hy3ssf7-adrianpollan.vercel.app/\" -Method GET -UseBasicParsing | Select-Object -ExpandProperty Headers | Format-List)",
+      "PowerShell(cd C:\\\\Users\\\\adria\\\\adrianpollan-web; $env:PLAYWRIGHT_BASE_URL=\"https://adrianpollan-b2hy3ssf7-adrianpollan.vercel.app\"; $env:VERCEL_SHARE_URL=\"https://adrianpollan-b2hy3ssf7-adrianpollan.vercel.app/?_vercel_share=rcA7VaO4QXpaTBaiAEkuwwwRGpnoMT0m\"; npx playwright test --project=functional --config playwright.config.ts 2>&1)",
+      "PowerShell($env:PLAYWRIGHT_BASE_URL = \"https://adrianpollan-7hexbibj2-adrianpollan.vercel.app\"; $env:VERCEL_SHARE_URL = \"https://adrianpollan-7hexbibj2-adrianpollan.vercel.app/?_vercel_share=JZid0warbaT0vYoeTucYQDojjXk0lfr0\"; npx playwright test --project=functional --config playwright.config.ts)",
+      "PowerShell($env:PLAYWRIGHT_BASE_URL = \"https://adrianpollan-9arl13274-adrianpollan.vercel.app\"; $env:VERCEL_SHARE_URL = \"https://adrianpollan-9arl13274-adrianpollan.vercel.app/?_vercel_share=TQeXQ0He4h7eC0xsWja3Tm1A13sXyzWE\"; npx playwright test --project=functional --config playwright.config.ts)"
     ]
   }
 }

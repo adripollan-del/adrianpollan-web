@@ -104,7 +104,8 @@
 | G13 | Actualizar dependencias vulnerables reportadas por npm audit (postcss vía next, @babel/core, js-yaml) en la cadencia normal de actualización de Next, sin npm audit fix --force | Mantener dependencias al día sin romper compatibilidad | Baja | Ninguna | Bajo | Pendiente |
 | G14 | Cerrado XSS en /api/herramientas/email: el campo data (nombre de plato, nivel) se insertaba sin escapar en HTML antes de enviar por Resend, permitiendo HTML/JS arbitrario en emails enviados desde el dominio. Añadida función escapeHtml() aplicada en los puntos de interpolación; confirmado que renderChecklistBlocks() y /api/libro no tienen este riesgo (no interpolan datos de usuario en HTML) | Cerrar vector de XSS vía email que usaba el remitente legítimo del negocio | Alta | Ninguna | Bajo | Completado |
 | G15 | Cerrado XSS en el blog: sanitización HTML por allowlist (sanitize-html) aplicada tanto en create-article.mjs (al generar) como en blog/[slug]/page.tsx (al renderizar), defensa en dos capas. Migrados los 26 bloques CTA de style= inline a clases CSS predefinidas (blog-cta-block, blog-cta-title, blog-cta-btn), con el atributo class restringido a esos valores exactos en la allowlist, evitando reabrir el vector a través de clases arbitrarias | Cerrar vector de XSS en contenido generado automáticamente y publicado sin revisión humana | Alta | Ninguna | Medio | Completado |
-| G16 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
+| G16 | Endurecido /api/contact: límite de tamaño de body (10KB) aplicado antes del parseo JSON (antes se parseaba sin límite previo), y validación de email reforzada con el mismo regex que ya usan contact/newsletter/libro/herramientas | Cerrar el último endpoint público con validación más débil que el resto | Baja | Ninguna | Bajo | Completado |
+| G17 | Añadir textos alt descriptivos a todas las imágenes principales de la web | Mejorar SEO y accesibilidad | Media | Ninguna | Bajo | Pendiente |
 
 **Nota de proceso (junio 2026):** antes de dar por inexistente cualquier funcionalidad mencionada en una auditoría o en memoria de Claude, comprobar con curl directo contra producción, no solo con grep en el código local. Un endpoint puede estar vivo en Vercel sin estar en el git local si hubo desincronización entre el checkout y el remoto (ver G5).
 
@@ -138,7 +139,7 @@
 B1, B2, B3, F1, F7, G1, G3
 
 **Media:**
-A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G12, G16
+A4, B4, B6, D1, D2, D3, D4, D5, F3, G2, G4, G7, G12, G17
 
 **Baja:**
 D6, E4, F7, G13, H15
