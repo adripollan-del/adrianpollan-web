@@ -4,9 +4,17 @@ import { checkLeadLimit, getIP } from "@/lib/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_BODY_BYTES = 10_000;
 const MAX_FIELD_LEN = { name: 120, email: 254, business: 200, message: 4000 };
 
 export async function POST(req: Request) {
+  // Tamaño de payload antes de parsear
+  const contentLength = req.headers.get("content-length");
+  if (contentLength && parseInt(contentLength, 10) > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large." }, { status: 413 });
+  }
+
   // Rate limit (fail-open: leads reales no se bloquean por un hipo de Redis)
   const ip = getIP(req);
   const { allowed } = await checkLeadLimit(ip);
@@ -36,10 +44,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  // Validación de campos obligatorios y longitudes
+  // Validación de campos obligatorios, formato email y longitudes
   if (
     typeof name !== "string" || !name.trim() ||
-    typeof email !== "string" || !email.trim() ||
+    typeof email !== "string" || !EMAIL_RE.test(email) ||
     typeof message !== "string" || !message.trim()
   ) {
     return NextResponse.json({ error: "Faltan campos obligatorios." }, { status: 400 });
