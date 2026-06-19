@@ -45,12 +45,14 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self'",
               // vercel.live: toolbar de feedback de Vercel (solo en previews, inocuo en producción)
-            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://www.clarity.ms https://vercel.live",
+            // *.clarity.ms: el tag carga c.clarity.ms/clarity.js dinámicamente
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://*.clarity.ms https://vercel.live",
               "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
               "img-src 'self' data: https://images.unsplash.com",
               "font-src 'self'",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://api.calendly.com https://assets.calendly.com",
-              "frame-src https://calendly.com",
+              // vercel.live: toolbar de Vercel inyecta un iframe en previews
+              "frame-src https://calendly.com https://vercel.live",
               "object-src 'none'",
               "base-uri 'self'",
               "frame-ancestors 'none'",

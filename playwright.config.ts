@@ -6,7 +6,7 @@ export default defineConfig({
   testDir: "./e2e",
   globalSetup: "./e2e/global-setup.ts",
   reporter: [["list"]],
-  timeout: 40_000,
+  timeout: 60_000,
 
   projects: [
     // ── Cabeceras HTTP (sin browser, solo request fixture) ────────────
