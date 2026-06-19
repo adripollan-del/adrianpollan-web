@@ -25,6 +25,7 @@ function Counter({ target, animate }: { target: number; animate: boolean }) {
   useEffect(() => {
     if (!animate) return;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reinicia el contador al activar la animación desde IntersectionObserver; solo tiene sentido en cliente
     setN(0);
     const duration = 1500;
     const start = performance.now();

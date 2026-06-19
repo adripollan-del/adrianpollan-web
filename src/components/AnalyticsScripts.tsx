@@ -37,6 +37,7 @@ export default function AnalyticsScripts() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lee localStorage al montar y suscribe evento custom del DOM; ambas APIs son solo cliente
     setConsented(readConsent() === "accepted");
 
     const handler = () => setConsented(readConsent() === "accepted");

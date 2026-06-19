@@ -24,6 +24,7 @@ function TypewriterCard({
   useEffect(() => {
     if (!started) return;
     if (instant) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- aplica el resultado instantáneo de la animación en cliente; solo tiene sentido después del montaje
       setDisplayed(text);
       return;
     }
@@ -43,7 +44,7 @@ function TypewriterCard({
       }
     }, 25);
     return () => clearInterval(id);
-  }, [typing, text]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [typing, text]);
 
   return (
     <div className="bg-[#f5f0e8] border-l-4 border-amber rounded-r-xl p-7">
@@ -65,6 +66,7 @@ export default function TeReconoces({ symptoms, title = "Lo que cambia cuando lo
 
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- activa modo instantáneo basado en prefers-reduced-motion; API de browser, solo cliente
     if (prefersReduced) setInstant(true);
 
     const el = ref.current;

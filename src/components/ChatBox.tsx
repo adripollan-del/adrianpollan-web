@@ -108,14 +108,6 @@ export default function ChatBox() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef  = useRef<HTMLTextAreaElement>(null);
 
-  /* ── Persistencia ─────────────────────────────────────────────── */
-  useEffect(() => {
-    sessionStorage.setItem(STORAGE_MESSAGES, JSON.stringify(messages));
-  }, [messages]);
-
-  useEffect(() => {
-    sessionStorage.setItem(STORAGE_OPEN, String(open));
-  }, [open]);
 
   /* ── Body scroll lock en mobile ───────────────────────────────── */
   useEffect(() => {
@@ -172,6 +164,7 @@ export default function ChatBox() {
     if (prevPathname.current === pathname) return;
     prevPathname.current = pathname;
     if (typeof window !== "undefined" && window.innerWidth >= 640 && open) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- minimiza el chat al navegar en desktop; detectar navegación sin effect requeriría prop drilling desde el layout
       setMinimized(true);
     }
   }, [pathname, open]);
@@ -194,6 +187,7 @@ export default function ChatBox() {
     if (!dismissed && !open) {
       setShowExitPopup(true);
       setOpen(true);
+      sessionStorage.setItem(STORAGE_OPEN, "true");
       setMinimized(false);
       setHasNotification(false);
     }
@@ -204,6 +198,7 @@ export default function ChatBox() {
   /* ── Acciones ─────────────────────────────────────────────────── */
   const handleOpen = () => {
     setOpen(true);
+    sessionStorage.setItem(STORAGE_OPEN, "true");
     setMinimized(false);
     setHasNotification(false);
   };
@@ -213,6 +208,7 @@ export default function ChatBox() {
 
   const handleClose = () => {
     setOpen(false);
+    sessionStorage.setItem(STORAGE_OPEN, "false");
     setMinimized(false);
     setShowExitPopup(false);
     sessionStorage.setItem("chatbox_dismissed", "true");
@@ -224,6 +220,7 @@ export default function ChatBox() {
     const userMessage: Message = { role: "user", content: input.trim() };
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
+    sessionStorage.setItem(STORAGE_MESSAGES, JSON.stringify(updatedMessages));
     setInput("");
     // Reset altura del textarea al enviar
     if (inputRef.current) {
@@ -238,12 +235,16 @@ export default function ChatBox() {
         body: JSON.stringify({ messages: updatedMessages }),
       });
       const { reply } = await res.json();
-      setMessages([...updatedMessages, { role: "assistant", content: reply }]);
+      const withReply: Message[] = [...updatedMessages, { role: "assistant", content: reply }];
+      setMessages(withReply);
+      sessionStorage.setItem(STORAGE_MESSAGES, JSON.stringify(withReply));
     } catch {
-      setMessages([...updatedMessages, {
+      const withError: Message[] = [...updatedMessages, {
         role: "assistant",
         content: "Ha habido un problema técnico. Puedes contactar directamente en adrianpollan.com/hablemos",
-      }]);
+      }];
+      setMessages(withError);
+      sessionStorage.setItem(STORAGE_MESSAGES, JSON.stringify(withError));
     } finally {
       setLoading(false);
     }
