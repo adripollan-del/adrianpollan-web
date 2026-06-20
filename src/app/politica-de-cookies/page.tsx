@@ -1,3 +1,4 @@
+// TODO: revisar con asesor legal antes de publicar
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,23 +9,19 @@ export const metadata: Metadata = {
 
 type CookieRow = { name: string; origin: string; purpose: string; duration: string };
 
-const necesarias: CookieRow[] = [
-  { name: "ss_cid", origin: "Squarespace", purpose: "Identificador de sesión del visitante", duration: "2 años" },
-  { name: "ss_cvr", origin: "Squarespace", purpose: "Registro de visitas para analítica básica", duration: "2 años" },
-  { name: "ss_csr", origin: "Squarespace", purpose: "Prevención de solicitudes fraudulentas (CSRF)", duration: "Sesión" },
-  { name: "crumb", origin: "Squarespace", purpose: "Seguridad de formularios", duration: "Sesión" },
-];
-
-const analitica: CookieRow[] = [
-  { name: "ss_cvt", origin: "Squarespace Analytics", purpose: "Seguimiento de comportamiento en el sitio", duration: "30 minutos" },
-  { name: "_ga", origin: "Google Analytics (si activado)", purpose: "Distinguir usuarios únicos", duration: "2 años" },
-  { name: "_gid", origin: "Google Analytics (si activado)", purpose: "Distinguir usuarios en sesiones de 24h", duration: "24 horas" },
+const analytics: CookieRow[] = [
+  { name: "_ga", origin: "Google Analytics 4", purpose: "Distingue usuarios únicos", duration: "2 años" },
+  { name: "_ga_[ID]", origin: "Google Analytics 4", purpose: "Mantiene el estado de sesión de GA4", duration: "2 años" },
+  { name: "_gid", origin: "Google Analytics 4", purpose: "Distingue usuarios entre sesiones de 24 horas", duration: "24 horas" },
+  { name: "_clck", origin: "Microsoft Clarity", purpose: "Identifica al usuario para análisis de comportamiento (mapas de calor y grabaciones de sesión)", duration: "1 año" },
+  { name: "_clsk", origin: "Microsoft Clarity", purpose: "Conecta múltiples vistas de página de una misma sesión", duration: "30 minutos" },
 ];
 
 const terceros = [
-  { provider: "Calendly", purpose: "Gestión del widget de reservas", url: "calendly.com/privacy" },
-  { provider: "Stripe", purpose: "Seguridad y prevención del fraude en pagos", url: "stripe.com/privacy" },
+  { provider: "Calendly", purpose: "Widget de reservas de consultoría", url: "calendly.com/privacy" },
+  { provider: "Stripe (vía Calendly y Lemon Squeezy)", purpose: "Seguridad y prevención del fraude en pagos", url: "stripe.com/privacy" },
   { provider: "Mailchimp", purpose: "Formularios de suscripción incrustados", url: "mailchimp.com/legal/privacy" },
+  { provider: "Lemon Squeezy", purpose: "Widget de compra de plantillas digitales", url: "lemonsqueezy.com/privacy" },
 ];
 
 function CookieTable({ rows }: { rows: CookieRow[] }) {
@@ -95,28 +92,34 @@ export default function PoliticaCookiesPage() {
               cómo navegas.
             </p>
 
-            <h2>2. ¿Qué cookies utiliza este sitio?</h2>
-            <p>adrianpollan.com utiliza los siguientes tipos de cookies:</p>
+            <h2>2. ¿Qué almacena este sitio en tu navegador?</h2>
+            <p>adrianpollan.com utiliza los siguientes mecanismos de almacenamiento:</p>
 
-            <h3>Cookies estrictamente necesarias</h3>
+            <h3>Almacenamiento local del navegador (localStorage)</h3>
             <p>
-              Son imprescindibles para el funcionamiento básico del sitio. Sin ellas, no
-              podrías navegar ni usar sus funciones esenciales. No requieren tu consentimiento.
+              Este sitio no establece cookies propias. La única información que se guarda en
+              tu dispositivo desde el propio dominio adrianpollan.com es tu preferencia de
+              consentimiento sobre cookies, almacenada en el espacio de almacenamiento local
+              del navegador (localStorage) bajo la clave <strong>cookie-consent</strong>. Este
+              valor caduca automáticamente a los 12 meses o puede eliminarse en cualquier
+              momento borrando los datos de sitio desde tu navegador. No se transmite a ningún
+              servidor.
             </p>
-            <CookieTable rows={necesarias} />
 
             <h3>Cookies de análisis y rendimiento</h3>
             <p>
-              Nos ayudan a entender cómo interactúan los visitantes con el sitio, qué páginas
-              se visitan más y dónde se producen errores. La información es agregada y anónima.
+              Estas cookies solo se instalan si aceptas las cookies no esenciales cuando aparece
+              el aviso de cookies. Nos ayudan a entender cómo interactúan los visitantes con el
+              sitio, qué páginas se visitan más y dónde se producen errores. La información es
+              agregada y anónima.
             </p>
-            <CookieTable rows={analitica} />
+            <CookieTable rows={analytics} />
 
-            <h3>Cookies de terceros vinculadas a servicios integrados</h3>
+            <h3>Cookies de servicios integrados (terceros)</h3>
             <p>
-              Cuando interactúas con determinadas funciones del sitio (reservas, pagos), los
-              proveedores externos pueden establecer sus propias cookies. Adrián Pollán no
-              tiene control directo sobre ellas.
+              Cuando interactúas con determinadas funciones del sitio (reservas, pagos,
+              formularios de suscripción, compra de plantillas), los proveedores externos pueden
+              establecer sus propias cookies. Adrián Pollán no tiene control directo sobre ellas.
             </p>
             <div className="not-prose my-6 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -153,19 +156,21 @@ export default function PoliticaCookiesPage() {
               <li><strong>Edge:</strong> Configuración &gt; Privacidad, búsqueda y servicios &gt; Cookies</li>
             </ul>
             <p>
-              Para optar por no participar en Google Analytics específicamente, puedes usar el
-              complemento oficial: tools.google.com/dlpage/gaoptout
+              Para optar por no participar en Google Analytics, puedes usar el complemento
+              oficial: tools.google.com/dlpage/gaoptout
+            </p>
+            <p>
+              Para optar por no participar en Microsoft Clarity, puedes utilizar la herramienta
+              de exclusión de Microsoft: choice.microsoft.com
             </p>
 
             <h2>4. Tu consentimiento</h2>
             <p>
               Cuando accedes por primera vez a adrianpollan.com, verás un aviso que te permite
-              aceptar o rechazar las cookies no esenciales. Puedes modificar tu elección en
-              cualquier momento contactando con nosotros en adrian@adrianpollan.com.
-            </p>
-            <p>
-              Las cookies estrictamente necesarias se instalan de forma automática al acceder
-              al sitio, ya que son indispensables para su funcionamiento.
+              aceptar o rechazar las cookies no esenciales. Las cookies de análisis (Google
+              Analytics 4 y Microsoft Clarity) solo se cargan si aceptas expresamente. Puedes
+              modificar tu elección eliminando los datos de sitio desde tu navegador o
+              contactando con nosotros en adrian@adrianpollan.com.
             </p>
 
             <h2>5. Actualizaciones de esta política</h2>
