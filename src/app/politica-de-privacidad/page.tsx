@@ -1,11 +1,10 @@
-// TODO: revisar con asesor legal antes de publicar
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: { absolute: "Política de Privacidad — Adrián Pollán" },
   description: "Cómo tratamos tus datos personales en adrianpollan.com de acuerdo con el RGPD.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function PoliticaPrivacidadPage() {

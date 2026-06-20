@@ -1,10 +1,9 @@
-// TODO: revisar con asesor legal antes de publicar
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: { absolute: "Aviso Legal — Adrián Pollán" },
   description: "Información legal sobre la titularidad y condiciones de uso de adrianpollan.com.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function AvisoLegalPage() {

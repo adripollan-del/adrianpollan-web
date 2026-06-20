@@ -1,11 +1,10 @@
-// TODO: revisar con asesor legal antes de publicar
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: { absolute: "Términos y Condiciones — Adrián Pollán" },
   description: "Términos y condiciones de uso y contratación de servicios en adrianpollan.com.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function TerminosCondicionesPage() {
