@@ -74,6 +74,7 @@ REQUISITOS:
 - Termina SIEMPRE con este párrafo exacto (no lo modifiques):
   <p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>
 - Busca el ángulo más diferenciado y útil, no el más obvio
+- Ejemplos y cifras: cualquier ejemplo numérico o situación concreta es SIEMPRE hipotético/ilustrativo. Preséntalo como "por ejemplo", "imagina un restaurante donde…", "en un caso típico…" o similar. NUNCA lo etiquetes como "caso real", "caso práctico" ni fórmulas que impliquen que ocurrió con un cliente real.
 
 BLOQUE DE PLANTILLA (obligatorio, exactamente uno por artículo):
 En el momento más relevante del artículo, donde el lector ya entiende el problema que se está tratando, inserta exactamente este bloque HTML adaptando solo el título y la descripción según el tema del artículo:
