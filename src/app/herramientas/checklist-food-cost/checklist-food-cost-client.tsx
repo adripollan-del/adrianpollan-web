@@ -9,6 +9,7 @@ function EmailCapture({ completed, total, level, checkedIds }: { completed: numb
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
   const honeypotRef = useRef<HTMLInputElement>(null);
   const [renderTs, setRenderTs] = useState("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- timestamp en cliente: lazy-init correría en servidor (SSG) y rompería el check de timing del antibot
   useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   async function submit(e: React.FormEvent) {

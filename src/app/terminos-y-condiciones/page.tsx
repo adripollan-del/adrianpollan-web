@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: { absolute: "Términos y Condiciones — Adrián Pollán" },
   description: "Términos y condiciones de uso y contratación de servicios en adrianpollan.com.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function TerminosCondicionesPage() {
@@ -46,8 +46,7 @@ export default function TerminosCondicionesPage() {
               contratación de servicios a través del sitio web adrianpollan.com, titularidad de:
             </p>
             <p>
-              <strong>Adrián Pollán</strong> — Profesional independiente<br />
-              DNI: 71426022M<br />
+              <strong>Adrián Pollán</strong> — Profesional independiente (sole trader)<br />
               Domicilio: The Pier, Lisnard, Ballyvaughan, Co. Clare, Ireland. H91 W9TN<br />
               Correo electrónico: adrian@adrianpollan.com
             </p>
@@ -73,15 +72,24 @@ export default function TerminosCondicionesPage() {
               Servicios profesionales de asesoramiento a negocios gastronómicos y hosteleros,
               en modalidades, alcance y precios que se detallarán en cada propuesta o en la
               página de Servicios del sitio web. La contratación se formaliza a través del
-              proceso de reserva habilitado en el sitio (Calendly + Stripe) o mediante acuerdo
-              escrito previo entre las partes.
+              proceso de reserva habilitado en el sitio (Calendly, con Stripe como procesador
+              de pagos integrado) o mediante acuerdo escrito previo entre las partes.
             </p>
 
-            <h3>c) Contenido editorial y recursos</h3>
+            <h3>c) Contenido editorial y recursos gratuitos</h3>
             <p>
               El sitio incluye un blog y recursos descargables (como el kit del libro El
               Método ADRIÁN) de acceso gratuito, previo registro. Estos contenidos tienen
               carácter informativo y no constituyen asesoramiento profesional individualizado.
+            </p>
+
+            <h3>d) Plantillas digitales</h3>
+            <p>
+              El sitio ofrece recursos descargables de pago (plantillas y materiales de
+              gestión hostelera) a través de Lemon Squeezy. La adquisición se formaliza a
+              través de la plataforma de Lemon Squeezy, que gestiona el proceso de compra,
+              la facturación y el IVA de la UE aplicable. Adrián Pollán actúa como vendedor
+              y Lemon Squeezy como Merchant of Record.
             </p>
 
             <h2>3. Proceso de contratación</h2>
@@ -89,7 +97,7 @@ export default function TerminosCondicionesPage() {
             <ul>
               <li>Selecciona el servicio o sesión que deseas en la página correspondiente.</li>
               <li>Elige fecha y hora disponibles a través del calendario de Calendly.</li>
-              <li>Completa tus datos de contacto y realiza el pago, si procede, a través de Stripe.</li>
+              <li>Completa tus datos de contacto y realiza el pago, si procede, a través del procesador de pagos integrado en Calendly.</li>
               <li>Recibirás una confirmación por correo electrónico con los detalles de la sesión.</li>
             </ul>
             <p>
@@ -102,18 +110,23 @@ export default function TerminosCondicionesPage() {
 
             <h2>4. Precios y forma de pago</h2>
             <p>
-              Los precios de los servicios se indican en el sitio web en euros (EUR) y, salvo
-              indicación expresa, no incluyen el IVA u otros impuestos aplicables según la
-              legislación vigente en cada caso.
+              Los precios de los servicios se indican en el sitio web en euros (EUR). Los
+              servicios de consultoría no incluyen IVA salvo indicación expresa. Las plantillas
+              digitales incluyen el IVA de la UE correspondiente al país del comprador,
+              gestionado por Lemon Squeezy en su condición de Merchant of Record.
             </p>
             <p>
-              El pago se realiza de forma segura a través de Stripe. Adrián Pollán no almacena
-              datos de tarjeta bancaria en ningún momento; dicha información es gestionada
-              íntegramente por Stripe bajo sus propios estándares de seguridad (PCI-DSS).
+              El pago se realiza de forma segura a través de los procesadores integrados en
+              cada plataforma: Stripe, dentro de Calendly (para sesiones de consultoría), y
+              Stripe, dentro de Lemon Squeezy (para plantillas digitales). Adrián Pollán no
+              integra Stripe directamente ni almacena datos de tarjeta bancaria en ningún
+              momento; dicha información es gestionada íntegramente por los procesadores
+              correspondientes bajo sus propios estándares de seguridad (PCI-DSS).
             </p>
 
             <h2>5. Política de cancelación y reembolso</h2>
-            <h3>Cancelaciones por parte del cliente</h3>
+
+            <h3>Cancelaciones por parte del cliente — servicios de consultoría</h3>
             <ul>
               <li>Cancelación con más de 48 horas de antelación a la sesión: reembolso íntegro del importe abonado.</li>
               <li>Cancelación con entre 24 y 48 horas de antelación: reembolso del 50% del importe abonado.</li>
@@ -130,6 +143,19 @@ export default function TerminosCondicionesPage() {
               En el caso excepcional de que sea necesario cancelar o reprogramar una sesión
               desde el lado del prestador, se notificará al cliente con la mayor antelación
               posible y se ofrecerá una nueva fecha o el reembolso íntegro del importe abonado.
+            </p>
+
+            <h3>Plantillas digitales — derecho de desistimiento</h3>
+            <p>
+              Las plantillas digitales son productos de contenido digital de entrega inmediata.
+              De conformidad con el artículo 16(m) de la Directiva 2011/83/UE sobre derechos
+              de los consumidores, el consumidor pierde el derecho de desistimiento en el
+              momento en que se inicia la descarga o el acceso al contenido digital, siempre
+              que haya prestado su consentimiento expreso previo y haya reconocido que, al
+              iniciarse la ejecución, pierde su derecho de desistimiento. Al proceder a la
+              compra, el usuario acepta expresamente estas condiciones y confirma que comprende
+              la pérdida de su derecho de desistimiento una vez iniciada la descarga o el
+              acceso al material.
             </p>
 
             <h2>6. Obligaciones y responsabilidades del cliente</h2>
@@ -192,10 +218,9 @@ export default function TerminosCondicionesPage() {
 
             <h2>11. Legislación aplicable y resolución de conflictos</h2>
             <p>
-              Los presentes Términos y Condiciones se rigen por la legislación española. Para
-              la resolución de cualquier disputa derivada de su interpretación o cumplimiento,
-              las partes se someten a los juzgados y tribunales que correspondan conforme a la
-              normativa aplicable.
+              Los presentes Términos y Condiciones se rigen por la legislación de Irlanda.
+              Para la resolución de cualquier disputa derivada de su interpretación o
+              cumplimiento, las partes se someten a los tribunales de Irlanda.
             </p>
             <p>
               En caso de conflicto con consumidores residentes en la Unión Europea, podrá

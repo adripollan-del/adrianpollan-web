@@ -29,6 +29,7 @@ export default function HerramientasLibroClient() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage.getItem(LS_KEY) === "1") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- hidrata estado de sesión desde localStorage al montar; useState(false) en servidor evita hydration mismatch
       setUnlocked(true);
     }
     setMounted(true);

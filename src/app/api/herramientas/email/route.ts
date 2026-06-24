@@ -24,6 +24,17 @@ const TOOL_TAG: Record<Tool, string> = {
   "auditoria-proveedores": "herramienta-auditoria-proveedores",
 };
 
+// ─── HTML escaping ─────────────────────────────────────────────────────────────
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 // ─── HTML shell ────────────────────────────────────────────────────────────────
 
 function emailShell(bodyContent: string): string {
@@ -76,7 +87,7 @@ function buildEscandalloEmail(data: { dishes?: SavedDish[] }): { subject: string
     .map(
       (d) => `
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;">${d.name || "—"}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;">${escapeHtml(d.name || "—")}</td>
         <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">€${Number(d.costPerPortion).toFixed(3)}</td>
         <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">€${Number(d.recPrice).toFixed(2)}</td>
         <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">${Number(d.foodCostPct).toFixed(0)}%</td>
@@ -121,7 +132,7 @@ function buildPrimeCostEmail(data: {
     { label: "Food Cost", value: `${Number(data.foodCost ?? 0).toFixed(1)}%` },
     { label: "Labour Cost", value: `${Number(data.labourCost ?? 0).toFixed(1)}%` },
     { label: "Prime Cost", value: `${Number(data.primeCost ?? 0).toFixed(1)}%` },
-    { label: "Valoración", value: data.level ?? "—" },
+    { label: "Valoración", value: escapeHtml(data.level ?? "—") },
   ]
     .map(
       (r) => `

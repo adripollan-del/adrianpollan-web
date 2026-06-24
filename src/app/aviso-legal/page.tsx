@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Aviso Legal — Adrián Pollán" },
   description: "Información legal sobre la titularidad y condiciones de uso de adrianpollan.com.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function AvisoLegalPage() {
@@ -39,13 +39,12 @@ export default function AvisoLegalPage() {
           >
             <h2>1. Identificación del titular</h2>
             <p>
-              En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad
-              de la Información y de Comercio Electrónico (LSSI-CE), se informa de que el
-              presente sitio web, adrianpollan.com, es titularidad de:
+              En cumplimiento de las European Communities (Directive 2000/31/EC) Regulations
+              2003 (S.I. No. 68/2003) de Irlanda, se informa de que el presente sitio web,
+              adrianpollan.com, es titularidad de:
             </p>
             <p>
-              <strong>Adrián Pollán</strong> — Profesional independiente (actividad por cuenta propia)<br />
-              DNI: 71426022M<br />
+              <strong>Adrián Pollán</strong> — Profesional independiente (sole trader)<br />
               Domicilio: The Pier, Lisnard, Ballyvaughan, Co. Clare, Ireland. H91 W9TN<br />
               Correo electrónico: adrian@adrianpollan.com
             </p>
@@ -76,8 +75,8 @@ export default function AvisoLegalPage() {
             <p>
               Todos los contenidos del sitio web, incluyendo textos, imágenes, logotipos,
               estructura, diseño y código fuente, son propiedad de Adrián Pollán o de terceros
-              que han autorizado su uso, y están protegidos por la legislación española e
-              internacional sobre propiedad intelectual e industrial.
+              que han autorizado su uso, y están protegidos por la legislación aplicable sobre
+              propiedad intelectual e industrial.
             </p>
             <p>
               Queda expresamente prohibida la reproducción, distribución, transformación o
@@ -108,11 +107,10 @@ export default function AvisoLegalPage() {
 
             <h2>7. Legislación aplicable y jurisdicción</h2>
             <p>
-              Las presentes condiciones se rigen por la legislación española vigente. Para la
+              Las presentes condiciones se rigen por la legislación de Irlanda. Para la
               resolución de cualquier controversia derivada del uso de este sitio web, las
-              partes se someten a los juzgados y tribunales que correspondan según la
-              normativa aplicable, sin perjuicio de otros fueros que pudieran resultar de
-              aplicación.
+              partes se someten a los tribunales de Irlanda, sin perjuicio de otros fueros
+              que pudieran resultar de aplicación.
             </p>
           </article>
         </div>

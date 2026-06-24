@@ -289,7 +289,7 @@ export default function AuditoriaFBPage() {
           </div>
 
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
-            "A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar."
+            &quot;A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
             Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos.

@@ -3,8 +3,14 @@ import { subscribeToList } from "@/lib/mailchimp";
 import { checkLeadLimit, getIP } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_BODY_BYTES = 10_000;
 
 export async function POST(req: Request) {
+  const contentLength = req.headers.get("content-length");
+  if (contentLength && parseInt(contentLength, 10) > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large." }, { status: 413 });
+  }
+
   const listId = process.env.MAILCHIMP_LIBRO_LIST_ID;
   if (!listId) {
     return NextResponse.json(

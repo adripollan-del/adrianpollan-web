@@ -24,10 +24,17 @@ interface LemonOrder {
   };
 }
 
+const MAX_BODY_BYTES = 64 * 1024; // 64 KB — order_created payloads are 3-8 KB in practice; 64 KB is 8-20× that
+
 export async function POST(req: Request) {
   const secret = process.env.LEMONSQUEEZY_SIGNING_SECRET;
   if (!secret) {
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
+  }
+
+  const len = Number(req.headers.get("content-length") ?? 0);
+  if (len > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large" }, { status: 413 });
   }
 
   // Read raw body before any parsing — req.text() can only be called once

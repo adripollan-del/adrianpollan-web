@@ -14,6 +14,8 @@ import { readFileSync, writeFileSync, unlinkSync } from 'fs';
 import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import sanitizeHtml from 'sanitize-html';
+import { BLOG_SANITIZE_OPTIONS } from './src/lib/sanitize-blog-options.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
@@ -72,11 +74,12 @@ REQUISITOS:
 - Termina SIEMPRE con este párrafo exacto (no lo modifiques):
   <p><a href="https://diagnostico.adrianpollan.com">Haz el diagnóstico gratuito de tu restaurante →</a></p>
 - Busca el ángulo más diferenciado y útil, no el más obvio
+- Ejemplos y cifras: cualquier ejemplo numérico o situación concreta es SIEMPRE hipotético/ilustrativo. Preséntalo como "por ejemplo", "imagina un restaurante donde…", "en un caso típico…" o similar. NUNCA lo etiquetes como "caso real", "caso práctico" ni fórmulas que impliquen que ocurrió con un cliente real.
 
 BLOQUE DE PLANTILLA (obligatorio, exactamente uno por artículo):
 En el momento más relevante del artículo, donde el lector ya entiende el problema que se está tratando, inserta exactamente este bloque HTML adaptando solo el título y la descripción según el tema del artículo:
 
-<div style="background-color:#f5f0e8;border-left:4px solid #BA7517;padding:24px 28px;margin:32px 0;border-radius:4px;"><p style="margin:0 0 8px 0;font-weight:700;color:#0f1923;font-size:1rem;">TÍTULO DE LA PLANTILLA MÁS RELEVANTE</p><p style="margin:0 0 16px 0;color:#0f1923;font-size:0.95rem;">DESCRIPCIÓN DE UNA LÍNEA QUE CONECTA EL PROBLEMA DEL ARTÍCULO CON LO QUE RESUELVE LA PLANTILLA</p><a href="/herramientas/plantillas" style="background-color:#BA7517;color:#ffffff;padding:10px 20px;text-decoration:none;font-size:0.9rem;font-weight:600;border-radius:4px;display:inline-block;">Ver plantilla →</a></div>
+<div class="blog-cta-block"><p class="blog-cta-title">TÍTULO DE LA PLANTILLA MÁS RELEVANTE</p><p class="blog-cta-desc">DESCRIPCIÓN DE UNA LÍNEA QUE CONECTA EL PROBLEMA DEL ARTÍCULO CON LO QUE RESUELVE LA PLANTILLA</p><a href="/herramientas/plantillas" class="blog-cta-btn">Ver plantilla →</a></div>
 
 Elige el título según el tema del artículo:
 - Artículos sobre costes, recetas, food cost, precios o márgenes por plato → título: Escandallo y Calculadora de Precios
@@ -275,8 +278,11 @@ function insertArticle({ slug, title, excerpt, category, readTime, coverImage, b
     throw new Error(`El slug ya existe: ${slug}`);
   }
 
+  // Sanitizar HTML antes de guardar (defensa en profundidad)
+  const cleanBody = sanitizeHtml(body, BLOG_SANITIZE_OPTIONS);
+
   // Escapar caracteres que romperían el template literal
-  const safeBody = body
+  const safeBody = cleanBody
     .replace(/`/g,    '\\`')
     .replace(/\$\{/g, '\\${');
 

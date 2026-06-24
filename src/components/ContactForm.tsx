@@ -11,6 +11,7 @@ export default function ContactForm() {
   // Timestamp fijado en el cliente al montar, nunca en el servidor (SSG/SSR).
   // Un useState lazy-init correría en el servidor y daría la hora del build.
   const [renderTs, setRenderTs] = useState("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- timestamp en cliente: lazy-init correría en servidor y rompería el check antibot
   useEffect(() => { setRenderTs(Date.now().toString()); }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -333,7 +333,7 @@ export default function AperturaRestaurantePage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
-            "No se trata de tener el restaurante perfecto desde el día uno. Se trata de no cometer los errores que luego son difíciles de deshacer."
+            &quot;No se trata de tener el restaurante perfecto desde el día uno. Se trata de no cometer los errores que luego son difíciles de deshacer.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
             Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos para

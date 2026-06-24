@@ -37,6 +37,7 @@ export default function AnalyticsScripts() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lee localStorage al montar y suscribe evento custom del DOM; ambas APIs son solo cliente
     setConsented(readConsent() === "accepted");
 
     const handler = () => setConsented(readConsent() === "accepted");
@@ -60,7 +61,7 @@ export default function AnalyticsScripts() {
           gtag('config', 'G-RJSBHMJ9BL');
         `}
       </Script>
-      <Script id="clarity" strategy="lazyOnload">
+      <Script id="clarity-sdk" strategy="lazyOnload">
         {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wthj8c4zuf");`}
       </Script>
       <Script id="event-tracking" strategy="lazyOnload">

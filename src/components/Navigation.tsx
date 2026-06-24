@@ -37,11 +37,13 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- cierra el menú al cambiar de ruta; derivar pathname en render causaría parpadeo entre páginas
     setIsOpen(false);
     setHerramientasOpen(false);
   }, [pathname]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- sincroniza cierre del dropdown cuando el menú móvil se cierra
     if (!isOpen) setHerramientasOpen(false);
   }, [isOpen]);
 

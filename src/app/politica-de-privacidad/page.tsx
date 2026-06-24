@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: { absolute: "Política de Privacidad — Adrián Pollán" },
   description: "Cómo tratamos tus datos personales en adrianpollan.com de acuerdo con el RGPD.",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function PoliticaPrivacidadPage() {
@@ -84,15 +84,80 @@ export default function PoliticaPrivacidadPage() {
               retires el consentimiento.
             </p>
 
-            <h3>d) Reserva de consultoría</h3>
+            <h3>d) Acceso a herramientas gratuitas de gestión</h3>
+            <p>
+              <strong>Datos:</strong> correo electrónico.<br />
+              <strong>Finalidad:</strong> enviarte por correo el resultado de la herramienta
+              utilizada (escandallo, prime cost, checklists o auditoría de proveedores) e
+              incorporarte a la lista de audiencia de herramientas gratuitas para comunicaciones
+              relacionadas.<br />
+              <strong>Base legal:</strong> consentimiento expreso del interesado (art. 6.1.a del RGPD).<br />
+              <strong>Conservación:</strong> el resultado se procesa en memoria y se entrega
+              inmediatamente por correo; no se almacena de forma persistente en ningún sistema
+              propio. El correo electrónico se conserva en la lista de Mailchimp mientras
+              mantengas la suscripción activa.
+            </p>
+
+            <h3>e) Diagnóstico F&amp;B (diagnostico.adrianpollan.com)</h3>
+            <p>
+              <strong>Datos:</strong> respuestas al cuestionario de diagnóstico (67 preguntas
+              sobre 8 áreas de gestión) y correo electrónico.<br />
+              <strong>Finalidad:</strong> generar y enviarte un informe personalizado de
+              diagnóstico de tu negocio e incorporarte a la lista de audiencia correspondiente.<br />
+              <strong>Base legal:</strong> consentimiento expreso del interesado (art. 6.1.a del RGPD).<br />
+              <strong>Conservación:</strong> las respuestas al cuestionario se almacenan durante
+              90 días para la generación del informe; el correo electrónico se conserva mientras
+              mantengas la suscripción activa o hasta que retires el consentimiento.
+            </p>
+
+            <h3>f) Test Dirige — ¿Sabes cuánto gana tu restaurante? (test.adrianpollan.com)</h3>
+            <p>
+              <strong>Datos:</strong> respuestas al test de números del negocio (indicadores
+              financieros y operativos), nombre del negocio y correo electrónico.<br />
+              <strong>Finalidad:</strong> generar y enviarte un resultado personalizado con el
+              diagnóstico financiero de tu negocio e incorporarte a la lista de audiencia
+              correspondiente.<br />
+              <strong>Base legal:</strong> consentimiento expreso del interesado (art. 6.1.a del RGPD).<br />
+              <strong>Conservación:</strong> los datos del test se almacenan durante 90 días para
+              permitir el acceso al resultado; el correo electrónico se conserva mientras
+              mantengas la suscripción activa o hasta que retires el consentimiento.
+            </p>
+
+            <h3>g) Reserva de consultoría</h3>
             <p>
               <strong>Datos:</strong> nombre, correo electrónico, datos de pago (gestionados por
-              Stripe) e información que compartas voluntariamente en el proceso de reserva.<br />
+              Stripe a través de Calendly) e información que compartas voluntariamente en el
+              proceso de reserva.<br />
               <strong>Finalidad:</strong> gestionar la contratación, el cobro y la prestación
               del servicio de consultoría.<br />
               <strong>Base legal:</strong> ejecución de un contrato (art. 6.1.b del RGPD).<br />
               <strong>Conservación:</strong> durante la relación contractual y, posteriormente,
-              durante los plazos legales de conservación fiscal y mercantil (generalmente 5 años).
+              durante los plazos legales de conservación fiscal y mercantil aplicables en Irlanda
+              (6 años desde la fecha de la transacción, conforme al artículo 886 del Taxes
+              Consolidation Act 1997).
+            </p>
+
+            <h3>h) Compra de plantillas digitales</h3>
+            <p>
+              <strong>Datos:</strong> nombre y correo electrónico, gestionados por Lemon Squeezy
+              como plataforma de venta.<br />
+              <strong>Finalidad:</strong> gestionar la transacción, la emisión de la factura, el
+              IVA de la UE aplicable y el acceso al material adquirido.<br />
+              <strong>Base legal:</strong> ejecución de un contrato (art. 6.1.b del RGPD).<br />
+              <strong>Conservación:</strong> conforme a los plazos legales de conservación fiscal
+              aplicables en Irlanda (6 años).
+            </p>
+
+            <h3>i) Chat del sitio web</h3>
+            <p>
+              <strong>Datos:</strong> el contenido de las conversaciones que inicies con el
+              asistente del sitio.<br />
+              <strong>Finalidad:</strong> responder tus preguntas y ofrecerte orientación sobre
+              los servicios disponibles.<br />
+              <strong>Base legal:</strong> interés legítimo del responsable (art. 6.1.f del RGPD).<br />
+              <strong>Conservación:</strong> las conversaciones se procesan en tiempo real por el
+              proveedor de IA (Anthropic) y no se almacenan de forma persistente en sistemas
+              propios.
             </p>
 
             <h2>3. Encargados del tratamiento (terceros)</h2>
@@ -104,19 +169,40 @@ export default function PoliticaPrivacidadPage() {
             <ul>
               <li>
                 <strong>Mailchimp</strong> (Intuit Inc.): gestión de listas de correo y envío de
-                comunicaciones. mailchimp.com/legal/privacy
+                comunicaciones (newsletter, audiencias de herramientas gratuitas, diagnóstico,
+                test Dirige y compradores de plantillas). mailchimp.com/legal/privacy
               </li>
               <li>
-                <strong>Calendly</strong>: gestión de reservas y citas. calendly.com/privacy
+                <strong>Calendly</strong>: gestión de reservas y citas de consultoría.
+                calendly.com/privacy
               </li>
               <li>
-                <strong>Stripe</strong>: procesamiento seguro de pagos. stripe.com/privacy
+                <strong>Lemon Squeezy</strong> (Lemon Squeezy LLC): plataforma de venta de
+                plantillas digitales y gestión del IVA de la UE. lemonsqueezy.com/privacy
               </li>
               <li>
-                <strong>Squarespace</strong>: plataforma de alojamiento del sitio web.
-                squarespace.com/privacy
+                <strong>Resend</strong>: envío de correos electrónicos transaccionales
+                (confirmaciones de contacto, entrega de resultados de herramientas, diagnóstico
+                y test Dirige). resend.com/privacy
+              </li>
+              <li>
+                <strong>Upstash</strong>: almacenamiento temporal de datos para control de tasa
+                de uso (rate limiting) de formularios y del chat en adrianpollan.com, y para el
+                almacenamiento de resultados del diagnóstico (90 días) y del test Dirige (90 días)
+                en sus respectivos subdominios. upstash.com/privacy
+              </li>
+              <li>
+                <strong>Anthropic</strong>: procesamiento de conversaciones del chat del sitio y
+                generación de contenido personalizado del diagnóstico F&amp;B.
+                anthropic.com/privacy
               </li>
             </ul>
+            <p>
+              Stripe actúa como procesador de pagos dentro de las plataformas Calendly (para
+              reservas de consultoría) y Lemon Squeezy (para compras de plantillas digitales).
+              Adrián Pollán no integra Stripe directamente ni almacena datos de tarjeta en ningún
+              momento. stripe.com/privacy
+            </p>
             <p>
               Ninguno de estos proveedores está autorizado a utilizar tus datos para fines
               propios distintos de los descritos.
@@ -148,8 +234,9 @@ export default function PoliticaPrivacidadPage() {
             <p>
               Si consideras que el tratamiento de tus datos no es conforme al RGPD, tienes
               derecho a presentar una reclamación ante la autoridad de control competente.
-              En España: la Agencia Española de Protección de Datos (www.aepd.es). En Irlanda:
-              la Data Protection Commission (www.dataprotection.ie).
+              La autoridad principal es la <strong>Data Protection Commission (DPC) de
+              Irlanda</strong> (www.dataprotection.ie). Si resides en España, también puedes
+              dirigirte a la Agencia Española de Protección de Datos (www.aepd.es).
             </p>
 
             <h2>6. Seguridad</h2>
@@ -160,10 +247,10 @@ export default function PoliticaPrivacidadPage() {
               podemos garantizar una seguridad absoluta.
             </p>
 
-            <h2>7. Cookies</h2>
+            <h2>7. Cookies y almacenamiento local</h2>
             <p>
-              Este sitio web utiliza cookies propias y de terceros. Para más información,
-              consulta nuestra{" "}
+              Este sitio web utiliza cookies de terceros y almacenamiento local del navegador.
+              Para más información, consulta nuestra{" "}
               <Link href="/politica-de-cookies">Política de Cookies</Link>.
             </p>
 
