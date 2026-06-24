@@ -102,6 +102,54 @@ export async function fireHerramientaIngest(args: {
   }
 }
 
+export async function fireLemonIngest(args: {
+  orderId: string;
+  email: string;
+  productName: string;
+  priceEuros: number;
+  createdAt: string;
+}): Promise<void> {
+  const secret = process.env.INGEST_SECRET;
+  if (!secret) {
+    console.warn("[ingest] INGEST_SECRET no configurado — webhook omitido");
+    return;
+  }
+
+  const payload = {
+    external_id: `lemon-${args.orderId}`,
+    source: "plantilla",
+    email: args.email,
+    business_name: null,
+    course_product: args.productName,
+    course_value: args.priceEuros,
+    course_purchased_at: args.createdAt,
+  };
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
+  try {
+    const res = await fetch(INGEST_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Ingest-Secret": secret,
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    if (!res.ok) {
+      console.error(`[ingest] lemon webhook respondió ${res.status} — no bloquea el flujo`);
+    } else {
+      console.log("[ingest] lemon webhook OK");
+    }
+  } catch (err) {
+    console.error("[ingest] lemon webhook falló (no bloquea el flujo):", err);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 export async function fireNewsletterIngest(args: {
   email: string;
   createdAt: string;
