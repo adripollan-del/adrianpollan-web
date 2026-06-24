@@ -49,6 +49,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  console.log("[newsletter] email=", JSON.stringify(email), "type=", typeof email, "re=", EMAIL_RE.test(typeof email === "string" ? email : ""), "body_keys=", Object.keys(body).join(","));
   if (typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 254) {
     return NextResponse.json({ error: "El email no es válido." }, { status: 400 });
   }
