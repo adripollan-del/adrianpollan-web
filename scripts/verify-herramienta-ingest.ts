@@ -78,26 +78,27 @@ async function case2DobleEnvio(): Promise<void> {
 }
 
 async function case3RutaLenta(): Promise<void> {
-  console.log("\n=== Caso 3: Ruta lenta — after() no bloqueado por HERRAMIENTA_DELAY_MS ===");
+  console.log("\n=== Caso 3: Ruta lenta — after() se registra al final de un handler lento ===");
   await resetStub();
 
+  const delayMs = Number(process.env.HERRAMIENTA_DELAY_MS ?? 3000);
   const start = Date.now();
   const r = await postHerramienta({ ...primeCostBase, email: `lenta-${Date.now()}@verificacion.test` });
   const elapsed = Date.now() - start;
 
   if (!r.ok) throw new Error(`endpoint respondió ${r.status}`);
 
-  const delayMs = Number(process.env.HERRAMIENTA_DELAY_MS ?? 3000);
-  if (elapsed >= delayMs) {
-    throw new Error(`La respuesta tardó ${elapsed}ms — debería retornar antes del delay (${delayMs}ms)`);
+  // El handler es intencionalmente lento: la respuesta debe llegar después del delay
+  if (elapsed < delayMs) {
+    throw new Error(`Respuesta en ${elapsed}ms — esperaba ≥ ${delayMs}ms (HERRAMIENTA_DELAY_MS activo)`);
   }
 
-  // Esperamos delay + margen para que after() complete
-  await new Promise((res) => setTimeout(res, delayMs + 2000));
+  // after() se ejecuta tras la respuesta, damos margen para que complete
+  await new Promise((res) => setTimeout(res, 2000));
 
   const count = await getCallCount();
-  if (count !== 1) throw new Error(`Esperaba 1 llamada tras el delay, recibí ${count}`);
-  console.log(`✓ Respuesta en ${elapsed}ms (< ${delayMs}ms), after() disparó webhook igualmente`);
+  if (count !== 1) throw new Error(`Esperaba 1 llamada tras el handler lento, recibí ${count}`);
+  console.log(`✓ Handler lento (${elapsed}ms ≥ ${delayMs}ms delay) — after() disparó webhook igualmente`);
 }
 
 async function main(): Promise<void> {
