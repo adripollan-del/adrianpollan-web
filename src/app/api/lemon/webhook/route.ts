@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { createHmac, createHash, timingSafeEqual } from "crypto";
+import { fireLemonIngest } from "@/lib/ingest";
 
 const PRODUCT_TAG_MAP: Record<number, string> = {
   1105907: "plantilla-inventario",
@@ -17,9 +18,15 @@ const PRODUCT_TAG_MAP: Record<number, string> = {
 interface LemonOrder {
   meta?: { event_name?: string };
   data?: {
+    id?: string;
     attributes?: {
       user_email?: string;
-      first_order_item?: { product_id?: number };
+      total?: number;
+      created_at?: string;
+      first_order_item?: {
+        product_id?: number;
+        product_name?: string;
+      };
     };
   };
 }
@@ -77,17 +84,32 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  const orderId = body.data?.id;
   const attrs = body.data?.attributes;
   const email = attrs?.user_email;
   const productId = attrs?.first_order_item?.product_id;
 
-  if (!email || !productId) {
-    return NextResponse.json({ error: "Missing email or product_id" }, { status: 400 });
+  if (!orderId || !email || !productId) {
+    return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
   const tag = PRODUCT_TAG_MAP[productId];
   if (!tag) {
     // Unknown product — acknowledge without error
+    return NextResponse.json({ ok: true });
+  }
+
+  const createdAt = attrs?.created_at ?? new Date().toISOString();
+  const productName = attrs?.first_order_item?.product_name ?? tag;
+  // Lemon Squeezy sends total in smallest currency unit (cents); divide to get euros
+  const priceEuros = typeof attrs?.total === "number" ? attrs.total / 100 : 0;
+
+  // Test mode: skip Mailchimp, fire ingest directly via after()
+  if (process.env.ENABLE_TEST_ROUTES === "true") {
+    if (process.env.LEMON_DELAY_MS) {
+      await new Promise<void>((r) => setTimeout(r, Number(process.env.LEMON_DELAY_MS)));
+    }
+    after(() => fireLemonIngest({ orderId, email, productName, priceEuros, createdAt }));
     return NextResponse.json({ ok: true });
   }
 
@@ -145,5 +167,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Failed to add Mailchimp tag" }, { status: 500 });
   }
 
+  // after() debe recibir una Promise explícita — sin retornarla, Vercel congela
+  // la función antes de que el fetch interno complete (bug confirmado 2026-06-23).
+  after(() => fireLemonIngest({ orderId, email, productName, priceEuros, createdAt }));
   return NextResponse.json({ ok: true });
 }

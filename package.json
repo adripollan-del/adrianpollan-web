@@ -37,6 +37,7 @@
     }
   },
   "devDependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@playwright/test": "^1.61.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
