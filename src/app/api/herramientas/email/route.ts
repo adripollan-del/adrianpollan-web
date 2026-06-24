@@ -1,7 +1,8 @@
 import { createHash } from "crypto";
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { Resend } from "resend";
 import { checkLeadLimit, getIP } from "@/lib/rate-limit";
+import { fireHerramientaIngest } from "@/lib/ingest";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_BODY_BYTES = 50_000;
@@ -315,14 +316,6 @@ export async function POST(req: Request) {
     );
   }
 
-  const apiKey = process.env.MAILCHIMP_API_KEY;
-  const audienceId = process.env.MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID;
-  const resendKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey || !audienceId || !resendKey) {
-    return NextResponse.json({ error: "Server not configured" }, { status: 500 });
-  }
-
   let body: { email?: string; tool?: string; data?: unknown; _hp?: string; _ts?: string };
   try {
     body = await req.json();
@@ -358,7 +351,6 @@ export async function POST(req: Request) {
   }
 
   const validTool = tool as Tool;
-  const tag = TOOL_TAG[validTool];
 
   // Validación de data
   const toolData = (data ?? {}) as Record<string, unknown>;
@@ -381,74 +373,91 @@ export async function POST(req: Request) {
     }
   }
 
-  // ── Mailchimp upsert ───────────────────────────────────────────────────────
-  const dc = apiKey.split("-").pop();
-  if (!dc) {
-    return NextResponse.json({ error: "Invalid Mailchimp API key" }, { status: 500 });
+  if (process.env.ENABLE_TEST_ROUTES !== "true") {
+    const apiKey = process.env.MAILCHIMP_API_KEY;
+    const audienceId = process.env.MAILCHIMP_HERRAMIENTAS_AUDIENCE_ID;
+    const resendKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey || !audienceId || !resendKey) {
+      return NextResponse.json({ error: "Server not configured" }, { status: 500 });
+    }
+
+    // ── Mailchimp upsert ─────────────────────────────────────────────────────
+    const tag = TOOL_TAG[validTool];
+    const dc = apiKey.split("-").pop();
+    if (!dc) {
+      return NextResponse.json({ error: "Invalid Mailchimp API key" }, { status: 500 });
+    }
+
+    const subscriberHash = createHash("md5").update(email.toLowerCase()).digest("hex");
+    const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
+    const memberUrl = `https://${dc}.api.mailchimp.com/3.0/lists/${audienceId}/members/${subscriberHash}`;
+
+    const memberRes = await fetch(memberUrl, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json", Authorization: `Basic ${auth}` },
+      body: JSON.stringify({ email_address: email, status_if_new: "subscribed" }),
+    });
+
+    if (!memberRes.ok) {
+      const err = await memberRes.json().catch(() => null);
+      console.error("[herramientas/email] Mailchimp member error:", err);
+      return NextResponse.json({ error: "Failed to upsert Mailchimp member" }, { status: 500 });
+    }
+
+    const tagRes = await fetch(`${memberUrl}/tags`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Basic ${auth}` },
+      body: JSON.stringify({ tags: [{ name: tag, status: "active" }] }),
+    });
+
+    if (!tagRes.ok) {
+      const err = await tagRes.json().catch(() => null);
+      console.error("[herramientas/email] Mailchimp tag error:", err);
+      return NextResponse.json({ error: "Failed to add Mailchimp tag" }, { status: 500 });
+    }
+
+    // ── Build email content ──────────────────────────────────────────────────
+    let emailContent: { subject: string; html: string };
+
+    switch (validTool) {
+      case "escandallo":
+        emailContent = buildEscandalloEmail(toolData as Parameters<typeof buildEscandalloEmail>[0]);
+        break;
+      case "prime-cost":
+        emailContent = buildPrimeCostEmail(toolData as Parameters<typeof buildPrimeCostEmail>[0]);
+        break;
+      case "checklist-apertura":
+        emailContent = buildChecklistAperturaEmail(toolData as Parameters<typeof buildChecklistAperturaEmail>[0]);
+        break;
+      case "checklist-food-cost":
+        emailContent = buildChecklistFoodCostEmail(toolData as Parameters<typeof buildChecklistFoodCostEmail>[0]);
+        break;
+      case "auditoria-proveedores":
+        emailContent = buildAuditoriaProveedoresEmail(toolData as Parameters<typeof buildAuditoriaProveedoresEmail>[0]);
+        break;
+    }
+
+    // ── Send email via Resend ────────────────────────────────────────────────
+    const resend = new Resend(resendKey);
+    const { error: sendError } = await resend.emails.send({
+      from: "Adrián Pollán <adrian@adrianpollan.com>",
+      to: email,
+      subject: emailContent.subject,
+      html: emailContent.html,
+    });
+
+    if (sendError) {
+      console.error("[herramientas/email] Resend error:", sendError);
+      return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    }
   }
 
-  const subscriberHash = createHash("md5").update(email.toLowerCase()).digest("hex");
-  const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
-  const memberUrl = `https://${dc}.api.mailchimp.com/3.0/lists/${audienceId}/members/${subscriberHash}`;
-
-  const memberRes = await fetch(memberUrl, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json", Authorization: `Basic ${auth}` },
-    body: JSON.stringify({ email_address: email, status_if_new: "subscribed" }),
-  });
-
-  if (!memberRes.ok) {
-    const err = await memberRes.json().catch(() => null);
-    console.error("[herramientas/email] Mailchimp member error:", err);
-    return NextResponse.json({ error: "Failed to upsert Mailchimp member" }, { status: 500 });
+  // Test: simula handler lento antes de que after() se registre
+  if (process.env.ENABLE_TEST_ROUTES === "true" && process.env.HERRAMIENTA_DELAY_MS) {
+    await new Promise<void>((r) => setTimeout(r, Number(process.env.HERRAMIENTA_DELAY_MS)));
   }
 
-  const tagRes = await fetch(`${memberUrl}/tags`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Basic ${auth}` },
-    body: JSON.stringify({ tags: [{ name: tag, status: "active" }] }),
-  });
-
-  if (!tagRes.ok) {
-    const err = await tagRes.json().catch(() => null);
-    console.error("[herramientas/email] Mailchimp tag error:", err);
-    return NextResponse.json({ error: "Failed to add Mailchimp tag" }, { status: 500 });
-  }
-
-  // ── Build email content ────────────────────────────────────────────────────
-  let emailContent: { subject: string; html: string };
-
-  switch (validTool) {
-    case "escandallo":
-      emailContent = buildEscandalloEmail(toolData as Parameters<typeof buildEscandalloEmail>[0]);
-      break;
-    case "prime-cost":
-      emailContent = buildPrimeCostEmail(toolData as Parameters<typeof buildPrimeCostEmail>[0]);
-      break;
-    case "checklist-apertura":
-      emailContent = buildChecklistAperturaEmail(toolData as Parameters<typeof buildChecklistAperturaEmail>[0]);
-      break;
-    case "checklist-food-cost":
-      emailContent = buildChecklistFoodCostEmail(toolData as Parameters<typeof buildChecklistFoodCostEmail>[0]);
-      break;
-    case "auditoria-proveedores":
-      emailContent = buildAuditoriaProveedoresEmail(toolData as Parameters<typeof buildAuditoriaProveedoresEmail>[0]);
-      break;
-  }
-
-  // ── Send email via Resend ─────────────────────────────────────────────────
-  const resend = new Resend(resendKey);
-  const { error: sendError } = await resend.emails.send({
-    from: "Adrián Pollán <adrian@adrianpollan.com>",
-    to: email,
-    subject: emailContent.subject,
-    html: emailContent.html,
-  });
-
-  if (sendError) {
-    console.error("[herramientas/email] Resend error:", sendError);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
-  }
-
+  after(() => fireHerramientaIngest({ email, tool: validTool, toolData, createdAt: new Date().toISOString() }));
   return NextResponse.json({ ok: true });
 }
