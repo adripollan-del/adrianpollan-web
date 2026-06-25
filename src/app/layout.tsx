@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     url: "https://adrianpollan.com",
     images: [
       {
-        url: "/og-image-square.png",
+        url: "/social/og-image.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Adrián Pollán — Consultor de Hostelería y Restauración",
       },
     ],
@@ -58,24 +58,29 @@ export const metadata: Metadata = {
     title: "Adrián Pollán | Consultor de Hostelería y Restauración",
     description:
       "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real.",
-    images: ["/og-image-square.png"],
+    images: ["/social/social-preview.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/favicon/favicon-64x64.png", sizes: "64x64", type: "image/png" },
-      { url: "/favicon/favicon-128x128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicon/favicon-256x256.png", sizes: "256x256", type: "image/png" },
+      { url: "/favicons/favicon.ico", sizes: "any" },
+      { url: "/favicons/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicons/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicons/favicon-64x64.png", sizes: "64x64", type: "image/png" },
     ],
-    apple: "/favicon/apple-touch-icon.png",
+    apple: { url: "/favicons/apple-touch-icon.png", sizes: "180x180" },
     other: [
-      { rel: "android-chrome", url: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
-      { rel: "android-chrome", url: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
+      { rel: "android-chrome", url: "/favicons/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "android-chrome", url: "/favicons/android-chrome-512x512.png", sizes: "512x512" },
+      { rel: "msapplication-config", url: "/favicons/browserconfig.xml" },
     ],
   },
-  manifest: "/favicon/site.webmanifest",
+  manifest: "/favicons/site.webmanifest",
+  other: {
+    "msapplication-TileColor": "#23272B",
+    "theme-color": "#23272B",
+  },
   robots: {
     index: true,
     follow: true,
@@ -97,7 +102,7 @@ const jsonLd = {
       "@id": "https://adrianpollan.com/#person",
       name: "Adrián Pollán",
       url: "https://adrianpollan.com",
-      image: "https://adrianpollan.com/og-image-square.png",
+      image: "https://adrianpollan.com/social/og-image.png",
       jobTitle: "Consultor de Hostelería y Restauración",
       description:
         "Consultor especializado en rentabilidad de restaurantes, gestión operativa y F&B con más de 20 años de experiencia en España, Francia, Reino Unido e Irlanda.",

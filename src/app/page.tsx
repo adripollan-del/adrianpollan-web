@@ -17,12 +17,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://adrianpollan.com",
   },
-  openGraph: {
-    title: "Adrián Pollán | Consultor de Hostelería y Restauración",
-    description:
-      "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia real.",
-    url: "https://adrianpollan.com",
-  },
 };
 
 const PHOTOS = {

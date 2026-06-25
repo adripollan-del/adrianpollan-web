@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="AP favicon">
+  <rect width="512" height="512" rx="84" fill="#23272B"/>
+  <g transform="translate(56,56) scale(0.463499)">
+    <path d="M 240 578 L 241 582 L 527 582 L 528 580 L 459 443 L 457 441 L 313 441 L 311 442 Z M 318 3 L 311 10 L 7 567 L 1 579 L 2 582 L 125 582 L 328 212 L 376 124 L 380 113 Z M 417 1 L 422 16 L 526 205 L 529 203 L 530 121 L 651 121 L 670 125 L 688 133 L 708 148 L 730 178 L 740 209 L 740 243 L 733 268 L 715 297 L 690 318 L 664 329 L 590 334 L 590 580 L 700 582 L 702 442 L 730 432 L 759 416 L 805 376 L 831 339 L 852 290 L 859 258 L 861 218 L 856 178 L 842 135 L 823 100 L 787 58 L 746 28 L 698 8 L 662 1 Z" fill="#A3814B" fill-rule="evenodd"/>
+  </g>
+</svg>
