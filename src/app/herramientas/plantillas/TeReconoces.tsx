@@ -47,7 +47,7 @@ function TypewriterCard({
   }, [typing, text]);
 
   return (
-    <div className="bg-[#f5f0e8] border-l-4 border-amber rounded-r-xl p-7">
+    <div className="bg-[#EDE6D8] border-l-4 border-amber rounded-r-xl p-7">
       <div className="mb-4">{icon}</div>
       <p className="font-body text-navy text-base leading-relaxed min-h-[5rem]">
         {displayed}

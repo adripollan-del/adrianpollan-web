@@ -275,7 +275,7 @@ export default function MenuEngineeringPage() {
       </section>
 
       {/* ── TAMBIÉN EN PACK ──────────────────────────────────────── */}
-      <section className="bg-[#f5f0e8] py-20 lg:py-28">
+      <section className="bg-[#EDE6D8] py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-3">
             También disponible en pack

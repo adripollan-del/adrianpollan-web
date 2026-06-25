@@ -59,7 +59,7 @@ export default function HerramientasLibroClient() {
 
   if (!unlocked) {
     return (
-      <div className="min-h-[calc(100vh-5rem)] bg-[#0f1923] flex items-center justify-center px-6 py-20">
+      <div className="min-h-[calc(100vh-5rem)] bg-[#23272B] flex items-center justify-center px-6 py-20">
         <div className="w-full max-w-sm">
           {/* Logo */}
           <div className="text-center mb-10">

@@ -10,7 +10,7 @@ const phases = [
 function ArrowRight() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M2 9h12M9 3l6 6-6 6" stroke="#BA7517" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M2 9h12M9 3l6 6-6 6" stroke="#A3814B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -18,7 +18,7 @@ function ArrowRight() {
 function ArrowDown() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M9 2v12M3 9l6 6 6-6" stroke="#BA7517" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 2v12M3 9l6 6 6-6" stroke="#A3814B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

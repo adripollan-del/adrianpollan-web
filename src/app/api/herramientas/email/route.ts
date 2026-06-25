@@ -53,7 +53,7 @@ function emailShell(bodyContent: string): string {
             <p style="color:#888;font-size:13px;line-height:1.6;margin:0;">
               Adrián Pollán<br>
               Consultor en Restauración y F&amp;B<br>
-              <a href="https://adrianpollan.com" style="color:#BA7517;text-decoration:none;">adrianpollan.com</a>
+              <a href="https://adrianpollan.com" style="color:#A3814B;text-decoration:none;">adrianpollan.com</a>
             </p>
           </td>
         </tr>
@@ -65,10 +65,10 @@ function emailShell(bodyContent: string): string {
 }
 
 function btn(text: string, href: string): string {
-  return `<a href="${href}" style="display:inline-block;background:#BA7517;color:#ffffff;font-size:14px;font-weight:700;padding:12px 24px;text-decoration:none;margin:20px 0 8px;">${text}</a>`;
+  return `<a href="${href}" style="display:inline-block;background:#A3814B;color:#ffffff;font-size:14px;font-weight:700;padding:12px 24px;text-decoration:none;margin:20px 0 8px;">${text}</a>`;
 }
 
-function p(text: string, color = "#0f1923"): string {
+function p(text: string, color = "#23272B"): string {
   return `<p style="color:${color};font-size:15px;line-height:1.7;margin:0 0 16px;">${text}</p>`;
 }
 
@@ -88,11 +88,11 @@ function buildEscandalloEmail(data: { dishes?: SavedDish[] }): { subject: string
     .map(
       (d) => `
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;">${escapeHtml(d.name || "—")}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">€${Number(d.costPerPortion).toFixed(3)}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">€${Number(d.recPrice).toFixed(2)}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">${Number(d.foodCostPct).toFixed(0)}%</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;">${Number(d.marginPct).toFixed(0)}%</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;">${escapeHtml(d.name || "—")}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;text-align:right;">€${Number(d.costPerPortion).toFixed(3)}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;text-align:right;">€${Number(d.recPrice).toFixed(2)}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;text-align:right;">${Number(d.foodCostPct).toFixed(0)}%</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;text-align:right;">${Number(d.marginPct).toFixed(0)}%</td>
       </tr>`
     )
     .join("");
@@ -101,7 +101,7 @@ function buildEscandalloEmail(data: { dishes?: SavedDish[] }): { subject: string
     dishes.length > 0
       ? `<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:16px 0 24px;">
           <thead>
-            <tr style="background:#0f1923;">
+            <tr style="background:#23272B;">
               <th style="padding:10px 12px;color:#ffffff;font-size:12px;text-align:left;text-transform:uppercase;letter-spacing:1px;">Plato</th>
               <th style="padding:10px 12px;color:#ffffff;font-size:12px;text-align:right;text-transform:uppercase;letter-spacing:1px;">Coste/ración</th>
               <th style="padding:10px 12px;color:#ffffff;font-size:12px;text-align:right;text-transform:uppercase;letter-spacing:1px;">PVP recom.</th>
@@ -138,15 +138,15 @@ function buildPrimeCostEmail(data: {
     .map(
       (r) => `
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;">${r.label}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#0f1923;font-size:14px;text-align:right;font-weight:700;">${r.value}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;">${r.label}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #f0ebe3;color:#23272B;font-size:14px;text-align:right;font-weight:700;">${r.value}</td>
       </tr>`
     )
     .join("");
 
   const table = `<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:16px 0 24px;">
     <thead>
-      <tr style="background:#0f1923;">
+      <tr style="background:#23272B;">
         <th style="padding:10px 12px;color:#ffffff;font-size:12px;text-align:left;text-transform:uppercase;letter-spacing:1px;">Indicador</th>
         <th style="padding:10px 12px;color:#ffffff;font-size:12px;text-align:right;text-transform:uppercase;letter-spacing:1px;">Resultado</th>
       </tr>
@@ -206,7 +206,7 @@ function renderChecklistBlocks(
           </tr>`;
         })
         .join("");
-      return `<p style="color:#0f1923;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:20px 0 2px;padding:0;">${block.title}</p>
+      return `<p style="color:#23272B;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:20px 0 2px;padding:0;">${block.title}</p>
 <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:8px;"><tbody>${rows}</tbody></table>`;
     })
     .join("");

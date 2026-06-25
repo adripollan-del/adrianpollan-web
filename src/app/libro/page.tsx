@@ -110,7 +110,7 @@ export default function LibroPage() {
             <div className="order-2 lg:order-1">
               <div className="relative aspect-[3/4] max-w-xs mx-auto lg:mx-0">
                 <div className="absolute -bottom-3 -right-3 inset-0 bg-navy/50 border border-cream/5" />
-                <div className="relative h-full bg-gradient-to-br from-amber via-amber to-[#9a6214] flex flex-col justify-between p-10 overflow-hidden border border-amber/20">
+                <div className="relative h-full bg-gradient-to-br from-amber via-amber to-[#876B3E] flex flex-col justify-between p-10 overflow-hidden border border-amber/20">
                   <div className="flex justify-between items-start">
                     <div className="w-12 h-12 border border-navy/20 rounded-full" />
                     <p className="font-body text-navy/40 text-xs tracking-widest uppercase">

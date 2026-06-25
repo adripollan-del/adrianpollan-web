@@ -205,7 +205,7 @@ export default function HerramientasPage() {
             {paidTemplates.map((tpl) => (
               <div
                 key={tpl.title}
-                className="bg-[#f5f0e8] border border-navy/8 rounded-xl p-7 flex flex-col"
+                className="bg-[#EDE6D8] border border-navy/8 rounded-xl p-7 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="font-display text-navy text-lg font-semibold leading-snug pr-4">
