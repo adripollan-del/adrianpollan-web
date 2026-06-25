@@ -326,7 +326,7 @@ export default function EscandalloClient() {
             value={targetFC}
             onChange={(e) => setTargetFC(parseInt(e.target.value))}
             className="w-full"
-            style={{ accentColor: "#BA7517" }}
+            style={{ accentColor: "#A3814B" }}
           />
           <div className="flex justify-between font-body text-ink/40 text-xs mt-1">
             <span>20%</span>

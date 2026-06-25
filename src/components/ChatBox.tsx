@@ -43,9 +43,9 @@ function MessageIcon({ size = 26 }: { size?: number }) {
         fill="white"
       />
       {/* Tres puntos — sugieren conversación activa */}
-      <circle cx="9.5" cy="11" r="1.8" fill="#0f1923" />
-      <circle cx="14"  cy="11" r="1.8" fill="#0f1923" />
-      <circle cx="18.5" cy="11" r="1.8" fill="#0f1923" />
+      <circle cx="9.5" cy="11" r="1.8" fill="#23272B" />
+      <circle cx="14"  cy="11" r="1.8" fill="#23272B" />
+      <circle cx="18.5" cy="11" r="1.8" fill="#23272B" />
     </svg>
   );
 }
@@ -276,7 +276,7 @@ export default function ChatBox() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="font-medium underline break-all text-[#BA7517] hover:text-[#9a6214] transition-colors"
+              className="font-medium underline break-all text-[#A3814B] hover:text-[#876B3E] transition-colors"
             >
               {cleanUrl}
             </a>
@@ -316,7 +316,7 @@ export default function ChatBox() {
 
           {/* Header navy */}
           <div
-            className="flex items-center justify-between px-4 bg-[#0f1923] text-white shrink-0"
+            className="flex items-center justify-between px-4 bg-[#23272B] text-white shrink-0"
             style={{ paddingTop: "max(12px, env(safe-area-inset-top))", paddingBottom: "12px" }}
           >
             <div className="flex items-center gap-3">
@@ -324,11 +324,11 @@ export default function ChatBox() {
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/20">
                   <RobiAvatar size={40} />
                 </div>
-                <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
+                <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#A3814B] rounded-full border-2 border-[#23272B]" />
               </div>
               <div className="min-w-0">
                 <p className="font-semibold text-sm leading-tight">Robi</p>
-                <p className="text-xs text-amber-400/80">Asistente virtual · IA</p>
+                <p className="text-xs text-[#A3814B]/80">Asistente virtual · IA</p>
               </div>
             </div>
             <div className="flex items-center gap-1 shrink-0 ml-2">
@@ -352,8 +352,8 @@ export default function ChatBox() {
           </div>
 
           {/* Sub-header amber */}
-          <div className="px-4 py-1.5 bg-[#BA7517] text-center shrink-0">
-            <p className="text-[11px] text-amber-100">
+          <div className="px-4 py-1.5 bg-[#A3814B] text-center shrink-0">
+            <p className="text-[11px] text-[#EDE6D8]">
               Asistente de <span className="font-semibold text-white">Adrián</span> · Consultor de hostelería
             </p>
           </div>
@@ -406,11 +406,11 @@ export default function ChatBox() {
 
           {/* Input */}
           <div
-            className="shrink-0 px-3 bg-[#f0ece6] border-t border-amber-200/60"
+            className="shrink-0 px-3 bg-[#E8E2D6] border-t border-[#C4A070]/40"
             style={{ paddingTop: "10px", paddingBottom: "max(10px, env(safe-area-inset-bottom))" }}
           >
             <div className="flex gap-2 items-end">
-              <div className="flex-1 bg-white rounded-2xl px-3 py-2 shadow-sm border border-amber-100 flex items-end">
+              <div className="flex-1 bg-white rounded-2xl px-3 py-2 shadow-sm border border-[#C4A070]/25 flex items-end">
                 <textarea
                   ref={inputRef}
                   rows={1}
@@ -433,7 +433,7 @@ export default function ChatBox() {
               <button
                 onClick={sendMessage}
                 disabled={loading || !input.trim()}
-                className="w-10 h-10 bg-[#BA7517] text-white rounded-full flex items-center justify-center shrink-0 shadow disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#9a6214] transition-colors"
+                className="w-10 h-10 bg-[#A3814B] text-white rounded-full flex items-center justify-center shrink-0 shadow disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#876B3E] transition-colors"
                 aria-label="Enviar"
               >
                 <SendIcon />
@@ -449,7 +449,7 @@ export default function ChatBox() {
       {/* ══ Chat minimizado (solo desktop) ═══════════════════════ */}
       {open && minimized && (
         <div className="hidden sm:block fixed bottom-0 right-6 z-50 w-72 animate-slide-up">
-          <div className="bg-[#0f1923] rounded-t-xl shadow-2xl border border-neutral-700 border-b-0 overflow-hidden">
+          <div className="bg-[#23272B] rounded-t-xl shadow-2xl border border-neutral-700 border-b-0 overflow-hidden">
             <div className="flex items-center gap-2.5 px-3 py-2.5">
               {/* Avatar + última frase */}
               <button
@@ -461,7 +461,7 @@ export default function ChatBox() {
                   <div className="w-9 h-9 rounded-full overflow-hidden">
                     <RobiAvatar size={36} />
                   </div>
-                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#BA7517] rounded-full border-2 border-[#0f1923]" />
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#A3814B] rounded-full border-2 border-[#23272B]" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-white font-semibold text-sm leading-tight">Robi</p>
@@ -502,7 +502,7 @@ export default function ChatBox() {
           )}
           <button
             onClick={handleOpen}
-            className="relative w-14 h-14 bg-[#BA7517] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#9a6214] transition-colors"
+            className="relative w-14 h-14 bg-[#A3814B] text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#876B3E] transition-colors"
             aria-label="Hablar con Robi"
           >
             <MessageIcon size={28} />

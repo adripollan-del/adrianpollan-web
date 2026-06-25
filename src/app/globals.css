@@ -2,12 +2,13 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #0f1923;
-  --color-amber: #BA7517;
-  --color-amber-hover: #9a6214;
-  --color-cream: #f5f0e8;
-  --color-cream-dark: #ede4d3;
+  --color-navy: #23272B;
+  --color-amber: #A3814B;
+  --color-amber-hover: #876B3E;
+  --color-cream: #EDE6D8;
+  --color-cream-dark: #E5DAC3;
   --color-ink: #1a1a18;
+  --color-gris-calido: #5B5650;
   --font-display: var(--font-inter, 'Inter', system-ui, sans-serif);
   --font-body: var(--font-inter, 'Inter', system-ui, sans-serif);
 }
@@ -24,29 +25,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ─── Botón amber sólido + glow al hover ─────────────────────── */
+/* ─── Botón latón sólido + glow al hover ─────────────────────── */
 .btn-amber {
-  background-color: #BA7517;
+  background-color: #A3814B;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-amber:hover {
-  background-color: #9a6214;
-  box-shadow: 0 10px 28px -6px rgba(186, 117, 23, 0.55);
+  background-color: #876B3E;
+  box-shadow: 0 10px 28px -6px rgba(163, 129, 75, 0.55);
 }
 
-/* ─── Hero navy con gradiente sutil + grain texture ──────────── */
+/* ─── Hero grafito con gradiente sutil + grain texture ──────────── */
 .hero-navy {
-  background-color: #0f1923;
+  background-color: #23272B;
   background-image:
     url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-    linear-gradient(135deg, #0f1923 0%, #1a2d3d 50%, #0f1923 100%);
+    linear-gradient(135deg, #23272B 0%, #2E3B4A 50%, #23272B 100%);
   background-size: 200px 200px, 100% 100%;
   background-repeat: repeat, no-repeat;
 }
 
-/* ─── Glow amber detrás del botón principal ──────────────────── */
+/* ─── Glow latón detrás del botón principal ──────────────────── */
 .btn-glow-amber {
-  box-shadow: 0 0 50px -5px rgba(186, 117, 23, 0.5);
+  box-shadow: 0 0 50px -5px rgba(163, 129, 75, 0.5);
 }
 
 @keyframes slide-up {
@@ -104,8 +105,8 @@ body {
 
 /* ─── Bloque CTA en cuerpo de artículos de blog ──────────────── */
 .blog-cta-block {
-  background-color: #f5f0e8;
-  border-left: 4px solid #BA7517;
+  background-color: #EDE6D8;
+  border-left: 4px solid #A3814B;
   padding: 24px 28px;
   margin: 32px 0;
   border-radius: 4px;
@@ -113,16 +114,16 @@ body {
 .blog-cta-title {
   margin: 0 0 8px 0;
   font-weight: 700;
-  color: #0f1923;
+  color: #23272B;
   font-size: 1rem;
 }
 .blog-cta-desc {
   margin: 0 0 16px 0;
-  color: #0f1923;
+  color: #23272B;
   font-size: 0.95rem;
 }
 .blog-cta-btn {
-  background-color: #BA7517;
+  background-color: #A3814B;
   color: #ffffff;
   padding: 10px 20px;
   text-decoration: none;
@@ -133,7 +134,7 @@ body {
   transition: background-color 0.2s ease;
 }
 .blog-cta-btn:hover {
-  background-color: #9a6214;
+  background-color: #876B3E;
 }
 
 /* Custom scrollbar */
