@@ -595,8 +595,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HERRAMIENTA IA — navy con gradiente del hero ──────────── */}
-      <section className="hero-navy py-20 lg:py-28">
+      {/* ── HERRAMIENTA IA — grafito sólido ──────────────────────── */}
+      <section className="bg-navy py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Herramienta gratuita · IA
