@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
@@ -48,12 +48,12 @@ function EmailCapture({ saved }: { saved: SavedDish[] }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="tu@email.com"
-        className="w-full bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+        className="w-full bg-white border border-grafito/20 px-3 py-2.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full px-5 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
+        className="w-full px-5 py-3 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
       >
         {status === "loading" ? "Enviando..." : "Recibir mis recetas por email"}
       </button>
@@ -101,7 +101,7 @@ function trafficLight(fc: number) {
   return { dot: "bg-red-500", label: "Atención", style: "bg-red-50 border-red-200 text-red-800" };
 }
 
-const IN = "bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors";
+const IN = "bg-white border border-grafito/20 px-3 py-2.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors";
 
 export default function EscandalloClient() {
   const [dishName, setDishName] = useState("");
@@ -167,8 +167,8 @@ export default function EscandalloClient() {
       <div className="max-w-4xl mx-auto px-6 lg:px-10 space-y-6">
 
         {/* Dish name */}
-        <div className="bg-cream-dark border border-navy/10 rounded-xl p-6">
-          <label className="block font-body text-navy text-sm font-medium mb-2">
+        <div className="bg-cream-dark border border-grafito/10 rounded-xl p-6">
+          <label className="block font-body text-grafito text-sm font-medium mb-2">
             Nombre del plato
           </label>
           <input
@@ -181,12 +181,12 @@ export default function EscandalloClient() {
         </div>
 
         {/* Ingredients */}
-        <div className="bg-cream-dark border border-navy/10 rounded-xl overflow-hidden">
-          <div className="px-6 py-4 border-b border-navy/10">
+        <div className="bg-cream-dark border border-grafito/10 rounded-xl overflow-hidden">
+          <div className="px-6 py-4 border-b border-grafito/10">
             <p className="font-body text-amber text-xs tracking-widest uppercase">Ingredientes</p>
           </div>
           {/* Desktop header */}
-          <div className="hidden lg:grid grid-cols-[1fr_100px_80px_140px_90px_36px] gap-2 px-6 py-2.5 bg-navy/5 border-b border-navy/8 text-xs font-body text-ink/45 uppercase tracking-wider">
+          <div className="hidden lg:grid grid-cols-[1fr_100px_80px_140px_90px_36px] gap-2 px-6 py-2.5 bg-grafito/5 border-b border-grafito/8 text-xs font-body text-ink/45 uppercase tracking-wider">
             <span>Ingrediente</span>
             <span>Cantidad</span>
             <span>Unidad</span>
@@ -194,7 +194,7 @@ export default function EscandalloClient() {
             <span className="text-right">Coste</span>
             <span />
           </div>
-          <div className="divide-y divide-navy/6">
+          <div className="divide-y divide-grafito/6">
             {ings.map((ing, idx) => {
               const cost = ingCost(ing);
               return (
@@ -241,7 +241,7 @@ export default function EscandalloClient() {
                         {PRICE_UNIT[ing.unit]}
                       </span>
                     </div>
-                    <span className="w-16 text-right font-body text-sm text-navy/60 tabular-nums flex-shrink-0">
+                    <span className="w-16 text-right font-body text-sm text-grafito/60 tabular-nums flex-shrink-0">
                       {cost > 0 ? `€${cost.toFixed(3)}` : "—"}
                     </span>
                     <button
@@ -257,7 +257,7 @@ export default function EscandalloClient() {
               );
             })}
           </div>
-          <div className="px-6 py-3.5 border-t border-navy/8">
+          <div className="px-6 py-3.5 border-t border-grafito/8">
             <button
               onClick={addIng}
               className="inline-flex items-center gap-1.5 font-body text-sm text-amber font-medium hover:text-amber/80 transition-colors"
@@ -269,8 +269,8 @@ export default function EscandalloClient() {
 
         {/* Waste & portions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div className="bg-cream-dark border border-navy/10 rounded-xl p-6">
-            <label className="block font-body text-navy text-sm font-medium mb-2">
+          <div className="bg-cream-dark border border-grafito/10 rounded-xl p-6">
+            <label className="block font-body text-grafito text-sm font-medium mb-2">
               Porcentaje de merma (%)
             </label>
             <input
@@ -286,8 +286,8 @@ export default function EscandalloClient() {
               Pérdida por limpieza, cocción o preparación. Por defecto 10%.
             </p>
           </div>
-          <div className="bg-cream-dark border border-navy/10 rounded-xl p-6">
-            <label className="block font-body text-navy text-sm font-medium mb-2">
+          <div className="bg-cream-dark border border-grafito/10 rounded-xl p-6">
+            <label className="block font-body text-grafito text-sm font-medium mb-2">
               Número de raciones
             </label>
             <input
@@ -305,9 +305,9 @@ export default function EscandalloClient() {
         </div>
 
         {/* Target food cost slider */}
-        <div className="bg-cream-dark border border-navy/10 rounded-xl p-6">
+        <div className="bg-cream-dark border border-grafito/10 rounded-xl p-6">
           <div className="flex items-center justify-between mb-3">
-            <label className="font-body text-navy text-sm font-medium">
+            <label className="font-body text-grafito text-sm font-medium">
               Food cost objetivo
             </label>
             <span
@@ -363,31 +363,31 @@ export default function EscandalloClient() {
 
             {/* Price cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-navy rounded-xl p-5 text-center">
+              <div className="bg-grafito rounded-xl p-5 text-center">
                 <p className="font-body text-cream/50 text-xs uppercase tracking-widest mb-2 leading-snug">
                   PVP recomendado sin IVA
                 </p>
                 <p className="font-display text-cream text-3xl font-bold">€{recExcl.toFixed(2)}</p>
               </div>
-              <div className="bg-navy/80 rounded-xl p-5 text-center">
+              <div className="bg-grafito/80 rounded-xl p-5 text-center">
                 <p className="font-body text-cream/50 text-xs uppercase tracking-widest mb-2 leading-snug">
                   PVP con IVA 10%
                 </p>
                 <p className="font-display text-cream text-3xl font-bold">€{recIncl.toFixed(2)}</p>
               </div>
               <div className="bg-amber/10 border border-amber/30 rounded-xl p-5 text-center">
-                <p className="font-body text-navy/60 text-xs uppercase tracking-widest mb-2 leading-snug">
+                <p className="font-body text-grafito/60 text-xs uppercase tracking-widest mb-2 leading-snug">
                   Margen bruto
                 </p>
-                <p className="font-display text-navy text-3xl font-bold">{marginPct.toFixed(0)}%</p>
+                <p className="font-display text-grafito text-3xl font-bold">{marginPct.toFixed(0)}%</p>
               </div>
             </div>
 
             {/* Add another dish */}
-            <div className="border-t border-navy/10 pt-8 text-center">
+            <div className="border-t border-grafito/10 pt-8 text-center">
               <button
                 onClick={saveDish}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy text-cream text-sm font-semibold tracking-wide hover:bg-navy/90 transition-colors rounded-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-grafito text-cream text-sm font-semibold tracking-wide hover:bg-grafito/90 transition-colors rounded-lg"
               >
                 <Plus size={15} /> Añadir otro plato y comparar
               </button>
@@ -397,7 +397,7 @@ export default function EscandalloClient() {
             </div>
           </>
         ) : (
-          <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 text-center">
+          <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 text-center">
             <p className="font-body text-ink/40 text-sm">
               Introduce los ingredientes para ver los resultados al instante.
             </p>
@@ -407,8 +407,8 @@ export default function EscandalloClient() {
         {/* Email capture — escandallo */}
         {saved.length > 0 && (
           <div className="border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
-            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
-            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos un resumen de tus recetas con costes, precios recomendados y márgenes.</p>
+            <p className="font-display text-grafito text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-grafito/70 text-sm mb-4">Te enviamos un resumen de tus recetas con costes, precios recomendados y márgenes.</p>
             <EmailCapture saved={saved} />
           </div>
         )}
@@ -427,10 +427,10 @@ export default function EscandalloClient() {
                 Limpiar tabla
               </button>
             </div>
-            <div className="overflow-x-auto border border-navy/10 rounded-xl overflow-hidden">
+            <div className="overflow-x-auto border border-grafito/10 rounded-xl overflow-hidden">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-navy text-cream">
+                  <tr className="bg-grafito text-cream">
                     {["Plato", "Coste/ración", "PVP (sin IVA)", "Food cost", "Margen"].map((h) => (
                       <th
                         key={h}
@@ -443,12 +443,12 @@ export default function EscandalloClient() {
                     ))}
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-navy/8">
+                <tbody className="divide-y divide-grafito/8">
                   {saved.map((d, i) => {
                     const dtl = trafficLight(d.foodCostPct);
                     return (
                       <tr key={d.id} className={i % 2 === 1 ? "bg-cream-dark/40" : "bg-white"}>
-                        <td className="px-4 py-3 font-body text-navy font-medium">{d.name}</td>
+                        <td className="px-4 py-3 font-body text-grafito font-medium">{d.name}</td>
                         <td className="px-4 py-3 font-body text-ink/65 text-right tabular-nums">
                           €{d.costPerPortion.toFixed(3)}
                         </td>

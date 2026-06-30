@@ -1,4 +1,4 @@
-import { TrendingUp, BarChart2, ShoppingCart, Users, Star, Settings, Target, Package } from "lucide-react";
+﻿import { TrendingUp, BarChart2, ShoppingCart, Users, Star, Settings, Target, Package } from "lucide-react";
 
 const areas = [
   { Icon: TrendingUp,   name: "Rentabilidad",         desc: "Márgenes, costes y estructura financiera" },
@@ -17,7 +17,7 @@ export default function MapaDiagnostico({ bg = "bg-cream-dark" }: { bg?: string 
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-xl mb-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">El diagnóstico analiza</p>
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
             8 áreas clave de tu negocio
           </h2>
         </div>
@@ -27,11 +27,11 @@ export default function MapaDiagnostico({ bg = "bg-cream-dark" }: { bg?: string 
           {areas.map(({ Icon, name, desc }, i) => (
             <div
               key={i}
-              className="bg-white border border-navy/8 rounded-xl p-5 lg:p-6 flex flex-col gap-3"
+              className="bg-white border border-grafito/8 rounded-xl p-5 lg:p-6 flex flex-col gap-3"
             >
               <Icon size={24} className="text-amber flex-shrink-0" strokeWidth={1.75} />
               <div>
-                <h3 className="font-display text-navy text-sm font-semibold mb-1 leading-snug">{name}</h3>
+                <h3 className="font-display text-grafito text-sm font-semibold mb-1 leading-snug">{name}</h3>
                 <p className="font-body text-ink/55 text-xs leading-relaxed">{desc}</p>
               </div>
             </div>

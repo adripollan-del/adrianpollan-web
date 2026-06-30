@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, Rocket, CheckCircle } from "lucide-react";
@@ -81,8 +81,8 @@ export default function ConsultorRestaurantesPage() {
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -118,7 +118,7 @@ export default function ConsultorRestaurantesPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Quién soy
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Veinte años dentro del negocio antes de ser consultor
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
@@ -139,7 +139,7 @@ export default function ConsultorRestaurantesPage() {
                 Conoce mi trayectoria completa <ArrowRight size={15} />
               </Link>
             </div>
-            <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 lg:p-10">
+            <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 En números
               </p>
@@ -150,7 +150,7 @@ export default function ConsultorRestaurantesPage() {
                   { num: "100+", label: "Negocios acompañados", note: "Experiencia acumulada en dirección, operaciones, aperturas y consultoría" },
                 ].map((s) => (
                   <div key={s.num} className="flex items-center gap-5">
-                    <span className="font-display text-4xl font-bold text-navy leading-none w-20 flex-shrink-0">
+                    <span className="font-display text-4xl font-bold text-grafito leading-none w-20 flex-shrink-0">
                       {s.num}
                     </span>
                     <div>
@@ -174,13 +174,13 @@ export default function ConsultorRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Para quién trabajo
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Negocios que quieren resultados, no diagnósticos bonitos
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-4xl">
             {forWhom.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white border border-navy/8 rounded-lg p-5">
+              <div key={i} className="flex items-start gap-3 bg-white border border-grafito/8 rounded-lg p-5">
                 <CheckCircle size={18} className="text-amber mt-0.5 flex-shrink-0" />
                 <p className="font-body text-ink/70 text-sm leading-relaxed">{item}</p>
               </div>
@@ -196,22 +196,22 @@ export default function ConsultorRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo puedo ayudarte
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Tres formas de trabajar juntos
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {services.map((s, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/10 rounded-xl p-8">
+              <div key={i} className="bg-cream-dark border border-grafito/10 rounded-xl p-8">
                 <div className="mb-5">{s.icon}</div>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{s.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{s.title}</h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed">{s.body}</p>
               </div>
             ))}
           </div>
           <Link
             href="/servicios"
-            className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+            className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
           >
             Ver todos los servicios con detalle <ArrowRight size={15} />
           </Link>
@@ -221,7 +221,7 @@ export default function ConsultorRestaurantesPage() {
       {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Tu restaurante podría funcionar mejor?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -234,7 +234,7 @@ export default function ConsultorRestaurantesPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Consultor restaurantes — CTA final"
             >
@@ -244,7 +244,7 @@ export default function ConsultorRestaurantesPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Consultor restaurantes — CTA final"
             >

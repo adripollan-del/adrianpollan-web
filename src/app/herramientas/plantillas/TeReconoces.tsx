@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -49,7 +49,7 @@ function TypewriterCard({
   return (
     <div className="bg-[#EDE6D8] border-l-4 border-amber rounded-r-xl p-7">
       <div className="mb-4">{icon}</div>
-      <p className="font-body text-navy text-base leading-relaxed min-h-[5rem]">
+      <p className="font-body text-grafito text-base leading-relaxed min-h-[5rem]">
         {displayed}
         {!done && started && !instant && (
           <span className="animate-pulse ml-px text-amber">|</span>
@@ -87,7 +87,7 @@ export default function TeReconoces({ symptoms, title = "Lo que cambia cuando lo
   return (
     <section ref={ref} className="bg-white py-20 lg:py-28">
       <div className="max-w-[1000px] mx-auto px-6 lg:px-10">
-        <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12 text-center">
+        <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-12 text-center">
           {title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

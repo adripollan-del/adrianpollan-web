@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -66,7 +66,7 @@ export default function AuditoriaFBPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAuditoria) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80"
           alt="Análisis de datos financieros en pantalla — auditoría de food and beverage para restaurantes y hoteles"
@@ -75,7 +75,7 @@ export default function AuditoriaFBPage() {
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -110,7 +110,7 @@ export default function AuditoriaFBPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Para quién es
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 ¿Reconoces tu situación?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -120,7 +120,7 @@ export default function AuditoriaFBPage() {
             </div>
             <div className="space-y-4">
               {forWhom.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-5">
                   <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
                 </div>
@@ -138,7 +138,7 @@ export default function AuditoriaFBPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Qué incluye
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Análisis completo de tu operación
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -148,7 +148,7 @@ export default function AuditoriaFBPage() {
             </div>
             <div className="space-y-3">
               {includes.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-white border border-navy/10 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-white border border-grafito/10 rounded-xl p-5">
                   <span className="font-display text-amber font-bold text-base leading-none mt-0.5 flex-shrink-0 w-6">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -164,7 +164,7 @@ export default function AuditoriaFBPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
                 Herramienta gratuita
               </p>
-              <p className="font-display text-navy text-xl font-semibold">
+              <p className="font-display text-grafito text-xl font-semibold">
                 Empieza con el checklist de food cost
               </p>
               <p className="font-body text-ink/60 text-sm mt-1">
@@ -173,7 +173,7 @@ export default function AuditoriaFBPage() {
             </div>
             <Link
               href="/herramientas/checklist-food-cost"
-              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide flex-shrink-0"
             >
               Ver checklist <ArrowRight size={14} />
             </Link>
@@ -188,7 +188,7 @@ export default function AuditoriaFBPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Qué cambia
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
               Qué cambia después de la auditoría
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -197,7 +197,7 @@ export default function AuditoriaFBPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {cambios.map(({ icon: Icon, text }, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/8 rounded-xl p-6 lg:p-8">
+              <div key={i} className="bg-cream-dark border border-grafito/8 rounded-xl p-6 lg:p-8">
                 <Icon size={28} className="text-amber mb-5" />
                 <p className="font-body text-ink/75 text-base leading-relaxed">{text}</p>
               </div>
@@ -213,15 +213,15 @@ export default function AuditoriaFBPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Indicadores
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Indicadores que analizamos
             </h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {indicadores.map((item, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6 flex flex-col gap-4">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-6 flex flex-col gap-4">
                 <div className="w-10 h-px bg-amber" />
-                <p className="font-display text-navy text-base font-semibold leading-snug">{item}</p>
+                <p className="font-display text-grafito text-base font-semibold leading-snug">{item}</p>
               </div>
             ))}
           </div>
@@ -235,10 +235,10 @@ export default function AuditoriaFBPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Qué recibes al final
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-8">
               Un mapa de acción, no un informe
             </h2>
-            <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 lg:p-10">
+            <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 lg:p-10">
               <TrendingDown size={32} className="text-amber mb-6" />
               <p className="font-body text-ink/70 text-lg leading-relaxed mb-6">
                 Al final del diagnóstico tienes claridad sobre qué palancas mover primero y
@@ -259,7 +259,7 @@ export default function AuditoriaFBPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
 
           {/* Callout: cuándo no tiene sentido */}
-          <div className="max-w-3xl mx-auto mb-16 bg-white border border-navy/10 rounded-xl p-8 lg:p-10 text-left">
+          <div className="max-w-3xl mx-auto mb-16 bg-white border border-grafito/10 rounded-xl p-8 lg:p-10 text-left">
             <div className="flex items-center gap-3 mb-6">
               <XCircle size={22} className="text-amber" />
               <p className="font-body text-amber text-xs tracking-widest uppercase">
@@ -288,7 +288,7 @@ export default function AuditoriaFBPage() {
             </ul>
           </div>
 
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             &quot;A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -300,7 +300,7 @@ export default function AuditoriaFBPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Auditoría F&B — CTA final"
             >
@@ -310,7 +310,7 @@ export default function AuditoriaFBPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Auditoría F&B — CTA final"
             >

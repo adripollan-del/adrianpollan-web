@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw, BookOpen, Target, Users } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -81,17 +81,17 @@ const bookFaqs = [
 
 export default function LibroPage() {
   const phaseIcons = [
-    <Compass key="p1" size={18} className="text-navy/50" />,
-    <Stethoscope key="p2" size={18} className="text-navy/50" />,
-    <BarChart2 key="p3" size={18} className="text-navy/50" />,
-    <Wrench key="p4" size={18} className="text-navy/50" />,
-    <HandHeart key="p5" size={18} className="text-navy/50" />,
-    <RefreshCw key="p6" size={18} className="text-navy/50" />,
+    <Compass key="p1" size={18} className="text-grafito/50" />,
+    <Stethoscope key="p2" size={18} className="text-grafito/50" />,
+    <BarChart2 key="p3" size={18} className="text-grafito/50" />,
+    <Wrench key="p4" size={18} className="text-grafito/50" />,
+    <HandHeart key="p5" size={18} className="text-grafito/50" />,
+    <RefreshCw key="p6" size={18} className="text-grafito/50" />,
   ];
   return (
     <>
-      {/* ── HERO — navy con portada ────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      {/* ── HERO — grafito con portada ────────────────────────────── */}
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1750943082452-c714763f73b2?auto=format&fit=crop&w=1920&q=80"
           alt="El Método ADRIÁN — libro de consultoría para restaurantes de Adrián Pollán"
@@ -101,7 +101,7 @@ export default function LibroPage() {
           quality={50}
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -109,23 +109,23 @@ export default function LibroPage() {
             {/* Portada libro mockup */}
             <div className="order-2 lg:order-1">
               <div className="relative aspect-[3/4] max-w-xs mx-auto lg:mx-0">
-                <div className="absolute -bottom-3 -right-3 inset-0 bg-navy/50 border border-cream/5" />
+                <div className="absolute -bottom-3 -right-3 inset-0 bg-grafito/50 border border-cream/5" />
                 <div className="relative h-full bg-gradient-to-br from-amber via-amber to-[#876B3E] flex flex-col justify-between p-10 overflow-hidden border border-amber/20">
                   <div className="flex justify-between items-start">
-                    <div className="w-12 h-12 border border-navy/20 rounded-full" />
-                    <p className="font-body text-navy/40 text-xs tracking-widest uppercase">
+                    <div className="w-12 h-12 border border-grafito/20 rounded-full" />
+                    <p className="font-body text-grafito/40 text-xs tracking-widest uppercase">
                       Próximamente
                     </p>
                   </div>
                   <div>
-                    <p className="font-body text-navy/50 text-xs tracking-widest uppercase mb-3">
+                    <p className="font-body text-grafito/50 text-xs tracking-widest uppercase mb-3">
                       El sistema para transformar tu restaurante
                     </p>
-                    <h2 className="font-display text-navy text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                    <h2 className="font-display text-grafito text-4xl lg:text-5xl font-bold leading-tight mb-4">
                       El Método<br />ADRIÁN
                     </h2>
-                    <div className="w-10 h-px bg-navy/30 mb-4" />
-                    <p className="font-body text-navy/60 text-sm font-medium">
+                    <div className="w-10 h-px bg-grafito/30 mb-4" />
+                    <p className="font-body text-grafito/60 text-sm font-medium">
                       Adrián Pollán
                     </p>
                   </div>
@@ -147,7 +147,7 @@ export default function LibroPage() {
               </p>
               <a
                 href="#lista-espera"
-                className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+                className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               >
                 Apuntarme a la lista de espera →
               </a>
@@ -164,7 +164,7 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 Mi historia
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
                 Lo que me enseñó perderlo todo.
               </h2>
               <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -214,15 +214,15 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Lo que lo hace diferente
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               Por qué este libro es diferente
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {whyDifferent.map(({ Icon, title, body }, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-8">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-8">
                 <Icon size={28} className="text-amber mb-5" />
-                <h3 className="font-display text-navy text-lg font-semibold mb-3 leading-snug">{title}</h3>
+                <h3 className="font-display text-grafito text-lg font-semibold mb-3 leading-snug">{title}</h3>
                 <p className="font-body text-ink/60 text-base leading-relaxed">{body}</p>
               </div>
             ))}
@@ -239,7 +239,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
               Qué es el libro
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
               Un sistema de gestión para negocios de hostelería que funciona en la vida real.
             </h2>
             <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -269,7 +269,7 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Qué encontrarás
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-6">
                 El método de un vistazo
               </h2>
               <p className="font-body text-ink/65 text-base leading-relaxed">
@@ -285,7 +285,7 @@ export default function LibroPage() {
                   <div
                     key={`${phase.letter}-${i}`}
                     className={`flex items-start gap-6 py-8 ${
-                      i < phaseData.length - 1 ? "border-b border-navy/10" : ""
+                      i < phaseData.length - 1 ? "border-b border-grafito/10" : ""
                     }`}
                   >
                     <div className="flex flex-col items-center gap-2 w-10 flex-shrink-0 mt-1">
@@ -295,7 +295,7 @@ export default function LibroPage() {
                       {phaseIcons[i]}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-display text-navy text-xl font-semibold mb-3">
+                      <h3 className="font-display text-grafito text-xl font-semibold mb-3">
                         {phase.title}
                       </h3>
                       <div className="space-y-2">
@@ -317,9 +317,9 @@ export default function LibroPage() {
                 ))}
               </div>
 
-              <div className="mt-10 pt-8 border-t border-navy/10">
+              <div className="mt-10 pt-8 border-t border-grafito/10">
                 <p className="font-body text-ink/65 text-base leading-relaxed">
-                  <span className="font-semibold text-navy">El orden importa.</span>{" "}
+                  <span className="font-semibold text-grafito">El orden importa.</span>{" "}
                   Muchos restaurantes no fracasan por falta de esfuerzo, sino por
                   falta de secuencia. Primero se entiende el negocio. Después se
                   diagnostica. Luego se revisan números y operaciones. Más tarde
@@ -338,7 +338,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Para quién es
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               No es un libro para estudiantes.<br />Es para quien ya está en el negocio.
             </h2>
           </div>
@@ -358,11 +358,11 @@ export default function LibroPage() {
                 body: "Que quieren tomar las mejores decisiones posibles antes y durante la apertura, con una guía práctica que cubre todo el proceso.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/8 rounded-xl p-8 hover:border-amber/40 transition-colors">
+              <div key={i} className="bg-cream-dark border border-grafito/8 rounded-xl p-8 hover:border-amber/40 transition-colors">
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   0{i + 1}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="font-body text-ink/65 text-base leading-relaxed">{item.body}</p>
               </div>
             ))}
@@ -377,7 +377,7 @@ export default function LibroPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Extracto
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight">
               Un adelanto de lo que encontrarás
             </h2>
           </div>
@@ -393,7 +393,7 @@ export default function LibroPage() {
                 >
                   &ldquo;
                 </span>
-                <p className="font-display text-navy text-xl lg:text-2xl italic leading-relaxed">
+                <p className="font-display text-grafito text-xl lg:text-2xl italic leading-relaxed">
                   {quote}
                 </p>
                 <footer className="mt-4">
@@ -415,7 +415,7 @@ export default function LibroPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Próximamente
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-bold leading-tight mb-5">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-bold leading-tight mb-5">
                 Apúntate antes de que salga
               </h2>
               <p className="font-body text-ink/70 text-base leading-relaxed mb-8">
@@ -426,7 +426,7 @@ export default function LibroPage() {
               <div className="inline-flex items-center gap-4 bg-amber/10 border border-amber/30 px-5 py-4 rounded-xl">
                 <span className="font-display text-amber font-bold text-3xl leading-none">200+</span>
                 <div>
-                  <p className="font-body text-navy font-medium text-sm leading-snug">
+                  <p className="font-body text-grafito font-medium text-sm leading-snug">
                     personas ya en la lista
                   </p>
                   <p className="font-body text-ink/50 text-xs mt-0.5">
@@ -440,7 +440,7 @@ export default function LibroPage() {
                 buttonText="Quiero acceso anticipado"
                 placeholder="Tu email profesional"
               />
-              <p className="font-body text-navy/50 text-xs mt-4">
+              <p className="font-body text-grafito/50 text-xs mt-4">
                 Sin spam. Solo novedades del libro cuando las haya.
               </p>
             </div>
@@ -452,17 +452,17 @@ export default function LibroPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-14">
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               ¿Para quién es este libro?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {forWhom.map((text, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-7">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-7">
                 <span className="font-display text-amber/40 text-4xl font-light block mb-5 leading-none">
                   0{i + 1}
                 </span>
-                <p className="font-body text-navy text-base leading-relaxed font-medium">{text}</p>
+                <p className="font-body text-grafito text-base leading-relaxed font-medium">{text}</p>
               </div>
             ))}
           </div>
@@ -475,16 +475,16 @@ export default function LibroPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Preguntas frecuentes
           </p>
-          <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-14">
+          <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight mb-14">
             Sobre el libro
           </h2>
           <dl className="space-y-0">
             {bookFaqs.map(({ q, a }, i) => (
               <div
                 key={i}
-                className={`py-8 ${i < bookFaqs.length - 1 ? "border-b border-navy/10" : ""}`}
+                className={`py-8 ${i < bookFaqs.length - 1 ? "border-b border-grafito/10" : ""}`}
               >
-                <dt className="font-display text-navy text-lg font-semibold mb-3 leading-snug">
+                <dt className="font-display text-grafito text-lg font-semibold mb-3 leading-snug">
                   {q}
                 </dt>
                 <dd className="font-body text-ink/70 text-base leading-relaxed">

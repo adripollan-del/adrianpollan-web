@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { Clock, Globe, Users } from "lucide-react";
@@ -69,7 +69,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-navy py-12 lg:py-16">
+    <section ref={sectionRef} className="bg-grafito py-12 lg:py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 text-center">
           {stats.map((s, i) => {

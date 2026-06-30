@@ -1,4 +1,4 @@
-const phrases = [
+﻿const phrases = [
   "20+ años en restauración internacional",
   "España · Francia · Reino Unido · Irlanda",
   "Diagnóstico · Operativa · Aperturas",
@@ -21,10 +21,10 @@ export default function Ticker() {
       <div className="flex animate-ticker whitespace-nowrap items-center">
         {items.map((phrase, i) => (
           <span key={i} className="flex items-center">
-            <span className="font-display italic font-light text-2xl lg:text-3xl text-navy/80 px-10 lg:px-14 tracking-wide">
+            <span className="font-display italic font-light text-2xl lg:text-3xl text-grafito/80 px-10 lg:px-14 tracking-wide">
               {phrase}
             </span>
-            <span className="text-navy/20 text-base">✦</span>
+            <span className="text-grafito/20 text-base">✦</span>
           </span>
         ))}
       </div>

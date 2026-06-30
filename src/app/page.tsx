@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -114,8 +114,8 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHome) }}
       />
-      {/* ── HERO — navy + imagen de fondo ──────────────────────────── */}
-      <section className="relative min-h-screen hero-navy flex flex-col justify-end overflow-hidden">
+      {/* ── HERO — grafito + imagen de fondo ──────────────────────────── */}
+      <section className="relative min-h-screen hero-grafito flex flex-col justify-end overflow-hidden">
         {/* Background photo */}
         <Image
           src={PHOTOS.hero}
@@ -127,7 +127,7 @@ export default function Home() {
           className="object-cover opacity-25"
         />
         {/* Gradient overlay to keep text readable */}
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
 
         {/* Amber accent top line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
@@ -160,7 +160,7 @@ export default function Home() {
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
                 eventName="diagnostico_click"
                 eventLabel="Hero home"
               >
@@ -202,7 +202,7 @@ export default function Home() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
               Diagnóstico gratuito
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
               El diagnóstico gratuito no es un formulario. Es una primera foto real de tu negocio.
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed mt-5">
@@ -240,7 +240,7 @@ export default function Home() {
             ].map((item, i) => (
               <div key={i} className="border-t border-amber/30 pt-6">
                 <div className="mb-5">{item.icon}</div>
-                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-3">
+                <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-3">
                   {item.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">
@@ -254,7 +254,7 @@ export default function Home() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="diagnostico_click"
             eventLabel="Sección diagnóstico home"
           >
@@ -288,7 +288,7 @@ export default function Home() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
                 Quién está detrás
               </p>
-              <p className="font-body text-navy text-xl lg:text-2xl font-light leading-relaxed mb-6">
+              <p className="font-body text-grafito text-xl lg:text-2xl font-light leading-relaxed mb-6">
                 Soy Adrián Pollán, consultor en restauración y F&B con más de
                 20 años de experiencia operativa real en España, Francia,
                 Reino Unido e Irlanda.
@@ -300,7 +300,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <Link
                   href="/sobre-mi"
-                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 hover:border-amber transition-colors"
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-grafito border-b border-amber/60 pb-0.5 hover:border-amber transition-colors"
                 >
                   Conocer mi historia <ArrowRight size={14} />
                 </Link>
@@ -308,7 +308,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/adrianpollanfernandez"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-body text-sm text-ink/50 hover:text-navy transition-colors"
+                  className="inline-flex items-center gap-2 font-body text-sm text-ink/50 hover:text-grafito transition-colors"
                 >
                   <LinkedinIcon size={14} />
                   Sígueme en LinkedIn
@@ -338,7 +338,7 @@ export default function Home() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Por qué confiar en mí
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-3xl lg:text-5xl font-semibold leading-tight">
               Por qué trabajar conmigo
             </h2>
           </div>
@@ -380,7 +380,7 @@ export default function Home() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-navy text-base font-semibold leading-snug mb-1.5">
+                  <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-1.5">
                     {item.title}
                   </h3>
                   <p className="font-body text-ink/60 text-sm leading-relaxed">
@@ -400,7 +400,7 @@ export default function Home() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               ¿Para quién?
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               ¿Necesitas un consultor para tu restaurante?
             </h2>
           </div>
@@ -410,13 +410,13 @@ export default function Home() {
             {audienceCardData.map((card, i) => (
               <div
                 key={card.num}
-                className="bg-cream-dark shadow-md border border-navy/10 rounded-xl p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
+                className="bg-cream-dark shadow-md border border-grafito/10 rounded-xl p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
               >
                 <div className="mb-4">{audienceIcons[i]}</div>
                 <span className="font-display text-4xl font-light text-amber/50 block mb-5">
                   {card.num}
                 </span>
-                <h3 className="font-display text-navy text-xl lg:text-2xl font-semibold mb-4 leading-tight">
+                <h3 className="font-display text-grafito text-xl lg:text-2xl font-semibold mb-4 leading-tight">
                   {card.title}
                 </h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed">
@@ -435,7 +435,7 @@ export default function Home() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Empieza aquí
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-3xl lg:text-5xl font-semibold leading-tight">
               Empieza según tu situación
             </h2>
           </div>
@@ -450,7 +450,7 @@ export default function Home() {
                     href="https://diagnostico.adrianpollan.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide self-start mt-auto"
                     eventName="diagnostico_click"
                     eventLabel="Empieza según situación — home"
                   >
@@ -464,7 +464,7 @@ export default function Home() {
                 cta: (
                   <Link
                     href="/herramientas/calculadora-prime-cost"
-                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide self-start mt-auto"
                   >
                     Calcular mi prime cost <ArrowRight size={14} />
                   </Link>
@@ -476,7 +476,7 @@ export default function Home() {
                 cta: (
                   <Link
                     href="/herramientas/checklist-apertura"
-                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide self-start mt-auto"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide self-start mt-auto"
                   >
                     Usar el checklist de apertura <ArrowRight size={14} />
                   </Link>
@@ -491,7 +491,7 @@ export default function Home() {
                       href="https://diagnostico.adrianpollan.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
+                      className="inline-flex items-center gap-2 px-5 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide"
                       eventName="diagnostico_click"
                       eventLabel="Empieza según situación — home"
                     >
@@ -501,7 +501,7 @@ export default function Home() {
                       href="https://calendly.com/adrianpollan"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 font-body text-xs text-navy/55 hover:text-navy transition-colors"
+                      className="inline-flex items-center gap-1 font-body text-xs text-grafito/55 hover:text-grafito transition-colors"
                       eventName="calendly_click"
                       eventLabel="Empieza según situación — home secundario"
                     >
@@ -513,10 +513,10 @@ export default function Home() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-white border border-navy/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
+                className="bg-white border border-grafito/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
               >
                 {card.icon}
-                <p className="font-display text-navy text-lg font-semibold leading-snug flex-1">
+                <p className="font-display text-grafito text-lg font-semibold leading-snug flex-1">
                   {card.situation}
                 </p>
                 {card.cta}
@@ -533,7 +533,7 @@ export default function Home() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Servicios
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-4">
               Mis servicios como consultor de restaurantes
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed">
@@ -563,10 +563,10 @@ export default function Home() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="bg-cream-dark shadow-md border border-navy/10 rounded-xl p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
+                className="bg-cream-dark shadow-md border border-grafito/10 rounded-xl p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40"
               >
                 <div className="mb-5">{s.icon}</div>
-                <h3 className="font-display text-navy text-xl lg:text-2xl font-semibold leading-tight mb-3">
+                <h3 className="font-display text-grafito text-xl lg:text-2xl font-semibold leading-tight mb-3">
                   {s.title}
                 </h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed mb-6 flex-1">
@@ -574,7 +574,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/servicios"
-                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-grafito border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
                 >
                   Ver cómo funciona <ArrowRight size={13} />
                 </Link>
@@ -586,7 +586,7 @@ export default function Home() {
           <div className="flex justify-center mt-14 lg:mt-16">
             <Link
               href="/servicios"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-navy text-navy text-sm font-medium tracking-wide hover:bg-navy hover:text-cream transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-grafito text-grafito text-sm font-medium tracking-wide hover:bg-grafito hover:text-cream transition-colors"
             >
               Conoce todos los servicios en detalle
               <ArrowRight size={15} />
@@ -596,7 +596,7 @@ export default function Home() {
       </section>
 
       {/* ── HERRAMIENTA IA — grafito sólido ──────────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      <section className="bg-grafito py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Herramienta gratuita · IA
@@ -630,7 +630,7 @@ export default function Home() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="diagnostico_click"
             eventLabel="Sección problemas home"
           >
@@ -647,7 +647,7 @@ export default function Home() {
             <p className="font-body text-amber text-sm tracking-widest uppercase mb-4">
               Cómo funciona
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
               Del diagnóstico a los resultados
             </h2>
           </div>
@@ -688,12 +688,12 @@ export default function Home() {
             ].map((step, i) => (
               <div
                 key={i}
-                className="relative flex flex-col md:border-r border-b md:border-b-0 border-navy/10 last:border-r-0 last:border-b-0 px-0 md:px-8 first:pl-0 last:pr-0 py-8 md:py-0"
+                className="relative flex flex-col md:border-r border-b md:border-b-0 border-grafito/10 last:border-r-0 last:border-b-0 px-0 md:px-8 first:pl-0 last:pr-0 py-8 md:py-0"
               >
                 <span className="font-display text-5xl font-light text-amber leading-none mb-4">
                   {step.num}
                 </span>
-                <h3 className="font-display text-navy text-lg font-semibold leading-tight mb-3">
+                <h3 className="font-display text-grafito text-lg font-semibold leading-tight mb-3">
                   {step.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-4">
@@ -711,7 +711,7 @@ export default function Home() {
                 )}
                 {i < 3 && (
                   <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-6 h-6 items-center justify-center z-10">
-                    <span className="text-navy/20 text-lg">›</span>
+                    <span className="text-grafito/20 text-lg">›</span>
                   </div>
                 )}
               </div>
@@ -728,7 +728,7 @@ export default function Home() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                 Herramientas gratuitas
               </p>
-              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+              <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
                 Herramientas gratuitas para tu restaurante
               </h2>
               <p className="font-body text-ink/60 text-base mt-2">
@@ -737,7 +737,7 @@ export default function Home() {
             </div>
             <Link
               href="/herramientas"
-              className="inline-flex items-center gap-1.5 font-body text-sm text-navy/55 hover:text-navy transition-colors whitespace-nowrap flex-shrink-0"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-grafito/55 hover:text-grafito transition-colors whitespace-nowrap flex-shrink-0"
             >
               Ver todas las herramientas <ArrowRight size={14} />
             </Link>
@@ -766,12 +766,12 @@ export default function Home() {
               <Link
                 key={tool.href}
                 href={tool.href}
-                className="group bg-cream-dark border border-navy/8 rounded-xl p-6 hover:border-amber/40 transition-colors flex flex-col"
+                className="group bg-cream-dark border border-grafito/8 rounded-xl p-6 hover:border-amber/40 transition-colors flex flex-col"
               >
                 <span className="font-body text-amber text-xs tracking-widest uppercase mb-2">
                   {tool.label}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-2">{tool.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-2">{tool.title}</h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-4">
                   {tool.description}
                 </p>
@@ -792,13 +792,13 @@ export default function Home() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                 Casos de éxito
               </p>
-              <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+              <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
                 Situaciones reales, resultados concretos
               </h2>
             </div>
             <Link
               href="/casos-reales"
-              className="inline-flex items-center gap-1.5 font-body text-sm text-navy/55 hover:text-navy transition-colors whitespace-nowrap flex-shrink-0"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-grafito/55 hover:text-grafito transition-colors whitespace-nowrap flex-shrink-0"
             >
               Ver todos los casos <ArrowRight size={14} />
             </Link>
@@ -833,7 +833,7 @@ export default function Home() {
             ].map((caso, i) => (
               <div
                 key={i}
-                className="bg-white border border-navy/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="bg-white border border-grafito/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <span className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                   {caso.label}
@@ -841,7 +841,7 @@ export default function Home() {
                 <p className="font-display text-amber text-sm font-semibold leading-snug mb-2">
                   {caso.metric}
                 </p>
-                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4">
+                <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-4">
                   {caso.title}
                 </h3>
                 <div className="flex-1 mb-4">
@@ -864,7 +864,7 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-start gap-2.5 pt-4 border-t border-navy/10">
+                <div className="flex items-start gap-2.5 pt-4 border-t border-grafito/10">
                   <CheckCircle size={16} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/65 text-sm leading-relaxed italic">
                     {caso.resultado}
@@ -877,23 +877,23 @@ export default function Home() {
       </section>
 
       {/* ── EL MÉTODO ADRIÁN — LIBRO — fondo blanco ─────────────── */}
-      <section className="bg-white py-10 lg:py-14 border-t border-navy/8">
+      <section className="bg-white py-10 lg:py-14 border-t border-grafito/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               Mi libro
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-3xl font-semibold leading-tight mb-2">
+            <h2 className="font-display text-grafito text-2xl lg:text-3xl font-semibold leading-tight mb-2">
               El Método ADRIÁN
             </h2>
-            <p className="font-body text-navy/50 text-sm italic mb-5">
+            <p className="font-body text-grafito/50 text-sm italic mb-5">
               Gestión de hostelería desde la experiencia real. Próximamente.
             </p>
             <p className="font-body text-ink/60 text-sm leading-relaxed mb-5">
               Si quieres ser el primero en saber cuándo sale, déjame tu email.
             </p>
             <WaitlistForm buttonText="Avísame cuando salga" />
-            <p className="font-body text-navy/40 text-xs mt-3">
+            <p className="font-body text-grafito/40 text-xs mt-3">
               Sin spam. Solo el aviso cuando esté disponible.
             </p>
           </div>
@@ -906,7 +906,7 @@ export default function Home() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
             Empezar
           </p>
-          <h2 className="font-display text-navy text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6 max-w-3xl mx-auto">
+          <h2 className="font-display text-grafito text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6 max-w-3xl mx-auto">
             El primer paso es siempre el más sencillo.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed max-w-xl mx-auto mb-12">
@@ -918,7 +918,7 @@ export default function Home() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="CTA final home"
             >
@@ -929,7 +929,7 @@ export default function Home() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="CTA final home secundario"
             >

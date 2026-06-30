@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import LinkedinIcon from "@/components/LinkedinIcon";
 import NewsletterFormLazy from "@/components/NewsletterFormLazy";
 import TrackingLink from "@/components/TrackingLink";
@@ -33,7 +33,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn de Adrián Pollán"
-              className="inline-flex items-center justify-center w-9 h-9 mt-5 rounded-lg bg-cream/10 text-cream/60 hover:bg-amber hover:text-navy transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 mt-5 rounded-lg bg-cream/10 text-cream/60 hover:bg-amber hover:text-grafito transition-colors"
             >
               <LinkedinIcon size={16} />
             </a>

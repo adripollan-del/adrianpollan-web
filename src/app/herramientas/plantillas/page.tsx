@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BarChart2, Calculator, CheckSquare, LayoutDashboard, Package, Zap, BookOpen, Mail } from "lucide-react";
@@ -184,7 +184,7 @@ export default function PlantillasPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlantillas) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
           alt="Análisis y datos para gestión de restaurantes — plantillas profesionales"
@@ -193,7 +193,7 @@ export default function PlantillasPage() {
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
@@ -227,7 +227,7 @@ export default function PlantillasPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               Plantillas individuales
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-4">
               Plantillas individuales de gestión para restaurantes
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed">
@@ -243,7 +243,7 @@ export default function PlantillasPage() {
               <Link
                 key={p.pageHref}
                 href={p.pageHref}
-                className="group bg-white border border-navy/8 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="group bg-white border border-grafito/8 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-10 h-10 bg-amber/10 border border-amber/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -251,7 +251,7 @@ export default function PlantillasPage() {
                   </div>
                   <span className="font-display text-amber font-bold text-xl">{p.price}</span>
                 </div>
-                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-2">
+                <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-2">
                   {p.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-5">
@@ -273,7 +273,7 @@ export default function PlantillasPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               Packs con descuento
             </p>
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-4">
               Packs con descuento: combina plantillas y ahorra hasta un 37%
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed">
@@ -291,15 +291,15 @@ export default function PlantillasPage() {
                   "relative rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1",
                   b.featured
                     ? "bg-white border-2 border-amber shadow-[0_12px_28px_-8px_rgba(186,117,23,0.35)]"
-                    : "bg-white border border-navy/8 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40",
+                    : "bg-white border border-grafito/8 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40",
                 ].join(" ")}
               >
                 {b.featured && (
-                  <span className="absolute top-4 right-4 bg-amber text-navy text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">
+                  <span className="absolute top-4 right-4 bg-amber text-grafito text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">
                     Más popular
                   </span>
                 )}
-                <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-3 pr-20">
+                <h3 className="font-display text-grafito text-lg font-semibold leading-snug mb-3 pr-20">
                   {b.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed flex-1 mb-4">
@@ -315,7 +315,7 @@ export default function PlantillasPage() {
                   href={b.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide"
                   eventName="bundle_compra"
                   eventLabel={b.title}
                 >
@@ -330,8 +330,8 @@ export default function PlantillasPage() {
       {/* ── FAQs — crema ─────────────────────────────────────────── */}
       <FaqsClient />
 
-      {/* ── GARANTÍAS — navy ─────────────────────────────────────── */}
-      <section className="bg-navy py-16 lg:py-20">
+      {/* ── GARANTÍAS — grafito ─────────────────────────────────────── */}
+      <section className="bg-grafito py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-cream text-2xl lg:text-3xl font-semibold leading-tight mb-10 lg:mb-12">
             Diseñadas para restaurantes reales, no para demos
@@ -359,7 +359,7 @@ export default function PlantillasPage() {
       {/* ── CTA FINAL — blanco ───────────────────────────────────── */}
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-4">
             ¿No sabes qué plantilla necesitas primero?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
@@ -370,7 +370,7 @@ export default function PlantillasPage() {
             href="https://calendly.com/adrianpollan"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="calendly_click"
             eventLabel="Plantillas — CTA final"
           >

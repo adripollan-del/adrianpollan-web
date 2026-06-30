@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: { absolute: "Política de Cookies — Adrián Pollán" },
@@ -28,7 +28,7 @@ function CookieTable({ rows }: { rows: CookieRow[] }) {
     <div className="not-prose my-6 overflow-x-auto">
       <table className="w-full text-sm border-collapse">
         <thead>
-          <tr className="border-b border-navy/20">
+          <tr className="border-b border-grafito/20">
             <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3 pr-4">Cookie</th>
             <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3 pr-4">Origen</th>
             <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3 pr-4">Finalidad</th>
@@ -37,8 +37,8 @@ function CookieTable({ rows }: { rows: CookieRow[] }) {
         </thead>
         <tbody>
           {rows.map((c) => (
-            <tr key={c.name} className="border-b border-navy/8">
-              <td className="font-body text-navy font-medium py-3 pr-4 align-top">{c.name}</td>
+            <tr key={c.name} className="border-b border-grafito/8">
+              <td className="font-body text-grafito font-medium py-3 pr-4 align-top">{c.name}</td>
               <td className="font-body text-ink/70 py-3 pr-4 align-top">{c.origin}</td>
               <td className="font-body text-ink/70 py-3 pr-4 align-top">{c.purpose}</td>
               <td className="font-body text-ink/70 py-3 align-top">{c.duration}</td>
@@ -54,7 +54,7 @@ export default function PoliticaCookiesPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="hero-navy pt-40 pb-12 lg:pt-48 lg:pb-16">
+      <section className="hero-grafito pt-40 pb-12 lg:pt-48 lg:pb-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Información legal
@@ -74,11 +74,11 @@ export default function PoliticaCookiesPage() {
           <article
             className="
               prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:text-navy prose-headings:font-semibold
+              prose-headings:font-display prose-headings:text-grafito prose-headings:font-semibold
               prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
               prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
               prose-p:font-body prose-p:text-ink/70 prose-p:leading-relaxed prose-p:mb-5
-              prose-strong:text-navy prose-strong:font-semibold
+              prose-strong:text-grafito prose-strong:font-semibold
               prose-a:text-amber prose-a:no-underline hover:prose-a:underline
               prose-li:font-body prose-li:text-ink/70 prose-li:my-1.5
             "
@@ -123,7 +123,7 @@ export default function PoliticaCookiesPage() {
             <div className="not-prose my-6 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-navy/20">
+                  <tr className="border-b border-grafito/20">
                     <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3 pr-4">Proveedor</th>
                     <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3 pr-4">Finalidad</th>
                     <th className="text-left font-body text-amber text-xs tracking-widest uppercase pb-3">Más información</th>
@@ -131,8 +131,8 @@ export default function PoliticaCookiesPage() {
                 </thead>
                 <tbody>
                   {terceros.map((t) => (
-                    <tr key={t.provider} className="border-b border-navy/8">
-                      <td className="font-body text-navy font-medium py-3 pr-4 align-top">{t.provider}</td>
+                    <tr key={t.provider} className="border-b border-grafito/8">
+                      <td className="font-body text-grafito font-medium py-3 pr-4 align-top">{t.provider}</td>
                       <td className="font-body text-ink/70 py-3 pr-4 align-top">{t.purpose}</td>
                       <td className="font-body text-ink/70 py-3 align-top">{t.url}</td>
                     </tr>

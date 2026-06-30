@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -115,7 +115,7 @@ export default function CasosRealesPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1920&q=80"
           alt="Interior de restaurante — casos de éxito de consultoría en hostelería"
@@ -125,7 +125,7 @@ export default function CasosRealesPage() {
           quality={50}
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -177,12 +177,12 @@ export default function CasosRealesPage() {
 
               {/* ── Cabecera ───────────────────────────────────────── */}
               <div className="flex flex-wrap items-center gap-3 mb-5">
-                <span className="font-body text-xs tracking-widest uppercase text-navy bg-amber px-3 py-1 font-semibold">
+                <span className="font-body text-xs tracking-widest uppercase text-grafito bg-amber px-3 py-1 font-semibold">
                   {caso.label}
                 </span>
                 <span className="font-body text-xs text-ink/45">{caso.tipo}</span>
               </div>
-              <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-10">
+              <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight mb-10">
                 {caso.title}
               </h2>
 
@@ -198,7 +198,7 @@ export default function CasosRealesPage() {
               </div>
 
               {/* ── Métricas de partida ────────────────────────────── */}
-              <div className={`${cardBg} border border-navy/10 rounded-xl p-6 lg:p-8 mb-10`}>
+              <div className={`${cardBg} border border-grafito/10 rounded-xl p-6 lg:p-8 mb-10`}>
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                   Métricas de partida
                 </p>
@@ -241,8 +241,8 @@ export default function CasosRealesPage() {
                 </ol>
               </div>
 
-              {/* ── Resultado — navy bg ────────────────────────────── */}
-              <div className="bg-navy rounded-xl p-6 lg:p-8 mb-8">
+              {/* ── Resultado — grafito bg ────────────────────────────── */}
+              <div className="bg-grafito rounded-xl p-6 lg:p-8 mb-8">
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
                   Resultado
                 </p>
@@ -254,7 +254,7 @@ export default function CasosRealesPage() {
               {/* ── Lección principal ─────────────────────────────── */}
               <div className="flex items-start gap-3 mb-10">
                 <Lightbulb size={18} className="text-amber flex-shrink-0 mt-1" strokeWidth={1.75} />
-                <p className="font-display text-navy/60 text-lg italic leading-relaxed">
+                <p className="font-display text-grafito/60 text-lg italic leading-relaxed">
                   &ldquo;{caso.leccion}&rdquo;
                 </p>
               </div>
@@ -264,7 +264,7 @@ export default function CasosRealesPage() {
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide"
+                className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide"
                 eventName="diagnostico_click"
                 eventLabel={`Casos de éxito — caso ${idx + 1}`}
               >
@@ -283,7 +283,7 @@ export default function CasosRealesPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Siguiente paso
           </p>
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Tu situación se parece a alguna de estas?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -296,7 +296,7 @@ export default function CasosRealesPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Casos de éxito — CTA final"
             >
@@ -307,7 +307,7 @@ export default function CasosRealesPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Casos de éxito — CTA final"
             >

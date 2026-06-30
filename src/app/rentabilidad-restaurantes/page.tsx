@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight } from "lucide-react";
@@ -128,8 +128,8 @@ export default function RentabilidadRestaurantesPage() {
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -161,7 +161,7 @@ export default function RentabilidadRestaurantesPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-6">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-6">
               Por qué tantos restaurantes ocupados no son rentables
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
@@ -192,21 +192,21 @@ export default function RentabilidadRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Los indicadores que importan
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Los seis conceptos clave de rentabilidad
             </h2>
           </div>
 
           <div className="space-y-6">
             {concepts.map((c, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-8 lg:p-10">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
                   <div className="lg:col-span-8">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="font-display text-amber/30 text-3xl font-light leading-none">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <h3 className="font-display text-navy text-2xl font-semibold">{c.title}</h3>
+                      <h3 className="font-display text-grafito text-2xl font-semibold">{c.title}</h3>
                     </div>
                     <p className="font-body text-ink/65 text-base leading-relaxed mb-5">{c.summary}</p>
                     <Link
@@ -217,8 +217,8 @@ export default function RentabilidadRestaurantesPage() {
                     </Link>
                   </div>
                   {c.metric && (
-                    <div className="lg:col-span-4 bg-cream-dark border border-navy/10 rounded-lg p-6 text-center">
-                      <p className="font-display text-navy text-4xl font-bold mb-1">{c.metric}</p>
+                    <div className="lg:col-span-4 bg-cream-dark border border-grafito/10 rounded-lg p-6 text-center">
+                      <p className="font-display text-grafito text-4xl font-bold mb-1">{c.metric}</p>
                       <p className="font-body text-ink/50 text-xs leading-relaxed">{c.metricLabel}</p>
                     </div>
                   )}
@@ -236,7 +236,7 @@ export default function RentabilidadRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Profundiza en cada concepto
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Artículos relacionados
             </h2>
           </div>
@@ -245,13 +245,13 @@ export default function RentabilidadRestaurantesPage() {
               <Link
                 key={a.slug}
                 href={`/blog/${a.slug}`}
-                className="group flex flex-col justify-between bg-cream-dark border border-navy/10 rounded-xl p-6 hover:border-amber/40 transition-colors"
+                className="group flex flex-col justify-between bg-cream-dark border border-grafito/10 rounded-xl p-6 hover:border-amber/40 transition-colors"
               >
                 <div>
                   <p className="font-body text-amber/70 text-xs uppercase tracking-wide mb-2">
                     {a.readTime}
                   </p>
-                  <h3 className="font-display text-navy text-base font-semibold leading-snug mb-4 group-hover:text-amber transition-colors">
+                  <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-4 group-hover:text-amber transition-colors">
                     {a.title}
                   </h3>
                 </div>
@@ -268,7 +268,7 @@ export default function RentabilidadRestaurantesPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5">
               ¿Qué está fallando en la rentabilidad de tu restaurante?
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
@@ -279,7 +279,7 @@ export default function RentabilidadRestaurantesPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Rentabilidad restaurantes — CTA final"
             >

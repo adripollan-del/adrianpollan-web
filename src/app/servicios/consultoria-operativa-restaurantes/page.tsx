@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -71,7 +71,7 @@ export default function ConsultoriaOperativaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdConsultoriaOp) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
           alt="Emplatado en cocina profesional durante el servicio — consultoría operativa para optimizar procesos en restaurantes"
@@ -80,7 +80,7 @@ export default function ConsultoriaOperativaPage() {
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -115,7 +115,7 @@ export default function ConsultoriaOperativaPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Para quién es
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 ¿Es esto para tu negocio?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -125,7 +125,7 @@ export default function ConsultoriaOperativaPage() {
             </div>
             <div className="space-y-4">
               {forWhom.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-5">
                   <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
                 </div>
@@ -143,7 +143,7 @@ export default function ConsultoriaOperativaPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Qué incluye
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Acompañamiento real, no teoría
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -153,7 +153,7 @@ export default function ConsultoriaOperativaPage() {
             </div>
             <div className="space-y-3">
               {includes.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-white border border-navy/10 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-white border border-grafito/10 rounded-xl p-5">
                   <span className="font-display text-amber font-bold text-base leading-none mt-0.5 flex-shrink-0 w-6">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -169,7 +169,7 @@ export default function ConsultoriaOperativaPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
                 Herramienta gratuita
               </p>
-              <p className="font-display text-navy text-xl font-semibold">
+              <p className="font-display text-grafito text-xl font-semibold">
                 Calcula tu prime cost ahora
               </p>
               <p className="font-body text-ink/60 text-sm mt-1">
@@ -178,7 +178,7 @@ export default function ConsultoriaOperativaPage() {
             </div>
             <Link
               href="/herramientas/calculadora-prime-cost"
-              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide flex-shrink-0"
             >
               Ir a la calculadora <ArrowRight size={14} />
             </Link>
@@ -193,7 +193,7 @@ export default function ConsultoriaOperativaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Qué cambia
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-4">
               Qué cambia durante el acompañamiento
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -207,7 +207,7 @@ export default function ConsultoriaOperativaPage() {
               "El equipo trabaja con criterio propio, no solo siguiendo instrucciones",
               "Tomas decisiones con datos, no con intuición ni costumbre",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-6">
+              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-6">
                 <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                 <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
               </div>
@@ -223,7 +223,7 @@ export default function ConsultoriaOperativaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Indicadores de seguimiento
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Lo que medimos cada mes
             </h2>
           </div>
@@ -234,7 +234,7 @@ export default function ConsultoriaOperativaPage() {
               "Ratio de dependencia operativa del propietario",
               "Margen neto antes y después",
             ].map((item, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-6">
                 <span className="font-display text-3xl font-light text-amber/30 block mb-3">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -252,7 +252,7 @@ export default function ConsultoriaOperativaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo funciona
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               El proceso, paso a paso
             </h2>
           </div>
@@ -262,7 +262,7 @@ export default function ConsultoriaOperativaPage() {
                 <span className="font-display text-5xl font-light text-amber/25 block mb-4">
                   {step.num}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">
                   {step.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">
@@ -281,7 +281,7 @@ export default function ConsultoriaOperativaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Honestidad ante todo
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Cuándo no tiene sentido
             </h2>
           </div>
@@ -291,8 +291,8 @@ export default function ConsultoriaOperativaPage() {
               "Si buscas resultados inmediatos sin proceso. Los cambios reales llevan semanas, no días.",
               "Si el negocio está en crisis aguda. Primero hay que estabilizar, luego optimizar.",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 border border-navy/10 rounded-xl p-5">
-                <span className="font-display text-base font-semibold text-navy/30 flex-shrink-0 mt-0.5">
+              <div key={i} className="flex items-start gap-4 border border-grafito/10 rounded-xl p-5">
+                <span className="font-display text-base font-semibold text-grafito/30 flex-shrink-0 mt-0.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="font-body text-ink/65 text-base leading-relaxed">{item}</p>
@@ -305,7 +305,7 @@ export default function ConsultoriaOperativaPage() {
       {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             &quot;Los resultados no vienen de tener el mejor plan. Vienen de implementarlo bien, con alguien que sabe lo que está haciendo.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -316,7 +316,7 @@ export default function ConsultoriaOperativaPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Consultoría Operativa — CTA final"
             >
@@ -326,7 +326,7 @@ export default function ConsultoriaOperativaPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Consultoría Operativa — CTA final"
             >

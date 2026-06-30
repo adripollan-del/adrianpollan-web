@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import TrackingLink from "@/components/TrackingLink";
@@ -23,8 +23,8 @@ export default function CalculadoraEscandalloPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
@@ -57,7 +57,7 @@ export default function CalculadoraEscandalloPage() {
       {/* ── CTA FINAL — crema oscuro ──────────────────────────────── */}
       <section className="bg-cream-dark py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-4">
             ¿Quieres saber qué más está afectando a tu margen?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
@@ -68,7 +68,7 @@ export default function CalculadoraEscandalloPage() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="diagnostico_click"
             eventLabel="Calculadora escandallo — CTA"
           >

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Users, ClipboardList, BarChart2, Settings } from "lucide-react";
@@ -135,8 +135,8 @@ export default function GestionOperativaRestaurantesPage() {
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -167,7 +167,7 @@ export default function GestionOperativaRestaurantesPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-6">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-6">
               Qué es la gestión operativa de un restaurante
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
@@ -199,15 +199,15 @@ export default function GestionOperativaRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Las áreas que determinan la eficiencia
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Los cuatro pilares de la gestión operativa
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {pillars.map(({ Icon, title, body }, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-8">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-8">
                 <Icon size={28} className="text-amber mb-5" />
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{title}</h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">{body}</p>
               </div>
             ))}
@@ -223,7 +223,7 @@ export default function GestionOperativaRestaurantesPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 El primer cambio
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Equipos que funcionan cuando tú no estás
               </h2>
               <p className="font-body text-ink/65 text-base leading-relaxed mb-5">
@@ -263,8 +263,8 @@ export default function GestionOperativaRestaurantesPage() {
                   body: "Los valores compartidos y la coherencia entre lo que se dice y lo que se hace determinan si el equipo toma buenas decisiones cuando nadie mira.",
                 },
               ].map((item, i) => (
-                <div key={i} className="border border-navy/10 rounded-lg p-5">
-                  <h3 className="font-display text-navy text-base font-semibold mb-2">{item.title}</h3>
+                <div key={i} className="border border-grafito/10 rounded-lg p-5">
+                  <h3 className="font-display text-grafito text-base font-semibold mb-2">{item.title}</h3>
                   <p className="font-body text-ink/60 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
@@ -280,7 +280,7 @@ export default function GestionOperativaRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               El sistema operativo
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Procesos que liberan en lugar de encadenar
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed mt-5">
@@ -291,11 +291,11 @@ export default function GestionOperativaRestaurantesPage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {processes.map((p) => (
-              <div key={p.num} className="bg-white border border-navy/10 rounded-xl p-7">
+              <div key={p.num} className="bg-white border border-grafito/10 rounded-xl p-7">
                 <span className="font-display text-4xl font-light text-amber/25 block mb-4 leading-none">
                   {p.num}
                 </span>
-                <h3 className="font-display text-navy text-lg font-semibold mb-3">{p.title}</h3>
+                <h3 className="font-display text-grafito text-lg font-semibold mb-3">{p.title}</h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">{p.body}</p>
               </div>
             ))}
@@ -310,7 +310,7 @@ export default function GestionOperativaRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Lo que hay que medir
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               KPIs operativos que detectan problemas antes de que duelan
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed mt-5">
@@ -321,8 +321,8 @@ export default function GestionOperativaRestaurantesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {kpis.map((k, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/10 rounded-xl p-7">
-                <p className="font-display text-navy text-3xl font-bold mb-1">{k.metric}</p>
+              <div key={i} className="bg-cream-dark border border-grafito/10 rounded-xl p-7">
+                <p className="font-display text-grafito text-3xl font-bold mb-1">{k.metric}</p>
                 <p className="font-body text-amber text-xs font-semibold uppercase tracking-wide mb-4">
                   {k.label}
                 </p>
@@ -340,7 +340,7 @@ export default function GestionOperativaRestaurantesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Profundiza en cada área
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Artículos relacionados
             </h2>
           </div>
@@ -349,12 +349,12 @@ export default function GestionOperativaRestaurantesPage() {
               <Link
                 key={a.slug}
                 href={`/blog/${a.slug}`}
-                className="group bg-white border border-navy/10 rounded-xl p-8 hover:border-amber/40 transition-colors"
+                className="group bg-white border border-grafito/10 rounded-xl p-8 hover:border-amber/40 transition-colors"
               >
                 <p className="font-body text-amber/70 text-xs uppercase tracking-wide mb-3">
                   {a.readTime} de lectura
                 </p>
-                <h3 className="font-display text-navy text-xl font-semibold leading-snug mb-3 group-hover:text-amber transition-colors">
+                <h3 className="font-display text-grafito text-xl font-semibold leading-snug mb-3 group-hover:text-amber transition-colors">
                   {a.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed mb-5">{a.excerpt}</p>
@@ -371,7 +371,7 @@ export default function GestionOperativaRestaurantesPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5">
               ¿Cómo está la gestión operativa de tu restaurante?
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
@@ -382,7 +382,7 @@ export default function GestionOperativaRestaurantesPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Gestión operativa restaurantes — CTA final"
             >

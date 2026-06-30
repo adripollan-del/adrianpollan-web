@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { Lock, FolderOpen, ExternalLink, LogOut } from "lucide-react";
@@ -54,7 +54,7 @@ export default function HerramientasLibroClient() {
   }
 
   if (!mounted) {
-    return <div className="min-h-[60vh] bg-navy" />;
+    return <div className="min-h-[60vh] bg-grafito" />;
   }
 
   if (!unlocked) {
@@ -97,7 +97,7 @@ export default function HerramientasLibroClient() {
               </div>
               <button
                 type="submit"
-                className="w-full btn-amber py-3 font-body font-semibold text-sm text-navy tracking-wide rounded-lg transition-colors"
+                className="w-full btn-amber py-3 font-body font-semibold text-sm text-grafito tracking-wide rounded-lg transition-colors"
               >
                 Acceder
               </button>
@@ -111,7 +111,7 @@ export default function HerramientasLibroClient() {
   return (
     <div className="bg-white">
       {/* ── HEADER ── */}
-      <section className="bg-navy py-16 lg:py-20">
+      <section className="bg-grafito py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">Contenido exclusivo</p>
           <h1 className="font-display text-cream text-3xl lg:text-5xl font-semibold leading-tight mb-4">
@@ -129,12 +129,12 @@ export default function HerramientasLibroClient() {
       {/* ── CHAPTERS GRID ── */}
       <section className="py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-navy/10 border border-navy/10 rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-grafito/10 border border-grafito/10 rounded-xl overflow-hidden">
             {chapters.map((ch, i) => (
               <div
                 key={ch.num}
                 className={`bg-white p-6 lg:p-8 flex flex-col gap-4 ${
-                  i < chapters.length - 2 ? "border-b border-navy/8" : ""
+                  i < chapters.length - 2 ? "border-b border-grafito/8" : ""
                 }`}
               >
                 <div className="flex items-start gap-4">
@@ -145,7 +145,7 @@ export default function HerramientasLibroClient() {
                     <p className="font-body text-ink/40 text-xs tracking-widest uppercase mb-1">
                       Capítulo {ch.num}
                     </p>
-                    <h2 className="font-display text-navy font-semibold text-base lg:text-lg leading-snug">
+                    <h2 className="font-display text-grafito font-semibold text-base lg:text-lg leading-snug">
                       {ch.title}
                     </h2>
                   </div>
@@ -154,7 +154,7 @@ export default function HerramientasLibroClient() {
                   href={ch.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 btn-amber text-navy text-xs font-semibold tracking-wide self-start"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 btn-amber text-grafito text-xs font-semibold tracking-wide self-start"
                 >
                   <FolderOpen size={13} />
                   Ver herramientas del capítulo
@@ -167,13 +167,13 @@ export default function HerramientasLibroClient() {
       </section>
 
       {/* ── FOOTER ── */}
-      <section className="bg-cream-dark py-12 border-t border-navy/10">
+      <section className="bg-cream-dark py-12 border-t border-grafito/10">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-body text-ink/55 text-sm">
             Si tienes algún problema para acceder a las herramientas, escríbeme a{" "}
             <a
               href="mailto:adrian@adrianpollan.com"
-              className="text-navy underline underline-offset-2 hover:text-amber transition-colors"
+              className="text-grafito underline underline-offset-2 hover:text-amber transition-colors"
             >
               adrian@adrianpollan.com
             </a>

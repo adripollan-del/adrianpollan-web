@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -99,13 +99,13 @@ export default function KitGestionOperativaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=80"
           alt="Equipo de cocina y operaciones de restaurante — Kit de Gestión Operativa"
           fill priority sizes="100vw" className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
@@ -133,7 +133,7 @@ export default function KitGestionOperativaPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <div className="mb-10">
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-4">
               Así se ve la plantilla
             </h2>
             <p className="font-body text-ink/60 text-base">
@@ -146,7 +146,7 @@ export default function KitGestionOperativaPage() {
               alt="Vista previa del kit de gestión operativa con datos de ejemplo"
               width={1200}
               height={675}
-              className="w-full rounded-xl shadow-lg border border-navy/8"
+              className="w-full rounded-xl shadow-lg border border-grafito/8"
             />
             <p className="font-body text-ink/40 text-xs text-center mt-4">
               Captura real de la plantilla con datos de ejemplo
@@ -158,18 +158,18 @@ export default function KitGestionOperativaPage() {
       {/* ── ¿QUÉ INCLUYE? ─────────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué incluye?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {includes.map((item) => (
-              <div key={item.title} className="border border-navy/8 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div key={item.title} className="border border-grafito/8 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-amber/10 border border-amber/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-display text-navy text-base font-semibold mb-1">{item.title}</h3>
+                    <h3 className="font-display text-grafito text-base font-semibold mb-1">{item.title}</h3>
                     <p className="font-body text-ink/60 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default function KitGestionOperativaPage() {
       {/* ── ¿QUÉ PUEDES HACER? ────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-12">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-12">
             ¿Qué puedes hacer con esta plantilla?
           </h2>
           <ol className="space-y-5">
@@ -199,7 +199,7 @@ export default function KitGestionOperativaPage() {
       </section>
 
       {/* ── PRIMER CTA ───────────────────────────────────────────── */}
-      <section className="bg-navy py-16 lg:py-20">
+      <section className="bg-grafito py-16 lg:py-20">
         <div className="max-w-xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-cream/80 text-lg mb-8">
             Accede ahora por <span className="font-semibold text-amber">89 €</span> y empieza a usarla hoy.
@@ -207,7 +207,7 @@ export default function KitGestionOperativaPage() {
           <TrackingLink
             href="https://adrianpollan.lemonsqueezy.com/checkout/buy/d75e6db2-425e-4e33-9642-5197fb133bfb"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Kit de Gestión Operativa"
           >
             Comprar ahora <ArrowRight size={15} />
@@ -221,7 +221,7 @@ export default function KitGestionOperativaPage() {
       {/* ── ¿PARA QUIÉN ES? ───────────────────────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-10">
             ¿Para quién es esta plantilla?
           </h2>
           <ul className="space-y-5">
@@ -239,7 +239,7 @@ export default function KitGestionOperativaPage() {
       <TeReconoces symptoms={symptoms} title="Lo que cambia cuando lo usas" />
 
       {/* ── GARANTÍAS ────────────────────────────────────────────── */}
-      <section className="bg-navy py-16 lg:py-20">
+      <section className="bg-grafito py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-cream text-2xl lg:text-3xl font-semibold leading-tight mb-10 lg:mb-12">
             Diseñadas para restaurantes reales, no para demos
@@ -263,7 +263,7 @@ export default function KitGestionOperativaPage() {
       {/* ── TAMBIÉN EN PACK ──────────────────────────────────────── */}
       <section className="bg-[#EDE6D8] py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-3">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-3">
             También disponible en pack
           </h2>
           <p className="font-body text-ink/60 text-base mb-10">
@@ -271,8 +271,8 @@ export default function KitGestionOperativaPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {bundles.map((b) => (
-              <div key={b.title} className="bg-white border border-navy/8 rounded-xl p-7 flex flex-col transition-shadow hover:shadow-[0_8px_24px_-6px_rgba(186,117,23,0.2)] hover:border-amber/30">
-                <h3 className="font-display text-navy text-lg font-semibold mb-4">{b.title}</h3>
+              <div key={b.title} className="bg-white border border-grafito/8 rounded-xl p-7 flex flex-col transition-shadow hover:shadow-[0_8px_24px_-6px_rgba(186,117,23,0.2)] hover:border-amber/30">
+                <h3 className="font-display text-grafito text-lg font-semibold mb-4">{b.title}</h3>
                 <ul className="space-y-1.5 mb-5 flex-1">
                   {b.includes.map((item) => (
                     <li key={item} className="flex items-start gap-2">
@@ -302,18 +302,18 @@ export default function KitGestionOperativaPage() {
       {/* ── CTA FINAL ────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-[700px] mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-8">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-8">
             ¿Listo para estandarizar tu operación?
           </h2>
           <TrackingLink
             href="https://adrianpollan.lemonsqueezy.com/checkout/buy/d75e6db2-425e-4e33-9642-5197fb133bfb"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-10 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="plantilla_compra" eventLabel="Kit Operativo — CTA final"
           >
             Comprar ahora <ArrowRight size={15} />
           </TrackingLink>
-          <div className="border-t border-navy/10 my-10" />
+          <div className="border-t border-grafito/10 my-10" />
           <p className="font-body text-ink/60 text-base mb-6">
             ¿No sabes si es la plantilla que necesitas?
           </p>

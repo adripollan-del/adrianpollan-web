@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Rocket, CheckCircle, AlertTriangle, TrendingDown } from "lucide-react";
@@ -29,8 +29,8 @@ export default function ParaEmprendedoresPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -67,7 +67,7 @@ export default function ParaEmprendedoresPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 ¿Dónde estás tú?
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 ¿Estás en alguno de estos momentos?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -78,7 +78,7 @@ export default function ParaEmprendedoresPage() {
             </div>
             <div className="space-y-4">
               {moments.map((moment, i) => (
-                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-5">
                   <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/75 text-base leading-relaxed">{moment}</p>
                 </div>
@@ -96,7 +96,7 @@ export default function ParaEmprendedoresPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Lo que nadie te dice
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Los errores más costosos se cometen antes de abrir
               </h2>
               <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -117,7 +117,7 @@ export default function ParaEmprendedoresPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white border border-navy/10 rounded-xl p-8 lg:p-10">
+            <div className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-6">
                 <AlertTriangle size={20} className="text-amber flex-shrink-0" />
                 <p className="font-body text-amber text-xs tracking-widest uppercase">
@@ -151,16 +151,16 @@ export default function ParaEmprendedoresPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo puedo ayudarte
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Acompañamiento a aperturas
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="bg-cream-dark border border-navy/10 rounded-xl p-8">
+            <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8">
               <div className="mb-5">
                 <Rocket size={36} className="text-amber" />
               </div>
-              <h3 className="font-display text-navy text-xl font-semibold mb-3">
+              <h3 className="font-display text-grafito text-xl font-semibold mb-3">
                 Desde la validación hasta los primeros servicios
               </h3>
               <p className="font-body text-ink/65 text-sm leading-relaxed mb-6">
@@ -170,7 +170,7 @@ export default function ParaEmprendedoresPage() {
               </p>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+                className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               >
                 Ver todos los servicios <ArrowRight size={15} />
               </Link>
@@ -196,7 +196,7 @@ export default function ParaEmprendedoresPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
                 Herramienta gratuita
               </p>
-              <p className="font-display text-navy text-xl font-semibold">
+              <p className="font-display text-grafito text-xl font-semibold">
                 Descarga el checklist de apertura gratuito
               </p>
               <p className="font-body text-ink/60 text-sm mt-1">
@@ -205,7 +205,7 @@ export default function ParaEmprendedoresPage() {
             </div>
             <Link
               href="/herramientas/checklist-apertura"
-              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide flex-shrink-0"
             >
               Ver checklist <ArrowRight size={14} />
             </Link>
@@ -220,11 +220,11 @@ export default function ParaEmprendedoresPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Resultado real
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Un caso concreto
             </h2>
           </div>
-          <div className="bg-white border border-navy/10 rounded-xl p-8 lg:p-12 max-w-3xl">
+          <div className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-12 max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
               Emprendedor · Primera apertura · España
             </p>
@@ -238,7 +238,7 @@ export default function ParaEmprendedoresPage() {
                 <p className="font-body text-ink/40 text-xs uppercase tracking-widest mb-2">Sin análisis</p>
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingDown size={20} className="text-red-400 flex-shrink-0" />
-                  <p className="font-display text-navy text-2xl font-bold">Local firmado</p>
+                  <p className="font-display text-grafito text-2xl font-bold">Local firmado</p>
                 </div>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">
                   El coste de alquiler representaba más del 18% de las ventas proyectadas.
@@ -247,14 +247,14 @@ export default function ParaEmprendedoresPage() {
               </div>
               <div>
                 <p className="font-body text-amber text-xs uppercase tracking-widest mb-2">Con análisis</p>
-                <p className="font-display text-navy text-4xl font-bold mb-1">–30%</p>
+                <p className="font-display text-grafito text-4xl font-bold mb-1">–30%</p>
                 <p className="font-body text-ink/60 text-sm leading-relaxed italic">
                   No firmó. Encontró otro local con condiciones viables.
                   Ahorró el 30% en coste de alquiler desde el primer mes.
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 pt-6 border-t border-navy/10">
+            <div className="flex items-center gap-3 pt-6 border-t border-grafito/10">
               <CheckCircle size={18} className="text-amber flex-shrink-0" />
               <p className="font-body text-ink/60 text-sm leading-relaxed">
                 A veces el mejor consejo es no hacer algo. Eso también es parte del trabajo.
@@ -267,7 +267,7 @@ export default function ParaEmprendedoresPage() {
       {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Quieres abrir con criterio y sin los errores más costosos?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -279,7 +279,7 @@ export default function ParaEmprendedoresPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Para emprendedores — CTA final"
             >
@@ -289,7 +289,7 @@ export default function ParaEmprendedoresPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Para emprendedores — CTA final"
             >
