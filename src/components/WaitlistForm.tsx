@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -55,11 +55,11 @@ export default function WaitlistForm({
   if (status === "done") {
     return (
       <div className="flex flex-col items-center gap-3">
-        <CheckCircle size={32} className="text-navy" />
-        <p className="font-display text-navy text-xl font-semibold">
+        <CheckCircle size={32} className="text-grafito" />
+        <p className="font-display text-grafito text-xl font-semibold">
           ¡Estás en la lista!
         </p>
-        <p className="font-body text-navy/65 text-sm">
+        <p className="font-body text-grafito/65 text-sm">
           Te avisaré en cuanto el libro esté disponible.
         </p>
       </div>
@@ -90,12 +90,12 @@ export default function WaitlistForm({
           onChange={(e) => setEmail(e.target.value)}
           placeholder={placeholder}
           disabled={status === "sending"}
-          className="flex-1 bg-navy/10 border border-navy/20 px-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy transition-colors disabled:opacity-60"
+          className="flex-1 bg-grafito/10 border border-grafito/20 px-4 py-3.5 font-body text-sm text-grafito placeholder:text-grafito/40 focus:outline-none focus:border-grafito transition-colors disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-navy text-cream text-sm font-semibold tracking-wide hover:bg-navy/85 disabled:opacity-60 transition-colors whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-grafito text-cream text-sm font-semibold tracking-wide hover:bg-grafito/85 disabled:opacity-60 transition-colors whitespace-nowrap"
         >
           {status === "sending" ? "..." : buttonText}
           {status === "idle" && <ArrowRight size={14} />}

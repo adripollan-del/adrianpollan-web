@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export default function PoliticaPrivacidadPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="hero-navy pt-40 pb-12 lg:pt-48 lg:pb-16">
+      <section className="hero-grafito pt-40 pb-12 lg:pt-48 lg:pb-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             Información legal
@@ -31,11 +31,11 @@ export default function PoliticaPrivacidadPage() {
           <article
             className="
               prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:text-navy prose-headings:font-semibold
+              prose-headings:font-display prose-headings:text-grafito prose-headings:font-semibold
               prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
               prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
               prose-p:font-body prose-p:text-ink/70 prose-p:leading-relaxed prose-p:mb-5
-              prose-strong:text-navy prose-strong:font-semibold
+              prose-strong:text-grafito prose-strong:font-semibold
               prose-a:text-amber prose-a:no-underline hover:prose-a:underline
               prose-li:font-body prose-li:text-ink/70 prose-li:my-1.5
             "

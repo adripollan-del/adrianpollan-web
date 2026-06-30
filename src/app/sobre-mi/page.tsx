@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -42,7 +42,7 @@ export default function SobreMiPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSobreMi) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1613929298076-735f9cf15ed2?auto=format&fit=crop&w=1920&q=80"
           alt="Ambiente de restaurante de hostelería — consultor con más de 20 años de experiencia"
@@ -52,7 +52,7 @@ export default function SobreMiPage() {
           quality={50}
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -95,9 +95,9 @@ export default function SobreMiPage() {
                   { num: "20+", label: "años en la industria" },
                   { num: "4", label: "países de experiencia" },
                 ].map((stat) => (
-                  <div key={stat.num} className="bg-cream-dark border border-navy/10 rounded-xl p-4">
+                  <div key={stat.num} className="bg-cream-dark border border-grafito/10 rounded-xl p-4">
                     <p className="font-display text-amber text-3xl font-semibold">{stat.num}</p>
-                    <p className="font-body text-navy/60 text-xs mt-1">{stat.label}</p>
+                    <p className="font-body text-grafito/60 text-xs mt-1">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -120,7 +120,7 @@ export default function SobreMiPage() {
               {/* 01 Mi historia */}
               <div>
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">01 — Mi historia</p>
-                <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold mb-6">
+                <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold mb-6">
                   Consultor de hostelería con más de 20 años de experiencia operativa
                 </h2>
                 <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
@@ -159,7 +159,7 @@ export default function SobreMiPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">02 — Por qué hago esto</p>
-          <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold mb-6">
+          <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold mb-6">
             Muchos negocios no fallan por falta de trabajo. Fallan por falta de método.
           </h2>
           <div className="space-y-4 font-body text-ink/70 text-base leading-relaxed">
@@ -188,7 +188,7 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             03 — Mi forma de trabajar
           </p>
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
             Primero entender. Después actuar.
           </h2>
           <div className="space-y-5 font-body text-ink/70 text-base leading-relaxed">
@@ -219,7 +219,7 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             04 — Qué me diferencia
           </p>
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-6">
             Lo que me distingue no es lo que sé. Es desde dónde lo sé.
           </h2>
           <div className="space-y-4 font-body text-ink/65 text-base leading-relaxed mb-10">
@@ -258,7 +258,7 @@ export default function SobreMiPage() {
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
             05 — Qué no hago
           </p>
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-4">
             Qué no hago
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
@@ -290,7 +290,7 @@ export default function SobreMiPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               06 — Para quién trabajo
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
               Si reconoces tu situación aquí, probablemente podemos trabajar juntos.
             </h2>
             <ul className="space-y-4">
@@ -310,8 +310,8 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── NO TRABAJO CON TODO EL MUNDO — fondo navy ───────────── */}
-      <section className="bg-navy py-24 lg:py-32">
+      {/* ── NO TRABAJO CON TODO EL MUNDO — fondo grafito ───────────── */}
+      <section className="bg-grafito py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-cream text-2xl lg:text-5xl font-semibold leading-tight mb-3">
             No trabajo con todo el mundo.
@@ -359,7 +359,7 @@ export default function SobreMiPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Casos de éxito
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-4 max-w-2xl">
               Situaciones reales, resultados concretos
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed max-w-2xl mb-2">
@@ -428,12 +428,12 @@ export default function SobreMiPage() {
             ].map((caso, i) => (
               <div
                 key={i}
-                className="bg-white border border-navy/10 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="bg-white border border-grafito/10 rounded-xl p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <span className="inline-block font-body text-amber text-xs tracking-widest uppercase mb-4">
                   {caso.label}
                 </span>
-                <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-5">
+                <h3 className="font-display text-grafito text-lg font-semibold leading-snug mb-5">
                   {caso.title}
                 </h3>
                 <div className="flex-1 mb-5">
@@ -456,7 +456,7 @@ export default function SobreMiPage() {
                     ))}
                   </div>
                 </div>
-                <div className="pt-5 border-t border-navy/10 flex items-start gap-3">
+                <div className="pt-5 border-t border-grafito/10 flex items-start gap-3">
                   <CheckCircle size={18} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/75 text-sm leading-relaxed italic">
                     {caso.resultado}
@@ -471,7 +471,7 @@ export default function SobreMiPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Sobre mí — casos de éxito"
             >
@@ -480,7 +480,7 @@ export default function SobreMiPage() {
             </TrackingLink>
             <Link
               href="/casos-reales"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
             >
               Ver página completa de casos <ArrowRight size={14} />
             </Link>
@@ -492,7 +492,7 @@ export default function SobreMiPage() {
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-12">
-            <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight">
               Lo que dicen quienes han trabajado conmigo
             </h2>
           </div>
@@ -516,14 +516,14 @@ export default function SobreMiPage() {
             ].map((t, i) => (
               <div
                 key={i}
-                className="bg-white shadow-sm border border-navy/10 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="bg-white shadow-sm border border-grafito/10 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <Quote size={20} className="text-amber mb-3" strokeWidth={1.5} />
                 <p className="font-body text-ink/75 text-sm leading-relaxed mb-5 flex-1">
                   {t.text}
                 </p>
-                <div className="pt-4 border-t border-navy/10">
-                  <p className="font-display text-navy text-xs font-semibold">{t.name}</p>
+                <div className="pt-4 border-t border-grafito/10">
+                  <p className="font-display text-grafito text-xs font-semibold">{t.name}</p>
                   <p className="font-body text-ink/55 text-xs mt-0.5">{t.role}</p>
                 </div>
               </div>
@@ -539,7 +539,7 @@ export default function SobreMiPage() {
       <section className="bg-white py-14 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl">
-            <h2 className="font-display text-navy text-2xl font-semibold mb-6">
+            <h2 className="font-display text-grafito text-2xl font-semibold mb-6">
               Encuéntrame también en
             </h2>
             <a
@@ -548,10 +548,10 @@ export default function SobreMiPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 group"
             >
-              <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-navy text-cream group-hover:bg-amber group-hover:text-navy transition-colors">
+              <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-grafito text-cream group-hover:bg-amber group-hover:text-grafito transition-colors">
                 <LinkedinIcon size={18} />
               </span>
-              <span className="font-body text-navy text-sm font-medium group-hover:text-amber transition-colors">
+              <span className="font-body text-grafito text-sm font-medium group-hover:text-amber transition-colors">
                 LinkedIn — Adrián Pollán
               </span>
             </a>
@@ -567,7 +567,7 @@ export default function SobreMiPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-light leading-tight mb-5">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-light leading-tight mb-5">
                 Si algo de lo que has leído te resuena, el siguiente paso es sencillo.
               </h2>
               <p className="font-body text-ink/65 text-base leading-relaxed mb-3">
@@ -584,7 +584,7 @@ export default function SobreMiPage() {
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
                 eventName="diagnostico_click"
                 eventLabel="Sobre mí — CTA final"
               >
@@ -594,7 +594,7 @@ export default function SobreMiPage() {
                 href="https://calendly.com/adrianpollan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-grafito/30 text-grafito text-sm font-medium hover:border-amber hover:text-amber transition-colors"
                 eventName="calendly_click"
                 eventLabel="Sobre mí — CTA final"
               >

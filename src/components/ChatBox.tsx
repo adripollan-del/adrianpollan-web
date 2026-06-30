@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -19,7 +19,7 @@ const STORAGE_MESSAGES = "chatbox_messages";
 const STORAGE_OPEN     = "chatbox_open";
 
 /* ─── Avatar robot de Robi ──────────────────────────────────────
-   SVG inline: robot con colores de marca (navy + amber).         */
+   SVG inline: robot con colores de marca (grafito + amber).         */
 function RobiAvatar({ size = 40 }: { size?: number }) {
   return (
     <Image
@@ -314,7 +314,7 @@ export default function ChatBox() {
           showExitPopup ? "animate-slide-up" : "",
         ].join(" ")}>
 
-          {/* Header navy */}
+          {/* Header grafito */}
           <div
             className="flex items-center justify-between px-4 bg-[#23272B] text-white shrink-0"
             style={{ paddingTop: "max(12px, env(safe-area-inset-top))", paddingBottom: "12px" }}

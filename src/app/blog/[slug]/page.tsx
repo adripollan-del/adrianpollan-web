@@ -1,259 +1,118 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { blogPosts } from "@/data/blog";
-import { sanitizeBlogHtml } from "@/lib/sanitize-blog";
-import TrackingLink from "@/components/TrackingLink";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+﻿import type { Metadata } from "next";
 
-interface Props {
-  params: Promise<{ slug: string }>;
-}
+export const metadata: Metadata = {
+  title: { absolute: "Aviso Legal — Adrián Pollán" },
+  description: "Información legal sobre la titularidad y condiciones de uso de adrianpollan.com.",
+  robots: { index: false, follow: true },
+};
 
-export async function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
-  if (!post) return {};
-  return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: {
-      canonical: `https://adrianpollan.com/blog/${post.slug}`,
-    },
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      publishedTime: post.date,
-      authors: ["Adrián Pollán"],
-      url: `https://adrianpollan.com/blog/${post.slug}`,
-      images: [{ url: post.coverImage, width: 800, height: 450, alt: post.title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: [post.coverImage],
-    },
-  };
-}
-
-export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
-  if (!post) notFound();
-
-  const related = blogPosts.filter(
-    (p) => p.slug !== post.slug && p.category === post.category
-  ).slice(0, 2);
-
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.coverImage,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      "@type": "Person",
-      "@id": "https://adrianpollan.com/#person",
-      name: "Adrián Pollán",
-      url: "https://adrianpollan.com",
-    },
-    publisher: {
-      "@type": "Person",
-      "@id": "https://adrianpollan.com/#person",
-      name: "Adrián Pollán",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://adrianpollan.com/blog/${post.slug}`,
-    },
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://adrianpollan.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://adrianpollan.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://adrianpollan.com/blog/${post.slug}` },
-    ],
-  };
-
+export default function AvisoLegalPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-0 lg:pt-48 overflow-hidden">
-        <div className="relative max-w-3xl mx-auto px-6 lg:px-10 pb-12">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 font-body text-sm text-cream/50 hover:text-amber transition-colors mb-8"
-          >
-            <ArrowLeft size={14} /> Volver al blog
-          </Link>
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-body text-xs text-amber tracking-widest uppercase border border-amber/40 px-3 py-1">
-              {post.category}
-            </span>
-            <span className="text-cream/20">·</span>
-            <span className="font-body text-xs text-cream/40">{post.readTime} de lectura</span>
-            <span className="text-cream/20">·</span>
-            <span className="font-body text-xs text-cream/40">
-              {new Date(post.date).toLocaleDateString("es-ES", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-          </div>
-          <h1 className="font-display text-cream text-3xl lg:text-5xl xl:text-6xl font-semibold leading-tight">
-            {post.title}
+      <section className="hero-grafito pt-40 pb-12 lg:pt-48 lg:pb-16">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+            Información legal
+          </p>
+          <h1 className="font-display text-cream text-4xl lg:text-5xl font-light leading-tight">
+            Aviso Legal
           </h1>
-        </div>
-
-        {/* Cover image al borde del hero */}
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-10">
-          <div className="relative aspect-[16/7] overflow-hidden">
-            <Image
-              src={post.coverImage}
-              alt={`${post.title} — Adrián Pollán`}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 900px"
-              className="object-cover"
-            />
-          </div>
+          <p className="font-body text-cream/50 text-sm mt-5">
+            Última actualización: mayo de 2026
+          </p>
         </div>
       </section>
 
-      {/* ── CUERPO DEL ARTÍCULO — fondo blanco ──────────────────── */}
+      {/* ── CONTENIDO ──────────────────────────────────────────── */}
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
-          {/* Lead / extracto */}
-          <p className="font-body text-ink/65 text-xl leading-relaxed border-l-3 border-amber pl-6 mb-14">
-            {post.excerpt}
-          </p>
-
-          {/* Cuerpo con prose */}
-          <div
+          <article
             className="
               prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:text-navy prose-headings:font-semibold prose-headings:leading-tight
-              prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-5
-              prose-p:font-body prose-p:text-ink/70 prose-p:leading-relaxed prose-p:mb-6
-              prose-strong:text-navy prose-strong:font-semibold
+              prose-headings:font-display prose-headings:text-grafito prose-headings:font-semibold
+              prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+              prose-p:font-body prose-p:text-ink/70 prose-p:leading-relaxed prose-p:mb-5
+              prose-strong:text-grafito prose-strong:font-semibold
               prose-a:text-amber prose-a:no-underline hover:prose-a:underline
             "
-            dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body) }}
-          />
-
-          {/* Firma del autor */}
-          <div className="mt-16 pt-10 border-t border-navy/10 flex items-center gap-4">
-            <div className="w-12 h-12 bg-amber/20 border border-amber/30 flex items-center justify-center flex-shrink-0">
-              <span className="font-display text-amber font-bold text-lg">AP</span>
-            </div>
-            <div>
-              <p className="font-display text-navy font-semibold">Adrián Pollán</p>
-              <p className="font-body text-ink/50 text-sm">Consultor en hostelería y restauración</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── HERRAMIENTA CONTEXTUAL ────────────────────────────────── */}
-      {post.toolCta && (
-        <section className="bg-cream-dark py-10 lg:py-12">
-          <div className="max-w-3xl mx-auto px-6 lg:px-10">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-5 bg-white border border-amber/30 rounded-xl p-6 lg:p-8">
-              <div>
-                <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
-                  Herramienta gratuita
-                </p>
-                <p className="font-display text-navy text-lg font-semibold leading-snug">
-                  Ponlo en práctica ahora mismo
-                </p>
-              </div>
-              <a
-                href={post.toolCta.href}
-                className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
-              >
-                {post.toolCta.text} →
-              </a>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── ARTÍCULOS RELACIONADOS — fondo crema ─────────────────── */}
-      {related.length > 0 && (
-        <section className="bg-cream-dark py-16 lg:py-20">
-          <div className="max-w-3xl mx-auto px-6 lg:px-10">
-            <p className="font-body text-amber text-xs tracking-widest uppercase mb-8">
-              Artículos relacionados
+          >
+            <h2>1. Identificación del titular</h2>
+            <p>
+              En cumplimiento de las European Communities (Directive 2000/31/EC) Regulations
+              2003 (S.I. No. 68/2003) de Irlanda, se informa de que el presente sitio web,
+              adrianpollan.com, es titularidad de:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {related.map((rel) => (
-                <Link
-                  key={rel.slug}
-                  href={`/blog/${rel.slug}`}
-                  className="group bg-white border border-navy/10 rounded-xl p-6 hover:border-amber/50 transition-colors"
-                >
-                  <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">{rel.category}</p>
-                  <h3 className="font-display text-navy text-lg font-semibold leading-tight group-hover:text-amber transition-colors mb-2">
-                    {rel.title}
-                  </h3>
-                  <p className="font-body text-ink/50 text-xs">{rel.readTime} de lectura</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+            <p>
+              <strong>Adrián Pollán</strong> — Profesional independiente (sole trader)<br />
+              Domicilio: The Pier, Lisnard, Ballyvaughan, Co. Clare, Ireland. H91 W9TN<br />
+              Correo electrónico: adrian@adrianpollan.com
+            </p>
 
-      {/* ── CTA — fondo blanco ────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-            ¿Quieres aplicar esto?
-          </p>
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold mb-4">
-            Analiza primero cómo está tu restaurante
-          </h2>
-          <p className="font-body text-ink/65 text-base mb-10 max-w-md mx-auto">
-            El diagnóstico gratuito te dice exactamente qué áreas de tu negocio
-            necesitan más atención. En 10 minutos.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <TrackingLink
-              href="https://diagnostico.adrianpollan.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold"
-              eventName="diagnostico_click"
-              eventLabel="Blog — CTA artículo"
-            >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
-            </TrackingLink>
-            <TrackingLink
-              href="https://calendly.com/adrianpollan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm text-navy/60 hover:text-navy transition-colors"
-              eventName="calendly_click"
-              eventLabel="Blog — CTA artículo"
-            >
-              O reserva una sesión →
-            </TrackingLink>
-          </div>
+            <h2>2. Objeto y actividad</h2>
+            <p>
+              adrianpollan.com es el sitio web profesional de Adrián Pollán, consultor
+              especializado en restauración y Food &amp; Beverage, a través del cual se ofrece
+              información sobre servicios de consultoría, contenido editorial relacionado
+              con la gestión hostelera, y la posibilidad de contratar sesiones de consultoría
+              online.
+            </p>
+
+            <h2>3. Condiciones de uso</h2>
+            <p>
+              El acceso y uso de este sitio web implica la aceptación de las presentes
+              condiciones. El usuario se compromete a hacer un uso adecuado de los contenidos
+              y servicios disponibles, y a no emplearlos para actividades ilícitas, contrarias
+              a la buena fe o al orden público.
+            </p>
+            <p>
+              Adrián Pollán se reserva el derecho a modificar, suspender o interrumpir el
+              acceso al sitio web en cualquier momento y sin previo aviso, sin que ello genere
+              obligación de indemnización alguna.
+            </p>
+
+            <h2>4. Propiedad intelectual e industrial</h2>
+            <p>
+              Todos los contenidos del sitio web, incluyendo textos, imágenes, logotipos,
+              estructura, diseño y código fuente, son propiedad de Adrián Pollán o de terceros
+              que han autorizado su uso, y están protegidos por la legislación aplicable sobre
+              propiedad intelectual e industrial.
+            </p>
+            <p>
+              Queda expresamente prohibida la reproducción, distribución, transformación o
+              comunicación pública de cualquier contenido de este sitio sin autorización
+              escrita previa del titular.
+            </p>
+
+            <h2>5. Responsabilidad</h2>
+            <p>
+              Adrián Pollán no se hace responsable de los daños o perjuicios que pudieran
+              derivarse del uso incorrecto del sitio web, de la presencia de virus o elementos
+              lesivos introducidos por terceros, ni de la información contenida en páginas de
+              terceros enlazadas desde este sitio.
+            </p>
+            <p>
+              El titular realiza esfuerzos razonables para mantener la información publicada
+              actualizada y veraz, pero no garantiza su exactitud, integridad o vigencia en
+              todo momento.
+            </p>
+
+            <h2>6. Política de enlaces</h2>
+            <p>
+              Este sitio web puede contener enlaces a páginas de terceros. Dichos enlaces se
+              incluyen únicamente con fines informativos. Adrián Pollán no tiene control sobre
+              el contenido de esos sitios y no asume responsabilidad alguna por su
+              disponibilidad o contenido.
+            </p>
+
+            <h2>7. Legislación aplicable y jurisdicción</h2>
+            <p>
+              Las presentes condiciones se rigen por la legislación de Irlanda. Para la
+              resolución de cualquier controversia derivada del uso de este sitio web, las
+              partes se someten a los tribunales de Irlanda, sin perjuicio de otros fueros
+              que pudieran resultar de aplicación.
+            </p>
+          </article>
         </div>
       </section>
     </>

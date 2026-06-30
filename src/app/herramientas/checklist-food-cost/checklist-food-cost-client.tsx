@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
@@ -49,12 +49,12 @@ function EmailCapture({ completed, total, level, checkedIds }: { completed: numb
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="tu@email.com"
-        className="w-full bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+        className="w-full bg-white border border-grafito/20 px-3 py-2.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full px-5 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
+        className="w-full px-5 py-3 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
       >
         {status === "loading" ? "Enviando..." : "Recibir mi resultado por email"}
       </button>
@@ -165,12 +165,12 @@ export default function ChecklistFoodCostClient() {
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
 
         {/* Progress bar */}
-        <div className="bg-cream-dark border border-navy/10 rounded-xl p-6 mb-10">
+        <div className="bg-cream-dark border border-grafito/10 rounded-xl p-6 mb-10">
           <div className="flex items-center justify-between mb-3">
-            <p className="font-body text-navy text-sm font-medium">Progreso total</p>
-            <p className="font-display text-navy text-2xl font-bold">{progressPct}%</p>
+            <p className="font-body text-grafito text-sm font-medium">Progreso total</p>
+            <p className="font-display text-grafito text-2xl font-bold">{progressPct}%</p>
           </div>
-          <div className="h-3 bg-navy/10 rounded-full overflow-hidden">
+          <div className="h-3 bg-grafito/10 rounded-full overflow-hidden">
             <div
               className="h-full rounded-full transition-all duration-300"
               style={{
@@ -187,12 +187,12 @@ export default function ChecklistFoodCostClient() {
           {blocks.map((block, bi) => {
             const blockCount = block.items.filter((_, ii) => checked.has(`${bi}-${ii}`)).length;
             return (
-              <div key={bi} className="border border-navy/10 rounded-xl overflow-hidden">
+              <div key={bi} className="border border-grafito/10 rounded-xl overflow-hidden">
                 <div className="bg-cream-dark px-6 py-4 flex items-center justify-between">
-                  <h2 className="font-display text-navy text-base font-semibold">{block.title}</h2>
+                  <h2 className="font-display text-grafito text-base font-semibold">{block.title}</h2>
                   <span className="font-body text-ink/50 text-xs">{blockCount}/{block.items.length}</span>
                 </div>
-                <div className="divide-y divide-navy/6">
+                <div className="divide-y divide-grafito/6">
                   {block.items.map((item, ii) => {
                     const id = `${bi}-${ii}`;
                     const isChecked = checked.has(id);
@@ -200,7 +200,7 @@ export default function ChecklistFoodCostClient() {
                       <label key={ii} className="flex items-start gap-4 px-6 py-4 cursor-pointer hover:bg-cream-dark/40 transition-colors">
                         <div
                           className={`w-5 h-5 border flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
-                            isChecked ? "bg-amber border-amber" : "border-navy/30 hover:border-amber/60"
+                            isChecked ? "bg-amber border-amber" : "border-grafito/30 hover:border-amber/60"
                           }`}
                         >
                           {isChecked && <Check size={12} className="text-white" strokeWidth={3} />}
@@ -241,8 +241,8 @@ export default function ChecklistFoodCostClient() {
         {/* Email capture — checklist food cost */}
         {count > 0 && (
           <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
-            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
-            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu resultado con los puntos completados y los que todavía puedes mejorar.</p>
+            <p className="font-display text-grafito text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-grafito/70 text-sm mb-4">Te enviamos tu resultado con los puntos completados y los que todavía puedes mejorar.</p>
             <EmailCapture completed={count} total={total} level={result.label} checkedIds={Array.from(checked)} />
           </div>
         )}

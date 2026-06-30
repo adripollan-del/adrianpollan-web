@@ -1,13 +1,13 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
 import { ArrowRight } from "lucide-react";
 
 const categoryColors: Record<string, string> = {
   Rentabilidad: "bg-amber/10 text-amber border-amber/30",
-  Equipos: "bg-navy/8 text-navy border-navy/20",
+  Equipos: "bg-grafito/8 text-grafito border-grafito/20",
   Aperturas: "bg-amber/10 text-amber border-amber/30",
-  "El Método": "bg-navy/8 text-navy border-navy/20",
+  "El Método": "bg-grafito/8 text-grafito border-grafito/20",
 };
 
 export default function BlogGrid() {
@@ -20,7 +20,7 @@ export default function BlogGrid() {
             .map((post, i) => (
             <article
               key={post.slug}
-              className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
+              className="group flex flex-col bg-white/80 backdrop-blur-sm shadow-md border border-grafito/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40 overflow-hidden"
             >
               {/* Imagen de portada */}
               <Link
@@ -60,7 +60,7 @@ export default function BlogGrid() {
                   </span>
                 </div>
 
-                <h2 className="font-display text-navy text-2xl lg:text-[1.6rem] font-semibold leading-tight mb-4 group-hover:text-amber transition-colors flex-1">
+                <h2 className="font-display text-grafito text-2xl lg:text-[1.6rem] font-semibold leading-tight mb-4 group-hover:text-amber transition-colors flex-1">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
 
@@ -70,7 +70,7 @@ export default function BlogGrid() {
 
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-navy/20 pb-0.5 self-start group-hover:border-amber group-hover:text-amber transition-colors"
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-grafito border-b border-grafito/20 pb-0.5 self-start group-hover:border-amber group-hover:text-amber transition-colors"
                 >
                   Leer artículo <ArrowRight size={13} />
                 </Link>

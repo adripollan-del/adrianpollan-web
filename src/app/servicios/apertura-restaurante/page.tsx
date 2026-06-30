@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -60,7 +60,7 @@ export default function AperturaRestaurantePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdApertura) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
           alt="Sala de restaurante preparada para el servicio — consultoría especializada en aperturas de restaurantes"
@@ -69,7 +69,7 @@ export default function AperturaRestaurantePage() {
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -105,7 +105,7 @@ export default function AperturaRestaurantePage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Para quién es
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 ¿Es tu momento?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -115,7 +115,7 @@ export default function AperturaRestaurantePage() {
             </div>
             <div className="space-y-4">
               {forWhom.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-5">
                   <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                   <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
                 </div>
@@ -133,7 +133,7 @@ export default function AperturaRestaurantePage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Qué incluye
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Desde el concepto hasta el primer servicio
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -144,7 +144,7 @@ export default function AperturaRestaurantePage() {
             </div>
             <div className="space-y-3">
               {includes.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-white border border-navy/10 rounded-xl p-5">
+                <div key={i} className="flex items-start gap-4 bg-white border border-grafito/10 rounded-xl p-5">
                   <span className="font-display text-amber font-bold text-base leading-none mt-0.5 flex-shrink-0 w-6">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -160,7 +160,7 @@ export default function AperturaRestaurantePage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-1">
                 Herramienta gratuita
               </p>
-              <p className="font-display text-navy text-xl font-semibold">
+              <p className="font-display text-grafito text-xl font-semibold">
                 Descarga el checklist de apertura
               </p>
               <p className="font-body text-ink/60 text-sm mt-1">
@@ -169,7 +169,7 @@ export default function AperturaRestaurantePage() {
             </div>
             <Link
               href="/herramientas/checklist-apertura"
-              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-navy text-sm font-semibold tracking-wide flex-shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 btn-amber text-grafito text-sm font-semibold tracking-wide flex-shrink-0"
             >
               Ver checklist <ArrowRight size={14} />
             </Link>
@@ -184,7 +184,7 @@ export default function AperturaRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Qué cambia
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-4">
               Qué cambia cuando abres con acompañamiento
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -198,7 +198,7 @@ export default function AperturaRestaurantePage() {
               "Abres con un equipo dimensionado para tu concepto real, no para el que imaginabas",
               "Los primeros meses tienen acompañamiento, que es cuando más se aprende y más se pierde",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-6">
+              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-6">
                 <CheckCircle size={20} className="text-amber mt-0.5 flex-shrink-0" />
                 <p className="font-body text-ink/75 text-base leading-relaxed">{item}</p>
               </div>
@@ -214,7 +214,7 @@ export default function AperturaRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Indicadores
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Indicadores que trabajamos desde el día uno
             </h2>
           </div>
@@ -225,7 +225,7 @@ export default function AperturaRestaurantePage() {
               "Punto de equilibrio en semanas, no en años",
               "Ratio de ocupación necesaria para cubrir costes fijos",
             ].map((item, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-6">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-6">
                 <span className="font-display text-3xl font-light text-amber/30 block mb-3">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -243,13 +243,13 @@ export default function AperturaRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Por qué importa
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Los errores más costosos se cometen antes de abrir
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl">
             {riskItems.map((item, i) => (
-              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-navy/8 rounded-xl p-5">
+              <div key={i} className="flex items-start gap-4 bg-cream-dark border border-grafito/8 rounded-xl p-5">
                 <AlertTriangle size={18} className="text-amber mt-0.5 flex-shrink-0" />
                 <p className="font-body text-ink/70 text-sm leading-relaxed">{item}</p>
               </div>
@@ -265,18 +265,18 @@ export default function AperturaRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Caso real
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Una decisión que cambió el proyecto
             </h2>
           </div>
-          <div className="bg-white border border-navy/10 rounded-xl p-8 lg:p-12 max-w-3xl">
+          <div className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-12 max-w-3xl">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
               Emprendedor · Apertura · España
             </p>
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
                 <p className="font-body text-ink/40 text-xs uppercase tracking-widest mb-2">Sin acompañamiento</p>
-                <p className="font-display text-navy text-4xl font-bold mb-1">Local A</p>
+                <p className="font-display text-grafito text-4xl font-bold mb-1">Local A</p>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">
                   Primera opción analizada. Tráfico aparente alto, pero patrón horario incompatible
                   con el concepto y alquiler inflado por expectativas del propietario.
@@ -284,14 +284,14 @@ export default function AperturaRestaurantePage() {
               </div>
               <div>
                 <p className="font-body text-amber text-xs uppercase tracking-widest mb-2">Con acompañamiento</p>
-                <p className="font-display text-navy text-4xl font-bold mb-1">–30%</p>
+                <p className="font-display text-grafito text-4xl font-bold mb-1">–30%</p>
                 <p className="font-body text-ink/60 text-sm leading-relaxed italic">
                   No firmó el local A. Negoció el local B con datos reales de tráfico y
                   consiguió un alquiler un 30% inferior sobre el primer presupuesto.
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 pt-6 border-t border-navy/10">
+            <div className="flex items-center gap-3 pt-6 border-t border-grafito/10">
               <TrendingUp size={18} className="text-amber flex-shrink-0" />
               <p className="font-body text-ink/60 text-sm leading-relaxed">
                 Antes de comprometer la inversión es cuando más valor aporta el acompañamiento.
@@ -308,7 +308,7 @@ export default function AperturaRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Honestidad ante todo
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Cuándo no tiene sentido
             </h2>
           </div>
@@ -318,8 +318,8 @@ export default function AperturaRestaurantePage() {
               "Si el proyecto todavía es una idea sin números. Primero valida la viabilidad básica.",
               "Si buscas solo validación de lo que ya has decidido. El acompañamiento sirve para mejorar decisiones, no para confirmarlas.",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 border border-navy/10 rounded-xl p-5">
-                <span className="font-display text-base font-semibold text-navy/30 flex-shrink-0 mt-0.5">
+              <div key={i} className="flex items-start gap-4 border border-grafito/10 rounded-xl p-5">
+                <span className="font-display text-base font-semibold text-grafito/30 flex-shrink-0 mt-0.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="font-body text-ink/65 text-base leading-relaxed">{item}</p>
@@ -332,7 +332,7 @@ export default function AperturaRestaurantePage() {
       {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             &quot;No se trata de tener el restaurante perfecto desde el día uno. Se trata de no cometer los errores que luego son difíciles de deshacer.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -344,7 +344,7 @@ export default function AperturaRestaurantePage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Apertura restaurante — CTA final"
             >
@@ -354,7 +354,7 @@ export default function AperturaRestaurantePage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Apertura restaurante — CTA final"
             >

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
@@ -112,8 +112,8 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ── 1. HERO — navy ──────────────────────────────────────────── */}
-      <section className="relative bg-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      {/* ── 1. HERO — grafito ──────────────────────────────────────────── */}
+      <section className="relative bg-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
@@ -136,7 +136,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                 href="https://diagnostico.adrianpollan.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-navy text-sm font-semibold tracking-wide"
+                className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-grafito text-sm font-semibold tracking-wide"
                 eventName="diagnostico_click"
                 eventLabel="Pilar consultoría — hero"
               >
@@ -164,7 +164,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Por qué no basta con vender
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
               El margen no aparece aunque el restaurante esté lleno
             </h2>
             <div className="space-y-5">
@@ -192,7 +192,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Encuentra tu caso
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               ¿Reconoces tu situación?
             </h2>
           </div>
@@ -220,12 +220,12 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group bg-white border border-navy/10 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="group bg-white border border-grafito/10 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   {item.num}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="font-body text-ink/65 text-base leading-relaxed flex-1 mb-5">
                   {item.body}
                 </p>
@@ -245,7 +245,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Qué cambia
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               Lo que la consultoría de hostelería resuelve en la práctica
             </h2>
           </div>
@@ -282,7 +282,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-navy text-lg font-semibold mb-2 leading-snug">
+                  <h3 className="font-display text-grafito text-lg font-semibold mb-2 leading-snug">
                     {item.title}
                   </h3>
                   <p className="font-body text-ink/65 text-base leading-relaxed">{item.body}</p>
@@ -293,8 +293,8 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
         </div>
       </section>
 
-      {/* ── 5. MÉTODO ADRIÁN — navy ─────────────────────────────────── */}
-      <section className="bg-navy py-24 lg:py-32">
+      {/* ── 5. MÉTODO ADRIÁN — grafito ─────────────────────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-14">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -379,7 +379,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Por qué confiar en esta consultoría
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-8">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-8">
                 20 años de operación real, no de teoría
               </h2>
               <div className="space-y-5">
@@ -414,7 +414,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-white border border-navy/10 rounded-xl p-6 flex flex-col justify-between"
+                  className="bg-white border border-grafito/10 rounded-xl p-6 flex flex-col justify-between"
                 >
                   <span className="font-display text-amber text-5xl font-bold leading-none mb-3">
                     {item.stat}
@@ -439,7 +439,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Casos de éxito
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               Situaciones reales, resultados concretos
             </h2>
           </div>
@@ -467,7 +467,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-cream-dark border border-navy/10 rounded-xl p-6 flex flex-col"
+                className="bg-cream-dark border border-grafito/10 rounded-xl p-6 flex flex-col"
               >
                 <span className="font-body text-xs tracking-widest uppercase text-ink/40 mb-3">
                   {item.label}
@@ -475,7 +475,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                 <p className="font-display text-amber text-base font-semibold mb-4 leading-snug">
                   {item.metrica}
                 </p>
-                <h3 className="font-display text-navy text-lg font-semibold mb-3 leading-snug">
+                <h3 className="font-display text-grafito text-lg font-semibold mb-3 leading-snug">
                   {item.title}
                 </h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed flex-1">{item.desc}</p>
@@ -501,7 +501,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Cómo puedo ayudarte
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               Tres formas de trabajar juntos
             </h2>
           </div>
@@ -530,12 +530,12 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group bg-white border border-navy/10 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="group bg-white border border-grafito/10 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <div className="w-14 h-14 bg-amber/10 border border-amber/20 rounded-xl flex items-center justify-center mb-6">
                   {item.icon}
                 </div>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3 leading-snug">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3 leading-snug">
                   {item.title}
                 </h3>
                 <p className="font-body text-ink/65 text-base leading-relaxed flex-1 mb-5">
@@ -558,7 +558,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Preguntas frecuentes
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight mb-6">
                 Lo que suelen preguntar sobre la consultoría de restaurantes
               </h2>
               <p className="font-body text-ink/60 text-base leading-relaxed">
@@ -576,7 +576,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
       {/* ── 10. CTA FINAL — crema ───────────────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight max-w-2xl mx-auto mb-5">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight max-w-2xl mx-auto mb-5">
             El primer paso es siempre el más sencillo
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -588,7 +588,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Pilar consultoría — CTA final"
             >

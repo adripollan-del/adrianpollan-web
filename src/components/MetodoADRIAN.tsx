@@ -1,4 +1,4 @@
-const phases = [
+﻿const phases = [
   { letter: "A", name: "Analizar", desc: "Entender qué es el negocio y para quién existe" },
   { letter: "D", name: "Diagnosticar", desc: "Identificar qué está pasando de verdad" },
   { letter: "R", name: "Revisar", desc: "Leer los números y la operativa con precisión" },
@@ -25,7 +25,7 @@ function ArrowDown() {
 
 export default function MetodoADRIAN() {
   return (
-    <section className="bg-navy py-20 lg:py-28">
+    <section className="bg-grafito py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">El método</p>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "@/lib/gtag";
@@ -58,12 +58,12 @@ function EmailCapture({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="tu@email.com"
-        className="w-full bg-white border border-navy/20 px-3 py-2.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+        className="w-full bg-white border border-grafito/20 px-3 py-2.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full px-5 py-3 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
+        className="w-full px-5 py-3 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors disabled:opacity-60"
       >
         {status === "loading" ? "Enviando..." : "Recibir mi análisis por email"}
       </button>
@@ -169,13 +169,13 @@ export default function CalculadoraClient() {
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
 
         {/* Inputs */}
-        <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 mb-10">
+        <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 mb-10">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
             Introduce tus datos
           </p>
           <div className="space-y-5">
             <div>
-              <label htmlFor="ventas" className="block font-body text-navy text-sm font-medium mb-2">
+              <label htmlFor="ventas" className="block font-body text-grafito text-sm font-medium mb-2">
                 Ventas totales del período
               </label>
               <div className="relative">
@@ -188,12 +188,12 @@ export default function CalculadoraClient() {
                   value={ventas}
                   onChange={(e) => setVentas(e.target.value)}
                   placeholder="0"
-                  className="w-full bg-white border border-navy/20 pl-9 pr-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+                  className="w-full bg-white border border-grafito/20 pl-9 pr-4 py-3.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="materia" className="block font-body text-navy text-sm font-medium mb-2">
+              <label htmlFor="materia" className="block font-body text-grafito text-sm font-medium mb-2">
                 Coste de materia prima
               </label>
               <div className="relative">
@@ -206,12 +206,12 @@ export default function CalculadoraClient() {
                   value={materia}
                   onChange={(e) => setMateria(e.target.value)}
                   placeholder="0"
-                  className="w-full bg-white border border-navy/20 pl-9 pr-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+                  className="w-full bg-white border border-grafito/20 pl-9 pr-4 py-3.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="personal" className="block font-body text-navy text-sm font-medium mb-2">
+              <label htmlFor="personal" className="block font-body text-grafito text-sm font-medium mb-2">
                 Coste total de personal (incluye Seguridad Social)
               </label>
               <div className="relative">
@@ -224,7 +224,7 @@ export default function CalculadoraClient() {
                   value={personal}
                   onChange={(e) => setPersonal(e.target.value)}
                   placeholder="0"
-                  className="w-full bg-white border border-navy/20 pl-9 pr-4 py-3.5 font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber transition-colors"
+                  className="w-full bg-white border border-grafito/20 pl-9 pr-4 py-3.5 font-body text-sm text-grafito placeholder:text-grafito/30 focus:outline-none focus:border-amber transition-colors"
                 />
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function CalculadoraClient() {
               ))}
             </div>
           ) : (
-            <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 text-center">
+            <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 text-center">
               <p className="font-body text-ink/40 text-sm">
                 Introduce tus datos arriba para ver los resultados al instante.
               </p>
@@ -271,7 +271,7 @@ export default function CalculadoraClient() {
 
         {/* CTA parcial — solo food o labour, sin prime */}
         {showAny && !showPrime && (
-          <div className="mt-6 bg-cream-dark border border-navy/10 rounded-xl p-6">
+          <div className="mt-6 bg-cream-dark border border-grafito/10 rounded-xl p-6">
             <p className="font-body text-ink/70 text-sm leading-relaxed mb-4">
               Introduce el coste de personal para calcular el prime cost completo. O si prefieres, el diagnóstico gratuito analiza todas las áreas de tu negocio en 10 minutos.
             </p>
@@ -279,7 +279,7 @@ export default function CalculadoraClient() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
             >
               Empezar mi diagnóstico gratuito →
             </a>
@@ -289,8 +289,8 @@ export default function CalculadoraClient() {
         {/* Email capture — prime cost */}
         {showPrime && (
           <div className="mt-8 border-l-4 border-amber bg-cream-dark p-6 rounded-r-xl">
-            <p className="font-display text-navy text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
-            <p className="font-body text-navy/70 text-sm mb-4">Te enviamos tu análisis con los indicadores calculados y referencias del sector.</p>
+            <p className="font-display text-grafito text-base font-bold mb-1">¿Quieres recibir estos resultados por email?</p>
+            <p className="font-body text-grafito/70 text-sm mb-4">Te enviamos tu análisis con los indicadores calculados y referencias del sector.</p>
             <EmailCapture
               foodCost={foodCost}
               labourCost={labourCost}
@@ -301,7 +301,7 @@ export default function CalculadoraClient() {
         )}
 
         {/* Reference ranges */}
-        <div className="border-t border-navy/10 pt-8">
+        <div className="border-t border-grafito/10 pt-8">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
             Rangos de referencia del sector
           </p>
@@ -311,8 +311,8 @@ export default function CalculadoraClient() {
               { label: "Labour Cost", green: "< 32%", yellow: "32–38%", red: "> 38%" },
               { label: "Prime Cost", green: "< 60%", yellow: "60–70%", red: "> 70%" },
             ].map((ref) => (
-              <div key={ref.label} className="bg-cream-dark border border-navy/8 rounded-xl p-5">
-                <p className="font-body text-navy text-xs font-semibold uppercase tracking-widest mb-3">
+              <div key={ref.label} className="bg-cream-dark border border-grafito/8 rounded-xl p-5">
+                <p className="font-body text-grafito text-xs font-semibold uppercase tracking-widest mb-3">
                   {ref.label}
                 </p>
                 <div className="space-y-2">

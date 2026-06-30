@@ -1,4 +1,4 @@
-const steps = [
+﻿const steps = [
   {
     num: 1,
     title: "Diagnóstico gratuito",
@@ -27,7 +27,7 @@ export default function ProcesoDeTrabajo() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-xl mb-12">
           <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">Proceso</p>
-          <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight">
+          <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
             De donde estás a donde quieres llegar
           </h2>
         </div>
@@ -45,14 +45,14 @@ export default function ProcesoDeTrabajo() {
               >
                 {/* Amber circle with step number */}
                 <div className="relative z-10 w-10 h-10 rounded-full bg-amber flex items-center justify-center flex-shrink-0 lg:mb-6">
-                  <span className="font-display text-navy font-bold text-base leading-none">
+                  <span className="font-display text-grafito font-bold text-base leading-none">
                     {step.num}
                   </span>
                 </div>
 
                 {/* Text */}
                 <div className="lg:text-center">
-                  <h3 className="font-display text-navy text-base font-semibold mb-1.5 leading-snug">
+                  <h3 className="font-display text-grafito text-base font-semibold mb-1.5 leading-snug">
                     {step.title}
                   </h3>
                   <p className="font-body text-ink/60 text-sm leading-relaxed">

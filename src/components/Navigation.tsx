@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -54,7 +54,7 @@ export default function Navigation() {
 
   const navBg = isHome && !scrolled
     ? "bg-transparent"
-    : "bg-navy/80 backdrop-blur-xl border-b border-amber/50 shadow-lg";
+    : "bg-grafito/80 backdrop-blur-xl border-b border-amber/50 shadow-lg";
 
   return (
     <>
@@ -103,7 +103,7 @@ export default function Navigation() {
                   Herramientas
                   <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-                <div className="absolute top-full left-0 mt-3 w-52 bg-navy border border-amber/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+                <div className="absolute top-full left-0 mt-3 w-52 bg-grafito border border-amber/20 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
                   {herramientasLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -163,7 +163,7 @@ export default function Navigation() {
       <div
         id="mobile-menu"
         aria-hidden={!isOpen}
-        className={`fixed inset-0 z-40 bg-navy transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-grafito transition-opacity duration-300 lg:hidden ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >

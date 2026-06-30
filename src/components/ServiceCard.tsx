@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export default function ServiceCard({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm shadow-md border border-navy/10 rounded-xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40">
+    <div className="bg-white/80 backdrop-blur-sm shadow-md border border-grafito/10 rounded-xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_-8px_rgba(186,117,23,0.4)] hover:border-amber/40">
       {/* Cabecera siempre visible — clic toggle */}
       <button
         type="button"
@@ -41,7 +41,7 @@ export default function ServiceCard({
       >
         <div className="mb-6">{icon}</div>
 
-        <h3 className="font-display text-navy text-2xl lg:text-[1.7rem] font-bold leading-tight mb-3 lg:min-h-[4rem]">
+        <h3 className="font-display text-grafito text-2xl lg:text-[1.7rem] font-bold leading-tight mb-3 lg:min-h-[4rem]">
           {title}
         </h3>
 
@@ -84,7 +84,7 @@ export default function ServiceCard({
             </ul>
 
             {notFor && (
-              <div className="mb-6 pt-5 border-t border-navy/10">
+              <div className="mb-6 pt-5 border-t border-grafito/10">
                 <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
                   Cuándo no tiene sentido
                 </p>
@@ -95,7 +95,7 @@ export default function ServiceCard({
             )}
 
             {/* Ideal para */}
-            <div className="mb-6 pt-5 border-t border-navy/10">
+            <div className="mb-6 pt-5 border-t border-grafito/10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-2">
                 Ideal para:
               </p>
@@ -114,7 +114,7 @@ export default function ServiceCard({
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-navy text-sm font-semibold tracking-wide w-full"
+              className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-grafito text-sm font-semibold tracking-wide w-full"
               onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
               Empezar mi diagnóstico gratuito
@@ -126,7 +126,7 @@ export default function ServiceCard({
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 mt-3 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors w-full"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 mt-3 border border-grafito/30 text-grafito text-sm font-medium hover:border-amber hover:text-amber transition-colors w-full"
               onClick={() => trackEvent("calendly_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
               Agendar sesión gratuita
@@ -136,7 +136,7 @@ export default function ServiceCard({
             {href && (
               <Link
                 href={href}
-                className="inline-flex items-center justify-center gap-1.5 w-full mt-3 font-body text-sm text-navy/50 hover:text-amber transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 w-full mt-3 font-body text-sm text-grafito/50 hover:text-amber transition-colors"
               >
                 Ver cómo funciona <ArrowRight size={13} />
               </Link>

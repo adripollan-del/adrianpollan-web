@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
@@ -26,7 +26,7 @@ export default function HablemosPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1756564800880-7a24d6c6cc15?auto=format&fit=crop&w=1920&q=80"
           alt="Interior de bar de hostelería — consultor especializado en restaurantes y F&B"
@@ -36,7 +36,7 @@ export default function HablemosPage() {
           quality={50}
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl">
@@ -79,7 +79,7 @@ export default function HablemosPage() {
             <Zap size={13} className="text-amber" />
             <span className="font-body text-amber text-xs tracking-widest uppercase">Opción 1 — gratis e inmediato</span>
           </div>
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-5">
             Descubre en minutos qué está frenando a tu negocio.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -104,7 +104,7 @@ export default function HablemosPage() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="btn-glow-amber inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="diagnostico_click"
             eventLabel="Hablemos — diagnóstico"
           >
@@ -125,8 +125,8 @@ export default function HablemosPage() {
 
       <MapaDiagnostico bg="bg-white" />
 
-      {/* ── CÓMO FUNCIONA EL PROCESO ── bg-navy ──────────────── */}
-      <section className="bg-navy py-20 lg:py-24">
+      {/* ── CÓMO FUNCIONA EL PROCESO ── bg-grafito ──────────────── */}
+      <section className="bg-grafito py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-14">
             <p className="font-body text-amber text-sm tracking-widest uppercase mb-4">
@@ -189,11 +189,11 @@ export default function HablemosPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
             {/* Header a la izquierda */}
             <div className="lg:col-span-1 lg:sticky lg:top-24">
-              <div className="inline-flex items-center gap-2 bg-navy/8 border border-navy/15 px-3 py-1.5 mb-6">
-                <Calendar size={13} className="text-navy/60" />
-                <span className="font-body text-navy/60 text-xs tracking-widest uppercase">Opción 2 — sesión gratuita</span>
+              <div className="inline-flex items-center gap-2 bg-grafito/8 border border-grafito/15 px-3 py-1.5 mb-6">
+                <Calendar size={13} className="text-grafito/60" />
+                <span className="font-body text-grafito/60 text-xs tracking-widest uppercase">Opción 2 — sesión gratuita</span>
               </div>
-              <h2 className="font-display text-navy text-2xl lg:text-4xl font-semibold leading-tight mb-4">
+              <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight mb-4">
                 Empieza con una sesión gratuita de 20 minutos.
               </h2>
               <p className="font-body text-ink/60 text-base leading-relaxed mb-6">
@@ -230,11 +230,11 @@ export default function HablemosPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="inline-flex items-center gap-2 bg-navy/8 border border-navy/15 px-3 py-1.5 mb-6">
-                <Mail size={13} className="text-navy/60" />
-                <span className="font-body text-navy/60 text-xs tracking-widest uppercase">Opción 3 — mensaje directo</span>
+              <div className="inline-flex items-center gap-2 bg-grafito/8 border border-grafito/15 px-3 py-1.5 mb-6">
+                <Mail size={13} className="text-grafito/60" />
+                <span className="font-body text-grafito/60 text-xs tracking-widest uppercase">Opción 3 — mensaje directo</span>
               </div>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-5">
                 ¿Prefieres escribir primero?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -243,12 +243,12 @@ export default function HablemosPage() {
               </p>
 
               {/* Mini perfil */}
-              <div className="flex items-center gap-4 bg-cream-dark border border-navy/10 rounded-xl p-5">
+              <div className="flex items-center gap-4 bg-cream-dark border border-grafito/10 rounded-xl p-5">
                 <div className="w-12 h-12 bg-amber/20 border border-amber/30 flex items-center justify-center flex-shrink-0">
                   <span className="font-display text-amber font-bold text-lg">AP</span>
                 </div>
                 <div>
-                  <p className="font-display text-navy font-semibold">Adrián Pollán</p>
+                  <p className="font-display text-grafito font-semibold">Adrián Pollán</p>
                   <p className="font-body text-ink/50 text-sm">Respuesta personal en menos de 24 horas laborables</p>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function HablemosPage() {
       {/* ── CTA FINAL — fondo crema oscuro ───────────────────────── */}
       <section className="bg-cream-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-2xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-2xl lg:text-5xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             El primer paso es siempre el más sencillo.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed max-w-lg mx-auto mb-10">
@@ -274,7 +274,7 @@ export default function HablemosPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-9 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="calendly_click"
               eventLabel="Hablemos — CTA final"
             >

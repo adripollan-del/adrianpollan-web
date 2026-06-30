@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { services } from "@/data/services";
@@ -121,7 +121,7 @@ export default function ServiciosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1753078944130-2fad814a01d2?auto=format&fit=crop&w=1920&q=80"
           alt="Cocina profesional en servicio — consultoría para restaurantes y hostelería"
@@ -131,7 +131,7 @@ export default function ServiciosPage() {
           quality={50}
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 bg-grafito/50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -158,7 +158,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Encuentra tu caso
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight">
               ¿Para quién es esto?
             </h2>
           </div>
@@ -189,12 +189,12 @@ export default function ServiciosPage() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group bg-cream-dark border border-navy/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
+                className="group bg-cream-dark border border-grafito/8 rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(186,117,23,0.3)] hover:border-amber/40"
               >
                 <span className="font-display text-amber/40 text-4xl font-light block mb-4">
                   {item.num}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="font-body text-ink/65 text-base leading-relaxed flex-1 mb-5">{item.body}</p>
                 <span className="font-body text-amber text-sm font-medium group-hover:underline">
                   {item.cta}
@@ -212,7 +212,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Encuentra tu punto de entrada
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-3">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-3">
               ¿Qué servicio encaja contigo?
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed">
@@ -249,11 +249,11 @@ export default function ServiciosPage() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-white border border-navy/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
+                className="bg-white border border-grafito/10 rounded-xl p-6 lg:p-8 flex flex-col gap-5"
               >
                 {card.icon}
                 <div className="flex-1">
-                  <h3 className="font-display text-navy text-lg font-semibold leading-snug mb-2">
+                  <h3 className="font-display text-grafito text-lg font-semibold leading-snug mb-2">
                     {card.title}
                   </h3>
                   <p className="font-body text-ink/65 text-base leading-relaxed">
@@ -265,7 +265,7 @@ export default function ServiciosPage() {
                     href={card.cta.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 btn-amber text-navy text-sm font-semibold tracking-wide self-start"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 btn-amber text-grafito text-sm font-semibold tracking-wide self-start"
                     eventName="diagnostico_click"
                     eventLabel="Servicios — ¿qué servicio encaja?"
                   >
@@ -274,7 +274,7 @@ export default function ServiciosPage() {
                 ) : (
                   <a
                     href={card.cta.href}
-                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
+                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-grafito border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
                   >
                     {card.cta.label} <ArrowRight size={13} />
                   </a>
@@ -285,8 +285,8 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── POR QUÉ TRABAJAR CONMIGO — fondo navy ───────────────────── */}
-      <section className="bg-navy py-20 lg:py-28">
+      {/* ── POR QUÉ TRABAJAR CONMIGO — fondo grafito ───────────────────── */}
+      <section className="bg-grafito py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-12 lg:mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -369,8 +369,8 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* ── PROCESO — fondo navy ─────────────────────────────────── */}
-      <section className="bg-navy py-24 lg:py-32">
+      {/* ── PROCESO — fondo grafito ─────────────────────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
@@ -405,7 +405,7 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-5">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-5">
                 ¿No sabes cuál encaja con tu situación?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
@@ -418,7 +418,7 @@ export default function ServiciosPage() {
                   href="https://diagnostico.adrianpollan.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-navy text-sm font-semibold tracking-wide"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 btn-amber text-grafito text-sm font-semibold tracking-wide"
                   eventName="diagnostico_click"
                   eventLabel="Servicios — sección ¿no sabes cuál?"
                 >
@@ -429,7 +429,7 @@ export default function ServiciosPage() {
                   href="https://calendly.com/adrianpollan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-navy/30 text-navy text-sm font-medium hover:border-amber hover:text-amber transition-colors"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-grafito/30 text-grafito text-sm font-medium hover:border-amber hover:text-amber transition-colors"
                   eventName="calendly_click"
                   eventLabel="Servicios — sección ¿no sabes cuál?"
                 >
@@ -439,7 +439,7 @@ export default function ServiciosPage() {
             </div>
 
             {/* Checklist visual */}
-            <div className="bg-white border border-navy/10 rounded-xl p-8 lg:p-10">
+            <div className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
                 El diagnóstico analiza
               </p>
@@ -470,7 +470,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               El proceso
             </p>
-            <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-4">
               Qué pasa después de la sesión gratuita
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed">
@@ -511,7 +511,7 @@ export default function ServiciosPage() {
                   {step.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-navy text-base font-semibold mb-2 leading-snug">
+                  <h3 className="font-display text-grafito text-base font-semibold mb-2 leading-snug">
                     {step.title}
                   </h3>
                   <p className="font-body text-ink/60 text-base leading-relaxed">
@@ -522,7 +522,7 @@ export default function ServiciosPage() {
             ))}
           </div>
 
-          <p className="font-body text-ink/50 text-base leading-relaxed border-t border-navy/10 pt-8 max-w-2xl">
+          <p className="font-body text-ink/50 text-base leading-relaxed border-t border-grafito/10 pt-8 max-w-2xl">
             No es una llamada de venta agresiva. Es una conversación breve para entender si puedo ayudarte.
           </p>
         </div>
@@ -537,7 +537,7 @@ export default function ServiciosPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Señales de alerta
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-4">
               ¿Cómo sé si necesito ayuda?
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
@@ -577,11 +577,11 @@ export default function ServiciosPage() {
                 body: "Alta rotación, huéspedes que no usan la restauración, sin KPIs claros. Sabes que puede dar más, pero no sabes por dónde empezar.",
               },
             ].map((card) => (
-              <div key={card.num} className="bg-cream-dark border border-navy/8 rounded-xl p-6">
+              <div key={card.num} className="bg-cream-dark border border-grafito/8 rounded-xl p-6">
                 <span className="font-display text-3xl font-light text-amber/30 block mb-4">
                   {card.num}
                 </span>
-                <h3 className="font-display text-navy text-base font-semibold leading-snug mb-2">
+                <h3 className="font-display text-grafito text-base font-semibold leading-snug mb-2">
                   {card.title}
                 </h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed">{card.body}</p>
@@ -596,7 +596,7 @@ export default function ServiciosPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Servicios — ¿cómo sé si necesito ayuda?"
             >
@@ -614,7 +614,7 @@ export default function ServiciosPage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Preguntas frecuentes
               </p>
-              <h2 className="font-display text-navy text-2xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-2xl lg:text-5xl font-semibold leading-tight mb-6">
                 Lo que suelen preguntar
               </h2>
               <p className="font-body text-ink/60 text-base leading-relaxed mb-8">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, AlertTriangle } from "lucide-react";
@@ -86,8 +86,8 @@ export default function AbrirUnRestaurantePage() {
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -118,7 +118,7 @@ export default function AbrirUnRestaurantePage() {
       <section className="bg-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-6">
+            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-6">
               La mayoría de aperturas fracasan por razones evitables
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
@@ -143,17 +143,17 @@ export default function AbrirUnRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               El proceso
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Las seis fases de una apertura con criterio
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {phases.map((p) => (
-              <div key={p.num} className="bg-white border border-navy/10 rounded-xl p-8">
+              <div key={p.num} className="bg-white border border-grafito/10 rounded-xl p-8">
                 <span className="font-display text-5xl font-light text-amber/25 block mb-4 leading-none">
                   {p.num}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{p.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{p.title}</h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed">{p.body}</p>
               </div>
             ))}
@@ -169,7 +169,7 @@ export default function AbrirUnRestaurantePage() {
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Lo que hay que evitar
               </p>
-              <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Los errores más frecuentes al abrir un restaurante
               </h2>
               <p className="font-body text-ink/65 text-base leading-relaxed mb-8">
@@ -201,11 +201,11 @@ export default function AbrirUnRestaurantePage() {
             </div>
 
             {/* Servicio de acompañamiento */}
-            <div className="bg-cream-dark border border-navy/10 rounded-xl p-8 lg:p-10">
+            <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
                 Acompañamiento a aperturas
               </p>
-              <h3 className="font-display text-navy text-2xl font-semibold mb-4 leading-snug">
+              <h3 className="font-display text-grafito text-2xl font-semibold mb-4 leading-snug">
                 Si vas a abrir, cuanto antes empieces a planificarlo bien, más impacto tendrá
               </h3>
               <p className="font-body text-ink/65 text-sm leading-relaxed mb-6">
@@ -216,7 +216,7 @@ export default function AbrirUnRestaurantePage() {
               </p>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-2 font-body text-sm text-navy/70 hover:text-navy transition-colors"
+                className="inline-flex items-center gap-2 font-body text-sm text-grafito/70 hover:text-grafito transition-colors"
               >
                 Ver el servicio de acompañamiento a aperturas <ArrowRight size={14} />
               </Link>
@@ -232,7 +232,7 @@ export default function AbrirUnRestaurantePage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Profundiza en el tema
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Artículos relacionados
             </h2>
           </div>
@@ -241,12 +241,12 @@ export default function AbrirUnRestaurantePage() {
               <Link
                 key={a.slug}
                 href={`/blog/${a.slug}`}
-                className="group flex flex-col bg-white border border-navy/10 rounded-xl p-8 hover:border-amber/40 transition-colors"
+                className="group flex flex-col bg-white border border-grafito/10 rounded-xl p-8 hover:border-amber/40 transition-colors"
               >
                 <p className="font-body text-amber/70 text-xs uppercase tracking-wide mb-3">
                   {a.readTime} de lectura
                 </p>
-                <h3 className="font-display text-navy text-xl font-semibold leading-snug mb-3 group-hover:text-amber transition-colors">
+                <h3 className="font-display text-grafito text-xl font-semibold leading-snug mb-3 group-hover:text-amber transition-colors">
                   {a.title}
                 </h3>
                 <p className="font-body text-ink/60 text-sm leading-relaxed mb-5">{a.excerpt}</p>
@@ -262,7 +262,7 @@ export default function AbrirUnRestaurantePage() {
       {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Estás pensando en abrir un restaurante?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -273,7 +273,7 @@ export default function AbrirUnRestaurantePage() {
             href="https://diagnostico.adrianpollan.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
             eventName="diagnostico_click"
             eventLabel="Abrir un restaurante — CTA final"
           >

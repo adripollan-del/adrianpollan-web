@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -61,7 +61,7 @@ export default function CookieBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Aviso de cookies"
-      className="fixed bottom-0 left-0 right-0 z-50 bg-navy border-t border-amber"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-grafito border-t border-amber"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
         <p className="font-body text-cream/75 text-sm leading-relaxed flex-1">
@@ -86,7 +86,7 @@ export default function CookieBanner() {
           <button
             type="button"
             onClick={handleAcceptAll}
-            className="px-5 py-2.5 bg-amber text-navy text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
+            className="px-5 py-2.5 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber-hover transition-colors"
           >
             Aceptar todas
           </button>

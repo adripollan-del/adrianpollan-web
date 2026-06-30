@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -55,7 +55,7 @@ export default function CalendlyEmbed() {
   return (
     <div
       ref={containerRef}
-      className="w-full bg-white rounded-xl shadow-md overflow-hidden border border-navy/10 h-[900px] lg:h-[700px]"
+      className="w-full bg-white rounded-xl shadow-md overflow-hidden border border-grafito/10 h-[900px] lg:h-[700px]"
       style={{ minWidth: "320px" }}
     />
   );

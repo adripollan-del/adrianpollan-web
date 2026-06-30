@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, TrendingDown, Users, BookOpen, Star } from "lucide-react";
@@ -76,8 +76,8 @@ export default function ConsultoriaFbHotelesPage() {
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative hero-navy pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-navy/80" />
+      <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grafito/80" />
         <div className="absolute top-0 left-0 right-0 h-px bg-amber/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
@@ -111,15 +111,15 @@ export default function ConsultoriaFbHotelesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Lo que suelo encontrar
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Los problemas más frecuentes en el F&amp;B hotelero
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {problems.map((p, i) => (
-              <div key={i} className="bg-cream-dark border border-navy/10 rounded-xl p-8">
+              <div key={i} className="bg-cream-dark border border-grafito/10 rounded-xl p-8">
                 <div className="mb-4">{p.icon}</div>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3 leading-snug">{p.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3 leading-snug">{p.title}</h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed">{p.body}</p>
               </div>
             ))}
@@ -134,17 +134,17 @@ export default function ConsultoriaFbHotelesPage() {
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               El enfoque
             </p>
-            <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
               Cómo abordo la consultoría F&amp;B en hoteles
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {approach.map((a, i) => (
-              <div key={i} className="bg-white border border-navy/10 rounded-xl p-8">
+              <div key={i} className="bg-white border border-grafito/10 rounded-xl p-8">
                 <span className="font-display text-4xl font-light text-amber/25 block mb-4 leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-navy text-xl font-semibold mb-3">{a.title}</h3>
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{a.title}</h3>
                 <p className="font-body text-ink/65 text-sm leading-relaxed">{a.body}</p>
               </div>
             ))}
@@ -152,7 +152,7 @@ export default function ConsultoriaFbHotelesPage() {
           <div className="mt-10">
             <Link
               href="/servicios"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
             >
               Ver todos los servicios disponibles <ArrowRight size={14} />
             </Link>
@@ -163,7 +163,7 @@ export default function ConsultoriaFbHotelesPage() {
       {/* ── CTA FINAL — blanco ────────────────────────────────────── */}
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="font-display text-navy text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
+          <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-2xl mx-auto">
             ¿Tu F&amp;B podría generar más valor para el hotel?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
@@ -175,7 +175,7 @@ export default function ConsultoriaFbHotelesPage() {
               href="https://diagnostico.adrianpollan.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide"
               eventName="diagnostico_click"
               eventLabel="Consultoría F&B hoteles — CTA final"
             >
@@ -185,7 +185,7 @@ export default function ConsultoriaFbHotelesPage() {
               href="https://calendly.com/adrianpollan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm text-navy/60 hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
               eventName="calendly_click"
               eventLabel="Consultoría F&B hoteles — CTA final"
             >

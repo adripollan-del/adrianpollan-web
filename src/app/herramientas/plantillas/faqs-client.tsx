@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
@@ -46,19 +46,19 @@ export default function FaqsClient() {
   return (
     <section className="bg-cream py-16 lg:py-20">
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
-        <h2 className="font-display text-navy text-3xl lg:text-4xl font-semibold leading-tight mb-10">
+        <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight mb-10">
           Preguntas frecuentes sobre las plantillas
         </h2>
 
-        <div className="border-t border-navy/10">
+        <div className="border-t border-grafito/10">
           {faqs.map((faq, i) => (
-            <div key={i} className="border-b border-navy/10">
+            <div key={i} className="border-b border-grafito/10">
               <button
                 onClick={() => toggle(i)}
                 className="w-full flex items-center justify-between gap-6 py-5 text-left"
                 aria-expanded={openIndex === i}
               >
-                <span className="font-display text-navy text-base font-semibold leading-snug">
+                <span className="font-display text-grafito text-base font-semibold leading-snug">
                   {faq.q}
                 </span>
                 <span className="flex-shrink-0 text-amber transition-transform duration-200">

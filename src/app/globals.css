@@ -1,8 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #23272B;
+  --color-grafito: #23272B;
   --color-amber: #A3814B;
   --color-amber-hover: #876B3E;
   --color-cream: #EDE6D8;
@@ -36,7 +36,7 @@ body {
 }
 
 /* ─── Hero grafito con gradiente sutil + grain texture ──────────── */
-.hero-navy {
+.hero-grafito {
   background-color: #23272B;
   background-image:
     url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),

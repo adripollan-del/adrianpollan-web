@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
@@ -46,7 +46,7 @@ export default function ContactForm() {
     return (
       <div className="flex flex-col items-start gap-4 py-8">
         <CheckCircle size={36} className="text-amber" />
-        <h3 className="font-display text-navy text-2xl font-semibold">Mensaje recibido</h3>
+        <h3 className="font-display text-grafito text-2xl font-semibold">Mensaje recibido</h3>
         <p className="font-body text-ink/65 text-base">
           Gracias por escribirme. Te respondo personalmente en menos de 24 horas.
         </p>
@@ -58,7 +58,7 @@ export default function ContactForm() {
     return (
       <div className="flex flex-col items-start gap-4 py-8">
         <AlertCircle size={36} className="text-red-500" />
-        <h3 className="font-display text-navy text-2xl font-semibold">Algo ha fallado</h3>
+        <h3 className="font-display text-grafito text-2xl font-semibold">Algo ha fallado</h3>
         <p className="font-body text-ink/65 text-base">
           No se ha podido enviar el mensaje. Por favor escríbeme directamente a{" "}
           <a href="mailto:adrian@adrianpollan.com" className="text-amber underline">
@@ -68,7 +68,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="font-body text-sm text-navy/60 hover:text-navy transition-colors underline"
+          className="font-body text-sm text-grafito/60 hover:text-grafito transition-colors underline"
         >
           Intentar de nuevo
         </button>
@@ -77,7 +77,7 @@ export default function ContactForm() {
   }
 
   const inputBase =
-    "w-full bg-white border border-navy/20 px-4 py-3.5 font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none focus:border-amber transition-colors";
+    "w-full bg-white border border-grafito/20 px-4 py-3.5 font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none focus:border-amber transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -97,7 +97,7 @@ export default function ContactForm() {
       <input type="hidden" name="_ts" value={renderTs} />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="font-body text-xs text-navy/50 uppercase tracking-wider block mb-1.5">
+          <label className="font-body text-xs text-grafito/50 uppercase tracking-wider block mb-1.5">
             Nombre *
           </label>
           <input
@@ -111,7 +111,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="font-body text-xs text-navy/50 uppercase tracking-wider block mb-1.5">
+          <label className="font-body text-xs text-grafito/50 uppercase tracking-wider block mb-1.5">
             Email *
           </label>
           <input
@@ -127,7 +127,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="font-body text-xs text-navy/50 uppercase tracking-wider block mb-1.5">
+        <label className="font-body text-xs text-grafito/50 uppercase tracking-wider block mb-1.5">
           Tu negocio
         </label>
         <input
@@ -141,7 +141,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="font-body text-xs text-navy/50 uppercase tracking-wider block mb-1.5">
+        <label className="font-body text-xs text-grafito/50 uppercase tracking-wider block mb-1.5">
           ¿En qué puedo ayudarte? *
         </label>
         <textarea
@@ -158,7 +158,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-navy text-sm font-semibold tracking-wide disabled:opacity-60"
+        className="inline-flex items-center gap-2 px-8 py-4 btn-amber text-grafito text-sm font-semibold tracking-wide disabled:opacity-60"
       >
         {status === "sending" ? "Enviando..." : "Enviar mi caso a Adrián"}
         {status !== "sending" && <ArrowRight size={16} />}
