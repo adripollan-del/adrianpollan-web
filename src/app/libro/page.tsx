@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Compass, Stethoscope, BarChart2, Wrench, HandHeart, RefreshCw, BookOpen, Target, Users } from "lucide-react";
 import dynamic from "next/dynamic";

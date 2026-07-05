@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { services } from "@/data/services";
