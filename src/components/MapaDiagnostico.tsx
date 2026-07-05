@@ -1,4 +1,4 @@
-﻿import { TrendingUp, BarChart2, ShoppingCart, Users, Star, Settings, Target, Package } from "lucide-react";
+import { TrendingUp, BarChart2, ShoppingCart, Users, Star, Settings, Target, Package } from "lucide-react";
 
 const areas = [
   { Icon: TrendingUp,   name: "Rentabilidad",         desc: "Márgenes, costes y estructura financiera" },

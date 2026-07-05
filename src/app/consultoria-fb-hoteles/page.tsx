@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, TrendingDown, Users, BookOpen, Star } from "lucide-react";

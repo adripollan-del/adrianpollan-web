@@ -1,4 +1,4 @@
-﻿const steps = [
+const steps = [
   {
     num: 1,
     title: "Diagnóstico gratuito",

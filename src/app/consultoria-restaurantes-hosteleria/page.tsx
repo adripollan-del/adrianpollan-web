@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import TrackingLink from "@/components/TrackingLink";

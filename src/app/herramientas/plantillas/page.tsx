@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BarChart2, Calculator, CheckSquare, LayoutDashboard, Package, Zap, BookOpen, Mail } from "lucide-react";

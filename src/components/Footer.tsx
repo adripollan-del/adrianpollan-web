@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import LinkedinIcon from "@/components/LinkedinIcon";
 import NewsletterFormLazy from "@/components/NewsletterFormLazy";
 import TrackingLink from "@/components/TrackingLink";

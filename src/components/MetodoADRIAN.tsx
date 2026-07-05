@@ -1,4 +1,4 @@
-﻿const phases = [
+const phases = [
   { letter: "A", name: "Analizar", desc: "Entender qué es el negocio y para quién existe" },
   { letter: "D", name: "Diagnosticar", desc: "Identificar qué está pasando de verdad" },
   { letter: "R", name: "Revisar", desc: "Leer los números y la operativa con precisión" },

@@ -1,4 +1,4 @@
-﻿const phrases = [
+const phrases = [
   "20+ años en restauración internacional",
   "España · Francia · Reino Unido · Irlanda",
   "Diagnóstico · Operativa · Aperturas",
