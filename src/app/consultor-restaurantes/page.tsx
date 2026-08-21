@@ -188,14 +188,14 @@ export default function ConsultorRestaurantesPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIOS — crema oscuro ────────────────────────────── */}
-      <section className="bg-cream-dark py-24 lg:py-32 border-t border-grafito/8">
+      {/* ── TESTIMONIOS — grafito, bloque destacado ─────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32 border-t border-amber/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-10">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
               En sus palabras
             </p>
-            <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
+            <h2 className="font-display text-cream text-3xl lg:text-4xl font-semibold leading-tight">
               No es solo lo que digo yo
             </h2>
           </div>
