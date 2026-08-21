@@ -22,33 +22,33 @@ export const metadata: Metadata = {
 const cases = [
   {
     label: "Rentabilidad",
-    tipo: "Restaurante independiente · 50 cubiertos",
-    title: "Restaurante con buena ocupación y margen insuficiente",
+    tipo: "Restaurante familiar · Menú del día",
+    title: "De trabajar 12 horas sin ganar dinero a pagarse un sueldo digno",
     situacion:
-      "Buena ocupación los fines de semana, reputación local positiva, pero margen insuficiente a fin de mes. El propietario llevaba tres años sin entender por qué los números no cuadraban. La causa no era visible desde dentro: los platos que más salían eran los que menos margen dejaban, y los escandallos nunca se habían actualizado tras la última subida de precios de los proveedores.",
+      "El restaurante llenaba, pero la caja no lo reflejaba. Luis y su mujer trabajaban 12 horas diarias sin que quedara beneficio real a fin de mes. Creía tener un food cost del 30-32%, ya alto, pero al calcularlo bien estaba muy por encima. Su miedo antes de empezar era que un consultor le impusiera un modelo \"de manual\" que le hiciera perder la esencia de su negocio de barrio.",
     antes: [
-      "Food cost estimado sin escandallos actualizados",
-      "Carta con 48 referencias activas",
-      "Merma no controlada ni medida",
-      "Sin sistema de seguimiento de margen",
+      "Food cost real por encima del 40%, sin saberlo",
+      "Facturación de unos 45.000€/mes sin beneficio real",
+      "12 horas diarias de trabajo sin sueldo digno",
+      "Carta \"de siempre\", sin revisar raciones ni proveedores",
     ],
     despues: [
-      "Escandallos actualizados para el 100% de la carta",
-      "Carta reducida a 31 referencias",
-      "Control semanal de merma implantado",
-      "Sistema de seguimiento de margen funcionando",
+      "Food cost bajado al 28% de media",
+      "Facturación estable en 50.000-52.000€/mes, con beneficio",
+      "Sueldo digno recuperado y ahorro para inversión",
+      "Carta reestructurada, mermas controladas",
     ],
     acciones: [
-      "Reducción de carta de 48 a 31 referencias eliminando platos de baja rotación y bajo margen",
-      "Actualización de escandallos para el 100% de los platos con costes reales actualizados",
-      "Reorganización visual del menú para potenciar platos rentables",
-      "Formación del equipo de sala en recomendación con criterio de margen",
-      "Implantación de control semanal de merma con responsable asignado",
+      "Cálculo real del food cost, revelando que estaba muy por encima de lo que Luis creía",
+      "Ajuste de raciones y cambio de dos proveedores clave",
+      "Mejora de presentación de los platos, sin aumentar coste",
+      "Implantación de control de mermas en cocina",
     ],
     resultado:
-      "En 12 semanas el propietario pasó de gestionar por intuición a tomar decisiones con datos reales. El control de costes dejó de ser una estimación y se convirtió en un proceso medible y repetible.",
+      "En pocos meses, el food cost bajó del más de 40% al 28% de media. Por primera vez, Luis pudo pagarse un sueldo digno y ahorrar para renovar equipamiento sin pedir financiación.",
     leccion:
-      "El problema no era la ocupación. Era que los platos que más salían eran los que menos margen dejaban.",
+      "Dejé de ser un esclavo de mi propio negocio y ahora el restaurante por fin trabaja para mí.",
+    autor: "Luis Marín, propietario de Casa Luis",
   },
   {
     label: "Apertura",
@@ -107,9 +107,69 @@ const cases = [
     leccion:
       "Un F&B hotelero sin identidad propia no compite. Solo sobrevive.",
   },
+  {
+    label: "Expansión",
+    tipo: "Cafetería de especialidad · 2 locales",
+    title: "El segundo local que daba pérdidas hasta que llegó la estructura",
+    situacion:
+      "Tras abrir un segundo local pensando que clonar el primero funcionaría igual, Santiago se encontró con un equipo desalineado, tiempos de servicio lentos y el nuevo local en pérdidas. Le preocupaba que un consultor de hostelería genérico no entendiera el nicho de café de especialidad y le empujara a bajar calidad.",
+    antes: [
+      "Ticket medio del local 2 en 3,20€ frente a 4,80€ del local 1",
+      "Coste de personal disparado por mala organización de turnos",
+      "Equipo nuevo desalineado con la cultura del negocio",
+      "Sin tiempo para dirigir, apagando fuegos en dos locales",
+    ],
+    despues: [
+      "Ticket medio conjunto en torno a 5,50€",
+      "Turnos reorganizados con coste controlado",
+      "Manual de operaciones estandarizando el servicio",
+      "Capacidad de ausentarse una semana sin que el negocio se resienta",
+    ],
+    acciones: [
+      "Rediseño de carta y del mostrador (visual merchandising)",
+      "Reformulación de combos para subir el ticket medio (menú de desayuno en vez de piezas sueltas)",
+      "Manual de operaciones para estandarizar el servicio entre los dos locales",
+      "Reorganización de turnos para controlar el coste de personal",
+    ],
+    resultado:
+      "El local 2 pasó de números rojos a un margen neto del 12%. El ticket medio conjunto subió hasta los 5,50€, y el negocio ganó la estructura necesaria para escalar sin depender de la presencia constante del fundador.",
+    leccion:
+      "Pasé de ser un barista estresado a ser un empresario, y mi negocio por fin es escalable.",
+    autor: "Santiago Fernández, fundador de Café Central",
+  },
+  {
+    label: "Relevo generacional",
+    tipo: "Bar de barrio · Traspaso familiar",
+    title: "Coger el bar de sus padres sin saber ni el coste de una caña",
+    situacion:
+      "Al hacerse cargo del bar de sus padres, Laura no sabía calcular el coste real de lo que servía. El negocio funcionaba por inercia y por clientela fija, pero ella no tenía datos para tomar ninguna decisión. Quería modernizarlo sin perder la esencia de bar de barrio.",
+    antes: [
+      "Facturación media de 500€/día entre barra y terraza",
+      "Sin control de stock ni certeza sobre mermas o descuadres",
+      "Sin carta propia para la terraza",
+      "Laura sola 14 horas diarias",
+    ],
+    despues: [
+      "750-800€/día en temporada alta, 650€ en invierno",
+      "Merma del 15% del stock identificada y corregida",
+      "Carta específica de terraza con productos de salida rápida",
+      "Equipo ampliado con una persona más",
+    ],
+    acciones: [
+      "Implantación de cierre de caja e inventario básico",
+      "Identificación de una merma del 15% del stock y corrección",
+      "Carta específica para terraza con bebidas frescas y tapas frías",
+      "Ajuste de compras con criterio de coste",
+    ],
+    resultado:
+      "La facturación diaria pasó de 500€ de media a 750-800€ en temporada alta. Laura pudo contratar refuerzo y dejar de trabajar sola 14 horas al día.",
+    leccion:
+      "Pasé de heredar un negocio que me daba miedo a dirigir un bar que por fin es rentable y me hace ilusión abrir cada mañana.",
+    autor: "Laura Herrero, gerente de Bar & Tapas La Esquinita",
+  },
 ];
 
-const bgClasses = ["bg-cream-dark", "bg-white", "bg-cream-dark"] as const;
+const bgClasses = ["bg-cream-dark", "bg-white"] as const;
 
 export default function CasosRealesPage() {
   return (
@@ -143,9 +203,9 @@ export default function CasosRealesPage() {
               <span className="font-semibold">Situaciones concretas, resultados medibles.</span>
             </h1>
             <p className="font-body text-cream/60 text-lg leading-relaxed max-w-2xl">
-              Los casos se presentan de forma anónima para proteger la confidencialidad
-              de los negocios. Cada uno refleja una situación real, las acciones aplicadas
-              y el resultado obtenido.
+              Cada caso refleja una situación real, las acciones aplicadas y el resultado
+              obtenido. Algunos se presentan con nombre real, con el permiso del cliente;
+              otros de forma anónima para proteger la confidencialidad del negocio.
             </p>
           </div>
         </div>
@@ -155,7 +215,7 @@ export default function CasosRealesPage() {
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 space-y-6">
           <p className="font-body text-ink/65 text-lg leading-relaxed border-l-4 border-amber pl-6">
-            Los tres casos que siguen tienen algo en común: el problema visible no era el problema real.
+            Los casos que siguen tienen algo en común: el problema visible no era el problema real.
             En todos ellos, el trabajo empezó por entender qué estaba pasando antes de proponer ningún cambio.
           </p>
           <p className="font-body text-ink/55 text-base leading-relaxed pl-10">
@@ -168,7 +228,7 @@ export default function CasosRealesPage() {
 
       {/* ── CASOS ─────────────────────────────────────────────────── */}
       {cases.map((caso, idx) => {
-        const bg = bgClasses[idx];
+        const bg = bgClasses[idx % bgClasses.length];
         const cardBg = bg === "bg-white" ? "bg-cream-dark" : "bg-white";
 
         return (
@@ -252,12 +312,15 @@ export default function CasosRealesPage() {
               </div>
 
               {/* ── Lección principal ─────────────────────────────── */}
-              <div className="flex items-start gap-3 mb-10">
+              <div className={caso.autor ? "flex items-start gap-3 mb-3" : "flex items-start gap-3 mb-10"}>
                 <Lightbulb size={18} className="text-amber flex-shrink-0 mt-1" strokeWidth={1.75} />
                 <p className="font-display text-grafito/60 text-lg italic leading-relaxed">
                   &ldquo;{caso.leccion}&rdquo;
                 </p>
               </div>
+              {caso.autor && (
+                <p className="font-body text-ink/45 text-sm pl-8 mb-10">— {caso.autor}</p>
+              )}
 
               {/* ── CTA del caso ──────────────────────────────────── */}
               <TrackingLink
