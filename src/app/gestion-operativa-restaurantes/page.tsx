@@ -126,6 +126,27 @@ const clusterArticles = [
   },
 ];
 
+const testimonials = [
+  {
+    text: "Dejé de ser un esclavo de mi propio negocio y ahora el restaurante por fin trabaja para mí.",
+    name: "Luis Marín",
+    role: "Propietario, Casa Luis",
+    metric: "Food cost del +40% al 28%",
+  },
+  {
+    text: "Pasé de ser un barista estresado a ser un empresario, y mi negocio por fin es escalable.",
+    name: "Santiago Fernández",
+    role: "Fundador, Café Central",
+    metric: "Local 2: de pérdidas a 12% de margen neto",
+  },
+  {
+    text: "Pasé de heredar un negocio que me daba miedo a dirigir un bar que por fin es rentable y me hace ilusión abrir cada mañana.",
+    name: "Laura Herrero",
+    role: "Gerente, Bar & Tapas La Esquinita",
+    metric: "Facturación diaria: de 500€ a 750-800€",
+  },
+];
+
 export default function GestionOperativaRestaurantesPage() {
   return (
     <>
@@ -269,6 +290,37 @@ export default function GestionOperativaRestaurantesPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIOS — grafito, bloque destacado ─────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32 border-t border-amber/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-xl mb-10">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">
+              En sus palabras
+            </p>
+            <h2 className="font-display text-cream text-3xl lg:text-4xl font-semibold leading-tight">
+              No es solo lo que digo yo
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="bg-white border border-grafito/10 rounded-xl p-6 flex flex-col"
+              >
+                <p className="font-display text-grafito/75 text-base italic leading-relaxed mb-5 flex-1">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+                <div className="pt-4 border-t border-grafito/10">
+                  <p className="font-display text-grafito text-sm font-semibold">{t.name}</p>
+                  <p className="font-body text-ink/50 text-xs mb-2">{t.role}</p>
+                  <p className="font-body text-amber text-xs font-semibold">{t.metric}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
