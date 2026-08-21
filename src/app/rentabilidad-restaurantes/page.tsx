@@ -73,15 +73,15 @@ const concepts = [
     title: "Food cost",
     slug: "como-calcular-el-food-cost-de-tu-restaurante",
     summary:
-      "El porcentaje de tus ingresos que se va en materia prima. El estándar saludable en un restaurante a la carta está entre el 28% y el 32%. Por encima de eso, o tienes un problema de compras, o de mermas, o de precios mal calculados.",
-    metric: "28–32%",
-    metricLabel: "rango saludable",
+      "(Consumo real / Ventas) × 100. Sostenible entre el 28% y el 35% en restauración a la carta. Por encima del 40% de forma sostenida, hay un problema que resolver.",
+    metric: "28–35%",
+    metricLabel: "rango sostenible a la carta",
   },
   {
     title: "Prime cost",
     slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
     summary:
-      "La suma de food cost y labour cost expresada como porcentaje de ventas. Es el indicador más completo de eficiencia operativa. Un prime cost por encima del 65% en un restaurante de servicio completo es una señal de alerta.",
+      "(Coste de materia prima + Coste de personal) / Ventas × 100. Por debajo del 65% en un restaurante de servicio completo. Por encima, queda muy poco margen para el resto de gastos.",
     metric: "<65%",
     metricLabel: "referencia para restaurante a la carta",
   },
@@ -89,23 +89,23 @@ const concepts = [
     title: "Labour cost",
     slug: "labour-cost-en-hosteleria-cuanto-gastar-en-personal",
     summary:
-      "El coste total del equipo — salarios, seguridad social, extras — como porcentaje de ventas. Entre el 30% y el 38% es el rango habitual. Más del 40% sin una justificación operativa clara es insostenible a medio plazo.",
-    metric: "30–38%",
-    metricLabel: "rango operativo habitual",
+      "(Coste total de personal / Ventas) × 100. Entre el 28% y el 35% en restauración a la carta. Por encima del 40% sostenido, es un problema estructural que no se arregla trabajando más horas.",
+    metric: "28–35%",
+    metricLabel: "rango sostenible a la carta",
   },
   {
     title: "Escandallo y mermas",
     slug: "que-es-un-escandallo-y-por-que-lo-necesitas",
     summary:
-      "El escandallo es el cálculo exacto del coste de cada plato, incluyendo las mermas de transformación. Sin escandallos actualizados, no sabes realmente cuánto cuesta lo que vendes. Y si no lo sabes, no puedes poner el precio correcto.",
-    metric: null,
-    metricLabel: null,
+      "Las mermas mal controladas representan entre el 3% y el 8% del coste de materia prima. En un restaurante que gasta 10.000 € al mes en producto, son entre 300 y 800 € que se van a la basura cada mes.",
+    metric: "3–8%",
+    metricLabel: "del coste de materia prima",
   },
   {
     title: "Margen por plato",
     slug: "como-mejorar-el-margen-de-un-restaurante-sin-subir-precios",
     summary:
-      "No todos los platos dejan el mismo margen. La ingeniería de menú consiste en entender qué te compran más y qué deja más dinero, y usar esa información para diseñar la carta y entrenar al equipo para vender mejor.",
+      "La ingeniería de menú clasifica cada plato en una matriz de popularidad y margen: estrella (popular y rentable), caballo de batalla (popular, poco rentable), puzzle (rentable, poco popular) y perro (ni una cosa ni la otra, hay que eliminarlo).",
     metric: null,
     metricLabel: null,
   },
@@ -113,11 +113,44 @@ const concepts = [
     title: "Carta rentable",
     slug: "como-disenar-una-carta-de-restaurante-rentable",
     summary:
-      "La carta es la herramienta comercial más importante de un restaurante. Su diseño, extensión, estructura de precios y presentación tienen un impacto directo en el ticket medio y en el food cost. Una carta mal diseñada cuesta dinero cada día.",
+      "Una carta más corta, bien escandallada y con la mezcla de ventas trabajada, mejora el margen sin tocar un solo precio.",
     metric: null,
     metricLabel: null,
   },
 ];
+
+const faqs = [
+  {
+    question: "¿Cuál es un buen margen neto para un restaurante?",
+    answer:
+      "Entre el 6% y el 12%, según mi experiencia en cuatro países. Por debajo del 5% de forma sostenida, el negocio está en riesgo aunque la ocupación sea buena.",
+  },
+  {
+    question: "¿Qué diferencia hay entre food cost y prime cost?",
+    answer:
+      "El food cost mide solo el coste de materia prima. El prime cost suma materia prima y personal, y es el indicador más completo porque entre ambos se va entre el 55% y el 70% de cada euro que factura un restaurante.",
+  },
+  {
+    question: "¿Por qué mi restaurante está lleno y aun así no gana dinero?",
+    answer:
+      "Casi siempre porque el prime cost o el labour cost están descontrolados sin que nadie los esté midiendo semana a semana. La ocupación resuelve el problema de ventas, no el de estructura de costes.",
+  },
+  {
+    question: "¿Cada cuánto debo revisar la rentabilidad de mi restaurante?",
+    answer:
+      "Cada semana, no a fin de mes. Cuando el dato llega treinta días tarde, el problema ya lleva un mes comiéndose el margen.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
 
 export default function RentabilidadRestaurantesPage() {
   return (
@@ -125,6 +158,10 @@ export default function RentabilidadRestaurantesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -185,15 +222,64 @@ export default function RentabilidadRestaurantesPage() {
         </div>
       </section>
 
+      {/* ── QUÉ ES Y CÓMO SE CALCULA — crema oscuro ─────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              La base
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              ¿Qué es la rentabilidad de un restaurante y cómo se calcula?
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
+              La rentabilidad de un restaurante se mide en dos niveles que conviene no confundir. El <strong>margen bruto</strong> es lo que te queda después de descontar solo el coste de la materia prima: <strong>(Ventas − Coste de materia prima) / Ventas × 100</strong>. El <strong>margen neto</strong> es lo que de verdad te llevas a casa, después de descontar también personal, alquiler, suministros, impuestos y el resto de costes fijos: <strong>Beneficio neto / Ventas × 100</strong>.
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
+              El margen bruto te dice si tu carta y tus escandallos están bien construidos. El margen neto te dice si el negocio, en conjunto, es viable. Puedes tener un margen bruto excelente y un margen neto que no da para vivir, si tu estructura de costes fijos está mal dimensionada para el volumen que haces.
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              En más de veinte años viendo cuentas de explotación de restaurantes en cuatro países, mi criterio es este: un restaurante bien gestionado se mueve entre el 6% y el 12% de margen neto. Por debajo del 5% de forma sostenida, aunque el local esté lleno cada noche, el negocio está en una posición frágil. No es un número mágico ni universal, pero es la referencia con la que trabajo cuando entro a diagnosticar un negocio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── UMBRAL DE RENTABILIDAD — blanco ───────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              El punto de partida
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              El umbral de rentabilidad: la pregunta que casi nadie se hace
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
+              Antes de hablar de mejorar el margen, hay una pregunta más básica que la mayoría de propietarios no ha respondido nunca: ¿cuánto tengo que facturar cada mes solo para no perder dinero? Esa cifra es tu punto de equilibrio, y se calcula así:
+            </p>
+            <p className="font-body text-grafito text-xl font-semibold leading-relaxed mb-5">
+              Punto de equilibrio = Costes fijos / (1 − % coste variable)
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
+              Por ejemplo, con 18.000 € de costes fijos mensuales y un 62% de coste variable sobre ventas, el punto de equilibrio está en unos 47.000 € facturados al mes. Cualquier euro por debajo de esa cifra es pérdida; cualquier euro por encima empieza a ser beneficio real.
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              Es la cifra que menos propietarios conocen y la que más cambia la forma de gestionar el día a día. Si quieres el desarrollo completo, con los errores más frecuentes al calcularlo, tienes el artículo dedicado: <Link href="/blog/como-calcular-punto-equilibrio-restaurante" className="text-amber hover:text-amber/80 transition-colors">cómo calcular el punto de equilibrio de tu restaurante</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── CONCEPTOS CLAVE — crema oscuro ────────────────────────── */}
       <section className="bg-cream-dark py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-xl mb-16">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
-              Los indicadores que importan
+              Las palancas
             </p>
             <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
-              Los seis conceptos clave de rentabilidad
+              Las seis palancas que mueven la rentabilidad
             </h2>
           </div>
 
@@ -259,6 +345,28 @@ export default function RentabilidadRestaurantesPage() {
                   Leer <ArrowRight size={12} />
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — blanco ───────────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32 border-t border-grafito/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre rentabilidad de restaurantes
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>
