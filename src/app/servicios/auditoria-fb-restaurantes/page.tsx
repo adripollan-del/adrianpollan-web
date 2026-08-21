@@ -5,14 +5,14 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, CheckCircle, ClipboardList, ExternalLink, Lightbulb, Target, TrendingDown, Users, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Diagnóstico y Auditoría F&B para Restaurantes | Adrián Pollán" },
+  title: { absolute: "Auditoría de Restaurantes: Diagnóstico F&B | Adrián Pollán" },
   description:
-    "Detecta dónde se escapa el margen en tu restaurante. Auditoría F&B con informe ejecutivo de prioridades: food cost, carta, equipo y operativa. Adrián Pollán, consultor de hostelería.",
+    "Auditoría de restaurante con informe ejecutivo de prioridades: food cost, carta, equipo y operativa. Detecta dónde se escapa el margen. 20+ años de experiencia real.",
   alternates: {
     canonical: "https://adrianpollan.com/servicios/auditoria-fb-restaurantes",
   },
   openGraph: {
-    title: "Diagnóstico y Auditoría F&B para Restaurantes | Adrián Pollán",
+    title: "Auditoría de Restaurantes: Diagnóstico F&B | Adrián Pollán",
     description:
       "Análisis completo de tu operación: concepto, rentabilidad, equipo, procesos y experiencia del cliente.",
     url: "https://adrianpollan.com/servicios/auditoria-fb-restaurantes",
@@ -92,11 +92,34 @@ export default function AuditoriaFBPage() {
               Servicio de consultoría
             </p>
             <h1 className="font-display text-cream text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-6">
-              Diagnóstico y<br />
-              <span className="font-semibold">Auditoría F&B</span>
+              Auditoría de<br />
+              <span className="font-semibold">tu restaurante</span>
             </h1>
             <p className="font-body text-cream/65 text-xl leading-relaxed max-w-2xl">
               Antes de cambiar nada, hay que entender qué está pasando de verdad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUÉ ES — blanco ───────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Qué es
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+              ¿Qué es una auditoría de restaurante?
+            </h2>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-4">
+              Una auditoría de restaurante es una revisión a fondo de tu negocio: costes, carta, equipo y operativa, hecha con datos reales, no con intuición. Aquí la llamamos auditoría o diagnóstico indistintamente, porque es exactamente lo mismo: encontrar dónde se escapa el margen antes de decidir qué cambiar.
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed mb-4">
+              Llevo más de veinte años haciendo este tipo de revisión en restaurantes y hoteles de cuatro países. Lo que he visto una y otra vez: el problema casi nunca está donde el propietario cree que está.
+            </p>
+            <p className="font-body text-ink/65 text-lg leading-relaxed">
+              Empieza con el diagnóstico gratuito de 10 minutos. Si después quieres profundizar conmigo directamente, reservamos una sesión de 20 minutos.
             </p>
           </div>
         </div>
