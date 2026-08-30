@@ -467,7 +467,7 @@ export default function MetodoDirigePlazasCubiertasClient() {
             eventLabel="hero"
             className="inline-block bg-[#E8623D] hover:bg-[#C94F2E] text-white font-body font-semibold text-base px-9 py-4 rounded-lg shadow-[0_18px_40px_-12px_rgba(232,98,61,0.55)] hover:shadow-[0_22px_46px_-10px_rgba(232,98,61,0.6)] hover:-translate-y-0.5 transition-all"
           >
-            Escríbeme por WhatsApp →
+            Reservar mi plaza →
           </TrackingLink>
           <p className="font-body text-[#F5F3F0]/35 text-[11px] leading-relaxed mt-4 max-w-sm mx-auto">
             {KLARNA_DISCLAIMER}
@@ -803,7 +803,7 @@ export default function MetodoDirigePlazasCubiertasClient() {
             eventLabel="final"
             className="inline-block bg-[#E8623D] hover:bg-[#C94F2E] text-white font-body font-semibold text-base px-9 py-4 rounded-lg mb-4 shadow-[0_18px_40px_-12px_rgba(232,98,61,0.55)] hover:shadow-[0_22px_46px_-10px_rgba(232,98,61,0.6)] hover:-translate-y-0.5 transition-all"
           >
-            Escríbeme por WhatsApp →
+            Reservar mi plaza →
           </TrackingLink>
           <p className="font-body text-[#F5F3F0]/40 text-xs mb-3">Te respondo yo mismo con el link de pago seguro</p>
           <p className="font-body text-[#F5F3F0]/35 text-[11px] leading-relaxed max-w-sm mx-auto">
@@ -831,7 +831,7 @@ export default function MetodoDirigePlazasCubiertasClient() {
             eventLabel="sticky_bar"
             className="flex-shrink-0 inline-block bg-[#E8623D] hover:bg-[#C94F2E] text-white font-body font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
           >
-            Escríbeme →
+            Reservar plaza →
           </TrackingLink>
         </div>
       </div>
