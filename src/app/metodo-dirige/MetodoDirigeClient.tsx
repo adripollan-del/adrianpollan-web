@@ -330,7 +330,7 @@ export default function MetodoDirigeClient() {
         <div className="max-w-2xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-ink/70 text-base lg:text-lg leading-relaxed">
             Esto no es un curso más de vídeos. Es un sistema de acompañamiento de 90 días, con diagnóstico,
-            plan a medida y revisión de tus números reales, para que al final del programa tu restaurante
+            plan a medida y revisión de tus números reales, para que al final del programa tu negocio
             funcione con criterio, no de memoria.
           </p>
         </div>
