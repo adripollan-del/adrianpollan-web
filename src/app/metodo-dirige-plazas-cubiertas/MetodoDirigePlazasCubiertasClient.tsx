@@ -147,11 +147,6 @@ const faqs = [
       "Sumando herramientas, sesiones 1:1, las 12 salas grupales, la formación grabada, el bonus, el panel de expertos, el grupo privado y el soporte por WhatsApp, el valor total del programa es de 3.954€. Tu precio hoy es 1.997€: ahorras 1.957€.",
   },
   {
-    question: "¿Por qué ya no está al precio de fundador?",
-    answer:
-      "Las 10 plazas de fundador a 997€ ya se cubrieron. El precio del programa ahora es el precio real: 1.997€.",
-  },
-  {
     question: "¿Qué es el Sistema de Bienvenida 360º que incluye el programa?",
     answer:
       "Un sistema completo de incorporación de personal que, por sí solo, se vende como producto aparte. Incluye manual de bienvenida, manuales por rol, cuaderno de onboarding 7-30-90, checklists operativos, plantillas de evaluación y guía de implantación.",
@@ -461,7 +456,6 @@ export default function MetodoDirigePlazasCubiertasClient() {
             <p className="font-display text-[#E8623D] text-3xl lg:text-4xl font-bold mb-1">
               1.997€ <span className="text-[#F5F3F0]/50 text-base lg:text-lg font-normal">· precio del programa</span>
             </p>
-            <p className="font-body text-[#F5F3F0]/70 text-sm mb-3">Las plazas de fundador (997€) ya se han cubierto</p>
             <p className="font-body text-[#F5F3F0]/45 text-xs">90 días de acompañamiento</p>
           </div>
 
@@ -704,10 +698,7 @@ export default function MetodoDirigePlazasCubiertasClient() {
             <h2 className="font-display text-[#152238] text-2xl lg:text-4xl font-semibold leading-tight mb-3">
               Todo lo que incluye tu plaza
             </h2>
-            <p className="font-body text-[#6B6F7A] text-sm lg:text-base mb-1">Valorado en 3.954 €</p>
-            <p className="font-body text-[#6B6F7A] text-xs lg:text-sm">
-              Las plazas de fundador (997€) ya se han cubierto. Este es el precio real del programa.
-            </p>
+            <p className="font-body text-[#6B6F7A] text-sm lg:text-base">Valorado en 3.954 €</p>
           </Reveal>
           <Reveal className="bg-white rounded-[20px] overflow-hidden shadow-[0_1px_2px_rgba(21,34,56,0.04),0_24px_50px_-22px_rgba(21,34,56,0.2)] border border-[#152238]/[0.06]">
             {valorPrograma.map((row, i) => (
@@ -802,8 +793,6 @@ export default function MetodoDirigePlazasCubiertasClient() {
         <GlowBg />
         <Reveal className="relative max-w-2xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-display text-[#F5F3F0] text-2xl lg:text-3xl font-light leading-snug mb-8">
-            Las plazas de fundador ya se han cubierto.
-            <br />
             El precio del programa es 1.997€.
           </p>
           <TrackingLink
