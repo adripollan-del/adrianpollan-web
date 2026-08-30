@@ -1,13 +1,25 @@
 import type { Metadata } from "next";
 import MetodoDirigePlazasCubiertasClient from "./MetodoDirigePlazasCubiertasClient";
 
+const OG_DESCRIPTION =
+  "El programa de 90 días para dirigir tu negocio de hostelería con datos, no a ciegas.";
+
 export const metadata: Metadata = {
   title: "Método Dirige — Programa de 90 días",
-  description:
-    "El programa de 90 días para que tu negocio te dé dinero, no solo trabajo. Precio: 1.997€.",
+  description: OG_DESCRIPTION,
   robots: {
     index: false,
     follow: false,
+  },
+  openGraph: {
+    title: "Método Dirige",
+    description: OG_DESCRIPTION,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Método Dirige",
+    description: OG_DESCRIPTION,
   },
 };
 
