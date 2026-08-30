@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ConditionalNavigation, ConditionalFooter } from "@/components/ConditionalChrome";
+import { ConditionalNavigation, ConditionalFooter, ConditionalChatBox } from "@/components/ConditionalChrome";
 import CookieBannerLazy from "@/components/CookieBannerLazy";
-import ChatBoxLazy from "@/components/ChatBoxLazy";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
 
 const inter = Inter({
@@ -165,7 +164,7 @@ export default function RootLayout({
         <main>{children}</main>
         <ConditionalFooter />
         <CookieBannerLazy />
-        <ChatBoxLazy />
+        <ConditionalChatBox />
         <AnalyticsScripts />
       </body>
     </html>

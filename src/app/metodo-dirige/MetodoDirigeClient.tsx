@@ -7,13 +7,11 @@ import {
   CalendarCheck,
   CheckCircle2,
   ClipboardList,
-  Gauge,
   Gift,
   PackageSearch,
   ShieldCheck,
   Users,
   UtensilsCrossed,
-  Video,
   Wallet,
   XCircle,
 } from "lucide-react";
@@ -384,12 +382,9 @@ export default function MetodoDirigeClient() {
       {/* ─── Acompañamiento ─────────────────────────────────── */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center gap-3 mb-3 justify-center">
-            <Video size={22} className="text-amber" />
-            <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight">
-              No estás solo: seguimiento real en cada paso
-            </h2>
-          </div>
+          <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight text-center mb-3">
+            No estás solo: seguimiento real en cada paso
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5 mt-12 mb-10">
             {acompanamiento.map((item, i) => (
               <div key={i} className="flex items-start gap-3.5">
@@ -412,12 +407,9 @@ export default function MetodoDirigeClient() {
       {/* ─── Herramientas ───────────────────────────────────── */}
       <section className="py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center gap-3 mb-12 justify-center">
-            <Gauge size={22} className="text-amber" />
-            <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight text-center">
-              Herramientas que se quedan funcionando en tu negocio
-            </h2>
-          </div>
+          <h2 className="font-display text-grafito text-2xl lg:text-4xl font-semibold leading-tight text-center mb-12">
+            Herramientas que se quedan funcionando en tu negocio
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5 mb-10">
             {[
               { icon: Wallet, text: herramientas[0] },
