@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { ConditionalNavigation, ConditionalFooter, ConditionalChatBox } from "@/components/ConditionalChrome";
 import CookieBannerLazy from "@/components/CookieBannerLazy";
-import ChatBoxLazy from "@/components/ChatBoxLazy";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
 
 const inter = Inter({
@@ -162,11 +160,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Navigation />
+        <ConditionalNavigation />
         <main>{children}</main>
-        <Footer />
+        <ConditionalFooter />
         <CookieBannerLazy />
-        <ChatBoxLazy />
+        <ConditionalChatBox />
         <AnalyticsScripts />
       </body>
     </html>

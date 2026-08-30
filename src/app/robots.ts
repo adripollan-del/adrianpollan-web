@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/aviso-legal", "/politica-de-privacidad", "/politica-de-cookies", "/terminos-y-condiciones", "/herramientas-libro"],
+        disallow: ["/api/", "/aviso-legal", "/politica-de-privacidad", "/politica-de-cookies", "/terminos-y-condiciones", "/herramientas-libro", "/metodo-dirige"],
       },
     ],
     sitemap: "https://adrianpollan.com/sitemap.xml",
