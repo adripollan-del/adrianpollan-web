@@ -296,22 +296,22 @@ export default function AbrirUnRestaurantePage() {
         </div>
       </section>
 
-      {/* ── FAQ — blanco ───────────────────────────────────────────── */}
-      <section className="bg-white py-24 lg:py-32 border-t border-grafito/10">
+      {/* ── FAQ — grafito ──────────────────────────────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32 border-t border-amber/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-12">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
               Preguntas frecuentes
             </p>
-            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="font-display text-cream text-4xl lg:text-5xl font-semibold leading-tight">
               Preguntas sobre cómo abrir un restaurante
             </h2>
           </div>
           <div className="max-w-3xl space-y-8">
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
-                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
-                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              <div key={i} className="border-b border-cream/10 pb-8 last:border-0">
+                <h3 className="font-display text-cream text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-cream/65 text-base leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
