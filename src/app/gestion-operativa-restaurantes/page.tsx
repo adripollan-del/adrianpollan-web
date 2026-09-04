@@ -30,6 +30,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqs = [
+  {
+    question: "¿Qué es la gestión operativa de un restaurante?",
+    answer:
+      "El conjunto de decisiones, sistemas y hábitos que determinan cómo funciona el restaurante en el día a día: cómo se organiza el equipo, cómo se ejecuta el servicio, cómo se controlan los costes variables y cómo se relaciona el negocio con sus proveedores.",
+  },
+  {
+    question: "¿Cuáles son los cuatro pilares de la gestión operativa?",
+    answer:
+      "Equipos con autonomía real, procesos documentados, KPIs que detectan problemas antes de que sean crisis, y gestión de proveedores como proceso continuo, no como compra puntual.",
+  },
+  {
+    question: "¿Por qué un restaurante depende tanto de su propietario?",
+    answer:
+      "Casi nunca es culpa del equipo: es el resultado de cómo se ha construido el negocio, sin procesos documentados, sin figuras intermedias con autoridad real y sin claridad sobre qué puede decidir cada persona por su cuenta.",
+  },
+  {
+    question: "¿Qué diferencia hay entre el food cost/labour cost y los KPIs operativos?",
+    answer:
+      "El food cost y el labour cost son indicadores de resultado. Los KPIs operativos (ventas por hora trabajada, cubiertos por empleado, rotación de equipo, tiempo entre pedido y pase) son indicadores de proceso: muestran por qué están ocurriendo los problemas, no solo que están ocurriendo.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 const pillars = [
   {
     Icon: Users,
@@ -153,6 +186,10 @@ export default function GestionOperativaRestaurantesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -414,6 +451,28 @@ export default function GestionOperativaRestaurantesPage() {
                   Leer el artículo <ArrowRight size={14} />
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — blanco ───────────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32 border-t border-grafito/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre gestión operativa de restaurantes
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

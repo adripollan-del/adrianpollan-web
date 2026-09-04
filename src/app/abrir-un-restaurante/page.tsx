@@ -25,6 +25,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqs = [
+  {
+    question: "¿Cuáles son las fases para abrir un restaurante?",
+    answer:
+      "Seis: validación del concepto, selección del local, plan de inversión realista, carta y escandallos, selección y formación del equipo, y primeros servicios con ajuste operativo.",
+  },
+  {
+    question: "¿Cuánto presupuesto extra conviene prever al abrir un restaurante?",
+    answer:
+      "La regla es calcular la inversión, aumentarla un 20%, y asegurarse de tener capital para aguantar seis meses sin beneficio. El error más frecuente es subestimar la inversión y sobreestimar los ingresos de los primeros meses.",
+  },
+  {
+    question: "¿Por qué fracasan la mayoría de las aperturas de restaurantes?",
+    answer:
+      "La mayoría de los problemas que llevan al cierre prematuro se originan antes de abrir la puerta al público, no después.",
+  },
+  {
+    question: "¿Cuáles son los errores más frecuentes al abrir un restaurante?",
+    answer:
+      "Subestimar el tiempo y coste de la reforma, abrir sin haber formado al equipo en servicio real, lanzar una carta demasiado amplia que sube el food cost, no tener sistemas de control desde el día uno (escandallos, inventarios, cierres de caja), calcular la rentabilidad con el mejor mes en lugar de la media real, y depender de un solo perfil clave que paraliza el negocio si se va.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 const clusterArticles = [
   {
     slug: "los-10-errores-que-matan-una-apertura",
@@ -84,6 +117,10 @@ export default function AbrirUnRestaurantePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
@@ -122,10 +159,10 @@ export default function AbrirUnRestaurantePage() {
               La mayoría de aperturas fracasan por razones evitables
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
-              Abrir un restaurante requiere una inversión económica importante, mucha energía
-              y la capacidad de gestionar decenas de decisiones simultáneas bajo presión.
-              Lo que no se dice suficiente es que la mayoría de los problemas que llevan
-              al cierre prematuro se originan antes de abrir la puerta al público.
+              La mayoría de los problemas que llevan al cierre prematuro de un restaurante
+              se originan antes de abrir la puerta al público, no después. Abrir requiere,
+              además, una inversión económica importante, mucha energía y la capacidad de
+              gestionar decenas de decisiones simultáneas bajo presión.
             </p>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
               Esta guía recorre las seis fases clave de una apertura y los errores más
@@ -254,6 +291,28 @@ export default function AbrirUnRestaurantePage() {
                   Leer el artículo <ArrowRight size={14} />
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — blanco ───────────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32 border-t border-grafito/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre cómo abrir un restaurante
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

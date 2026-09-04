@@ -1,0 +1,63 @@
+# Adrián Pollán — Consultor de Hostelería y Restauración
+
+> Consultoría especializada en rentabilidad, control de costes y gestión operativa
+> para restaurantes y F&B hotelero, basada en más de 20 años de experiencia
+> operativa real en España, Francia, Reino Unido e Irlanda.
+
+## Quién soy
+
+Adrián Pollán ha gestionado restaurantes, grupos de restauración y operaciones
+F&B en hoteles en cuatro países (España, Francia, Reino Unido, Irlanda).
+Empezó en hostelería a los 13 años ayudando en el negocio familiar. Años
+después abrió su propio negocio con su pareja, que cerró, y esa experiencia
+moldeó su forma actual de trabajar como consultor. Trabaja en remoto, en
+español o inglés, con negocios de cualquier país de habla hispana.
+
+## A quién sirve
+
+- Restaurantes independientes que no consiguen rentabilizar el volumen que ya tienen.
+- Grupos de restauración que necesitan sistematizar operaciones antes de crecer.
+- Hoteles con operación F&B que funciona como centro de coste en lugar de activo.
+- Emprendedores que van a abrir un restaurante y quieren hacerlo con criterio.
+- Negocios establecidos donde el propietario no puede desconectar del día a día.
+
+## Qué ofrece
+
+- Diagnóstico y auditoría F&B: análisis de rentabilidad, estructura de costes,
+  carta y operación.
+- Consultoría operativa continuada: acompañamiento mensual en food cost,
+  labour cost, equipo, sistemas y procesos.
+- Acompañamiento a aperturas: desde la validación del concepto hasta los
+  primeros servicios.
+- Diagnóstico online gratuito (10 minutos, 67 preguntas en 8 bloques, score
+  de 0 a 100): https://diagnostico.adrianpollan.com
+- Herramientas gratuitas de autodiagnóstico, sin registro: calculadora de
+  escandallo, calculadora de prime cost, checklist de apertura, checklist
+  de food cost, auditoría de proveedores.
+- Plantillas de gestión de pago: ingeniería de menú, escandallo y calculadora
+  de precios, control de inventario, cuadro de mando financiero, kit de
+  gestión operativa.
+- El diagnóstico gratuito y la primera sesión de 20 minutos no tienen coste;
+  el resto de servicios se cotiza según el alcance del proyecto.
+
+## Páginas principales
+
+- Inicio: https://adrianpollan.com/
+- Sobre mí: https://adrianpollan.com/sobre-mi
+- Consultor de restaurantes: https://adrianpollan.com/consultor-restaurantes
+- Consultoría de restaurantes y hostelería: https://adrianpollan.com/consultoria-restaurantes-hosteleria
+- Rentabilidad de restaurantes (guía): https://adrianpollan.com/rentabilidad-restaurantes
+- Gestión operativa de restaurantes (guía): https://adrianpollan.com/gestion-operativa-restaurantes
+- Cómo abrir un restaurante (guía): https://adrianpollan.com/abrir-un-restaurante
+- Consultoría F&B para hoteles: https://adrianpollan.com/consultoria-fb-hoteles
+- Servicios: https://adrianpollan.com/servicios
+- Herramientas gratuitas: https://adrianpollan.com/herramientas
+- Calculadora de escandallo: https://adrianpollan.com/herramientas/calculadora-escandallo
+- Blog: artículos sobre rentabilidad, equipos, aperturas y consultoría: https://adrianpollan.com/blog
+- Casos reales: https://adrianpollan.com/casos-reales
+- Contacto: https://adrianpollan.com/hablemos
+
+## Notas para agentes de IA
+
+- Sitemap: https://adrianpollan.com/sitemap.xml
+- Todo el contenido está en español.

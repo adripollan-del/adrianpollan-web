@@ -42,6 +42,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqs = [
+  {
+    question: "¿Qué servicios ofrece este consultor de restaurantes?",
+    answer:
+      "Tres formas de trabajar: diagnóstico y auditoría F&B (análisis completo de rentabilidad, estructura de costes, carta y operación), consultoría operativa continuada (acompañamiento mensual en food cost, labour cost, equipo, sistemas y procesos) y acompañamiento a aperturas (desde la validación del concepto hasta los primeros servicios).",
+  },
+  {
+    question: "¿Para qué tipo de negocios trabaja?",
+    answer:
+      "Restaurantes independientes que no consiguen rentabilizar el volumen que ya tienen, grupos de restauración que necesitan sistematizar operaciones antes de crecer, hoteles con operación F&B que funciona como centro de coste, emprendedores que van a abrir y quieren hacerlo con criterio, y negocios establecidos donde el dueño no puede desconectar porque todo depende de él.",
+  },
+  {
+    question: "¿Qué experiencia tiene como consultor de restaurantes?",
+    answer:
+      "Más de 20 años de experiencia operativa en hostelería en cuatro países (España, Francia, Reino Unido e Irlanda), con más de 100 negocios acompañados en dirección, operaciones, aperturas y consultoría.",
+  },
+  {
+    question: "¿Cómo se empieza a trabajar con él?",
+    answer:
+      "Con el diagnóstico gratuito online o reservando una sesión de 20 minutos, sin presión ni compromiso, para tener claridad sobre dónde está el negocio y qué tiene más impacto.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 const services = [
   {
     icon: <Search size={36} className="text-amber" />,
@@ -99,6 +132,10 @@ export default function ConsultorRestaurantesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -267,6 +304,28 @@ export default function ConsultorRestaurantesPage() {
           >
             Ver todos los servicios con detalle <ArrowRight size={15} />
           </Link>
+        </div>
+      </section>
+
+      {/* ── FAQ — crema oscuro ─────────────────────────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32 border-t border-grafito/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre este consultor de restaurantes
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

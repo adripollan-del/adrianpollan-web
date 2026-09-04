@@ -202,8 +202,9 @@ export default function RentabilidadRestaurantesPage() {
               Por qué tantos restaurantes ocupados no son rentables
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-5">
-              En más de veinte años trabajando en hostelería en cuatro países, he visto
-              el mismo patrón repetirse: negocios con buena ocupación, equipo trabajador
+              El problema casi nunca es la falta de clientes. En más de veinte años
+              trabajando en hostelería en cuatro países, he visto el mismo patrón
+              repetirse una y otra vez: negocios con buena ocupación, equipo trabajador
               y clientes satisfechos que a fin de mes no generan el beneficio que deberían,
               o directamente no cuadran.
             </p>

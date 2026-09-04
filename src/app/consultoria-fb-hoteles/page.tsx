@@ -25,6 +25,34 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqs = [
+  {
+    question: "¿Por qué el F&B de un hotel funciona como centro de coste en lugar de como activo?",
+    answer:
+      "Porque en muchos hoteles el restaurante existe porque tiene que existir, no porque sea rentable: se gestiona para no perder demasiado en lugar de para generar beneficio real. Con la estructura correcta, el F&B puede ser un diferenciador y un generador de margen.",
+  },
+  {
+    question: "¿Cómo se aborda la consultoría F&B en un hotel?",
+    answer:
+      "Con cuatro fases: auditoría de rentabilidad F&B por punto de venta, diseño de la oferta gastronómica con criterio de margen, estructura de equipo y procesos, y seguimiento con un cuadro de mando de KPIs (food cost, labour cost, RevPASH, ticket medio y satisfacción).",
+  },
+  {
+    question: "¿Qué problemas suelen tener los equipos de F&B en hoteles?",
+    answer:
+      "Mucho volumen de trabajo y poca claridad en roles, responsabilidades y procesos, lo que genera dependencia total del responsable, inconsistencia en el servicio y alta rotación de personal.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 const problems = [
   {
     icon: <TrendingDown size={28} className="text-amber" />,
@@ -73,6 +101,10 @@ export default function ConsultoriaFbHotelesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -156,6 +188,28 @@ export default function ConsultoriaFbHotelesPage() {
             >
               Ver todos los servicios disponibles <ArrowRight size={14} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — blanco ───────────────────────────────────────────── */}
+      <section className="bg-white py-24 lg:py-32 border-t border-grafito/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre consultoría F&amp;B para hoteles
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-grafito/10 pb-8 last:border-0">
+                <h3 className="font-display text-grafito text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-ink/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

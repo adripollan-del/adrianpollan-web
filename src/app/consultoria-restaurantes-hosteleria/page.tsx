@@ -169,9 +169,10 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             </h2>
             <div className="space-y-5">
               <p className="font-body text-ink/70 text-lg leading-relaxed">
-                La mayoría de restaurantes que llegan a consultoría no tienen un problema de ventas.
-                Tienen buena ocupación, buen producto y un equipo que trabaja duro. El problema es
-                que a final de mes los números no reflejan ese esfuerzo.
+                El problema, casi siempre, es que a final de mes los números no reflejan
+                el esfuerzo del día a día. La mayoría de restaurantes que llegan a consultoría
+                no tienen un problema de ventas: tienen buena ocupación, buen producto y un
+                equipo que trabaja duro.
               </p>
               <p className="font-body text-ink/70 text-lg leading-relaxed">
                 Las causas son casi siempre las mismas: food cost que nadie controla con datos
