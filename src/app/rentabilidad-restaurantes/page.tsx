@@ -42,7 +42,7 @@ const clusterArticles = [
     readTime: "9 min",
   },
   {
-    slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+    slug: "que-es-el-prime-cost-y-como-controlarlo-en-tu-restaurante",
     title: "Qué es el prime cost y por qué es el indicador más importante",
     readTime: "9 min",
   },
@@ -79,7 +79,7 @@ const concepts = [
   },
   {
     title: "Prime cost",
-    slug: "que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+    slug: "que-es-el-prime-cost-y-como-controlarlo-en-tu-restaurante",
     summary:
       "(Coste de materia prima + Coste de personal) / Ventas × 100. Por debajo del 65% en un restaurante de servicio completo. Por encima, queda muy poco margen para el resto de gastos.",
     metric: "<65%",

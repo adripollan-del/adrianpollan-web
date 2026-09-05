@@ -82,6 +82,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/rotacion-personal-hosteleria-causas-reducir",
+        destination: "/blog/como-reducir-rotacion-personal-restaurante",
+        permanent: true,
+      },
+      {
+        source: "/blog/que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante",
+        destination: "/blog/que-es-el-prime-cost-y-como-controlarlo-en-tu-restaurante",
+        permanent: true,
+      },
+      {
         source: "/servicios",
         destination: "/consultoria-restaurantes-hosteleria",
         permanent: true,

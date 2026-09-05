@@ -228,10 +228,8 @@ RENTABILIDAD Y COSTES
   https://adrianpollan.com/blog/que-es-un-escandallo-y-por-que-lo-necesitas
 • Guía calculadora de escandallos:
   https://adrianpollan.com/blog/guia-calculadora-escandallos-paso-a-paso
-• Prime cost — qué es y cómo controlarlo:
+• Prime cost — qué es, por qué es el indicador más importante y cómo controlarlo:
   https://adrianpollan.com/blog/que-es-el-prime-cost-y-como-controlarlo-en-tu-restaurante
-• Prime cost — por qué es el indicador más importante:
-  https://adrianpollan.com/blog/que-es-el-prime-cost-y-por-que-es-el-indicador-mas-importante
 • Labour cost — cuánto gastar en personal:
   https://adrianpollan.com/blog/labour-cost-en-hosteleria-cuanto-gastar-en-personal
 • Mejorar el margen sin subir precios:
