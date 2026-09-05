@@ -6,12 +6,12 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: { absolute: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán" },
   description:
-    "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost, escandallo y margen por plato. Con herramientas gratuitas y diagnóstico online.",
+    "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y diagnóstico online.",
   alternates: { canonical: "https://adrianpollan.com/rentabilidad-restaurantes" },
   openGraph: {
     title: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán",
     description:
-      "Aprende a mejorar la rentabilidad de tu restaurante. Food cost, prime cost, labour cost, carta rentable y control de costes. Guía práctica basada en experiencia real.",
+      "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y diagnóstico online.",
     url: "https://adrianpollan.com/rentabilidad-restaurantes",
   },
 };

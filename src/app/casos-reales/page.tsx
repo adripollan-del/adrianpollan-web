@@ -5,16 +5,16 @@ import TrackingLink from "@/components/TrackingLink";
 import { CheckCircle, ArrowRight, ExternalLink, AlertTriangle, Lightbulb, X } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Casos de Éxito de Consultoría para Restaurantes | Adrián Pollán" },
+  title: { absolute: "Casos Reales de Consultoría en Restaurantes | Adrián Pollán" },
   description:
-    "Casos de éxito de consultoría para restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero rentable. Resultados con datos reales.",
+    "Casos reales de consultoría en restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero convertido en rentable.",
   alternates: {
     canonical: "https://adrianpollan.com/casos-reales",
   },
   openGraph: {
-    title: "Casos de Éxito de Consultoría para Restaurantes | Adrián Pollán",
+    title: "Casos Reales de Consultoría en Restaurantes | Adrián Pollán",
     description:
-      "Casos de éxito anónimos de consultoría en hostelería: restaurantes con margen bajo, aperturas y F&B hotelero.",
+      "Casos reales de consultoría en restaurantes y hoteles: food cost reducido del 38% al 31,5%, aperturas sin errores y F&B hotelero convertido en rentable.",
     url: "https://adrianpollan.com/casos-reales",
   },
 };

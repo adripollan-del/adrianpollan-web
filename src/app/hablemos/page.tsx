@@ -8,16 +8,16 @@ import ProcesoDeTrabajo from "@/components/ProcesoDeTrabajo";
 import MapaDiagnostico from "@/components/MapaDiagnostico";
 
 export const metadata: Metadata = {
-  title: { absolute: "Habla con Adrián Pollán | Consultor de Restaurantes y Hostelería" },
+  title: { absolute: "Habla con Adrián Pollán | Consultor de Hostelería" },
   description:
-    "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante. Sin compromiso. Adrián Pollán, consultor de hostelería.",
+    "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
   alternates: {
     canonical: "https://adrianpollan.com/hablemos",
   },
   openGraph: {
-    title: "Habla con Adrián Pollán | Sesión Gratuita de Consultoría",
+    title: "Habla con Adrián Pollán | Consultor de Hostelería",
     description:
-      "Tres formas de empezar: diagnóstico gratuito, sesión de 20 minutos o mensaje directo. Sin compromiso.",
+      "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
     url: "https://adrianpollan.com/hablemos",
   },
 };

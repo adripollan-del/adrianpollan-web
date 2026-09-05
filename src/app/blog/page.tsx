@@ -3,16 +3,16 @@ import Image from "next/image";
 import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
-  title: { absolute: "Blog de Consultoría para Restaurantes | Rentabilidad, Costes y Gestión | Adrián Pollán" },
+  title: { absolute: "Blog de Gestión de Restaurantes | Adrián Pollán" },
   description:
-    "Artículos prácticos sobre rentabilidad, food cost, prime cost, gestión de equipos y aperturas de restaurantes. Sin teoría vacía. Solo lo que funciona en la operación real.",
+    "Artículos prácticos sobre rentabilidad, food cost, prime cost y gestión de equipos para restaurantes. Sin teoría vacía, solo lo que funciona en la operación.",
   alternates: {
     canonical: "https://adrianpollan.com/blog",
   },
   openGraph: {
-    title: "Blog sobre Rentabilidad y Gestión de Restaurantes | Adrián Pollán",
+    title: "Blog de Gestión de Restaurantes | Adrián Pollán",
     description:
-      "Artículos prácticos sobre rentabilidad, costes, equipos y aperturas para restaurantes y negocios de hostelería.",
+      "Artículos prácticos sobre rentabilidad, food cost, prime cost y gestión de equipos para restaurantes. Sin teoría vacía, solo lo que funciona en la operación.",
     url: "https://adrianpollan.com/blog",
   },
 };

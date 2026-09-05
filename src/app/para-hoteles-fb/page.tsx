@@ -4,16 +4,16 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "F&B Hotelero | Rentabilidad y Gestión para Hoteles con Restaurante | Adrián Pollán" },
+  title: { absolute: "Para Hoteles con Restaurante (F&B) | Adrián Pollán" },
   description:
-    "Convierte el F&B de tu hotel en una línea de negocio rentable. Control de costes, oferta alineada con el huésped y equipos que venden. Adrián Pollán, consultor F&B.",
+    "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Diagnóstico gratuito y acompañamiento operativo real incluido.",
   alternates: {
     canonical: "https://adrianpollan.com/para-hoteles-fb",
   },
   openGraph: {
-    title: "Consultoría F&B para Hoteles | Adrián Pollán",
+    title: "Para Hoteles con Restaurante (F&B) | Adrián Pollán",
     description:
-      "Consultoría especializada en F&B para hoteles. Rentabilidad, operaciones y gestión de restauración hotelera con más de 20 años de experiencia real.",
+      "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Diagnóstico gratuito y acompañamiento operativo real incluido.",
     url: "https://adrianpollan.com/para-hoteles-fb",
   },
 };

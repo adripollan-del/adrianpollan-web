@@ -4,16 +4,16 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Consultoría para Propietarios de Restaurantes | Recupera el Margen | Adrián Pollán" },
+  title: { absolute: "Para Propietarios de Restaurantes | Adrián Pollán" },
   description:
-    "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo que deberían. Diagnóstico gratuito y acompañamiento para recuperar el margen real.",
+    "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Diagnóstico gratuito para recuperar el margen real perdido.",
   alternates: {
     canonical: "https://adrianpollan.com/para-propietarios-de-restaurantes",
   },
   openGraph: {
     title: "Para Propietarios de Restaurantes | Adrián Pollán",
     description:
-      "Consultoría especializada para propietarios de restaurantes que venden bien pero no ganan lo que deberían. Diagnóstico, operativa y rentabilidad real.",
+      "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Diagnóstico gratuito para recuperar el margen real perdido.",
     url: "https://adrianpollan.com/para-propietarios-de-restaurantes",
   },
 };

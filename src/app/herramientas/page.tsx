@@ -32,14 +32,14 @@ const paidTemplates = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Herramientas Gratuitas para Restaurantes | Food Cost, Prime Cost y Más | Adrián Pollán" },
+  title: { absolute: "Herramientas Gratuitas para Restaurantes | Adrián Pollán" },
   description:
-    "Calculadoras y checklists gratuitos para restaurantes: prime cost, escandallo, food cost, apertura y auditoría de proveedores. Sin registro. Resultados inmediatos.",
+    "Calculadoras y checklists gratuitos para restaurantes: prime cost, escandallo, food cost y apertura. Sin registro, con resultados inmediatos y descargables.",
   alternates: { canonical: "https://adrianpollan.com/herramientas" },
   openGraph: {
     title: "Herramientas Gratuitas para Restaurantes | Adrián Pollán",
     description:
-      "Calculadoras y checklists gratuitos para gestionar mejor tu restaurante.",
+      "Calculadoras y checklists gratuitos para restaurantes: prime cost, escandallo, food cost y apertura. Sin registro, con resultados inmediatos y descargables.",
     url: "https://adrianpollan.com/herramientas",
   },
 };

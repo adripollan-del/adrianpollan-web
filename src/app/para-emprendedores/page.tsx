@@ -4,16 +4,16 @@ import TrackingLink from "@/components/TrackingLink";
 import { ArrowRight, Rocket, CheckCircle, AlertTriangle, TrendingDown } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Abrir un Restaurante con Criterio | Consultoría para Emprendedores | Adrián Pollán" },
+  title: { absolute: "Para Emprendedores: Abrir un Restaurante | Adrián Pollán" },
   description:
-    "Acompañamiento para emprendedores que quieren abrir un restaurante sin cometer los errores más caros. Concepto, inversión, carta y equipo antes de comprometer tu dinero.",
+    "Acompañamiento para emprendedores que quieren abrir un restaurante sin cometer errores caros. Concepto, inversión, carta y equipo antes de invertir.",
   alternates: {
     canonical: "https://adrianpollan.com/para-emprendedores",
   },
   openGraph: {
-    title: "Para Emprendedores que Quieren Abrir un Restaurante | Adrián Pollán",
+    title: "Para Emprendedores: Abrir un Restaurante | Adrián Pollán",
     description:
-      "Acompañamiento para emprendedores que quieren abrir un restaurante con criterio. Evita los errores más costosos antes de comprometer tu inversión.",
+      "Acompañamiento para emprendedores que quieren abrir un restaurante sin cometer errores caros. Concepto, inversión, carta y equipo antes de invertir.",
     url: "https://adrianpollan.com/para-emprendedores",
   },
 };

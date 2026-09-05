@@ -7,16 +7,16 @@ import LinkedinIcon from "@/components/LinkedinIcon";
 import MetodoADRIAN from "@/components/MetodoADRIAN";
 
 export const metadata: Metadata = {
-  title: { absolute: "Sobre Mí — Adrián Pollán | Consultor de Hostelería con 20 Años de Experiencia" },
+  title: { absolute: "Sobre Mí: Adrián Pollán, Consultor de Hostelería" },
   description:
-    "Adrián Pollán, consultor de hostelería y restauración con 20+ años de experiencia operativa real. España, Francia, Reino Unido e Irlanda. Restaurantes, hoteles y F&B.",
+    "Adrián Pollán, consultor de hostelería con más de 20 años de experiencia real en España, Francia, Reino Unido e Irlanda. Restaurantes, hoteles y F&B.",
   alternates: {
     canonical: "https://adrianpollan.com/sobre-mi",
   },
   openGraph: {
-    title: "Adrián Pollán — Consultor de Hostelería | 20 Años de Experiencia Real",
+    title: "Sobre Mí: Adrián Pollán, Consultor de Hostelería",
     description:
-      "Más de 20 años en operaciones reales de hostelería en cuatro países. Consultor especializado en rentabilidad, F&B y gestión operativa.",
+      "Adrián Pollán, consultor de hostelería con más de 20 años de experiencia real en España, Francia, Reino Unido e Irlanda. Restaurantes, hoteles y F&B.",
     url: "https://adrianpollan.com/sobre-mi",
   },
 };

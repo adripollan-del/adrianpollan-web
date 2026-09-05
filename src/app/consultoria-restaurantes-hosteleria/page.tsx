@@ -20,12 +20,12 @@ const FAQAccordion = dynamic(() => import("@/components/FAQAccordion"));
 export const metadata: Metadata = {
   title: { absolute: "Consultoría de Restaurantes y Hostelería | Adrián Pollán" },
   description:
-    "Consultoría especializada para restaurantes, hoteles y negocios de hostelería. Diagnóstico gratuito, control de costes, rentabilidad y acompañamiento operativo. 20+ años de experiencia real.",
+    "Consultoría para restaurantes y hostelería: diagnóstico gratuito, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
   alternates: { canonical: "https://adrianpollan.com/consultoria-restaurantes-hosteleria" },
   openGraph: {
     title: "Consultoría de Restaurantes y Hostelería | Adrián Pollán",
     description:
-      "Consultoría especializada para restaurantes y hostelería. Diagnóstico gratuito, control de costes y acompañamiento operativo. 20+ años de experiencia real.",
+      "Consultoría para restaurantes y hostelería: diagnóstico gratuito, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
     url: "https://adrianpollan.com/consultoria-restaurantes-hosteleria",
   },
 };
