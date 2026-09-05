@@ -4,7 +4,7 @@ import NewsletterFormLazy from "@/components/NewsletterFormLazy";
 import TrackingLink from "@/components/TrackingLink";
 
 const footerLinks = [
-  { href: "/servicios", label: "Servicios" },
+  { href: "/consultoria-restaurantes-hosteleria", label: "Servicios" },
   { href: "/herramientas", label: "Herramientas gratuitas" },
   { href: "/herramientas/plantillas", label: "Plantillas" },
   { href: "/blog", label: "Blog" },

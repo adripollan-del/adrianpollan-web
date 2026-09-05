@@ -576,7 +576,7 @@ export default function Home() {
                   {s.line}
                 </p>
                 <Link
-                  href="/servicios"
+                  href="/consultoria-restaurantes-hosteleria"
                   className="inline-flex items-center gap-2 font-body text-sm font-medium text-grafito border-b border-amber/60 pb-0.5 self-start hover:border-amber hover:text-amber transition-colors"
                 >
                   Ver cómo funciona <ArrowRight size={13} />
@@ -588,7 +588,7 @@ export default function Home() {
           {/* CTA central */}
           <div className="flex justify-center mt-14 lg:mt-16">
             <Link
-              href="/servicios"
+              href="/consultoria-restaurantes-hosteleria"
               className="inline-flex items-center gap-2 px-8 py-4 border border-grafito text-grafito text-sm font-medium tracking-wide hover:bg-grafito hover:text-cream transition-colors"
             >
               Conoce todos los servicios en detalle

@@ -8,7 +8,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
 
 const navLinksLeft = [
-  { href: "/servicios", label: "Servicios" },
+  { href: "/consultoria-restaurantes-hosteleria", label: "Servicios" },
 ];
 
 const navLinksRight = [

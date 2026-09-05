@@ -183,7 +183,7 @@ export default function ConsultoriaFbHotelesPage() {
           </div>
           <div className="mt-10">
             <Link
-              href="/servicios"
+              href="/consultoria-restaurantes-hosteleria"
               className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
             >
               Ver todos los servicios disponibles <ArrowRight size={14} />

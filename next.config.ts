@@ -81,6 +81,11 @@ const nextConfig: NextConfig = {
           "/blog/ticket-medio-restaurante-como-aumentarlo-sin-subir-precios",
         permanent: true,
       },
+      {
+        source: "/servicios",
+        destination: "/consultoria-restaurantes-hosteleria",
+        permanent: true,
+      },
     ];
   },
   images: {

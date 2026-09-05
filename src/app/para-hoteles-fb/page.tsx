@@ -59,7 +59,7 @@ export default function ParaHotelesPage() {
           <nav className="font-body text-amber/60 text-xs tracking-wide mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-amber transition-colors">Inicio</Link>
             <span className="mx-2">›</span>
-            <Link href="/servicios" className="hover:text-amber transition-colors">Servicios</Link>
+            <Link href="/consultoria-restaurantes-hosteleria" className="hover:text-amber transition-colors">Servicios</Link>
             <span className="mx-2">›</span>
             <span className="text-amber">Para hoteles F&B</span>
           </nav>
@@ -170,7 +170,7 @@ export default function ParaHotelesPage() {
             ))}
           </div>
           <Link
-            href="/servicios"
+            href="/consultoria-restaurantes-hosteleria"
             className="inline-flex items-center gap-2 font-body text-sm text-grafito/60 hover:text-grafito transition-colors"
           >
             Ver todos los servicios con detalle <ArrowRight size={15} />
