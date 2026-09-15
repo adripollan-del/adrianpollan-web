@@ -499,19 +499,19 @@ export default function SobreMiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {[
               {
-                text: "Llevábamos tres años con el restaurante lleno casi todos los fines de semana y sin entender por qué el margen no aparecía. En dos meses de trabajo con Adrián identificamos dónde se escapaba el dinero y lo corregimos. El cambio fue inmediato.",
-                name: "Carlos M.",
-                role: "Propietario · Restaurante independiente · 50 cubiertos · Miami",
+                text: "Dejé de ser un esclavo de mi propio negocio y ahora el restaurante por fin trabaja para mí.",
+                name: "Luis Marín",
+                role: "Propietario, Casa Luis",
               },
               {
-                text: "Estaba a punto de firmar el local para mi primer restaurante cuando empecé a trabajar con Adrián. Me hizo las preguntas que nadie me había hecho y me ayudó a tomar decisiones mucho más sólidas antes de comprometer mi inversión.",
-                name: "Laura G.",
-                role: "Emprendedora · Apertura de primer restaurante · Valencia",
+                text: "Pasé de ser un barista estresado a ser un empresario, y mi negocio por fin es escalable.",
+                name: "Santiago Fernández",
+                role: "Fundador, Café Central",
               },
               {
-                text: "Lo que más me sorprendió fue que no llegó con soluciones preparadas. Primero entendió el negocio, luego propuso. Esa forma de trabajar marca la diferencia respecto a otros consultores que había contratado antes.",
-                name: "Javier R.",
-                role: "Director de F&B · Hotel de 4 estrellas · Ciudad de México",
+                text: "Pasé de heredar un negocio que me daba miedo a dirigir un bar que por fin es rentable y me hace ilusión abrir cada mañana.",
+                name: "Laura Herrero",
+                role: "Gerente, Bar & Tapas La Esquinita",
               },
             ].map((t, i) => (
               <div
