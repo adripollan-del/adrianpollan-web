@@ -60,7 +60,7 @@ export default function CalculadoraPrimeCostPage() {
             ¿Quieres saber exactamente dónde mejorar?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            La calculadora da una foto del momento. El diagnóstico gratuito analiza las causas
+            La calculadora da una foto del momento. La auditoría gratuita analiza las causas
             y te dice qué hacer primero.
           </p>
           <TrackingLink
@@ -71,7 +71,7 @@ export default function CalculadoraPrimeCostPage() {
             eventName="diagnostico_click"
             eventLabel="Calculadora prime cost — CTA"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "¿Cuánto tiempo tarda en verse resultados?",
     answer:
-      "Depende del punto de partida y del servicio contratado. Un diagnóstico da resultados accionables en días. Una consultoría operativa continuada genera cambios medibles en semanas.",
+      "Depende del punto de partida y del servicio contratado. Una auditoría da resultados accionables en días. Una consultoría operativa continuada genera cambios medibles en semanas.",
   },
   {
     question: "¿Cómo sé qué servicio necesito?",
@@ -51,7 +51,7 @@ const faqs = [
       "Sí. Cuanto antes se incorpora el acompañamiento en una apertura, más impacto tiene.",
   },
   {
-    question: "¿Qué pasa si el diagnóstico revela que no puedo ayudarte?",
+    question: "¿Qué pasa si la auditoría revela que no puedo ayudarte?",
     answer:
       "Te lo digo en la primera sesión con honestidad. No acepto proyectos donde no creo que pueda aportar valor real.",
   },
@@ -80,7 +80,7 @@ const steps = [
   },
   {
     num: "02",
-    title: "Diagnóstico o propuesta",
+    title: "Auditoría o propuesta",
     body: "Según el caso, empezamos con una auditoría formal o directamente con una propuesta de colaboración ajustada a lo que necesitas.",
   },
   {
@@ -243,8 +243,8 @@ export default function ServiciosPage() {
               {
                 icon: <HelpCircle size={26} className="text-amber" />,
                 title: "No estás seguro por dónde empezar",
-                body: "Empieza con el diagnóstico gratuito. En 10 minutos sabrás cuáles son las áreas prioritarias de tu negocio.",
-                cta: { label: "Empezar mi diagnóstico gratuito", href: "https://diagnostico.adrianpollan.com", external: true },
+                body: "Empieza con la auditoría gratuita. En 10 minutos sabrás cuáles son las áreas prioritarias de tu negocio.",
+                cta: { label: "Empezar mi auditoría gratuita", href: "https://diagnostico.adrianpollan.com", external: true },
               },
             ].map((card, i) => (
               <div
@@ -320,7 +320,7 @@ export default function ServiciosPage() {
               },
               {
                 icon: <BookOpen size={24} className="text-amber" />,
-                title: "Método propio basado en diagnóstico y datos",
+                title: "Método propio basado en auditoría y datos",
                 body: "No trabajo con intuiciones. Trabajo con información real y decisiones fundamentadas.",
               },
               {
@@ -409,8 +409,8 @@ export default function ServiciosPage() {
                 ¿No sabes cuál encaja con tu situación?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
-                Antes de elegir un servicio, puede tener más sentido hacer el
-                diagnóstico gratuito. En 10 minutos sabrás exactamente qué áreas
+                Antes de elegir un servicio, puede tener más sentido hacer la
+                auditoría gratuita. En 10 minutos sabrás exactamente qué áreas
                 de tu negocio necesitan más atención y qué tipo de ayuda encaja mejor.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -422,7 +422,7 @@ export default function ServiciosPage() {
                   eventName="diagnostico_click"
                   eventLabel="Servicios — sección ¿no sabes cuál?"
                 >
-                  Hacer el diagnóstico
+                  Hacer la auditoría
                   <ExternalLink size={15} />
                 </TrackingLink>
                 <TrackingLink
@@ -441,7 +441,7 @@ export default function ServiciosPage() {
             {/* Checklist visual */}
             <div className="bg-white border border-grafito/10 rounded-xl p-8 lg:p-10">
               <p className="font-body text-amber text-xs tracking-widest uppercase mb-6">
-                El diagnóstico analiza
+                La auditoría analiza
               </p>
               <ul className="space-y-4">
                 {[
@@ -590,7 +590,7 @@ export default function ServiciosPage() {
           </div>
           <div className="text-center">
             <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-8">
-              Si reconoces alguna de estas situaciones, el diagnóstico gratuito es el primer paso.
+              Si reconoces alguna de estas situaciones, la auditoría gratuita es el primer paso.
             </p>
             <TrackingLink
               href="https://diagnostico.adrianpollan.com"
@@ -600,7 +600,7 @@ export default function ServiciosPage() {
               eventName="diagnostico_click"
               eventLabel="Servicios — ¿cómo sé si necesito ayuda?"
             >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
+              Empezar mi auditoría gratuita <ExternalLink size={14} />
             </TrackingLink>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function AuditoriaProveedoresPage() {
             ¿Quieres mejorar las condiciones con tus proveedores?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            La auditoría muestra qué falta. El diagnóstico gratuito analiza el impacto
+            Esta auditoría de proveedores muestra qué falta. La auditoría gratuita analiza el impacto
             real en tu food cost y te dice por dónde empezar.
           </p>
           <TrackingLink
@@ -71,7 +71,7 @@ export default function AuditoriaProveedoresPage() {
             eventName="diagnostico_click"
             eventLabel="Auditoria proveedores — CTA"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

@@ -1,7 +1,7 @@
 const steps = [
   {
     num: 1,
-    title: "Diagnóstico gratuito",
+    title: "Auditoría gratuita",
     desc: "Recibes una foto clara de dónde está tu negocio en 10 minutos.",
   },
   {

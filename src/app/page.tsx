@@ -13,7 +13,7 @@ const WaitlistForm = dynamic(() => import("@/components/WaitlistForm"));
 export const metadata: Metadata = {
   title: { absolute: "Consultor de Restaurantes y Hostelería | Adrián Pollán" },
   description:
-    "Consultor de hostelería especializado en rentabilidad de restaurantes y F&B. Diagnóstico gratuito y más de 20 años de experiencia real en 4 países.",
+    "Consultor de hostelería especializado en rentabilidad de restaurantes y F&B. Auditoría gratuita y más de 20 años de experiencia real en 4 países.",
   alternates: {
     canonical: "https://adrianpollan.com",
   },
@@ -81,7 +81,7 @@ const jsonLdHome = {
           name: "¿Cuánto cuesta una consultoría de restaurantes?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "El coste varía según el alcance del proyecto. El punto de partida es un diagnóstico gratuito de 10 minutos en diagnostico.adrianpollan.com, seguido de una sesión gratuita de 20 minutos para valorar el caso concreto.",
+            text: "El coste varía según el alcance del proyecto. El punto de partida es una auditoría gratuita de 10 minutos en diagnostico.adrianpollan.com, seguido de una sesión gratuita de 20 minutos para valorar el caso concreto.",
           },
         },
         {
@@ -153,7 +153,7 @@ export default function Home() {
               ordenar la gestión y tomar decisiones con datos, no con intuición.
             </p>
             <p className="font-body text-cream/45 text-sm lg:text-base leading-relaxed max-w-xl mb-12">
-              Diagnóstico, control de costes, carta, equipo y operación para negocios
+              Auditoría, control de costes, carta, equipo y operación para negocios
               que venden, pero no ganan lo que deberían.
             </p>
 
@@ -167,7 +167,7 @@ export default function Home() {
                 eventName="diagnostico_click"
                 eventLabel="Hero home"
               >
-                Diagnóstico gratuito
+                Auditoría gratuita
                 <ArrowRight size={16} />
               </TrackingLink>
               <TrackingLink
@@ -203,10 +203,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-14">
             <p className="font-body text-amber text-xs tracking-widest uppercase mb-5">
-              Diagnóstico gratuito
+              Auditoría gratuita
             </p>
             <h2 className="font-display text-grafito text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
-              El diagnóstico gratuito no es un formulario. Es una primera foto real de tu negocio.
+              La auditoría gratuita no es un formulario. Es una primera foto real de tu negocio.
             </h2>
             <p className="font-body text-ink/60 text-base leading-relaxed mt-5">
               En 10 minutos obtienes una foto clara de 8 áreas clave de tu negocio: rentabilidad, costes, operativa, carta, equipo, experiencia de cliente, gestión y estrategia.
@@ -261,7 +261,7 @@ export default function Home() {
             eventName="diagnostico_click"
             eventLabel="Sección diagnóstico home"
           >
-            Empezar mi diagnóstico gratuito
+            Empezar mi auditoría gratuita
             <ArrowRight size={16} />
           </TrackingLink>
         </div>
@@ -369,7 +369,7 @@ export default function Home() {
               },
               {
                 icon: <BookOpen size={24} className="text-amber" />,
-                title: "Método propio basado en diagnóstico y datos",
+                title: "Método propio basado en auditoría y datos",
                 body: "No trabajo con intuiciones. Trabajo con información real y decisiones fundamentadas.",
               },
               {
@@ -457,7 +457,7 @@ export default function Home() {
                     eventName="diagnostico_click"
                     eventLabel="Empieza según situación — home"
                   >
-                    Empezar mi diagnóstico gratuito <ArrowRight size={14} />
+                    Empezar mi auditoría gratuita <ArrowRight size={14} />
                   </TrackingLink>
                 ),
               },
@@ -498,7 +498,7 @@ export default function Home() {
                       eventName="diagnostico_click"
                       eventLabel="Empieza según situación — home"
                     >
-                      Empezar mi diagnóstico gratuito <ArrowRight size={14} />
+                      Empezar mi auditoría gratuita <ArrowRight size={14} />
                     </TrackingLink>
                     <TrackingLink
                       href="https://calendly.com/adrianpollan"
@@ -608,7 +608,7 @@ export default function Home() {
             ¿No sabes por dónde empezar? Empieza aquí.
           </h2>
           <p className="font-body text-cream/70 text-lg leading-relaxed mb-8">
-            He desarrollado una herramienta de diagnóstico gratuita con
+            He desarrollado una herramienta de auditoría gratuita con
             inteligencia artificial, diseñada específicamente para negocios
             de hostelería y restauración. En pocos minutos obtienes un
             informe personalizado con las áreas de mejora más relevantes
@@ -637,7 +637,7 @@ export default function Home() {
             eventName="diagnostico_click"
             eventLabel="Sección problemas home"
           >
-            Empezar mi diagnóstico gratuito
+            Empezar mi auditoría gratuita
             <ArrowRight size={16} />
           </TrackingLink>
         </div>
@@ -651,14 +651,14 @@ export default function Home() {
               Cómo funciona
             </p>
             <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
-              Del diagnóstico a los resultados
+              De la auditoría a los resultados
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
             {[
               {
                 num: "01",
-                title: "Diagnóstico gratuito",
+                title: "Auditoría gratuita",
                 desc: "10 minutos. 67 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
                 cta: "Empezar ahora",
                 href: "https://diagnostico.adrianpollan.com",
@@ -667,7 +667,7 @@ export default function Home() {
               {
                 num: "02",
                 title: "Sesión de 20 minutos",
-                desc: "Si el diagnóstico revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
+                desc: "Si la auditoría revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
                 cta: "Agendar sesión gratuita",
                 href: "https://calendly.com/adrianpollan",
                 external: true,
@@ -956,7 +956,7 @@ export default function Home() {
               eventName="diagnostico_click"
               eventLabel="CTA final home"
             >
-              Empezar mi diagnóstico gratuito
+              Empezar mi auditoría gratuita
               <ArrowRight size={16} />
             </TrackingLink>
             <TrackingLink

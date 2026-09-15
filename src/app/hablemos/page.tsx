@@ -10,14 +10,14 @@ import MapaDiagnostico from "@/components/MapaDiagnostico";
 export const metadata: Metadata = {
   title: { absolute: "Habla con Adrián Pollán | Consultor de Hostelería" },
   description:
-    "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
+    "Reserva una sesión gratuita de 20 minutos o recibe la auditoría gratuita de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
   alternates: {
     canonical: "https://adrianpollan.com/hablemos",
   },
   openGraph: {
     title: "Habla con Adrián Pollán | Consultor de Hostelería",
     description:
-      "Reserva una sesión gratuita de 20 minutos o recibe el diagnóstico gratuito de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
+      "Reserva una sesión gratuita de 20 minutos o recibe la auditoría gratuita de tu restaurante, sin compromiso. Adrián Pollán, consultor de hostelería.",
     url: "https://adrianpollan.com/hablemos",
   },
 };
@@ -52,13 +52,13 @@ export default function HablemosPage() {
             <p className="font-body text-cream/45 text-base leading-relaxed mb-10">
               No hace falta tener todo claro antes de contactar. La mayoría de
               las personas que trabajan conmigo llegaron con una sensación,
-              no con un diagnóstico hecho.
+              no con una auditoría hecha.
             </p>
 
             {/* Tres opciones en pequeño */}
             <div className="flex flex-col sm:flex-row gap-4 text-sm">
               {[
-                { icon: <Zap size={14} />, label: "Diagnóstico IA — gratis e inmediato" },
+                { icon: <Zap size={14} />, label: "Auditoría IA — gratis e inmediato" },
                 { icon: <Calendar size={14} />, label: "Sesión 20 min — sin compromiso" },
                 { icon: <Mail size={14} />, label: "Mensaje directo" },
               ].map((opt, i) => (
@@ -83,7 +83,7 @@ export default function HablemosPage() {
             Descubre en minutos qué está frenando a tu negocio.
           </h2>
           <p className="font-body text-ink/65 text-lg leading-relaxed mb-8">
-            He desarrollado una herramienta de diagnóstico que analiza tu
+            He desarrollado una herramienta de auditoría que analiza tu
             negocio a través de preguntas clave sobre tu operación,
             rentabilidad, equipo y gestión. En pocos minutos obtienes un
             informe personalizado. Es completamente gratuita. No necesitas
@@ -108,11 +108,11 @@ export default function HablemosPage() {
             eventName="diagnostico_click"
             eventLabel="Hablemos — diagnóstico"
           >
-            Hacer el diagnóstico ahora
+            Hacer la auditoría ahora
             <ExternalLink size={15} />
           </TrackingLink>
           <p className="font-body text-ink/40 text-sm text-center max-w-md mt-5">
-            Tus respuestas se usan únicamente para generar tu diagnóstico y, si decides contactar, entender mejor tu situación. No se venden, no se comparten y no recibirás spam.{" "}
+            Tus respuestas se usan únicamente para generar tu auditoría y, si decides contactar, entender mejor tu situación. No se venden, no se comparten y no recibirás spam.{" "}
             <a href="/politica-de-privacidad" className="underline hover:text-cream/60 transition-colors">
               Política de privacidad
             </a>
@@ -133,20 +133,20 @@ export default function HablemosPage() {
               Cómo funciona
             </p>
             <h2 className="font-display text-cream text-3xl lg:text-4xl font-semibold leading-tight">
-              Del diagnóstico a los resultados
+              De la auditoría a los resultados
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
             {[
               {
                 num: "01",
-                title: "Diagnóstico gratuito",
+                title: "Auditoría gratuita",
                 desc: "10 minutos. 67 preguntas. Una foto clara de las ocho áreas de tu negocio. Sin registro ni compromiso.",
               },
               {
                 num: "02",
                 title: "Sesión de 20 minutos",
-                desc: "Si el diagnóstico revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
+                desc: "Si la auditoría revela que tiene sentido, hablamos. Me cuentas tu situación y vemos juntos si hay encaje.",
               },
               {
                 num: "03",

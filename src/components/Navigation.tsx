@@ -142,7 +142,7 @@ export default function Navigation() {
               onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Navegación desktop" })}
               className="hidden lg:inline-flex items-center px-5 py-2 btn-amber text-white text-sm font-semibold tracking-wide rounded-sm"
             >
-              Diagnóstico gratuito
+              Auditoría gratuita
             </a>
 
             {/* Mobile hamburger */}
@@ -179,7 +179,7 @@ export default function Navigation() {
               isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
-            Diagnóstico gratuito
+            Auditoría gratuita
           </a>
 
           {/* Servicios */}

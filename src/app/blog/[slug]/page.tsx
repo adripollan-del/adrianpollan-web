@@ -229,7 +229,7 @@ export default async function BlogPostPage({ params }: Props) {
             Analiza primero cómo está tu restaurante
           </h2>
           <p className="font-body text-ink/65 text-base mb-10 max-w-md mx-auto">
-            El diagnóstico gratuito te dice exactamente qué áreas de tu negocio
+            La auditoría gratuita te dice exactamente qué áreas de tu negocio
             necesitan más atención. En 10 minutos.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -241,7 +241,7 @@ export default async function BlogPostPage({ params }: Props) {
               eventName="diagnostico_click"
               eventLabel="Blog — CTA artículo"
             >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
+              Empezar mi auditoría gratuita <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

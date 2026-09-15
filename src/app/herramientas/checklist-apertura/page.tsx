@@ -60,7 +60,7 @@ export default function ChecklistAperturaPage() {
             ¿Quieres abrir con alguien que ya ha estado ahí?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            El checklist te dice dónde estás. El diagnóstico gratuito te ayuda a priorizar
+            El checklist te dice dónde estás. La auditoría gratuita te ayuda a priorizar
             lo que tiene más impacto antes de comprometer tu inversión.
           </p>
           <TrackingLink
@@ -71,7 +71,7 @@ export default function ChecklistAperturaPage() {
             eventName="diagnostico_click"
             eventLabel="Checklist apertura — CTA"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

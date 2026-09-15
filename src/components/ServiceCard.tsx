@@ -117,7 +117,7 @@ export default function ServiceCard({
               className="btn-amber inline-flex items-center justify-center gap-2 px-6 py-3.5 text-grafito text-sm font-semibold tracking-wide w-full"
               onClick={() => trackEvent("diagnostico_click", { event_category: "conversion", event_label: "Tarjeta de servicio" })}
             >
-              Empezar mi diagnóstico gratuito
+              Empezar mi auditoría gratuita
               <ArrowRight size={14} />
             </a>
 

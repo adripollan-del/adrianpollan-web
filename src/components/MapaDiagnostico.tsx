@@ -16,7 +16,7 @@ export default function MapaDiagnostico({ bg = "bg-cream-dark" }: { bg?: string 
     <section className={`${bg} py-20 lg:py-28`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-xl mb-10">
-          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">El diagnóstico analiza</p>
+          <p className="font-body text-amber text-xs tracking-widest uppercase mb-3">La auditoría analiza</p>
           <h2 className="font-display text-grafito text-3xl lg:text-4xl font-semibold leading-tight">
             8 áreas clave de tu negocio
           </h2>

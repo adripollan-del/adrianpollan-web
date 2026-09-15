@@ -29,7 +29,7 @@ const includes = [
   "Mapa de dónde se escapa el margen, con datos reales de tu negocio",
   "Análisis de food cost real vs. teórico, prime cost y estructura de ingresos",
   "Evaluación de carta: qué vender más, qué eliminar, dónde ajustar precio",
-  "Diagnóstico del equipo y sus dinámicas operativas",
+  "Auditoría del equipo y sus dinámicas operativas",
   "Informe ejecutivo con las 3-5 palancas prioritarias y plan de acción concreto",
 ];
 
@@ -51,7 +51,7 @@ const jsonLdAuditoria = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Diagnóstico y Auditoría F&B para Restaurantes",
-  description: "Auditoría completa de las operaciones F&B de tu restaurante: costes, carta, equipo, proveedores y procesos. Con informe de diagnóstico y plan de acción priorizado.",
+  description: "Auditoría completa de las operaciones F&B de tu restaurante: costes, carta, equipo, proveedores y procesos. Con informe de auditoría y plan de acción priorizado.",
   provider: { "@id": "https://adrianpollan.com/#person" },
   areaServed: ["España", "Irlanda", "Francia", "Reino Unido"],
   serviceType: "Auditoría F&B",
@@ -113,13 +113,13 @@ export default function AuditoriaFBPage() {
               ¿Qué es una auditoría de restaurante?
             </h2>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-4">
-              Una auditoría de restaurante es una revisión a fondo de tu negocio: costes, carta, equipo y operativa, hecha con datos reales, no con intuición. Aquí la llamamos auditoría o diagnóstico indistintamente, porque es exactamente lo mismo: encontrar dónde se escapa el margen antes de decidir qué cambiar.
+              Una auditoría de restaurante es una revisión a fondo de tu negocio: costes, carta, equipo y operativa, hecha con datos reales, no con intuición. Sirve para encontrar dónde se escapa el margen antes de decidir qué cambiar.
             </p>
             <p className="font-body text-ink/65 text-lg leading-relaxed mb-4">
               Llevo más de veinte años haciendo este tipo de revisión en restaurantes y hoteles de cuatro países. Lo que he visto una y otra vez: el problema casi nunca está donde el propietario cree que está.
             </p>
             <p className="font-body text-ink/65 text-lg leading-relaxed">
-              Empieza con el diagnóstico gratuito de 10 minutos. Si después quieres profundizar conmigo directamente, reservamos una sesión de 20 minutos.
+              Empieza con la auditoría gratuita de 10 minutos. Si después quieres profundizar conmigo directamente, reservamos una sesión de 20 minutos.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function AuditoriaFBPage() {
                 ¿Reconoces tu situación?
               </h2>
               <p className="font-body text-ink/65 text-lg leading-relaxed">
-                El diagnóstico es para negocios que trabajan bien operativamente pero que
+                La auditoría es para negocios que trabajan bien operativamente pero que
                 no ven en los números lo que esperan. El problema rara vez está donde parece.
               </p>
             </div>
@@ -264,7 +264,7 @@ export default function AuditoriaFBPage() {
             <div className="bg-cream-dark border border-grafito/10 rounded-xl p-8 lg:p-10">
               <TrendingDown size={32} className="text-amber mb-6" />
               <p className="font-body text-ink/70 text-lg leading-relaxed mb-6">
-                Al final del diagnóstico tienes claridad sobre qué palancas mover primero y
+                Al final de la auditoría tienes claridad sobre qué palancas mover primero y
                 en qué orden. Qué tiene impacto inmediato, qué puede esperar y qué no merece
                 la pena tocar ahora mismo.
               </p>
@@ -293,7 +293,7 @@ export default function AuditoriaFBPage() {
               <li className="flex items-start gap-3">
                 <span className="font-display text-amber font-semibold text-base flex-shrink-0">—</span>
                 <p className="font-body text-ink/70 text-base leading-relaxed">
-                  Si buscas que alguien te confirme lo que ya crees. El diagnóstico revela lo que hay, no lo que quieres oír.
+                  Si buscas que alguien te confirme lo que ya crees. La auditoría revela lo que hay, no lo que quieres oír.
                 </p>
               </li>
               <li className="flex items-start gap-3">
@@ -305,7 +305,7 @@ export default function AuditoriaFBPage() {
               <li className="flex items-start gap-3">
                 <span className="font-display text-amber font-semibold text-base flex-shrink-0">—</span>
                 <p className="font-body text-ink/70 text-base leading-relaxed">
-                  Si no estás dispuesto a compartir los números reales. Sin datos, no hay diagnóstico.
+                  Si no estás dispuesto a compartir los números reales. Sin datos, no hay auditoría.
                 </p>
               </li>
             </ul>
@@ -315,7 +315,7 @@ export default function AuditoriaFBPage() {
             &quot;A veces el mayor coste no está en la nómina ni en el food cost. Está en seguir sin saber qué arreglar.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos.
+            Empieza con la auditoría gratuita o reserva una sesión de 20 minutos.
             Sin presión, sin compromiso.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -327,7 +327,7 @@ export default function AuditoriaFBPage() {
               eventName="diagnostico_click"
               eventLabel="Auditoría F&B — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
+              Empezar mi auditoría gratuita <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

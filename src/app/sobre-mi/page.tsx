@@ -198,7 +198,7 @@ export default function SobreMiPage() {
               proyecto con recomendaciones. Empiezo con preguntas.
             </p>
             <p>
-              La fase de diagnóstico es la más importante de cualquier
+              La fase de auditoría es la más importante de cualquier
               proceso de consultoría, aunque también es la que más se suele
               saltarse. Una vez que tengo una foto completa del negocio,
               definimos juntos qué mover primero y por qué.
@@ -239,7 +239,7 @@ export default function SobreMiPage() {
             {[
               "Experiencia real en operaciones, no solo en consultoría",
               "He trabajado en España, Francia, Reino Unido e Irlanda",
-              "Me implico en la ejecución, no solo en el diagnóstico",
+              "Me implico en la ejecución, no solo en la auditoría",
               "Resultados medibles desde el primer día de trabajo",
               "Acceso directo: sin intermediarios ni cuentas de cliente",
             ].map((item, i) => (
@@ -270,7 +270,7 @@ export default function SobreMiPage() {
               "No hago informes largos que nadie implementa. El trabajo real ocurre en la ejecución, no en el papel.",
               "No prometo resultados sin datos. Antes de hablar de mejoras, hay que entender qué está pasando realmente.",
               "No acepto proyectos donde no creo que pueda aportar valor real. Si no encajamos, te lo digo en la primera conversación.",
-              "No desaparezco después de entregar un diagnóstico. Me quedo en el proceso mientras tenga sentido estar.",
+              "No desaparezco después de entregar una auditoría. Me quedo en el proceso mientras tenga sentido estar.",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-amber/10 flex items-center justify-center">
@@ -475,7 +475,7 @@ export default function SobreMiPage() {
               eventName="diagnostico_click"
               eventLabel="Sobre mí — casos de éxito"
             >
-              ¿Tu situación se parece a alguna de estas? Empezar mi diagnóstico gratuito
+              ¿Tu situación se parece a alguna de estas? Empezar mi auditoría gratuita
               <ArrowRight size={15} />
             </TrackingLink>
             <Link
@@ -588,7 +588,7 @@ export default function SobreMiPage() {
                 eventName="diagnostico_click"
                 eventLabel="Sobre mí — CTA final"
               >
-                Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+                Empezar mi auditoría gratuita <ArrowRight size={15} />
               </TrackingLink>
               <TrackingLink
                 href="https://calendly.com/adrianpollan"

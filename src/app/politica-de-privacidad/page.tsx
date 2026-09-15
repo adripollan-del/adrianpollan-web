@@ -98,12 +98,12 @@ export default function PoliticaPrivacidadPage() {
               mantengas la suscripción activa.
             </p>
 
-            <h3>e) Diagnóstico F&amp;B (diagnostico.adrianpollan.com)</h3>
+            <h3>e) Auditoría F&amp;B (diagnostico.adrianpollan.com)</h3>
             <p>
-              <strong>Datos:</strong> respuestas al cuestionario de diagnóstico (67 preguntas
+              <strong>Datos:</strong> respuestas al cuestionario de auditoría (67 preguntas
               sobre 8 áreas de gestión) y correo electrónico.<br />
               <strong>Finalidad:</strong> generar y enviarte un informe personalizado de
-              diagnóstico de tu negocio e incorporarte a la lista de audiencia correspondiente.<br />
+              auditoría de tu negocio e incorporarte a la lista de audiencia correspondiente.<br />
               <strong>Base legal:</strong> consentimiento expreso del interesado (art. 6.1.a del RGPD).<br />
               <strong>Conservación:</strong> las respuestas al cuestionario se almacenan durante
               90 días para la generación del informe; el correo electrónico se conserva mientras
@@ -169,7 +169,7 @@ export default function PoliticaPrivacidadPage() {
             <ul>
               <li>
                 <strong>Mailchimp</strong> (Intuit Inc.): gestión de listas de correo y envío de
-                comunicaciones (newsletter, audiencias de herramientas gratuitas, diagnóstico,
+                comunicaciones (newsletter, audiencias de herramientas gratuitas, auditoría,
                 test Dirige y compradores de plantillas). mailchimp.com/legal/privacy
               </li>
               <li>
@@ -182,18 +182,18 @@ export default function PoliticaPrivacidadPage() {
               </li>
               <li>
                 <strong>Resend</strong>: envío de correos electrónicos transaccionales
-                (confirmaciones de contacto, entrega de resultados de herramientas, diagnóstico
+                (confirmaciones de contacto, entrega de resultados de herramientas, auditoría
                 y test Dirige). resend.com/privacy
               </li>
               <li>
                 <strong>Upstash</strong>: almacenamiento temporal de datos para control de tasa
                 de uso (rate limiting) de formularios y del chat en adrianpollan.com, y para el
-                almacenamiento de resultados del diagnóstico (90 días) y del test Dirige (90 días)
+                almacenamiento de resultados de la auditoría (90 días) y del test Dirige (90 días)
                 en sus respectivos subdominios. upstash.com/privacy
               </li>
               <li>
                 <strong>Anthropic</strong>: procesamiento de conversaciones del chat del sitio y
-                generación de contenido personalizado del diagnóstico F&amp;B.
+                generación de contenido personalizado de la auditoría F&amp;B.
                 anthropic.com/privacy
               </li>
             </ul>

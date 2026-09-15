@@ -1,7 +1,7 @@
 const phrases = [
   "20+ años en restauración internacional",
   "España · Francia · Reino Unido · Irlanda",
-  "Diagnóstico · Operativa · Aperturas",
+  "Auditoría · Operativa · Aperturas",
   "Rentabilidad como resultado",
   "Cada negocio tiene su propia lógica",
   "Sin planes estratégicos que acaban en una carpeta",

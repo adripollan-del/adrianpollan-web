@@ -6,12 +6,12 @@ import { ArrowRight, Search, LineChart, Rocket, CheckCircle } from "lucide-react
 export const metadata: Metadata = {
   title: { absolute: "Consultor de Restaurantes: Costes y Gestión | Adrián Pollán" },
   description:
-    "Consultor de restaurantes especializado en rentabilidad, control de costes y gestión operativa. Diagnóstico gratuito. Más de 20 años de experiencia real.",
+    "Consultor de restaurantes especializado en rentabilidad, control de costes y gestión operativa. Auditoría gratuita. Más de 20 años de experiencia real.",
   alternates: { canonical: "https://adrianpollan.com/consultor-restaurantes" },
   openGraph: {
     title: "Consultor de Restaurantes: Costes y Gestión | Adrián Pollán",
     description:
-      "Consultor de restaurantes especializado en rentabilidad, control de costes y gestión operativa. Diagnóstico gratuito. Más de 20 años de experiencia real.",
+      "Consultor de restaurantes especializado en rentabilidad, control de costes y gestión operativa. Auditoría gratuita. Más de 20 años de experiencia real.",
     url: "https://adrianpollan.com/consultor-restaurantes",
   },
 };
@@ -61,7 +61,7 @@ const faqs = [
   {
     question: "¿Cómo se empieza a trabajar con él?",
     answer:
-      "Con el diagnóstico gratuito online o reservando una sesión de 20 minutos, sin presión ni compromiso, para tener claridad sobre dónde está el negocio y qué tiene más impacto.",
+      "Con la auditoría gratuita online o reservando una sesión de 20 minutos, sin presión ni compromiso, para tener claridad sobre dónde está el negocio y qué tiene más impacto.",
   },
 ];
 
@@ -264,7 +264,7 @@ export default function ConsultorRestaurantesPage() {
               Para quién trabajo
             </p>
             <h2 className="font-display text-grafito text-4xl lg:text-5xl font-semibold leading-tight">
-              Negocios que quieren resultados, no diagnósticos bonitos
+              Negocios que quieren resultados, no auditorías bonitas
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-4xl">
@@ -336,7 +336,7 @@ export default function ConsultorRestaurantesPage() {
             ¿Tu restaurante podría funcionar mejor?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos.
+            Empieza con la auditoría gratuita o reserva una sesión de 20 minutos.
             Sin presión, sin compromiso: solo claridad sobre dónde está tu negocio
             y qué tiene más impacto.
           </p>
@@ -349,7 +349,7 @@ export default function ConsultorRestaurantesPage() {
               eventName="diagnostico_click"
               eventLabel="Consultor restaurantes — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

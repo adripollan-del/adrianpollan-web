@@ -325,7 +325,7 @@ export default function AbrirUnRestaurantePage() {
             ¿Estás pensando en abrir un restaurante?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            El diagnóstico gratuito te ayuda a identificar qué has considerado y qué
+            La auditoría gratuita te ayuda a identificar qué has considerado y qué
             se te puede estar escapando antes de comprometer tu inversión.
           </p>
           <TrackingLink
@@ -336,7 +336,7 @@ export default function AbrirUnRestaurantePage() {
             eventName="diagnostico_click"
             eventLabel="Abrir un restaurante — CTA final"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
           <p className="font-body text-ink/40 text-xs mt-8">
             ¿Prefieres hablar directamente?{" "}
