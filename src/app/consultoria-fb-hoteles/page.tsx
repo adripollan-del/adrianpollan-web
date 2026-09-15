@@ -221,7 +221,7 @@ export default function ConsultoriaFbHotelesPage() {
             ¿Tu F&amp;B podría generar más valor para el hotel?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión para hablar
+            Empieza con la auditoría gratuita o reserva una sesión para hablar
             de la situación concreta de tu propiedad.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -233,7 +233,7 @@ export default function ConsultoriaFbHotelesPage() {
               eventName="diagnostico_click"
               eventLabel="Consultoría F&B hoteles — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

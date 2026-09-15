@@ -6,12 +6,12 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: { absolute: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán" },
   description:
-    "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y diagnóstico online.",
+    "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y auditoría online.",
   alternates: { canonical: "https://adrianpollan.com/rentabilidad-restaurantes" },
   openGraph: {
     title: "Rentabilidad de Restaurantes | Guía Completa | Adrián Pollán",
     description:
-      "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y diagnóstico online.",
+      "Guía completa sobre rentabilidad en restaurantes: food cost, prime cost, labour cost y margen por plato. Con herramientas gratuitas y auditoría online.",
     url: "https://adrianpollan.com/rentabilidad-restaurantes",
   },
 };
@@ -381,7 +381,7 @@ export default function RentabilidadRestaurantesPage() {
               ¿Qué está fallando en la rentabilidad de tu restaurante?
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
-              El diagnóstico gratuito analiza tu estructura de costes, carta y operación
+              La auditoría gratuita analiza tu estructura de costes, carta y operación
               en diez minutos. Sabrás exactamente qué palancas activar primero.
             </p>
             <TrackingLink
@@ -392,7 +392,7 @@ export default function RentabilidadRestaurantesPage() {
               eventName="diagnostico_click"
               eventLabel="Rentabilidad restaurantes — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
           </div>
         </div>

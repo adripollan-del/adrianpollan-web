@@ -486,7 +486,7 @@ export default function GestionOperativaRestaurantesPage() {
               ¿Cómo está la gestión operativa de tu restaurante?
             </h2>
             <p className="font-body text-ink/60 text-lg leading-relaxed mb-10">
-              El diagnóstico gratuito analiza la estructura de tu equipo, tus procesos y tus
+              La auditoría gratuita analiza la estructura de tu equipo, tus procesos y tus
               indicadores operativos. En diez minutos sabes exactamente qué área atacar primero.
             </p>
             <TrackingLink
@@ -497,7 +497,7 @@ export default function GestionOperativaRestaurantesPage() {
               eventName="diagnostico_click"
               eventLabel="Gestión operativa restaurantes — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
           </div>
         </div>

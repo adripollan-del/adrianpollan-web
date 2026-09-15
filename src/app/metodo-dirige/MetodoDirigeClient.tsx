@@ -33,18 +33,18 @@ const resultados = [
   "Tendrás checklists y protocolos para que el negocio funcione aunque tú no estés.",
   "Tendrás un horario planificado por coste, no por costumbre, con alerta si te pasas del objetivo.",
   "Tendrás un cuadro de mando con tus KPIs, tu cuenta de explotación y tus alertas.",
-  "Tendrás tu antes y después medido: el mismo diagnóstico del día 1, repetido y comparado.",
+  "Tendrás tu antes y después medido: la misma auditoría del día 1, repetida y comparada.",
   "Tendrás un sistema para gestionar a tu personal de forma más eficiente, con roles, onboarding y checklists ya definidos: viene incluido con el Sistema de Bienvenida 360º.",
 ];
 
 const modulos = [
   {
     question: "Semana 0",
-    answer: "Diagnóstico inicial, bienvenida, arranque del registro desde el primer día.",
+    answer: "Auditoría inicial, bienvenida, arranque del registro desde el primer día.",
   },
   {
     question: "Módulo 1 · Tus números (semanas 1-2)",
-    answer: "Diagnóstico profundo, escandallo, cierre semanal, tesorería.",
+    answer: "Auditoría profunda, escandallo, cierre semanal, tesorería.",
   },
   {
     question: "Módulo 2 · Tu carta (semana 3)",
@@ -73,7 +73,7 @@ const modulos = [
 ];
 
 const acompanamiento = [
-  { icon: Target, text: "Diagnóstico inicial: 67 preguntas, tu score de 0 a 100 y tu radar por áreas." },
+  { icon: Target, text: "Auditoría inicial: 67 preguntas, tu score de 0 a 100 y tu radar por áreas." },
   { icon: UserCheck, text: "Sesión de arranque 1:1 conmigo, para construir tu plan de 90 días sobre tus números reales." },
   { icon: RefreshCw, text: "Revisión mensual 1:1 de tu progreso durante los 90 días." },
   { icon: Video, text: "12 salas de implementación grupal en directo, una por semana, con casos reales de otros participantes." },
@@ -320,7 +320,7 @@ function ScoreDial() {
         </svg>
         <p className="font-display text-[#152238] text-[15px] font-semibold mt-1">Tu score de partida</p>
         <p className="text-[#6B6F7A] text-[13px] mt-2.5 leading-relaxed">
-          Diagnóstico de 67 preguntas · radar por áreas de tu negocio, medido el día 1 y comparado al día 90.
+          Auditoría de 67 preguntas · radar por áreas de tu negocio, medido el día 1 y comparado al día 90.
         </p>
       </div>
       <div className="max-w-[320px] bg-white border-l-4 border-[#E8623D] rounded-lg px-6 py-5">
@@ -451,7 +451,7 @@ export default function MetodoDirigeClient() {
             <span className="text-[#E8623D]"> no solo trabajo.</span>
           </h1>
           <p className="font-body text-[#F5F3F0]/60 text-base lg:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-            Diagnóstico, sistema y acompañamiento 1:1 durante 90 días para que dejes de operar a ciegas y
+            Auditoría, sistema y acompañamiento 1:1 durante 90 días para que dejes de operar a ciegas y
             empieces a dirigir tu negocio con datos reales.
           </p>
 
@@ -484,7 +484,7 @@ export default function MetodoDirigeClient() {
       <section className="py-16 lg:py-20 bg-white">
         <Reveal className="max-w-2xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-body text-[#1B2233]/80 text-base lg:text-lg leading-relaxed">
-            Esto no es un curso más. Es un sistema de acompañamiento de 90 días, con diagnóstico, plan a
+            Esto no es un curso más. Es un sistema de acompañamiento de 90 días, con auditoría, plan a
             medida y revisión de tus números reales, para que al final del programa tu negocio funcione con
             criterio, no de memoria.
           </p>

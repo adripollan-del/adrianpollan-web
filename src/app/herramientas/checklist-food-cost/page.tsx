@@ -60,7 +60,7 @@ export default function ChecklistFoodCostPage() {
             ¿Quieres cerrar los puntos de fuga de margen de tu negocio?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            El checklist identifica lo que falta. El diagnóstico gratuito analiza por qué
+            El checklist identifica lo que falta. La auditoría gratuita analiza por qué
             está pasando y qué hacer para resolverlo.
           </p>
           <TrackingLink
@@ -71,7 +71,7 @@ export default function ChecklistFoodCostPage() {
             eventName="diagnostico_click"
             eventLabel="Checklist food cost — CTA"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

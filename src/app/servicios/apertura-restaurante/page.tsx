@@ -336,7 +336,7 @@ export default function AperturaRestaurantePage() {
             &quot;No se trata de tener el restaurante perfecto desde el día uno. Se trata de no cometer los errores que luego son difíciles de deshacer.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos para
+            Empieza con la auditoría gratuita o reserva una sesión de 20 minutos para
             hablar de tu proyecto. Sin presión, sin compromiso.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -348,7 +348,7 @@ export default function AperturaRestaurantePage() {
               eventName="diagnostico_click"
               eventLabel="Apertura restaurante — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
+              Empezar mi auditoría gratuita <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

@@ -20,12 +20,12 @@ const FAQAccordion = dynamic(() => import("@/components/FAQAccordion"));
 export const metadata: Metadata = {
   title: { absolute: "Consultoría de Restaurantes y Hostelería | Adrián Pollán" },
   description:
-    "Consultoría para restaurantes y hostelería: diagnóstico gratuito, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
+    "Consultoría para restaurantes y hostelería: auditoría gratuita, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
   alternates: { canonical: "https://adrianpollan.com/consultoria-restaurantes-hosteleria" },
   openGraph: {
     title: "Consultoría de Restaurantes y Hostelería | Adrián Pollán",
     description:
-      "Consultoría para restaurantes y hostelería: diagnóstico gratuito, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
+      "Consultoría para restaurantes y hostelería: auditoría gratuita, control de costes y rentabilidad real. Acompañamiento operativo con 20+ años de experiencia.",
     url: "https://adrianpollan.com/consultoria-restaurantes-hosteleria",
   },
 };
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "¿Qué es la consultoría de restaurantes?",
     answer:
-      "La consultoría de restaurantes es un servicio profesional de análisis, diagnóstico y acompañamiento para mejorar la rentabilidad, la gestión operativa y la sostenibilidad de un negocio de hostelería. Incluye revisión de costes, carta, equipo, procesos y toma de decisiones basada en datos reales.",
+      "La consultoría de restaurantes es un servicio profesional de análisis, auditoría y acompañamiento para mejorar la rentabilidad, la gestión operativa y la sostenibilidad de un negocio de hostelería. Incluye revisión de costes, carta, equipo, procesos y toma de decisiones basada en datos reales.",
   },
   {
     question: "¿Cuándo necesita un restaurante un consultor de hostelería?",
@@ -44,12 +44,12 @@ const faqs = [
   {
     question: "¿Cuánto cuesta la consultoría de hostelería?",
     answer:
-      "Depende del servicio y del alcance del proyecto. Lo vemos juntos en la primera sesión una vez que entiendo tu situación concreta. El diagnóstico gratuito y la sesión de 20 minutos no tienen coste.",
+      "Depende del servicio y del alcance del proyecto. Lo vemos juntos en la primera sesión una vez que entiendo tu situación concreta. La auditoría gratuita y la sesión de 20 minutos no tienen coste.",
   },
   {
     question: "¿Cuánto tiempo tarda en verse resultados?",
     answer:
-      "Depende del punto de partida y del servicio. Un diagnóstico da claridad en días. Una consultoría operativa genera cambios medibles en semanas. Los resultados más sólidos se consolidan en dos o tres meses de trabajo continuado.",
+      "Depende del punto de partida y del servicio. Una auditoría da claridad en días. Una consultoría operativa genera cambios medibles en semanas. Los resultados más sólidos se consolidan en dos o tres meses de trabajo continuado.",
   },
   {
     question: "¿Trabajas de forma remota?",
@@ -67,7 +67,7 @@ const faqs = [
       "Con negocios de todos los tamaños, desde restaurantes familiares hasta grupos hoteleros. Lo que importa no es el tamaño sino que haya voluntad real de mejorar.",
   },
   {
-    question: "¿Qué pasa si el diagnóstico revela que no puedo ayudarte?",
+    question: "¿Qué pasa si la auditoría revela que no puedo ayudarte?",
     answer:
       "Te lo digo en la primera sesión con honestidad. No acepto proyectos donde no creo que pueda aportar valor real. Prefiero decirlo en la primera llamada que comprometer tu tiempo y tu dinero.",
   },
@@ -140,7 +140,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
                 eventName="diagnostico_click"
                 eventLabel="Pilar consultoría — hero"
               >
-                Empezar mi diagnóstico gratuito
+                Empezar mi auditoría gratuita
                 <ExternalLink size={15} />
               </TrackingLink>
               <a
@@ -302,7 +302,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               Cómo trabajo
             </p>
             <h2 className="font-display text-cream text-2xl lg:text-5xl font-semibold leading-tight mb-5">
-              Un método basado en diagnóstico y datos, no en intuiciones
+              Un método basado en auditoría y datos, no en intuiciones
             </h2>
             <p className="font-body text-cream/65 text-lg leading-relaxed">
               La consultoría de restaurantes que funciona no empieza con soluciones. Empieza con
@@ -581,7 +581,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
             El primer paso es siempre el más sencillo
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito. En 10 minutos tienes una foto clara de las ocho
+            Empieza con la auditoría gratuita. En 10 minutos tienes una foto clara de las ocho
             áreas prioritarias de tu negocio. Sin registro, sin compromiso.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -593,7 +593,7 @@ export default function ConsultoriaRestaurantesHosteleariaPage() {
               eventName="diagnostico_click"
               eventLabel="Pilar consultoría — CTA final"
             >
-              Empezar mi diagnóstico gratuito
+              Empezar mi auditoría gratuita
               <ExternalLink size={15} />
             </TrackingLink>
             <a

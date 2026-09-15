@@ -6,14 +6,14 @@ import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-r
 export const metadata: Metadata = {
   title: { absolute: "Para Hoteles con Restaurante (F&B) | Adrián Pollán" },
   description:
-    "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Diagnóstico gratuito y acompañamiento operativo real incluido.",
+    "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Auditoría gratuita y acompañamiento operativo real incluido.",
   alternates: {
     canonical: "https://adrianpollan.com/para-hoteles-fb",
   },
   openGraph: {
     title: "Para Hoteles con Restaurante (F&B) | Adrián Pollán",
     description:
-      "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Diagnóstico gratuito y acompañamiento operativo real incluido.",
+      "Consultoría para hoteles que quieren convertir el F&B en una línea de negocio rentable. Auditoría gratuita y acompañamiento operativo real incluido.",
     url: "https://adrianpollan.com/para-hoteles-fb",
   },
 };
@@ -282,7 +282,7 @@ export default function ParaHotelesPage() {
             ¿Quieres que el F&B de tu hotel empiece a rendir?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos.
+            Empieza con la auditoría gratuita o reserva una sesión de 20 minutos.
             Sin presión, sin compromiso.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -294,7 +294,7 @@ export default function ParaHotelesPage() {
               eventName="diagnostico_click"
               eventLabel="Para hoteles FB — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

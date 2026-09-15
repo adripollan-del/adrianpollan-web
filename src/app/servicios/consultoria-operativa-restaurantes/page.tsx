@@ -37,7 +37,7 @@ const includes = [
 const steps = [
   {
     num: "01",
-    title: "Diagnóstico",
+    title: "Auditoría",
     body: "Empezamos entendiendo dónde está el negocio ahora mismo: costes, procesos, equipo y resultados. Sin esto, cualquier intervención es improvisar.",
   },
   {
@@ -309,7 +309,7 @@ export default function ConsultoriaOperativaPage() {
             &quot;Los resultados no vienen de tener el mejor plan. Vienen de implementarlo bien, con alguien que sabe lo que está haciendo.&quot;
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito para ver si encaja con tu momento. Sin presión.
+            Empieza con la auditoría gratuita para ver si encaja con tu momento. Sin presión.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <TrackingLink
@@ -320,7 +320,7 @@ export default function ConsultoriaOperativaPage() {
               eventName="diagnostico_click"
               eventLabel="Consultoría Operativa — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ExternalLink size={14} />
+              Empezar mi auditoría gratuita <ExternalLink size={14} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"

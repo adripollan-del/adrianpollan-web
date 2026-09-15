@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Adrián Pollán",
   },
   description:
-    "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia en España, Francia, UK e Irlanda. Diagnóstico gratuito.",
+    "Consultor especializado en rentabilidad de restaurantes, control de costes y gestión operativa. Más de 20 años de experiencia en España, Francia, UK e Irlanda. Auditoría gratuita.",
   keywords: [
     "consultor hostelería",
     "consultor restaurantes",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "control de costes hostelería",
     "gestión operativa restaurantes",
     "auditoría F&B",
-    "diagnóstico restaurantes",
+    "auditoría restaurantes",
     "food cost",
     "labour cost hostelería",
   ],
@@ -123,7 +123,7 @@ const jsonLd = {
       name: "Adrián Pollán Consultoría",
       url: "https://adrianpollan.com",
       description:
-        "Consultoría especializada en hostelería, restauración y F&B. Diagnóstico, rentabilidad, operaciones y acompañamiento a aperturas.",
+        "Consultoría especializada en hostelería, restauración y F&B. Auditoría, rentabilidad, operaciones y acompañamiento a aperturas.",
       founder: { "@id": "https://adrianpollan.com/#person" },
       areaServed: ["España", "México", "Argentina", "Colombia", "Chile"],
       serviceType: [

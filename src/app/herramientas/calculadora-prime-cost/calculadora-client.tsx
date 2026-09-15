@@ -273,7 +273,7 @@ export default function CalculadoraClient() {
         {showAny && !showPrime && (
           <div className="mt-6 bg-cream-dark border border-grafito/10 rounded-xl p-6">
             <p className="font-body text-ink/70 text-sm leading-relaxed mb-4">
-              Introduce el coste de personal para calcular el prime cost completo. O si prefieres, el diagnóstico gratuito analiza todas las áreas de tu negocio en 10 minutos.
+              Introduce el coste de personal para calcular el prime cost completo. O si prefieres, la auditoría gratuita analiza todas las áreas de tu negocio en 10 minutos.
             </p>
             <a
               href="https://diagnostico.adrianpollan.com"
@@ -281,7 +281,7 @@ export default function CalculadoraClient() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-grafito text-sm font-semibold tracking-wide hover:bg-amber/90 transition-colors"
             >
-              Empezar mi diagnóstico gratuito →
+              Empezar mi auditoría gratuita →
             </a>
           </div>
         )}

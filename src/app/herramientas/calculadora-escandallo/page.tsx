@@ -61,7 +61,7 @@ export default function CalculadoraEscandalloPage() {
             ¿Quieres saber qué más está afectando a tu margen?
           </h2>
           <p className="font-body text-ink/60 text-base leading-relaxed mb-8 max-w-md mx-auto">
-            El escandallo muestra el coste de cada plato. El diagnóstico gratuito analiza
+            El escandallo muestra el coste de cada plato. La auditoría gratuita analiza
             el negocio completo y te dice dónde actuar primero.
           </p>
           <TrackingLink
@@ -72,7 +72,7 @@ export default function CalculadoraEscandalloPage() {
             eventName="diagnostico_click"
             eventLabel="Calculadora escandallo — CTA"
           >
-            Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+            Empezar mi auditoría gratuita <ArrowRight size={15} />
           </TrackingLink>
         </div>
       </section>

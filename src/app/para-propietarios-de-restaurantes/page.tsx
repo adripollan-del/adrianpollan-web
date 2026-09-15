@@ -6,14 +6,14 @@ import { ArrowRight, Search, LineChart, CheckCircle, TrendingUp } from "lucide-r
 export const metadata: Metadata = {
   title: { absolute: "Para Propietarios de Restaurantes | Adrián Pollán" },
   description:
-    "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Diagnóstico gratuito para recuperar el margen real perdido.",
+    "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Auditoría gratuita para recuperar el margen real perdido.",
   alternates: {
     canonical: "https://adrianpollan.com/para-propietarios-de-restaurantes",
   },
   openGraph: {
     title: "Para Propietarios de Restaurantes | Adrián Pollán",
     description:
-      "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Diagnóstico gratuito para recuperar el margen real perdido.",
+      "Consultoría para propietarios de restaurantes que venden bien pero no ganan lo suficiente. Auditoría gratuita para recuperar el margen real perdido.",
     url: "https://adrianpollan.com/para-propietarios-de-restaurantes",
   },
 };
@@ -200,7 +200,7 @@ export default function ParaPropietariosPage() {
             ¿Quieres saber dónde se escapa el margen en tu negocio?
           </h2>
           <p className="font-body text-ink/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Empieza con el diagnóstico gratuito o reserva una sesión de 20 minutos.
+            Empieza con la auditoría gratuita o reserva una sesión de 20 minutos.
             Sin presión, sin compromiso.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -212,7 +212,7 @@ export default function ParaPropietariosPage() {
               eventName="diagnostico_click"
               eventLabel="Para propietarios — CTA final"
             >
-              Empezar mi diagnóstico gratuito <ArrowRight size={15} />
+              Empezar mi auditoría gratuita <ArrowRight size={15} />
             </TrackingLink>
             <TrackingLink
               href="https://calendly.com/adrianpollan"
