@@ -96,6 +96,16 @@ const nextConfig: NextConfig = {
         destination: "/consultoria-restaurantes-hosteleria",
         permanent: true,
       },
+      {
+        source: "/consultor-restaurantes",
+        destination: "/consultoria-restaurantes-hosteleria",
+        permanent: true,
+      },
+      {
+        source: "/consultoria-fb-hoteles",
+        destination: "/para-hoteles-fb",
+        permanent: true,
+      },
     ];
   },
   images: {
