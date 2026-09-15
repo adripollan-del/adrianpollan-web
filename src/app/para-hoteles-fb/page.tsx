@@ -47,9 +47,41 @@ const references = [
   { name: "Thistle Hotels", location: "Reino Unido" },
 ];
 
+const faqs = [
+  {
+    question: "¿Por qué el F&B de un hotel funciona como centro de coste en lugar de como activo?",
+    answer:
+      "Porque en muchos hoteles el restaurante existe porque tiene que existir, no porque sea rentable: se gestiona para no perder demasiado en lugar de para generar beneficio real. Con la estructura correcta, el F&B puede ser un diferenciador y un generador de margen.",
+  },
+  {
+    question: "¿Cómo se aborda la consultoría F&B en un hotel?",
+    answer:
+      "Con cuatro fases: auditoría de rentabilidad F&B por punto de venta, diseño de la oferta gastronómica con criterio de margen, estructura de equipo y procesos, y seguimiento con un cuadro de mando de KPIs (food cost, labour cost, RevPASH, ticket medio y satisfacción).",
+  },
+  {
+    question: "¿Qué problemas suelen tener los equipos de F&B en hoteles?",
+    answer:
+      "Mucho volumen de trabajo y poca claridad en roles, responsabilidades y procesos, lo que genera dependencia total del responsable, inconsistencia en el servicio y alta rotación de personal.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function ParaHotelesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative hero-grafito pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-grafito/80" />
@@ -217,6 +249,28 @@ export default function ParaHotelesPage() {
                 El F&B hotelero no tiene que ser un centro de coste. Con los sistemas correctos, puede ser uno de los activos más rentables de la propiedad.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — grafito ──────────────────────────────────────────── */}
+      <section className="bg-grafito py-24 lg:py-32 border-t border-amber/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-amber text-xs tracking-widest uppercase mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-cream text-4xl lg:text-5xl font-semibold leading-tight">
+              Preguntas sobre consultoría F&B para hoteles
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border-b border-cream/10 pb-8 last:border-0">
+                <h3 className="font-display text-cream text-xl font-semibold mb-3">{faq.question}</h3>
+                <p className="font-body text-cream/65 text-base leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
