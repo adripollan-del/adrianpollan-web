@@ -66,7 +66,7 @@ EJEMPLO DE ESTILO (inicio de artículo publicado):
 ${styleExample}
 
 REQUISITOS:
-- Español de España
+- Español de España, con vocabulario de hostelería de España: partidas (no cuartos ni estaciones), sala (no piso), pedir (no ordenar), plato principal (no plato fuerte), camarero (no mesero), carta y menú del día. Evita latinoamericanismos y anglicismos innecesarios (por ejemplo, ingeniería de menú, no menú engineering).
 - Tono: profesional, directo, sin clichés. Primera persona cuando corresponda.
 - Estructura: párrafo de enganche potente → 4-6 secciones con <h2> descriptivos que incluyan keywords de forma natural
 - Longitud: 900-1200 palabras
