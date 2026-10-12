@@ -239,14 +239,14 @@ async function searchUnsplash(query, accessKey) {
   return data.results ?? [];
 }
 
-async function findImage(keyword, title, accessKey) {
+async function findImage(keyword, title, accessKey, imageQuery) {
   if (!accessKey) {
     console.warn('⚠️  UNSPLASH_ACCESS_KEY no encontrada — se usará imagen placeholder.');
     console.warn('   Añádela a .env.local para obtener una imagen real.\n');
     return 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1792&q=80';
   }
 
-  const queries   = buildUnsplashQueries(keyword, title);
+  const queries   = [...new Set([imageQuery, ...buildUnsplashQueries(keyword, title)].filter(Boolean))];
   const usedPaths = getUsedImagePaths(); // CDN base paths already in blog.ts
 
   for (const query of queries) {
@@ -337,6 +337,7 @@ async function main() {
 
   let title   = process.argv[2]?.trim();
   let keyword = process.argv[3]?.trim();
+  let imageQuery = process.argv[4]?.trim();
 
   // ── Modo pipeline: sin argumentos, lee pipeline.json ─────────────────────
   let pipelineMode = false;
@@ -358,9 +359,10 @@ async function main() {
       process.exit(0);
     }
 
-    ({ title, keyword } = pipeline[0]);
+    ({ title, keyword, imageQuery } = pipeline[0]);
     title   = title.trim();
     keyword = keyword.trim();
+    imageQuery = imageQuery?.trim();
     pipelineRemaining = pipeline.slice(1);
     pipelineMode      = true;
 
@@ -387,7 +389,7 @@ async function main() {
     console.log(`   Excerpt   : ${article.excerpt}`);
     console.log(`   ReadTime  : ${article.readTime}`);
 
-    article.coverImage = await findImage(keyword, title, UNSPLASH_ACCESS_KEY);
+    article.coverImage = await findImage(keyword, title, UNSPLASH_ACCESS_KEY, imageQuery);
     console.log(`   Imagen    : ${article.coverImage}`);
 
     insertArticle(article);
